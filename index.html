@@ -1,18 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Home</h1>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="logo">🌟 My Website</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 欢迎部分 -->
+    <section class="hero">
+        <h1>Welcome to My World</h1>
+        <p>Step into my world of ideas, where technology meets creativity and innovation knows no bounds.</p>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            Hi, I'm Astrid Stark, a passionate web developer and designer. I love creating clean and modern user interfaces. Let's build something amazing together!
+        </p>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Connect with me through the following platforms:</p>
+        <div class="contact-icons">
+            <a href="https://github.com/AstridStark25963" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://x.com/IAmAstridStark" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="mailto:astridstark@gmail.com" target="_blank" title="Gmail">
+                <i class="fas fa-envelope"></i>
+            </a>
         </div>
-        <div class="content">
-            <p>Welcome to the home page.</p>
-        </div>
-    </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2024 Astrid Stark. Designed with 💙 and inspired by Windows 11.</p>
+    </footer>
+</body>
 
 </html>
