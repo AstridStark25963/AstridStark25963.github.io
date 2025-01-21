@@ -36,7 +36,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://1lya.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-01-21T12:37:26.614Z">
-<meta property="article:modified_time" content="2025-01-21T12:36:50.930Z">
+<meta property="article:modified_time" content="2025-01-21T12:54:10.621Z">
 <meta property="article:author" content="Astrid Stark">
 <meta property="article:tag" content="Guide">
 <meta property="article:tag" content="Ubuntu">
@@ -355,8 +355,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-01-21 20:36:50</span>
-            <span class="mobile">2025-01-21 20:36:50</span>
+            <span class="desktop">2025-01-21 20:54:10</span>
+            <span class="mobile">2025-01-21 20:54:10</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -414,7 +414,7 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h2 id="一、安装虚拟机和-Ubuntu-系统"><a href="#一、安装虚拟机和-Ubuntu-系统" class="headerlink" title="一、安装虚拟机和 Ubuntu 系统"></a>一、安装虚拟机和 Ubuntu 系统</h2><p>访问 VMware Workshop Pro 官网，下载软件。</p>
+			<h2 id="一、安装-Ubuntu-系统"><a href="#一、安装-Ubuntu-系统" class="headerlink" title="一、安装 Ubuntu 系统"></a>一、安装 Ubuntu 系统</h2><p>访问 VMware Workshop Pro 官网，下载软件。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
@@ -572,7 +572,7 @@
 <p>若仍报错，继续尝试以下命令：</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install lib32ncurses5 lib32z1</span><br><span class="line"><span class="built_in">sudo</span> apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386</span><br><span class="line"><span class="built_in">sudo</span> apt-get install zlib1g:i386 libstdc++6:i386 libc6:i386</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="三、创建并挂载共享文件夹"><a href="#三、创建并挂载共享文件夹" class="headerlink" title="三、创建并挂载共享文件夹"></a>三、创建并挂载共享文件夹</h2><p><img  
+<h2 id="三、挂载共享文件夹"><a href="#三、挂载共享文件夹" class="headerlink" title="三、挂载共享文件夹"></a>三、挂载共享文件夹</h2><p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-19.png"
@@ -590,14 +590,14 @@
 <blockquote>
 <p>为了方便，创建文件夹不要带空格（带也行，输入代码时要通过斜杠转义）</p>
 </blockquote>
-<h3 id="单次挂载："><a href="#单次挂载：" class="headerlink" title="单次挂载："></a>单次挂载：</h3><p>首先安装 VMware Tools：</p>
+<h3 id="单次挂载"><a href="#单次挂载" class="headerlink" title="单次挂载"></a>单次挂载</h3><p>首先安装 VMware Tools：</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools</span><br><span class="line"><span class="comment"># 安装后重启虚拟机</span></span><br></pre></td></tr></table></figure></div>
 
 <p>终端输入以下指令：</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vmware-hgfsclient</span><br><span class="line"><span class="comment"># 输入这条指令后会显示主机端共享文件夹的名称</span></span><br><span class="line"><span class="built_in">sudo</span> mount -t fuse.vmhgfs-fuse .host:/Ubuntu_22.04_LTS ~/文档/Windows_Shared -o allow_other</span><br><span class="line"><span class="comment"># &#x27;Ubuntu_22.04_LTS&#x27;替换为主机端共享文件夹名称</span></span><br><span class="line"><span class="comment"># &#x27;~/文档/Windows_Shared&#x27;替换为客户机端挂载路径及共享文件夹名称</span></span><br></pre></td></tr></table></figure></div>
 
 <p>挂载完成后，从主机端复制任意文件到共享文件夹，若能够在客户机端查看即为挂载成功。</p>
-<h3 id="开机自动挂载："><a href="#开机自动挂载：" class="headerlink" title="开机自动挂载："></a>开机自动挂载：</h3><p>使用 Nano 文字编辑器修改 <code>/etc/fstab</code> 文件的内容：</p>
+<h3 id="开机自动挂载"><a href="#开机自动挂载" class="headerlink" title="开机自动挂载"></a>开机自动挂载</h3><p>使用 Nano 文字编辑器修改 <code>/etc/fstab</code> 文件的内容：</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/fstab</span><br><span class="line"><span class="comment"># 使用nano打开fstab文件</span></span><br></pre></td></tr></table></figure></div>
 
 <p>在 fstab 文件最后一行添加以下内容：</p>
@@ -608,7 +608,7 @@
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mount -a</span><br><span class="line"><span class="comment"># 手动挂载文件系统</span></span><br></pre></td></tr></table></figure></div>
 
 <p>重启虚拟机系统，检查挂载是否成功。</p>
-<h2 id="四、共享主机-VPN-网络代理"><a href="#四、共享主机-VPN-网络代理" class="headerlink" title="四、共享主机 VPN 网络代理"></a>四、共享主机 VPN 网络代理</h2><p><img  
+<h2 id="四、共享主机网络代理"><a href="#四、共享主机网络代理" class="headerlink" title="四、共享主机网络代理"></a>四、共享主机网络代理</h2><p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-21.png"
@@ -641,7 +641,7 @@
 <p>此命令需要预先下载 <code>net-tools</code> 包：</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install net-tools</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="五、创建桌面快捷方式"><a href="#五、创建桌面快捷方式" class="headerlink" title="五、创建桌面快捷方式"></a>五、创建桌面快捷方式</h2><h3 id="方法一：使用-gnome-生成快捷方式"><a href="#方法一：使用-gnome-生成快捷方式" class="headerlink" title="方法一：使用 gnome 生成快捷方式"></a>方法一：使用 gnome 生成快捷方式</h3><p>首先在系统文件夹 <code>/usr/share/applications</code> 中找到对应的 <code>.desktop</code> 文件，将其复制到桌面文件夹即可（鼠标右键，允许运行），如果找不到对应文件则需要按如下步骤生成 <code>.desktop</code> 文件。</p>
+<h2 id="五、创建桌面快捷方式"><a href="#五、创建桌面快捷方式" class="headerlink" title="五、创建桌面快捷方式"></a>五、创建桌面快捷方式</h2><h3 id="使用-gnome-生成快捷方式"><a href="#使用-gnome-生成快捷方式" class="headerlink" title="使用 gnome 生成快捷方式"></a>使用 gnome 生成快捷方式</h3><p>首先在系统文件夹 <code>/usr/share/applications</code> 中找到对应的 <code>.desktop</code> 文件，将其复制到桌面文件夹即可（鼠标右键，允许运行），如果找不到对应文件则需要按如下步骤生成 <code>.desktop</code> 文件。</p>
 <p>执行命令，安装 <code>gnome-desktop-item-edit</code> 工具：</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install --no-install-recommends gnome-panel</span><br></pre></td></tr></table></figure></div>
 
@@ -669,7 +669,7 @@
                      data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-27.png"
                       alt="Trust and Launch"
                 ></p>
-<h3 id="方法二：直接在软件安装目录寻找"><a href="#方法二：直接在软件安装目录寻找" class="headerlink" title="方法二：直接在软件安装目录寻找"></a>方法二：直接在软件安装目录寻找</h3><p>非 Snap 安装的软件的 <code>.desktop</code> 文件在 <code>/usr/share/applications/</code> 下可找到。</p>
+<h3 id="直接在软件安装目录寻找"><a href="#直接在软件安装目录寻找" class="headerlink" title="直接在软件安装目录寻找"></a>直接在软件安装目录寻找</h3><p>非 Snap 安装的软件的 <code>.desktop</code> 文件在 <code>/usr/share/applications/</code> 下可找到。</p>
 <p>图标可使用 find 命令寻找。</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 寻找百度网盘的图标文件地址</span></span><br><span class="line">find /usr -name <span class="string">&quot;baidunetdisk*.svg&quot;</span></span><br></pre></td></tr></table></figure></div>
 
@@ -677,13 +677,13 @@
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vs code本地安装位置</span></span><br><span class="line"><span class="built_in">which</span> code</span><br></pre></td></tr></table></figure></div>
 
 <p>安装路径中即可找到相应的 <code>.desktop</code> 文件和 <code>.png</code> 图标文件。</p>
-<h3 id="方法三：使用软链接进行创建"><a href="#方法三：使用软链接进行创建" class="headerlink" title="方法三：使用软链接进行创建"></a>方法三：使用软链接进行创建</h3><p>通过执行以下命令，使用软链接将可执行文件链接到桌面。</p>
+<h3 id="使用软链接进行创建"><a href="#使用软链接进行创建" class="headerlink" title="使用软链接进行创建"></a>使用软链接进行创建</h3><p>通过执行以下命令，使用软链接将可执行文件链接到桌面。</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将/snap/chromium文件夹链接到桌面的Chromium文件</span></span><br><span class="line"><span class="built_in">ln</span> -s /snap/chromium ~/Desktop/Chromium</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="六、疑难解答"><a href="#六、疑难解答" class="headerlink" title="六、疑难解答"></a>六、疑难解答</h2><h3 id="问题一：界面右上角有线选项消失，无法进行网络设置？"><a href="#问题一：界面右上角有线选项消失，无法进行网络设置？" class="headerlink" title="问题一：界面右上角有线选项消失，无法进行网络设置？"></a>问题一：界面右上角有线选项消失，无法进行网络设置？</h3><p>依次执行下列命令：</p>
+<h2 id="六、疑难解答"><a href="#六、疑难解答" class="headerlink" title="六、疑难解答"></a>六、疑难解答</h2><h3 id="界面右上角有线选项消失，无法进行网络设置？"><a href="#界面右上角有线选项消失，无法进行网络设置？" class="headerlink" title="界面右上角有线选项消失，无法进行网络设置？"></a>界面右上角有线选项消失，无法进行网络设置？</h3><p>依次执行下列命令：</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 关闭网络</span></span><br><span class="line">service NetworkManager stop</span><br><span class="line"><span class="comment"># 删除 NetworkManager 缓存文件</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> /var/lib/NetworkManager/NetworkManager.state</span><br><span class="line"><span class="comment"># 打开网络</span></span><br><span class="line">service NetworkManager start</span><br></pre></td></tr></table></figure></div>
 
-<h3 id="问题二：强制关闭虚拟机被锁定无法启动？"><a href="#问题二：强制关闭虚拟机被锁定无法启动？" class="headerlink" title="问题二：强制关闭虚拟机被锁定无法启动？"></a>问题二：强制关闭虚拟机被锁定无法启动？</h3><blockquote>
+<h3 id="强制关闭虚拟机被锁定无法启动？"><a href="#强制关闭虚拟机被锁定无法启动？" class="headerlink" title="强制关闭虚拟机被锁定无法启动？"></a>强制关闭虚拟机被锁定无法启动？</h3><blockquote>
 <p><strong>报错信息：</strong>另一个程序已锁定文件的一部分，进程无法访问  打不开磁盘“E:\VMware\Virtual Machines\Windows 11 23H2\Windows 11 23H2.vmdk”或它所依赖的某个快照磁盘。  模块“Disk”启动失败。  未能启动虚拟机。</p>
 </blockquote>
 <p><strong>引起原因：</strong>虚拟机在运行时，为防止数据被篡改，会将所运行的文件保护起来。当虚拟机突然崩溃或者强制结束导致异常退出，会导致虚拟机来不及解锁保护文件。</p>
@@ -691,7 +691,7 @@
 <blockquote>
 <p>删除以 <code>.lck</code> 为后缀的文件即可</p>
 </blockquote>
-<h3 id="问题三：Ubuntu-24-04-启动时黑屏？"><a href="#问题三：Ubuntu-24-04-启动时黑屏？" class="headerlink" title="问题三：Ubuntu 24.04 启动时黑屏？"></a>问题三：Ubuntu 24.04 启动时黑屏？</h3><p>首先关闭虚拟机，然后关闭虚拟机 3D 图形加速。</p>
+<h3 id="Ubuntu-24-04-启动时黑屏？"><a href="#Ubuntu-24-04-启动时黑屏？" class="headerlink" title="Ubuntu 24.04 启动时黑屏？"></a>Ubuntu 24.04 启动时黑屏？</h3><p>首先关闭虚拟机，然后关闭虚拟机 3D 图形加速。</p>
 <blockquote>
 <p>虚拟机设置 — 显示器 — 3D 图形加速</p>
 </blockquote>
@@ -700,13 +700,13 @@
 
 <p>安装完成后，关闭虚拟机，重新开启3D图形加速。</p>
 <p>再次登录即可正常使用。</p>
-<h3 id="问题四：怎么在打开新窗口时让它位于界面中央？"><a href="#问题四：怎么在打开新窗口时让它位于界面中央？" class="headerlink" title="问题四：怎么在打开新窗口时让它位于界面中央？"></a>问题四：怎么在打开新窗口时让它位于界面中央？</h3><p><strong>方法一：</strong>安装 GNOME Tweaks 进行调整</p>
+<h3 id="怎么在打开新窗口时让它位于界面中央？"><a href="#怎么在打开新窗口时让它位于界面中央？" class="headerlink" title="怎么在打开新窗口时让它位于界面中央？"></a>怎么在打开新窗口时让它位于界面中央？</h3><p><strong>方法一：</strong>安装 GNOME Tweaks 进行调整</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install gnome-tweaks</span><br></pre></td></tr></table></figure></div>
 
 <p><strong>方法二：</strong>直接使用命令行</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gsettings <span class="built_in">set</span> org.gnome.mutter center-new-windows <span class="literal">true</span></span><br></pre></td></tr></table></figure></div>
 
-<h3 id="问题五：VMware新版本不支持VMTools，应该去哪下载？"><a href="#问题五：VMware新版本不支持VMTools，应该去哪下载？" class="headerlink" title="问题五：VMware新版本不支持VMTools，应该去哪下载？"></a>问题五：VMware新版本不支持VMTools，应该去哪下载？</h3><p>打开该地址，找到对应 VMware 版本的 VMTools 并下载即可。</p>
+<h3 id="VMware新版本不支持VMTools，应该去哪下载？"><a href="#VMware新版本不支持VMTools，应该去哪下载？" class="headerlink" title="VMware新版本不支持VMTools，应该去哪下载？"></a>VMware新版本不支持VMTools，应该去哪下载？</h3><p>打开该地址，找到对应 VMware 版本的 VMTools 并下载即可。</p>
 <p><a class="link"   target="_blank" rel="noopener" href="http://softwareupdate.vmware.com/cds/vmw-desktop/ws/" >VMTools Download Link<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 
 		</div>
@@ -758,7 +758,7 @@
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
 		<div class="page-title">Beginner&#39;s Guide for Ubuntu</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%92%8C-Ubuntu-%E7%B3%BB%E7%BB%9F"><span class="nav-text">一、安装虚拟机和 Ubuntu 系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83"><span class="nav-text">二、配置编程语言环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%88%9B%E5%BB%BA%E5%B9%B6%E6%8C%82%E8%BD%BD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-text">三、创建并挂载共享文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E6%AC%A1%E6%8C%82%E8%BD%BD%EF%BC%9A"><span class="nav-text">单次挂载：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%EF%BC%9A"><span class="nav-text">开机自动挂载：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%85%B1%E4%BA%AB%E4%B8%BB%E6%9C%BA-VPN-%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86"><span class="nav-text">四、共享主机 VPN 网络代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%88%9B%E5%BB%BA%E6%A1%8C%E9%9D%A2%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="nav-text">五、创建桌面快捷方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8-gnome-%E7%94%9F%E6%88%90%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="nav-text">方法一：使用 gnome 生成快捷方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E7%9B%B4%E6%8E%A5%E5%9C%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95%E5%AF%BB%E6%89%BE"><span class="nav-text">方法二：直接在软件安装目录寻找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%89%EF%BC%9A%E4%BD%BF%E7%94%A8%E8%BD%AF%E9%93%BE%E6%8E%A5%E8%BF%9B%E8%A1%8C%E5%88%9B%E5%BB%BA"><span class="nav-text">方法三：使用软链接进行创建</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94"><span class="nav-text">六、疑难解答</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%80%EF%BC%9A%E7%95%8C%E9%9D%A2%E5%8F%B3%E4%B8%8A%E8%A7%92%E6%9C%89%E7%BA%BF%E9%80%89%E9%A1%B9%E6%B6%88%E5%A4%B1%EF%BC%8C%E6%97%A0%E6%B3%95%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%EF%BC%9F"><span class="nav-text">问题一：界面右上角有线选项消失，无法进行网络设置？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%BA%8C%EF%BC%9A%E5%BC%BA%E5%88%B6%E5%85%B3%E9%97%AD%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A2%AB%E9%94%81%E5%AE%9A%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%EF%BC%9F"><span class="nav-text">问题二：强制关闭虚拟机被锁定无法启动？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%89%EF%BC%9AUbuntu-24-04-%E5%90%AF%E5%8A%A8%E6%97%B6%E9%BB%91%E5%B1%8F%EF%BC%9F"><span class="nav-text">问题三：Ubuntu 24.04 启动时黑屏？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%9B%9B%EF%BC%9A%E6%80%8E%E4%B9%88%E5%9C%A8%E6%89%93%E5%BC%80%E6%96%B0%E7%AA%97%E5%8F%A3%E6%97%B6%E8%AE%A9%E5%AE%83%E4%BD%8D%E4%BA%8E%E7%95%8C%E9%9D%A2%E4%B8%AD%E5%A4%AE%EF%BC%9F"><span class="nav-text">问题四：怎么在打开新窗口时让它位于界面中央？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%BA%94%EF%BC%9AVMware%E6%96%B0%E7%89%88%E6%9C%AC%E4%B8%8D%E6%94%AF%E6%8C%81VMTools%EF%BC%8C%E5%BA%94%E8%AF%A5%E5%8E%BB%E5%93%AA%E4%B8%8B%E8%BD%BD%EF%BC%9F"><span class="nav-text">问题五：VMware新版本不支持VMTools，应该去哪下载？</span></a></li></ol></li></ol>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85-Ubuntu-%E7%B3%BB%E7%BB%9F"><span class="nav-text">一、安装 Ubuntu 系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83"><span class="nav-text">二、配置编程语言环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%8C%82%E8%BD%BD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-text">三、挂载共享文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E6%AC%A1%E6%8C%82%E8%BD%BD"><span class="nav-text">单次挂载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD"><span class="nav-text">开机自动挂载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%85%B1%E4%BA%AB%E4%B8%BB%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86"><span class="nav-text">四、共享主机网络代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%88%9B%E5%BB%BA%E6%A1%8C%E9%9D%A2%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="nav-text">五、创建桌面快捷方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-gnome-%E7%94%9F%E6%88%90%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="nav-text">使用 gnome 生成快捷方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E5%9C%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95%E5%AF%BB%E6%89%BE"><span class="nav-text">直接在软件安装目录寻找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%BD%AF%E9%93%BE%E6%8E%A5%E8%BF%9B%E8%A1%8C%E5%88%9B%E5%BB%BA"><span class="nav-text">使用软链接进行创建</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94"><span class="nav-text">六、疑难解答</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%95%8C%E9%9D%A2%E5%8F%B3%E4%B8%8A%E8%A7%92%E6%9C%89%E7%BA%BF%E9%80%89%E9%A1%B9%E6%B6%88%E5%A4%B1%EF%BC%8C%E6%97%A0%E6%B3%95%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%EF%BC%9F"><span class="nav-text">界面右上角有线选项消失，无法进行网络设置？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E5%88%B6%E5%85%B3%E9%97%AD%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A2%AB%E9%94%81%E5%AE%9A%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%EF%BC%9F"><span class="nav-text">强制关闭虚拟机被锁定无法启动？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu-24-04-%E5%90%AF%E5%8A%A8%E6%97%B6%E9%BB%91%E5%B1%8F%EF%BC%9F"><span class="nav-text">Ubuntu 24.04 启动时黑屏？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%9C%A8%E6%89%93%E5%BC%80%E6%96%B0%E7%AA%97%E5%8F%A3%E6%97%B6%E8%AE%A9%E5%AE%83%E4%BD%8D%E4%BA%8E%E7%95%8C%E9%9D%A2%E4%B8%AD%E5%A4%AE%EF%BC%9F"><span class="nav-text">怎么在打开新窗口时让它位于界面中央？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VMware%E6%96%B0%E7%89%88%E6%9C%AC%E4%B8%8D%E6%94%AF%E6%8C%81VMTools%EF%BC%8C%E5%BA%94%E8%AF%A5%E5%8E%BB%E5%93%AA%E4%B8%8B%E8%BD%BD%EF%BC%9F"><span class="nav-text">VMware新版本不支持VMTools，应该去哪下载？</span></a></li></ol></li></ol>
 
 	</div>
 </div>
