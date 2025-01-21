@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Astrid Stark">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://registry.npmmirror.com" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://1lya.com/2025/01/21/beginner's guide for ubuntu/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Beginner&#39;s Guide for Ubuntu">
+<meta property="og:url" content="https://1lya.com/2025/01/21/Beginner's%20Guide%20for%20Ubuntu/">
+<meta property="og:site_name" content="Astrid&#39;s Fantasy World">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://1lya.com/images/redefine-og.webp">
+<meta property="article:published_time" content="2025-01-21T12:37:26.614Z">
+<meta property="article:modified_time" content="2025-01-21T12:36:50.930Z">
+<meta property="article:author" content="Astrid Stark">
+<meta property="article:tag" content="Guide">
+<meta property="article:tag" content="Ubuntu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://1lya.com/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Beginner&#39;s Guide for Ubuntu | Astrid&#39;s Fantasy World
+        
+    </title>
+
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/css/build/tailwind.css">
+    
+
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"1lya.com","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":false,"count":false,"min2read":false},"author_label":{"enable":true,"auto":false,"list":["Lv. ∞"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Astrid's Fantasy World","subtitle":{"text":["do not go gentle into that good night"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":75,"backing_speed":60,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/AstridStark25963","instagram":null,"zhihu":null,"twitter":"https://x.com/IAmAstridStark","email":"astridstark25963@gmail.com"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":true,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"path":"/about","icon":"fa-regular fa-user"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"Dive, into the unknown.","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/12/23 11:03:42"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Astrid&#39;s Fantasy World
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-regular fa-user fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="/images/beginners-guide-for-ubuntu.jpg" alt="Beginner&#39;s Guide for Ubuntu" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">Beginner&#39;s Guide for Ubuntu</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/my-avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Astrid Stark</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv. ∞</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-01-21 20:37:26</span>
+        <span class="mobile">2025-01-21 20:37:26</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-01-21 20:36:50</span>
+            <span class="mobile">2025-01-21 20:36:50</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Programming/">Programming</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Guide/">Guide</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Ubuntu/">Ubuntu</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h2 id="一、安装虚拟机和-Ubuntu-系统"><a href="#一、安装虚拟机和-Ubuntu-系统" class="headerlink" title="一、安装虚拟机和 Ubuntu 系统"></a>一、安装虚拟机和 Ubuntu 系统</h2><p>访问 VMware Workshop Pro 官网，下载软件。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-0.png"
+                      alt="VMware Workstation Pro 17下载页面"
+                ></p>
+<p>取消框选自动更新和发送反馈。</p>
+<blockquote>
+<p>激活码填入：<strong>HF200-0W05K-089X8-4R1EK-032J0</strong></p>
+</blockquote>
+<p>安装完毕。</p>
+<p>接下来下载 Ubuntu ，版本号选择 22.04 LTS。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-1.png"
+                      alt="Ubuntu 22.04 LTS下载页面"
+                ></p>
+<p>之后进行虚拟机配置。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-2.png"
+                      alt="VMware Workstation Pro 17主页面"
+                ></p>
+<p>点击“创建新的虚拟机”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-3.png"
+                      alt="新建虚拟机向导"
+                ></p>
+<p>点击“下一步”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-4.png"
+                      alt="安装客户机操作系统"
+                ></p>
+<p>选择“稍后安装操作系统”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-5.png"
+                      alt="选择客户机操作系统"
+                ></p>
+<p>客户机操作系统选择“Linux”，版本选择“Ubuntu 64位”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-6.png"
+                      alt="命名虚拟机"
+                ></p>
+<p>命名虚拟机，选择安装位置（尽量不要安装在C盘）</p>
+<blockquote>
+<p>安装路径文件夹下需预留 20GB 存储空间</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-7.png"
+                      alt="指定磁盘容量"
+                ></p>
+<p>选择“将虚拟磁盘存储为单个文件”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-8.png"
+                      alt="准备创建虚拟机"
+                ></p>
+<p>点击“完成”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-9.png"
+                      alt="Ubuntu 64位"
+                ></p>
+<p>此时左侧库中便会出现已经安装好的虚拟机。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-10.png"
+                      alt="虚拟机设置"
+                ></p>
+<p>点击“编辑虚拟器设置”。</p>
+<p><img src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-11.png" alt="CD/DVD设置"></p>
+<p>点击“CD&#x2F;DVD (SATA) → 使用 ISO 映像文件 → 浏览”，选择下载的 Ubuntu 映像，最后点击“确定“。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-12.png"
+                      alt="开启虚拟机"
+                ></p>
+<p>选择”开启此虚拟机“。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-13.png"
+                      alt="安装"
+                ></p>
+<p>选择”中文（简体）→安装 Ubuntu“（如有需要可直接安装英语）。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-14.png"
+                      alt="键盘布局"
+                ></p>
+<p>点击”继续“。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-15.png"
+                      alt="更新和其他软件"
+                ></p>
+<p>保持默认，点击”继续”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-16.png"
+                      alt="安装类型"
+                ></p>
+<p>点击“现在安装”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-17.png"
+                      alt="将改动写入磁盘"
+                ></p>
+<p>点击“继续”。</p>
+<p>地区选择“Shanghai”，点击“继续”。</p>
+<p>接下来填写姓名密码即可。</p>
+<p>等待安装完成。</p>
+<h2 id="二、配置编程语言环境"><a href="#二、配置编程语言环境" class="headerlink" title="二、配置编程语言环境"></a>二、配置编程语言环境</h2><p>以 C&#x2F;C++ 编程环境为例。</p>
+<blockquote>
+<p>建议使用Clion，可使用学校个人专用邮箱+学籍证明申请许可</p>
+</blockquote>
+<p>在 Ubuntu Software 中安装 Clion。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-18.png"
+                      alt="安装Clion"
+                ></p>
+<p>安装Clion</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get update</span><br><span class="line"><span class="built_in">sudo</span> apt-get install cmake</span><br><span class="line"><span class="built_in">sudo</span> apt-get install build-essential</span><br></pre></td></tr></table></figure></div>
+
+<p>使用终端命令安装 CMake 和编译器。</p>
+<p>打开 Clion，激活后即可使用。</p>
+<p>如果想要安装使用 32 位编译运行环境，依次执行以下命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dpkg --add-architecture i386</span><br><span class="line"><span class="built_in">sudo</span> apt-get update</span><br><span class="line"><span class="built_in">sudo</span> apt-get install build-essential module-assistant</span><br><span class="line"><span class="built_in">sudo</span> apt-get install gcc-multilib g++-multilib</span><br></pre></td></tr></table></figure></div>
+
+<p>安装完成后新建 <code>hello.c</code> 并在终端输入以下命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -m32 hello.c -o hello32</span><br><span class="line">./hello32</span><br></pre></td></tr></table></figure></div>
+
+<p>若仍报错，继续尝试以下命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install lib32ncurses5 lib32z1</span><br><span class="line"><span class="built_in">sudo</span> apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386</span><br><span class="line"><span class="built_in">sudo</span> apt-get install zlib1g:i386 libstdc++6:i386 libc6:i386</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、创建并挂载共享文件夹"><a href="#三、创建并挂载共享文件夹" class="headerlink" title="三、创建并挂载共享文件夹"></a>三、创建并挂载共享文件夹</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-19.png"
+                      alt="创建共享文件夹"
+                ></p>
+<p>点击“虚拟机设置 → 选项 → 共享文件夹 → 总是启用 → 添加”创建主机端共享文件夹。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-20.png"
+                      alt="创建Linux端共享文件夹"
+                ></p>
+<p>创建Linux端共享文件夹</p>
+<p>在客户机端想要的位置新建文件夹（文件夹名称可与主机端不同）。</p>
+<blockquote>
+<p>为了方便，创建文件夹不要带空格（带也行，输入代码时要通过斜杠转义）</p>
+</blockquote>
+<h3 id="单次挂载："><a href="#单次挂载：" class="headerlink" title="单次挂载："></a>单次挂载：</h3><p>首先安装 VMware Tools：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools</span><br><span class="line"><span class="comment"># 安装后重启虚拟机</span></span><br></pre></td></tr></table></figure></div>
+
+<p>终端输入以下指令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vmware-hgfsclient</span><br><span class="line"><span class="comment"># 输入这条指令后会显示主机端共享文件夹的名称</span></span><br><span class="line"><span class="built_in">sudo</span> mount -t fuse.vmhgfs-fuse .host:/Ubuntu_22.04_LTS ~/文档/Windows_Shared -o allow_other</span><br><span class="line"><span class="comment"># &#x27;Ubuntu_22.04_LTS&#x27;替换为主机端共享文件夹名称</span></span><br><span class="line"><span class="comment"># &#x27;~/文档/Windows_Shared&#x27;替换为客户机端挂载路径及共享文件夹名称</span></span><br></pre></td></tr></table></figure></div>
+
+<p>挂载完成后，从主机端复制任意文件到共享文件夹，若能够在客户机端查看即为挂载成功。</p>
+<h3 id="开机自动挂载："><a href="#开机自动挂载：" class="headerlink" title="开机自动挂载："></a>开机自动挂载：</h3><p>使用 Nano 文字编辑器修改 <code>/etc/fstab</code> 文件的内容：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/fstab</span><br><span class="line"><span class="comment"># 使用nano打开fstab文件</span></span><br></pre></td></tr></table></figure></div>
+
+<p>在 fstab 文件最后一行添加以下内容：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.host:/Ubuntu_22.04_LTS  /home/astrid/文档/Windows_Shared  fuse.vmhgfs-fuse  defaults,allow_other,uid=1000,gid=1000  0  0</span><br><span class="line"><span class="comment"># 文件夹名称及共享文件夹名称替换规则同上</span></span><br><span class="line"><span class="comment"># &#x27;astrid&#x27;替换为自己的用户名</span></span><br><span class="line"><span class="comment"># 语句中间的空格为两个</span></span><br></pre></td></tr></table></figure></div>
+
+<p>修改完成后按“Ctrl+X”保存修改，“Y”确认保存，“Enter”退出文件修改。</p>
+<p>最后在终端输入：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mount -a</span><br><span class="line"><span class="comment"># 手动挂载文件系统</span></span><br></pre></td></tr></table></figure></div>
+
+<p>重启虚拟机系统，检查挂载是否成功。</p>
+<h2 id="四、共享主机-VPN-网络代理"><a href="#四、共享主机-VPN-网络代理" class="headerlink" title="四、共享主机 VPN 网络代理"></a>四、共享主机 VPN 网络代理</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-21.png"
+                      alt="虚拟机网络适配器连接设置"
+                ></p>
+<p>点击”虚拟机设置 → 网络适配器 → 桥接模式 → 复制物理网络连接状态 → 确定“。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-22.png"
+                      alt="Clash配置"
+                ></p>
+<p>打开“允许局域网连接”，记住端口号 7890。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-23.png"
+                      alt="虚拟机网络设置"
+                ></p>
+<p>在虚拟机系统中点击”设置 → 网络 → 网络代理“。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-24.png"
+                      alt="虚拟机网络代理设置"
+                ></p>
+<p>IP 地址通过 Windows 控制台输入 <code>ipconfig</code> 获取主机 IP 后输入。</p>
+<p>配置完成后即可在 Linux 端接收 VPN 流量。</p>
+<p>如果想在 Ubuntu 查看本机 IP，可以使用 <code>ifconfig</code> 命令获取。</p>
+<p>此命令需要预先下载 <code>net-tools</code> 包：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install net-tools</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="五、创建桌面快捷方式"><a href="#五、创建桌面快捷方式" class="headerlink" title="五、创建桌面快捷方式"></a>五、创建桌面快捷方式</h2><h3 id="方法一：使用-gnome-生成快捷方式"><a href="#方法一：使用-gnome-生成快捷方式" class="headerlink" title="方法一：使用 gnome 生成快捷方式"></a>方法一：使用 gnome 生成快捷方式</h3><p>首先在系统文件夹 <code>/usr/share/applications</code> 中找到对应的 <code>.desktop</code> 文件，将其复制到桌面文件夹即可（鼠标右键，允许运行），如果找不到对应文件则需要按如下步骤生成 <code>.desktop</code> 文件。</p>
+<p>执行命令，安装 <code>gnome-desktop-item-edit</code> 工具：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install --no-install-recommends gnome-panel</span><br></pre></td></tr></table></figure></div>
+
+<p>安装完成后执行创建快捷方式，执行如下命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gnome-desktop-item-edit ~/Desktop/ --create-new</span><br></pre></td></tr></table></figure></div>
+
+<p>弹出对话框后，填入和选择相应的参数及路径，可以看到桌面已经生成了一个对应的 <code>.desktop</code> 文件。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-25.png"
+                      alt="创建启动器"
+                ></p>
+<p>点击生成的 Desktop 文件，右键选择属性；点击图标的位置跳转到应用的安装文件夹下，选择对应的图标，可以完成图标的更换。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-26.png"
+                      alt="启动器属性"
+                ></p>
+<p>双击打开桌面生成的 <code>.desktop</code> 文件，选择 Trust and Launch。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-27.png"
+                      alt="Trust and Launch"
+                ></p>
+<h3 id="方法二：直接在软件安装目录寻找"><a href="#方法二：直接在软件安装目录寻找" class="headerlink" title="方法二：直接在软件安装目录寻找"></a>方法二：直接在软件安装目录寻找</h3><p>非 Snap 安装的软件的 <code>.desktop</code> 文件在 <code>/usr/share/applications/</code> 下可找到。</p>
+<p>图标可使用 find 命令寻找。</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 寻找百度网盘的图标文件地址</span></span><br><span class="line">find /usr -name <span class="string">&quot;baidunetdisk*.svg&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>Snap 安装的软件可以使用 <code>which</code> 命令寻找安装路径。</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vs code本地安装位置</span></span><br><span class="line"><span class="built_in">which</span> code</span><br></pre></td></tr></table></figure></div>
+
+<p>安装路径中即可找到相应的 <code>.desktop</code> 文件和 <code>.png</code> 图标文件。</p>
+<h3 id="方法三：使用软链接进行创建"><a href="#方法三：使用软链接进行创建" class="headerlink" title="方法三：使用软链接进行创建"></a>方法三：使用软链接进行创建</h3><p>通过执行以下命令，使用软链接将可执行文件链接到桌面。</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将/snap/chromium文件夹链接到桌面的Chromium文件</span></span><br><span class="line"><span class="built_in">ln</span> -s /snap/chromium ~/Desktop/Chromium</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="六、疑难解答"><a href="#六、疑难解答" class="headerlink" title="六、疑难解答"></a>六、疑难解答</h2><h3 id="问题一：界面右上角有线选项消失，无法进行网络设置？"><a href="#问题一：界面右上角有线选项消失，无法进行网络设置？" class="headerlink" title="问题一：界面右上角有线选项消失，无法进行网络设置？"></a>问题一：界面右上角有线选项消失，无法进行网络设置？</h3><p>依次执行下列命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 关闭网络</span></span><br><span class="line">service NetworkManager stop</span><br><span class="line"><span class="comment"># 删除 NetworkManager 缓存文件</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> /var/lib/NetworkManager/NetworkManager.state</span><br><span class="line"><span class="comment"># 打开网络</span></span><br><span class="line">service NetworkManager start</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="问题二：强制关闭虚拟机被锁定无法启动？"><a href="#问题二：强制关闭虚拟机被锁定无法启动？" class="headerlink" title="问题二：强制关闭虚拟机被锁定无法启动？"></a>问题二：强制关闭虚拟机被锁定无法启动？</h3><blockquote>
+<p><strong>报错信息：</strong>另一个程序已锁定文件的一部分，进程无法访问  打不开磁盘“E:\VMware\Virtual Machines\Windows 11 23H2\Windows 11 23H2.vmdk”或它所依赖的某个快照磁盘。  模块“Disk”启动失败。  未能启动虚拟机。</p>
+</blockquote>
+<p><strong>引起原因：</strong>虚拟机在运行时，为防止数据被篡改，会将所运行的文件保护起来。当虚拟机突然崩溃或者强制结束导致异常退出，会导致虚拟机来不及解锁保护文件。</p>
+<p><strong>解决方案：</strong>进入虚拟机安装目录，删除其保护文件。</p>
+<blockquote>
+<p>删除以 <code>.lck</code> 为后缀的文件即可</p>
+</blockquote>
+<h3 id="问题三：Ubuntu-24-04-启动时黑屏？"><a href="#问题三：Ubuntu-24-04-启动时黑屏？" class="headerlink" title="问题三：Ubuntu 24.04 启动时黑屏？"></a>问题三：Ubuntu 24.04 启动时黑屏？</h3><p>首先关闭虚拟机，然后关闭虚拟机 3D 图形加速。</p>
+<blockquote>
+<p>虚拟机设置 — 显示器 — 3D 图形加速</p>
+</blockquote>
+<p>重新登录后更新图形驱动。依次执行下列命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> add-apt-repository ppa:oibaf/graphics-drivers</span><br><span class="line"><span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt upgrade</span><br></pre></td></tr></table></figure></div>
+
+<p>安装完成后，关闭虚拟机，重新开启3D图形加速。</p>
+<p>再次登录即可正常使用。</p>
+<h3 id="问题四：怎么在打开新窗口时让它位于界面中央？"><a href="#问题四：怎么在打开新窗口时让它位于界面中央？" class="headerlink" title="问题四：怎么在打开新窗口时让它位于界面中央？"></a>问题四：怎么在打开新窗口时让它位于界面中央？</h3><p><strong>方法一：</strong>安装 GNOME Tweaks 进行调整</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install gnome-tweaks</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>方法二：</strong>直接使用命令行</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gsettings <span class="built_in">set</span> org.gnome.mutter center-new-windows <span class="literal">true</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="问题五：VMware新版本不支持VMTools，应该去哪下载？"><a href="#问题五：VMware新版本不支持VMTools，应该去哪下载？" class="headerlink" title="问题五：VMware新版本不支持VMTools，应该去哪下载？"></a>问题五：VMware新版本不支持VMTools，应该去哪下载？</h3><p>打开该地址，找到对应 VMware 版本的 VMTools 并下载即可。</p>
+<p><a class="link"   target="_blank" rel="noopener" href="http://softwareupdate.vmware.com/cds/vmw-desktop/ws/" >VMTools Download Link<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Guide/">#Guide</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Ubuntu/">#Ubuntu</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2025/01/21/List%20of%20Books%20by%20Higashino%20Keigo/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">List of Books by Higashino Keigo</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">Beginner&#39;s Guide for Ubuntu</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%92%8C-Ubuntu-%E7%B3%BB%E7%BB%9F"><span class="nav-text">一、安装虚拟机和 Ubuntu 系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83"><span class="nav-text">二、配置编程语言环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%88%9B%E5%BB%BA%E5%B9%B6%E6%8C%82%E8%BD%BD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-text">三、创建并挂载共享文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E6%AC%A1%E6%8C%82%E8%BD%BD%EF%BC%9A"><span class="nav-text">单次挂载：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%EF%BC%9A"><span class="nav-text">开机自动挂载：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%85%B1%E4%BA%AB%E4%B8%BB%E6%9C%BA-VPN-%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86"><span class="nav-text">四、共享主机 VPN 网络代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%88%9B%E5%BB%BA%E6%A1%8C%E9%9D%A2%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="nav-text">五、创建桌面快捷方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8-gnome-%E7%94%9F%E6%88%90%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="nav-text">方法一：使用 gnome 生成快捷方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E7%9B%B4%E6%8E%A5%E5%9C%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95%E5%AF%BB%E6%89%BE"><span class="nav-text">方法二：直接在软件安装目录寻找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%89%EF%BC%9A%E4%BD%BF%E7%94%A8%E8%BD%AF%E9%93%BE%E6%8E%A5%E8%BF%9B%E8%A1%8C%E5%88%9B%E5%BB%BA"><span class="nav-text">方法三：使用软链接进行创建</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94"><span class="nav-text">六、疑难解答</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%80%EF%BC%9A%E7%95%8C%E9%9D%A2%E5%8F%B3%E4%B8%8A%E8%A7%92%E6%9C%89%E7%BA%BF%E9%80%89%E9%A1%B9%E6%B6%88%E5%A4%B1%EF%BC%8C%E6%97%A0%E6%B3%95%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%EF%BC%9F"><span class="nav-text">问题一：界面右上角有线选项消失，无法进行网络设置？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%BA%8C%EF%BC%9A%E5%BC%BA%E5%88%B6%E5%85%B3%E9%97%AD%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A2%AB%E9%94%81%E5%AE%9A%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%EF%BC%9F"><span class="nav-text">问题二：强制关闭虚拟机被锁定无法启动？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%89%EF%BC%9AUbuntu-24-04-%E5%90%AF%E5%8A%A8%E6%97%B6%E9%BB%91%E5%B1%8F%EF%BC%9F"><span class="nav-text">问题三：Ubuntu 24.04 启动时黑屏？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%9B%9B%EF%BC%9A%E6%80%8E%E4%B9%88%E5%9C%A8%E6%89%93%E5%BC%80%E6%96%B0%E7%AA%97%E5%8F%A3%E6%97%B6%E8%AE%A9%E5%AE%83%E4%BD%8D%E4%BA%8E%E7%95%8C%E9%9D%A2%E4%B8%AD%E5%A4%AE%EF%BC%9F"><span class="nav-text">问题四：怎么在打开新窗口时让它位于界面中央？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%BA%94%EF%BC%9AVMware%E6%96%B0%E7%89%88%E6%9C%AC%E4%B8%8D%E6%94%AF%E6%8C%81VMTools%EF%BC%8C%E5%BA%94%E8%AF%A5%E5%8E%BB%E5%93%AA%E4%B8%8B%E8%BD%BD%EF%BC%9F"><span class="nav-text">问题五：VMware新版本不支持VMTools，应该去哪下载？</span></a></li></ol></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Astrid Stark</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        6 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+
+</main>
+
+
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/Swup.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/imageViewer.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/utils.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/main.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/navbarShrink.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/scrollTopBottom.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/lightDarkSwitch.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/categoryList.js" ></script>
+
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/codeBlock.js" ></script>
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/lazyload.js" ></script>
+
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/runtime.js" ></script>
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/Typed.min.js" ></script>
+  <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/typed.js" ></script>
+
+
+
+
+
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/anime.min.js" ></script>
+
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/tocToggle.js" data-swup-reload-script></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/toc.js" data-swup-reload-script></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/tabs.js" data-swup-reload-script></script>
+
+
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/essays.js" data-swup-reload-script></script>
+
+
+
+
+	
+</body>
+
+</html>
