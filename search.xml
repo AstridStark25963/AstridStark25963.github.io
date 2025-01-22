@@ -7,7 +7,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-0.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img0.png"
                       alt="VMware Workstation Pro 17下载页面"
                 ></p>
 <p>取消框选自动更新和发送反馈。</p>
@@ -19,42 +19,42 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-1.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img1.png"
                       alt="Ubuntu 22.04 LTS下载页面"
                 ></p>
 <p>之后进行虚拟机配置。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-2.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img2.png"
                       alt="VMware Workstation Pro 17主页面"
                 ></p>
 <p>点击“创建新的虚拟机”。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-3.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img3.png"
                       alt="新建虚拟机向导"
                 ></p>
 <p>点击“下一步”。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-4.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img4.png"
                       alt="安装客户机操作系统"
                 ></p>
 <p>选择“稍后安装操作系统”。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-5.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img5.png"
                       alt="选择客户机操作系统"
                 ></p>
 <p>客户机操作系统选择“Linux”，版本选择“Ubuntu 64位”。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-6.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img6.png"
                       alt="命名虚拟机"
                 ></p>
 <p>命名虚拟机，选择安装位置（尽量不要安装在C盘）</p>
@@ -64,72 +64,72 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-7.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img7.png"
                       alt="指定磁盘容量"
                 ></p>
 <p>选择“将虚拟磁盘存储为单个文件”。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-8.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img8.png"
                       alt="准备创建虚拟机"
                 ></p>
 <p>点击“完成”。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-9.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img9.png"
                       alt="Ubuntu 64位"
                 ></p>
 <p>此时左侧库中便会出现已经安装好的虚拟机。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-10.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img10.png"
                       alt="虚拟机设置"
                 ></p>
 <p>点击“编辑虚拟器设置”。</p>
-<p><img src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-11.png" alt="CD/DVD设置"></p>
+<p><img src="/images/beginners-guide-for-ubuntu/img11.png" alt="CD/DVD设置"></p>
 <p>点击“CD&#x2F;DVD (SATA) → 使用 ISO 映像文件 → 浏览”，选择下载的 Ubuntu 映像，最后点击“确定“。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-12.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img12.png"
                       alt="开启虚拟机"
                 ></p>
 <p>选择”开启此虚拟机“。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-13.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img13.png"
                       alt="安装"
                 ></p>
 <p>选择”中文（简体）→安装 Ubuntu“（如有需要可直接安装英语）。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-14.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img14.png"
                       alt="键盘布局"
                 ></p>
 <p>点击”继续“。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-15.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img15.png"
                       alt="更新和其他软件"
                 ></p>
 <p>保持默认，点击”继续”。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-16.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img16.png"
                       alt="安装类型"
                 ></p>
 <p>点击“现在安装”。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-17.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img17.png"
                       alt="将改动写入磁盘"
                 ></p>
 <p>点击“继续”。</p>
@@ -144,7 +144,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-18.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img18.png"
                       alt="安装Clion"
                 ></p>
 <p>安装Clion</p>
@@ -164,14 +164,14 @@
 <h2 id="三、挂载共享文件夹"><a href="#三、挂载共享文件夹" class="headerlink" title="三、挂载共享文件夹"></a>三、挂载共享文件夹</h2><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-19.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img19.png"
                       alt="创建共享文件夹"
                 ></p>
 <p>点击“虚拟机设置 → 选项 → 共享文件夹 → 总是启用 → 添加”创建主机端共享文件夹。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-20.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img20.png"
                       alt="创建Linux端共享文件夹"
                 ></p>
 <p>创建Linux端共享文件夹</p>
@@ -200,28 +200,28 @@
 <h2 id="四、共享主机网络代理"><a href="#四、共享主机网络代理" class="headerlink" title="四、共享主机网络代理"></a>四、共享主机网络代理</h2><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-21.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img21.png"
                       alt="虚拟机网络适配器连接设置"
                 ></p>
 <p>点击”虚拟机设置 → 网络适配器 → 桥接模式 → 复制物理网络连接状态 → 确定“。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-22.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img22.png"
                       alt="Clash配置"
                 ></p>
 <p>打开“允许局域网连接”，记住端口号 7890。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-23.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img23.png"
                       alt="虚拟机网络设置"
                 ></p>
 <p>在虚拟机系统中点击”设置 → 网络 → 网络代理“。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-24.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img24.png"
                       alt="虚拟机网络代理设置"
                 ></p>
 <p>IP 地址通过 Windows 控制台输入 <code>ipconfig</code> 获取主机 IP 后输入。</p>
@@ -241,21 +241,21 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-25.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img25.png"
                       alt="创建启动器"
                 ></p>
 <p>点击生成的 Desktop 文件，右键选择属性；点击图标的位置跳转到应用的安装文件夹下，选择对应的图标，可以完成图标的更换。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-26.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img26.png"
                       alt="启动器属性"
                 ></p>
 <p>双击打开桌面生成的 <code>.desktop</code> 文件，选择 Trust and Launch。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/AstridStark25963/ImageHosting/refs/heads/main/image/beginners-guide-for-ubuntu-27.png"
+                     data-src="/images/beginners-guide-for-ubuntu/img27.png"
                       alt="Trust and Launch"
                 ></p>
 <h3 id="直接在软件安装目录寻找"><a href="#直接在软件安装目录寻找" class="headerlink" title="直接在软件安装目录寻找"></a>直接在软件安装目录寻找</h3><p>非 Snap 安装的软件的 <code>.desktop</code> 文件在 <code>/usr/share/applications/</code> 下可找到。</p>
@@ -1233,6 +1233,202 @@
       </tags>
   </entry>
   <entry>
+    <title>Marvel TV Series</title>
+    <url>/2025/01/17/Marvel%20TV%20Series/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>原名</th>
+<th>译名</th>
+<th>季数</th>
+<th>豆瓣链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Spidey Super Stories</td>
+<td>蜘蛛侠超能故事</td>
+<td>3</td>
+<td>无</td>
+</tr>
+<tr>
+<td>The Amazing Spider-Man</td>
+<td>神奇的蜘蛛侠</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/4882797/" >https://movie.douban.com/subject/4882797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Incredible Hulk</td>
+<td>无敌浩克</td>
+<td>5</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3066754/" >https://movie.douban.com/subject/3066754/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Spider-Man</td>
+<td>蜘蛛侠</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3766061/" >https://movie.douban.com/subject/3766061/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Blade: The Series</td>
+<td>刀锋战士</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1874289/" >https://movie.douban.com/subject/1874289/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Agents of S.H.I.E.L.D.</td>
+<td>神盾局特工</td>
+<td>7</td>
+<td><a class="link"   href="https://movie.douban.com/subject/19938222/" >https://movie.douban.com/subject/19938222/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Agent Carter</td>
+<td>特工卡特</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25867544/" >https://movie.douban.com/subject/25867544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Daredevil</td>
+<td>夜魔侠</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769160/" >https://movie.douban.com/subject/25769160/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Jessica Jones</td>
+<td>杰西卡·琼斯</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769161/" >https://movie.douban.com/subject/25769161/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Luke Cage</td>
+<td>卢克·凯奇</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769158/" >https://movie.douban.com/subject/25769158/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Legion</td>
+<td>大群</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26641716/" >https://movie.douban.com/subject/26641716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Iron Fist</td>
+<td>铁拳</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769159/" >https://movie.douban.com/subject/25769159/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Defenders</td>
+<td>捍卫者联盟</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26293633/" >https://movie.douban.com/subject/26293633/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Inhumans</td>
+<td>异人族</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25958810/" >https://movie.douban.com/subject/25958810/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Gifted</td>
+<td>天赋异禀</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26908002/" >https://movie.douban.com/subject/26908002/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Punisher</td>
+<td>惩罚者</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26710394/" >https://movie.douban.com/subject/26710394/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Runaways</td>
+<td>离家童盟</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3080561/" >https://movie.douban.com/subject/3080561/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Cloak &amp; Dagger</td>
+<td>斗篷与匕首</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26767521/" >https://movie.douban.com/subject/26767521/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Helstrom</td>
+<td>地狱风暴</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/33434931/" >https://movie.douban.com/subject/33434931/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>WandaVision</td>
+<td>旺达幻视</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30331433/" >https://movie.douban.com/subject/30331433/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Falcon and the Winter Soldier</td>
+<td>猎鹰与冬兵</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30367642/" >https://movie.douban.com/subject/30367642/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Loki</td>
+<td>洛基</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30331432/" >https://movie.douban.com/subject/30331432/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Hawkeye</td>
+<td>鹰眼</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/33406089/" >https://movie.douban.com/subject/33406089/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Moon Knight</td>
+<td>月光骑士</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26358318/" >https://movie.douban.com/subject/26358318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Ms. Marvel</td>
+<td>惊奇少女</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26358321/" >https://movie.douban.com/subject/26358321/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>She-Hulk: Attorney at Law</td>
+<td>女浩克</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/34803800/" >https://movie.douban.com/subject/34803800/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Secret Invasion</td>
+<td>秘密入侵</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35284245/" >https://movie.douban.com/subject/35284245/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Echo</td>
+<td>回声</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35412375/" >https://movie.douban.com/subject/35412375/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Agatha All Along</td>
+<td>女巫阿加莎</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35636428/" >https://movie.douban.com/subject/35636428/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Media</category>
+      </categories>
+      <tags>
+        <tag>TV Series</tag>
+        <tag>Marvel</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Marvel Films</title>
     <url>/2025/01/17/Marvel%20Films/</url>
     <content><![CDATA[<table>
@@ -1683,202 +1879,6 @@
       </categories>
       <tags>
         <tag>Films</tag>
-        <tag>Marvel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Marvel TV Series</title>
-    <url>/2025/01/17/Marvel%20TV%20Series/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>原名</th>
-<th>译名</th>
-<th>季数</th>
-<th>豆瓣链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Spidey Super Stories</td>
-<td>蜘蛛侠超能故事</td>
-<td>3</td>
-<td>无</td>
-</tr>
-<tr>
-<td>The Amazing Spider-Man</td>
-<td>神奇的蜘蛛侠</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/4882797/" >https://movie.douban.com/subject/4882797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Incredible Hulk</td>
-<td>无敌浩克</td>
-<td>5</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3066754/" >https://movie.douban.com/subject/3066754/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Spider-Man</td>
-<td>蜘蛛侠</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3766061/" >https://movie.douban.com/subject/3766061/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Blade: The Series</td>
-<td>刀锋战士</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1874289/" >https://movie.douban.com/subject/1874289/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Agents of S.H.I.E.L.D.</td>
-<td>神盾局特工</td>
-<td>7</td>
-<td><a class="link"   href="https://movie.douban.com/subject/19938222/" >https://movie.douban.com/subject/19938222/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Agent Carter</td>
-<td>特工卡特</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25867544/" >https://movie.douban.com/subject/25867544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Daredevil</td>
-<td>夜魔侠</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769160/" >https://movie.douban.com/subject/25769160/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Jessica Jones</td>
-<td>杰西卡·琼斯</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769161/" >https://movie.douban.com/subject/25769161/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Luke Cage</td>
-<td>卢克·凯奇</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769158/" >https://movie.douban.com/subject/25769158/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Legion</td>
-<td>大群</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26641716/" >https://movie.douban.com/subject/26641716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Iron Fist</td>
-<td>铁拳</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769159/" >https://movie.douban.com/subject/25769159/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Defenders</td>
-<td>捍卫者联盟</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26293633/" >https://movie.douban.com/subject/26293633/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Inhumans</td>
-<td>异人族</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25958810/" >https://movie.douban.com/subject/25958810/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Gifted</td>
-<td>天赋异禀</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26908002/" >https://movie.douban.com/subject/26908002/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Punisher</td>
-<td>惩罚者</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26710394/" >https://movie.douban.com/subject/26710394/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Runaways</td>
-<td>离家童盟</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3080561/" >https://movie.douban.com/subject/3080561/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Cloak &amp; Dagger</td>
-<td>斗篷与匕首</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26767521/" >https://movie.douban.com/subject/26767521/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Helstrom</td>
-<td>地狱风暴</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/33434931/" >https://movie.douban.com/subject/33434931/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>WandaVision</td>
-<td>旺达幻视</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30331433/" >https://movie.douban.com/subject/30331433/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Falcon and the Winter Soldier</td>
-<td>猎鹰与冬兵</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30367642/" >https://movie.douban.com/subject/30367642/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Loki</td>
-<td>洛基</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30331432/" >https://movie.douban.com/subject/30331432/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Hawkeye</td>
-<td>鹰眼</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/33406089/" >https://movie.douban.com/subject/33406089/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Moon Knight</td>
-<td>月光骑士</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26358318/" >https://movie.douban.com/subject/26358318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Ms. Marvel</td>
-<td>惊奇少女</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26358321/" >https://movie.douban.com/subject/26358321/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>She-Hulk: Attorney at Law</td>
-<td>女浩克</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/34803800/" >https://movie.douban.com/subject/34803800/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Secret Invasion</td>
-<td>秘密入侵</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35284245/" >https://movie.douban.com/subject/35284245/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Echo</td>
-<td>回声</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35412375/" >https://movie.douban.com/subject/35412375/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Agatha All Along</td>
-<td>女巫阿加莎</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35636428/" >https://movie.douban.com/subject/35636428/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Media</category>
-      </categories>
-      <tags>
-        <tag>TV Series</tag>
         <tag>Marvel</tag>
       </tags>
   </entry>
