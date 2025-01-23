@@ -1330,120 +1330,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Office 2021 Installation &amp; Activation</title>
-    <url>/2025/01/22/Office%202021%20Installation%20&amp;%20Activation/</url>
-    <content><![CDATA[<h2 id="一、下载和安装-Office-Tool-Plus"><a href="#一、下载和安装-Office-Tool-Plus" class="headerlink" title="一、下载和安装 Office Tool Plus"></a>一、下载和安装 Office Tool Plus</h2><p><a class="link"   href="https://otp.landian.vip/zh-cn/" >Office Tool Plus 官方网站 - 一键部署 Office<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>安装完成后，打开 Office Tool Plus.exe 运行即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img0.png"
-                      alt="Office Tool Plus"
-                ></p>
-<h2 id="二、部署-Office-产品"><a href="#二、部署-Office-产品" class="headerlink" title="二、部署 Office 产品"></a>二、部署 Office 产品</h2><p>运行 Office Tool Plus，点击“部署”标签页，选择想要安装的 Office 版本。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img1.png"
-                      alt="部署 Office"
-                ></p>
-<p>选择想要安装的产品和语言包支持。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img2.png"
-                      alt="产品和语言"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img3.png"
-                      alt="产品选择"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img4.png"
-                      alt="语言选择（可选多个语言及校对工具）"
-                ></p>
-<p>选择完成后开始部署即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img5.png"
-                      alt="开始部署"
-                ></p>
-<h2 id="三、激活-Office-产品"><a href="#三、激活-Office-产品" class="headerlink" title="三、激活 Office 产品"></a>三、激活 Office 产品</h2><p>点击“激活”标签页，在“许可证管理”中安装相应许可证。</p>
-<blockquote>
-<p>安装的许可证版本应与部署的 Office 版本相同！</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img6.png"
-                      alt="安装许可证"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img7.png"
-                      alt="许可证选择"
-                ></p>
-<p>点击“工具箱”标签页，测试 KMS 主机可用性。</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 可用的KMS主机域名</span></span><br><span class="line">kms.03k.org</span><br><span class="line">kms.loli.beer</span><br><span class="line">kms.luochenzhimu.com</span><br><span class="line">kms9.msguides.com</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>测试KMS主机可用性的时候切勿开启网络代理！</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img8.png"
-                      alt="测试KMS主机"
-                ></p>
-<p>测试成功后返回“激活”标签页，设置 KMS 主机并激活 Office。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img9.png"
-                      alt="激活 Office"
-                ></p>
-<p>激活后查看 Office 许可证是否被激活。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img10.png"
-                      alt="已激活的许可证"
-                ></p>
-<p>最后重置 Office 设置为默认设置，防止虽然激活成功但仍显示需要激活的情况。</p>
-<blockquote>
-<p>仅在账户拥有其他 Office 许可证时设置，保证此许可证的最高优先级。</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img11.png"
-                      alt="重置 Office 设置为默认设置"
-                ></p>
-<p>最后激活成功。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img12.png"
-                      alt="激活成功"
-                ></p>
-<blockquote>
-<p>KMS 激活期限为 180 天，到期自动续期。若未自动续期，按照流程再操作一次即可。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>Office</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Marvel Films</title>
     <url>/2025/01/17/Marvel%20Films/</url>
     <content><![CDATA[<table>
@@ -1895,6 +1781,120 @@
       <tags>
         <tag>Films</tag>
         <tag>Marvel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Office 2021 Installation &amp; Activation</title>
+    <url>/2025/01/22/Office%202021%20Installation%20&amp;%20Activation/</url>
+    <content><![CDATA[<h2 id="一、下载和安装-Office-Tool-Plus"><a href="#一、下载和安装-Office-Tool-Plus" class="headerlink" title="一、下载和安装 Office Tool Plus"></a>一、下载和安装 Office Tool Plus</h2><p><a class="link"   href="https://otp.landian.vip/zh-cn/" >Office Tool Plus 官方网站 - 一键部署 Office<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>安装完成后，打开 Office Tool Plus.exe 运行即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img0.png"
+                      alt="Office Tool Plus"
+                ></p>
+<h2 id="二、部署-Office-产品"><a href="#二、部署-Office-产品" class="headerlink" title="二、部署 Office 产品"></a>二、部署 Office 产品</h2><p>运行 Office Tool Plus，点击“部署”标签页，选择想要安装的 Office 版本。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img1.png"
+                      alt="部署 Office"
+                ></p>
+<p>选择想要安装的产品和语言包支持。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img2.png"
+                      alt="产品和语言"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img3.png"
+                      alt="产品选择"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img4.png"
+                      alt="语言选择（可选多个语言及校对工具）"
+                ></p>
+<p>选择完成后开始部署即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img5.png"
+                      alt="开始部署"
+                ></p>
+<h2 id="三、激活-Office-产品"><a href="#三、激活-Office-产品" class="headerlink" title="三、激活 Office 产品"></a>三、激活 Office 产品</h2><p>点击“激活”标签页，在“许可证管理”中安装相应许可证。</p>
+<blockquote>
+<p>安装的许可证版本应与部署的 Office 版本相同！</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img6.png"
+                      alt="安装许可证"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img7.png"
+                      alt="许可证选择"
+                ></p>
+<p>点击“工具箱”标签页，测试 KMS 主机可用性。</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 可用的KMS主机域名</span></span><br><span class="line">kms.03k.org</span><br><span class="line">kms.loli.beer</span><br><span class="line">kms.luochenzhimu.com</span><br><span class="line">kms9.msguides.com</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>测试KMS主机可用性的时候切勿开启网络代理！</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img8.png"
+                      alt="测试KMS主机"
+                ></p>
+<p>测试成功后返回“激活”标签页，设置 KMS 主机并激活 Office。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img9.png"
+                      alt="激活 Office"
+                ></p>
+<p>激活后查看 Office 许可证是否被激活。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img10.png"
+                      alt="已激活的许可证"
+                ></p>
+<p>最后重置 Office 设置为默认设置，防止虽然激活成功但仍显示需要激活的情况。</p>
+<blockquote>
+<p>仅在账户拥有其他 Office 许可证时设置，保证此许可证的最高优先级。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img11.png"
+                      alt="重置 Office 设置为默认设置"
+                ></p>
+<p>最后激活成功。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img12.png"
+                      alt="激活成功"
+                ></p>
+<blockquote>
+<p>KMS 激活期限为 180 天，到期自动续期。若未自动续期，按照流程再操作一次即可。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Office</tag>
       </tags>
   </entry>
   <entry>
