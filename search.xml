@@ -1,6 +1,371 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Building Jellyfin Media Library with Docker</title>
+    <url>/2025/01/16/Building%20Jellyfin%20Media%20Library%20with%20Docker/</url>
+    <content><![CDATA[<h2 id="一、配置-Docker"><a href="#一、配置-Docker" class="headerlink" title="一、配置 Docker"></a>一、配置 Docker</h2><p>进入 Docker 官网，下载 Docker Desktop 并进行安装</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img0.png"
+                      alt="Docker 官网"
+                ></p>
+<blockquote>
+<p>安装期间，可能会在控制台要求更新或下载 WSL，直接按任意键安装即可</p>
+</blockquote>
+<p>安装完成后就可以进入并查看 Docker Desktop 的控制面板</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img1.png"
+                      alt="Docker Desktop 控制面板"
+                ></p>
+<p><em>可选：Docker Desktop 汉化</em></p>
+<p>打开如下链接，下载版本对应的 <code>app.asar</code> 文件，并替换 <code>C:\Program Files\Docker\Docker\frontend\resources</code> 路径下的同名文件</p>
+<p><a class="link"   href="https://github.com/asxez/DockerDesktop-CN" >https://github.com/asxez/DockerDesktop-CN<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="二、配置-Jellyfin"><a href="#二、配置-Jellyfin" class="headerlink" title="二、配置 Jellyfin"></a>二、配置 Jellyfin</h2><p>打开控制台，输入以下指令拉取 Jellyfin 镜像到本地：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
+
+<p>在控制台执行以下指令，运行一个 Jellyfin 容器：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d ^</span><br><span class="line">	--name=jellyfin ^</span><br><span class="line">	-p 8096:8096 ^</span><br><span class="line">	-p 8920:8920 ^</span><br><span class="line">	-v D:\Jellyfin\config:/config ^</span><br><span class="line">	-v D:\Jellyfin\cache:/cache ^</span><br><span class="line">	-v D:\Jellyfin\media:/media ^</span><br><span class="line">	--restart unless-stopped ^</span><br><span class="line">	jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><strong>注意事项</strong>：</p>
+<ol>
+<li>每一行命令后边都必须加续行符号 <code>^</code> ；</li>
+<li><code>/config</code> , <code>/cache</code> , <code>/media</code> 的路径需替换为主机的实际路径</li>
+<li>Jellyfin 的默认 HTTP 端口为 8096，默认 HTTPS 端口为 8920</li>
+</ol>
+</blockquote>
+<p>容器运行成功后，访问 <a class="link"   href="http://localhost:8096/" >http://localhost:8096<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 打开 Jellyfin 控制面板</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img2.png"
+                      alt="Jellyfin 控制面板"
+                ></p>
+<p>创建一个媒体库</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img3.png"
+                      alt="创建媒体库"
+                ></p>
+<p>创建完成后，向相应的主机文件夹中添加电影</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img4.png"
+                      alt="添加电影"
+                ></p>
+<p>在 Jellyfin 控制台进行媒体库扫描</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img5.png"
+                      alt="媒体库扫描"
+                ></p>
+<p>扫描完成后，媒体库里便会展示出所有添加的媒体</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img6.png"
+                      alt="扫描结果"
+                ></p>
+<p>其他管理容器的命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker start jellyfin   <span class="comment"># 启动名为 jellyfin 的容器</span></span><br><span class="line">docker stop jellyfin    <span class="comment"># 停止名为 jellyfin 的容器</span></span><br><span class="line">docker <span class="built_in">rm</span> jellyfin      <span class="comment"># 删除名为 jellyfin 的容器</span></span><br><span class="line">docker ps               <span class="comment"># 查看当前正在运行的容器</span></span><br><span class="line">docker ps -a            <span class="comment"># 查看所有容器，包括已停止的</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、在其他平台访问媒体库"><a href="#三、在其他平台访问媒体库" class="headerlink" title="三、在其他平台访问媒体库"></a>三、在其他平台访问媒体库</h2><p>在终端查看本机 IP 地址：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></div>
+
+<p>如果其他平台和主机处于同一局域网下，输入 <code>http://x.x.x.x:8096</code> （<code>x.x.x.x</code> 替换为主机 IPv4 地址）即可访问；</p>
+<p>如果其他平台和主机不处于同一局域网下但都支持 IPv6，输入 <code>http://[x:x:x:x:x:x:x:x]:8096</code> （<code>[x:x:x:x:x:x:x:x]</code> 替换为主机 IPv6 地址）即可访问；</p>
+<p>如果其他平台和主机不处于同一局域网下且都不支持 IPv6，只能通过公网 IPv4 和端口转发实现访问。</p>
+<p>其他平台访问效果：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img7.png"
+                      alt="其他平台访问结果"
+                ></p>
+]]></content>
+      <categories>
+        <category>Media</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Jellyfin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DC Films</title>
+    <url>/2025/01/17/DC%20Films/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>原名</th>
+<th>译名</th>
+<th>年份</th>
+<th>豆瓣链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Superman and the Mole-Men</td>
+<td>超人和鼹鼠人</td>
+<td>1951</td>
+<td><a class="link"   href="https://movie.douban.com/subject/5065617/" >https://movie.douban.com/subject/5065617/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Superman</td>
+<td>超人</td>
+<td>1978</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1300916/" >https://movie.douban.com/subject/1300916/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Superman II</td>
+<td>超人2</td>
+<td>1980</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1293878/" >https://movie.douban.com/subject/1293878/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Swamp Thing</td>
+<td>沼泽怪物</td>
+<td>1982</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1303639/" >https://movie.douban.com/subject/1303639/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Superman III</td>
+<td>超人3</td>
+<td>1983</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1306723/" >https://movie.douban.com/subject/1306723/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Supergirl</td>
+<td>超级少女</td>
+<td>1984</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1304998/" >https://movie.douban.com/subject/1304998/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Superman IV: The Quest for Peace</td>
+<td>超人4：和平任务</td>
+<td>1987</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1810604/" >https://movie.douban.com/subject/1810604/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Return of Swamp Thing</td>
+<td>沼泽怪物2</td>
+<td>1989</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1302857/" >https://movie.douban.com/subject/1302857/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Batman</td>
+<td>蝙蝠侠</td>
+<td>1989</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1297970/" >https://movie.douban.com/subject/1297970/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Batman Returns</td>
+<td>蝙蝠侠归来</td>
+<td>1992</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1294929/" >https://movie.douban.com/subject/1294929/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Batman Forever</td>
+<td>永远的蝙蝠侠</td>
+<td>1995</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1295638/" >https://movie.douban.com/subject/1295638/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Batman &amp; Robin</td>
+<td>蝙蝠侠与罗宾</td>
+<td>1997</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1294519/" >https://movie.douban.com/subject/1294519/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Steel</td>
+<td>魔鬼任务</td>
+<td>1997</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1299210/" >https://movie.douban.com/subject/1299210/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Catwoman</td>
+<td>猫女</td>
+<td>2004</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1308771/" >https://movie.douban.com/subject/1308771/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Constantine</td>
+<td>康斯坦丁</td>
+<td>2005</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1309021/" >https://movie.douban.com/subject/1309021/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Batman Begins</td>
+<td>蝙蝠侠：侠影之谜</td>
+<td>2005</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1309069/" >https://movie.douban.com/subject/1309069/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Superman Returns</td>
+<td>超人归来</td>
+<td>2006</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1418191/" >https://movie.douban.com/subject/1418191/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Dark Knight</td>
+<td>蝙蝠侠：黑暗骑士</td>
+<td>2008</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1851857/" >https://movie.douban.com/subject/1851857/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Watchmen</td>
+<td>守望者</td>
+<td>2009</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1972698/" >https://movie.douban.com/subject/1972698/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Jonah Hex</td>
+<td>西部英雄约拿·哈克斯</td>
+<td>2010</td>
+<td><a class="link"   href="https://movie.douban.com/subject/2998456/" >https://movie.douban.com/subject/2998456/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Green Lantern</td>
+<td>绿灯侠</td>
+<td>2011</td>
+<td><a class="link"   href="https://movie.douban.com/subject/2364054/" >https://movie.douban.com/subject/2364054/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Dark Knight Rises</td>
+<td>蝙蝠侠：黑暗骑士崛起</td>
+<td>2012</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3395373/" >https://movie.douban.com/subject/3395373/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Man of Steel</td>
+<td>超人：钢铁之躯</td>
+<td>2013</td>
+<td><a class="link"   href="https://movie.douban.com/subject/2049435/" >https://movie.douban.com/subject/2049435/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Batman v Superman: Dawn of Justice</td>
+<td>蝙蝠侠大战超人：正义黎明</td>
+<td>2016</td>
+<td><a class="link"   href="https://movie.douban.com/subject/24750534/" >https://movie.douban.com/subject/24750534/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Suicide Squad</td>
+<td>自杀小队</td>
+<td>2016</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3569910/" >https://movie.douban.com/subject/3569910/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Wonder Woman</td>
+<td>神奇女侠</td>
+<td>2017</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1578714/" >https://movie.douban.com/subject/1578714/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Justice League</td>
+<td>正义联盟</td>
+<td>2017</td>
+<td><a class="link"   href="https://movie.douban.com/subject/2158490/" >https://movie.douban.com/subject/2158490/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Zack Snyder’s Justice League</td>
+<td>扎克·施奈德版正义联盟</td>
+<td>2021</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35076714/" >https://movie.douban.com/subject/35076714/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Aquaman</td>
+<td>海王</td>
+<td>2018</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3878007/" >https://movie.douban.com/subject/3878007/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Shazam!</td>
+<td>雷霆沙赞！</td>
+<td>2019</td>
+<td><a class="link"   href="https://movie.douban.com/subject/2244426/" >https://movie.douban.com/subject/2244426/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Joker</td>
+<td>小丑</td>
+<td>2019</td>
+<td><a class="link"   href="https://movie.douban.com/subject/27119724/" >https://movie.douban.com/subject/27119724/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Birds of Prey: And the Fantabulous Emancipation of One Harley Quinn</td>
+<td>猛禽小队和哈莉·奎茵</td>
+<td>2020</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30160393/" >https://movie.douban.com/subject/30160393/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Wonder Woman 1984</td>
+<td>神奇女侠1984</td>
+<td>2020</td>
+<td><a class="link"   href="https://movie.douban.com/subject/27073752/" >https://movie.douban.com/subject/27073752/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Suicide Squad</td>
+<td>X特遣队：全员集结</td>
+<td>2021</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26741632/" >https://movie.douban.com/subject/26741632/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Batman</td>
+<td>新蝙蝠侠</td>
+<td>2022</td>
+<td><a class="link"   href="https://movie.douban.com/subject/6424756/" >https://movie.douban.com/subject/6424756/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Black Adam</td>
+<td>黑亚当</td>
+<td>2022</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26959697/" >https://movie.douban.com/subject/26959697/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Shazam! Fury of the Gods</td>
+<td>雷霆沙赞！众神之怒</td>
+<td>2023</td>
+<td><a class="link"   href="https://movie.douban.com/subject/33402300/" >https://movie.douban.com/subject/33402300/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Flash</td>
+<td>闪电侠</td>
+<td>2023</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3011317/" >https://movie.douban.com/subject/3011317/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Blue Beetle</td>
+<td>蓝甲虫</td>
+<td>2023</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30391109/" >https://movie.douban.com/subject/30391109/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Aquaman and the Lost Kingdom</td>
+<td>海王2：失落的王国</td>
+<td>2023</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30444942/" >https://movie.douban.com/subject/30444942/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Joker: Folie à Deux</td>
+<td>小丑2：双重妄想</td>
+<td>2024</td>
+<td><a class="link"   href="https://movie.douban.com/subject/34909341/" >https://movie.douban.com/subject/34909341/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Media</category>
+      </categories>
+      <tags>
+        <tag>DC</tag>
+        <tag>Films</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Beginner&#39;s Guide for Ubuntu</title>
     <url>/2025/01/21/Beginner&#39;s%20Guide%20for%20Ubuntu/</url>
     <content><![CDATA[<h2 id="一、安装-Ubuntu-系统"><a href="#一、安装-Ubuntu-系统" class="headerlink" title="一、安装 Ubuntu 系统"></a>一、安装 Ubuntu 系统</h2><p>访问 VMware Workshop Pro 官网，下载软件。</p>
@@ -307,100 +672,229 @@
       </tags>
   </entry>
   <entry>
-    <title>Building Jellyfin Media Library with Docker</title>
-    <url>/2025/01/16/Building%20Jellyfin%20Media%20Library%20with%20Docker/</url>
-    <content><![CDATA[<h2 id="一、配置-Docker"><a href="#一、配置-Docker" class="headerlink" title="一、配置 Docker"></a>一、配置 Docker</h2><p>进入 Docker 官网，下载 Docker Desktop 并进行安装</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img0.png"
-                      alt="Docker 官网"
-                ></p>
-<blockquote>
-<p>安装期间，可能会在控制台要求更新或下载 WSL，直接按任意键安装即可</p>
-</blockquote>
-<p>安装完成后就可以进入并查看 Docker Desktop 的控制面板</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img1.png"
-                      alt="Docker Desktop 控制面板"
-                ></p>
-<p><em>可选：Docker Desktop 汉化</em></p>
-<p>打开如下链接，下载版本对应的 <code>app.asar</code> 文件，并替换 <code>C:\Program Files\Docker\Docker\frontend\resources</code> 路径下的同名文件</p>
-<p><a class="link"   href="https://github.com/asxez/DockerDesktop-CN" >https://github.com/asxez/DockerDesktop-CN<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="二、配置-Jellyfin"><a href="#二、配置-Jellyfin" class="headerlink" title="二、配置 Jellyfin"></a>二、配置 Jellyfin</h2><p>打开控制台，输入以下指令拉取 Jellyfin 镜像到本地：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
-
-<p>在控制台执行以下指令，运行一个 Jellyfin 容器：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d ^</span><br><span class="line">	--name=jellyfin ^</span><br><span class="line">	-p 8096:8096 ^</span><br><span class="line">	-p 8920:8920 ^</span><br><span class="line">	-v D:\Jellyfin\config:/config ^</span><br><span class="line">	-v D:\Jellyfin\cache:/cache ^</span><br><span class="line">	-v D:\Jellyfin\media:/media ^</span><br><span class="line">	--restart unless-stopped ^</span><br><span class="line">	jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p><strong>注意事项</strong>：</p>
-<ol>
-<li>每一行命令后边都必须加续行符号 <code>^</code> ；</li>
-<li><code>/config</code> , <code>/cache</code> , <code>/media</code> 的路径需替换为主机的实际路径</li>
-<li>Jellyfin 的默认 HTTP 端口为 8096，默认 HTTPS 端口为 8920</li>
-</ol>
-</blockquote>
-<p>容器运行成功后，访问 <a class="link"   href="http://localhost:8096/" >http://localhost:8096<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 打开 Jellyfin 控制面板</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img2.png"
-                      alt="Jellyfin 控制面板"
-                ></p>
-<p>创建一个媒体库</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img3.png"
-                      alt="创建媒体库"
-                ></p>
-<p>创建完成后，向相应的主机文件夹中添加电影</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img4.png"
-                      alt="添加电影"
-                ></p>
-<p>在 Jellyfin 控制台进行媒体库扫描</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img5.png"
-                      alt="媒体库扫描"
-                ></p>
-<p>扫描完成后，媒体库里便会展示出所有添加的媒体</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img6.png"
-                      alt="扫描结果"
-                ></p>
-<p>其他管理容器的命令：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker start jellyfin   <span class="comment"># 启动名为 jellyfin 的容器</span></span><br><span class="line">docker stop jellyfin    <span class="comment"># 停止名为 jellyfin 的容器</span></span><br><span class="line">docker <span class="built_in">rm</span> jellyfin      <span class="comment"># 删除名为 jellyfin 的容器</span></span><br><span class="line">docker ps               <span class="comment"># 查看当前正在运行的容器</span></span><br><span class="line">docker ps -a            <span class="comment"># 查看所有容器，包括已停止的</span></span><br></pre></td></tr></table></figure></div>
-
-<h2 id="三、在其他平台访问媒体库"><a href="#三、在其他平台访问媒体库" class="headerlink" title="三、在其他平台访问媒体库"></a>三、在其他平台访问媒体库</h2><p>在终端查看本机 IP 地址：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></div>
-
-<p>如果其他平台和主机处于同一局域网下，输入 <code>http://x.x.x.x:8096</code> （<code>x.x.x.x</code> 替换为主机 IPv4 地址）即可访问；</p>
-<p>如果其他平台和主机不处于同一局域网下但都支持 IPv6，输入 <code>http://[x:x:x:x:x:x:x:x]:8096</code> （<code>[x:x:x:x:x:x:x:x]</code> 替换为主机 IPv6 地址）即可访问；</p>
-<p>如果其他平台和主机不处于同一局域网下且都不支持 IPv6，只能通过公网 IPv4 和端口转发实现访问。</p>
-<p>其他平台访问效果：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img7.png"
-                      alt="其他平台访问结果"
-                ></p>
+    <title>DC TV Series</title>
+    <url>/2025/01/17/DC%20TV%20Series/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>原名</th>
+<th>译名</th>
+<th>季数</th>
+<th>豆瓣链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Adventures of Superman</td>
+<td>超人的冒险</td>
+<td>6</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3068641/" >https://movie.douban.com/subject/3068641/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Batman</td>
+<td>蝙蝠侠</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3259453/" >https://movie.douban.com/subject/3259453/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Shazam!</td>
+<td>沙赞！</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/5054611/" >https://movie.douban.com/subject/5054611/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Secrets of Isis</td>
+<td>女神爱切丝的秘密</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/2150446/" >https://movie.douban.com/subject/2150446/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Wonder Woman</td>
+<td>神奇女侠</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/2003096/" >https://movie.douban.com/subject/2003096/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Superboy</td>
+<td>少年超人</td>
+<td>4</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3840718/" >https://movie.douban.com/subject/3840718/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Swamp Thing</td>
+<td>沼泽怪物</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3930753/" >https://movie.douban.com/subject/3930753/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Flash</td>
+<td>闪电侠</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/2346837/" >https://movie.douban.com/subject/2346837/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Human Target</td>
+<td>替身标靶</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/5113469/" >https://movie.douban.com/subject/5113469/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Lois &amp; Clark: The New Adventures of Superman</td>
+<td>新超人</td>
+<td>4</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1421103/" >https://movie.douban.com/subject/1421103/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Smallville</td>
+<td>超人前传</td>
+<td>10</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1401376/" >https://movie.douban.com/subject/1401376/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Birds of Prey</td>
+<td>猛禽小队</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/2083941/" >https://movie.douban.com/subject/2083941/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Human Target</td>
+<td>替身标靶</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3741756/" >https://movie.douban.com/subject/3741756/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Arrow</td>
+<td>绿箭侠</td>
+<td>8</td>
+<td><a class="link"   href="https://movie.douban.com/subject/10527257/" >https://movie.douban.com/subject/10527257/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Gotham</td>
+<td>哥谭</td>
+<td>5</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25733164/" >https://movie.douban.com/subject/25733164/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Flash</td>
+<td>闪电侠</td>
+<td>9</td>
+<td><a class="link"   href="https://movie.douban.com/subject/24883222/" >https://movie.douban.com/subject/24883222/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Constantine</td>
+<td>康斯坦丁</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25741475/" >https://movie.douban.com/subject/25741475/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Supergirl</td>
+<td>超级少女</td>
+<td>6</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25987068/" >https://movie.douban.com/subject/25987068/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Legends of Tomorrow</td>
+<td>明日传奇</td>
+<td>7</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26358783/" >https://movie.douban.com/subject/26358783/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Powerless</td>
+<td>无能为力</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26592226/" >https://movie.douban.com/subject/26592226/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Black Lightning</td>
+<td>黑霹雳</td>
+<td>4</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26868388/" >https://movie.douban.com/subject/26868388/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Krypton</td>
+<td>氪星</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26279828/" >https://movie.douban.com/subject/26279828/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Titans</td>
+<td>泰坦</td>
+<td>4</td>
+<td><a class="link"   href="https://movie.douban.com/subject/2137327/" >https://movie.douban.com/subject/2137327/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Doom Patrol</td>
+<td>末日巡逻队</td>
+<td>4</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30222729/" >https://movie.douban.com/subject/30222729/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Swamp Thing</td>
+<td>沼泽怪物</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30216642/" >https://movie.douban.com/subject/30216642/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Pennyworth</td>
+<td>潘尼沃斯</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30224319/" >https://movie.douban.com/subject/30224319/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Batwoman</td>
+<td>蝙蝠女侠</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30279863/" >https://movie.douban.com/subject/30279863/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Watchmen</td>
+<td>守望者</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26635374/" >https://movie.douban.com/subject/26635374/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Stargirl</td>
+<td>逐星女</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30283264/" >https://movie.douban.com/subject/30283264/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Superman &amp; Lois</td>
+<td>超人和露易丝</td>
+<td>4</td>
+<td><a class="link"   href="https://movie.douban.com/subject/34881451/" >https://movie.douban.com/subject/34881451/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Naomi</td>
+<td>娜奥米</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35280629/" >https://movie.douban.com/subject/35280629/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Gotham Knights</td>
+<td>哥谭骑士</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35700778/" >https://movie.douban.com/subject/35700778/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Penguin</td>
+<td>企鹅人</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35604181/" >https://movie.douban.com/subject/35604181/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Peacemaker</td>
+<td>和平使者</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35209701/" >https://movie.douban.com/subject/35209701/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+</tbody></table>
 ]]></content>
       <categories>
         <category>Media</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
-        <tag>Jellyfin</tag>
+        <tag>DC</tag>
+        <tag>TV Series</tag>
       </tags>
   </entry>
   <entry>
@@ -833,500 +1327,6 @@
       </categories>
       <tags>
         <tag>Higashino Keigo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DC Films</title>
-    <url>/2025/01/17/DC%20Films/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>原名</th>
-<th>译名</th>
-<th>年份</th>
-<th>豆瓣链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Superman and the Mole-Men</td>
-<td>超人和鼹鼠人</td>
-<td>1951</td>
-<td><a class="link"   href="https://movie.douban.com/subject/5065617/" >https://movie.douban.com/subject/5065617/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Superman</td>
-<td>超人</td>
-<td>1978</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1300916/" >https://movie.douban.com/subject/1300916/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Superman II</td>
-<td>超人2</td>
-<td>1980</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1293878/" >https://movie.douban.com/subject/1293878/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Swamp Thing</td>
-<td>沼泽怪物</td>
-<td>1982</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1303639/" >https://movie.douban.com/subject/1303639/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Superman III</td>
-<td>超人3</td>
-<td>1983</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1306723/" >https://movie.douban.com/subject/1306723/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Supergirl</td>
-<td>超级少女</td>
-<td>1984</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1304998/" >https://movie.douban.com/subject/1304998/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Superman IV: The Quest for Peace</td>
-<td>超人4：和平任务</td>
-<td>1987</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1810604/" >https://movie.douban.com/subject/1810604/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Return of Swamp Thing</td>
-<td>沼泽怪物2</td>
-<td>1989</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1302857/" >https://movie.douban.com/subject/1302857/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Batman</td>
-<td>蝙蝠侠</td>
-<td>1989</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1297970/" >https://movie.douban.com/subject/1297970/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Batman Returns</td>
-<td>蝙蝠侠归来</td>
-<td>1992</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1294929/" >https://movie.douban.com/subject/1294929/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Batman Forever</td>
-<td>永远的蝙蝠侠</td>
-<td>1995</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1295638/" >https://movie.douban.com/subject/1295638/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Batman &amp; Robin</td>
-<td>蝙蝠侠与罗宾</td>
-<td>1997</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1294519/" >https://movie.douban.com/subject/1294519/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Steel</td>
-<td>魔鬼任务</td>
-<td>1997</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1299210/" >https://movie.douban.com/subject/1299210/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Catwoman</td>
-<td>猫女</td>
-<td>2004</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1308771/" >https://movie.douban.com/subject/1308771/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Constantine</td>
-<td>康斯坦丁</td>
-<td>2005</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1309021/" >https://movie.douban.com/subject/1309021/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Batman Begins</td>
-<td>蝙蝠侠：侠影之谜</td>
-<td>2005</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1309069/" >https://movie.douban.com/subject/1309069/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Superman Returns</td>
-<td>超人归来</td>
-<td>2006</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1418191/" >https://movie.douban.com/subject/1418191/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Dark Knight</td>
-<td>蝙蝠侠：黑暗骑士</td>
-<td>2008</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1851857/" >https://movie.douban.com/subject/1851857/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Watchmen</td>
-<td>守望者</td>
-<td>2009</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1972698/" >https://movie.douban.com/subject/1972698/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Jonah Hex</td>
-<td>西部英雄约拿·哈克斯</td>
-<td>2010</td>
-<td><a class="link"   href="https://movie.douban.com/subject/2998456/" >https://movie.douban.com/subject/2998456/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Green Lantern</td>
-<td>绿灯侠</td>
-<td>2011</td>
-<td><a class="link"   href="https://movie.douban.com/subject/2364054/" >https://movie.douban.com/subject/2364054/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Dark Knight Rises</td>
-<td>蝙蝠侠：黑暗骑士崛起</td>
-<td>2012</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3395373/" >https://movie.douban.com/subject/3395373/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Man of Steel</td>
-<td>超人：钢铁之躯</td>
-<td>2013</td>
-<td><a class="link"   href="https://movie.douban.com/subject/2049435/" >https://movie.douban.com/subject/2049435/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Batman v Superman: Dawn of Justice</td>
-<td>蝙蝠侠大战超人：正义黎明</td>
-<td>2016</td>
-<td><a class="link"   href="https://movie.douban.com/subject/24750534/" >https://movie.douban.com/subject/24750534/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Suicide Squad</td>
-<td>自杀小队</td>
-<td>2016</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3569910/" >https://movie.douban.com/subject/3569910/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Wonder Woman</td>
-<td>神奇女侠</td>
-<td>2017</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1578714/" >https://movie.douban.com/subject/1578714/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Justice League</td>
-<td>正义联盟</td>
-<td>2017</td>
-<td><a class="link"   href="https://movie.douban.com/subject/2158490/" >https://movie.douban.com/subject/2158490/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Zack Snyder’s Justice League</td>
-<td>扎克·施奈德版正义联盟</td>
-<td>2021</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35076714/" >https://movie.douban.com/subject/35076714/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Aquaman</td>
-<td>海王</td>
-<td>2018</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3878007/" >https://movie.douban.com/subject/3878007/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Shazam!</td>
-<td>雷霆沙赞！</td>
-<td>2019</td>
-<td><a class="link"   href="https://movie.douban.com/subject/2244426/" >https://movie.douban.com/subject/2244426/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Joker</td>
-<td>小丑</td>
-<td>2019</td>
-<td><a class="link"   href="https://movie.douban.com/subject/27119724/" >https://movie.douban.com/subject/27119724/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Birds of Prey: And the Fantabulous Emancipation of One Harley Quinn</td>
-<td>猛禽小队和哈莉·奎茵</td>
-<td>2020</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30160393/" >https://movie.douban.com/subject/30160393/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Wonder Woman 1984</td>
-<td>神奇女侠1984</td>
-<td>2020</td>
-<td><a class="link"   href="https://movie.douban.com/subject/27073752/" >https://movie.douban.com/subject/27073752/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Suicide Squad</td>
-<td>X特遣队：全员集结</td>
-<td>2021</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26741632/" >https://movie.douban.com/subject/26741632/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Batman</td>
-<td>新蝙蝠侠</td>
-<td>2022</td>
-<td><a class="link"   href="https://movie.douban.com/subject/6424756/" >https://movie.douban.com/subject/6424756/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Black Adam</td>
-<td>黑亚当</td>
-<td>2022</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26959697/" >https://movie.douban.com/subject/26959697/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Shazam! Fury of the Gods</td>
-<td>雷霆沙赞！众神之怒</td>
-<td>2023</td>
-<td><a class="link"   href="https://movie.douban.com/subject/33402300/" >https://movie.douban.com/subject/33402300/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Flash</td>
-<td>闪电侠</td>
-<td>2023</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3011317/" >https://movie.douban.com/subject/3011317/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Blue Beetle</td>
-<td>蓝甲虫</td>
-<td>2023</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30391109/" >https://movie.douban.com/subject/30391109/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Aquaman and the Lost Kingdom</td>
-<td>海王2：失落的王国</td>
-<td>2023</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30444942/" >https://movie.douban.com/subject/30444942/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Joker: Folie à Deux</td>
-<td>小丑2：双重妄想</td>
-<td>2024</td>
-<td><a class="link"   href="https://movie.douban.com/subject/34909341/" >https://movie.douban.com/subject/34909341/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Media</category>
-      </categories>
-      <tags>
-        <tag>DC</tag>
-        <tag>Films</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DC TV Series</title>
-    <url>/2025/01/17/DC%20TV%20Series/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>原名</th>
-<th>译名</th>
-<th>季数</th>
-<th>豆瓣链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Adventures of Superman</td>
-<td>超人的冒险</td>
-<td>6</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3068641/" >https://movie.douban.com/subject/3068641/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Batman</td>
-<td>蝙蝠侠</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3259453/" >https://movie.douban.com/subject/3259453/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Shazam!</td>
-<td>沙赞！</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/5054611/" >https://movie.douban.com/subject/5054611/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Secrets of Isis</td>
-<td>女神爱切丝的秘密</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/2150446/" >https://movie.douban.com/subject/2150446/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Wonder Woman</td>
-<td>神奇女侠</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/2003096/" >https://movie.douban.com/subject/2003096/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Superboy</td>
-<td>少年超人</td>
-<td>4</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3840718/" >https://movie.douban.com/subject/3840718/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Swamp Thing</td>
-<td>沼泽怪物</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3930753/" >https://movie.douban.com/subject/3930753/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Flash</td>
-<td>闪电侠</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/2346837/" >https://movie.douban.com/subject/2346837/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Human Target</td>
-<td>替身标靶</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/5113469/" >https://movie.douban.com/subject/5113469/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Lois &amp; Clark: The New Adventures of Superman</td>
-<td>新超人</td>
-<td>4</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1421103/" >https://movie.douban.com/subject/1421103/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Smallville</td>
-<td>超人前传</td>
-<td>10</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1401376/" >https://movie.douban.com/subject/1401376/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Birds of Prey</td>
-<td>猛禽小队</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/2083941/" >https://movie.douban.com/subject/2083941/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Human Target</td>
-<td>替身标靶</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3741756/" >https://movie.douban.com/subject/3741756/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Arrow</td>
-<td>绿箭侠</td>
-<td>8</td>
-<td><a class="link"   href="https://movie.douban.com/subject/10527257/" >https://movie.douban.com/subject/10527257/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Gotham</td>
-<td>哥谭</td>
-<td>5</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25733164/" >https://movie.douban.com/subject/25733164/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Flash</td>
-<td>闪电侠</td>
-<td>9</td>
-<td><a class="link"   href="https://movie.douban.com/subject/24883222/" >https://movie.douban.com/subject/24883222/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Constantine</td>
-<td>康斯坦丁</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25741475/" >https://movie.douban.com/subject/25741475/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Supergirl</td>
-<td>超级少女</td>
-<td>6</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25987068/" >https://movie.douban.com/subject/25987068/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Legends of Tomorrow</td>
-<td>明日传奇</td>
-<td>7</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26358783/" >https://movie.douban.com/subject/26358783/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Powerless</td>
-<td>无能为力</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26592226/" >https://movie.douban.com/subject/26592226/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Black Lightning</td>
-<td>黑霹雳</td>
-<td>4</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26868388/" >https://movie.douban.com/subject/26868388/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Krypton</td>
-<td>氪星</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26279828/" >https://movie.douban.com/subject/26279828/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Titans</td>
-<td>泰坦</td>
-<td>4</td>
-<td><a class="link"   href="https://movie.douban.com/subject/2137327/" >https://movie.douban.com/subject/2137327/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Doom Patrol</td>
-<td>末日巡逻队</td>
-<td>4</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30222729/" >https://movie.douban.com/subject/30222729/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Swamp Thing</td>
-<td>沼泽怪物</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30216642/" >https://movie.douban.com/subject/30216642/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Pennyworth</td>
-<td>潘尼沃斯</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30224319/" >https://movie.douban.com/subject/30224319/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Batwoman</td>
-<td>蝙蝠女侠</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30279863/" >https://movie.douban.com/subject/30279863/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Watchmen</td>
-<td>守望者</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26635374/" >https://movie.douban.com/subject/26635374/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Stargirl</td>
-<td>逐星女</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30283264/" >https://movie.douban.com/subject/30283264/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Superman &amp; Lois</td>
-<td>超人和露易丝</td>
-<td>4</td>
-<td><a class="link"   href="https://movie.douban.com/subject/34881451/" >https://movie.douban.com/subject/34881451/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Naomi</td>
-<td>娜奥米</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35280629/" >https://movie.douban.com/subject/35280629/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Gotham Knights</td>
-<td>哥谭骑士</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35700778/" >https://movie.douban.com/subject/35700778/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Penguin</td>
-<td>企鹅人</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35604181/" >https://movie.douban.com/subject/35604181/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Peacemaker</td>
-<td>和平使者</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35209701/" >https://movie.douban.com/subject/35209701/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Media</category>
-      </categories>
-      <tags>
-        <tag>DC</tag>
-        <tag>TV Series</tag>
       </tags>
   </entry>
   <entry>
