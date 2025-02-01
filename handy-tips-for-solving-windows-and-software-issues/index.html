@@ -36,7 +36,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://1lya.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-01-31T08:42:52.177Z">
-<meta property="article:modified_time" content="2025-01-31T08:37:23.680Z">
+<meta property="article:modified_time" content="2025-02-01T13:39:16.759Z">
 <meta property="article:author" content="Astrid Stark">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Issues">
@@ -451,8 +451,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-01-31 16:37:23</span>
-            <span class="mobile">2025-01-31 16:37:23</span>
+            <span class="desktop">2025-02-01 21:39:16</span>
+            <span class="mobile">2025-02-01 21:39:16</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -670,6 +670,36 @@
                      data-src="/images/handy-tips-for-solving-windows-and-software-issues/img15.png"
                       alt="Path 恢复分行显示"
                 ></p>
+<h2 id="九、删除文件默认打开方式"><a href="#九、删除文件默认打开方式" class="headerlink" title="九、删除文件默认打开方式"></a>九、删除文件默认打开方式</h2><p>有时候，一个特殊类型的文件误使用错误的打开方式打开，它的图标就会变成所使用的软件的图标，并且鼠标左键双击也是通过这个错误的方式打开。这时，我们就需要将文件的默认打开方式清空，变回未知。</p>
+<p>在 Windows 系统中，文件的默认打开方式通过多个注册表项来管理，特别是以下三个关键注册表路径：</p>
+<ul>
+<li><strong><code>HKEY_CLASSES_ROOT\&lt;扩展名&gt;\OpenWithList</code></strong><br>该路径下存储的是系统范围内为特定文件扩展名所设置的可用程序列表。它列出了所有能够打开该类型文件的程序，并决定了文件右键点击时的“打开方式”菜单中的程序列表。这并不决定文件的默认打开方式，而是用于提供可选程序的列表。</li>
+<li><strong><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\&lt;扩展名&gt;\OpenWithList</code></strong><br>记录当前用户在该文件类型上的历史打开记录。也就是说，它记录了当前用户最常使用的程序来打开该类型文件。当你右键一个文件并选择“打开方式”时，Windows 会显示最近使用的程序。<br>同样，它并不会直接决定文件的默认打开方式，而只是影响右键菜单中的“最近使用的程序”列表。</li>
+<li><strong><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\&lt;扩展名&gt;\UserChoice</code></strong><br>这是最关键的注册表项，它决定了当前用户对该文件类型的默认打开方式。它存储了一个 <code>ProgId</code> 和一个哈希值，用于指定默认的程序打开该文件。<br>如果这个键存在，它将覆盖其他设置，强制文件通过指定的程序打开。</li>
+</ul>
+<p>若想清除文件的默认打开方式，我们主要需要删除 <code>UserChoice</code> 键。清除后，Windows 会恢复至系统默认的打开方式，或者提示你重新选择应用程序。在注册表编辑器中找到相应注册表路径删除即可。</p>
+<blockquote>
+<p>在操作前，建议备份注册表，以防万一。</p>
+</blockquote>
+<p>也可以使用 PowerShell 一键删除这些注册表项，恢复文件的默认打开方式。以下是用于清除 <code>.pdf</code> 文件默认关联的 PowerShell 脚本：</p>
+<div class="code-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除特定文件类型的注册表项（例如 .pdf）</span></span><br><span class="line"><span class="variable">$extension</span> = <span class="string">&quot;.pdf&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除 `UserChoice` 键（关键项）</span></span><br><span class="line"><span class="built_in">Remove-Item</span> <span class="literal">-Path</span> <span class="string">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\<span class="variable">$extension</span>\UserChoice&quot;</span> <span class="literal">-Force</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除当前用户下的 `OpenWithList` 键（移除最近使用的程序列表）</span></span><br><span class="line"><span class="built_in">Remove-Item</span> <span class="literal">-Path</span> <span class="string">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\<span class="variable">$extension</span>\OpenWithList&quot;</span> <span class="literal">-Force</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除系统级别的 `OpenWithList` 键（系统级别的打开方式列表）</span></span><br><span class="line"><span class="built_in">Remove-Item</span> <span class="literal">-Path</span> <span class="string">&quot;HKCR:\.<span class="variable">$extension</span>\OpenWithList&quot;</span> <span class="literal">-Force</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启资源管理器</span></span><br><span class="line"><span class="built_in">Stop-Process</span> <span class="literal">-Name</span> explorer <span class="literal">-Force</span></span><br><span class="line"><span class="built_in">Start-Process</span> explorer</span><br></pre></td></tr></table></figure></div>
+
+<p>将以上代码复制粘贴到记事本中，另存为 <code>.ps1</code> 文件并执行即可。</p>
+<p>最后，重启文件资源管理器，发现指定扩展名的文件的打开方式已经变回了未知。</p>
+<blockquote>
+<p>如果仍不起作用，可以先备份注册表，再直接删除 <code>HKEY_CLASSES_ROOT\&lt;扩展名&gt;</code> 和 <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\&lt;扩展名&gt;</code> 两个文件夹，然后重启文件资源管理器。</p>
+</blockquote>
+<h2 id="十、开机时-NumLock-键默认关闭"><a href="#十、开机时-NumLock-键默认关闭" class="headerlink" title="十、开机时 NumLock 键默认关闭"></a>十、开机时 NumLock 键默认关闭</h2><p>有的电脑开机时，每次都要按一下 NumLock 键才能通过小键盘输入数字，可以设定为开机默认打开 NumLock 键。</p>
+<p>Win + R 输入 <code>regedit</code> 打开注册表编辑器，在路径 <code>计算机\HKEY_USERS\.DEFAULT\Control Panel\Keyboard</code> 中，修改 <code>InitialKeyboardIndicators</code> 项的值为 <code>2</code> 即可。</p>
+<blockquote>
+<p><code>InitialKeyboardIndicators = 0</code> 表示关闭全部指示仪</p>
+<p><code>InitialKeyboardIndicators = 1</code> 表示开启 Caps Lock（大写锁定）</p>
+<p><code>InitialKeyboardIndicators = 2</code> 表示开启 Num Lock（数字锁定）</p>
+<p><code>InitialKeyboardIndicators = 4</code> 表示开启 Scroll Lock（滚动锁定）</p>
+<p><code>InitialKeyboardIndicators</code> 项的默认值为 <code>2147483648</code></p>
+</blockquote>
+<p>设置完成后重启电脑。</p>
+<p>如果上述操作不生效，则需启动时进入 BIOS 进行设置。</p>
 
 		</div>
 
@@ -720,7 +750,7 @@
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
 		<div class="page-title">Handy Tips for Solving Windows &amp; Software Issues</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%9F%A5%E7%9C%8B-GitHub-%E4%BB%93%E5%BA%93%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="nav-text">一、查看 GitHub 仓库详细信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81npm-%E4%B8%8B%E8%BD%BD-Electron-%E6%8A%A5%E9%94%99"><span class="nav-text">二、npm 下载 Electron 报错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BD%BF%E7%94%A8-Google%E2%80%99s-Favicon-%E6%9C%8D%E5%8A%A1%E6%8F%90%E5%8F%96%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87"><span class="nav-text">三、使用 Google’s Favicon 服务提取网站图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%A6%81%E7%94%A8-UAC-%E8%A7%A3%E5%86%B3%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98"><span class="nav-text">四、禁用 UAC 解决管理员权限无效问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%BB%91%E5%AE%9A%E8%87%AA%E5%B7%B1%E7%9A%84%E5%90%84%E5%A4%A7%E9%82%AE%E7%AE%B1%E5%88%B0-Thunderbird"><span class="nav-text">五、绑定自己的各大邮箱到 Thunderbird</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E4%B8%BA%E5%AE%B6%E5%BA%AD%E7%89%88-Windows-%E7%B3%BB%E7%BB%9F%E6%B7%BB%E5%8A%A0%E7%BB%84%E7%AD%96%E7%95%A5%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-text">六、为家庭版 Windows 系统添加组策略管理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81Word-%E5%9C%A8%E8%AF%95%E5%9B%BE%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E6%97%B6%E9%81%87%E5%88%B0%E9%94%99%E8%AF%AF"><span class="nav-text">七、Word 在试图打开文件时遇到错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84-Path-%E6%97%A0%E6%B3%95%E5%88%86%E8%A1%8C%E6%98%BE%E7%A4%BA"><span class="nav-text">八、环境变量的 Path 无法分行显示</span></a></li></ol>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%9F%A5%E7%9C%8B-GitHub-%E4%BB%93%E5%BA%93%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="nav-text">一、查看 GitHub 仓库详细信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81npm-%E4%B8%8B%E8%BD%BD-Electron-%E6%8A%A5%E9%94%99"><span class="nav-text">二、npm 下载 Electron 报错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BD%BF%E7%94%A8-Google%E2%80%99s-Favicon-%E6%9C%8D%E5%8A%A1%E6%8F%90%E5%8F%96%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87"><span class="nav-text">三、使用 Google’s Favicon 服务提取网站图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%A6%81%E7%94%A8-UAC-%E8%A7%A3%E5%86%B3%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98"><span class="nav-text">四、禁用 UAC 解决管理员权限无效问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%BB%91%E5%AE%9A%E8%87%AA%E5%B7%B1%E7%9A%84%E5%90%84%E5%A4%A7%E9%82%AE%E7%AE%B1%E5%88%B0-Thunderbird"><span class="nav-text">五、绑定自己的各大邮箱到 Thunderbird</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E4%B8%BA%E5%AE%B6%E5%BA%AD%E7%89%88-Windows-%E7%B3%BB%E7%BB%9F%E6%B7%BB%E5%8A%A0%E7%BB%84%E7%AD%96%E7%95%A5%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-text">六、为家庭版 Windows 系统添加组策略管理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81Word-%E5%9C%A8%E8%AF%95%E5%9B%BE%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E6%97%B6%E9%81%87%E5%88%B0%E9%94%99%E8%AF%AF"><span class="nav-text">七、Word 在试图打开文件时遇到错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84-Path-%E6%97%A0%E6%B3%95%E5%88%86%E8%A1%8C%E6%98%BE%E7%A4%BA"><span class="nav-text">八、环境变量的 Path 无法分行显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E3%80%81%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F"><span class="nav-text">九、删除文件默认打开方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E3%80%81%E5%BC%80%E6%9C%BA%E6%97%B6-NumLock-%E9%94%AE%E9%BB%98%E8%AE%A4%E5%85%B3%E9%97%AD"><span class="nav-text">十、开机时 NumLock 键默认关闭</span></a></li></ol>
 
 	</div>
 </div>
