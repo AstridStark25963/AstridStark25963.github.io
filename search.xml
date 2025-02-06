@@ -720,6 +720,102 @@
       </tags>
   </entry>
   <entry>
+    <title>Cloudflare Warp Zero Trust User Guide</title>
+    <url>//archives/cloudflare-warp-zero-trust-user-guide/</url>
+    <content><![CDATA[<h2 id="一、创建-Cloudflare-账户和-Zero-Trust-团队"><a href="#一、创建-Cloudflare-账户和-Zero-Trust-团队" class="headerlink" title="一、创建 Cloudflare 账户和 Zero Trust 团队"></a>一、创建 Cloudflare 账户和 Zero Trust 团队</h2><p>注册一个 Cloudflare 账户，点击左侧的 Zero Trust</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img0.png"
+                      alt="Cloudflare 控制台"
+                ></p>
+<p>创建一个团队并填写名称</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img1.png"
+                      alt="创建 Cloudflare 团队"
+                ></p>
+<p>选择免费套餐</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img2.png"
+                      alt="选择免费套餐"
+                ></p>
+<h2 id="二、添加团队筛选策略"><a href="#二、添加团队筛选策略" class="headerlink" title="二、添加团队筛选策略"></a>二、添加团队筛选策略</h2><p>回到 Zero Trust 页面，选择 Settings 中的 WARP Client 选项</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img3.png"
+                      alt="Zero Trust 设置"
+                ></p>
+<p>点击 Device enrollment permissions 中的 Manage，添加策略</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img4.png"
+                      alt="WARP Client 设置"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img5.png"
+                      alt="添加策略"
+                ></p>
+<p>规则名称任意，动作填 Allow，筛选器选择 Emails ending in，Value 填写能通过团队筛选的邮箱后缀</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img6.png"
+                      alt="策略详细内容"
+                ></p>
+<h2 id="三、添加团队用户"><a href="#三、添加团队用户" class="headerlink" title="三、添加团队用户"></a>三、添加团队用户</h2><p>在 Cloudflare Warp客户端中选择账户，点击使用 Cloudflare Zero Trust 登录</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img7.png"
+                      alt="登录到 Cloudflare Zero Trust 团队"
+                ></p>
+<p>使用 Cloudflare Zero Trust 登录之前的界面如图</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img8.png"
+                      alt="登录团队前连接图示"
+                ></p>
+<p>根据要求填写团队名称并完成认证</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img9.png"
+                      alt="填写团队名称并认证"
+                ></p>
+<p>使用 Cloudflare Zero Trust 登录之后的界面如图，可以发现已经变成了 Zero Trust，现在就可以使用 Zero Trust 访问外网了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img10.png"
+                      alt="登录团队后连接图示"
+                ></p>
+<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>由于各种原因，自 2024 年 6 月 6 日起，使用此方法访问外网已部分失效。</p>
+<p>如果连接失败且错误代码如图表示已无法正常连接。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img11.png"
+                      alt="错误代码"
+                ></p>
+<p>部分地区和设备仍可通过手机流量或手机共享热点到电脑使用此方法。</p>
+]]></content>
+      <categories>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Cloudflare</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Building Jellyfin Media Library with Docker</title>
     <url>//archives/building-jellyfin-media-library-with-docker/</url>
     <content><![CDATA[<h2 id="一、配置-Docker"><a href="#一、配置-Docker" class="headerlink" title="一、配置 Docker"></a>一、配置 Docker</h2><p>进入 Docker 官网，下载 Docker Desktop 并进行安装</p>
@@ -814,102 +910,6 @@
       <tags>
         <tag>Docker</tag>
         <tag>Jellyfin</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cloudflare Warp Zero Trust User Guide</title>
-    <url>//archives/cloudflare-warp-zero-trust-user-guide/</url>
-    <content><![CDATA[<h2 id="一、创建-Cloudflare-账户和-Zero-Trust-团队"><a href="#一、创建-Cloudflare-账户和-Zero-Trust-团队" class="headerlink" title="一、创建 Cloudflare 账户和 Zero Trust 团队"></a>一、创建 Cloudflare 账户和 Zero Trust 团队</h2><p>注册一个 Cloudflare 账户，点击左侧的 Zero Trust</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img0.png"
-                      alt="Cloudflare 控制台"
-                ></p>
-<p>创建一个团队并填写名称</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img1.png"
-                      alt="创建 Cloudflare 团队"
-                ></p>
-<p>选择免费套餐</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img2.png"
-                      alt="选择免费套餐"
-                ></p>
-<h2 id="二、添加团队筛选策略"><a href="#二、添加团队筛选策略" class="headerlink" title="二、添加团队筛选策略"></a>二、添加团队筛选策略</h2><p>回到 Zero Trust 页面，选择 Settings 中的 WARP Client 选项</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img3.png"
-                      alt="Zero Trust 设置"
-                ></p>
-<p>点击 Device enrollment permissions 中的 Manage，添加策略</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img4.png"
-                      alt="WARP Client 设置"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img5.png"
-                      alt="添加策略"
-                ></p>
-<p>规则名称任意，动作填 Allow，筛选器选择 Emails ending in，Value 填写能通过团队筛选的邮箱后缀</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img6.png"
-                      alt="策略详细内容"
-                ></p>
-<h2 id="三、添加团队用户"><a href="#三、添加团队用户" class="headerlink" title="三、添加团队用户"></a>三、添加团队用户</h2><p>在 Cloudflare Warp客户端中选择账户，点击使用 Cloudflare Zero Trust 登录</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img7.png"
-                      alt="登录到 Cloudflare Zero Trust 团队"
-                ></p>
-<p>使用 Cloudflare Zero Trust 登录之前的界面如图</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img8.png"
-                      alt="登录团队前连接图示"
-                ></p>
-<p>根据要求填写团队名称并完成认证</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img9.png"
-                      alt="填写团队名称并认证"
-                ></p>
-<p>使用 Cloudflare Zero Trust 登录之后的界面如图，可以发现已经变成了 Zero Trust，现在就可以使用 Zero Trust 访问外网了</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img10.png"
-                      alt="登录团队后连接图示"
-                ></p>
-<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>由于各种原因，自 2024 年 6 月 6 日起，使用此方法访问外网已部分失效。</p>
-<p>如果连接失败且错误代码如图表示已无法正常连接。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img11.png"
-                      alt="错误代码"
-                ></p>
-<p>部分地区和设备仍可通过手机流量或手机共享热点到电脑使用此方法。</p>
-]]></content>
-      <categories>
-        <category>Network</category>
-      </categories>
-      <tags>
-        <tag>Cloudflare</tag>
       </tags>
   </entry>
   <entry>
@@ -1559,95 +1559,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Guide for Maven Installation &amp; Build</title>
-    <url>//archives/guide-for-maven-installation-and-build/</url>
-    <content><![CDATA[<h2 id="一、Maven-的下载与安装"><a href="#一、Maven-的下载与安装" class="headerlink" title="一、Maven 的下载与安装"></a>一、Maven 的下载与安装</h2><p><a class="link"   href="https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip" >Maven 3.9.8 Windows版本下载链接<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img0.png"
-                      alt="Maven 官方下载"
-                ></p>
-<p>下载好后，解压到特定文件夹（路径不能有中文、空格和其他特殊字符）。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img1.png"
-                      alt="Maven 安装文件夹"
-                ></p>
-<h2 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a>二、配置环境变量</h2><p>打开系统环境变量。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img2.png"
-                      alt="编辑系统环境变量"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img3.png"
-                      alt="系统属性 - 环境变量"
-                ></p>
-<p>修改 Path 内容，添加 Maven 安装路径。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img4.png"
-                      alt="系统变量 - Path - 编辑"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img5.png"
-                      alt="添加 Maven 路径"
-                ></p>
-<p>环境变量配置好后，在终端中输入 <code>mvn -v</code> 查看 Maven 版本，验证是否安装成功。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img6.png"
-                      alt="查看 Maven 版本"
-                ></p>
-<h2 id="三、配置-settings-和-toolchains-文件"><a href="#三、配置-settings-和-toolchains-文件" class="headerlink" title="三、配置 settings 和 toolchains 文件"></a>三、配置 settings 和 toolchains 文件</h2><p>打开Maven安装路径下 <code>/conf/settings.xml</code> 和 <code>/conf/toolchains.xml</code> 文件。</p>
-<p>为了在 IDEA 中提高 Maven 的构建速度，需要修改 Maven 的下载源，所以先在 Maven 安装目录下新建本地仓库文件夹 <code>maven_repository</code> 。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img7.png"
-                      alt="新建本地仓库文件夹"
-                ></p>
-<p><code>settings.xml</code> 文件修改如下：</p>
-<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;localRepository&gt;标签放Maven仓库路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>D:/Apache Maven/apache-maven-3.9.8/maven_repository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">proxies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">proxies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">servers</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servers</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;mirrors&gt;标签中放Maven的下载源 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>aliyunmaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>Aliyun Public Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://maven.aliyun.com/repository/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;profiles&gt;标签中放jdk的版本 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>jdk-22<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>22<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>除阿里云外其他国内仓库地址：</p>
-<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- NetEase --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-163<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus 163<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.163.com/maven/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tecent Cloud --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-tencentyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus tencentyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br></pre></td></tr></table></figure></div>
-
-<p><code>toolchains.xml</code> 文件修改如下：</p>
-<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">toolchains</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;toolchain&gt;的&lt;provides&gt;标签中放jdk版本，&lt;configuration&gt;标签中放jdk安装路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toolchain</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>jdk<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">provides</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>22<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">vendor</span>&gt;</span>oracle<span class="tag">&lt;/<span class="name">vendor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">provides</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">jdkHome</span>&gt;</span>C:/Program Files/Java/jdk-22<span class="tag">&lt;/<span class="name">jdkHome</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">toolchain</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">toolchains</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>修改好后，在终端输入 <code>mvn help:system</code> 测试，Maven 会自动下载缺省的或者更新的各种配置文件和依赖到本地仓库中。如果出现 Build Success，说明 Maven 已经配置成功了。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img8.png"
-                      alt="测试 Maven 配置"
-                ></p>
-<h2 id="四、InetlliJ-IDEA-配置"><a href="#四、InetlliJ-IDEA-配置" class="headerlink" title="四、InetlliJ IDEA 配置"></a>四、InetlliJ IDEA 配置</h2><p>在 Maven 设置里，修改 Maven 主路径、用户设置文件和本地仓库的内容即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img9.png"
-                      alt="IntelliJ IDEA 配置"
-                ></p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Dial-Up to Connect to the Campus Network</title>
     <url>//archives/dial-up-to-connect-to-the-campus-network/</url>
     <content><![CDATA[<h2 id="一、设置新拨号连接"><a href="#一、设置新拨号连接" class="headerlink" title="一、设置新拨号连接"></a>一、设置新拨号连接</h2><p>打开“网络和 Internet”</p>
@@ -1750,6 +1661,255 @@
       <tags>
         <tag>PPPoE</tag>
         <tag>Campus Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Guide for Maven Installation &amp; Build</title>
+    <url>//archives/guide-for-maven-installation-and-build/</url>
+    <content><![CDATA[<h2 id="一、Maven-的下载与安装"><a href="#一、Maven-的下载与安装" class="headerlink" title="一、Maven 的下载与安装"></a>一、Maven 的下载与安装</h2><p><a class="link"   href="https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip" >Maven 3.9.8 Windows版本下载链接<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img0.png"
+                      alt="Maven 官方下载"
+                ></p>
+<p>下载好后，解压到特定文件夹（路径不能有中文、空格和其他特殊字符）。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img1.png"
+                      alt="Maven 安装文件夹"
+                ></p>
+<h2 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a>二、配置环境变量</h2><p>打开系统环境变量。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img2.png"
+                      alt="编辑系统环境变量"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img3.png"
+                      alt="系统属性 - 环境变量"
+                ></p>
+<p>修改 Path 内容，添加 Maven 安装路径。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img4.png"
+                      alt="系统变量 - Path - 编辑"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img5.png"
+                      alt="添加 Maven 路径"
+                ></p>
+<p>环境变量配置好后，在终端中输入 <code>mvn -v</code> 查看 Maven 版本，验证是否安装成功。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img6.png"
+                      alt="查看 Maven 版本"
+                ></p>
+<h2 id="三、配置-settings-和-toolchains-文件"><a href="#三、配置-settings-和-toolchains-文件" class="headerlink" title="三、配置 settings 和 toolchains 文件"></a>三、配置 settings 和 toolchains 文件</h2><p>打开Maven安装路径下 <code>/conf/settings.xml</code> 和 <code>/conf/toolchains.xml</code> 文件。</p>
+<p>为了在 IDEA 中提高 Maven 的构建速度，需要修改 Maven 的下载源，所以先在 Maven 安装目录下新建本地仓库文件夹 <code>maven_repository</code> 。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img7.png"
+                      alt="新建本地仓库文件夹"
+                ></p>
+<p><code>settings.xml</code> 文件修改如下：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;localRepository&gt;标签放Maven仓库路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>D:/Apache Maven/apache-maven-3.9.8/maven_repository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">proxies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">proxies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">servers</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servers</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;mirrors&gt;标签中放Maven的下载源 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>aliyunmaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>Aliyun Public Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://maven.aliyun.com/repository/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;profiles&gt;标签中放jdk的版本 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>jdk-22<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>22<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>除阿里云外其他国内仓库地址：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- NetEase --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-163<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus 163<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.163.com/maven/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tecent Cloud --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-tencentyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus tencentyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br></pre></td></tr></table></figure></div>
+
+<p><code>toolchains.xml</code> 文件修改如下：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">toolchains</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;toolchain&gt;的&lt;provides&gt;标签中放jdk版本，&lt;configuration&gt;标签中放jdk安装路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toolchain</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>jdk<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">provides</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>22<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">vendor</span>&gt;</span>oracle<span class="tag">&lt;/<span class="name">vendor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">provides</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">jdkHome</span>&gt;</span>C:/Program Files/Java/jdk-22<span class="tag">&lt;/<span class="name">jdkHome</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">toolchain</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">toolchains</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>修改好后，在终端输入 <code>mvn help:system</code> 测试，Maven 会自动下载缺省的或者更新的各种配置文件和依赖到本地仓库中。如果出现 Build Success，说明 Maven 已经配置成功了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img8.png"
+                      alt="测试 Maven 配置"
+                ></p>
+<h2 id="四、InetlliJ-IDEA-配置"><a href="#四、InetlliJ-IDEA-配置" class="headerlink" title="四、InetlliJ IDEA 配置"></a>四、InetlliJ IDEA 配置</h2><p>在 Maven 设置里，修改 Maven 主路径、用户设置文件和本地仓库的内容即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img9.png"
+                      alt="IntelliJ IDEA 配置"
+                ></p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Host Static Web Pages on Personal Domain via GitHub</title>
+    <url>//archives/host-static-web-pages-on-personal-domain-via-github/</url>
+    <content><![CDATA[<h2 id="一、将-Git-连接到-GitHub"><a href="#一、将-Git-连接到-GitHub" class="headerlink" title="一、将 Git 连接到 GitHub"></a>一、将 Git 连接到 GitHub</h2><p>使用 SSH 方式将 Git 连接到 GitHub</p>
+<p>首先将个人用户名和密码添加到 <code>git config</code></p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global [user.name](http://user.name/) <span class="string">&quot;AstridStark25963&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;astridstark25963@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>可以通过以下命令检查配置是否正确：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure></div>
+
+<p>查看是否已有SSH密钥：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -al ~/.ssh</span><br></pre></td></tr></table></figure></div>
+
+<p>如果看到 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 文件，表示已经存在SSH密钥，可以选择使用现有的密钥或者生成新的密钥。</p>
+<p>生成SSH密钥：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;astridstark@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>命令后添加 <code>-C &quot;astridstark25963@gmail.com&quot;</code> 是将邮箱作为密钥的标识符号。</p>
+<p>当提示 <strong>Enter file in which to save the key</strong> 时，按 <code>Enter</code> 使用默认位置（<code>/c/Users/lenovo/.ssh/id_rsa</code>）。<br>当提示 <strong>Enter passphrase</strong> 时，可以选择设置一个密码短语（增加安全性），或者直接按 <code>Enter</code> 跳过。</p>
+</blockquote>
+<p>在 Git Bash 中输入以下命令，启动 SSH 代理并添加密钥：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></div>
+
+<p>然后将 SSH 密钥添加到 GitHub</p>
+<p>在 Git Bash 中输入以下命令，复制公钥内容：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></div>
+
+<p>复制输出的内容（从 <code>ssh-rsa</code> 开始到邮箱结束）。</p>
+<p>在 <code>GitHub 账户 -&gt; Settings -&gt; SSH and GPG keys</code> 中添加新的 SSH 密钥，在 <strong>Key</strong> 字段中粘贴刚刚复制的公钥内容即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img0.png"
+                      alt="Add SSH key to GitHub"
+                ></p>
+<p>通过输入以下命令测试与 GitHub 的连接：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div>
+
+<p>如果一切正常，会看到如下信息：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img1.png"
+                      alt="SSH connection test"
+                ></p>
+<h2 id="二、创建仓库并克隆到本地"><a href="#二、创建仓库并克隆到本地" class="headerlink" title="二、创建仓库并克隆到本地"></a>二、创建仓库并克隆到本地</h2><p>由于目的是将静态页面关联到个人域名，所以直接在 GitHub 创建用户名同名仓库 <code>AstridStark25963.github.io</code> </p>
+<blockquote>
+<p>直接创建用户名同名仓库，GitHub 会自动将此仓库使用 GitHub Pages 托管</p>
+</blockquote>
+<p>在仓库页面选择 Code - SSH，获得克隆仓库所需的命令</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img2.png"
+                      alt="Git clone"
+                ></p>
+<p>在 Git Bash 输入以下命令进行仓库克隆：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:AstridStark25963/AstridStark25963.github.io.git</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img3.png"
+                      alt="Clone success"
+                ></p>
+<h2 id="三、由本地向仓库提交更改"><a href="#三、由本地向仓库提交更改" class="headerlink" title="三、由本地向仓库提交更改"></a>三、由本地向仓库提交更改</h2><p>修改本地文件，在仓库所在文件夹添加测试文件：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img4.png"
+                      alt="Add a test file"
+                ></p>
+<p>在 Git Bash 定位到仓库所在文件夹：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">cd</span> AstridStark25963.github.io</span><br></pre></td></tr></table></figure></div>
+
+<p>查看当前仓库状态：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img5.png"
+                      alt="Check repository status"
+                ></p>
+<p>将更改添加到暂存区，提交更改并推送到远程仓库：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;add test.txt&quot;</span></span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img6.png"
+                      alt="Add, commit and push"
+                ></p>
+<p>查看修改历史：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img7.png"
+                      alt="Git log"
+                ></p>
+<h2 id="四、将-GitHub-仓库添加到域名解析记录"><a href="#四、将-GitHub-仓库添加到域名解析记录" class="headerlink" title="四、将 GitHub 仓库添加到域名解析记录"></a>四、将 GitHub 仓库添加到域名解析记录</h2><p>打开腾讯云，向域名添加解析记录：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img8.png"
+                      alt="Add DNS record"
+                ></p>
+<p>第一条记录，主机记录填写 <code>www</code> ，记录类型填写 <code>CNAME</code> ，记录值填写 <code>astridstark25963.github.io</code>  </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img9.png"
+                      alt="Host record"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img10.png"
+                      alt="Record type"
+                ></p>
+<p>第二条记录，主机记录填写 <code>@</code> ，记录类型填写 <code>A</code> ，记录值填写第一条记录中记录值的 IP 地址，可以通过在终端执行 <code>ping</code> 命令得到。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img11.png"
+                      alt="Ping astridstark25963.github.io"
+                ></p>
+<p>在本地添加 <code>CNAME</code> 文件并推送到远程仓库，内容为域名。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img12.png"
+                      alt="CNAME"
+                ></p>
+<p>成功推送后，在仓库的 <code>Settings -&gt; Pages -&gt; Custom domain</code> 中可以看到解析后的域名信息。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img13.png"
+                      alt="Custom domain"
+                ></p>
+<p>最后直接在浏览器访问域名，即可看到网页内容。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img14.png"
+                      alt="Success!"
+                ></p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Personal Website</tag>
       </tags>
   </entry>
   <entry>
@@ -2132,598 +2292,6 @@
       <tags>
         <tag>Windows</tag>
         <tag>Issues</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Host Static Web Pages on Personal Domain via GitHub</title>
-    <url>//archives/host-static-web-pages-on-personal-domain-via-github/</url>
-    <content><![CDATA[<h2 id="一、将-Git-连接到-GitHub"><a href="#一、将-Git-连接到-GitHub" class="headerlink" title="一、将 Git 连接到 GitHub"></a>一、将 Git 连接到 GitHub</h2><p>使用 SSH 方式将 Git 连接到 GitHub</p>
-<p>首先将个人用户名和密码添加到 <code>git config</code></p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global [user.name](http://user.name/) <span class="string">&quot;AstridStark25963&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;astridstark25963@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>可以通过以下命令检查配置是否正确：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure></div>
-
-<p>查看是否已有SSH密钥：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -al ~/.ssh</span><br></pre></td></tr></table></figure></div>
-
-<p>如果看到 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 文件，表示已经存在SSH密钥，可以选择使用现有的密钥或者生成新的密钥。</p>
-<p>生成SSH密钥：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;astridstark@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>命令后添加 <code>-C &quot;astridstark25963@gmail.com&quot;</code> 是将邮箱作为密钥的标识符号。</p>
-<p>当提示 <strong>Enter file in which to save the key</strong> 时，按 <code>Enter</code> 使用默认位置（<code>/c/Users/lenovo/.ssh/id_rsa</code>）。<br>当提示 <strong>Enter passphrase</strong> 时，可以选择设置一个密码短语（增加安全性），或者直接按 <code>Enter</code> 跳过。</p>
-</blockquote>
-<p>在 Git Bash 中输入以下命令，启动 SSH 代理并添加密钥：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></div>
-
-<p>然后将 SSH 密钥添加到 GitHub</p>
-<p>在 Git Bash 中输入以下命令，复制公钥内容：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></div>
-
-<p>复制输出的内容（从 <code>ssh-rsa</code> 开始到邮箱结束）。</p>
-<p>在 <code>GitHub 账户 -&gt; Settings -&gt; SSH and GPG keys</code> 中添加新的 SSH 密钥，在 <strong>Key</strong> 字段中粘贴刚刚复制的公钥内容即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img0.png"
-                      alt="Add SSH key to GitHub"
-                ></p>
-<p>通过输入以下命令测试与 GitHub 的连接：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div>
-
-<p>如果一切正常，会看到如下信息：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img1.png"
-                      alt="SSH connection test"
-                ></p>
-<h2 id="二、创建仓库并克隆到本地"><a href="#二、创建仓库并克隆到本地" class="headerlink" title="二、创建仓库并克隆到本地"></a>二、创建仓库并克隆到本地</h2><p>由于目的是将静态页面关联到个人域名，所以直接在 GitHub 创建用户名同名仓库 <code>AstridStark25963.github.io</code> </p>
-<blockquote>
-<p>直接创建用户名同名仓库，GitHub 会自动将此仓库使用 GitHub Pages 托管</p>
-</blockquote>
-<p>在仓库页面选择 Code - SSH，获得克隆仓库所需的命令</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img2.png"
-                      alt="Git clone"
-                ></p>
-<p>在 Git Bash 输入以下命令进行仓库克隆：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:AstridStark25963/AstridStark25963.github.io.git</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img3.png"
-                      alt="Clone success"
-                ></p>
-<h2 id="三、由本地向仓库提交更改"><a href="#三、由本地向仓库提交更改" class="headerlink" title="三、由本地向仓库提交更改"></a>三、由本地向仓库提交更改</h2><p>修改本地文件，在仓库所在文件夹添加测试文件：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img4.png"
-                      alt="Add a test file"
-                ></p>
-<p>在 Git Bash 定位到仓库所在文件夹：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">cd</span> AstridStark25963.github.io</span><br></pre></td></tr></table></figure></div>
-
-<p>查看当前仓库状态：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img5.png"
-                      alt="Check repository status"
-                ></p>
-<p>将更改添加到暂存区，提交更改并推送到远程仓库：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;add test.txt&quot;</span></span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img6.png"
-                      alt="Add, commit and push"
-                ></p>
-<p>查看修改历史：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img7.png"
-                      alt="Git log"
-                ></p>
-<h2 id="四、将-GitHub-仓库添加到域名解析记录"><a href="#四、将-GitHub-仓库添加到域名解析记录" class="headerlink" title="四、将 GitHub 仓库添加到域名解析记录"></a>四、将 GitHub 仓库添加到域名解析记录</h2><p>打开腾讯云，向域名添加解析记录：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img8.png"
-                      alt="Add DNS record"
-                ></p>
-<p>第一条记录，主机记录填写 <code>www</code> ，记录类型填写 <code>CNAME</code> ，记录值填写 <code>astridstark25963.github.io</code>  </p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img9.png"
-                      alt="Host record"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img10.png"
-                      alt="Record type"
-                ></p>
-<p>第二条记录，主机记录填写 <code>@</code> ，记录类型填写 <code>A</code> ，记录值填写第一条记录中记录值的 IP 地址，可以通过在终端执行 <code>ping</code> 命令得到。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img11.png"
-                      alt="Ping astridstark25963.github.io"
-                ></p>
-<p>在本地添加 <code>CNAME</code> 文件并推送到远程仓库，内容为域名。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img12.png"
-                      alt="CNAME"
-                ></p>
-<p>成功推送后，在仓库的 <code>Settings -&gt; Pages -&gt; Custom domain</code> 中可以看到解析后的域名信息。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img13.png"
-                      alt="Custom domain"
-                ></p>
-<p>最后直接在浏览器访问域名，即可看到网页内容。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img14.png"
-                      alt="Success!"
-                ></p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Personal Website</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>List of Books by Higashino Keigo</title>
-    <url>//archives/list-of-books-by-higashino-keigo/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>书名</th>
-<th>豆瓣链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>放学后</td>
-<td><a class="link"   href="https://book.douban.com/subject/27102207/" >https://book.douban.com/subject/27102207/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>毕业</td>
-<td><a class="link"   href="https://book.douban.com/subject/30317422/" >https://book.douban.com/subject/30317422/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>白马山庄谜案</td>
-<td><a class="link"   href="https://book.douban.com/subject/37092930/" >https://book.douban.com/subject/37092930/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>学生街的日子</td>
-<td><a class="link"   href="https://book.douban.com/subject/30276769/" >https://book.douban.com/subject/30276769/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>11字谜案</td>
-<td><a class="link"   href="https://book.douban.com/subject/36511003/" >https://book.douban.com/subject/36511003/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>魔球</td>
-<td><a class="link"   href="https://book.douban.com/subject/34778575/" >https://book.douban.com/subject/34778575/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>以眨眼干杯</td>
-<td><a class="link"   href="https://book.douban.com/subject/36185283/" >https://book.douban.com/subject/36185283/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>浪花少年侦探团</td>
-<td><a class="link"   href="https://book.douban.com/subject/26935572/" >https://book.douban.com/subject/26935572/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>悲剧人偶</td>
-<td><a class="link"   href="https://book.douban.com/subject/30210694/" >https://book.douban.com/subject/30210694/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>沉睡的森林</td>
-<td><a class="link"   href="https://book.douban.com/subject/30330292/" >https://book.douban.com/subject/30330292/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>鸟人计划</td>
-<td><a class="link"   href="https://book.douban.com/subject/26276287/" >https://book.douban.com/subject/26276287/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>空中杀人现场</td>
-<td><a class="link"   href="https://book.douban.com/subject/30487091/" >https://book.douban.com/subject/30487091/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>布鲁特斯的心脏</td>
-<td><a class="link"   href="https://book.douban.com/subject/26103854/" >https://book.douban.com/subject/26103854/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>侦探俱乐部</td>
-<td><a class="link"   href="https://book.douban.com/subject/26298560/" >https://book.douban.com/subject/26298560/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>宿命</td>
-<td><a class="link"   href="https://book.douban.com/subject/36866224/" >https://book.douban.com/subject/36866224/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>无凶之夜</td>
-<td><a class="link"   href="https://book.douban.com/subject/37054138/" >https://book.douban.com/subject/37054138/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面山庄</td>
-<td><a class="link"   href="https://book.douban.com/subject/27200261/" >https://book.douban.com/subject/27200261/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>变身</td>
-<td><a class="link"   href="https://book.douban.com/subject/36936599/" >https://book.douban.com/subject/36936599/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>长长的回廊</td>
-<td><a class="link"   href="https://book.douban.com/subject/35039915/" >https://book.douban.com/subject/35039915/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>天使之耳</td>
-<td><a class="link"   href="https://book.douban.com/subject/30488942/" >https://book.douban.com/subject/30488942/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>大雪中的山庄</td>
-<td><a class="link"   href="https://book.douban.com/subject/27037148/" >https://book.douban.com/subject/27037148/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>美丽的凶器</td>
-<td><a class="link"   href="https://book.douban.com/subject/26103819/" >https://book.douban.com/subject/26103819/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>同级生</td>
-<td><a class="link"   href="https://book.douban.com/subject/34778577/" >https://book.douban.com/subject/34778577/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>分身</td>
-<td><a class="link"   href="https://book.douban.com/subject/36866451/" >https://book.douban.com/subject/36866451/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>再见了，忍老师</td>
-<td><a class="link"   href="https://book.douban.com/subject/30464974/" >https://book.douban.com/subject/30464974/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>沉睡美人</td>
-<td><a class="link"   href="https://book.douban.com/subject/37129003/" >https://book.douban.com/subject/37129003/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>从前我死去的家</td>
-<td><a class="link"   href="https://book.douban.com/subject/30245830/" >https://book.douban.com/subject/30245830/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>造彩虹的人</td>
-<td><a class="link"   href="https://book.douban.com/subject/27037149/" >https://book.douban.com/subject/27037149/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>平行世界·爱情故事</td>
-<td><a class="link"   href="https://book.douban.com/subject/34786082/" >https://book.douban.com/subject/34786082/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>我的晃荡的青春</td>
-<td><a class="link"   href="https://book.douban.com/subject/36866459/" >https://book.douban.com/subject/36866459/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>怪笑小说</td>
-<td><a class="link"   href="https://book.douban.com/subject/30296025/" >https://book.douban.com/subject/30296025/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>天空之蜂</td>
-<td><a class="link"   href="https://book.douban.com/subject/26264953/" >https://book.douban.com/subject/26264953/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>名侦探的守则</td>
-<td><a class="link"   href="https://book.douban.com/subject/26926528/" >https://book.douban.com/subject/26926528/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>谁杀了她</td>
-<td><a class="link"   href="https://book.douban.com/subject/30210250/" >https://book.douban.com/subject/30210250/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>毒笑小说</td>
-<td><a class="link"   href="https://book.douban.com/subject/30242333/" >https://book.douban.com/subject/30242333/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>恶意</td>
-<td><a class="link"   href="https://book.douban.com/subject/35628298/" >https://book.douban.com/subject/35628298/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>名侦探的咒缚</td>
-<td><a class="link"   href="https://book.douban.com/subject/30358478/" >https://book.douban.com/subject/30358478/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>侦探伽利略</td>
-<td><a class="link"   href="https://book.douban.com/subject/30448044/" >https://book.douban.com/subject/30448044/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>秘密</td>
-<td><a class="link"   href="https://book.douban.com/subject/27115970/" >https://book.douban.com/subject/27115970/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>我杀了他</td>
-<td><a class="link"   href="https://book.douban.com/subject/30317423/" >https://book.douban.com/subject/30317423/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>白夜行</td>
-<td><a class="link"   href="https://book.douban.com/subject/27112607/" >https://book.douban.com/subject/27112607/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>只差一个谎言</td>
-<td><a class="link"   href="https://book.douban.com/subject/30358486/" >https://book.douban.com/subject/30358486/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>预知梦</td>
-<td><a class="link"   href="https://book.douban.com/subject/30433571/" >https://book.douban.com/subject/30433571/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>单恋</td>
-<td><a class="link"   href="https://book.douban.com/subject/26888804/" >https://book.douban.com/subject/26888804/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>超杀人事件</td>
-<td><a class="link"   href="https://book.douban.com/subject/30376544/" >https://book.douban.com/subject/30376544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>湖畔</td>
-<td><a class="link"   href="https://book.douban.com/subject/37031166/" >https://book.douban.com/subject/37031166/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>时生</td>
-<td><a class="link"   href="https://book.douban.com/subject/35519632/" >https://book.douban.com/subject/35519632/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>绑架游戏</td>
-<td><a class="link"   href="https://book.douban.com/subject/34662076/" >https://book.douban.com/subject/34662076/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>信</td>
-<td><a class="link"   href="https://book.douban.com/subject/36782358/" >https://book.douban.com/subject/36782358/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>我的老师是侦探</td>
-<td><a class="link"   href="https://book.douban.com/subject/33442266/" >https://book.douban.com/subject/33442266/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>杀人之门</td>
-<td><a class="link"   href="https://book.douban.com/subject/26273542/" >https://book.douban.com/subject/26273542/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>幻夜</td>
-<td><a class="link"   href="https://book.douban.com/subject/27666929/" >https://book.douban.com/subject/27666929/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>挑战</td>
-<td><a class="link"   href="https://book.douban.com/subject/33437510/" >https://book.douban.com/subject/33437510/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>彷徨之刃</td>
-<td><a class="link"   href="https://book.douban.com/subject/35440306/" >https://book.douban.com/subject/35440306/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>黑笑小说</td>
-<td><a class="link"   href="https://book.douban.com/subject/30242334/" >https://book.douban.com/subject/30242334/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>嫌疑人X的献身</td>
-<td><a class="link"   href="https://book.douban.com/subject/35718847/" >https://book.douban.com/subject/35718847/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>科学？</td>
-<td><a class="link"   href="https://book.douban.com/subject/34449302/" >https://book.douban.com/subject/34449302/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>梦回都灵</td>
-<td><a class="link"   href="https://book.douban.com/subject/27181608/" >https://book.douban.com/subject/27181608/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>红手指</td>
-<td><a class="link"   href="https://book.douban.com/subject/34778576/" >https://book.douban.com/subject/34778576/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>使命与魂的尽头</td>
-<td><a class="link"   href="https://book.douban.com/subject/26320595/" >https://book.douban.com/subject/26320595/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>东野圭吾的最后致意</td>
-<td><a class="link"   href="https://book.douban.com/subject/26390453/" >https://book.douban.com/subject/26390453/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>黎明之街</td>
-<td><a class="link"   href="https://book.douban.com/subject/27178063/" >https://book.douban.com/subject/27178063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>濒死之眼</td>
-<td><a class="link"   href="https://book.douban.com/subject/34662077/" >https://book.douban.com/subject/34662077/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>流星之绊</td>
-<td><a class="link"   href="https://book.douban.com/subject/36727352/" >https://book.douban.com/subject/36727352/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>伽利略的苦恼</td>
-<td><a class="link"   href="https://book.douban.com/subject/27041318/" >https://book.douban.com/subject/27041318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>圣女的救济</td>
-<td><a class="link"   href="https://book.douban.com/subject/26906797/" >https://book.douban.com/subject/26906797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>悖论13</td>
-<td><a class="link"   href="https://book.douban.com/subject/35503454/" >https://book.douban.com/subject/35503454/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>新参者</td>
-<td><a class="link"   href="https://book.douban.com/subject/26639966/" >https://book.douban.com/subject/26639966/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>布谷鸟的蛋</td>
-<td><a class="link"   href="https://book.douban.com/subject/34786087/" >https://book.douban.com/subject/34786087/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>白金数据</td>
-<td><a class="link"   href="https://book.douban.com/subject/37092928/" >https://book.douban.com/subject/37092928/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>雪国之劫</td>
-<td><a class="link"   href="https://book.douban.com/subject/34807344/" >https://book.douban.com/subject/34807344/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>那时的某人</td>
-<td><a class="link"   href="https://book.douban.com/subject/35713688/" >https://book.douban.com/subject/35713688/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>麒麟之翼</td>
-<td><a class="link"   href="https://book.douban.com/subject/35460816/" >https://book.douban.com/subject/35460816/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>盛夏方程式</td>
-<td><a class="link"   href="https://book.douban.com/subject/30317420/" >https://book.douban.com/subject/30317420/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面饭店</td>
-<td><a class="link"   href="https://book.douban.com/subject/36826872/" >https://book.douban.com/subject/36826872/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>歪笑小说</td>
-<td><a class="link"   href="https://book.douban.com/subject/30285335/" >https://book.douban.com/subject/30285335/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>解忧杂货店</td>
-<td><a class="link"   href="https://book.douban.com/subject/35000716/" >https://book.douban.com/subject/35000716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>梦幻花</td>
-<td><a class="link"   href="https://book.douban.com/subject/36980343/" >https://book.douban.com/subject/36980343/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>祈祷落幕时</td>
-<td><a class="link"   href="https://book.douban.com/subject/26118072/" >https://book.douban.com/subject/26118072/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>疾风回旋曲</td>
-<td><a class="link"   href="https://book.douban.com/subject/35374278/" >https://book.douban.com/subject/35374278/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>虚无的十字架</td>
-<td><a class="link"   href="https://book.douban.com/subject/35657906/" >https://book.douban.com/subject/35657906/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面前夜</td>
-<td><a class="link"   href="https://book.douban.com/subject/36865956/" >https://book.douban.com/subject/36865956/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>拉普拉斯的魔女</td>
-<td><a class="link"   href="https://book.douban.com/subject/35280274/" >https://book.douban.com/subject/35280274/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>禁断的魔术</td>
-<td><a class="link"   href="https://book.douban.com/subject/30317421/" >https://book.douban.com/subject/30317421/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>虚像的丑角</td>
-<td><a class="link"   href="https://book.douban.com/subject/35388953/" >https://book.douban.com/subject/35388953/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>沉睡的人鱼之家</td>
-<td><a class="link"   href="https://book.douban.com/subject/36328335/" >https://book.douban.com/subject/36328335/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>危险的维纳斯</td>
-<td><a class="link"   href="https://book.douban.com/subject/30380271/" >https://book.douban.com/subject/30380271/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>恋爱的贡多拉</td>
-<td><a class="link"   href="https://book.douban.com/subject/35413490/" >https://book.douban.com/subject/35413490/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>风雪追击</td>
-<td><a class="link"   href="https://book.douban.com/subject/35413489/" >https://book.douban.com/subject/35413489/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>第十年的情人节</td>
-<td><a class="link"   href="https://book.douban.com/subject/27125950/" >https://book.douban.com/subject/27125950/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面之夜</td>
-<td><a class="link"   href="https://book.douban.com/subject/36865955/" >https://book.douban.com/subject/36865955/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>魔力的胎动</td>
-<td><a class="link"   href="https://book.douban.com/subject/33455230/" >https://book.douban.com/subject/33455230/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>沉默的巡游</td>
-<td><a class="link"   href="https://book.douban.com/subject/34786086/" >https://book.douban.com/subject/34786086/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>希望之线</td>
-<td><a class="link"   href="https://book.douban.com/subject/35355556/" >https://book.douban.com/subject/35355556/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>祈念守护人</td>
-<td><a class="link"   href="https://book.douban.com/subject/35017604/" >https://book.douban.com/subject/35017604/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>无名之町</td>
-<td><a class="link"   href="https://book.douban.com/subject/35479856/" >https://book.douban.com/subject/35479856/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>白鸟与蝙蝠</td>
-<td><a class="link"   href="https://book.douban.com/subject/36074757/" >https://book.douban.com/subject/36074757/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>透明的螺旋</td>
-<td><a class="link"   href="https://book.douban.com/subject/35791376/" >https://book.douban.com/subject/35791376/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面游戏</td>
-<td><a class="link"   href="https://book.douban.com/subject/36561834/" >https://book.douban.com/subject/36561834/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>和魔女共度的七天 *</td>
-<td><a class="link"   href="https://book.douban.com/subject/36766063/" >https://book.douban.com/subject/36766063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>你杀了谁</td>
-<td><a class="link"   href="https://book.douban.com/subject/36987849/" >https://book.douban.com/subject/36987849/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>謊言裡的魔術師 *</td>
-<td><a class="link"   href="https://book.douban.com/subject/36952504/" >https://book.douban.com/subject/36952504/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>架空犯 *</td>
-<td><a class="link"   href="https://book.douban.com/subject/37032018/" >https://book.douban.com/subject/37032018/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<p>*: 未在中国大陆出版</p>
-]]></content>
-      <categories>
-        <category>Books</category>
-      </categories>
-      <tags>
-        <tag>Higashino Keigo</tag>
       </tags>
   </entry>
   <entry>
@@ -3177,202 +2745,6 @@
       </categories>
       <tags>
         <tag>Films</tag>
-        <tag>Marvel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Marvel TV Series</title>
-    <url>//archives/marvel-tv-series/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>原名</th>
-<th>译名</th>
-<th>季数</th>
-<th>豆瓣链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Spidey Super Stories</td>
-<td>蜘蛛侠超能故事</td>
-<td>3</td>
-<td>无</td>
-</tr>
-<tr>
-<td>The Amazing Spider-Man</td>
-<td>神奇的蜘蛛侠</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/4882797/" >https://movie.douban.com/subject/4882797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Incredible Hulk</td>
-<td>无敌浩克</td>
-<td>5</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3066754/" >https://movie.douban.com/subject/3066754/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Spider-Man</td>
-<td>蜘蛛侠</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3766061/" >https://movie.douban.com/subject/3766061/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Blade: The Series</td>
-<td>刀锋战士</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1874289/" >https://movie.douban.com/subject/1874289/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Agents of S.H.I.E.L.D.</td>
-<td>神盾局特工</td>
-<td>7</td>
-<td><a class="link"   href="https://movie.douban.com/subject/19938222/" >https://movie.douban.com/subject/19938222/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Agent Carter</td>
-<td>特工卡特</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25867544/" >https://movie.douban.com/subject/25867544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Daredevil</td>
-<td>夜魔侠</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769160/" >https://movie.douban.com/subject/25769160/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Jessica Jones</td>
-<td>杰西卡·琼斯</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769161/" >https://movie.douban.com/subject/25769161/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Luke Cage</td>
-<td>卢克·凯奇</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769158/" >https://movie.douban.com/subject/25769158/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Legion</td>
-<td>大群</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26641716/" >https://movie.douban.com/subject/26641716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Iron Fist</td>
-<td>铁拳</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769159/" >https://movie.douban.com/subject/25769159/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Defenders</td>
-<td>捍卫者联盟</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26293633/" >https://movie.douban.com/subject/26293633/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Inhumans</td>
-<td>异人族</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25958810/" >https://movie.douban.com/subject/25958810/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Gifted</td>
-<td>天赋异禀</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26908002/" >https://movie.douban.com/subject/26908002/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Punisher</td>
-<td>惩罚者</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26710394/" >https://movie.douban.com/subject/26710394/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Runaways</td>
-<td>离家童盟</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3080561/" >https://movie.douban.com/subject/3080561/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Cloak &amp; Dagger</td>
-<td>斗篷与匕首</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26767521/" >https://movie.douban.com/subject/26767521/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Helstrom</td>
-<td>地狱风暴</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/33434931/" >https://movie.douban.com/subject/33434931/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>WandaVision</td>
-<td>旺达幻视</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30331433/" >https://movie.douban.com/subject/30331433/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Falcon and the Winter Soldier</td>
-<td>猎鹰与冬兵</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30367642/" >https://movie.douban.com/subject/30367642/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Loki</td>
-<td>洛基</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30331432/" >https://movie.douban.com/subject/30331432/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Hawkeye</td>
-<td>鹰眼</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/33406089/" >https://movie.douban.com/subject/33406089/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Moon Knight</td>
-<td>月光骑士</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26358318/" >https://movie.douban.com/subject/26358318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Ms. Marvel</td>
-<td>惊奇少女</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26358321/" >https://movie.douban.com/subject/26358321/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>She-Hulk: Attorney at Law</td>
-<td>女浩克</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/34803800/" >https://movie.douban.com/subject/34803800/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Secret Invasion</td>
-<td>秘密入侵</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35284245/" >https://movie.douban.com/subject/35284245/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Echo</td>
-<td>回声</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35412375/" >https://movie.douban.com/subject/35412375/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Agatha All Along</td>
-<td>女巫阿加莎</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35636428/" >https://movie.douban.com/subject/35636428/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Media</category>
-      </categories>
-      <tags>
-        <tag>TV Series</tag>
         <tag>Marvel</tag>
       </tags>
   </entry>
@@ -4065,6 +3437,634 @@
         <tag>The Elder Scrolls</tag>
         <tag>Skyrim</tag>
         <tag>Dragon Language</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>List of Books by Higashino Keigo</title>
+    <url>//archives/list-of-books-by-higashino-keigo/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>书名</th>
+<th>豆瓣链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>放学后</td>
+<td><a class="link"   href="https://book.douban.com/subject/27102207/" >https://book.douban.com/subject/27102207/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>毕业</td>
+<td><a class="link"   href="https://book.douban.com/subject/30317422/" >https://book.douban.com/subject/30317422/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>白马山庄谜案</td>
+<td><a class="link"   href="https://book.douban.com/subject/37092930/" >https://book.douban.com/subject/37092930/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>学生街的日子</td>
+<td><a class="link"   href="https://book.douban.com/subject/30276769/" >https://book.douban.com/subject/30276769/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>11字谜案</td>
+<td><a class="link"   href="https://book.douban.com/subject/36511003/" >https://book.douban.com/subject/36511003/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>魔球</td>
+<td><a class="link"   href="https://book.douban.com/subject/34778575/" >https://book.douban.com/subject/34778575/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>以眨眼干杯</td>
+<td><a class="link"   href="https://book.douban.com/subject/36185283/" >https://book.douban.com/subject/36185283/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>浪花少年侦探团</td>
+<td><a class="link"   href="https://book.douban.com/subject/26935572/" >https://book.douban.com/subject/26935572/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>悲剧人偶</td>
+<td><a class="link"   href="https://book.douban.com/subject/30210694/" >https://book.douban.com/subject/30210694/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>沉睡的森林</td>
+<td><a class="link"   href="https://book.douban.com/subject/30330292/" >https://book.douban.com/subject/30330292/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>鸟人计划</td>
+<td><a class="link"   href="https://book.douban.com/subject/26276287/" >https://book.douban.com/subject/26276287/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>空中杀人现场</td>
+<td><a class="link"   href="https://book.douban.com/subject/30487091/" >https://book.douban.com/subject/30487091/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>布鲁特斯的心脏</td>
+<td><a class="link"   href="https://book.douban.com/subject/26103854/" >https://book.douban.com/subject/26103854/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>侦探俱乐部</td>
+<td><a class="link"   href="https://book.douban.com/subject/26298560/" >https://book.douban.com/subject/26298560/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>宿命</td>
+<td><a class="link"   href="https://book.douban.com/subject/36866224/" >https://book.douban.com/subject/36866224/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>无凶之夜</td>
+<td><a class="link"   href="https://book.douban.com/subject/37054138/" >https://book.douban.com/subject/37054138/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面山庄</td>
+<td><a class="link"   href="https://book.douban.com/subject/27200261/" >https://book.douban.com/subject/27200261/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>变身</td>
+<td><a class="link"   href="https://book.douban.com/subject/36936599/" >https://book.douban.com/subject/36936599/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>长长的回廊</td>
+<td><a class="link"   href="https://book.douban.com/subject/35039915/" >https://book.douban.com/subject/35039915/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>天使之耳</td>
+<td><a class="link"   href="https://book.douban.com/subject/30488942/" >https://book.douban.com/subject/30488942/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>大雪中的山庄</td>
+<td><a class="link"   href="https://book.douban.com/subject/27037148/" >https://book.douban.com/subject/27037148/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>美丽的凶器</td>
+<td><a class="link"   href="https://book.douban.com/subject/26103819/" >https://book.douban.com/subject/26103819/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>同级生</td>
+<td><a class="link"   href="https://book.douban.com/subject/34778577/" >https://book.douban.com/subject/34778577/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>分身</td>
+<td><a class="link"   href="https://book.douban.com/subject/36866451/" >https://book.douban.com/subject/36866451/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>再见了，忍老师</td>
+<td><a class="link"   href="https://book.douban.com/subject/30464974/" >https://book.douban.com/subject/30464974/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>沉睡美人</td>
+<td><a class="link"   href="https://book.douban.com/subject/37129003/" >https://book.douban.com/subject/37129003/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>从前我死去的家</td>
+<td><a class="link"   href="https://book.douban.com/subject/30245830/" >https://book.douban.com/subject/30245830/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>造彩虹的人</td>
+<td><a class="link"   href="https://book.douban.com/subject/27037149/" >https://book.douban.com/subject/27037149/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>平行世界·爱情故事</td>
+<td><a class="link"   href="https://book.douban.com/subject/34786082/" >https://book.douban.com/subject/34786082/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>我的晃荡的青春</td>
+<td><a class="link"   href="https://book.douban.com/subject/36866459/" >https://book.douban.com/subject/36866459/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>怪笑小说</td>
+<td><a class="link"   href="https://book.douban.com/subject/30296025/" >https://book.douban.com/subject/30296025/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>天空之蜂</td>
+<td><a class="link"   href="https://book.douban.com/subject/26264953/" >https://book.douban.com/subject/26264953/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>名侦探的守则</td>
+<td><a class="link"   href="https://book.douban.com/subject/26926528/" >https://book.douban.com/subject/26926528/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>谁杀了她</td>
+<td><a class="link"   href="https://book.douban.com/subject/30210250/" >https://book.douban.com/subject/30210250/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>毒笑小说</td>
+<td><a class="link"   href="https://book.douban.com/subject/30242333/" >https://book.douban.com/subject/30242333/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>恶意</td>
+<td><a class="link"   href="https://book.douban.com/subject/35628298/" >https://book.douban.com/subject/35628298/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>名侦探的咒缚</td>
+<td><a class="link"   href="https://book.douban.com/subject/30358478/" >https://book.douban.com/subject/30358478/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>侦探伽利略</td>
+<td><a class="link"   href="https://book.douban.com/subject/30448044/" >https://book.douban.com/subject/30448044/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>秘密</td>
+<td><a class="link"   href="https://book.douban.com/subject/27115970/" >https://book.douban.com/subject/27115970/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>我杀了他</td>
+<td><a class="link"   href="https://book.douban.com/subject/30317423/" >https://book.douban.com/subject/30317423/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>白夜行</td>
+<td><a class="link"   href="https://book.douban.com/subject/27112607/" >https://book.douban.com/subject/27112607/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>只差一个谎言</td>
+<td><a class="link"   href="https://book.douban.com/subject/30358486/" >https://book.douban.com/subject/30358486/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>预知梦</td>
+<td><a class="link"   href="https://book.douban.com/subject/30433571/" >https://book.douban.com/subject/30433571/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>单恋</td>
+<td><a class="link"   href="https://book.douban.com/subject/26888804/" >https://book.douban.com/subject/26888804/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>超杀人事件</td>
+<td><a class="link"   href="https://book.douban.com/subject/30376544/" >https://book.douban.com/subject/30376544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>湖畔</td>
+<td><a class="link"   href="https://book.douban.com/subject/37031166/" >https://book.douban.com/subject/37031166/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>时生</td>
+<td><a class="link"   href="https://book.douban.com/subject/35519632/" >https://book.douban.com/subject/35519632/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>绑架游戏</td>
+<td><a class="link"   href="https://book.douban.com/subject/34662076/" >https://book.douban.com/subject/34662076/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>信</td>
+<td><a class="link"   href="https://book.douban.com/subject/36782358/" >https://book.douban.com/subject/36782358/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>我的老师是侦探</td>
+<td><a class="link"   href="https://book.douban.com/subject/33442266/" >https://book.douban.com/subject/33442266/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>杀人之门</td>
+<td><a class="link"   href="https://book.douban.com/subject/26273542/" >https://book.douban.com/subject/26273542/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>幻夜</td>
+<td><a class="link"   href="https://book.douban.com/subject/27666929/" >https://book.douban.com/subject/27666929/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>挑战</td>
+<td><a class="link"   href="https://book.douban.com/subject/33437510/" >https://book.douban.com/subject/33437510/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>彷徨之刃</td>
+<td><a class="link"   href="https://book.douban.com/subject/35440306/" >https://book.douban.com/subject/35440306/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>黑笑小说</td>
+<td><a class="link"   href="https://book.douban.com/subject/30242334/" >https://book.douban.com/subject/30242334/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>嫌疑人X的献身</td>
+<td><a class="link"   href="https://book.douban.com/subject/35718847/" >https://book.douban.com/subject/35718847/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>科学？</td>
+<td><a class="link"   href="https://book.douban.com/subject/34449302/" >https://book.douban.com/subject/34449302/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>梦回都灵</td>
+<td><a class="link"   href="https://book.douban.com/subject/27181608/" >https://book.douban.com/subject/27181608/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>红手指</td>
+<td><a class="link"   href="https://book.douban.com/subject/34778576/" >https://book.douban.com/subject/34778576/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>使命与魂的尽头</td>
+<td><a class="link"   href="https://book.douban.com/subject/26320595/" >https://book.douban.com/subject/26320595/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>东野圭吾的最后致意</td>
+<td><a class="link"   href="https://book.douban.com/subject/26390453/" >https://book.douban.com/subject/26390453/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>黎明之街</td>
+<td><a class="link"   href="https://book.douban.com/subject/27178063/" >https://book.douban.com/subject/27178063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>濒死之眼</td>
+<td><a class="link"   href="https://book.douban.com/subject/34662077/" >https://book.douban.com/subject/34662077/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>流星之绊</td>
+<td><a class="link"   href="https://book.douban.com/subject/36727352/" >https://book.douban.com/subject/36727352/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>伽利略的苦恼</td>
+<td><a class="link"   href="https://book.douban.com/subject/27041318/" >https://book.douban.com/subject/27041318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>圣女的救济</td>
+<td><a class="link"   href="https://book.douban.com/subject/26906797/" >https://book.douban.com/subject/26906797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>悖论13</td>
+<td><a class="link"   href="https://book.douban.com/subject/35503454/" >https://book.douban.com/subject/35503454/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>新参者</td>
+<td><a class="link"   href="https://book.douban.com/subject/26639966/" >https://book.douban.com/subject/26639966/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>布谷鸟的蛋</td>
+<td><a class="link"   href="https://book.douban.com/subject/34786087/" >https://book.douban.com/subject/34786087/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>白金数据</td>
+<td><a class="link"   href="https://book.douban.com/subject/37092928/" >https://book.douban.com/subject/37092928/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>雪国之劫</td>
+<td><a class="link"   href="https://book.douban.com/subject/34807344/" >https://book.douban.com/subject/34807344/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>那时的某人</td>
+<td><a class="link"   href="https://book.douban.com/subject/35713688/" >https://book.douban.com/subject/35713688/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>麒麟之翼</td>
+<td><a class="link"   href="https://book.douban.com/subject/35460816/" >https://book.douban.com/subject/35460816/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>盛夏方程式</td>
+<td><a class="link"   href="https://book.douban.com/subject/30317420/" >https://book.douban.com/subject/30317420/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面饭店</td>
+<td><a class="link"   href="https://book.douban.com/subject/36826872/" >https://book.douban.com/subject/36826872/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>歪笑小说</td>
+<td><a class="link"   href="https://book.douban.com/subject/30285335/" >https://book.douban.com/subject/30285335/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>解忧杂货店</td>
+<td><a class="link"   href="https://book.douban.com/subject/35000716/" >https://book.douban.com/subject/35000716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>梦幻花</td>
+<td><a class="link"   href="https://book.douban.com/subject/36980343/" >https://book.douban.com/subject/36980343/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>祈祷落幕时</td>
+<td><a class="link"   href="https://book.douban.com/subject/26118072/" >https://book.douban.com/subject/26118072/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>疾风回旋曲</td>
+<td><a class="link"   href="https://book.douban.com/subject/35374278/" >https://book.douban.com/subject/35374278/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>虚无的十字架</td>
+<td><a class="link"   href="https://book.douban.com/subject/35657906/" >https://book.douban.com/subject/35657906/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面前夜</td>
+<td><a class="link"   href="https://book.douban.com/subject/36865956/" >https://book.douban.com/subject/36865956/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>拉普拉斯的魔女</td>
+<td><a class="link"   href="https://book.douban.com/subject/35280274/" >https://book.douban.com/subject/35280274/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>禁断的魔术</td>
+<td><a class="link"   href="https://book.douban.com/subject/30317421/" >https://book.douban.com/subject/30317421/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>虚像的丑角</td>
+<td><a class="link"   href="https://book.douban.com/subject/35388953/" >https://book.douban.com/subject/35388953/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>沉睡的人鱼之家</td>
+<td><a class="link"   href="https://book.douban.com/subject/36328335/" >https://book.douban.com/subject/36328335/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>危险的维纳斯</td>
+<td><a class="link"   href="https://book.douban.com/subject/30380271/" >https://book.douban.com/subject/30380271/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>恋爱的贡多拉</td>
+<td><a class="link"   href="https://book.douban.com/subject/35413490/" >https://book.douban.com/subject/35413490/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>风雪追击</td>
+<td><a class="link"   href="https://book.douban.com/subject/35413489/" >https://book.douban.com/subject/35413489/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>第十年的情人节</td>
+<td><a class="link"   href="https://book.douban.com/subject/27125950/" >https://book.douban.com/subject/27125950/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面之夜</td>
+<td><a class="link"   href="https://book.douban.com/subject/36865955/" >https://book.douban.com/subject/36865955/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>魔力的胎动</td>
+<td><a class="link"   href="https://book.douban.com/subject/33455230/" >https://book.douban.com/subject/33455230/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>沉默的巡游</td>
+<td><a class="link"   href="https://book.douban.com/subject/34786086/" >https://book.douban.com/subject/34786086/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>希望之线</td>
+<td><a class="link"   href="https://book.douban.com/subject/35355556/" >https://book.douban.com/subject/35355556/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>祈念守护人</td>
+<td><a class="link"   href="https://book.douban.com/subject/35017604/" >https://book.douban.com/subject/35017604/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>无名之町</td>
+<td><a class="link"   href="https://book.douban.com/subject/35479856/" >https://book.douban.com/subject/35479856/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>白鸟与蝙蝠</td>
+<td><a class="link"   href="https://book.douban.com/subject/36074757/" >https://book.douban.com/subject/36074757/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>透明的螺旋</td>
+<td><a class="link"   href="https://book.douban.com/subject/35791376/" >https://book.douban.com/subject/35791376/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面游戏</td>
+<td><a class="link"   href="https://book.douban.com/subject/36561834/" >https://book.douban.com/subject/36561834/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>和魔女共度的七天 *</td>
+<td><a class="link"   href="https://book.douban.com/subject/36766063/" >https://book.douban.com/subject/36766063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>你杀了谁</td>
+<td><a class="link"   href="https://book.douban.com/subject/36987849/" >https://book.douban.com/subject/36987849/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>謊言裡的魔術師 *</td>
+<td><a class="link"   href="https://book.douban.com/subject/36952504/" >https://book.douban.com/subject/36952504/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>架空犯 *</td>
+<td><a class="link"   href="https://book.douban.com/subject/37032018/" >https://book.douban.com/subject/37032018/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+</tbody></table>
+<p>*: 未在中国大陆出版</p>
+]]></content>
+      <categories>
+        <category>Books</category>
+      </categories>
+      <tags>
+        <tag>Higashino Keigo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Marvel TV Series</title>
+    <url>//archives/marvel-tv-series/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>原名</th>
+<th>译名</th>
+<th>季数</th>
+<th>豆瓣链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Spidey Super Stories</td>
+<td>蜘蛛侠超能故事</td>
+<td>3</td>
+<td>无</td>
+</tr>
+<tr>
+<td>The Amazing Spider-Man</td>
+<td>神奇的蜘蛛侠</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/4882797/" >https://movie.douban.com/subject/4882797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Incredible Hulk</td>
+<td>无敌浩克</td>
+<td>5</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3066754/" >https://movie.douban.com/subject/3066754/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Spider-Man</td>
+<td>蜘蛛侠</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3766061/" >https://movie.douban.com/subject/3766061/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Blade: The Series</td>
+<td>刀锋战士</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1874289/" >https://movie.douban.com/subject/1874289/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Agents of S.H.I.E.L.D.</td>
+<td>神盾局特工</td>
+<td>7</td>
+<td><a class="link"   href="https://movie.douban.com/subject/19938222/" >https://movie.douban.com/subject/19938222/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Agent Carter</td>
+<td>特工卡特</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25867544/" >https://movie.douban.com/subject/25867544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Daredevil</td>
+<td>夜魔侠</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769160/" >https://movie.douban.com/subject/25769160/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Jessica Jones</td>
+<td>杰西卡·琼斯</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769161/" >https://movie.douban.com/subject/25769161/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Luke Cage</td>
+<td>卢克·凯奇</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769158/" >https://movie.douban.com/subject/25769158/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Legion</td>
+<td>大群</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26641716/" >https://movie.douban.com/subject/26641716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Iron Fist</td>
+<td>铁拳</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769159/" >https://movie.douban.com/subject/25769159/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Defenders</td>
+<td>捍卫者联盟</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26293633/" >https://movie.douban.com/subject/26293633/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Inhumans</td>
+<td>异人族</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25958810/" >https://movie.douban.com/subject/25958810/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Gifted</td>
+<td>天赋异禀</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26908002/" >https://movie.douban.com/subject/26908002/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Punisher</td>
+<td>惩罚者</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26710394/" >https://movie.douban.com/subject/26710394/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Runaways</td>
+<td>离家童盟</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3080561/" >https://movie.douban.com/subject/3080561/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Cloak &amp; Dagger</td>
+<td>斗篷与匕首</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26767521/" >https://movie.douban.com/subject/26767521/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Helstrom</td>
+<td>地狱风暴</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/33434931/" >https://movie.douban.com/subject/33434931/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>WandaVision</td>
+<td>旺达幻视</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30331433/" >https://movie.douban.com/subject/30331433/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Falcon and the Winter Soldier</td>
+<td>猎鹰与冬兵</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30367642/" >https://movie.douban.com/subject/30367642/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Loki</td>
+<td>洛基</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30331432/" >https://movie.douban.com/subject/30331432/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Hawkeye</td>
+<td>鹰眼</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/33406089/" >https://movie.douban.com/subject/33406089/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Moon Knight</td>
+<td>月光骑士</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26358318/" >https://movie.douban.com/subject/26358318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Ms. Marvel</td>
+<td>惊奇少女</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26358321/" >https://movie.douban.com/subject/26358321/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>She-Hulk: Attorney at Law</td>
+<td>女浩克</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/34803800/" >https://movie.douban.com/subject/34803800/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Secret Invasion</td>
+<td>秘密入侵</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35284245/" >https://movie.douban.com/subject/35284245/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Echo</td>
+<td>回声</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35412375/" >https://movie.douban.com/subject/35412375/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Agatha All Along</td>
+<td>女巫阿加莎</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35636428/" >https://movie.douban.com/subject/35636428/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Media</category>
+      </categories>
+      <tags>
+        <tag>TV Series</tag>
+        <tag>Marvel</tag>
       </tags>
   </entry>
   <entry>
