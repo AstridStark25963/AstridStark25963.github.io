@@ -415,6 +415,102 @@
       </tags>
   </entry>
   <entry>
+    <title>Cloudflare Warp Zero Trust User Guide</title>
+    <url>//archives/cloudflare-warp-zero-trust-user-guide/</url>
+    <content><![CDATA[<h2 id="一、创建-Cloudflare-账户和-Zero-Trust-团队"><a href="#一、创建-Cloudflare-账户和-Zero-Trust-团队" class="headerlink" title="一、创建 Cloudflare 账户和 Zero Trust 团队"></a>一、创建 Cloudflare 账户和 Zero Trust 团队</h2><p>注册一个 Cloudflare 账户，点击左侧的 Zero Trust</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img0.webp"
+                      alt="Cloudflare 控制台"
+                ></p>
+<p>创建一个团队并填写名称</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img1.webp"
+                      alt="创建 Cloudflare 团队"
+                ></p>
+<p>选择免费套餐</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img2.webp"
+                      alt="选择免费套餐"
+                ></p>
+<h2 id="二、添加团队筛选策略"><a href="#二、添加团队筛选策略" class="headerlink" title="二、添加团队筛选策略"></a>二、添加团队筛选策略</h2><p>回到 Zero Trust 页面，选择 Settings 中的 WARP Client 选项</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img3.webp"
+                      alt="Zero Trust 设置"
+                ></p>
+<p>点击 Device enrollment permissions 中的 Manage，添加策略</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img4.webp"
+                      alt="WARP Client 设置"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img5.webp"
+                      alt="添加策略"
+                ></p>
+<p>规则名称任意，动作填 Allow，筛选器选择 Emails ending in，Value 填写能通过团队筛选的邮箱后缀</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img6.webp"
+                      alt="策略详细内容"
+                ></p>
+<h2 id="三、添加团队用户"><a href="#三、添加团队用户" class="headerlink" title="三、添加团队用户"></a>三、添加团队用户</h2><p>在 Cloudflare Warp客户端中选择账户，点击使用 Cloudflare Zero Trust 登录</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img7.webp"
+                      alt="登录到 Cloudflare Zero Trust 团队"
+                ></p>
+<p>使用 Cloudflare Zero Trust 登录之前的界面如图</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img8.webp"
+                      alt="登录团队前连接图示"
+                ></p>
+<p>根据要求填写团队名称并完成认证</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img9.webp"
+                      alt="填写团队名称并认证"
+                ></p>
+<p>使用 Cloudflare Zero Trust 登录之后的界面如图，可以发现已经变成了 Zero Trust，现在就可以使用 Zero Trust 访问外网了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img10.webp"
+                      alt="登录团队后连接图示"
+                ></p>
+<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>由于各种原因，自 2024 年 6 月 6 日起，使用此方法访问外网已部分失效。</p>
+<p>如果连接失败且错误代码如图表示已无法正常连接。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img11.webp"
+                      alt="错误代码"
+                ></p>
+<p>部分地区和设备仍可通过手机流量或手机共享热点到电脑使用此方法。</p>
+]]></content>
+      <categories>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Cloudflare</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Beginner&#39;s Guide for Ubuntu</title>
     <url>//archives/beginners-guide-for-ubuntu/</url>
     <content><![CDATA[<h2 id="一、安装-Ubuntu-系统"><a href="#一、安装-Ubuntu-系统" class="headerlink" title="一、安装 Ubuntu 系统"></a>一、安装 Ubuntu 系统</h2><p>访问 VMware Workshop Pro 官网，下载软件。</p>
@@ -717,102 +813,6 @@
       </categories>
       <tags>
         <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cloudflare Warp Zero Trust User Guide</title>
-    <url>//archives/cloudflare-warp-zero-trust-user-guide/</url>
-    <content><![CDATA[<h2 id="一、创建-Cloudflare-账户和-Zero-Trust-团队"><a href="#一、创建-Cloudflare-账户和-Zero-Trust-团队" class="headerlink" title="一、创建 Cloudflare 账户和 Zero Trust 团队"></a>一、创建 Cloudflare 账户和 Zero Trust 团队</h2><p>注册一个 Cloudflare 账户，点击左侧的 Zero Trust</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img0.webp"
-                      alt="Cloudflare 控制台"
-                ></p>
-<p>创建一个团队并填写名称</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img1.webp"
-                      alt="创建 Cloudflare 团队"
-                ></p>
-<p>选择免费套餐</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img2.webp"
-                      alt="选择免费套餐"
-                ></p>
-<h2 id="二、添加团队筛选策略"><a href="#二、添加团队筛选策略" class="headerlink" title="二、添加团队筛选策略"></a>二、添加团队筛选策略</h2><p>回到 Zero Trust 页面，选择 Settings 中的 WARP Client 选项</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img3.webp"
-                      alt="Zero Trust 设置"
-                ></p>
-<p>点击 Device enrollment permissions 中的 Manage，添加策略</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img4.webp"
-                      alt="WARP Client 设置"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img5.webp"
-                      alt="添加策略"
-                ></p>
-<p>规则名称任意，动作填 Allow，筛选器选择 Emails ending in，Value 填写能通过团队筛选的邮箱后缀</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img6.webp"
-                      alt="策略详细内容"
-                ></p>
-<h2 id="三、添加团队用户"><a href="#三、添加团队用户" class="headerlink" title="三、添加团队用户"></a>三、添加团队用户</h2><p>在 Cloudflare Warp客户端中选择账户，点击使用 Cloudflare Zero Trust 登录</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img7.webp"
-                      alt="登录到 Cloudflare Zero Trust 团队"
-                ></p>
-<p>使用 Cloudflare Zero Trust 登录之前的界面如图</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img8.webp"
-                      alt="登录团队前连接图示"
-                ></p>
-<p>根据要求填写团队名称并完成认证</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img9.webp"
-                      alt="填写团队名称并认证"
-                ></p>
-<p>使用 Cloudflare Zero Trust 登录之后的界面如图，可以发现已经变成了 Zero Trust，现在就可以使用 Zero Trust 访问外网了</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img10.webp"
-                      alt="登录团队后连接图示"
-                ></p>
-<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>由于各种原因，自 2024 年 6 月 6 日起，使用此方法访问外网已部分失效。</p>
-<p>如果连接失败且错误代码如图表示已无法正常连接。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img11.webp"
-                      alt="错误代码"
-                ></p>
-<p>部分地区和设备仍可通过手机流量或手机共享热点到电脑使用此方法。</p>
-]]></content>
-      <categories>
-        <category>Network</category>
-      </categories>
-      <tags>
-        <tag>Cloudflare</tag>
       </tags>
   </entry>
   <entry>
@@ -1559,111 +1559,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Dial-Up to Connect to the Campus Network</title>
-    <url>//archives/dial-up-to-connect-to-the-campus-network/</url>
-    <content><![CDATA[<h2 id="一、设置新拨号连接"><a href="#一、设置新拨号连接" class="headerlink" title="一、设置新拨号连接"></a>一、设置新拨号连接</h2><p>打开“网络和 Internet”</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/dial-up-to-connect-to-the-campus-network/img0.webp"
-                      alt="网络和 Internet"
-                ></p>
-<p>点击“拨号”</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/dial-up-to-connect-to-the-campus-network/img1.webp"
-                      alt="拨号"
-                ></p>
-<p>点击“设置新连接”</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/dial-up-to-connect-to-the-campus-network/img2.webp"
-                      alt="连接选项"
-                ></p>
-<p>点击“连接到 Internet”</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/dial-up-to-connect-to-the-campus-network/img3.webp"
-                      alt="连接到 Internet"
-                ></p>
-<p>点击“设置新连接”</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/dial-up-to-connect-to-the-campus-network/img4.webp"
-                      alt="创建新连接"
-                ></p>
-<p>点击“否，创建新连接(C)”</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/dial-up-to-connect-to-the-campus-network/img5.webp"
-                      alt="连接方式"
-                ></p>
-<p>点击“宽带(PPPoE)(R)”</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/dial-up-to-connect-to-the-campus-network/img6.webp"
-                      alt="连接用户名和密码"
-                ></p>
-<p>输入用户名和密码，进行连接测试</p>
-<blockquote>
-<p>连接名称只能包含英文字母、-_或者数字，否则代理设置无法识别</p>
-</blockquote>
-<h2 id="二、设置启动自动连接"><a href="#二、设置启动自动连接" class="headerlink" title="二、设置启动自动连接"></a>二、设置启动自动连接</h2><p>使用 <code>Win+R</code> 并输入 <code>taskschd.msc</code> 打开任务计划程序</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/dial-up-to-connect-to-the-campus-network/img7.webp"
-                      alt="任务计划程序"
-                ></p>
-<p>点击右侧的“创建任务”</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/dial-up-to-connect-to-the-campus-network/img8.webp"
-                      alt="创建任务"
-                ></p>
-<p>输入名称并点击“使用最高权限运行”</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/dial-up-to-connect-to-the-campus-network/img9.webp"
-                      alt="新建触发器"
-                ></p>
-<p>新建触发器，选择“登录时”作为触发条件</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/dial-up-to-connect-to-the-campus-network/img10.webp"
-                      alt="新建操作"
-                ></p>
-<p>新建操作，选择“启动程序”，程序或脚本填入 <code>rasdial</code> ，添加拨号连接参数。</p>
-<blockquote>
-<p>参数格式：<code>连接名 用户名 密码</code></p>
-</blockquote>
-<p>点击“确定”，保存任务</p>
-<h2 id="三、疑难解答"><a href="#三、疑难解答" class="headerlink" title="三、疑难解答"></a>三、疑难解答</h2><p>如果出现在连接时蓝屏，Stop code 为 <code>BUGCODE_NDIS_DRIVER</code> 的情况，卸载 Npcap 并重试。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/dial-up-to-connect-to-the-campus-network/img11.webp"
-                      alt="蓝屏"
-                ></p>
-]]></content>
-      <categories>
-        <category>Network</category>
-      </categories>
-      <tags>
-        <tag>PPPoE</tag>
-        <tag>Campus Network</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Guide for Maven Installation &amp; Build</title>
     <url>//archives/guide-for-maven-installation-and-build/</url>
     <content><![CDATA[<h2 id="一、Maven-的下载与安装"><a href="#一、Maven-的下载与安装" class="headerlink" title="一、Maven 的下载与安装"></a>一、Maven 的下载与安装</h2><p><a class="link"   href="https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip" >Maven 3.9.8 Windows版本下载链接<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
@@ -1913,452 +1808,108 @@
       </tags>
   </entry>
   <entry>
-    <title>Handy Tips for Solving Windows &amp; Software Issues</title>
-    <url>//archives/handy-tips-for-solving-windows-and-software-issues/</url>
-    <content><![CDATA[<p>我们在使用Windows系统和各种软件的过程中，经常会遇到一些操作失误、性能优化难题以及功能异常等问题。这篇文章汇总了一系列实用的技巧，帮助快速解决常见问题，同时提升系统与软件的使用体验。</p>
-<h2 id="GitHub-仓库信息查看"><a href="#GitHub-仓库信息查看" class="headerlink" title="GitHub 仓库信息查看"></a>GitHub 仓库信息查看</h2><p>使用 GitHub 的 API 服务，在浏览器地址栏输入：<code>https://api.github.com/repos/username/reponame</code> 就可以获得指定作者指定仓库的详细信息。</p>
-<p>比如，输入 <code>https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io</code> 就可以得到我的仓库的 JSON 格式的信息：</p>
-<div class="code-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">907337136</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;node_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;R_kgDONhTdsA&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;full_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AstridStark25963/AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;private&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;owner&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;login&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AstridStark25963&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">116073056</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;node_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;U_kgDOBusiYA&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;avatar_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://avatars.githubusercontent.com/u/116073056?v=4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;gravatar_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;html_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/AstridStark25963&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;followers_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/followers&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;following_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/following&#123;/other_user&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;gists_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/gists&#123;/gist_id&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;starred_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/starred&#123;/owner&#125;&#123;/repo&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;subscriptions_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/subscriptions&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;organizations_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/orgs&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;repos_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/repos&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;events_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/events&#123;/privacy&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;received_events_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/received_events&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;User&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;user_view_type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;public&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;site_admin&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;html_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/AstridStark25963/AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;A personal website powered by Hexo with the Redefine theme. Explore articles, tutorials, and projects about programming, technology, and more.&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;fork&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;forks_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/forks&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;keys_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/keys&#123;/key_id&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;collaborators_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/collaborators&#123;/collaborator&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;teams_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/teams&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;hooks_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/hooks&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;issue_events_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/issues/events&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;events_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/events&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;assignees_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/assignees&#123;/user&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;branches_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/branches&#123;/branch&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;tags_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/tags&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;blobs_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/blobs&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;git_tags_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/tags&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;git_refs_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/refs&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;trees_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/trees&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;statuses_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/statuses/&#123;sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;languages_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/languages&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;stargazers_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/stargazers&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;contributors_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/contributors&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;subscribers_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/subscribers&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;subscription_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/subscription&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;commits_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/commits&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;git_commits_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/commits&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;comments_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/comments&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;issue_comment_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/issues/comments&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;contents_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/contents/&#123;+path&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;compare_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/compare/&#123;base&#125;...&#123;head&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;merges_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/merges&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;archive_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/&#123;archive_format&#125;&#123;/ref&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;downloads_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/downloads&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;issues_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/issues&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pulls_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/pulls&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;milestones_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/milestones&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;notifications_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/notifications&#123;?since,all,participating&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;labels_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/labels&#123;/name&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;releases_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/releases&#123;/id&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;deployments_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/deployments&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2024-12-23T11:03:42Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;updated_at&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2025-01-31T03:44:50Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pushed_at&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2025-01-31T03:44:46Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;git_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git://github.com/AstridStark25963/AstridStark25963.github.io.git&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;ssh_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git@github.com:AstridStark25963/AstridStark25963.github.io.git&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;clone_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/AstridStark25963/AstridStark25963.github.io.git&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;svn_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/AstridStark25963/AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;homepage&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://1lya.com/&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;size&quot;</span><span class="punctuation">:</span> <span class="number">80797</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;stargazers_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;watchers_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;language&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HTML&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_issues&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_projects&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_downloads&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_wiki&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_pages&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_discussions&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;forks_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;mirror_url&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;archived&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;disabled&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;open_issues_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;allow_forking&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;is_template&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;web_commit_signoff_required&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;topics&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;hexo&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;hexo-theme-redefine&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;personal-website&quot;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;visibility&quot;</span><span class="punctuation">:</span> <span class="string">&quot;public&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;forks&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;open_issues&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;watchers&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;default_branch&quot;</span><span class="punctuation">:</span> <span class="string">&quot;main&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;temp_clone_token&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;network_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;subscribers_count&quot;</span><span class="punctuation">:</span> <span class="number">1</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div>
-
-<h2 id="npm-下载-Electron-报错"><a href="#npm-下载-Electron-报错" class="headerlink" title="npm 下载 Electron 报错"></a>npm 下载 Electron 报错</h2><p>在创建一个 Electron 项目的开始，可能会遇到下载安装 Electron 依赖出现问题的情况，无法安装，甚至在进行修改 npm 镜像为淘宝源、添加 npm config 网络代理配置的操作后，仍然无法下载和安装。</p>
-<p>在终端输入以下命令修改 npm 配置文件：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm config edit</span><br></pre></td></tr></table></figure></div>
-
-<p>打开 <code>.npmrc</code> 文件后，在文件中修改镜像源为官方源：</p>
-<div class="code-container" data-rel="Properties"><figure class="iseeu highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">registry</span>=<span class="string">https://registry.npmmirror.com/</span></span><br></pre></td></tr></table></figure></div>
-
-<p>在文件中添加如下内容：</p>
-<div class="code-container" data-rel="Properties"><figure class="iseeu highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">electron_builder_binaries_mirror</span>=<span class="string">https://npmmirror.com/mirrors/electron-builder-binaries/</span></span><br><span class="line"><span class="attr">electron_mirror</span>=<span class="string">https://cdn.npmmirror.com/binaries/electron/</span></span><br></pre></td></tr></table></figure></div>
-
-<p>然后关闭该窗口，重启命令行，删除 <code>node_modules</code> 文件夹，并执行以下命令清除 npm 缓存：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure></div>
-
-<p>再重新安装依赖：</p>
+    <title>Dial-Up to Connect to the Campus Network</title>
+    <url>//archives/dial-up-to-connect-to-the-campus-network/</url>
+    <content><![CDATA[<h2 id="一、设置新拨号连接"><a href="#一、设置新拨号连接" class="headerlink" title="一、设置新拨号连接"></a>一、设置新拨号连接</h2><p>打开“网络和 Internet”</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img0.webp"
-                      alt="重新安装 Electron"
+                     data-src="/images/dial-up-to-connect-to-the-campus-network/img0.webp"
+                      alt="网络和 Internet"
                 ></p>
-<h2 id="Google-服务提取网站图标"><a href="#Google-服务提取网站图标" class="headerlink" title="Google 服务提取网站图标"></a>Google 服务提取网站图标</h2><p>Google 提供了一项免费的服务，可用于快速提取任意网站的图标。这一服务可以通过指定目标网站的域名，返回其 favicon 图标。URL 格式如下：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">https://www.google.com/s2/favicons?sz=64&amp;domain=example.com</span><br></pre></td></tr></table></figure></div>
-
+<p>点击“拨号”</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/dial-up-to-connect-to-the-campus-network/img1.webp"
+                      alt="拨号"
+                ></p>
+<p>点击“设置新连接”</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/dial-up-to-connect-to-the-campus-network/img2.webp"
+                      alt="连接选项"
+                ></p>
+<p>点击“连接到 Internet”</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/dial-up-to-connect-to-the-campus-network/img3.webp"
+                      alt="连接到 Internet"
+                ></p>
+<p>点击“设置新连接”</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/dial-up-to-connect-to-the-campus-network/img4.webp"
+                      alt="创建新连接"
+                ></p>
+<p>点击“否，创建新连接(C)”</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/dial-up-to-connect-to-the-campus-network/img5.webp"
+                      alt="连接方式"
+                ></p>
+<p>点击“宽带(PPPoE)(R)”</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/dial-up-to-connect-to-the-campus-network/img6.webp"
+                      alt="连接用户名和密码"
+                ></p>
+<p>输入用户名和密码，进行连接测试</p>
 <blockquote>
-<p><code>sz</code> 参数：获取指定大小的网站图标</p>
-<p><code>domain</code> 参数：指定需要获取的网站域名</p>
+<p>连接名称只能包含英文字母、-_或者数字，否则代理设置无法识别</p>
 </blockquote>
-<p>例如，在浏览器地址栏输入 <code>https://www.google.com/s2/favicons?sz=64&amp;domain=google.com</code> 就可以获得 Google 的网站图标：</p>
+<h2 id="二、设置启动自动连接"><a href="#二、设置启动自动连接" class="headerlink" title="二、设置启动自动连接"></a>二、设置启动自动连接</h2><p>使用 <code>Win+R</code> 并输入 <code>taskschd.msc</code> 打开任务计划程序</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img1.webp"
-                      alt="Google 网站图标"
+                     data-src="/images/dial-up-to-connect-to-the-campus-network/img7.webp"
+                      alt="任务计划程序"
                 ></p>
-<p>此操作也可以用在前端或后端代码中，用来动态获取指定网站的图标。</p>
-<h2 id="管理员权限无效"><a href="#管理员权限无效" class="headerlink" title="管理员权限无效"></a>管理员权限无效</h2><p>在删除文件的时候，发现就算打开终端并调用管理员权限仍无法删除：</p>
+<p>点击右侧的“创建任务”</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img2.webp"
-                      alt="终端管理员无法删除文件"
+                     data-src="/images/dial-up-to-connect-to-the-campus-network/img8.webp"
+                      alt="创建任务"
                 ></p>
-<p>使用 PowerShell 并调用管理员权限也无法删除：</p>
+<p>输入名称并点击“使用最高权限运行”</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img3.webp"
-                      alt="Powershell 管理员无法删除文件"
+                     data-src="/images/dial-up-to-connect-to-the-campus-network/img9.webp"
+                      alt="新建触发器"
                 ></p>
-<p>修改文件属性报错：</p>
+<p>新建触发器，选择“登录时”作为触发条件</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img4.webp"
-                      alt="文件应用属性时出错"
+                     data-src="/images/dial-up-to-connect-to-the-campus-network/img10.webp"
+                      alt="新建操作"
                 ></p>
-<p>对注册表进行修改：将目录<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code>下<code>EnableLUA</code>的值改为<code>0</code>，重启后即可对文件进行操作。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img5.webp"
-                      alt="EnableLUA"
-                ></p>
-<p>原理是禁用了 Windows 的用户帐户控制功能（UAC）。UAC 是一种安全机制，旨在防止未经授权的更改被应用到系统上。</p>
-<p>导致这个问题的原因可能是在某次在清理注册表时，误删除了一个 CLSID（类标识符）相关注册表项。如果在清理注册表时误删了这些关键项，可能会导致：</p>
-<ol>
-<li>Windows 无法正确解析权限提升请求，即便以管理员身份运行，仍然无法操作受限文件。</li>
-<li>UAC 机制异常，导致权限判断逻辑出错，即使是管理员账户也被当作普通用户处理。</li>
-<li>explorer.exe、CMD、PowerShell 权限控制失效，导致某些操作权限丢失。</li>
-</ol>
-<p>以上解决办法仅为权宜之计，电脑再次重启时仍会恢复 UAC 控制。如果出现这种情况，建议重新安装系统来避免更大的问题出现。</p>
-<h2 id="Thunderbird-绑定邮箱服务"><a href="#Thunderbird-绑定邮箱服务" class="headerlink" title="Thunderbird 绑定邮箱服务"></a>Thunderbird 绑定邮箱服务</h2><p>由于各种原因，我们平常总会使用不止一个邮箱账户来接收邮件，但如果每次查看邮件都要访问各邮件系统对应的网站或 APP 未免有些麻烦，因此我们可以将所有邮箱添加到 Thunderbird（Mozilla 公司开发的邮件管理系统）来实现邮件的统一查看。</p>
-<p>对于 Gmail &#x2F; Outlook &#x2F; Yahoo Mail 等邮件系统，直接输入相应邮件地址和密码即可添加：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img6.webp"
-                      alt="添加电子邮件地址"
-                ></p>
-<p>对于 QQ 邮箱等，如果经过密码尝试无法添加或获取登录信息，则说明邮箱需要进行多次验证。</p>
-<p>在网页端登录 QQ 邮箱，打开设置，在账号部分找到如下内容：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img7.webp"
-                      alt="QQ 邮箱获取授权码"
-                ></p>
-<p>选择打开服务，扫码，并根据步骤指南继续获得授权码。</p>
+<p>新建操作，选择“启动程序”，程序或脚本填入 <code>rasdial</code> ，添加拨号连接参数。</p>
 <blockquote>
-<p>一个授权码只能被查看和使用一次，因此请妥善保管。</p>
+<p>参数格式：<code>连接名 用户名 密码</code></p>
 </blockquote>
-<p>获得授权码后，在 Thunderbird 添加账户时的密码部分填写授权码即可。</p>
-<p>对于校园邮箱，则需要访问相应网址获取邮件系统的收发服务器。</p>
-<p>以哈工大电子邮件系统为例：</p>
+<p>点击“确定”，保存任务</p>
+<h2 id="三、疑难解答"><a href="#三、疑难解答" class="headerlink" title="三、疑难解答"></a>三、疑难解答</h2><p>如果出现在连接时蓝屏，Stop code 为 <code>BUGCODE_NDIS_DRIVER</code> 的情况，卸载 Npcap 并重试。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img8.webp"
-                      alt="哈工大电子邮件系统收发服务器及对应端口"
+                     data-src="/images/dial-up-to-connect-to-the-campus-network/img11.webp"
+                      alt="蓝屏"
                 ></p>
-<p>只需在 Thunderbird 中添加账户时手动选择服务器设置并输入学校网站提供的收发服务器地址及端口即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img9.webp"
-                      alt="服务器设置"
-                ></p>
-<h2 id="家庭版-Windows-系统添加组策略管理器"><a href="#家庭版-Windows-系统添加组策略管理器" class="headerlink" title="家庭版 Windows 系统添加组策略管理器"></a>家庭版 Windows 系统添加组策略管理器</h2><p>新建文本文档，输入以下内容后另存为 <code>.bat</code> 文件，然后使用管理员身份运行：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">pushd</span> <span class="string">&quot;%~dp0&quot;</span></span><br><span class="line"><span class="built_in">dir</span> /b %systemroot%\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;gp.txt</span><br><span class="line"><span class="built_in">dir</span> /b %systemroot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;gp.txt</span><br><span class="line"><span class="keyword">for</span> /f %%i <span class="keyword">in</span> (<span class="string">&#x27;findstr /i . gp.txt 2^&gt;nul&#x27;</span>) <span class="keyword">do</span> dism /online /norestart /add-package:<span class="string">&quot;%systemroot%\servicing\Packages\%%i&quot;</span></span><br><span class="line">pause</span><br></pre></td></tr></table></figure></div>
-
-<p>运行结果如图：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img10.webp"
-                      alt="部署组策略管理器"
-                ></p>
-<p>等待下载完成后，Win + R 输入 <code>gpedit.msc</code> 测试是否成功：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img11.webp"
-                      alt="已添加本地组策略管理器"
-                ></p>
-<h2 id="Word-在试图打开文件时遇到错误"><a href="#Word-在试图打开文件时遇到错误" class="headerlink" title="Word 在试图打开文件时遇到错误"></a>Word 在试图打开文件时遇到错误</h2><p>有时，在下载来自网络的 <code>.docx</code> 文档后，由于 Word 的安全设置，无法打开文件，此时需要在 Word 的设置中取消对此项的审查。</p>
-<p>在 Word 中进入选项，点击左侧的“信任中心”，然后选择右侧的“信任中心设置”：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img12.webp"
-                      alt="Word 选项"
-                ></p>
-<p>进入信任中心后，点击左侧的“受保护视图选项卡”，并取消勾选第一个选项“为来自 Internet 的文件启用受保护的视图”：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img13.webp"
-                      alt="信任中心"
-                ></p>
-<p>点击“确定”后退出，即可打开来自网络的文件。</p>
-<h2 id="环境变量-Path-无法分行显示"><a href="#环境变量-Path-无法分行显示" class="headerlink" title="环境变量 Path 无法分行显示"></a>环境变量 Path 无法分行显示</h2><p>在配置环境变量时，有时会遇到 Path 无法分行显示的问题：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img14.webp"
-                      alt="Path 无法分行显示"
-                ></p>
-<p>一般来讲，导致问题的原因是在 Path 开头使用了以相对路径表示的环境变量（如图中的 <code>%JAVA_HOME%</code>）。</p>
-<p>将这一条导致问题的环境变量移动到后边，或者将下一条环境变量移动到开头即可解决问题。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img15.webp"
-                      alt="Path 恢复分行显示"
-                ></p>
-<h2 id="删除文件默认打开方式"><a href="#删除文件默认打开方式" class="headerlink" title="删除文件默认打开方式"></a>删除文件默认打开方式</h2><p>有时候，一个特殊类型的文件误使用错误的打开方式打开，它的图标就会变成所使用的软件的图标，并且鼠标左键双击也是通过这个错误的方式打开。这时，我们就需要将文件的默认打开方式清空，变回未知。</p>
-<p>在 Windows 系统中，文件的默认打开方式通过多个注册表项来管理，特别是以下三个关键注册表路径：</p>
-<ul>
-<li><strong><code>HKEY_CLASSES_ROOT\&lt;扩展名&gt;\OpenWithList</code></strong><br>该路径下存储的是系统范围内为特定文件扩展名所设置的可用程序列表。它列出了所有能够打开该类型文件的程序，并决定了文件右键点击时的“打开方式”菜单中的程序列表。这并不决定文件的默认打开方式，而是用于提供可选程序的列表。</li>
-<li><strong><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\&lt;扩展名&gt;\OpenWithList</code></strong><br>记录当前用户在该文件类型上的历史打开记录。也就是说，它记录了当前用户最常使用的程序来打开该类型文件。当你右键一个文件并选择“打开方式”时，Windows 会显示最近使用的程序。<br>同样，它并不会直接决定文件的默认打开方式，而只是影响右键菜单中的“最近使用的程序”列表。</li>
-<li><strong><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\&lt;扩展名&gt;\UserChoice</code></strong><br>这是最关键的注册表项，它决定了当前用户对该文件类型的默认打开方式。它存储了一个 <code>ProgId</code> 和一个哈希值，用于指定默认的程序打开该文件。<br>如果这个键存在，它将覆盖其他设置，强制文件通过指定的程序打开。</li>
-</ul>
-<p>若想清除文件的默认打开方式，我们主要需要删除 <code>UserChoice</code> 键。清除后，Windows 会恢复至系统默认的打开方式，或者提示你重新选择应用程序。在注册表编辑器中找到相应注册表路径删除即可。</p>
-<blockquote>
-<p>在操作前，建议备份注册表，以防万一。</p>
-</blockquote>
-<p>也可以使用 PowerShell 一键删除这些注册表项，恢复文件的默认打开方式。以下是用于清除 <code>.pdf</code> 文件默认关联的 PowerShell 脚本：</p>
-<div class="code-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 删除特定文件类型的注册表项（例如 .pdf）</span></span><br><span class="line"><span class="variable">$extension</span> = <span class="string">&quot;.pdf&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除 `UserChoice` 键（关键项）</span></span><br><span class="line"><span class="built_in">Remove-Item</span> <span class="literal">-Path</span> <span class="string">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\<span class="variable">$extension</span>\UserChoice&quot;</span> <span class="literal">-Force</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除当前用户下的 `OpenWithList` 键（移除最近使用的程序列表）</span></span><br><span class="line"><span class="built_in">Remove-Item</span> <span class="literal">-Path</span> <span class="string">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\<span class="variable">$extension</span>\OpenWithList&quot;</span> <span class="literal">-Force</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除系统级别的 `OpenWithList` 键（系统级别的打开方式列表）</span></span><br><span class="line"><span class="built_in">Remove-Item</span> <span class="literal">-Path</span> <span class="string">&quot;HKCR:\.<span class="variable">$extension</span>\OpenWithList&quot;</span> <span class="literal">-Force</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启资源管理器</span></span><br><span class="line"><span class="built_in">Stop-Process</span> <span class="literal">-Name</span> explorer <span class="literal">-Force</span></span><br><span class="line"><span class="built_in">Start-Process</span> explorer</span><br></pre></td></tr></table></figure></div>
-
-<p>将以上代码复制粘贴到记事本中，另存为 <code>.ps1</code> 文件并执行即可。</p>
-<p>最后，重启文件资源管理器，发现指定扩展名的文件的打开方式已经变回了未知。</p>
-<blockquote>
-<p>如果仍不起作用，可以先备份注册表，再直接删除 <code>HKEY_CLASSES_ROOT\&lt;扩展名&gt;</code> 和 <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\&lt;扩展名&gt;</code> 两个文件夹，然后重启文件资源管理器。</p>
-</blockquote>
-<h2 id="开机-NumLock-键默认关闭"><a href="#开机-NumLock-键默认关闭" class="headerlink" title="开机 NumLock 键默认关闭"></a>开机 NumLock 键默认关闭</h2><p>有的电脑开机时，每次都要按一下 NumLock 键才能通过小键盘输入数字，可以设定为开机默认打开 NumLock 键。</p>
-<p>Win + R 输入 <code>regedit</code> 打开注册表编辑器，在路径 <code>计算机\HKEY_USERS\.DEFAULT\Control Panel\Keyboard</code> 中，修改 <code>InitialKeyboardIndicators</code> 项的值为 <code>2</code> 即可。</p>
-<blockquote>
-<p><code>InitialKeyboardIndicators = 0</code> 表示关闭全部指示仪</p>
-<p><code>InitialKeyboardIndicators = 1</code> 表示开启 Caps Lock（大写锁定）</p>
-<p><code>InitialKeyboardIndicators = 2</code> 表示开启 Num Lock（数字锁定）</p>
-<p><code>InitialKeyboardIndicators = 4</code> 表示开启 Scroll Lock（滚动锁定）</p>
-<p><code>InitialKeyboardIndicators</code> 项的默认值为 <code>2147483648</code></p>
-</blockquote>
-<p>设置完成后重启电脑。</p>
-<p>如果上述操作不生效，则需启动时进入 BIOS 进行设置。</p>
-<h2 id="Markdown-嵌入视频链接"><a href="#Markdown-嵌入视频链接" class="headerlink" title="Markdown 嵌入视频链接"></a>Markdown 嵌入视频链接</h2><p>在 <code>.md</code> 文档中可以使用 HTML 语法嵌入视频。</p>
-<p>本地视频需要使用 <code>&lt;video&gt;</code> 内嵌套 <code>&lt;source&gt;</code> 标签嵌入视频地址：</p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">controls</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;C:\Users\lenovo\Videos\test-video.mp4&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/mp4&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>效果图：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img16.webp"
-                      alt="本地视频展示效果"
-                ></p>
-<p>Bilibili 视频需要使用 <code>&lt;iframe&gt;</code> 标签嵌入视频地址：</p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://player.bilibili.com/player.html?bvid=BV1diUDYcEur&quot;</span> <span class="attr">width</span>=<span class="string">&quot;1280px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;720px&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">border</span>=<span class="string">&quot;0&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;no&quot;</span> <span class="attr">framespacing</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;true&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>效果图：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img17.webp"
-                      alt="B站视频展示效果"
-                ></p>
-<p>YouTube 视频同样需要使用 <code>&lt;iframe&gt;</code> 标签嵌入视频地址，但其中的 <code>src</code> 参数需要修改为 <code>https://www.youtube.com/embed/xxx</code> 的形式：</p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://www.youtube.com/embed/YZjd5iM2v9o&quot;</span> <span class="attr">width</span>=<span class="string">&quot;1280&quot;</span> <span class="attr">height</span>=<span class="string">&quot;720&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allow</span>=<span class="string">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="attr">allowfullscreen</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>效果图：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img18.webp"
-                      alt="油管视频展示效果"
-                ></p>
-<h2 id="WinGet-批量更新软件"><a href="#WinGet-批量更新软件" class="headerlink" title="WinGet 批量更新软件"></a>WinGet 批量更新软件</h2><p>我们在使用电脑时经常会安装很多软件，但如果想要让软件都保持最新版本，又不想使用第三方应用商店管理，就可以使用系统自带的 WinGet 工具进行批量更新。</p>
-<p>输入以下命令获取有新版本的软件列表：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">winget upgrade</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img19.webp"
-                      alt="软件更新列表"
-                ></p>
-<p>输入以下命令以更新指定软件：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">winget upgrade &lt;software.id.01&gt; &lt;software.id.02&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img20.webp"
-                      alt="更新软件"
-                ></p>
-<p>如果想批量更新所有软件，输入以下命令：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">winget upgrade --all</span><br></pre></td></tr></table></figure></div>
-
-<p>WinGet 的核心数据来源于 Microsoft 维护的官方软件仓库。这个仓库包含了大量常见软件的元数据，当用户运行 <code>winget upgrade</code> 时，WinGet 会从该仓库中获取最新的软件版本信息，并与本地已安装的软件进行对比，从而判断是否需要更新。</p>
-<blockquote>
-<p>需要注意的是，使用 WinGet 工具更新并不区分软件的正式版和 Beta 版本等渠道。如果想指定渠道更新软件，需要通过在命令后添加<code>--channel</code> 参数来选择对应的频道。</p>
-</blockquote>
-<h2 id="Windows-开发者选项功能"><a href="#Windows-开发者选项功能" class="headerlink" title="Windows 开发者选项功能"></a>Windows 开发者选项功能</h2><p>在 Windows 开发者选项中，有很多正式版系统没有实装但非常有用的功能。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img21.webp"
-                      alt="开发者选项"
-                ></p>
-<p>启用“结束任务”功能允许用户在任务栏右键点击图标结束任务，相当于在任务管理器结束相应任务。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img22.webp"
-                      alt="结束任务"
-                ></p>
-<p>启用 sudo 允许用户像在 Linux 系统中一样直接以管理员权限运行指定命令。在没有 <code>sudo</code> 命令时，Windows 系统只能通过以管理员身份运行 CMD 或 Powershell，或者在 CMD 中使用 <code>runas /user:Administrator &quot;command&quot;</code> 命令来调用管理员权限。</p>
-<p>在“配置 sudo 如何运行应用程序”设置中，Windows 提供了三种方式：在新窗口中、禁用输入和内联。如果选择“在新窗口中”设置，运行 <code>sudo</code> 命令时会打开一个新的窗口来执行该命令；选择“禁用输入”设置会禁止用户输入，无法进行交互；选择“内联”设置，则会在当前窗口中以管理员权限运行命令，并允许交互。“内联”设置最符合 Linux 系统中的用户使用习惯。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img23.webp"
-                      alt="sudo 命令"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img24.webp"
-                      alt="sudo 命令执行示例"
-                ></p>
-<h2 id="右键新建文件类型配置"><a href="#右键新建文件类型配置" class="headerlink" title="右键新建文件类型配置"></a>右键新建文件类型配置</h2><p>我们在写代码或文档时，经常需要新建一个空白文件，但打开软件后再新建文件却又显得很麻烦，于是可以通过修改注册表的方式实现在桌面新建空白文件。</p>
-<p>以 Markdown 文件为例：</p>
-<p>首先安装 Typora 或 Visual Studio Code。</p>
-<p>Win + R 输入 <code>regedit</code> 打开注册表编辑器，在 <code>计算机\HKEY_CLASSES_ROOT</code> 下找到 <code>.md</code> 项。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img25.webp"
-                      alt="注册表编辑器"
-                ></p>
-<blockquote>
-<p>如果没有找到 <code>.md</code> 项，一定先安装 Typora 或 Visual Studio Code 并创建一个 Markdown 文件再进行接下来的操作。</p>
-</blockquote>
-<p>在 <code>.md</code> 项下新建 <code>Content Type</code> 和 <code>PerceivedType</code> 两个字符串值。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img26.webp"
-                      alt="注册表 .md 项"
-                ></p>
-<p>给 <code>(Default)</code> 赋默认值 <code>Typora.md</code> 或 <code>VScode.md</code>。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img27.webp"
-                      alt="(Default) 默认值"
-                ></p>
-<p>给 <code>Content Type</code> 赋值 <code>text/markdown</code>。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img28.webp"
-                      alt="Content Type 默认值"
-                ></p>
-<p>给 <code>PerceivedType</code> 赋值 <code>text</code>。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img29.webp"
-                      alt="PerceivedType 默认值"
-                ></p>
-<p>在 <code>.md</code> 下新建项 <code>ShellNew</code>，并在 <code>ShellNew</code> 下新建字符串值 <code>NullFile</code>。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img30.webp"
-                      alt="新建空文件"
-                ></p>
-<p>回到桌面，就能新建 Markdown 文件了。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img31.webp"
-                      alt="桌面新建项"
-                ></p>
-<h2 id="测试最佳-DNS-服务器"><a href="#测试最佳-DNS-服务器" class="headerlink" title="测试最佳 DNS 服务器"></a>测试最佳 DNS 服务器</h2><p>Namebench 是谷歌开发的一个软件，该软件可以测试 DNS 解析速度。Namebench的工作原理是根据位置和浏览历史来寻找最快的DNS服务器。访问 <a class="link"   href="https://code.google.com/archive/p/namebench/downloads" >Namebench Download<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 页面可以选择软件的合适版本并下载。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img32.webp"
-                      alt="Namebench 下载页面"
-                ></p>
-<p>下载后，安装软件，软件一般被解压到 <code>C:\Users\&lt;用户名&gt;\AppData\Local\Temp</code> 文件夹下。</p>
-<p>进入软件界面，进行测试设置，然后点击 Start Benchmark 进行测试。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img33.webp"
-                      alt="软件界面"
-                ></p>
-<blockquote>
-<p>软件界面各选项介绍：</p>
-<p><strong>Nameservers</strong>: 默认测试的 DNS 服务器地址，工具将分析哪一个提供最佳的性能。如果有需要，可以自行指定 DNS 服务器地址。</p>
-<p><strong>Include Global DNS Providers</strong>: 选中此选项后，Namebench 会包含一些著名的全球 DNS 提供商（如 Google Public DNS、OpenDNS、UltraDNS）进行测试。这些 DNS 服务器无论在速度、安全或可靠性方面，相对比较稳定，建议勾选。</p>
-<p><strong>Include Best Available Regional DNS Services</strong>: 选中此选项后，Namebench 会根据你的地理位置测试本地区域的 DNS 服务，以找到最佳的区域性 DNS 提供商。ISP 的 DNS 服务器很可能属于这个类别，在某些情况下，它可能是最快的，建议勾选。</p>
-<p><strong>Include censorship checks</strong>: 可以选择安全级别更高的 DNS 服务器进行测试。</p>
-<p><strong>Upload and share your anonymized results</strong>: 上传并分享自己的测试结果。</p>
-<p><strong>Your Location</strong>: 默认选择 None 即可。</p>
-<p><strong>Health Check Performance</strong>: 默认使用 Fast 即可，如果网络不稳定可以选择 Slow。</p>
-<p><strong>Query Data Source</strong>: 这是 DNS 查询的数据来源，选项包括：</p>
-<ul>
-<li><em>Google Chrome</em>: 指定浏览器历史记录进行查询，如果选择 Google Chrome，Namebench 将查询使用 Google Chrome 访问过的域名的随机样本，并针对这些域名进行测试。</li>
-<li><em>Top 2,000 Websites ranked by Alexa</em>: 如果不想让 Namebench 访问浏览器历史记录，或者如果总是匿名浏览，可以选择查询 Alexa 的前 2000 个网站。</li>
-<li><em>Cache Latency Test</em>: 缓存延迟测试，支持不同的命中 &#x2F; 未命中比例。</li>
-</ul>
-<p><strong>Number of Queries</strong>: 这个选项可以设置基准测试中执行的 DNS 查询次数，查询次数越多，测试的全面性就越高。但是查询次数太高会导致测试时间过长。</p>
-</blockquote>
-<p>完成测试后，工具会自动在浏览器中展示结果，包括根据你选择的标准计算出的最快 DNS 服务器。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img34.webp"
-                      alt="测试结果"
-                ></p>
-<p>左侧面板显示最佳DNS服务器比目前使用的主DNS服务器快多少。然后，在右边的窗口中，将会显示适用于所在网络的最快的DNS。</p>
-<h2 id="Subtitle-Edit-合成双语字幕"><a href="#Subtitle-Edit-合成双语字幕" class="headerlink" title="Subtitle Edit 合成双语字幕"></a>Subtitle Edit 合成双语字幕</h2><p>有的时候，我们只有一个单独的英文字幕和一个对应的中文字幕，却没有合并的中英双语字幕。如果想要合并制作中英双语字幕，可以使用 Subtitle Edit。</p>
-<p>为了美观，先分别打开中文和英文字幕并取消每一句字幕的断行。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img35.webp"
-                      alt="断行"
-                ></p>
-<p>Ctrl + A 全选，然后点击“取消断行”。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img36.webp"
-                      alt="取消断行效果"
-                ></p>
-<blockquote>
-<p>字幕断行注意事项：</p>
-<ol>
-<li>Subtitle Edit 中的断行无法通过 Ctrl + H 替换，只能通过“取消断行”取消。<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img37.webp"
-                      alt="无法查找到断行符"
-                ></li>
-<li>取消断行会自动将换行替换为空格（为了英文考虑），所以中文字幕在取消断行后会多出一个空格，需要手动删除。</li>
-</ol>
-</blockquote>
-<p>选择“工具 - 合并字幕”，然后选择两个字幕文件：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img38.webp"
-                      alt="合并字幕"
-                ></p>
-<p>选择“工具 - 排序方式 - 开始时间”，按时间戳排序字幕。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img39.webp"
-                      alt="按照开始时间排序"
-                ></p>
-<p>然后点击“工具 - 合并时间码相同的行”，根据两个字幕文件的时间差选择合适的最大毫秒差并点击确定。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img40.webp"
-                      alt="合并时间码相同的行"
-                ></p>
-<blockquote>
-<p>“制作对话框”功能会在中英双语字幕前分别加一个“-”符号，更加美观。</p>
-</blockquote>
-<p>合并成功后保存文件，在电影中添加字幕测试效果。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img41.webp"
-                      alt="Subtitle Edit 内测试效果"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img42.webp"
-                      alt="播放器内测试效果"
-                ></p>
-<blockquote>
-<p>当然，如果遇到更复杂的情况，比如中英文的字幕分句不同，这样在合并的时候就会出现错误，需要手动调整。</p>
-</blockquote>
 ]]></content>
       <categories>
-        <category>System</category>
+        <category>Network</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
-        <tag>Issues</tag>
+        <tag>PPPoE</tag>
+        <tag>Campus Network</tag>
       </tags>
   </entry>
   <entry>
@@ -3485,6 +3036,455 @@
       </tags>
   </entry>
   <entry>
+    <title>Handy Tips for Solving Windows &amp; Software Issues</title>
+    <url>//archives/handy-tips-for-solving-windows-and-software-issues/</url>
+    <content><![CDATA[<p>我们在使用Windows系统和各种软件的过程中，经常会遇到一些操作失误、性能优化难题以及功能异常等问题。这篇文章汇总了一系列实用的技巧，帮助快速解决常见问题，同时提升系统与软件的使用体验。</p>
+<h2 id="GitHub-仓库信息查看"><a href="#GitHub-仓库信息查看" class="headerlink" title="GitHub 仓库信息查看"></a>GitHub 仓库信息查看</h2><p>使用 GitHub 的 API 服务，在浏览器地址栏输入：<code>https://api.github.com/repos/username/reponame</code> 就可以获得指定作者指定仓库的详细信息。</p>
+<p>比如，输入 <code>https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io</code> 就可以得到我的仓库的 JSON 格式的信息：</p>
+<div class="code-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">907337136</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;node_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;R_kgDONhTdsA&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;full_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AstridStark25963/AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;private&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;owner&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;login&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AstridStark25963&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">116073056</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;node_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;U_kgDOBusiYA&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;avatar_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://avatars.githubusercontent.com/u/116073056?v=4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;gravatar_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;html_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/AstridStark25963&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;followers_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/followers&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;following_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/following&#123;/other_user&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;gists_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/gists&#123;/gist_id&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;starred_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/starred&#123;/owner&#125;&#123;/repo&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;subscriptions_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/subscriptions&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;organizations_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/orgs&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;repos_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/repos&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;events_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/events&#123;/privacy&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;received_events_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/received_events&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;User&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;user_view_type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;public&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;site_admin&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;html_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/AstridStark25963/AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;A personal website powered by Hexo with the Redefine theme. Explore articles, tutorials, and projects about programming, technology, and more.&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;fork&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;forks_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/forks&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;keys_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/keys&#123;/key_id&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;collaborators_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/collaborators&#123;/collaborator&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;teams_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/teams&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;hooks_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/hooks&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;issue_events_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/issues/events&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;events_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/events&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;assignees_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/assignees&#123;/user&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;branches_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/branches&#123;/branch&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;tags_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/tags&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;blobs_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/blobs&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;git_tags_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/tags&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;git_refs_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/refs&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;trees_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/trees&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;statuses_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/statuses/&#123;sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;languages_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/languages&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;stargazers_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/stargazers&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;contributors_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/contributors&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;subscribers_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/subscribers&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;subscription_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/subscription&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;commits_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/commits&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;git_commits_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/commits&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;comments_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/comments&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;issue_comment_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/issues/comments&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;contents_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/contents/&#123;+path&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;compare_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/compare/&#123;base&#125;...&#123;head&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;merges_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/merges&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;archive_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/&#123;archive_format&#125;&#123;/ref&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;downloads_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/downloads&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;issues_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/issues&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pulls_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/pulls&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;milestones_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/milestones&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;notifications_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/notifications&#123;?since,all,participating&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;labels_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/labels&#123;/name&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;releases_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/releases&#123;/id&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;deployments_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/deployments&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2024-12-23T11:03:42Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;updated_at&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2025-01-31T03:44:50Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pushed_at&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2025-01-31T03:44:46Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;git_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git://github.com/AstridStark25963/AstridStark25963.github.io.git&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;ssh_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git@github.com:AstridStark25963/AstridStark25963.github.io.git&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;clone_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/AstridStark25963/AstridStark25963.github.io.git&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;svn_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/AstridStark25963/AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;homepage&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://1lya.com/&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;size&quot;</span><span class="punctuation">:</span> <span class="number">80797</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;stargazers_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;watchers_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;language&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HTML&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_issues&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_projects&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_downloads&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_wiki&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_pages&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_discussions&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;forks_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;mirror_url&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;archived&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;disabled&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;open_issues_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;allow_forking&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;is_template&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;web_commit_signoff_required&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;topics&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;hexo&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;hexo-theme-redefine&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;personal-website&quot;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;visibility&quot;</span><span class="punctuation">:</span> <span class="string">&quot;public&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;forks&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;open_issues&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;watchers&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;default_branch&quot;</span><span class="punctuation">:</span> <span class="string">&quot;main&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;temp_clone_token&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;network_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;subscribers_count&quot;</span><span class="punctuation">:</span> <span class="number">1</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="npm-下载-Electron-报错"><a href="#npm-下载-Electron-报错" class="headerlink" title="npm 下载 Electron 报错"></a>npm 下载 Electron 报错</h2><p>在创建一个 Electron 项目的开始，可能会遇到下载安装 Electron 依赖出现问题的情况，无法安装，甚至在进行修改 npm 镜像为淘宝源、添加 npm config 网络代理配置的操作后，仍然无法下载和安装。</p>
+<p>在终端输入以下命令修改 npm 配置文件：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm config edit</span><br></pre></td></tr></table></figure></div>
+
+<p>打开 <code>.npmrc</code> 文件后，在文件中修改镜像源为官方源：</p>
+<div class="code-container" data-rel="Properties"><figure class="iseeu highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">registry</span>=<span class="string">https://registry.npmmirror.com/</span></span><br></pre></td></tr></table></figure></div>
+
+<p>在文件中添加如下内容：</p>
+<div class="code-container" data-rel="Properties"><figure class="iseeu highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">electron_builder_binaries_mirror</span>=<span class="string">https://npmmirror.com/mirrors/electron-builder-binaries/</span></span><br><span class="line"><span class="attr">electron_mirror</span>=<span class="string">https://cdn.npmmirror.com/binaries/electron/</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后关闭该窗口，重启命令行，删除 <code>node_modules</code> 文件夹，并执行以下命令清除 npm 缓存：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure></div>
+
+<p>再重新安装依赖：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img0.webp"
+                      alt="重新安装 Electron"
+                ></p>
+<h2 id="Google-服务提取网站图标"><a href="#Google-服务提取网站图标" class="headerlink" title="Google 服务提取网站图标"></a>Google 服务提取网站图标</h2><p>Google 提供了一项免费的服务，可用于快速提取任意网站的图标。这一服务可以通过指定目标网站的域名，返回其 favicon 图标。URL 格式如下：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">https://www.google.com/s2/favicons?sz=64&amp;domain=example.com</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><code>sz</code> 参数：获取指定大小的网站图标</p>
+<p><code>domain</code> 参数：指定需要获取的网站域名</p>
+</blockquote>
+<p>例如，在浏览器地址栏输入 <code>https://www.google.com/s2/favicons?sz=64&amp;domain=google.com</code> 就可以获得 Google 的网站图标：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img1.webp"
+                      alt="Google 网站图标"
+                ></p>
+<p>此操作也可以用在前端或后端代码中，用来动态获取指定网站的图标。</p>
+<h2 id="管理员权限无效"><a href="#管理员权限无效" class="headerlink" title="管理员权限无效"></a>管理员权限无效</h2><p>在删除文件的时候，发现就算打开终端并调用管理员权限仍无法删除：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img2.webp"
+                      alt="终端管理员无法删除文件"
+                ></p>
+<p>使用 PowerShell 并调用管理员权限也无法删除：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img3.webp"
+                      alt="Powershell 管理员无法删除文件"
+                ></p>
+<p>修改文件属性报错：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img4.webp"
+                      alt="文件应用属性时出错"
+                ></p>
+<p>对注册表进行修改：将目录<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code>下<code>EnableLUA</code>的值改为<code>0</code>，重启后即可对文件进行操作。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img5.webp"
+                      alt="EnableLUA"
+                ></p>
+<p>原理是禁用了 Windows 的用户帐户控制功能（UAC）。UAC 是一种安全机制，旨在防止未经授权的更改被应用到系统上。</p>
+<p>导致这个问题的原因可能是在某次在清理注册表时，误删除了一个 CLSID（类标识符）相关注册表项。如果在清理注册表时误删了这些关键项，可能会导致：</p>
+<ol>
+<li>Windows 无法正确解析权限提升请求，即便以管理员身份运行，仍然无法操作受限文件。</li>
+<li>UAC 机制异常，导致权限判断逻辑出错，即使是管理员账户也被当作普通用户处理。</li>
+<li>explorer.exe、CMD、PowerShell 权限控制失效，导致某些操作权限丢失。</li>
+</ol>
+<p>以上解决办法仅为权宜之计，电脑再次重启时仍会恢复 UAC 控制。如果出现这种情况，建议重新安装系统来避免更大的问题出现。</p>
+<h2 id="Thunderbird-绑定邮箱服务"><a href="#Thunderbird-绑定邮箱服务" class="headerlink" title="Thunderbird 绑定邮箱服务"></a>Thunderbird 绑定邮箱服务</h2><p>由于各种原因，我们平常总会使用不止一个邮箱账户来接收邮件，但如果每次查看邮件都要访问各邮件系统对应的网站或 APP 未免有些麻烦，因此我们可以将所有邮箱添加到 Thunderbird（Mozilla 公司开发的邮件管理系统）来实现邮件的统一查看。</p>
+<p>对于 Gmail &#x2F; Outlook &#x2F; Yahoo Mail 等邮件系统，直接输入相应邮件地址和密码即可添加：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img6.webp"
+                      alt="添加电子邮件地址"
+                ></p>
+<p>对于 QQ 邮箱等，如果经过密码尝试无法添加或获取登录信息，则说明邮箱需要进行多次验证。</p>
+<p>在网页端登录 QQ 邮箱，打开设置，在账号部分找到如下内容：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img7.webp"
+                      alt="QQ 邮箱获取授权码"
+                ></p>
+<p>选择打开服务，扫码，并根据步骤指南继续获得授权码。</p>
+<blockquote>
+<p>一个授权码只能被查看和使用一次，因此请妥善保管。</p>
+</blockquote>
+<p>获得授权码后，在 Thunderbird 添加账户时的密码部分填写授权码即可。</p>
+<p>对于校园邮箱，则需要访问相应网址获取邮件系统的收发服务器。</p>
+<p>以哈工大电子邮件系统为例：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img8.webp"
+                      alt="哈工大电子邮件系统收发服务器及对应端口"
+                ></p>
+<p>只需在 Thunderbird 中添加账户时手动选择服务器设置并输入学校网站提供的收发服务器地址及端口即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img9.webp"
+                      alt="服务器设置"
+                ></p>
+<h2 id="家庭版-Windows-系统添加组策略管理器"><a href="#家庭版-Windows-系统添加组策略管理器" class="headerlink" title="家庭版 Windows 系统添加组策略管理器"></a>家庭版 Windows 系统添加组策略管理器</h2><p>新建文本文档，输入以下内容后另存为 <code>.bat</code> 文件，然后使用管理员身份运行：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">pushd</span> <span class="string">&quot;%~dp0&quot;</span></span><br><span class="line"><span class="built_in">dir</span> /b %systemroot%\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;gp.txt</span><br><span class="line"><span class="built_in">dir</span> /b %systemroot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;gp.txt</span><br><span class="line"><span class="keyword">for</span> /f %%i <span class="keyword">in</span> (<span class="string">&#x27;findstr /i . gp.txt 2^&gt;nul&#x27;</span>) <span class="keyword">do</span> dism /online /norestart /add-package:<span class="string">&quot;%systemroot%\servicing\Packages\%%i&quot;</span></span><br><span class="line">pause</span><br></pre></td></tr></table></figure></div>
+
+<p>运行结果如图：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img10.webp"
+                      alt="部署组策略管理器"
+                ></p>
+<p>等待下载完成后，Win + R 输入 <code>gpedit.msc</code> 测试是否成功：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img11.webp"
+                      alt="已添加本地组策略管理器"
+                ></p>
+<h2 id="Word-在试图打开文件时遇到错误"><a href="#Word-在试图打开文件时遇到错误" class="headerlink" title="Word 在试图打开文件时遇到错误"></a>Word 在试图打开文件时遇到错误</h2><p>有时，在下载来自网络的 <code>.docx</code> 文档后，由于 Word 的安全设置，无法打开文件，此时需要在 Word 的设置中取消对此项的审查。</p>
+<p>在 Word 中进入选项，点击左侧的“信任中心”，然后选择右侧的“信任中心设置”：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img12.webp"
+                      alt="Word 选项"
+                ></p>
+<p>进入信任中心后，点击左侧的“受保护视图选项卡”，并取消勾选第一个选项“为来自 Internet 的文件启用受保护的视图”：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img13.webp"
+                      alt="信任中心"
+                ></p>
+<p>点击“确定”后退出，即可打开来自网络的文件。</p>
+<h2 id="环境变量-Path-无法分行显示"><a href="#环境变量-Path-无法分行显示" class="headerlink" title="环境变量 Path 无法分行显示"></a>环境变量 Path 无法分行显示</h2><p>在配置环境变量时，有时会遇到 Path 无法分行显示的问题：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img14.webp"
+                      alt="Path 无法分行显示"
+                ></p>
+<p>一般来讲，导致问题的原因是在 Path 开头使用了以相对路径表示的环境变量（如图中的 <code>%JAVA_HOME%</code>）。</p>
+<p>将这一条导致问题的环境变量移动到后边，或者将下一条环境变量移动到开头即可解决问题。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img15.webp"
+                      alt="Path 恢复分行显示"
+                ></p>
+<h2 id="删除文件默认打开方式"><a href="#删除文件默认打开方式" class="headerlink" title="删除文件默认打开方式"></a>删除文件默认打开方式</h2><p>有时候，一个特殊类型的文件误使用错误的打开方式打开，它的图标就会变成所使用的软件的图标，并且鼠标左键双击也是通过这个错误的方式打开。这时，我们就需要将文件的默认打开方式清空，变回未知。</p>
+<p>在 Windows 系统中，文件的默认打开方式通过多个注册表项来管理，特别是以下三个关键注册表路径：</p>
+<ul>
+<li><strong><code>HKEY_CLASSES_ROOT\&lt;扩展名&gt;\OpenWithList</code></strong><br>该路径下存储的是系统范围内为特定文件扩展名所设置的可用程序列表。它列出了所有能够打开该类型文件的程序，并决定了文件右键点击时的“打开方式”菜单中的程序列表。这并不决定文件的默认打开方式，而是用于提供可选程序的列表。</li>
+<li><strong><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\&lt;扩展名&gt;\OpenWithList</code></strong><br>记录当前用户在该文件类型上的历史打开记录。也就是说，它记录了当前用户最常使用的程序来打开该类型文件。当你右键一个文件并选择“打开方式”时，Windows 会显示最近使用的程序。<br>同样，它并不会直接决定文件的默认打开方式，而只是影响右键菜单中的“最近使用的程序”列表。</li>
+<li><strong><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\&lt;扩展名&gt;\UserChoice</code></strong><br>这是最关键的注册表项，它决定了当前用户对该文件类型的默认打开方式。它存储了一个 <code>ProgId</code> 和一个哈希值，用于指定默认的程序打开该文件。<br>如果这个键存在，它将覆盖其他设置，强制文件通过指定的程序打开。</li>
+</ul>
+<p>若想清除文件的默认打开方式，我们主要需要删除 <code>UserChoice</code> 键。清除后，Windows 会恢复至系统默认的打开方式，或者提示你重新选择应用程序。在注册表编辑器中找到相应注册表路径删除即可。</p>
+<blockquote>
+<p>在操作前，建议备份注册表，以防万一。</p>
+</blockquote>
+<p>也可以使用 PowerShell 一键删除这些注册表项，恢复文件的默认打开方式。以下是用于清除 <code>.pdf</code> 文件默认关联的 PowerShell 脚本：</p>
+<div class="code-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 删除特定文件类型的注册表项（例如 .pdf）</span></span><br><span class="line"><span class="variable">$extension</span> = <span class="string">&quot;.pdf&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除 `UserChoice` 键（关键项）</span></span><br><span class="line"><span class="built_in">Remove-Item</span> <span class="literal">-Path</span> <span class="string">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\<span class="variable">$extension</span>\UserChoice&quot;</span> <span class="literal">-Force</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除当前用户下的 `OpenWithList` 键（移除最近使用的程序列表）</span></span><br><span class="line"><span class="built_in">Remove-Item</span> <span class="literal">-Path</span> <span class="string">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\<span class="variable">$extension</span>\OpenWithList&quot;</span> <span class="literal">-Force</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除系统级别的 `OpenWithList` 键（系统级别的打开方式列表）</span></span><br><span class="line"><span class="built_in">Remove-Item</span> <span class="literal">-Path</span> <span class="string">&quot;HKCR:\.<span class="variable">$extension</span>\OpenWithList&quot;</span> <span class="literal">-Force</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启资源管理器</span></span><br><span class="line"><span class="built_in">Stop-Process</span> <span class="literal">-Name</span> explorer <span class="literal">-Force</span></span><br><span class="line"><span class="built_in">Start-Process</span> explorer</span><br></pre></td></tr></table></figure></div>
+
+<p>将以上代码复制粘贴到记事本中，另存为 <code>.ps1</code> 文件并执行即可。</p>
+<p>最后，重启文件资源管理器，发现指定扩展名的文件的打开方式已经变回了未知。</p>
+<blockquote>
+<p>如果仍不起作用，可以先备份注册表，再直接删除 <code>HKEY_CLASSES_ROOT\&lt;扩展名&gt;</code> 和 <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\&lt;扩展名&gt;</code> 两个文件夹，然后重启文件资源管理器。</p>
+</blockquote>
+<h2 id="开机-NumLock-键默认关闭"><a href="#开机-NumLock-键默认关闭" class="headerlink" title="开机 NumLock 键默认关闭"></a>开机 NumLock 键默认关闭</h2><p>有的电脑开机时，每次都要按一下 NumLock 键才能通过小键盘输入数字，可以设定为开机默认打开 NumLock 键。</p>
+<p>Win + R 输入 <code>regedit</code> 打开注册表编辑器，在路径 <code>计算机\HKEY_USERS\.DEFAULT\Control Panel\Keyboard</code> 中，修改 <code>InitialKeyboardIndicators</code> 项的值为 <code>2</code> 即可。</p>
+<blockquote>
+<p><code>InitialKeyboardIndicators = 0</code> 表示关闭全部指示仪</p>
+<p><code>InitialKeyboardIndicators = 1</code> 表示开启 Caps Lock（大写锁定）</p>
+<p><code>InitialKeyboardIndicators = 2</code> 表示开启 Num Lock（数字锁定）</p>
+<p><code>InitialKeyboardIndicators = 4</code> 表示开启 Scroll Lock（滚动锁定）</p>
+<p><code>InitialKeyboardIndicators</code> 项的默认值为 <code>2147483648</code></p>
+</blockquote>
+<p>设置完成后重启电脑。</p>
+<p>如果上述操作不生效，则需启动时进入 BIOS 进行设置。</p>
+<h2 id="Markdown-嵌入视频链接"><a href="#Markdown-嵌入视频链接" class="headerlink" title="Markdown 嵌入视频链接"></a>Markdown 嵌入视频链接</h2><p>在 <code>.md</code> 文档中可以使用 HTML 语法嵌入视频。</p>
+<p>本地视频需要使用 <code>&lt;video&gt;</code> 内嵌套 <code>&lt;source&gt;</code> 标签嵌入视频地址：</p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">controls</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;C:\Users\lenovo\Videos\test-video.mp4&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/mp4&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>效果图：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img16.webp"
+                      alt="本地视频展示效果"
+                ></p>
+<p>Bilibili 视频需要使用 <code>&lt;iframe&gt;</code> 标签嵌入视频地址：</p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://player.bilibili.com/player.html?bvid=BV1diUDYcEur&quot;</span> <span class="attr">width</span>=<span class="string">&quot;1280px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;720px&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">border</span>=<span class="string">&quot;0&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;no&quot;</span> <span class="attr">framespacing</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;true&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>效果图：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img17.webp"
+                      alt="B站视频展示效果"
+                ></p>
+<p>YouTube 视频同样需要使用 <code>&lt;iframe&gt;</code> 标签嵌入视频地址，但其中的 <code>src</code> 参数需要修改为 <code>https://www.youtube.com/embed/xxx</code> 的形式：</p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://www.youtube.com/embed/YZjd5iM2v9o&quot;</span> <span class="attr">width</span>=<span class="string">&quot;1280&quot;</span> <span class="attr">height</span>=<span class="string">&quot;720&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allow</span>=<span class="string">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="attr">allowfullscreen</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>效果图：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img18.webp"
+                      alt="油管视频展示效果"
+                ></p>
+<h2 id="WinGet-批量更新软件"><a href="#WinGet-批量更新软件" class="headerlink" title="WinGet 批量更新软件"></a>WinGet 批量更新软件</h2><p>我们在使用电脑时经常会安装很多软件，但如果想要让软件都保持最新版本，又不想使用第三方应用商店管理，就可以使用系统自带的 WinGet 工具进行批量更新。</p>
+<p>输入以下命令获取有新版本的软件列表：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">winget upgrade</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img19.webp"
+                      alt="软件更新列表"
+                ></p>
+<p>输入以下命令以更新指定软件：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">winget upgrade &lt;software.id.01&gt; &lt;software.id.02&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img20.webp"
+                      alt="更新软件"
+                ></p>
+<p>如果想批量更新所有软件，输入以下命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">winget upgrade --all</span><br></pre></td></tr></table></figure></div>
+
+<p>WinGet 的核心数据来源于 Microsoft 维护的官方软件仓库。这个仓库包含了大量常见软件的元数据，当用户运行 <code>winget upgrade</code> 时，WinGet 会从该仓库中获取最新的软件版本信息，并与本地已安装的软件进行对比，从而判断是否需要更新。</p>
+<blockquote>
+<p>需要注意的是，使用 WinGet 工具更新并不区分软件的正式版和 Beta 版本等渠道。如果想指定渠道更新软件，需要通过在命令后添加<code>--channel</code> 参数来选择对应的频道。</p>
+</blockquote>
+<h2 id="Windows-开发者选项功能"><a href="#Windows-开发者选项功能" class="headerlink" title="Windows 开发者选项功能"></a>Windows 开发者选项功能</h2><p>在 Windows 开发者选项中，有很多正式版系统没有实装但非常有用的功能。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img21.webp"
+                      alt="开发者选项"
+                ></p>
+<p>启用“结束任务”功能允许用户在任务栏右键点击图标结束任务，相当于在任务管理器结束相应任务。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img22.webp"
+                      alt="结束任务"
+                ></p>
+<p>启用 sudo 允许用户像在 Linux 系统中一样直接以管理员权限运行指定命令。在没有 <code>sudo</code> 命令时，Windows 系统只能通过以管理员身份运行 CMD 或 Powershell，或者在 CMD 中使用 <code>runas /user:Administrator &quot;command&quot;</code> 命令来调用管理员权限。</p>
+<p>在“配置 sudo 如何运行应用程序”设置中，Windows 提供了三种方式：在新窗口中、禁用输入和内联。如果选择“在新窗口中”设置，运行 <code>sudo</code> 命令时会打开一个新的窗口来执行该命令；选择“禁用输入”设置会禁止用户输入，无法进行交互；选择“内联”设置，则会在当前窗口中以管理员权限运行命令，并允许交互。“内联”设置最符合 Linux 系统中的用户使用习惯。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img23.webp"
+                      alt="sudo 命令"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img24.webp"
+                      alt="sudo 命令执行示例"
+                ></p>
+<h2 id="右键新建文件类型配置"><a href="#右键新建文件类型配置" class="headerlink" title="右键新建文件类型配置"></a>右键新建文件类型配置</h2><p>我们在写代码或文档时，经常需要新建一个空白文件，但打开软件后再新建文件却又显得很麻烦，于是可以通过修改注册表的方式实现在桌面新建空白文件。</p>
+<p>以 Markdown 文件为例：</p>
+<p>首先安装 Typora 或 Visual Studio Code。</p>
+<p>Win + R 输入 <code>regedit</code> 打开注册表编辑器，在 <code>计算机\HKEY_CLASSES_ROOT</code> 下找到 <code>.md</code> 项。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img25.webp"
+                      alt="注册表编辑器"
+                ></p>
+<blockquote>
+<p>如果没有找到 <code>.md</code> 项，一定先安装 Typora 或 Visual Studio Code 并创建一个 Markdown 文件再进行接下来的操作。</p>
+</blockquote>
+<p>在 <code>.md</code> 项下新建 <code>Content Type</code> 和 <code>PerceivedType</code> 两个字符串值。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img26.webp"
+                      alt="注册表 .md 项"
+                ></p>
+<p>给 <code>(Default)</code> 赋默认值 <code>Typora.md</code> 或 <code>VScode.md</code>。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img27.webp"
+                      alt="(Default) 默认值"
+                ></p>
+<p>给 <code>Content Type</code> 赋值 <code>text/markdown</code>。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img28.webp"
+                      alt="Content Type 默认值"
+                ></p>
+<p>给 <code>PerceivedType</code> 赋值 <code>text</code>。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img29.webp"
+                      alt="PerceivedType 默认值"
+                ></p>
+<p>在 <code>.md</code> 下新建项 <code>ShellNew</code>，并在 <code>ShellNew</code> 下新建字符串值 <code>NullFile</code>。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img30.webp"
+                      alt="新建空文件"
+                ></p>
+<p>回到桌面，就能新建 Markdown 文件了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img31.webp"
+                      alt="桌面新建项"
+                ></p>
+<h2 id="测试最佳-DNS-服务器"><a href="#测试最佳-DNS-服务器" class="headerlink" title="测试最佳 DNS 服务器"></a>测试最佳 DNS 服务器</h2><p>Namebench 是谷歌开发的一个软件，该软件可以测试 DNS 解析速度。Namebench的工作原理是根据位置和浏览历史来寻找最快的DNS服务器。访问 <a class="link"   href="https://code.google.com/archive/p/namebench/downloads" >Namebench Download<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 页面可以选择软件的合适版本并下载。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img32.webp"
+                      alt="Namebench 下载页面"
+                ></p>
+<p>下载后，安装软件，软件一般被解压到 <code>C:\Users\&lt;用户名&gt;\AppData\Local\Temp</code> 文件夹下。</p>
+<p>进入软件界面，进行测试设置，然后点击 Start Benchmark 进行测试。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img33.webp"
+                      alt="软件界面"
+                ></p>
+<blockquote>
+<p>软件界面各选项介绍：</p>
+<p><strong>Nameservers</strong>: 默认测试的 DNS 服务器地址，工具将分析哪一个提供最佳的性能。如果有需要，可以自行指定 DNS 服务器地址。</p>
+<p><strong>Include Global DNS Providers</strong>: 选中此选项后，Namebench 会包含一些著名的全球 DNS 提供商（如 Google Public DNS、OpenDNS、UltraDNS）进行测试。这些 DNS 服务器无论在速度、安全或可靠性方面，相对比较稳定，建议勾选。</p>
+<p><strong>Include Best Available Regional DNS Services</strong>: 选中此选项后，Namebench 会根据你的地理位置测试本地区域的 DNS 服务，以找到最佳的区域性 DNS 提供商。ISP 的 DNS 服务器很可能属于这个类别，在某些情况下，它可能是最快的，建议勾选。</p>
+<p><strong>Include censorship checks</strong>: 可以选择安全级别更高的 DNS 服务器进行测试。</p>
+<p><strong>Upload and share your anonymized results</strong>: 上传并分享自己的测试结果。</p>
+<p><strong>Your Location</strong>: 默认选择 None 即可。</p>
+<p><strong>Health Check Performance</strong>: 默认使用 Fast 即可，如果网络不稳定可以选择 Slow。</p>
+<p><strong>Query Data Source</strong>: 这是 DNS 查询的数据来源，选项包括：</p>
+<ul>
+<li><em>Google Chrome</em>: 指定浏览器历史记录进行查询，如果选择 Google Chrome，Namebench 将查询使用 Google Chrome 访问过的域名的随机样本，并针对这些域名进行测试。</li>
+<li><em>Top 2,000 Websites ranked by Alexa</em>: 如果不想让 Namebench 访问浏览器历史记录，或者如果总是匿名浏览，可以选择查询 Alexa 的前 2000 个网站。</li>
+<li><em>Cache Latency Test</em>: 缓存延迟测试，支持不同的命中 &#x2F; 未命中比例。</li>
+</ul>
+<p><strong>Number of Queries</strong>: 这个选项可以设置基准测试中执行的 DNS 查询次数，查询次数越多，测试的全面性就越高。但是查询次数太高会导致测试时间过长。</p>
+</blockquote>
+<p>完成测试后，工具会自动在浏览器中展示结果，包括根据你选择的标准计算出的最快 DNS 服务器。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img34.webp"
+                      alt="测试结果"
+                ></p>
+<p>左侧面板显示最佳DNS服务器比目前使用的主DNS服务器快多少。然后，在右边的窗口中，将会显示适用于所在网络的最快的DNS。</p>
+<h2 id="Subtitle-Edit-合成双语字幕"><a href="#Subtitle-Edit-合成双语字幕" class="headerlink" title="Subtitle Edit 合成双语字幕"></a>Subtitle Edit 合成双语字幕</h2><p>有的时候，我们只有一个单独的英文字幕和一个对应的中文字幕，却没有合并的中英双语字幕。如果想要合并制作中英双语字幕，可以使用 Subtitle Edit。</p>
+<p>为了美观，先分别打开中文和英文字幕并取消每一句字幕的断行。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img35.webp"
+                      alt="断行"
+                ></p>
+<p>Ctrl + A 全选，然后点击“取消断行”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img36.webp"
+                      alt="取消断行效果"
+                ></p>
+<blockquote>
+<p>字幕断行注意事项：</p>
+<ol>
+<li>Subtitle Edit 中的断行无法通过 Ctrl + H 替换，只能通过“取消断行”取消。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img37.webp"
+                      alt="无法查找到断行符"
+                ></li>
+<li>取消断行会自动将换行替换为空格（为了英文考虑），所以中文字幕在取消断行后会多出一个空格，需要手动删除。</li>
+</ol>
+</blockquote>
+<p>选择“工具 - 合并字幕”，然后选择两个字幕文件：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img38.webp"
+                      alt="合并字幕"
+                ></p>
+<p>选择“工具 - 排序方式 - 开始时间”，按时间戳排序字幕。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img39.webp"
+                      alt="按照开始时间排序"
+                ></p>
+<p>然后点击“工具 - 合并时间码相同的行”，根据两个字幕文件的时间差选择合适的最大毫秒差并点击确定。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img40.webp"
+                      alt="合并时间码相同的行"
+                ></p>
+<blockquote>
+<p>“制作对话框”功能会在中英双语字幕前分别加一个“-”符号，更加美观。</p>
+</blockquote>
+<p>合并成功后保存文件，在电影中添加字幕测试效果。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img41.webp"
+                      alt="Subtitle Edit 内测试效果"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img42.webp"
+                      alt="播放器内测试效果"
+                ></p>
+<blockquote>
+<p>当然，如果遇到更复杂的情况，比如中英文的字幕分句不同，这样在合并的时候就会出现错误，需要手动调整。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>System</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Issues</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Marvel Films</title>
     <url>//archives/marvel-films/</url>
     <content><![CDATA[<table>
@@ -3939,6 +3939,217 @@
       </tags>
   </entry>
   <entry>
+    <title>Office 2021 Installation &amp; Activation</title>
+    <url>//archives/office-2021-installation-and-activation/</url>
+    <content><![CDATA[<h2 id="一、下载和安装-Office-Tool-Plus"><a href="#一、下载和安装-Office-Tool-Plus" class="headerlink" title="一、下载和安装 Office Tool Plus"></a>一、下载和安装 Office Tool Plus</h2><p><a class="link"   href="https://otp.landian.vip/zh-cn/" >Office Tool Plus 官方网站 - 一键部署 Office<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>安装完成后，打开 Office Tool Plus.exe 运行即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img0.webp"
+                      alt="Office Tool Plus"
+                ></p>
+<h2 id="二、部署-Office-产品"><a href="#二、部署-Office-产品" class="headerlink" title="二、部署 Office 产品"></a>二、部署 Office 产品</h2><p>运行 Office Tool Plus，点击“部署”标签页，选择想要安装的 Office 版本。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img1.webp"
+                      alt="部署 Office"
+                ></p>
+<p>选择想要安装的产品和语言包支持。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img2.webp"
+                      alt="产品和语言"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img3.webp"
+                      alt="产品选择"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img4.webp"
+                      alt="语言选择（可选多个语言及校对工具）"
+                ></p>
+<p>选择完成后开始部署即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img5.webp"
+                      alt="开始部署"
+                ></p>
+<h2 id="三、激活-Office-产品"><a href="#三、激活-Office-产品" class="headerlink" title="三、激活 Office 产品"></a>三、激活 Office 产品</h2><p>点击“激活”标签页，在“许可证管理”中安装相应许可证。</p>
+<blockquote>
+<p>安装的许可证版本应与部署的 Office 版本相同！</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img6.webp"
+                      alt="安装许可证"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img7.webp"
+                      alt="许可证选择"
+                ></p>
+<p>点击“工具箱”标签页，测试 KMS 主机可用性。</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 可用的KMS主机域名</span></span><br><span class="line">kms.03k.org</span><br><span class="line">kms.loli.beer</span><br><span class="line">kms.luochenzhimu.com</span><br><span class="line">kms9.msguides.com</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>测试KMS主机可用性的时候切勿开启网络代理！</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img8.webp"
+                      alt="测试KMS主机"
+                ></p>
+<p>测试成功后返回“激活”标签页，设置 KMS 主机并激活 Office。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img9.webp"
+                      alt="激活 Office"
+                ></p>
+<p>激活后查看 Office 许可证是否被激活。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img10.webp"
+                      alt="已激活的许可证"
+                ></p>
+<p>最后重置 Office 设置为默认设置，防止虽然激活成功但仍显示需要激活的情况。</p>
+<blockquote>
+<p>仅在账户拥有其他 Office 许可证时设置，保证此许可证的最高优先级。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img11.webp"
+                      alt="重置 Office 设置为默认设置"
+                ></p>
+<p>最后激活成功。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img12.webp"
+                      alt="激活成功"
+                ></p>
+<blockquote>
+<p>KMS 激活期限为 180 天，到期自动续期。若未自动续期，按照流程再操作一次即可。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Office</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Use Hexo to Build a Personal Blog Website</title>
+    <url>//archives/use-hexo-to-build-a-personal-blog-website/</url>
+    <content><![CDATA[<h2 id="一、安装-Hexo-并初始化博客"><a href="#一、安装-Hexo-并初始化博客" class="headerlink" title="一、安装 Hexo 并初始化博客"></a>一、安装 Hexo 并初始化博客</h2><p>找到博客文件夹，在根目录输入以下命令安装 Hexo 库依赖：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
+
+<p>安装完成后，输入以下命令初始化博客：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo init</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>如果将 hexo 添加到环境变量，则无需输入 <code>npx</code> 指令，只需要 <code>hexo init</code> 即可，下同。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/use-hexo-to-build-a-personal-blog-website/img0.webp"
+                      alt="Hexo 初始化博客"
+                ></p>
+<p>初始化成功后，输入以下命令进行静态部署：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo generate <span class="comment"># 可简写为 npx hexo g</span></span><br></pre></td></tr></table></figure></div>
+
+<p>如果想要查看部署好的博客，可以通过以下命令打开本地服务器：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo server <span class="comment"># 可简写为 npx hexo s</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后打开 <a class="link"   href="http://localhost:4000/" >http://localhost:4000<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 即可查看部署好的博客效果。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/use-hexo-to-build-a-personal-blog-website/img1.webp"
+                      alt="Hexo 初始化博客效果"
+                ></p>
+<h2 id="二、将博客文件夹连接到-GitHub-仓库"><a href="#二、将博客文件夹连接到-GitHub-仓库" class="headerlink" title="二、将博客文件夹连接到 GitHub 仓库"></a>二、将博客文件夹连接到 GitHub 仓库</h2><p>在博客文件夹根目录输入以下命令安装 Git 部署插件：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></div>
+
+<p>找到 <code>_config.yml</code> 文件（这是 Hexo 的项目配置文件），找到 <code>deploy</code> 部分，添加如下内容：</p>
+<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/AstridStark25963/AstridStark25963.github.io.git</span> <span class="comment"># 填入自己的仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></div>
+
+<p>分别输入以下命令以将本地更改的内容提交到 GitHub 远程仓库：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo clean <span class="comment"># 清除缓存文件 db.json 和已经生成的静态文件 public 文件夹</span></span><br><span class="line">npx hexo generate <span class="comment"># 生成网站静态文件到默认设置的 public 文件夹</span></span><br><span class="line">npx hexo deploy <span class="comment"># 自动生成网站静态文件，并部署到设定的仓库（可简写为 npx hexo d）</span></span><br></pre></td></tr></table></figure></div>
+
+<p>过一段时间，就能在 GitHub 仓库中看到提交的网页内容，也能在相应的网址访问网站的更新内容。</p>
+<blockquote>
+<p>不需要每次修改网站时都执行 <code>clean</code> 操作。<code>clean</code> 命令主要用于清理生成的文件，通常在需要完全重建站点时使用，比如当你遇到一些构建问题，或者想清理临时文件、缓存等情况时才需要执行。如果只是对内容或配置进行小的更新，一般不需要执行 <code>clean</code>，只需要执行 <code>generate</code> 或 <code>server</code> 命令即可。</p>
+</blockquote>
+<p>如果遇到网络问题，<code>deploy</code> 操作无法完成，则需要修改 Git 的代理配置并使用代理来提交修改。</p>
+<p>输入以下命令为 Git 设置全局代理：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:10809</span><br><span class="line">git config --global https.proxy http://127.0.0.1:10809</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>端口设置根据本机代理进行设置，常用的如 v2ray 使用 10809 端口，Clash 使用 7890 端口</p>
+</blockquote>
+<p>输入以下命令查看设置是否成功：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure></div>
+
+<p>如果需要取消全局代理设置，则输入以下指令进行取消：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、Hexo-文件夹结构介绍"><a href="#三、Hexo-文件夹结构介绍" class="headerlink" title="三、Hexo 文件夹结构介绍"></a>三、Hexo 文件夹结构介绍</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Users\lenovo\AstridStark25963.github.io</span><br><span class="line">├── .deploy_git          <span class="comment"># Git 相关的部署文件夹，可能包含部署信息</span></span><br><span class="line">├── .github              <span class="comment"># GitHub 相关的配置文件夹，通常包含GitHub Actions等配置</span></span><br><span class="line">├── db.json              <span class="comment"># 存储数据的 JSON 文件，可能包含站点的配置或数据</span></span><br><span class="line">├── node_modules         <span class="comment"># Node.js 项目依赖库文件夹，存储了所有的依赖包</span></span><br><span class="line">├── package-lock.json    <span class="comment"># 确保每次安装依赖时都使用相同版本的依赖，锁定依赖版本</span></span><br><span class="line">├── package.json         <span class="comment"># Node.js 项目的配置文件，包含项目名称、版本、依赖等信息</span></span><br><span class="line">├── public               <span class="comment"># 存放公共资源的文件夹，通常是网站的静态文件</span></span><br><span class="line">├── scaffolds            <span class="comment"># 用于存放模板或框架的文件夹，通常存放默认的页面或文章模板</span></span><br><span class="line">├── <span class="built_in">source</span>               <span class="comment"># 存放网站源代码的文件夹</span></span><br><span class="line">│   ├── images           <span class="comment"># 存放图片资源的文件夹</span></span><br><span class="line">│   ├── _data            <span class="comment"># 存放数据文件的文件夹，通常包含配置信息或内容数据</span></span><br><span class="line">│   └── _posts           <span class="comment"># 存放博客文章或页面的文件夹</span></span><br><span class="line">├── themes               <span class="comment"># 存放主题相关文件的文件夹</span></span><br><span class="line">│   └── redefine         <span class="comment"># 主题文件夹，包含自定义的主题设置</span></span><br><span class="line">├── yarn.lock            <span class="comment"># Yarn 的依赖锁定文件，确保依赖的版本一致</span></span><br><span class="line">├── _config.redefine.yml <span class="comment"># 自定义主题的配置文件，通常包含主题的设置和参数</span></span><br><span class="line">└── _config.yml          <span class="comment"># 网站的全局配置文件，包含站点标题、作者、主题等基本信息</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>由于本网站使用 Redefine 主题，故以此主题示例，下同。</p>
+</blockquote>
+<p>在平时的使用中，重点关注 <code>source</code> 文件夹以及根目录下的 <code>_config.yml</code>、<code>_config.redefine.yml</code> 两个配置文件即可。</p>
+<p>在新建页面时，输入以下命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo new page <span class="built_in">test</span> <span class="comment"># test 替换为实际页面名称</span></span><br></pre></td></tr></table></figure></div>
+
+<p>即可在 <code>source</code> 文件夹下新建同名页面，默认路由设置为 <code>/test</code>。</p>
+<blockquote>
+<p><code>source</code> 文件夹下符合模板的所有文件都会被复制到 <code>public</code> 文件夹下的相应位置，包括 <code>.md</code> 等格式的文件将被渲染为 <code>.html</code> 文件后复制到 <code>public</code> 文件夹下。如果想要复制模板以外的文件，或者不想渲染&#x2F;复制某些文件，只需要在根目录的 <code>_config.yml</code> 文件中的 <code>include</code> 和 <code>exclude</code> 部分输入文件夹&#x2F;文件名称即可。</p>
+</blockquote>
+<p><code>_config.yml</code> 为 Hexo 项目的默认配置文件，可以在这个文件中对网站进行个性化设置：</p>
+<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 网站设置</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Astrid&#x27;s</span> <span class="string">Fantasy</span> <span class="string">World</span> <span class="comment"># 网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 网站副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 网站描述</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="comment"># 网站关键词（可选）</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Astrid</span> <span class="string">Stark</span> <span class="comment"># 网站作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">en</span> <span class="comment"># 网站语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span> <span class="comment"># 时区设置</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL 配置</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://1lya.com</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">/archives/:name/</span> <span class="comment"># 文章的 URL 格式</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line"><span class="attr">pretty_urls:</span></span><br><span class="line">  <span class="attr">trailing_index:</span> <span class="literal">false</span> <span class="comment"># 设置为 false 来移除 URL 末尾的 &#x27;index.html&#x27;</span></span><br><span class="line">  <span class="attr">trailing_html:</span> <span class="literal">false</span> <span class="comment"># 设置为 false 来移除 URL 末尾的 &#x27;.html&#x27;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>_config.redefine.yml 为 Redefine 主题的默认配置文件，可以在这个文件中对主题外观进行个性化设置。</p>
+<h2 id="四、使用个性化-Hexo-主题"><a href="#四、使用个性化-Hexo-主题" class="headerlink" title="四、使用个性化 Hexo 主题"></a>四、使用个性化 Hexo 主题</h2><p>Hexo 的个性化主题可以在 <a class="link"   href="https://hexo.io/themes/" >Themes | Hexo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 找到，而主题的安装和使用方式一般可以在其 GitHub 仓库的 README 文件中找到。</p>
+<p>例如，Redefine 主题的安装方式如下：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/use-hexo-to-build-a-personal-blog-website/img2.webp"
+                      alt="Redefine 主题安装方式"
+                ></p>
+<p>Redefine 主题的使用教程可以在 <a class="link"   href="https://redefine-docs.ohevan.com/" >Redefine Docs<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 中找到。</p>
+<h2 id="五、文章配置项"><a href="#五、文章配置项" class="headerlink" title="五、文章配置项"></a>五、文章配置项</h2><p>在 Hexo 中，<strong>front-matter</strong> 是一块位于每篇文章或页面顶部的元数据区域，通常用于配置该篇文章的标题、分类、标签、日期、摘要等信息。它是一个 YAML 格式的区域，在文章的开头，通常由三个 <code>---</code> 符号包围。Hexo 使用这个信息来生成文章的 URL、封面、分类、标签等。</p>
+<p>常见 front-matter 配置项：</p>
+<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="comment"># 文章标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="comment"># 文章副标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="comment"># 创建时间</span></span><br><span class="line"><span class="attr">updated:</span> <span class="comment"># 更新时间</span></span><br><span class="line"><span class="attr">author:</span> <span class="comment"># 作者名</span></span><br><span class="line"><span class="attr">keywords:</span> [] <span class="comment"># 关键词</span></span><br><span class="line"><span class="attr">description:</span> <span class="comment"># 文章描述</span></span><br><span class="line"><span class="attr">cover:</span> <span class="comment"># 文章封面</span></span><br><span class="line"><span class="attr">excerpt:</span> <span class="comment"># 文章摘要</span></span><br><span class="line"><span class="attr">tags:</span> [] <span class="comment"># 文章标签</span></span><br><span class="line"><span class="attr">categories:</span> <span class="comment"># 文章分类</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span>  <span class="comment"># 是否开启评论功能</span></span><br><span class="line"><span class="attr">sticky:</span> <span class="literal">true</span>  <span class="comment"># 是否让文章置顶，值越大置顶权重越高</span></span><br><span class="line"><span class="attr">draft:</span> <span class="literal">false</span>  <span class="comment"># 是否为草稿（true 或 false）</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></div>
+
+<p>在部分由主题提供的布局模板页面中可以使用 <code>layout</code> 配置项， 默认为 <code>post</code>，可以指定为其他布局来使用布局模板。</p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Personal Website</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Marvel TV Series</title>
     <url>//archives/marvel-tv-series/</url>
     <content><![CDATA[<table>
@@ -4132,120 +4343,6 @@
       <tags>
         <tag>TV Series</tag>
         <tag>Marvel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Office 2021 Installation &amp; Activation</title>
-    <url>//archives/office-2021-installation-and-activation/</url>
-    <content><![CDATA[<h2 id="一、下载和安装-Office-Tool-Plus"><a href="#一、下载和安装-Office-Tool-Plus" class="headerlink" title="一、下载和安装 Office Tool Plus"></a>一、下载和安装 Office Tool Plus</h2><p><a class="link"   href="https://otp.landian.vip/zh-cn/" >Office Tool Plus 官方网站 - 一键部署 Office<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>安装完成后，打开 Office Tool Plus.exe 运行即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img0.webp"
-                      alt="Office Tool Plus"
-                ></p>
-<h2 id="二、部署-Office-产品"><a href="#二、部署-Office-产品" class="headerlink" title="二、部署 Office 产品"></a>二、部署 Office 产品</h2><p>运行 Office Tool Plus，点击“部署”标签页，选择想要安装的 Office 版本。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img1.webp"
-                      alt="部署 Office"
-                ></p>
-<p>选择想要安装的产品和语言包支持。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img2.webp"
-                      alt="产品和语言"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img3.webp"
-                      alt="产品选择"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img4.webp"
-                      alt="语言选择（可选多个语言及校对工具）"
-                ></p>
-<p>选择完成后开始部署即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img5.webp"
-                      alt="开始部署"
-                ></p>
-<h2 id="三、激活-Office-产品"><a href="#三、激活-Office-产品" class="headerlink" title="三、激活 Office 产品"></a>三、激活 Office 产品</h2><p>点击“激活”标签页，在“许可证管理”中安装相应许可证。</p>
-<blockquote>
-<p>安装的许可证版本应与部署的 Office 版本相同！</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img6.webp"
-                      alt="安装许可证"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img7.webp"
-                      alt="许可证选择"
-                ></p>
-<p>点击“工具箱”标签页，测试 KMS 主机可用性。</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 可用的KMS主机域名</span></span><br><span class="line">kms.03k.org</span><br><span class="line">kms.loli.beer</span><br><span class="line">kms.luochenzhimu.com</span><br><span class="line">kms9.msguides.com</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>测试KMS主机可用性的时候切勿开启网络代理！</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img8.webp"
-                      alt="测试KMS主机"
-                ></p>
-<p>测试成功后返回“激活”标签页，设置 KMS 主机并激活 Office。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img9.webp"
-                      alt="激活 Office"
-                ></p>
-<p>激活后查看 Office 许可证是否被激活。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img10.webp"
-                      alt="已激活的许可证"
-                ></p>
-<p>最后重置 Office 设置为默认设置，防止虽然激活成功但仍显示需要激活的情况。</p>
-<blockquote>
-<p>仅在账户拥有其他 Office 许可证时设置，保证此许可证的最高优先级。</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img11.webp"
-                      alt="重置 Office 设置为默认设置"
-                ></p>
-<p>最后激活成功。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img12.webp"
-                      alt="激活成功"
-                ></p>
-<blockquote>
-<p>KMS 激活期限为 180 天，到期自动续期。若未自动续期，按照流程再操作一次即可。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>Office</tag>
       </tags>
   </entry>
   <entry>
@@ -4451,103 +4548,6 @@
       </categories>
       <tags>
         <tag>License</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Use Hexo to Build a Personal Blog Website</title>
-    <url>//archives/use-hexo-to-build-a-personal-blog-website/</url>
-    <content><![CDATA[<h2 id="一、安装-Hexo-并初始化博客"><a href="#一、安装-Hexo-并初始化博客" class="headerlink" title="一、安装 Hexo 并初始化博客"></a>一、安装 Hexo 并初始化博客</h2><p>找到博客文件夹，在根目录输入以下命令安装 Hexo 库依赖：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
-
-<p>安装完成后，输入以下命令初始化博客：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo init</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>如果将 hexo 添加到环境变量，则无需输入 <code>npx</code> 指令，只需要 <code>hexo init</code> 即可，下同。</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/use-hexo-to-build-a-personal-blog-website/img0.webp"
-                      alt="Hexo 初始化博客"
-                ></p>
-<p>初始化成功后，输入以下命令进行静态部署：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo generate <span class="comment"># 可简写为 npx hexo g</span></span><br></pre></td></tr></table></figure></div>
-
-<p>如果想要查看部署好的博客，可以通过以下命令打开本地服务器：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo server <span class="comment"># 可简写为 npx hexo s</span></span><br></pre></td></tr></table></figure></div>
-
-<p>然后打开 <a class="link"   href="http://localhost:4000/" >http://localhost:4000<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 即可查看部署好的博客效果。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/use-hexo-to-build-a-personal-blog-website/img1.webp"
-                      alt="Hexo 初始化博客效果"
-                ></p>
-<h2 id="二、将博客文件夹连接到-GitHub-仓库"><a href="#二、将博客文件夹连接到-GitHub-仓库" class="headerlink" title="二、将博客文件夹连接到 GitHub 仓库"></a>二、将博客文件夹连接到 GitHub 仓库</h2><p>在博客文件夹根目录输入以下命令安装 Git 部署插件：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></div>
-
-<p>找到 <code>_config.yml</code> 文件（这是 Hexo 的项目配置文件），找到 <code>deploy</code> 部分，添加如下内容：</p>
-<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/AstridStark25963/AstridStark25963.github.io.git</span> <span class="comment"># 填入自己的仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></div>
-
-<p>分别输入以下命令以将本地更改的内容提交到 GitHub 远程仓库：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo clean <span class="comment"># 清除缓存文件 db.json 和已经生成的静态文件 public 文件夹</span></span><br><span class="line">npx hexo generate <span class="comment"># 生成网站静态文件到默认设置的 public 文件夹</span></span><br><span class="line">npx hexo deploy <span class="comment"># 自动生成网站静态文件，并部署到设定的仓库（可简写为 npx hexo d）</span></span><br></pre></td></tr></table></figure></div>
-
-<p>过一段时间，就能在 GitHub 仓库中看到提交的网页内容，也能在相应的网址访问网站的更新内容。</p>
-<blockquote>
-<p>不需要每次修改网站时都执行 <code>clean</code> 操作。<code>clean</code> 命令主要用于清理生成的文件，通常在需要完全重建站点时使用，比如当你遇到一些构建问题，或者想清理临时文件、缓存等情况时才需要执行。如果只是对内容或配置进行小的更新，一般不需要执行 <code>clean</code>，只需要执行 <code>generate</code> 或 <code>server</code> 命令即可。</p>
-</blockquote>
-<p>如果遇到网络问题，<code>deploy</code> 操作无法完成，则需要修改 Git 的代理配置并使用代理来提交修改。</p>
-<p>输入以下命令为 Git 设置全局代理：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:10809</span><br><span class="line">git config --global https.proxy http://127.0.0.1:10809</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>端口设置根据本机代理进行设置，常用的如 v2ray 使用 10809 端口，Clash 使用 7890 端口</p>
-</blockquote>
-<p>输入以下命令查看设置是否成功：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure></div>
-
-<p>如果需要取消全局代理设置，则输入以下指令进行取消：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="三、Hexo-文件夹结构介绍"><a href="#三、Hexo-文件夹结构介绍" class="headerlink" title="三、Hexo 文件夹结构介绍"></a>三、Hexo 文件夹结构介绍</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Users\lenovo\AstridStark25963.github.io</span><br><span class="line">├── .deploy_git          <span class="comment"># Git 相关的部署文件夹，可能包含部署信息</span></span><br><span class="line">├── .github              <span class="comment"># GitHub 相关的配置文件夹，通常包含GitHub Actions等配置</span></span><br><span class="line">├── db.json              <span class="comment"># 存储数据的 JSON 文件，可能包含站点的配置或数据</span></span><br><span class="line">├── node_modules         <span class="comment"># Node.js 项目依赖库文件夹，存储了所有的依赖包</span></span><br><span class="line">├── package-lock.json    <span class="comment"># 确保每次安装依赖时都使用相同版本的依赖，锁定依赖版本</span></span><br><span class="line">├── package.json         <span class="comment"># Node.js 项目的配置文件，包含项目名称、版本、依赖等信息</span></span><br><span class="line">├── public               <span class="comment"># 存放公共资源的文件夹，通常是网站的静态文件</span></span><br><span class="line">├── scaffolds            <span class="comment"># 用于存放模板或框架的文件夹，通常存放默认的页面或文章模板</span></span><br><span class="line">├── <span class="built_in">source</span>               <span class="comment"># 存放网站源代码的文件夹</span></span><br><span class="line">│   ├── images           <span class="comment"># 存放图片资源的文件夹</span></span><br><span class="line">│   ├── _data            <span class="comment"># 存放数据文件的文件夹，通常包含配置信息或内容数据</span></span><br><span class="line">│   └── _posts           <span class="comment"># 存放博客文章或页面的文件夹</span></span><br><span class="line">├── themes               <span class="comment"># 存放主题相关文件的文件夹</span></span><br><span class="line">│   └── redefine         <span class="comment"># 主题文件夹，包含自定义的主题设置</span></span><br><span class="line">├── yarn.lock            <span class="comment"># Yarn 的依赖锁定文件，确保依赖的版本一致</span></span><br><span class="line">├── _config.redefine.yml <span class="comment"># 自定义主题的配置文件，通常包含主题的设置和参数</span></span><br><span class="line">└── _config.yml          <span class="comment"># 网站的全局配置文件，包含站点标题、作者、主题等基本信息</span></span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>由于本网站使用 Redefine 主题，故以此主题示例，下同。</p>
-</blockquote>
-<p>在平时的使用中，重点关注 <code>source</code> 文件夹以及根目录下的 <code>_config.yml</code>、<code>_config.redefine.yml</code> 两个配置文件即可。</p>
-<p>在新建页面时，输入以下命令：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo new page <span class="built_in">test</span> <span class="comment"># test 替换为实际页面名称</span></span><br></pre></td></tr></table></figure></div>
-
-<p>即可在 <code>source</code> 文件夹下新建同名页面，默认路由设置为 <code>/test</code>。</p>
-<blockquote>
-<p><code>source</code> 文件夹下符合模板的所有文件都会被复制到 <code>public</code> 文件夹下的相应位置，包括 <code>.md</code> 等格式的文件将被渲染为 <code>.html</code> 文件后复制到 <code>public</code> 文件夹下。如果想要复制模板以外的文件，或者不想渲染&#x2F;复制某些文件，只需要在根目录的 <code>_config.yml</code> 文件中的 <code>include</code> 和 <code>exclude</code> 部分输入文件夹&#x2F;文件名称即可。</p>
-</blockquote>
-<p><code>_config.yml</code> 为 Hexo 项目的默认配置文件，可以在这个文件中对网站进行个性化设置：</p>
-<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 网站设置</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Astrid&#x27;s</span> <span class="string">Fantasy</span> <span class="string">World</span> <span class="comment"># 网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 网站副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 网站描述</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="comment"># 网站关键词（可选）</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Astrid</span> <span class="string">Stark</span> <span class="comment"># 网站作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">en</span> <span class="comment"># 网站语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span> <span class="comment"># 时区设置</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL 配置</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://1lya.com</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">/archives/:name/</span> <span class="comment"># 文章的 URL 格式</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line"><span class="attr">pretty_urls:</span></span><br><span class="line">  <span class="attr">trailing_index:</span> <span class="literal">false</span> <span class="comment"># 设置为 false 来移除 URL 末尾的 &#x27;index.html&#x27;</span></span><br><span class="line">  <span class="attr">trailing_html:</span> <span class="literal">false</span> <span class="comment"># 设置为 false 来移除 URL 末尾的 &#x27;.html&#x27;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>_config.redefine.yml 为 Redefine 主题的默认配置文件，可以在这个文件中对主题外观进行个性化设置。</p>
-<h2 id="四、使用个性化-Hexo-主题"><a href="#四、使用个性化-Hexo-主题" class="headerlink" title="四、使用个性化 Hexo 主题"></a>四、使用个性化 Hexo 主题</h2><p>Hexo 的个性化主题可以在 <a class="link"   href="https://hexo.io/themes/" >Themes | Hexo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 找到，而主题的安装和使用方式一般可以在其 GitHub 仓库的 README 文件中找到。</p>
-<p>例如，Redefine 主题的安装方式如下：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/use-hexo-to-build-a-personal-blog-website/img2.webp"
-                      alt="Redefine 主题安装方式"
-                ></p>
-<p>Redefine 主题的使用教程可以在 <a class="link"   href="https://redefine-docs.ohevan.com/" >Redefine Docs<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 中找到。</p>
-<h2 id="五、文章配置项"><a href="#五、文章配置项" class="headerlink" title="五、文章配置项"></a>五、文章配置项</h2><p>在 Hexo 中，<strong>front-matter</strong> 是一块位于每篇文章或页面顶部的元数据区域，通常用于配置该篇文章的标题、分类、标签、日期、摘要等信息。它是一个 YAML 格式的区域，在文章的开头，通常由三个 <code>---</code> 符号包围。Hexo 使用这个信息来生成文章的 URL、封面、分类、标签等。</p>
-<p>常见 front-matter 配置项：</p>
-<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="comment"># 文章标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="comment"># 文章副标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="comment"># 创建时间</span></span><br><span class="line"><span class="attr">updated:</span> <span class="comment"># 更新时间</span></span><br><span class="line"><span class="attr">author:</span> <span class="comment"># 作者名</span></span><br><span class="line"><span class="attr">keywords:</span> [] <span class="comment"># 关键词</span></span><br><span class="line"><span class="attr">description:</span> <span class="comment"># 文章描述</span></span><br><span class="line"><span class="attr">cover:</span> <span class="comment"># 文章封面</span></span><br><span class="line"><span class="attr">excerpt:</span> <span class="comment"># 文章摘要</span></span><br><span class="line"><span class="attr">tags:</span> [] <span class="comment"># 文章标签</span></span><br><span class="line"><span class="attr">categories:</span> <span class="comment"># 文章分类</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span>  <span class="comment"># 是否开启评论功能</span></span><br><span class="line"><span class="attr">sticky:</span> <span class="literal">true</span>  <span class="comment"># 是否让文章置顶，值越大置顶权重越高</span></span><br><span class="line"><span class="attr">draft:</span> <span class="literal">false</span>  <span class="comment"># 是否为草稿（true 或 false）</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></div>
-
-<p>在部分由主题提供的布局模板页面中可以使用 <code>layout</code> 配置项， 默认为 <code>post</code>，可以指定为其他布局来使用布局模板。</p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Personal Website</tag>
-        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
