@@ -36,7 +36,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://1lya.com/images/og.webp">
 <meta property="article:published_time" content="2025-01-31T08:42:52.177Z">
-<meta property="article:modified_time" content="2025-02-08T14:04:16.505Z">
+<meta property="article:modified_time" content="2025-02-12T05:06:38.092Z">
 <meta property="article:author" content="Astrid Stark">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Issues">
@@ -461,8 +461,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-02-08 22:04:16</span>
-            <span class="mobile">2025-02-08 22:04:16</span>
+            <span class="desktop">2025-02-12 13:06:38</span>
+            <span class="mobile">2025-02-12 13:06:38</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -560,7 +560,7 @@
                       alt="Google 网站图标"
                 ></p>
 <p>此操作也可以用在前端或后端代码中，用来动态获取指定网站的图标。</p>
-<h2 id="管理员权限无效"><a href="#管理员权限无效" class="headerlink" title="管理员权限无效"></a>管理员权限无效</h2><p>在删除文件的时候，发现就算打开终端并调用管理员权限仍无法删除：</p>
+<h2 id="管理员权限失效"><a href="#管理员权限失效" class="headerlink" title="管理员权限失效"></a>管理员权限失效</h2><p>在删除文件的时候，发现就算打开终端并调用管理员权限仍无法删除：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
@@ -957,6 +957,42 @@
 <blockquote>
 <p>当然，如果遇到更复杂的情况，比如中英文的字幕分句不同，这样在合并的时候就会出现错误，需要手动调整。</p>
 </blockquote>
+<h2 id="调用-SYSTEM-权限更改文件"><a href="#调用-SYSTEM-权限更改文件" class="headerlink" title="调用 SYSTEM 权限更改文件"></a>调用 SYSTEM 权限更改文件</h2><p>在卸载 ZeroTier 之后，发现 <code>C:\Program Files (x86)</code> 下仍然有残留文件。</p>
+<p>手动删除文件，提示需要提供管理员权限；提供权限后，提示需要 SYSTEM 提供的权限才能删除：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img43.webp"
+                      alt="需要 SYSTEM 提供的权限才能对此文件进行更改"
+                ></p>
+<p>查看文件属性，尝试修改文件权限，发现全都是灰色无法修改：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img44.webp"
+                      alt="无法修改文件权限"
+                ></p>
+<p>经过查询，了解到在 Administrator 上还有更高的 SYSTEM 权限。</p>
+<p>从 <a class="link"   target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/sysinternals/downloads/psexec" >PsExec - Sysinternals<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 下载 PsExec 工具，然后在 PsTools 文件夹下输入以下命令运行 PsExec：</p>
+<div class="code-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\psexec <span class="literal">-i</span> <span class="number">1</span> <span class="literal">-s</span> cmd.exe</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><code>-i 1</code> 是指在交互模式下启动（“1” 是指桌面编号，通常是默认桌面），<code>-s</code> 是指以 SYSTEM 权限运行命令。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img45.webp"
+                      alt="运行 PsExec 工具"
+                ></p>
+<p>这条命令会打开一个以 SYSTEM 权限运行的 CMD，可以用 <code>whoami</code> 命令验证当前会话身份：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/handy-tips-for-solving-windows-and-software-issues/img46.webp"
+                      alt="成功调用 SYSTEM 权限"
+                ></p>
+<p>这样就能对锁定 SYSTEM 权限的文件进行更改了。</p>
 
 		</div>
 
@@ -1019,7 +1055,7 @@
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
 		<div class="page-title">Handy Tips for Solving Windows &amp; Software Issues</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-%E4%BB%93%E5%BA%93%E4%BF%A1%E6%81%AF%E6%9F%A5%E7%9C%8B"><span class="nav-text">GitHub 仓库信息查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-%E4%B8%8B%E8%BD%BD-Electron-%E6%8A%A5%E9%94%99"><span class="nav-text">npm 下载 Electron 报错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-%E6%9C%8D%E5%8A%A1%E6%8F%90%E5%8F%96%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87"><span class="nav-text">Google 服务提取网站图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E6%97%A0%E6%95%88"><span class="nav-text">管理员权限无效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Thunderbird-%E7%BB%91%E5%AE%9A%E9%82%AE%E7%AE%B1%E6%9C%8D%E5%8A%A1"><span class="nav-text">Thunderbird 绑定邮箱服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B6%E5%BA%AD%E7%89%88-Windows-%E7%B3%BB%E7%BB%9F%E6%B7%BB%E5%8A%A0%E7%BB%84%E7%AD%96%E7%95%A5%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-text">家庭版 Windows 系统添加组策略管理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Word-%E5%9C%A8%E8%AF%95%E5%9B%BE%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E6%97%B6%E9%81%87%E5%88%B0%E9%94%99%E8%AF%AF"><span class="nav-text">Word 在试图打开文件时遇到错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F-Path-%E6%97%A0%E6%B3%95%E5%88%86%E8%A1%8C%E6%98%BE%E7%A4%BA"><span class="nav-text">环境变量 Path 无法分行显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F"><span class="nav-text">删除文件默认打开方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA-NumLock-%E9%94%AE%E9%BB%98%E8%AE%A4%E5%85%B3%E9%97%AD"><span class="nav-text">开机 NumLock 键默认关闭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown-%E5%B5%8C%E5%85%A5%E8%A7%86%E9%A2%91%E9%93%BE%E6%8E%A5"><span class="nav-text">Markdown 嵌入视频链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WinGet-%E6%89%B9%E9%87%8F%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6"><span class="nav-text">WinGet 批量更新软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-%E5%BC%80%E5%8F%91%E8%80%85%E9%80%89%E9%A1%B9%E5%8A%9F%E8%83%BD"><span class="nav-text">Windows 开发者选项功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E9%85%8D%E7%BD%AE"><span class="nav-text">右键新建文件类型配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E6%9C%80%E4%BD%B3-DNS-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">测试最佳 DNS 服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Subtitle-Edit-%E5%90%88%E6%88%90%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95"><span class="nav-text">Subtitle Edit 合成双语字幕</span></a></li></ol>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-%E4%BB%93%E5%BA%93%E4%BF%A1%E6%81%AF%E6%9F%A5%E7%9C%8B"><span class="nav-text">GitHub 仓库信息查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-%E4%B8%8B%E8%BD%BD-Electron-%E6%8A%A5%E9%94%99"><span class="nav-text">npm 下载 Electron 报错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-%E6%9C%8D%E5%8A%A1%E6%8F%90%E5%8F%96%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87"><span class="nav-text">Google 服务提取网站图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E5%A4%B1%E6%95%88"><span class="nav-text">管理员权限失效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Thunderbird-%E7%BB%91%E5%AE%9A%E9%82%AE%E7%AE%B1%E6%9C%8D%E5%8A%A1"><span class="nav-text">Thunderbird 绑定邮箱服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B6%E5%BA%AD%E7%89%88-Windows-%E7%B3%BB%E7%BB%9F%E6%B7%BB%E5%8A%A0%E7%BB%84%E7%AD%96%E7%95%A5%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-text">家庭版 Windows 系统添加组策略管理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Word-%E5%9C%A8%E8%AF%95%E5%9B%BE%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E6%97%B6%E9%81%87%E5%88%B0%E9%94%99%E8%AF%AF"><span class="nav-text">Word 在试图打开文件时遇到错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F-Path-%E6%97%A0%E6%B3%95%E5%88%86%E8%A1%8C%E6%98%BE%E7%A4%BA"><span class="nav-text">环境变量 Path 无法分行显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F"><span class="nav-text">删除文件默认打开方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA-NumLock-%E9%94%AE%E9%BB%98%E8%AE%A4%E5%85%B3%E9%97%AD"><span class="nav-text">开机 NumLock 键默认关闭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown-%E5%B5%8C%E5%85%A5%E8%A7%86%E9%A2%91%E9%93%BE%E6%8E%A5"><span class="nav-text">Markdown 嵌入视频链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WinGet-%E6%89%B9%E9%87%8F%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6"><span class="nav-text">WinGet 批量更新软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-%E5%BC%80%E5%8F%91%E8%80%85%E9%80%89%E9%A1%B9%E5%8A%9F%E8%83%BD"><span class="nav-text">Windows 开发者选项功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E9%85%8D%E7%BD%AE"><span class="nav-text">右键新建文件类型配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E6%9C%80%E4%BD%B3-DNS-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">测试最佳 DNS 服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Subtitle-Edit-%E5%90%88%E6%88%90%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95"><span class="nav-text">Subtitle Edit 合成双语字幕</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%83%E7%94%A8-SYSTEM-%E6%9D%83%E9%99%90%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6"><span class="nav-text">调用 SYSTEM 权限更改文件</span></a></li></ol>
 
 	</div>
 </div>
