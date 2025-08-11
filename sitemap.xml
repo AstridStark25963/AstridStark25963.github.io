@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://1lya.com/archives/dc-films/</loc>
+    
+    <lastmod>2025-08-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/archives/marvel-tv-series/</loc>
+    
+    <lastmod>2025-08-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/archives/marvel-films/</loc>
+    
+    <lastmod>2025-08-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/archives/list-of-books-by-higashino-keigo/</loc>
+    
+    <lastmod>2025-08-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://1lya.com/archives/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/</loc>
     
     <lastmod>2025-02-12</lastmod>
@@ -56,33 +92,6 @@
   </url>
   
   <url>
-    <loc>https://1lya.com/archives/marvel-tv-series/</loc>
-    
-    <lastmod>2025-02-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/archives/marvel-films/</loc>
-    
-    <lastmod>2025-02-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/archives/list-of-books-by-higashino-keigo/</loc>
-    
-    <lastmod>2025-02-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://1lya.com/archives/learn-the-dragon-language-of-skyrim/</loc>
     
     <lastmod>2025-02-06</lastmod>
@@ -120,15 +129,6 @@
   
   <url>
     <loc>https://1lya.com/archives/dc-tv-series/</loc>
-    
-    <lastmod>2025-02-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/archives/dc-films/</loc>
     
     <lastmod>2025-02-06</lastmod>
     
@@ -256,197 +256,197 @@
 
   <url>
     <loc>https://1lya.com/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://1lya.com/tags/Ubuntu/</loc>
-    <lastmod>2025-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://1lya.com/tags/The-Elder-Scrolls/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Tamriel/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://1lya.com/tags/Docker/</loc>
-    <lastmod>2025-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Jellyfin/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <loc>https://1lya.com/tags/Ubuntu/</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Image-Hosting/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/GitHub/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Docker/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Jellyfin/</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Cloudflare/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Windows-Customization/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Icon/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/DC/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Films/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/TV-Series/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/PPPoE/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Campus-Network/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Personal-Website/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Sitemap/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Maven/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Windows/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Issues/</loc>
-    <lastmod>2025-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Skyrim/</loc>
-    <lastmod>2025-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Dragon-Language/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Higashino-Keigo/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://1lya.com/tags/Marvel/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <loc>https://1lya.com/tags/Skyrim/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Dragon-Language/</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Office/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Marvel/</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/Hexo/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/tags/License/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -454,50 +454,50 @@
 
   
   <url>
-    <loc>https://1lya.com/categories/System/</loc>
-    <lastmod>2025-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://1lya.com/categories/Game/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://1lya.com/categories/Media/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <loc>https://1lya.com/categories/System/</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/categories/Programming/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/categories/Media/</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/categories/Network/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/categories/Books/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1lya.com/categories/Software/</loc>
-    <lastmod>2025-07-31</lastmod>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
