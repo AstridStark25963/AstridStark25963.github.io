@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Astrid Stark">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set data attribute for CSS variables
+                root.setAttribute("data-theme", theme);
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes once DOM is ready
+            if (document.readyState !== "loading") {
+                document.body.classList.add(theme + "-mode");
+            } else {
+                document.addEventListener("DOMContentLoaded", () => {
+                    document.body.classList.add(theme + "-mode");
+                    document.body.classList.remove((theme === DARK ? LIGHT : DARK) + "-mode");
+                });
+            }
+        })();
+    </script>
+    
+    <!-- Critical CSS to prevent flash -->
+    <style>
+        :root[data-theme="dark"] {
+            --background-color: #202124;
+            --background-color-transparent: rgba(32, 33, 36, 0.6);
+            --second-background-color: #2d2e32;
+            --third-background-color: #34353a;
+            --third-background-color-transparent: rgba(32, 33, 36, 0.6);
+            --primary-color: #0066CC;
+            --first-text-color: #ffffff;
+            --second-text-color: #eeeeee;
+            --third-text-color: #bebec6;
+            --fourth-text-color: #999999;
+            --default-text-color: #bebec6;
+            --invert-text-color: #373D3F;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --selection-color: #0066CC;
+            --shadow-color-1: rgba(255, 255, 255, 0.08);
+            --shadow-color-2: rgba(255, 255, 255, 0.05);
+        }
+        
+        :root[data-theme="light"] {
+            --background-color: #fff;
+            --background-color-transparent: rgba(255, 255, 255, 0.6);
+            --second-background-color: #f8f8f8;
+            --third-background-color: #f2f2f2;
+            --third-background-color-transparent: rgba(241, 241, 241, 0.6);
+            --primary-color: #0066CC;
+            --first-text-color: #16171a;
+            --second-text-color: #2f3037;
+            --third-text-color: #5e5e5e;
+            --fourth-text-color: #eeeeee;
+            --default-text-color: #373D3F;
+            --invert-text-color: #bebec6;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --selection-color: #0066CC;
+            --shadow-color-1: rgba(0, 0, 0, 0.08);
+            --shadow-color-2: rgba(0, 0, 0, 0.05);
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--default-text-color);
+        }
+        
+        /* Apply body classes as soon as DOM is ready */
+        :root[data-theme="dark"] body {
+            background-color: var(--background-color);
+            color: var(--default-text-color);
+        }
+    </style>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://1lya.com/archives/how-to-bypass-vpn-detection/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Astrid&#39;s Fantasy World - Dive, into the unknown.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Bypass VPN Detection">
+<meta property="og:url" content="https://1lya.com/archives/how-to-bypass-vpn-detection/">
+<meta property="og:site_name" content="Astrid&#39;s Fantasy World">
+<meta property="og:description" content="Astrid&#39;s Fantasy World - Dive, into the unknown.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://1lya.com/images/og.webp">
+<meta property="article:published_time" content="2025-09-04T12:37:53.906Z">
+<meta property="article:modified_time" content="2025-09-04T12:35:33.591Z">
+<meta property="article:author" content="Astrid Stark">
+<meta property="article:tag" content="IP">
+<meta property="article:tag" content="VPN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://1lya.com/images/og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            How to Bypass VPN Detection | Astrid&#39;s Fantasy World
+        
+    </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/css/build/tailwind.css">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"1lya.com","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":false,"count":false,"min2read":false},"author_label":{"enable":true,"auto":false,"list":["Lv. ∞"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"/images/og.webp","description":"Astrid's Fantasy World - Dive, into the unknown."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/minecraft-light.webp","dark":"/images/minecraft-dark.webp"},"title":"Astrid's Fantasy World","subtitle":{"text":["do not go gentle into that good night"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":75,"backing_speed":60,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#FFFFFF","dark":"#FFFFFF"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/AstridStark25963","instagram":null,"zhihu":null,"twitter":"https://x.com/IAmAstridStark","email":"astridstark25963@gmail.com","steam":"https://steamcommunity.com/id/st_astrid/"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Меланхолия","artist":"MIKAYA,BOMBAY","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.lrc"},{"name":"Animal","artist":"Rauf & Faik","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.lrc"},{"name":"Bones","artist":"Low Roar,Jófriður","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.lrc"},{"name":"Let Me Down Slowly","artist":"Alec Benjamin,Alessia Cara","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.lrc"},{"name":"III","artist":"Athletics","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.lrc"},{"name":"lovely","artist":"Billie Eilish,Khalid","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.lrc"},{"name":"Talking to the Moon","artist":"Bruno Mars","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.lrc"},{"name":"My Heart Will Go On","artist":"Céline Dion,James Horner","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.lrc"},{"name":"Mockingbird","artist":"Eminem","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.lrc"},{"name":"Stan","artist":"Eminem,Dido","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.lrc"},{"name":"Trava u doma (Geoffrey Day Remix)","artist":"Geoffplaysguitar,Земляне,Atomic Heart","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).lrc"},{"name":"You're Beautiful","artist":"James Blunt","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.lrc"},{"name":"It's not fair","artist":"Kenya Grace","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.lrc"},{"name":"STAR WALKIN'","artist":"Lil Nas X","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.lrc"},{"name":"The Emptiness Machine","artist":"Linkin Park","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.lrc"},{"name":"Dynasty","artist":"Miia","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.lrc"},{"name":"GODS","artist":"NewJeans,英雄联盟","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.lrc"},{"name":"The Godfather (Love Theme)","artist":"Nino Rota","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).lrc"},{"name":"Da Capo","artist":"Starbreeze Entertainment,Gustavo Coutinho","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.lrc"},{"name":"The Death of Peace of Mind (Sullivan King Remix)","artist":"Sullivan King","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.lrc"},{"name":"Don't Lean on Me","artist":"The Amity Affliction","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.lrc"},{"name":"God Mode","artist":"The Verkkars,Aleksib","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).lrc"},{"name":"戒网","artist":"村西,馨悦(WhiteRainbow)","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.lrc"},{"name":"空心","artist":"光泽","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.lrc"},{"name":"转身即心痛","artist":"吉星出租","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.lrc"},{"name":"Dawn (黎明将至)","artist":"三角洲行动,Lithium Done","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).lrc"},{"name":"Aria Math","artist":"bxkq,Hardx,C418","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.lrc"}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.5","navbar":{"auto_hide":true,"color":{"left":"#DF45DA","right":"#367DF7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Gallery":{"path":"/gallery","icon":"fa-regular fa-image"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Friends":"/friends","Thanks":"/thanks"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"Dive, into the unknown.","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Linkbox":{"path":"/linkbox","icon":"fa-regular fa-bookmark"},"Gallery":{"path":"/gallery","icon":"fa-regular fa-image"},"Moments":{"path":"/moments","icon":"fa-regular fa-thought-bubble"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/12/23 11:03:42"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Astrid&#39;s Fantasy World
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="active"
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/gallery"
+                                        >
+                                    <i class="fa-regular fa-image fa-fw"></i>
+                                    GALLERY
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/friends">
+                                                    FRIENDS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/thanks">
+                                                    THANKS
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/gallery"
+                        >
+                            <span>
+                                GALLERY
+                            </span>
+                            
+                                <i class="fa-regular fa-image fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/friends">FRIENDS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/thanks">THANKS</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/linkbox"
+                        >
+                            <span>Linkbox</span>
+                            <i class="fa-regular fa-bookmark fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/moments"
+                        >
+                            <span>Moments</span>
+                            <i class="fa-regular fa-thought-bubble fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">21</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="/images/how-to-bypass-vpn-detection.webp" alt="How to Bypass VPN Detection" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">How to Bypass VPN Detection</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/my-avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Astrid Stark</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv. ∞</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-09-04 20:37:53</span>
+        <span class="mobile">2025-09-04 20:37:53</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-09-04 20:35:33</span>
+            <span class="mobile">2025-09-04 20:35:33</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Programming/">Programming</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/IP/">IP</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/VPN/">VPN</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h2 id="一、代理配置"><a href="#一、代理配置" class="headerlink" title="一、代理配置"></a>一、代理配置</h2><p>打开 Clash Verge，选择一个节点，并将路由设置为全局。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img0.webp"
+                      alt="设置全局路由"
+                ></p>
+<p>打开设置，将 DNS 覆写、IPv6、统一延迟三个开关打开。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img1.webp"
+                      alt="Clash 设置"
+                ></p>
+<p>打开端口设置，打开 HTTP(S) 代理端口的开关。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img2.webp"
+                      alt="端口配置"
+                ></p>
+<p>最后打开系统设置，将 Clash Verge 的运行模式调整为虚拟网卡模式，也可以右键任务栏图标打开 TUN 模式。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img3.webp"
+                      alt="虚拟网卡模式"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img4.webp"
+                      alt="TUN 模式"
+                ></p>
+<h2 id="二、指纹浏览器配置"><a href="#二、指纹浏览器配置" class="headerlink" title="二、指纹浏览器配置"></a>二、指纹浏览器配置</h2><p>下载并安装 AdsPower 指纹浏览器，打开后点击“新建浏览器”。</p>
+<p>修改环境名称和使用的浏览器内核。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img5.webp"
+                      alt="基础设置"
+                ></p>
+<p>修改代理信息，代理类型选择 HTTP，主机 IP 填写 <code>127.0.0.1</code>，端口号填写 Clash Verge 中的 HTTP 代理端口。填写完成后检查代理是否与 Clash Verge 中连接的节点信息一致。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img6.webp"
+                      alt="代理信息"
+                ></p>
+<p>完成后保存，即可创建指纹浏览器环境。</p>
+<h2 id="三、检测-IP-地址"><a href="#三、检测-IP-地址" class="headerlink" title="三、检测 IP 地址"></a>三、检测 IP 地址</h2><p>打开指纹浏览器，可以看到目前的 IP 信息。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img7.webp"
+                      alt="IP 信息"
+                ></p>
+<p>访问 <code>https://ip111.cn</code>，查看 IP 信息，保证三方测试 IP 地址相同。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img8.webp"
+                      alt="三方测试 IP 地址"
+                ></p>
+<p>接下来访问 <code>https://scamalytics.com/ip</code>，输入经过测试的 IP 地址，检测 IP 纯净度。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img9.webp"
+                      alt="检测 IP 纯净度"
+                ></p>
+<p>如果 IP 纯净度很低或为 0，证明纯净 IP 隐私浏览环境已创建好，能够绕过 VPN 检测。</p>
+
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/IP/">#IP</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/VPN/">#VPN</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/archives/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">Fixing Issue of Content Sync Display of Personal Website in Search Engine</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">How to Bypass VPN Detection</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE"><span class="nav-text">一、代理配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%8C%87%E7%BA%B9%E6%B5%8F%E8%A7%88%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="nav-text">二、指纹浏览器配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%A3%80%E6%B5%8B-IP-%E5%9C%B0%E5%9D%80"><span class="nav-text">三、检测 IP 地址</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #F54545"></i>&nbsp;&nbsp;<a href="/">Astrid Stark</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        21 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.5</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/Swup.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	<script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/imageViewer.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/utils.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/main.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/navbarShrink.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/scrollTopBottom.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/lightDarkSwitch.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/categoryList.js" ></script>
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/localSearch.js" ></script>
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/codeBlock.js" ></script>
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/lazyload.js" ></script>
+
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/runtime.js" ></script>
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/Typed.min.js" ></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/plugins/typed.js" ></script>
+
+
+
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/minimasonry.min.js" ></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/plugins/masonry.js" ></script>
+
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/anime.min.js" ></script>
+
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/tocToggle.js" data-swup-reload-script></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/toc.js" data-swup-reload-script></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/plugins/tabs.js" data-swup-reload-script></script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/essays.js" data-swup-reload-script></script>
+
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/bookmarkNav.js" ></script>
+
+	
+	<div id="aplayer"></div>
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/APlayer.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/plugins/aplayer.js" ></script>
+
+	
+</body>
+
+</html>

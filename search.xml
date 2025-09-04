@@ -338,103 +338,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Building Jellyfin Media Library with Docker</title>
-    <url>//archives/building-jellyfin-media-library-with-docker/</url>
-    <content><![CDATA[<h2 id="一、配置-Docker"><a href="#一、配置-Docker" class="headerlink" title="一、配置 Docker"></a>一、配置 Docker</h2><p>进入 Docker 官网，下载 Docker Desktop 并进行安装</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img0.webp"
-                      alt="Docker 官网"
-                ></p>
-<blockquote>
-<p>安装期间，可能会在控制台要求更新或下载 WSL，直接按任意键安装即可</p>
-</blockquote>
-<p>安装完成后就可以进入并查看 Docker Desktop 的控制面板</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img1.webp"
-                      alt="Docker Desktop 控制面板"
-                ></p>
-<p><em>可选：Docker Desktop 汉化</em></p>
-<p>打开如下链接，下载版本对应的 <code>app.asar</code> 文件，并替换 <code>C:\Program Files\Docker\Docker\frontend\resources</code> 路径下的同名文件</p>
-<p><a class="link"   href="https://github.com/asxez/DockerDesktop-CN" >https://github.com/asxez/DockerDesktop-CN<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="二、配置-Jellyfin"><a href="#二、配置-Jellyfin" class="headerlink" title="二、配置 Jellyfin"></a>二、配置 Jellyfin</h2><p>打开控制台，输入以下指令拉取 Jellyfin 镜像到本地：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
-
-<p>在控制台执行以下指令，运行一个 Jellyfin 容器：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d ^</span><br><span class="line">	--name=jellyfin ^</span><br><span class="line">	-p 8096:8096 ^</span><br><span class="line">	-p 8920:8920 ^</span><br><span class="line">	-v D:\Jellyfin\config:/config ^</span><br><span class="line">	-v D:\Jellyfin\cache:/cache ^</span><br><span class="line">	-v D:\Jellyfin\media:/media ^</span><br><span class="line">	--restart unless-stopped ^</span><br><span class="line">	jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p><strong>注意事项</strong>：</p>
-<ol>
-<li>每一行命令后边都必须加续行符号 <code>^</code> ；</li>
-<li><code>/config</code> , <code>/cache</code> , <code>/media</code> 的路径需替换为主机的实际路径</li>
-<li>Jellyfin 的默认 HTTP 端口为 8096，默认 HTTPS 端口为 8920</li>
-</ol>
-</blockquote>
-<p>容器运行成功后，访问 <a class="link"   href="http://localhost:8096/" >http://localhost:8096<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 打开 Jellyfin 控制面板</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img2.webp"
-                      alt="Jellyfin 控制面板"
-                ></p>
-<p>创建一个媒体库</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img3.webp"
-                      alt="创建媒体库"
-                ></p>
-<p>创建完成后，向相应的主机文件夹中添加电影</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img4.webp"
-                      alt="添加电影"
-                ></p>
-<p>在 Jellyfin 控制台进行媒体库扫描</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img5.webp"
-                      alt="媒体库扫描"
-                ></p>
-<p>扫描完成后，媒体库里便会展示出所有添加的媒体</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img6.webp"
-                      alt="扫描结果"
-                ></p>
-<p>其他管理容器的命令：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker start jellyfin   <span class="comment"># 启动名为 jellyfin 的容器</span></span><br><span class="line">docker stop jellyfin    <span class="comment"># 停止名为 jellyfin 的容器</span></span><br><span class="line">docker <span class="built_in">rm</span> jellyfin      <span class="comment"># 删除名为 jellyfin 的容器</span></span><br><span class="line">docker ps               <span class="comment"># 查看当前正在运行的容器</span></span><br><span class="line">docker ps -a            <span class="comment"># 查看所有容器，包括已停止的</span></span><br></pre></td></tr></table></figure></div>
-
-<h2 id="三、在其他平台访问媒体库"><a href="#三、在其他平台访问媒体库" class="headerlink" title="三、在其他平台访问媒体库"></a>三、在其他平台访问媒体库</h2><p>在终端查看本机 IP 地址：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></div>
-
-<p>如果其他平台和主机处于同一局域网下，输入 <code>http://x.x.x.x:8096</code> （<code>x.x.x.x</code> 替换为主机 IPv4 地址）即可访问；</p>
-<p>如果其他平台和主机不处于同一局域网下但都支持 IPv6，输入 <code>http://[x:x:x:x:x:x:x:x]:8096</code> （<code>[x:x:x:x:x:x:x:x]</code> 替换为主机 IPv6 地址）即可访问；</p>
-<p>如果其他平台和主机不处于同一局域网下且都不支持 IPv6，只能通过公网 IPv4 和端口转发实现访问。</p>
-<p>其他平台访问效果：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img7.webp"
-                      alt="其他平台访问结果"
-                ></p>
-]]></content>
-      <categories>
-        <category>Media</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Jellyfin</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Beginner&#39;s Guide for Ubuntu</title>
     <url>//archives/beginners-guide-for-ubuntu/</url>
     <content><![CDATA[<h2 id="一、安装-Ubuntu-系统"><a href="#一、安装-Ubuntu-系统" class="headerlink" title="一、安装 Ubuntu 系统"></a>一、安装 Ubuntu 系统</h2><p>访问 VMware Workshop Pro 官网，下载软件。</p>
@@ -817,99 +720,100 @@
       </tags>
   </entry>
   <entry>
-    <title>Cloudflare Warp Zero Trust User Guide</title>
-    <url>//archives/cloudflare-warp-zero-trust-user-guide/</url>
-    <content><![CDATA[<h2 id="一、创建-Cloudflare-账户和-Zero-Trust-团队"><a href="#一、创建-Cloudflare-账户和-Zero-Trust-团队" class="headerlink" title="一、创建 Cloudflare 账户和 Zero Trust 团队"></a>一、创建 Cloudflare 账户和 Zero Trust 团队</h2><p>注册一个 Cloudflare 账户，点击左侧的 Zero Trust</p>
+    <title>Building Jellyfin Media Library with Docker</title>
+    <url>//archives/building-jellyfin-media-library-with-docker/</url>
+    <content><![CDATA[<h2 id="一、配置-Docker"><a href="#一、配置-Docker" class="headerlink" title="一、配置 Docker"></a>一、配置 Docker</h2><p>进入 Docker 官网，下载 Docker Desktop 并进行安装</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img0.webp"
-                      alt="Cloudflare 控制台"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img0.webp"
+                      alt="Docker 官网"
                 ></p>
-<p>创建一个团队并填写名称</p>
+<blockquote>
+<p>安装期间，可能会在控制台要求更新或下载 WSL，直接按任意键安装即可</p>
+</blockquote>
+<p>安装完成后就可以进入并查看 Docker Desktop 的控制面板</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img1.webp"
-                      alt="创建 Cloudflare 团队"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img1.webp"
+                      alt="Docker Desktop 控制面板"
                 ></p>
-<p>选择免费套餐</p>
+<p><em>可选：Docker Desktop 汉化</em></p>
+<p>打开如下链接，下载版本对应的 <code>app.asar</code> 文件，并替换 <code>C:\Program Files\Docker\Docker\frontend\resources</code> 路径下的同名文件</p>
+<p><a class="link"   href="https://github.com/asxez/DockerDesktop-CN" >https://github.com/asxez/DockerDesktop-CN<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="二、配置-Jellyfin"><a href="#二、配置-Jellyfin" class="headerlink" title="二、配置 Jellyfin"></a>二、配置 Jellyfin</h2><p>打开控制台，输入以下指令拉取 Jellyfin 镜像到本地：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
+
+<p>在控制台执行以下指令，运行一个 Jellyfin 容器：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d ^</span><br><span class="line">	--name=jellyfin ^</span><br><span class="line">	-p 8096:8096 ^</span><br><span class="line">	-p 8920:8920 ^</span><br><span class="line">	-v D:\Jellyfin\config:/config ^</span><br><span class="line">	-v D:\Jellyfin\cache:/cache ^</span><br><span class="line">	-v D:\Jellyfin\media:/media ^</span><br><span class="line">	--restart unless-stopped ^</span><br><span class="line">	jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><strong>注意事项</strong>：</p>
+<ol>
+<li>每一行命令后边都必须加续行符号 <code>^</code> ；</li>
+<li><code>/config</code> , <code>/cache</code> , <code>/media</code> 的路径需替换为主机的实际路径</li>
+<li>Jellyfin 的默认 HTTP 端口为 8096，默认 HTTPS 端口为 8920</li>
+</ol>
+</blockquote>
+<p>容器运行成功后，访问 <a class="link"   href="http://localhost:8096/" >http://localhost:8096<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 打开 Jellyfin 控制面板</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img2.webp"
-                      alt="选择免费套餐"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img2.webp"
+                      alt="Jellyfin 控制面板"
                 ></p>
-<h2 id="二、添加团队筛选策略"><a href="#二、添加团队筛选策略" class="headerlink" title="二、添加团队筛选策略"></a>二、添加团队筛选策略</h2><p>回到 Zero Trust 页面，选择 Settings 中的 WARP Client 选项</p>
+<p>创建一个媒体库</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img3.webp"
-                      alt="Zero Trust 设置"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img3.webp"
+                      alt="创建媒体库"
                 ></p>
-<p>点击 Device enrollment permissions 中的 Manage，添加策略</p>
+<p>创建完成后，向相应的主机文件夹中添加电影</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img4.webp"
-                      alt="WARP Client 设置"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img4.webp"
+                      alt="添加电影"
                 ></p>
+<p>在 Jellyfin 控制台进行媒体库扫描</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img5.webp"
-                      alt="添加策略"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img5.webp"
+                      alt="媒体库扫描"
                 ></p>
-<p>规则名称任意，动作填 Allow，筛选器选择 Emails ending in，Value 填写能通过团队筛选的邮箱后缀</p>
+<p>扫描完成后，媒体库里便会展示出所有添加的媒体</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img6.webp"
-                      alt="策略详细内容"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img6.webp"
+                      alt="扫描结果"
                 ></p>
-<h2 id="三、添加团队用户"><a href="#三、添加团队用户" class="headerlink" title="三、添加团队用户"></a>三、添加团队用户</h2><p>在 Cloudflare Warp客户端中选择账户，点击使用 Cloudflare Zero Trust 登录</p>
+<p>其他管理容器的命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker start jellyfin   <span class="comment"># 启动名为 jellyfin 的容器</span></span><br><span class="line">docker stop jellyfin    <span class="comment"># 停止名为 jellyfin 的容器</span></span><br><span class="line">docker <span class="built_in">rm</span> jellyfin      <span class="comment"># 删除名为 jellyfin 的容器</span></span><br><span class="line">docker ps               <span class="comment"># 查看当前正在运行的容器</span></span><br><span class="line">docker ps -a            <span class="comment"># 查看所有容器，包括已停止的</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、在其他平台访问媒体库"><a href="#三、在其他平台访问媒体库" class="headerlink" title="三、在其他平台访问媒体库"></a>三、在其他平台访问媒体库</h2><p>在终端查看本机 IP 地址：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></div>
+
+<p>如果其他平台和主机处于同一局域网下，输入 <code>http://x.x.x.x:8096</code> （<code>x.x.x.x</code> 替换为主机 IPv4 地址）即可访问；</p>
+<p>如果其他平台和主机不处于同一局域网下但都支持 IPv6，输入 <code>http://[x:x:x:x:x:x:x:x]:8096</code> （<code>[x:x:x:x:x:x:x:x]</code> 替换为主机 IPv6 地址）即可访问；</p>
+<p>如果其他平台和主机不处于同一局域网下且都不支持 IPv6，只能通过公网 IPv4 和端口转发实现访问。</p>
+<p>其他平台访问效果：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img7.webp"
-                      alt="登录到 Cloudflare Zero Trust 团队"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img7.webp"
+                      alt="其他平台访问结果"
                 ></p>
-<p>使用 Cloudflare Zero Trust 登录之前的界面如图</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img8.webp"
-                      alt="登录团队前连接图示"
-                ></p>
-<p>根据要求填写团队名称并完成认证</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img9.webp"
-                      alt="填写团队名称并认证"
-                ></p>
-<p>使用 Cloudflare Zero Trust 登录之后的界面如图，可以发现已经变成了 Zero Trust，现在就可以使用 Zero Trust 访问外网了</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img10.webp"
-                      alt="登录团队后连接图示"
-                ></p>
-<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>由于各种原因，自 2024 年 6 月 6 日起，使用此方法访问外网已部分失效。</p>
-<p>如果连接失败且错误代码如图表示已无法正常连接。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img11.webp"
-                      alt="错误代码"
-                ></p>
-<p>部分地区和设备仍可通过手机流量或手机共享热点到电脑使用此方法。</p>
 ]]></content>
       <categories>
-        <category>Network</category>
+        <category>Media</category>
       </categories>
       <tags>
-        <tag>Cloudflare</tag>
+        <tag>Docker</tag>
+        <tag>Jellyfin</tag>
       </tags>
   </entry>
   <entry>
@@ -1187,155 +1091,99 @@
       </tags>
   </entry>
   <entry>
-    <title>Customizing Folder &amp; Disk Icons in Windows</title>
-    <url>//archives/customizing-folder-and-disk-icons-in-windows/</url>
-    <content><![CDATA[<p>Windows 本身自带许多图标文件，供我们对文件或文件夹图标进行自定义。但是有时候，系统自带的图标不能满足我们的需求，于是我们可以自定义一些图标并进行更换。</p>
-<h2 id="一、Windows-默认图标"><a href="#一、Windows-默认图标" class="headerlink" title="一、Windows 默认图标"></a>一、Windows 默认图标</h2><p>我们在新建文件夹时能看到 Windows 自带的默认图标。Windows 中一共有如下几个默认图标文件：</p>
-<p><code>shell32.dll</code>：</p>
+    <title>Cloudflare Warp Zero Trust User Guide</title>
+    <url>//archives/cloudflare-warp-zero-trust-user-guide/</url>
+    <content><![CDATA[<h2 id="一、创建-Cloudflare-账户和-Zero-Trust-团队"><a href="#一、创建-Cloudflare-账户和-Zero-Trust-团队" class="headerlink" title="一、创建 Cloudflare 账户和 Zero Trust 团队"></a>一、创建 Cloudflare 账户和 Zero Trust 团队</h2><p>注册一个 Cloudflare 账户，点击左侧的 Zero Trust</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img0.webp"
-                      alt="shell32.dll"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img0.webp"
+                      alt="Cloudflare 控制台"
                 ></p>
-<p><code>imageres.dll</code>：</p>
+<p>创建一个团队并填写名称</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img1.webp"
-                      alt="imageres.dll"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img1.webp"
+                      alt="创建 Cloudflare 团队"
                 ></p>
-<p><code>pifmgr.dll</code>：</p>
+<p>选择免费套餐</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img2.webp"
-                      alt="pifmgr.dll"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img2.webp"
+                      alt="选择免费套餐"
                 ></p>
-<p><code>moricons.dll</code>：</p>
+<h2 id="二、添加团队筛选策略"><a href="#二、添加团队筛选策略" class="headerlink" title="二、添加团队筛选策略"></a>二、添加团队筛选策略</h2><p>回到 Zero Trust 页面，选择 Settings 中的 WARP Client 选项</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img3.webp"
-                      alt="moricons.dll"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img3.webp"
+                      alt="Zero Trust 设置"
                 ></p>
-<p>这些图标被存储在一个 <code>.dll</code> 文件中，方便我们进行图标选择。</p>
-<h2 id="二、自定义磁盘图标"><a href="#二、自定义磁盘图标" class="headerlink" title="二、自定义磁盘图标"></a>二、自定义磁盘图标</h2><p>电脑里的不同磁盘，一般有着不同的作用，例如分别用来存储软件、图片等。因此，我们可能会想要更换磁盘的图标，让图标符合磁盘的功能。</p>
-<p><a class="link"   href="https://github.com/sameerasw/folder-icons" >Folder Icons<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 是一个提供 Windows 11 风格图标的 GitHub 仓库。它不仅提供了文件夹图标，也提供了很多磁盘图标供用户更换使用。</p>
+<p>点击 Device enrollment permissions 中的 Manage，添加策略</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img4.webp"
-                      alt="Folder Icons"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img4.webp"
+                      alt="WARP Client 设置"
                 ></p>
-<p>想要更换磁盘图标，首先需要新建一个 <code>.txt</code> 文件并另存为 <code>autorun.inf</code>，然后在文件里添加如下内容：</p>
-<div class="code-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[autorun]</span></span><br><span class="line"><span class="attr">icon</span>=<span class="string">&quot;favicon.ico&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>将 <code>autorun.inf</code> 文件和 <code>favicon.ico</code> 图标文件放在想要更改图标的磁盘的根目录。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img5.webp"
-                      alt="autorun"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img5.webp"
+                      alt="添加策略"
                 ></p>
-<blockquote>
-<p>为防止误删，可以将这两个文件隐藏。</p>
-</blockquote>
-<p>重启电脑后，就能看到更改后的磁盘图标了。</p>
+<p>规则名称任意，动作填 Allow，筛选器选择 Emails ending in，Value 填写能通过团队筛选的邮箱后缀</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img6.webp"
-                      alt="更换磁盘盘符图标"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img6.webp"
+                      alt="策略详细内容"
                 ></p>
-<h2 id="三、自定义文件夹图标"><a href="#三、自定义文件夹图标" class="headerlink" title="三、自定义文件夹图标"></a>三、自定义文件夹图标</h2><p>如果只有一个 <code>.ico</code> 图标文件，可以直接选择来更改文件夹图标。但如果有多个图标供选择，就可以像 Windows 系统一样，将所有图标文件存储到一个 <code>.dll</code> 文件里，便于管理。</p>
-<p>如果图标数量较少，可以使用 Resource Hacker 手动导入：点击 <code>Action - Add an Image or Other Binary Resource ...</code> 逐个导入图标文件。</p>
+<h2 id="三、添加团队用户"><a href="#三、添加团队用户" class="headerlink" title="三、添加团队用户"></a>三、添加团队用户</h2><p>在 Cloudflare Warp客户端中选择账户，点击使用 Cloudflare Zero Trust 登录</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img7.webp"
-                      alt="手动导入图标"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img7.webp"
+                      alt="登录到 Cloudflare Zero Trust 团队"
                 ></p>
-<p>但是，如果图标数量过多，逐个导入图标文件就显得太麻烦，这时我们可以使用 Visual Studio 2022 来将 <code>.ico</code> 文件批量打包为 <code>.dll</code> 文件。</p>
-<p>打开 Visual Studio 2022，选择“创建新项目”：</p>
+<p>使用 Cloudflare Zero Trust 登录之前的界面如图</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img8.webp"
-                      alt="创建新项目"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img8.webp"
+                      alt="登录团队前连接图示"
                 ></p>
-<p>项目模板选择“动态链接库(DLL)”：</p>
+<p>根据要求填写团队名称并完成认证</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img9.webp"
-                      alt="动态链接库(DLL)"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img9.webp"
+                      alt="填写团队名称并认证"
                 ></p>
-<p>在“视图 - 其他窗口”中选择“资源视图”（或者直接使用快捷键 <code>Ctrl + Shift + E</code>）：</p>
+<p>使用 Cloudflare Zero Trust 登录之后的界面如图，可以发现已经变成了 Zero Trust，现在就可以使用 Zero Trust 访问外网了</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img10.webp"
-                      alt="资源视图"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img10.webp"
+                      alt="登录团队后连接图示"
                 ></p>
-<p>在右侧的资源视图中，右键项目文件夹，添加资源：</p>
+<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>由于各种原因，自 2024 年 6 月 6 日起，使用此方法访问外网已部分失效。</p>
+<p>如果连接失败且错误代码如图表示已无法正常连接。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img11.webp"
-                      alt="添加资源"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img11.webp"
+                      alt="错误代码"
                 ></p>
-<p>导入 Bitmap 类型：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img12.webp"
-                      alt="导入 Bitmap"
-                ></p>
-<p>在弹出的窗口中选择 <code>.ico</code> 文件即可。</p>
-<blockquote>
-<p>如果图标文件太多，注意不要一次性导入，否则 Visual Studio 容易崩溃。</p>
-</blockquote>
-<p>下图为 Visual Studio 生成的 <code>.rc</code> 文件：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img13.webp"
-                      alt="资源脚本文件"
-                ></p>
-<blockquote>
-<p>这个资源脚本不能在 Resource Hacker里编译。Resource Hacker 不支持批量导入资源，如果手动创建资源脚本并粘贴所有 <code>.ico</code> 文件路径，编译后仍会出错，会出现识别出图标文件不同分辨率信息但无法正确导入不同分辨率图像的情况。</p>
-</blockquote>
-<p>最后，使用 <code>Ctrl + Shift + B</code> 生成。</p>
-<p>生成成功后，在 <code>项目名称\x64\Debug</code> 文件下就能找到编译后的 <code>项目名称.dll</code>文件。</p>
-<p>将这个 <code>.dll</code> 文件导入 Resource Hacker 里查看，发现结构正确无误。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img14.webp"
-                      alt="查看 DLL 文件图标分组结构"
-                ></p>
-<p>新建文件夹并在选择这个 <code>.dll</code> 文件：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img15.webp"
-                      alt="从生成的 DLL 文件中选择图标"
-                ></p>
-<p>更换成功！</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img16.webp"
-                      alt="图标更换效果"
-                ></p>
+<p>部分地区和设备仍可通过手机流量或手机共享热点到电脑使用此方法。</p>
 ]]></content>
       <categories>
-        <category>System</category>
+        <category>Network</category>
       </categories>
       <tags>
-        <tag>Windows Customization</tag>
-        <tag>Icon</tag>
+        <tag>Cloudflare</tag>
       </tags>
   </entry>
   <entry>
@@ -1667,6 +1515,180 @@
       <tags>
         <tag>DC</tag>
         <tag>TV Series</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Fixing Issue of Content Sync Display of Personal Website in Search Engine</title>
+    <url>//archives/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/</url>
+    <content><![CDATA[<p>有时候通过搜索引擎搜索自己的网站时，可能会发现展示的内容（如网站名称、Logo、标题等）不同步或没有及时更新。这通常是因为搜索引擎缓存了旧的页面数据。为了确保搜索引擎显示最新的内容，可以通过 Google Search Console 或 Bing Webmaster Tools 来解决这个问题。</p>
+<h2 id="一、域名所有权验证"><a href="#一、域名所有权验证" class="headerlink" title="一、域名所有权验证"></a>一、域名所有权验证</h2><p>以 Google Search Console 为例，打开 <a class="link"   href="https://search.google.com/search-console/" >Google Search Console<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，添加站点，出现如下界面：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img0.webp"
+                      alt="通过 DNS 解析记录验证域名所有权"
+                ></p>
+<p>打开域名提供商的网站（如腾讯云），打开域名的 DNS 解析记录并添加：</p>
+<blockquote>
+<p> 主机记录选择 <code>@</code>，记录类型选择 <code>TXT</code>，记录值粘贴 Google 提供的值，其他保持默认。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img1.webp"
+                      alt="腾讯云 DNS 解析记录"
+                ></p>
+<p>完成后返回 Google Search Console，可以看到验证已经完成：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img2.webp"
+                      alt="验证完成"
+                ></p>
+<blockquote>
+<p>建议使用 Google Search Console，因为 Bing Webmaster Tools 可以通过 Google 导入站点信息，无需二次配置。</p>
+<p>Bing Webmaster Tools 网址：<a class="link"   href="https://www.bing.com/webmasters/" >Bing Webmaster Tools<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+</blockquote>
+<h2 id="二、请求重新索引"><a href="#二、请求重新索引" class="headerlink" title="二、请求重新索引"></a>二、请求重新索引</h2><p>完成验证后，即可进入 Google Search Console 的控制台页面。</p>
+<p>在 URL Inspection 下点击 <code>REQUEST INDEXING</code> 即可请求重新索引，让 Google 更新站点信息。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img3.webp"
+                      alt="请求重新索引"
+                ></p>
+<p>大概经过一到两天时间就能看到自己域名下的网站更新后的信息。</p>
+<h2 id="三、提高索引速度"><a href="#三、提高索引速度" class="headerlink" title="三、提高索引速度"></a>三、提高索引速度</h2><p>为了加速搜索引擎的抓取和索引，可以为网站添加 Sitemap。</p>
+<p>执行以下命令安装 Sitemap 生成插件：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure></div>
+
+<p>在根目录的 <code>_config.yml</code> 文件中添加以下配置：</p>
+<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure></div>
+
+<p>执行以下命令来生成 <code>sitemap.xml</code> 文件：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>此命令会在 <code>public</code> 目录下生成 <code>sitemap.xml</code> 文件。</p>
+<p>在 <code>source</code> 文件夹下添加 <code>robots.txt</code> 文件，指引搜索引擎访问 Sitemap 文件。</p>
+<p><code>robots.txt</code> 文件内容如下：</p>
+<div class="code-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Disallow: </span><br><span class="line">Sitemap: https://1lya.com/sitemap.xml</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><code>robots.txt</code> 是一个文本文件，存放在网站根目录中。它告诉搜索引擎哪些页面或资源可以抓取，哪些应该被忽略。通常用于避免抓取无关或重复的内容。</p>
+</blockquote>
+<p>执行以下命令将生成的 Sitemap 部署到网站：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>部署完成后，可以在 <code>https://example.com/sitemap.xml</code> 访问并查看网站的 Sitemap。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img4.webp"
+                      alt="网站 Sitemap"
+                ></p>
+<p>将生成的 Sitemap URL 添加到 Google Search Console 或者 Bing Webmaster Tools：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img5.webp"
+                      alt="提交 Sitemap"
+                ></p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Personal Website</tag>
+        <tag>Sitemap</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Guide for Maven Installation &amp; Build</title>
+    <url>//archives/guide-for-maven-installation-and-build/</url>
+    <content><![CDATA[<h2 id="一、Maven-的下载与安装"><a href="#一、Maven-的下载与安装" class="headerlink" title="一、Maven 的下载与安装"></a>一、Maven 的下载与安装</h2><p><a class="link"   href="https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip" >Maven 3.9.8 Windows版本下载链接<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img0.webp"
+                      alt="Maven 官方下载"
+                ></p>
+<p>下载好后，解压到特定文件夹（路径不能有中文、空格和其他特殊字符）。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img1.webp"
+                      alt="Maven 安装文件夹"
+                ></p>
+<h2 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a>二、配置环境变量</h2><p>打开系统环境变量。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img2.webp"
+                      alt="编辑系统环境变量"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img3.webp"
+                      alt="系统属性 - 环境变量"
+                ></p>
+<p>修改 Path 内容，添加 Maven 安装路径。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img4.webp"
+                      alt="系统变量 - Path - 编辑"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img5.webp"
+                      alt="添加 Maven 路径"
+                ></p>
+<p>环境变量配置好后，在终端中输入 <code>mvn -v</code> 查看 Maven 版本，验证是否安装成功。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img6.webp"
+                      alt="查看 Maven 版本"
+                ></p>
+<h2 id="三、配置-settings-和-toolchains-文件"><a href="#三、配置-settings-和-toolchains-文件" class="headerlink" title="三、配置 settings 和 toolchains 文件"></a>三、配置 settings 和 toolchains 文件</h2><p>打开Maven安装路径下 <code>/conf/settings.xml</code> 和 <code>/conf/toolchains.xml</code> 文件。</p>
+<p>为了在 IDEA 中提高 Maven 的构建速度，需要修改 Maven 的下载源，所以先在 Maven 安装目录下新建本地仓库文件夹 <code>maven_repository</code> 。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img7.webp"
+                      alt="新建本地仓库文件夹"
+                ></p>
+<p><code>settings.xml</code> 文件修改如下：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;localRepository&gt;标签放Maven仓库路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>D:/Apache Maven/apache-maven-3.9.8/maven_repository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">proxies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">proxies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">servers</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servers</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;mirrors&gt;标签中放Maven的下载源 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>aliyunmaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>Aliyun Public Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://maven.aliyun.com/repository/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;profiles&gt;标签中放jdk的版本 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>jdk-22<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>22<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>除阿里云外其他国内仓库地址：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- NetEase --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-163<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus 163<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.163.com/maven/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tecent Cloud --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-tencentyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus tencentyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br></pre></td></tr></table></figure></div>
+
+<p><code>toolchains.xml</code> 文件修改如下：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">toolchains</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;toolchain&gt;的&lt;provides&gt;标签中放jdk版本，&lt;configuration&gt;标签中放jdk安装路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toolchain</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>jdk<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">provides</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>22<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">vendor</span>&gt;</span>oracle<span class="tag">&lt;/<span class="name">vendor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">provides</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">jdkHome</span>&gt;</span>C:/Program Files/Java/jdk-22<span class="tag">&lt;/<span class="name">jdkHome</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">toolchain</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">toolchains</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>修改好后，在终端输入 <code>mvn help:system</code> 测试，Maven 会自动下载缺省的或者更新的各种配置文件和依赖到本地仓库中。如果出现 Build Success，说明 Maven 已经配置成功了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img8.webp"
+                      alt="测试 Maven 配置"
+                ></p>
+<h2 id="四、InetlliJ-IDEA-配置"><a href="#四、InetlliJ-IDEA-配置" class="headerlink" title="四、InetlliJ IDEA 配置"></a>四、InetlliJ IDEA 配置</h2><p>在 Maven 设置里，修改 Maven 主路径、用户设置文件和本地仓库的内容即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img9.webp"
+                      alt="IntelliJ IDEA 配置"
+                ></p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
@@ -2162,6 +2184,402 @@
       <tags>
         <tag>Windows</tag>
         <tag>Issues</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Customizing Folder &amp; Disk Icons in Windows</title>
+    <url>//archives/customizing-folder-and-disk-icons-in-windows/</url>
+    <content><![CDATA[<p>Windows 本身自带许多图标文件，供我们对文件或文件夹图标进行自定义。但是有时候，系统自带的图标不能满足我们的需求，于是我们可以自定义一些图标并进行更换。</p>
+<h2 id="一、Windows-默认图标"><a href="#一、Windows-默认图标" class="headerlink" title="一、Windows 默认图标"></a>一、Windows 默认图标</h2><p>我们在新建文件夹时能看到 Windows 自带的默认图标。Windows 中一共有如下几个默认图标文件：</p>
+<p><code>shell32.dll</code>：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img0.webp"
+                      alt="shell32.dll"
+                ></p>
+<p><code>imageres.dll</code>：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img1.webp"
+                      alt="imageres.dll"
+                ></p>
+<p><code>pifmgr.dll</code>：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img2.webp"
+                      alt="pifmgr.dll"
+                ></p>
+<p><code>moricons.dll</code>：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img3.webp"
+                      alt="moricons.dll"
+                ></p>
+<p>这些图标被存储在一个 <code>.dll</code> 文件中，方便我们进行图标选择。</p>
+<h2 id="二、自定义磁盘图标"><a href="#二、自定义磁盘图标" class="headerlink" title="二、自定义磁盘图标"></a>二、自定义磁盘图标</h2><p>电脑里的不同磁盘，一般有着不同的作用，例如分别用来存储软件、图片等。因此，我们可能会想要更换磁盘的图标，让图标符合磁盘的功能。</p>
+<p><a class="link"   href="https://github.com/sameerasw/folder-icons" >Folder Icons<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 是一个提供 Windows 11 风格图标的 GitHub 仓库。它不仅提供了文件夹图标，也提供了很多磁盘图标供用户更换使用。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img4.webp"
+                      alt="Folder Icons"
+                ></p>
+<p>想要更换磁盘图标，首先需要新建一个 <code>.txt</code> 文件并另存为 <code>autorun.inf</code>，然后在文件里添加如下内容：</p>
+<div class="code-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[autorun]</span></span><br><span class="line"><span class="attr">icon</span>=<span class="string">&quot;favicon.ico&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>将 <code>autorun.inf</code> 文件和 <code>favicon.ico</code> 图标文件放在想要更改图标的磁盘的根目录。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img5.webp"
+                      alt="autorun"
+                ></p>
+<blockquote>
+<p>为防止误删，可以将这两个文件隐藏。</p>
+</blockquote>
+<p>重启电脑后，就能看到更改后的磁盘图标了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img6.webp"
+                      alt="更换磁盘盘符图标"
+                ></p>
+<h2 id="三、自定义文件夹图标"><a href="#三、自定义文件夹图标" class="headerlink" title="三、自定义文件夹图标"></a>三、自定义文件夹图标</h2><p>如果只有一个 <code>.ico</code> 图标文件，可以直接选择来更改文件夹图标。但如果有多个图标供选择，就可以像 Windows 系统一样，将所有图标文件存储到一个 <code>.dll</code> 文件里，便于管理。</p>
+<p>如果图标数量较少，可以使用 Resource Hacker 手动导入：点击 <code>Action - Add an Image or Other Binary Resource ...</code> 逐个导入图标文件。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img7.webp"
+                      alt="手动导入图标"
+                ></p>
+<p>但是，如果图标数量过多，逐个导入图标文件就显得太麻烦，这时我们可以使用 Visual Studio 2022 来将 <code>.ico</code> 文件批量打包为 <code>.dll</code> 文件。</p>
+<p>打开 Visual Studio 2022，选择“创建新项目”：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img8.webp"
+                      alt="创建新项目"
+                ></p>
+<p>项目模板选择“动态链接库(DLL)”：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img9.webp"
+                      alt="动态链接库(DLL)"
+                ></p>
+<p>在“视图 - 其他窗口”中选择“资源视图”（或者直接使用快捷键 <code>Ctrl + Shift + E</code>）：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img10.webp"
+                      alt="资源视图"
+                ></p>
+<p>在右侧的资源视图中，右键项目文件夹，添加资源：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img11.webp"
+                      alt="添加资源"
+                ></p>
+<p>导入 Bitmap 类型：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img12.webp"
+                      alt="导入 Bitmap"
+                ></p>
+<p>在弹出的窗口中选择 <code>.ico</code> 文件即可。</p>
+<blockquote>
+<p>如果图标文件太多，注意不要一次性导入，否则 Visual Studio 容易崩溃。</p>
+</blockquote>
+<p>下图为 Visual Studio 生成的 <code>.rc</code> 文件：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img13.webp"
+                      alt="资源脚本文件"
+                ></p>
+<blockquote>
+<p>这个资源脚本不能在 Resource Hacker里编译。Resource Hacker 不支持批量导入资源，如果手动创建资源脚本并粘贴所有 <code>.ico</code> 文件路径，编译后仍会出错，会出现识别出图标文件不同分辨率信息但无法正确导入不同分辨率图像的情况。</p>
+</blockquote>
+<p>最后，使用 <code>Ctrl + Shift + B</code> 生成。</p>
+<p>生成成功后，在 <code>项目名称\x64\Debug</code> 文件下就能找到编译后的 <code>项目名称.dll</code>文件。</p>
+<p>将这个 <code>.dll</code> 文件导入 Resource Hacker 里查看，发现结构正确无误。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img14.webp"
+                      alt="查看 DLL 文件图标分组结构"
+                ></p>
+<p>新建文件夹并在选择这个 <code>.dll</code> 文件：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img15.webp"
+                      alt="从生成的 DLL 文件中选择图标"
+                ></p>
+<p>更换成功！</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img16.webp"
+                      alt="图标更换效果"
+                ></p>
+]]></content>
+      <categories>
+        <category>System</category>
+      </categories>
+      <tags>
+        <tag>Windows Customization</tag>
+        <tag>Icon</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Host Static Web Pages on Personal Domain via GitHub</title>
+    <url>//archives/host-static-web-pages-on-personal-domain-via-github/</url>
+    <content><![CDATA[<h2 id="一、将-Git-连接到-GitHub"><a href="#一、将-Git-连接到-GitHub" class="headerlink" title="一、将 Git 连接到 GitHub"></a>一、将 Git 连接到 GitHub</h2><p>使用 SSH 方式将 Git 连接到 GitHub</p>
+<p>首先将个人用户名和密码添加到 <code>git config</code></p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global [user.name](http://user.name/) <span class="string">&quot;AstridStark25963&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;astridstark25963@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>可以通过以下命令检查配置是否正确：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure></div>
+
+<p>查看是否已有SSH密钥：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -al ~/.ssh</span><br></pre></td></tr></table></figure></div>
+
+<p>如果看到 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 文件，表示已经存在SSH密钥，可以选择使用现有的密钥或者生成新的密钥。</p>
+<p>生成SSH密钥：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;astridstark@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>命令后添加 <code>-C &quot;astridstark25963@gmail.com&quot;</code> 是将邮箱作为密钥的标识符号。</p>
+<p>当提示 <strong>Enter file in which to save the key</strong> 时，按 <code>Enter</code> 使用默认位置（<code>/c/Users/lenovo/.ssh/id_rsa</code>）。<br>当提示 <strong>Enter passphrase</strong> 时，可以选择设置一个密码短语（增加安全性），或者直接按 <code>Enter</code> 跳过。</p>
+</blockquote>
+<p>在 Git Bash 中输入以下命令，启动 SSH 代理并添加密钥：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></div>
+
+<p>然后将 SSH 密钥添加到 GitHub</p>
+<p>在 Git Bash 中输入以下命令，复制公钥内容：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></div>
+
+<p>复制输出的内容（从 <code>ssh-rsa</code> 开始到邮箱结束）。</p>
+<p>在 <code>GitHub 账户 -&gt; Settings -&gt; SSH and GPG keys</code> 中添加新的 SSH 密钥，在 <strong>Key</strong> 字段中粘贴刚刚复制的公钥内容即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img0.webp"
+                      alt="Add SSH key to GitHub"
+                ></p>
+<p>通过输入以下命令测试与 GitHub 的连接：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div>
+
+<p>如果一切正常，会看到如下信息：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img1.webp"
+                      alt="SSH connection test"
+                ></p>
+<h2 id="二、创建仓库并克隆到本地"><a href="#二、创建仓库并克隆到本地" class="headerlink" title="二、创建仓库并克隆到本地"></a>二、创建仓库并克隆到本地</h2><p>由于目的是将静态页面关联到个人域名，所以直接在 GitHub 创建用户名同名仓库 <code>AstridStark25963.github.io</code> </p>
+<blockquote>
+<p>直接创建用户名同名仓库，GitHub 会自动将此仓库使用 GitHub Pages 托管</p>
+</blockquote>
+<p>在仓库页面选择 Code - SSH，获得克隆仓库所需的命令</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img2.webp"
+                      alt="Git clone"
+                ></p>
+<p>在 Git Bash 输入以下命令进行仓库克隆：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:AstridStark25963/AstridStark25963.github.io.git</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img3.webp"
+                      alt="Clone success"
+                ></p>
+<h2 id="三、由本地向仓库提交更改"><a href="#三、由本地向仓库提交更改" class="headerlink" title="三、由本地向仓库提交更改"></a>三、由本地向仓库提交更改</h2><p>修改本地文件，在仓库所在文件夹添加测试文件：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img4.webp"
+                      alt="Add a test file"
+                ></p>
+<p>在 Git Bash 定位到仓库所在文件夹：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">cd</span> AstridStark25963.github.io</span><br></pre></td></tr></table></figure></div>
+
+<p>查看当前仓库状态：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img5.webp"
+                      alt="Check repository status"
+                ></p>
+<p>将更改添加到暂存区，提交更改并推送到远程仓库：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;add test.txt&quot;</span></span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img6.webp"
+                      alt="Add, commit and push"
+                ></p>
+<p>查看修改历史：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img7.webp"
+                      alt="Git log"
+                ></p>
+<h2 id="四、将-GitHub-仓库添加到域名解析记录"><a href="#四、将-GitHub-仓库添加到域名解析记录" class="headerlink" title="四、将 GitHub 仓库添加到域名解析记录"></a>四、将 GitHub 仓库添加到域名解析记录</h2><p>打开腾讯云，向域名添加解析记录：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img8.webp"
+                      alt="Add DNS record"
+                ></p>
+<p>第一条记录，主机记录填写 <code>www</code> ，记录类型填写 <code>CNAME</code> ，记录值填写 <code>astridstark25963.github.io</code>  </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img9.webp"
+                      alt="Host record"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img10.webp"
+                      alt="Record type"
+                ></p>
+<p>第二条记录，主机记录填写 <code>@</code> ，记录类型填写 <code>A</code> ，记录值填写第一条记录中记录值的 IP 地址，可以通过在终端执行 <code>ping</code> 命令得到。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img11.webp"
+                      alt="Ping astridstark25963.github.io"
+                ></p>
+<p>在本地添加 <code>CNAME</code> 文件并推送到远程仓库，内容为域名。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img12.webp"
+                      alt="CNAME"
+                ></p>
+<p>成功推送后，在仓库的 <code>Settings -&gt; Pages -&gt; Custom domain</code> 中可以看到解析后的域名信息。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img13.webp"
+                      alt="Custom domain"
+                ></p>
+<p>最后直接在浏览器访问域名，即可看到网页内容。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img14.webp"
+                      alt="Success!"
+                ></p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Personal Website</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>How to Bypass VPN Detection</title>
+    <url>//archives/how-to-bypass-vpn-detection/</url>
+    <content><![CDATA[<h2 id="一、代理配置"><a href="#一、代理配置" class="headerlink" title="一、代理配置"></a>一、代理配置</h2><p>打开 Clash Verge，选择一个节点，并将路由设置为全局。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img0.webp"
+                      alt="设置全局路由"
+                ></p>
+<p>打开设置，将 DNS 覆写、IPv6、统一延迟三个开关打开。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img1.webp"
+                      alt="Clash 设置"
+                ></p>
+<p>打开端口设置，打开 HTTP(S) 代理端口的开关。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img2.webp"
+                      alt="端口配置"
+                ></p>
+<p>最后打开系统设置，将 Clash Verge 的运行模式调整为虚拟网卡模式，也可以右键任务栏图标打开 TUN 模式。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img3.webp"
+                      alt="虚拟网卡模式"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img4.webp"
+                      alt="TUN 模式"
+                ></p>
+<h2 id="二、指纹浏览器配置"><a href="#二、指纹浏览器配置" class="headerlink" title="二、指纹浏览器配置"></a>二、指纹浏览器配置</h2><p>下载并安装 AdsPower 指纹浏览器，打开后点击“新建浏览器”。</p>
+<p>修改环境名称和使用的浏览器内核。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img5.webp"
+                      alt="基础设置"
+                ></p>
+<p>修改代理信息，代理类型选择 HTTP，主机 IP 填写 <code>127.0.0.1</code>，端口号填写 Clash Verge 中的 HTTP 代理端口。填写完成后检查代理是否与 Clash Verge 中连接的节点信息一致。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img6.webp"
+                      alt="代理信息"
+                ></p>
+<p>完成后保存，即可创建指纹浏览器环境。</p>
+<h2 id="三、检测-IP-地址"><a href="#三、检测-IP-地址" class="headerlink" title="三、检测 IP 地址"></a>三、检测 IP 地址</h2><p>打开指纹浏览器，可以看到目前的 IP 信息。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img7.webp"
+                      alt="IP 信息"
+                ></p>
+<p>访问 <code>https://ip111.cn</code>，查看 IP 信息，保证三方测试 IP 地址相同。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img8.webp"
+                      alt="三方测试 IP 地址"
+                ></p>
+<p>接下来访问 <code>https://scamalytics.com/ip</code>，输入经过测试的 IP 地址，检测 IP 纯净度。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img9.webp"
+                      alt="检测 IP 纯净度"
+                ></p>
+<p>如果 IP 纯净度很低或为 0，证明纯净 IP 隐私浏览环境已创建好，能够绕过 VPN 检测。</p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>IP</tag>
+        <tag>VPN</tag>
       </tags>
   </entry>
   <entry>
@@ -2856,88 +3274,435 @@
       </tags>
   </entry>
   <entry>
-    <title>Fixing Issue of Content Sync Display of Personal Website in Search Engine</title>
-    <url>//archives/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/</url>
-    <content><![CDATA[<p>有时候通过搜索引擎搜索自己的网站时，可能会发现展示的内容（如网站名称、Logo、标题等）不同步或没有及时更新。这通常是因为搜索引擎缓存了旧的页面数据。为了确保搜索引擎显示最新的内容，可以通过 Google Search Console 或 Bing Webmaster Tools 来解决这个问题。</p>
-<h2 id="一、域名所有权验证"><a href="#一、域名所有权验证" class="headerlink" title="一、域名所有权验证"></a>一、域名所有权验证</h2><p>以 Google Search Console 为例，打开 <a class="link"   href="https://search.google.com/search-console/" >Google Search Console<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，添加站点，出现如下界面：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img0.webp"
-                      alt="通过 DNS 解析记录验证域名所有权"
-                ></p>
-<p>打开域名提供商的网站（如腾讯云），打开域名的 DNS 解析记录并添加：</p>
-<blockquote>
-<p> 主机记录选择 <code>@</code>，记录类型选择 <code>TXT</code>，记录值粘贴 Google 提供的值，其他保持默认。</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img1.webp"
-                      alt="腾讯云 DNS 解析记录"
-                ></p>
-<p>完成后返回 Google Search Console，可以看到验证已经完成：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img2.webp"
-                      alt="验证完成"
-                ></p>
-<blockquote>
-<p>建议使用 Google Search Console，因为 Bing Webmaster Tools 可以通过 Google 导入站点信息，无需二次配置。</p>
-<p>Bing Webmaster Tools 网址：<a class="link"   href="https://www.bing.com/webmasters/" >Bing Webmaster Tools<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-</blockquote>
-<h2 id="二、请求重新索引"><a href="#二、请求重新索引" class="headerlink" title="二、请求重新索引"></a>二、请求重新索引</h2><p>完成验证后，即可进入 Google Search Console 的控制台页面。</p>
-<p>在 URL Inspection 下点击 <code>REQUEST INDEXING</code> 即可请求重新索引，让 Google 更新站点信息。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img3.webp"
-                      alt="请求重新索引"
-                ></p>
-<p>大概经过一到两天时间就能看到自己域名下的网站更新后的信息。</p>
-<h2 id="三、提高索引速度"><a href="#三、提高索引速度" class="headerlink" title="三、提高索引速度"></a>三、提高索引速度</h2><p>为了加速搜索引擎的抓取和索引，可以为网站添加 Sitemap。</p>
-<p>执行以下命令安装 Sitemap 生成插件：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure></div>
-
-<p>在根目录的 <code>_config.yml</code> 文件中添加以下配置：</p>
-<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure></div>
-
-<p>执行以下命令来生成 <code>sitemap.xml</code> 文件：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>此命令会在 <code>public</code> 目录下生成 <code>sitemap.xml</code> 文件。</p>
-<p>在 <code>source</code> 文件夹下添加 <code>robots.txt</code> 文件，指引搜索引擎访问 Sitemap 文件。</p>
-<p><code>robots.txt</code> 文件内容如下：</p>
-<div class="code-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Disallow: </span><br><span class="line">Sitemap: https://1lya.com/sitemap.xml</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p><code>robots.txt</code> 是一个文本文件，存放在网站根目录中。它告诉搜索引擎哪些页面或资源可以抓取，哪些应该被忽略。通常用于避免抓取无关或重复的内容。</p>
-</blockquote>
-<p>执行以下命令将生成的 Sitemap 部署到网站：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>部署完成后，可以在 <code>https://example.com/sitemap.xml</code> 访问并查看网站的 Sitemap。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img4.webp"
-                      alt="网站 Sitemap"
-                ></p>
-<p>将生成的 Sitemap URL 添加到 Google Search Console 或者 Bing Webmaster Tools：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img5.webp"
-                      alt="提交 Sitemap"
-                ></p>
+    <title>List of Books by Higashino Keigo</title>
+    <url>//archives/list-of-books-by-higashino-keigo/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>书名</th>
+<th>豆瓣链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>放学后</td>
+<td><a class="link"   href="https://book.douban.com/subject/27102207/" >https://book.douban.com/subject/27102207/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>毕业</td>
+<td><a class="link"   href="https://book.douban.com/subject/30317422/" >https://book.douban.com/subject/30317422/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>白马山庄谜案</td>
+<td><a class="link"   href="https://book.douban.com/subject/37092930/" >https://book.douban.com/subject/37092930/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>学生街的日子</td>
+<td><a class="link"   href="https://book.douban.com/subject/30276769/" >https://book.douban.com/subject/30276769/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>11字谜案</td>
+<td><a class="link"   href="https://book.douban.com/subject/36511003/" >https://book.douban.com/subject/36511003/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>魔球</td>
+<td><a class="link"   href="https://book.douban.com/subject/34778575/" >https://book.douban.com/subject/34778575/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>以眨眼干杯</td>
+<td><a class="link"   href="https://book.douban.com/subject/36185283/" >https://book.douban.com/subject/36185283/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>浪花少年侦探团</td>
+<td><a class="link"   href="https://book.douban.com/subject/26935572/" >https://book.douban.com/subject/26935572/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>悲剧人偶</td>
+<td><a class="link"   href="https://book.douban.com/subject/30210694/" >https://book.douban.com/subject/30210694/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>沉睡的森林</td>
+<td><a class="link"   href="https://book.douban.com/subject/30330292/" >https://book.douban.com/subject/30330292/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>鸟人计划</td>
+<td><a class="link"   href="https://book.douban.com/subject/26276287/" >https://book.douban.com/subject/26276287/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>空中杀人现场</td>
+<td><a class="link"   href="https://book.douban.com/subject/30487091/" >https://book.douban.com/subject/30487091/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>布鲁特斯的心脏</td>
+<td><a class="link"   href="https://book.douban.com/subject/26103854/" >https://book.douban.com/subject/26103854/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>侦探俱乐部</td>
+<td><a class="link"   href="https://book.douban.com/subject/26298560/" >https://book.douban.com/subject/26298560/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>宿命</td>
+<td><a class="link"   href="https://book.douban.com/subject/36866224/" >https://book.douban.com/subject/36866224/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>无凶之夜</td>
+<td><a class="link"   href="https://book.douban.com/subject/37054138/" >https://book.douban.com/subject/37054138/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面山庄</td>
+<td><a class="link"   href="https://book.douban.com/subject/27200261/" >https://book.douban.com/subject/27200261/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>变身</td>
+<td><a class="link"   href="https://book.douban.com/subject/36936599/" >https://book.douban.com/subject/36936599/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>长长的回廊</td>
+<td><a class="link"   href="https://book.douban.com/subject/35039915/" >https://book.douban.com/subject/35039915/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>天使之耳</td>
+<td><a class="link"   href="https://book.douban.com/subject/30488942/" >https://book.douban.com/subject/30488942/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>大雪中的山庄</td>
+<td><a class="link"   href="https://book.douban.com/subject/27037148/" >https://book.douban.com/subject/27037148/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>美丽的凶器</td>
+<td><a class="link"   href="https://book.douban.com/subject/26103819/" >https://book.douban.com/subject/26103819/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>同级生</td>
+<td><a class="link"   href="https://book.douban.com/subject/34778577/" >https://book.douban.com/subject/34778577/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>分身</td>
+<td><a class="link"   href="https://book.douban.com/subject/36866451/" >https://book.douban.com/subject/36866451/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>再见了，忍老师</td>
+<td><a class="link"   href="https://book.douban.com/subject/30464974/" >https://book.douban.com/subject/30464974/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>沉睡美人</td>
+<td><a class="link"   href="https://book.douban.com/subject/37129003/" >https://book.douban.com/subject/37129003/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>从前我死去的家</td>
+<td><a class="link"   href="https://book.douban.com/subject/30245830/" >https://book.douban.com/subject/30245830/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>造彩虹的人</td>
+<td><a class="link"   href="https://book.douban.com/subject/27037149/" >https://book.douban.com/subject/27037149/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>平行世界·爱情故事</td>
+<td><a class="link"   href="https://book.douban.com/subject/34786082/" >https://book.douban.com/subject/34786082/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>我的晃荡的青春</td>
+<td><a class="link"   href="https://book.douban.com/subject/36866459/" >https://book.douban.com/subject/36866459/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>怪笑小说</td>
+<td><a class="link"   href="https://book.douban.com/subject/30296025/" >https://book.douban.com/subject/30296025/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>天空之蜂</td>
+<td><a class="link"   href="https://book.douban.com/subject/26264953/" >https://book.douban.com/subject/26264953/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>名侦探的守则</td>
+<td><a class="link"   href="https://book.douban.com/subject/26926528/" >https://book.douban.com/subject/26926528/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>谁杀了她</td>
+<td><a class="link"   href="https://book.douban.com/subject/30210250/" >https://book.douban.com/subject/30210250/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>毒笑小说</td>
+<td><a class="link"   href="https://book.douban.com/subject/30242333/" >https://book.douban.com/subject/30242333/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>恶意</td>
+<td><a class="link"   href="https://book.douban.com/subject/35628298/" >https://book.douban.com/subject/35628298/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>名侦探的咒缚</td>
+<td><a class="link"   href="https://book.douban.com/subject/30358478/" >https://book.douban.com/subject/30358478/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>侦探伽利略</td>
+<td><a class="link"   href="https://book.douban.com/subject/30448044/" >https://book.douban.com/subject/30448044/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>秘密</td>
+<td><a class="link"   href="https://book.douban.com/subject/27115970/" >https://book.douban.com/subject/27115970/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>我杀了他</td>
+<td><a class="link"   href="https://book.douban.com/subject/30317423/" >https://book.douban.com/subject/30317423/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>白夜行</td>
+<td><a class="link"   href="https://book.douban.com/subject/27112607/" >https://book.douban.com/subject/27112607/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>只差一个谎言</td>
+<td><a class="link"   href="https://book.douban.com/subject/30358486/" >https://book.douban.com/subject/30358486/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>预知梦</td>
+<td><a class="link"   href="https://book.douban.com/subject/30433571/" >https://book.douban.com/subject/30433571/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>单恋</td>
+<td><a class="link"   href="https://book.douban.com/subject/26888804/" >https://book.douban.com/subject/26888804/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>超杀人事件</td>
+<td><a class="link"   href="https://book.douban.com/subject/30376544/" >https://book.douban.com/subject/30376544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>湖畔</td>
+<td><a class="link"   href="https://book.douban.com/subject/37031166/" >https://book.douban.com/subject/37031166/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>时生</td>
+<td><a class="link"   href="https://book.douban.com/subject/35519632/" >https://book.douban.com/subject/35519632/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>绑架游戏</td>
+<td><a class="link"   href="https://book.douban.com/subject/34662076/" >https://book.douban.com/subject/34662076/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>信</td>
+<td><a class="link"   href="https://book.douban.com/subject/36782358/" >https://book.douban.com/subject/36782358/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>我的老师是侦探</td>
+<td><a class="link"   href="https://book.douban.com/subject/33442266/" >https://book.douban.com/subject/33442266/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>杀人之门</td>
+<td><a class="link"   href="https://book.douban.com/subject/26273542/" >https://book.douban.com/subject/26273542/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>幻夜</td>
+<td><a class="link"   href="https://book.douban.com/subject/27666929/" >https://book.douban.com/subject/27666929/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>挑战</td>
+<td><a class="link"   href="https://book.douban.com/subject/33437510/" >https://book.douban.com/subject/33437510/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>彷徨之刃</td>
+<td><a class="link"   href="https://book.douban.com/subject/35440306/" >https://book.douban.com/subject/35440306/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>黑笑小说</td>
+<td><a class="link"   href="https://book.douban.com/subject/30242334/" >https://book.douban.com/subject/30242334/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>嫌疑人X的献身</td>
+<td><a class="link"   href="https://book.douban.com/subject/35718847/" >https://book.douban.com/subject/35718847/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>科学？</td>
+<td><a class="link"   href="https://book.douban.com/subject/34449302/" >https://book.douban.com/subject/34449302/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>梦回都灵</td>
+<td><a class="link"   href="https://book.douban.com/subject/27181608/" >https://book.douban.com/subject/27181608/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>红手指</td>
+<td><a class="link"   href="https://book.douban.com/subject/34778576/" >https://book.douban.com/subject/34778576/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>使命与魂的尽头</td>
+<td><a class="link"   href="https://book.douban.com/subject/26320595/" >https://book.douban.com/subject/26320595/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>东野圭吾的最后致意</td>
+<td><a class="link"   href="https://book.douban.com/subject/26390453/" >https://book.douban.com/subject/26390453/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>黎明之街</td>
+<td><a class="link"   href="https://book.douban.com/subject/27178063/" >https://book.douban.com/subject/27178063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>濒死之眼</td>
+<td><a class="link"   href="https://book.douban.com/subject/34662077/" >https://book.douban.com/subject/34662077/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>流星之绊</td>
+<td><a class="link"   href="https://book.douban.com/subject/36727352/" >https://book.douban.com/subject/36727352/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>伽利略的苦恼</td>
+<td><a class="link"   href="https://book.douban.com/subject/27041318/" >https://book.douban.com/subject/27041318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>圣女的救济</td>
+<td><a class="link"   href="https://book.douban.com/subject/26906797/" >https://book.douban.com/subject/26906797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>悖论13</td>
+<td><a class="link"   href="https://book.douban.com/subject/35503454/" >https://book.douban.com/subject/35503454/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>新参者</td>
+<td><a class="link"   href="https://book.douban.com/subject/26639966/" >https://book.douban.com/subject/26639966/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>布谷鸟的蛋</td>
+<td><a class="link"   href="https://book.douban.com/subject/34786087/" >https://book.douban.com/subject/34786087/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>白金数据</td>
+<td><a class="link"   href="https://book.douban.com/subject/37092928/" >https://book.douban.com/subject/37092928/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>雪国之劫</td>
+<td><a class="link"   href="https://book.douban.com/subject/34807344/" >https://book.douban.com/subject/34807344/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>那时的某人</td>
+<td><a class="link"   href="https://book.douban.com/subject/35713688/" >https://book.douban.com/subject/35713688/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>麒麟之翼</td>
+<td><a class="link"   href="https://book.douban.com/subject/35460816/" >https://book.douban.com/subject/35460816/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>盛夏方程式</td>
+<td><a class="link"   href="https://book.douban.com/subject/30317420/" >https://book.douban.com/subject/30317420/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面饭店</td>
+<td><a class="link"   href="https://book.douban.com/subject/36826872/" >https://book.douban.com/subject/36826872/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>歪笑小说</td>
+<td><a class="link"   href="https://book.douban.com/subject/30285335/" >https://book.douban.com/subject/30285335/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>解忧杂货店</td>
+<td><a class="link"   href="https://book.douban.com/subject/35000716/" >https://book.douban.com/subject/35000716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>梦幻花</td>
+<td><a class="link"   href="https://book.douban.com/subject/36980343/" >https://book.douban.com/subject/36980343/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>祈祷落幕时</td>
+<td><a class="link"   href="https://book.douban.com/subject/26118072/" >https://book.douban.com/subject/26118072/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>疾风回旋曲</td>
+<td><a class="link"   href="https://book.douban.com/subject/35374278/" >https://book.douban.com/subject/35374278/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>虚无的十字架</td>
+<td><a class="link"   href="https://book.douban.com/subject/35657906/" >https://book.douban.com/subject/35657906/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面前夜</td>
+<td><a class="link"   href="https://book.douban.com/subject/36865956/" >https://book.douban.com/subject/36865956/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>拉普拉斯的魔女</td>
+<td><a class="link"   href="https://book.douban.com/subject/35280274/" >https://book.douban.com/subject/35280274/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>禁断的魔术</td>
+<td><a class="link"   href="https://book.douban.com/subject/30317421/" >https://book.douban.com/subject/30317421/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>虚像的丑角</td>
+<td><a class="link"   href="https://book.douban.com/subject/35388953/" >https://book.douban.com/subject/35388953/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>沉睡的人鱼之家</td>
+<td><a class="link"   href="https://book.douban.com/subject/36328335/" >https://book.douban.com/subject/36328335/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>危险的维纳斯</td>
+<td><a class="link"   href="https://book.douban.com/subject/30380271/" >https://book.douban.com/subject/30380271/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>恋爱的贡多拉</td>
+<td><a class="link"   href="https://book.douban.com/subject/35413490/" >https://book.douban.com/subject/35413490/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>风雪追击</td>
+<td><a class="link"   href="https://book.douban.com/subject/35413489/" >https://book.douban.com/subject/35413489/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>第十年的情人节</td>
+<td><a class="link"   href="https://book.douban.com/subject/27125950/" >https://book.douban.com/subject/27125950/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面之夜</td>
+<td><a class="link"   href="https://book.douban.com/subject/36865955/" >https://book.douban.com/subject/36865955/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>魔力的胎动</td>
+<td><a class="link"   href="https://book.douban.com/subject/33455230/" >https://book.douban.com/subject/33455230/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>沉默的巡游</td>
+<td><a class="link"   href="https://book.douban.com/subject/34786086/" >https://book.douban.com/subject/34786086/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>希望之线</td>
+<td><a class="link"   href="https://book.douban.com/subject/35355556/" >https://book.douban.com/subject/35355556/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>祈念守护人</td>
+<td><a class="link"   href="https://book.douban.com/subject/35017604/" >https://book.douban.com/subject/35017604/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>无名之町</td>
+<td><a class="link"   href="https://book.douban.com/subject/35479856/" >https://book.douban.com/subject/35479856/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>白鸟与蝙蝠</td>
+<td><a class="link"   href="https://book.douban.com/subject/36074757/" >https://book.douban.com/subject/36074757/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>透明的螺旋</td>
+<td><a class="link"   href="https://book.douban.com/subject/35791376/" >https://book.douban.com/subject/35791376/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面游戏</td>
+<td><a class="link"   href="https://book.douban.com/subject/36561834/" >https://book.douban.com/subject/36561834/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>和魔女共度的七天 *</td>
+<td><a class="link"   href="https://book.douban.com/subject/36766063/" >https://book.douban.com/subject/36766063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>你杀了谁</td>
+<td><a class="link"   href="https://book.douban.com/subject/36987849/" >https://book.douban.com/subject/36987849/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>觉醒者们</td>
+<td><a class="link"   href="https://book.douban.com/subject/37268346/" >https://book.douban.com/subject/37268346/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>架空犯</td>
+<td><a class="link"   href="https://book.douban.com/subject/37348704/" >https://book.douban.com/subject/37348704/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+</tbody></table>
+<p>*: 未在中国大陆出版</p>
 ]]></content>
       <categories>
-        <category>Programming</category>
+        <category>Books</category>
       </categories>
       <tags>
-        <tag>Personal Website</tag>
-        <tag>Sitemap</tag>
+        <tag>Higashino Keigo</tag>
       </tags>
   </entry>
   <entry>
@@ -3413,527 +4178,6 @@
       </tags>
   </entry>
   <entry>
-    <title>List of Books by Higashino Keigo</title>
-    <url>//archives/list-of-books-by-higashino-keigo/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>书名</th>
-<th>豆瓣链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>放学后</td>
-<td><a class="link"   href="https://book.douban.com/subject/27102207/" >https://book.douban.com/subject/27102207/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>毕业</td>
-<td><a class="link"   href="https://book.douban.com/subject/30317422/" >https://book.douban.com/subject/30317422/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>白马山庄谜案</td>
-<td><a class="link"   href="https://book.douban.com/subject/37092930/" >https://book.douban.com/subject/37092930/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>学生街的日子</td>
-<td><a class="link"   href="https://book.douban.com/subject/30276769/" >https://book.douban.com/subject/30276769/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>11字谜案</td>
-<td><a class="link"   href="https://book.douban.com/subject/36511003/" >https://book.douban.com/subject/36511003/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>魔球</td>
-<td><a class="link"   href="https://book.douban.com/subject/34778575/" >https://book.douban.com/subject/34778575/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>以眨眼干杯</td>
-<td><a class="link"   href="https://book.douban.com/subject/36185283/" >https://book.douban.com/subject/36185283/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>浪花少年侦探团</td>
-<td><a class="link"   href="https://book.douban.com/subject/26935572/" >https://book.douban.com/subject/26935572/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>悲剧人偶</td>
-<td><a class="link"   href="https://book.douban.com/subject/30210694/" >https://book.douban.com/subject/30210694/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>沉睡的森林</td>
-<td><a class="link"   href="https://book.douban.com/subject/30330292/" >https://book.douban.com/subject/30330292/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>鸟人计划</td>
-<td><a class="link"   href="https://book.douban.com/subject/26276287/" >https://book.douban.com/subject/26276287/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>空中杀人现场</td>
-<td><a class="link"   href="https://book.douban.com/subject/30487091/" >https://book.douban.com/subject/30487091/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>布鲁特斯的心脏</td>
-<td><a class="link"   href="https://book.douban.com/subject/26103854/" >https://book.douban.com/subject/26103854/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>侦探俱乐部</td>
-<td><a class="link"   href="https://book.douban.com/subject/26298560/" >https://book.douban.com/subject/26298560/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>宿命</td>
-<td><a class="link"   href="https://book.douban.com/subject/36866224/" >https://book.douban.com/subject/36866224/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>无凶之夜</td>
-<td><a class="link"   href="https://book.douban.com/subject/37054138/" >https://book.douban.com/subject/37054138/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面山庄</td>
-<td><a class="link"   href="https://book.douban.com/subject/27200261/" >https://book.douban.com/subject/27200261/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>变身</td>
-<td><a class="link"   href="https://book.douban.com/subject/36936599/" >https://book.douban.com/subject/36936599/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>长长的回廊</td>
-<td><a class="link"   href="https://book.douban.com/subject/35039915/" >https://book.douban.com/subject/35039915/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>天使之耳</td>
-<td><a class="link"   href="https://book.douban.com/subject/30488942/" >https://book.douban.com/subject/30488942/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>大雪中的山庄</td>
-<td><a class="link"   href="https://book.douban.com/subject/27037148/" >https://book.douban.com/subject/27037148/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>美丽的凶器</td>
-<td><a class="link"   href="https://book.douban.com/subject/26103819/" >https://book.douban.com/subject/26103819/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>同级生</td>
-<td><a class="link"   href="https://book.douban.com/subject/34778577/" >https://book.douban.com/subject/34778577/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>分身</td>
-<td><a class="link"   href="https://book.douban.com/subject/36866451/" >https://book.douban.com/subject/36866451/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>再见了，忍老师</td>
-<td><a class="link"   href="https://book.douban.com/subject/30464974/" >https://book.douban.com/subject/30464974/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>沉睡美人</td>
-<td><a class="link"   href="https://book.douban.com/subject/37129003/" >https://book.douban.com/subject/37129003/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>从前我死去的家</td>
-<td><a class="link"   href="https://book.douban.com/subject/30245830/" >https://book.douban.com/subject/30245830/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>造彩虹的人</td>
-<td><a class="link"   href="https://book.douban.com/subject/27037149/" >https://book.douban.com/subject/27037149/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>平行世界·爱情故事</td>
-<td><a class="link"   href="https://book.douban.com/subject/34786082/" >https://book.douban.com/subject/34786082/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>我的晃荡的青春</td>
-<td><a class="link"   href="https://book.douban.com/subject/36866459/" >https://book.douban.com/subject/36866459/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>怪笑小说</td>
-<td><a class="link"   href="https://book.douban.com/subject/30296025/" >https://book.douban.com/subject/30296025/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>天空之蜂</td>
-<td><a class="link"   href="https://book.douban.com/subject/26264953/" >https://book.douban.com/subject/26264953/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>名侦探的守则</td>
-<td><a class="link"   href="https://book.douban.com/subject/26926528/" >https://book.douban.com/subject/26926528/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>谁杀了她</td>
-<td><a class="link"   href="https://book.douban.com/subject/30210250/" >https://book.douban.com/subject/30210250/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>毒笑小说</td>
-<td><a class="link"   href="https://book.douban.com/subject/30242333/" >https://book.douban.com/subject/30242333/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>恶意</td>
-<td><a class="link"   href="https://book.douban.com/subject/35628298/" >https://book.douban.com/subject/35628298/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>名侦探的咒缚</td>
-<td><a class="link"   href="https://book.douban.com/subject/30358478/" >https://book.douban.com/subject/30358478/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>侦探伽利略</td>
-<td><a class="link"   href="https://book.douban.com/subject/30448044/" >https://book.douban.com/subject/30448044/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>秘密</td>
-<td><a class="link"   href="https://book.douban.com/subject/27115970/" >https://book.douban.com/subject/27115970/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>我杀了他</td>
-<td><a class="link"   href="https://book.douban.com/subject/30317423/" >https://book.douban.com/subject/30317423/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>白夜行</td>
-<td><a class="link"   href="https://book.douban.com/subject/27112607/" >https://book.douban.com/subject/27112607/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>只差一个谎言</td>
-<td><a class="link"   href="https://book.douban.com/subject/30358486/" >https://book.douban.com/subject/30358486/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>预知梦</td>
-<td><a class="link"   href="https://book.douban.com/subject/30433571/" >https://book.douban.com/subject/30433571/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>单恋</td>
-<td><a class="link"   href="https://book.douban.com/subject/26888804/" >https://book.douban.com/subject/26888804/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>超杀人事件</td>
-<td><a class="link"   href="https://book.douban.com/subject/30376544/" >https://book.douban.com/subject/30376544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>湖畔</td>
-<td><a class="link"   href="https://book.douban.com/subject/37031166/" >https://book.douban.com/subject/37031166/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>时生</td>
-<td><a class="link"   href="https://book.douban.com/subject/35519632/" >https://book.douban.com/subject/35519632/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>绑架游戏</td>
-<td><a class="link"   href="https://book.douban.com/subject/34662076/" >https://book.douban.com/subject/34662076/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>信</td>
-<td><a class="link"   href="https://book.douban.com/subject/36782358/" >https://book.douban.com/subject/36782358/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>我的老师是侦探</td>
-<td><a class="link"   href="https://book.douban.com/subject/33442266/" >https://book.douban.com/subject/33442266/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>杀人之门</td>
-<td><a class="link"   href="https://book.douban.com/subject/26273542/" >https://book.douban.com/subject/26273542/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>幻夜</td>
-<td><a class="link"   href="https://book.douban.com/subject/27666929/" >https://book.douban.com/subject/27666929/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>挑战</td>
-<td><a class="link"   href="https://book.douban.com/subject/33437510/" >https://book.douban.com/subject/33437510/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>彷徨之刃</td>
-<td><a class="link"   href="https://book.douban.com/subject/35440306/" >https://book.douban.com/subject/35440306/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>黑笑小说</td>
-<td><a class="link"   href="https://book.douban.com/subject/30242334/" >https://book.douban.com/subject/30242334/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>嫌疑人X的献身</td>
-<td><a class="link"   href="https://book.douban.com/subject/35718847/" >https://book.douban.com/subject/35718847/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>科学？</td>
-<td><a class="link"   href="https://book.douban.com/subject/34449302/" >https://book.douban.com/subject/34449302/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>梦回都灵</td>
-<td><a class="link"   href="https://book.douban.com/subject/27181608/" >https://book.douban.com/subject/27181608/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>红手指</td>
-<td><a class="link"   href="https://book.douban.com/subject/34778576/" >https://book.douban.com/subject/34778576/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>使命与魂的尽头</td>
-<td><a class="link"   href="https://book.douban.com/subject/26320595/" >https://book.douban.com/subject/26320595/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>东野圭吾的最后致意</td>
-<td><a class="link"   href="https://book.douban.com/subject/26390453/" >https://book.douban.com/subject/26390453/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>黎明之街</td>
-<td><a class="link"   href="https://book.douban.com/subject/27178063/" >https://book.douban.com/subject/27178063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>濒死之眼</td>
-<td><a class="link"   href="https://book.douban.com/subject/34662077/" >https://book.douban.com/subject/34662077/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>流星之绊</td>
-<td><a class="link"   href="https://book.douban.com/subject/36727352/" >https://book.douban.com/subject/36727352/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>伽利略的苦恼</td>
-<td><a class="link"   href="https://book.douban.com/subject/27041318/" >https://book.douban.com/subject/27041318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>圣女的救济</td>
-<td><a class="link"   href="https://book.douban.com/subject/26906797/" >https://book.douban.com/subject/26906797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>悖论13</td>
-<td><a class="link"   href="https://book.douban.com/subject/35503454/" >https://book.douban.com/subject/35503454/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>新参者</td>
-<td><a class="link"   href="https://book.douban.com/subject/26639966/" >https://book.douban.com/subject/26639966/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>布谷鸟的蛋</td>
-<td><a class="link"   href="https://book.douban.com/subject/34786087/" >https://book.douban.com/subject/34786087/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>白金数据</td>
-<td><a class="link"   href="https://book.douban.com/subject/37092928/" >https://book.douban.com/subject/37092928/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>雪国之劫</td>
-<td><a class="link"   href="https://book.douban.com/subject/34807344/" >https://book.douban.com/subject/34807344/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>那时的某人</td>
-<td><a class="link"   href="https://book.douban.com/subject/35713688/" >https://book.douban.com/subject/35713688/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>麒麟之翼</td>
-<td><a class="link"   href="https://book.douban.com/subject/35460816/" >https://book.douban.com/subject/35460816/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>盛夏方程式</td>
-<td><a class="link"   href="https://book.douban.com/subject/30317420/" >https://book.douban.com/subject/30317420/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面饭店</td>
-<td><a class="link"   href="https://book.douban.com/subject/36826872/" >https://book.douban.com/subject/36826872/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>歪笑小说</td>
-<td><a class="link"   href="https://book.douban.com/subject/30285335/" >https://book.douban.com/subject/30285335/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>解忧杂货店</td>
-<td><a class="link"   href="https://book.douban.com/subject/35000716/" >https://book.douban.com/subject/35000716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>梦幻花</td>
-<td><a class="link"   href="https://book.douban.com/subject/36980343/" >https://book.douban.com/subject/36980343/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>祈祷落幕时</td>
-<td><a class="link"   href="https://book.douban.com/subject/26118072/" >https://book.douban.com/subject/26118072/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>疾风回旋曲</td>
-<td><a class="link"   href="https://book.douban.com/subject/35374278/" >https://book.douban.com/subject/35374278/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>虚无的十字架</td>
-<td><a class="link"   href="https://book.douban.com/subject/35657906/" >https://book.douban.com/subject/35657906/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面前夜</td>
-<td><a class="link"   href="https://book.douban.com/subject/36865956/" >https://book.douban.com/subject/36865956/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>拉普拉斯的魔女</td>
-<td><a class="link"   href="https://book.douban.com/subject/35280274/" >https://book.douban.com/subject/35280274/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>禁断的魔术</td>
-<td><a class="link"   href="https://book.douban.com/subject/30317421/" >https://book.douban.com/subject/30317421/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>虚像的丑角</td>
-<td><a class="link"   href="https://book.douban.com/subject/35388953/" >https://book.douban.com/subject/35388953/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>沉睡的人鱼之家</td>
-<td><a class="link"   href="https://book.douban.com/subject/36328335/" >https://book.douban.com/subject/36328335/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>危险的维纳斯</td>
-<td><a class="link"   href="https://book.douban.com/subject/30380271/" >https://book.douban.com/subject/30380271/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>恋爱的贡多拉</td>
-<td><a class="link"   href="https://book.douban.com/subject/35413490/" >https://book.douban.com/subject/35413490/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>风雪追击</td>
-<td><a class="link"   href="https://book.douban.com/subject/35413489/" >https://book.douban.com/subject/35413489/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>第十年的情人节</td>
-<td><a class="link"   href="https://book.douban.com/subject/27125950/" >https://book.douban.com/subject/27125950/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面之夜</td>
-<td><a class="link"   href="https://book.douban.com/subject/36865955/" >https://book.douban.com/subject/36865955/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>魔力的胎动</td>
-<td><a class="link"   href="https://book.douban.com/subject/33455230/" >https://book.douban.com/subject/33455230/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>沉默的巡游</td>
-<td><a class="link"   href="https://book.douban.com/subject/34786086/" >https://book.douban.com/subject/34786086/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>希望之线</td>
-<td><a class="link"   href="https://book.douban.com/subject/35355556/" >https://book.douban.com/subject/35355556/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>祈念守护人</td>
-<td><a class="link"   href="https://book.douban.com/subject/35017604/" >https://book.douban.com/subject/35017604/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>无名之町</td>
-<td><a class="link"   href="https://book.douban.com/subject/35479856/" >https://book.douban.com/subject/35479856/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>白鸟与蝙蝠</td>
-<td><a class="link"   href="https://book.douban.com/subject/36074757/" >https://book.douban.com/subject/36074757/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>透明的螺旋</td>
-<td><a class="link"   href="https://book.douban.com/subject/35791376/" >https://book.douban.com/subject/35791376/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面游戏</td>
-<td><a class="link"   href="https://book.douban.com/subject/36561834/" >https://book.douban.com/subject/36561834/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>和魔女共度的七天 *</td>
-<td><a class="link"   href="https://book.douban.com/subject/36766063/" >https://book.douban.com/subject/36766063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>你杀了谁</td>
-<td><a class="link"   href="https://book.douban.com/subject/36987849/" >https://book.douban.com/subject/36987849/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>觉醒者们</td>
-<td><a class="link"   href="https://book.douban.com/subject/37268346/" >https://book.douban.com/subject/37268346/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>架空犯</td>
-<td><a class="link"   href="https://book.douban.com/subject/37348704/" >https://book.douban.com/subject/37348704/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<p>*: 未在中国大陆出版</p>
-]]></content>
-      <categories>
-        <category>Books</category>
-      </categories>
-      <tags>
-        <tag>Higashino Keigo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Guide for Maven Installation &amp; Build</title>
-    <url>//archives/guide-for-maven-installation-and-build/</url>
-    <content><![CDATA[<h2 id="一、Maven-的下载与安装"><a href="#一、Maven-的下载与安装" class="headerlink" title="一、Maven 的下载与安装"></a>一、Maven 的下载与安装</h2><p><a class="link"   href="https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip" >Maven 3.9.8 Windows版本下载链接<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img0.webp"
-                      alt="Maven 官方下载"
-                ></p>
-<p>下载好后，解压到特定文件夹（路径不能有中文、空格和其他特殊字符）。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img1.webp"
-                      alt="Maven 安装文件夹"
-                ></p>
-<h2 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a>二、配置环境变量</h2><p>打开系统环境变量。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img2.webp"
-                      alt="编辑系统环境变量"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img3.webp"
-                      alt="系统属性 - 环境变量"
-                ></p>
-<p>修改 Path 内容，添加 Maven 安装路径。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img4.webp"
-                      alt="系统变量 - Path - 编辑"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img5.webp"
-                      alt="添加 Maven 路径"
-                ></p>
-<p>环境变量配置好后，在终端中输入 <code>mvn -v</code> 查看 Maven 版本，验证是否安装成功。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img6.webp"
-                      alt="查看 Maven 版本"
-                ></p>
-<h2 id="三、配置-settings-和-toolchains-文件"><a href="#三、配置-settings-和-toolchains-文件" class="headerlink" title="三、配置 settings 和 toolchains 文件"></a>三、配置 settings 和 toolchains 文件</h2><p>打开Maven安装路径下 <code>/conf/settings.xml</code> 和 <code>/conf/toolchains.xml</code> 文件。</p>
-<p>为了在 IDEA 中提高 Maven 的构建速度，需要修改 Maven 的下载源，所以先在 Maven 安装目录下新建本地仓库文件夹 <code>maven_repository</code> 。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img7.webp"
-                      alt="新建本地仓库文件夹"
-                ></p>
-<p><code>settings.xml</code> 文件修改如下：</p>
-<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;localRepository&gt;标签放Maven仓库路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>D:/Apache Maven/apache-maven-3.9.8/maven_repository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">proxies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">proxies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">servers</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servers</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;mirrors&gt;标签中放Maven的下载源 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>aliyunmaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>Aliyun Public Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://maven.aliyun.com/repository/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;profiles&gt;标签中放jdk的版本 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>jdk-22<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>22<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>除阿里云外其他国内仓库地址：</p>
-<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- NetEase --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-163<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus 163<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.163.com/maven/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tecent Cloud --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-tencentyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus tencentyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br></pre></td></tr></table></figure></div>
-
-<p><code>toolchains.xml</code> 文件修改如下：</p>
-<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">toolchains</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;toolchain&gt;的&lt;provides&gt;标签中放jdk版本，&lt;configuration&gt;标签中放jdk安装路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toolchain</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>jdk<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">provides</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>22<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">vendor</span>&gt;</span>oracle<span class="tag">&lt;/<span class="name">vendor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">provides</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">jdkHome</span>&gt;</span>C:/Program Files/Java/jdk-22<span class="tag">&lt;/<span class="name">jdkHome</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">toolchain</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">toolchains</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>修改好后，在终端输入 <code>mvn help:system</code> 测试，Maven 会自动下载缺省的或者更新的各种配置文件和依赖到本地仓库中。如果出现 Build Success，说明 Maven 已经配置成功了。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img8.webp"
-                      alt="测试 Maven 配置"
-                ></p>
-<h2 id="四、InetlliJ-IDEA-配置"><a href="#四、InetlliJ-IDEA-配置" class="headerlink" title="四、InetlliJ IDEA 配置"></a>四、InetlliJ IDEA 配置</h2><p>在 Maven 设置里，修改 Maven 主路径、用户设置文件和本地仓库的内容即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img9.webp"
-                      alt="IntelliJ IDEA 配置"
-                ></p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Marvel TV Series</title>
     <url>//archives/marvel-tv-series/</url>
     <content><![CDATA[<table>
@@ -4256,263 +4500,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Host Static Web Pages on Personal Domain via GitHub</title>
-    <url>//archives/host-static-web-pages-on-personal-domain-via-github/</url>
-    <content><![CDATA[<h2 id="一、将-Git-连接到-GitHub"><a href="#一、将-Git-连接到-GitHub" class="headerlink" title="一、将 Git 连接到 GitHub"></a>一、将 Git 连接到 GitHub</h2><p>使用 SSH 方式将 Git 连接到 GitHub</p>
-<p>首先将个人用户名和密码添加到 <code>git config</code></p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global [user.name](http://user.name/) <span class="string">&quot;AstridStark25963&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;astridstark25963@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>可以通过以下命令检查配置是否正确：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure></div>
-
-<p>查看是否已有SSH密钥：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -al ~/.ssh</span><br></pre></td></tr></table></figure></div>
-
-<p>如果看到 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 文件，表示已经存在SSH密钥，可以选择使用现有的密钥或者生成新的密钥。</p>
-<p>生成SSH密钥：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;astridstark@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>命令后添加 <code>-C &quot;astridstark25963@gmail.com&quot;</code> 是将邮箱作为密钥的标识符号。</p>
-<p>当提示 <strong>Enter file in which to save the key</strong> 时，按 <code>Enter</code> 使用默认位置（<code>/c/Users/lenovo/.ssh/id_rsa</code>）。<br>当提示 <strong>Enter passphrase</strong> 时，可以选择设置一个密码短语（增加安全性），或者直接按 <code>Enter</code> 跳过。</p>
-</blockquote>
-<p>在 Git Bash 中输入以下命令，启动 SSH 代理并添加密钥：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></div>
-
-<p>然后将 SSH 密钥添加到 GitHub</p>
-<p>在 Git Bash 中输入以下命令，复制公钥内容：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></div>
-
-<p>复制输出的内容（从 <code>ssh-rsa</code> 开始到邮箱结束）。</p>
-<p>在 <code>GitHub 账户 -&gt; Settings -&gt; SSH and GPG keys</code> 中添加新的 SSH 密钥，在 <strong>Key</strong> 字段中粘贴刚刚复制的公钥内容即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img0.webp"
-                      alt="Add SSH key to GitHub"
-                ></p>
-<p>通过输入以下命令测试与 GitHub 的连接：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div>
-
-<p>如果一切正常，会看到如下信息：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img1.webp"
-                      alt="SSH connection test"
-                ></p>
-<h2 id="二、创建仓库并克隆到本地"><a href="#二、创建仓库并克隆到本地" class="headerlink" title="二、创建仓库并克隆到本地"></a>二、创建仓库并克隆到本地</h2><p>由于目的是将静态页面关联到个人域名，所以直接在 GitHub 创建用户名同名仓库 <code>AstridStark25963.github.io</code> </p>
-<blockquote>
-<p>直接创建用户名同名仓库，GitHub 会自动将此仓库使用 GitHub Pages 托管</p>
-</blockquote>
-<p>在仓库页面选择 Code - SSH，获得克隆仓库所需的命令</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img2.webp"
-                      alt="Git clone"
-                ></p>
-<p>在 Git Bash 输入以下命令进行仓库克隆：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:AstridStark25963/AstridStark25963.github.io.git</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img3.webp"
-                      alt="Clone success"
-                ></p>
-<h2 id="三、由本地向仓库提交更改"><a href="#三、由本地向仓库提交更改" class="headerlink" title="三、由本地向仓库提交更改"></a>三、由本地向仓库提交更改</h2><p>修改本地文件，在仓库所在文件夹添加测试文件：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img4.webp"
-                      alt="Add a test file"
-                ></p>
-<p>在 Git Bash 定位到仓库所在文件夹：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">cd</span> AstridStark25963.github.io</span><br></pre></td></tr></table></figure></div>
-
-<p>查看当前仓库状态：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img5.webp"
-                      alt="Check repository status"
-                ></p>
-<p>将更改添加到暂存区，提交更改并推送到远程仓库：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;add test.txt&quot;</span></span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img6.webp"
-                      alt="Add, commit and push"
-                ></p>
-<p>查看修改历史：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img7.webp"
-                      alt="Git log"
-                ></p>
-<h2 id="四、将-GitHub-仓库添加到域名解析记录"><a href="#四、将-GitHub-仓库添加到域名解析记录" class="headerlink" title="四、将 GitHub 仓库添加到域名解析记录"></a>四、将 GitHub 仓库添加到域名解析记录</h2><p>打开腾讯云，向域名添加解析记录：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img8.webp"
-                      alt="Add DNS record"
-                ></p>
-<p>第一条记录，主机记录填写 <code>www</code> ，记录类型填写 <code>CNAME</code> ，记录值填写 <code>astridstark25963.github.io</code>  </p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img9.webp"
-                      alt="Host record"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img10.webp"
-                      alt="Record type"
-                ></p>
-<p>第二条记录，主机记录填写 <code>@</code> ，记录类型填写 <code>A</code> ，记录值填写第一条记录中记录值的 IP 地址，可以通过在终端执行 <code>ping</code> 命令得到。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img11.webp"
-                      alt="Ping astridstark25963.github.io"
-                ></p>
-<p>在本地添加 <code>CNAME</code> 文件并推送到远程仓库，内容为域名。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img12.webp"
-                      alt="CNAME"
-                ></p>
-<p>成功推送后，在仓库的 <code>Settings -&gt; Pages -&gt; Custom domain</code> 中可以看到解析后的域名信息。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img13.webp"
-                      alt="Custom domain"
-                ></p>
-<p>最后直接在浏览器访问域名，即可看到网页内容。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img14.webp"
-                      alt="Success!"
-                ></p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Personal Website</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Use Hexo to Build a Personal Blog Website</title>
-    <url>//archives/use-hexo-to-build-a-personal-blog-website/</url>
-    <content><![CDATA[<h2 id="一、安装-Hexo-并初始化博客"><a href="#一、安装-Hexo-并初始化博客" class="headerlink" title="一、安装 Hexo 并初始化博客"></a>一、安装 Hexo 并初始化博客</h2><p>找到博客文件夹，在根目录输入以下命令安装 Hexo 库依赖：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
-
-<p>安装完成后，输入以下命令初始化博客：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo init</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>如果将 hexo 添加到环境变量，则无需输入 <code>npx</code> 指令，只需要 <code>hexo init</code> 即可，下同。</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/use-hexo-to-build-a-personal-blog-website/img0.webp"
-                      alt="Hexo 初始化博客"
-                ></p>
-<p>初始化成功后，输入以下命令进行静态部署：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo generate <span class="comment"># 可简写为 npx hexo g</span></span><br></pre></td></tr></table></figure></div>
-
-<p>如果想要查看部署好的博客，可以通过以下命令打开本地服务器：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo server <span class="comment"># 可简写为 npx hexo s</span></span><br></pre></td></tr></table></figure></div>
-
-<p>然后打开 <a class="link"   href="http://localhost:4000/" >http://localhost:4000<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 即可查看部署好的博客效果。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/use-hexo-to-build-a-personal-blog-website/img1.webp"
-                      alt="Hexo 初始化博客效果"
-                ></p>
-<h2 id="二、将博客文件夹连接到-GitHub-仓库"><a href="#二、将博客文件夹连接到-GitHub-仓库" class="headerlink" title="二、将博客文件夹连接到 GitHub 仓库"></a>二、将博客文件夹连接到 GitHub 仓库</h2><p>在博客文件夹根目录输入以下命令安装 Git 部署插件：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></div>
-
-<p>找到 <code>_config.yml</code> 文件（这是 Hexo 的项目配置文件），找到 <code>deploy</code> 部分，添加如下内容：</p>
-<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/AstridStark25963/AstridStark25963.github.io.git</span> <span class="comment"># 填入自己的仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></div>
-
-<p>分别输入以下命令以将本地更改的内容提交到 GitHub 远程仓库：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo clean <span class="comment"># 清除缓存文件 db.json 和已经生成的静态文件 public 文件夹</span></span><br><span class="line">npx hexo generate <span class="comment"># 生成网站静态文件到默认设置的 public 文件夹</span></span><br><span class="line">npx hexo deploy <span class="comment"># 自动生成网站静态文件，并部署到设定的仓库（可简写为 npx hexo d）</span></span><br></pre></td></tr></table></figure></div>
-
-<p>过一段时间，就能在 GitHub 仓库中看到提交的网页内容，也能在相应的网址访问网站的更新内容。</p>
-<blockquote>
-<p>不需要每次修改网站时都执行 <code>clean</code> 操作。<code>clean</code> 命令主要用于清理生成的文件，通常在需要完全重建站点时使用，比如当你遇到一些构建问题，或者想清理临时文件、缓存等情况时才需要执行。如果只是对内容或配置进行小的更新，一般不需要执行 <code>clean</code>，只需要执行 <code>generate</code> 或 <code>server</code> 命令即可。</p>
-</blockquote>
-<p>如果遇到网络问题，<code>deploy</code> 操作无法完成，则需要修改 Git 的代理配置并使用代理来提交修改。</p>
-<p>输入以下命令为 Git 设置全局代理：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:10809</span><br><span class="line">git config --global https.proxy http://127.0.0.1:10809</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>端口设置根据本机代理进行设置，常用的如 v2ray 使用 10809 端口，Clash 使用 7890 端口</p>
-</blockquote>
-<p>输入以下命令查看设置是否成功：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure></div>
-
-<p>如果需要取消全局代理设置，则输入以下指令进行取消：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="三、Hexo-文件夹结构介绍"><a href="#三、Hexo-文件夹结构介绍" class="headerlink" title="三、Hexo 文件夹结构介绍"></a>三、Hexo 文件夹结构介绍</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Users\lenovo\AstridStark25963.github.io</span><br><span class="line">├── .deploy_git          <span class="comment"># Git 相关的部署文件夹，可能包含部署信息</span></span><br><span class="line">├── .github              <span class="comment"># GitHub 相关的配置文件夹，通常包含GitHub Actions等配置</span></span><br><span class="line">├── db.json              <span class="comment"># 存储数据的 JSON 文件，可能包含站点的配置或数据</span></span><br><span class="line">├── node_modules         <span class="comment"># Node.js 项目依赖库文件夹，存储了所有的依赖包</span></span><br><span class="line">├── package-lock.json    <span class="comment"># 确保每次安装依赖时都使用相同版本的依赖，锁定依赖版本</span></span><br><span class="line">├── package.json         <span class="comment"># Node.js 项目的配置文件，包含项目名称、版本、依赖等信息</span></span><br><span class="line">├── public               <span class="comment"># 存放公共资源的文件夹，通常是网站的静态文件</span></span><br><span class="line">├── scaffolds            <span class="comment"># 用于存放模板或框架的文件夹，通常存放默认的页面或文章模板</span></span><br><span class="line">├── <span class="built_in">source</span>               <span class="comment"># 存放网站源代码的文件夹</span></span><br><span class="line">│   ├── images           <span class="comment"># 存放图片资源的文件夹</span></span><br><span class="line">│   ├── _data            <span class="comment"># 存放数据文件的文件夹，通常包含配置信息或内容数据</span></span><br><span class="line">│   └── _posts           <span class="comment"># 存放博客文章或页面的文件夹</span></span><br><span class="line">├── themes               <span class="comment"># 存放主题相关文件的文件夹</span></span><br><span class="line">│   └── redefine         <span class="comment"># 主题文件夹，包含自定义的主题设置</span></span><br><span class="line">├── yarn.lock            <span class="comment"># Yarn 的依赖锁定文件，确保依赖的版本一致</span></span><br><span class="line">├── _config.redefine.yml <span class="comment"># 自定义主题的配置文件，通常包含主题的设置和参数</span></span><br><span class="line">└── _config.yml          <span class="comment"># 网站的全局配置文件，包含站点标题、作者、主题等基本信息</span></span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>由于本网站使用 Redefine 主题，故以此主题示例，下同。</p>
-</blockquote>
-<p>在平时的使用中，重点关注 <code>source</code> 文件夹以及根目录下的 <code>_config.yml</code>、<code>_config.redefine.yml</code> 两个配置文件即可。</p>
-<p>在新建页面时，输入以下命令：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo new page <span class="built_in">test</span> <span class="comment"># test 替换为实际页面名称</span></span><br></pre></td></tr></table></figure></div>
-
-<p>即可在 <code>source</code> 文件夹下新建同名页面，默认路由设置为 <code>/test</code>。</p>
-<blockquote>
-<p><code>source</code> 文件夹下符合模板的所有文件都会被复制到 <code>public</code> 文件夹下的相应位置，包括 <code>.md</code> 等格式的文件将被渲染为 <code>.html</code> 文件后复制到 <code>public</code> 文件夹下。如果想要复制模板以外的文件，或者不想渲染&#x2F;复制某些文件，只需要在根目录的 <code>_config.yml</code> 文件中的 <code>include</code> 和 <code>exclude</code> 部分输入文件夹&#x2F;文件名称即可。</p>
-</blockquote>
-<p><code>_config.yml</code> 为 Hexo 项目的默认配置文件，可以在这个文件中对网站进行个性化设置：</p>
-<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 网站设置</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Astrid&#x27;s</span> <span class="string">Fantasy</span> <span class="string">World</span> <span class="comment"># 网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 网站副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 网站描述</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="comment"># 网站关键词（可选）</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Astrid</span> <span class="string">Stark</span> <span class="comment"># 网站作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">en</span> <span class="comment"># 网站语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span> <span class="comment"># 时区设置</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL 配置</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://1lya.com</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">/archives/:name/</span> <span class="comment"># 文章的 URL 格式</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line"><span class="attr">pretty_urls:</span></span><br><span class="line">  <span class="attr">trailing_index:</span> <span class="literal">false</span> <span class="comment"># 设置为 false 来移除 URL 末尾的 &#x27;index.html&#x27;</span></span><br><span class="line">  <span class="attr">trailing_html:</span> <span class="literal">false</span> <span class="comment"># 设置为 false 来移除 URL 末尾的 &#x27;.html&#x27;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>_config.redefine.yml 为 Redefine 主题的默认配置文件，可以在这个文件中对主题外观进行个性化设置。</p>
-<h2 id="四、使用个性化-Hexo-主题"><a href="#四、使用个性化-Hexo-主题" class="headerlink" title="四、使用个性化 Hexo 主题"></a>四、使用个性化 Hexo 主题</h2><p>Hexo 的个性化主题可以在 <a class="link"   href="https://hexo.io/themes/" >Themes | Hexo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 找到，而主题的安装和使用方式一般可以在其 GitHub 仓库的 README 文件中找到。</p>
-<p>例如，Redefine 主题的安装方式如下：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/use-hexo-to-build-a-personal-blog-website/img2.webp"
-                      alt="Redefine 主题安装方式"
-                ></p>
-<p>Redefine 主题的使用教程可以在 <a class="link"   href="https://redefine-docs.ohevan.com/" >Redefine Docs<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 中找到。</p>
-<h2 id="五、文章配置项"><a href="#五、文章配置项" class="headerlink" title="五、文章配置项"></a>五、文章配置项</h2><p>在 Hexo 中，<strong>front-matter</strong> 是一块位于每篇文章或页面顶部的元数据区域，通常用于配置该篇文章的标题、分类、标签、日期、摘要等信息。它是一个 YAML 格式的区域，在文章的开头，通常由三个 <code>---</code> 符号包围。Hexo 使用这个信息来生成文章的 URL、封面、分类、标签等。</p>
-<p>常见 front-matter 配置项：</p>
-<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="comment"># 文章标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="comment"># 文章副标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="comment"># 创建时间</span></span><br><span class="line"><span class="attr">updated:</span> <span class="comment"># 更新时间</span></span><br><span class="line"><span class="attr">author:</span> <span class="comment"># 作者名</span></span><br><span class="line"><span class="attr">keywords:</span> [] <span class="comment"># 关键词</span></span><br><span class="line"><span class="attr">description:</span> <span class="comment"># 文章描述</span></span><br><span class="line"><span class="attr">cover:</span> <span class="comment"># 文章封面</span></span><br><span class="line"><span class="attr">excerpt:</span> <span class="comment"># 文章摘要</span></span><br><span class="line"><span class="attr">tags:</span> [] <span class="comment"># 文章标签</span></span><br><span class="line"><span class="attr">categories:</span> <span class="comment"># 文章分类</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span>  <span class="comment"># 是否开启评论功能</span></span><br><span class="line"><span class="attr">sticky:</span> <span class="literal">true</span>  <span class="comment"># 是否让文章置顶，值越大置顶权重越高</span></span><br><span class="line"><span class="attr">draft:</span> <span class="literal">false</span>  <span class="comment"># 是否为草稿（true 或 false）</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></div>
-
-<p>在部分由主题提供的布局模板页面中可以使用 <code>layout</code> 配置项， 默认为 <code>post</code>，可以指定为其他布局来使用布局模板。</p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Personal Website</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Software License Overview</title>
     <url>//archives/software-license-overview/</url>
     <content><![CDATA[<p>软件许可证是软件开发者或版权所有者授予用户使用、修改或分发软件的法律协议。根据许可证的不同，用户对软件的权限和义务也有所区别。软件许可证可以大致分为以下几类：</p>
@@ -4715,6 +4702,103 @@
       </categories>
       <tags>
         <tag>License</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Use Hexo to Build a Personal Blog Website</title>
+    <url>//archives/use-hexo-to-build-a-personal-blog-website/</url>
+    <content><![CDATA[<h2 id="一、安装-Hexo-并初始化博客"><a href="#一、安装-Hexo-并初始化博客" class="headerlink" title="一、安装 Hexo 并初始化博客"></a>一、安装 Hexo 并初始化博客</h2><p>找到博客文件夹，在根目录输入以下命令安装 Hexo 库依赖：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
+
+<p>安装完成后，输入以下命令初始化博客：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo init</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>如果将 hexo 添加到环境变量，则无需输入 <code>npx</code> 指令，只需要 <code>hexo init</code> 即可，下同。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/use-hexo-to-build-a-personal-blog-website/img0.webp"
+                      alt="Hexo 初始化博客"
+                ></p>
+<p>初始化成功后，输入以下命令进行静态部署：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo generate <span class="comment"># 可简写为 npx hexo g</span></span><br></pre></td></tr></table></figure></div>
+
+<p>如果想要查看部署好的博客，可以通过以下命令打开本地服务器：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo server <span class="comment"># 可简写为 npx hexo s</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后打开 <a class="link"   href="http://localhost:4000/" >http://localhost:4000<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 即可查看部署好的博客效果。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/use-hexo-to-build-a-personal-blog-website/img1.webp"
+                      alt="Hexo 初始化博客效果"
+                ></p>
+<h2 id="二、将博客文件夹连接到-GitHub-仓库"><a href="#二、将博客文件夹连接到-GitHub-仓库" class="headerlink" title="二、将博客文件夹连接到 GitHub 仓库"></a>二、将博客文件夹连接到 GitHub 仓库</h2><p>在博客文件夹根目录输入以下命令安装 Git 部署插件：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></div>
+
+<p>找到 <code>_config.yml</code> 文件（这是 Hexo 的项目配置文件），找到 <code>deploy</code> 部分，添加如下内容：</p>
+<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/AstridStark25963/AstridStark25963.github.io.git</span> <span class="comment"># 填入自己的仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></div>
+
+<p>分别输入以下命令以将本地更改的内容提交到 GitHub 远程仓库：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo clean <span class="comment"># 清除缓存文件 db.json 和已经生成的静态文件 public 文件夹</span></span><br><span class="line">npx hexo generate <span class="comment"># 生成网站静态文件到默认设置的 public 文件夹</span></span><br><span class="line">npx hexo deploy <span class="comment"># 自动生成网站静态文件，并部署到设定的仓库（可简写为 npx hexo d）</span></span><br></pre></td></tr></table></figure></div>
+
+<p>过一段时间，就能在 GitHub 仓库中看到提交的网页内容，也能在相应的网址访问网站的更新内容。</p>
+<blockquote>
+<p>不需要每次修改网站时都执行 <code>clean</code> 操作。<code>clean</code> 命令主要用于清理生成的文件，通常在需要完全重建站点时使用，比如当你遇到一些构建问题，或者想清理临时文件、缓存等情况时才需要执行。如果只是对内容或配置进行小的更新，一般不需要执行 <code>clean</code>，只需要执行 <code>generate</code> 或 <code>server</code> 命令即可。</p>
+</blockquote>
+<p>如果遇到网络问题，<code>deploy</code> 操作无法完成，则需要修改 Git 的代理配置并使用代理来提交修改。</p>
+<p>输入以下命令为 Git 设置全局代理：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:10809</span><br><span class="line">git config --global https.proxy http://127.0.0.1:10809</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>端口设置根据本机代理进行设置，常用的如 v2ray 使用 10809 端口，Clash 使用 7890 端口</p>
+</blockquote>
+<p>输入以下命令查看设置是否成功：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure></div>
+
+<p>如果需要取消全局代理设置，则输入以下指令进行取消：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、Hexo-文件夹结构介绍"><a href="#三、Hexo-文件夹结构介绍" class="headerlink" title="三、Hexo 文件夹结构介绍"></a>三、Hexo 文件夹结构介绍</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Users\lenovo\AstridStark25963.github.io</span><br><span class="line">├── .deploy_git          <span class="comment"># Git 相关的部署文件夹，可能包含部署信息</span></span><br><span class="line">├── .github              <span class="comment"># GitHub 相关的配置文件夹，通常包含GitHub Actions等配置</span></span><br><span class="line">├── db.json              <span class="comment"># 存储数据的 JSON 文件，可能包含站点的配置或数据</span></span><br><span class="line">├── node_modules         <span class="comment"># Node.js 项目依赖库文件夹，存储了所有的依赖包</span></span><br><span class="line">├── package-lock.json    <span class="comment"># 确保每次安装依赖时都使用相同版本的依赖，锁定依赖版本</span></span><br><span class="line">├── package.json         <span class="comment"># Node.js 项目的配置文件，包含项目名称、版本、依赖等信息</span></span><br><span class="line">├── public               <span class="comment"># 存放公共资源的文件夹，通常是网站的静态文件</span></span><br><span class="line">├── scaffolds            <span class="comment"># 用于存放模板或框架的文件夹，通常存放默认的页面或文章模板</span></span><br><span class="line">├── <span class="built_in">source</span>               <span class="comment"># 存放网站源代码的文件夹</span></span><br><span class="line">│   ├── images           <span class="comment"># 存放图片资源的文件夹</span></span><br><span class="line">│   ├── _data            <span class="comment"># 存放数据文件的文件夹，通常包含配置信息或内容数据</span></span><br><span class="line">│   └── _posts           <span class="comment"># 存放博客文章或页面的文件夹</span></span><br><span class="line">├── themes               <span class="comment"># 存放主题相关文件的文件夹</span></span><br><span class="line">│   └── redefine         <span class="comment"># 主题文件夹，包含自定义的主题设置</span></span><br><span class="line">├── yarn.lock            <span class="comment"># Yarn 的依赖锁定文件，确保依赖的版本一致</span></span><br><span class="line">├── _config.redefine.yml <span class="comment"># 自定义主题的配置文件，通常包含主题的设置和参数</span></span><br><span class="line">└── _config.yml          <span class="comment"># 网站的全局配置文件，包含站点标题、作者、主题等基本信息</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>由于本网站使用 Redefine 主题，故以此主题示例，下同。</p>
+</blockquote>
+<p>在平时的使用中，重点关注 <code>source</code> 文件夹以及根目录下的 <code>_config.yml</code>、<code>_config.redefine.yml</code> 两个配置文件即可。</p>
+<p>在新建页面时，输入以下命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo new page <span class="built_in">test</span> <span class="comment"># test 替换为实际页面名称</span></span><br></pre></td></tr></table></figure></div>
+
+<p>即可在 <code>source</code> 文件夹下新建同名页面，默认路由设置为 <code>/test</code>。</p>
+<blockquote>
+<p><code>source</code> 文件夹下符合模板的所有文件都会被复制到 <code>public</code> 文件夹下的相应位置，包括 <code>.md</code> 等格式的文件将被渲染为 <code>.html</code> 文件后复制到 <code>public</code> 文件夹下。如果想要复制模板以外的文件，或者不想渲染&#x2F;复制某些文件，只需要在根目录的 <code>_config.yml</code> 文件中的 <code>include</code> 和 <code>exclude</code> 部分输入文件夹&#x2F;文件名称即可。</p>
+</blockquote>
+<p><code>_config.yml</code> 为 Hexo 项目的默认配置文件，可以在这个文件中对网站进行个性化设置：</p>
+<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 网站设置</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Astrid&#x27;s</span> <span class="string">Fantasy</span> <span class="string">World</span> <span class="comment"># 网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 网站副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 网站描述</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="comment"># 网站关键词（可选）</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Astrid</span> <span class="string">Stark</span> <span class="comment"># 网站作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">en</span> <span class="comment"># 网站语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span> <span class="comment"># 时区设置</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL 配置</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://1lya.com</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">/archives/:name/</span> <span class="comment"># 文章的 URL 格式</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line"><span class="attr">pretty_urls:</span></span><br><span class="line">  <span class="attr">trailing_index:</span> <span class="literal">false</span> <span class="comment"># 设置为 false 来移除 URL 末尾的 &#x27;index.html&#x27;</span></span><br><span class="line">  <span class="attr">trailing_html:</span> <span class="literal">false</span> <span class="comment"># 设置为 false 来移除 URL 末尾的 &#x27;.html&#x27;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>_config.redefine.yml 为 Redefine 主题的默认配置文件，可以在这个文件中对主题外观进行个性化设置。</p>
+<h2 id="四、使用个性化-Hexo-主题"><a href="#四、使用个性化-Hexo-主题" class="headerlink" title="四、使用个性化 Hexo 主题"></a>四、使用个性化 Hexo 主题</h2><p>Hexo 的个性化主题可以在 <a class="link"   href="https://hexo.io/themes/" >Themes | Hexo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 找到，而主题的安装和使用方式一般可以在其 GitHub 仓库的 README 文件中找到。</p>
+<p>例如，Redefine 主题的安装方式如下：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/use-hexo-to-build-a-personal-blog-website/img2.webp"
+                      alt="Redefine 主题安装方式"
+                ></p>
+<p>Redefine 主题的使用教程可以在 <a class="link"   href="https://redefine-docs.ohevan.com/" >Redefine Docs<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 中找到。</p>
+<h2 id="五、文章配置项"><a href="#五、文章配置项" class="headerlink" title="五、文章配置项"></a>五、文章配置项</h2><p>在 Hexo 中，<strong>front-matter</strong> 是一块位于每篇文章或页面顶部的元数据区域，通常用于配置该篇文章的标题、分类、标签、日期、摘要等信息。它是一个 YAML 格式的区域，在文章的开头，通常由三个 <code>---</code> 符号包围。Hexo 使用这个信息来生成文章的 URL、封面、分类、标签等。</p>
+<p>常见 front-matter 配置项：</p>
+<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="comment"># 文章标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="comment"># 文章副标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="comment"># 创建时间</span></span><br><span class="line"><span class="attr">updated:</span> <span class="comment"># 更新时间</span></span><br><span class="line"><span class="attr">author:</span> <span class="comment"># 作者名</span></span><br><span class="line"><span class="attr">keywords:</span> [] <span class="comment"># 关键词</span></span><br><span class="line"><span class="attr">description:</span> <span class="comment"># 文章描述</span></span><br><span class="line"><span class="attr">cover:</span> <span class="comment"># 文章封面</span></span><br><span class="line"><span class="attr">excerpt:</span> <span class="comment"># 文章摘要</span></span><br><span class="line"><span class="attr">tags:</span> [] <span class="comment"># 文章标签</span></span><br><span class="line"><span class="attr">categories:</span> <span class="comment"># 文章分类</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span>  <span class="comment"># 是否开启评论功能</span></span><br><span class="line"><span class="attr">sticky:</span> <span class="literal">true</span>  <span class="comment"># 是否让文章置顶，值越大置顶权重越高</span></span><br><span class="line"><span class="attr">draft:</span> <span class="literal">false</span>  <span class="comment"># 是否为草稿（true 或 false）</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></div>
+
+<p>在部分由主题提供的布局模板页面中可以使用 <code>layout</code> 配置项， 默认为 <code>post</code>，可以指定为其他布局来使用布局模板。</p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Personal Website</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
