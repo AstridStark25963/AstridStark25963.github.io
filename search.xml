@@ -1,6 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Build an Image Hosting Service on GitHub</title>
+    <url>//archives/build-an-image-hosting-service-on-github/</url>
+    <content><![CDATA[<h2 id="一、创建-GitHub-仓库"><a href="#一、创建-GitHub-仓库" class="headerlink" title="一、创建 GitHub 仓库"></a>一、创建 GitHub 仓库</h2><p>在 GitHub 创建一个仓库，公开性设置为 Public。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img0.webp"
+                      alt="创建 GitHub 仓库"
+                ></p>
+<p>最后点击 Create repository 即可完成创建。</p>
+<h2 id="二、生成-Token"><a href="#二、生成-Token" class="headerlink" title="二、生成 Token"></a>二、生成 Token</h2><p>在 <code>Settings—Developer Settings—Personal access tokens—Tokens (Classic)</code> 中生成一个 Token。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img1.webp"
+                      alt="GitHub Token"
+                ></p>
+<p>生成 Token 时，需要填写 Note，选择 Token 过期时间并勾选 repo 选项。</p>
+<blockquote>
+<p>Token 最好设置为临时性的。设置的 Token 只能查看一次，应注意保存。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img2.webp"
+                      alt="生成 Token"
+                ></p>
+<h2 id="三、使用-PicGo-实现图片上传"><a href="#三、使用-PicGo-实现图片上传" class="headerlink" title="三、使用 PicGo 实现图片上传"></a>三、使用 PicGo 实现图片上传</h2><p>下载PicGo。</p>
+<p><a class="link"   href="https://github.com/Molunerfinn/PicGo" >https://github.com/Molunerfinn/PicGo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>下载安装完成后，打开设置进行配置。</p>
+<p>GitHub 图床设置中，设定仓库名<strong>格式</strong>为 <code>username/repository</code> ，分支名为 main（当然也可以自己在仓库中创建分支），设定 Token 为 GitHub 中创建的 Token，设定存储路径为 image&#x2F;（上传的图片会自动存储到 image 文件夹下），设定自定义域名<strong>格式</strong>为<a href="https://cdn.jsdelivr.net/gh/username/repository/branch"><code>https://cdn.jsdelivr.net/gh/username/repository/branch</code></a> 。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img3.webp"
+                      alt="PicGo 图床设置"
+                ></p>
+<p>设置完成后点击确定，也可以设置为默认图床。</p>
+<p>之后对 PicGo 进行如图所示设置。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img4.webp"
+                      alt="PicGo 设置-1"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img5.webp"
+                      alt="PicGo 设置-2"
+                ></p>
+<h2 id="四、设置-Typora-实现自动上传"><a href="#四、设置-Typora-实现自动上传" class="headerlink" title="四、设置 Typora 实现自动上传"></a>四、设置 Typora 实现自动上传</h2><p>打开 Typora，点击文件—偏好设置—图像。</p>
+<p>根据图片内容进行设置。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img6.webp"
+                      alt="Typora 图像设置"
+                ></p>
+<p>设置完成后点击“验证图片上传选项”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img7.webp"
+                      alt="验证 Typora 图像自动上传"
+                ></p>
+<p>如果出现 <code>“success”:true</code> 则证明设置成功，如果出现 <code>“success”:false</code> 则证明设置不成功，可以打开 PicGo 日志进行查看，找出失败原因。</p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Image Hosting</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Building Jellyfin Media Library with Docker</title>
+    <url>//archives/building-jellyfin-media-library-with-docker/</url>
+    <content><![CDATA[<h2 id="一、配置-Docker"><a href="#一、配置-Docker" class="headerlink" title="一、配置 Docker"></a>一、配置 Docker</h2><p>进入 Docker 官网，下载 Docker Desktop 并进行安装</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img0.webp"
+                      alt="Docker 官网"
+                ></p>
+<blockquote>
+<p>安装期间，可能会在控制台要求更新或下载 WSL，直接按任意键安装即可</p>
+</blockquote>
+<p>安装完成后就可以进入并查看 Docker Desktop 的控制面板</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img1.webp"
+                      alt="Docker Desktop 控制面板"
+                ></p>
+<p><em>可选：Docker Desktop 汉化</em></p>
+<p>打开如下链接，下载版本对应的 <code>app.asar</code> 文件，并替换 <code>C:\Program Files\Docker\Docker\frontend\resources</code> 路径下的同名文件</p>
+<p><a class="link"   href="https://github.com/asxez/DockerDesktop-CN" >https://github.com/asxez/DockerDesktop-CN<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="二、配置-Jellyfin"><a href="#二、配置-Jellyfin" class="headerlink" title="二、配置 Jellyfin"></a>二、配置 Jellyfin</h2><p>打开控制台，输入以下指令拉取 Jellyfin 镜像到本地：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
+
+<p>在控制台执行以下指令，运行一个 Jellyfin 容器：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d ^</span><br><span class="line">	--name=jellyfin ^</span><br><span class="line">	-p 8096:8096 ^</span><br><span class="line">	-p 8920:8920 ^</span><br><span class="line">	-v D:\Jellyfin\config:/config ^</span><br><span class="line">	-v D:\Jellyfin\cache:/cache ^</span><br><span class="line">	-v D:\Jellyfin\media:/media ^</span><br><span class="line">	--restart unless-stopped ^</span><br><span class="line">	jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><strong>注意事项</strong>：</p>
+<ol>
+<li>每一行命令后边都必须加续行符号 <code>^</code> ；</li>
+<li><code>/config</code> , <code>/cache</code> , <code>/media</code> 的路径需替换为主机的实际路径</li>
+<li>Jellyfin 的默认 HTTP 端口为 8096，默认 HTTPS 端口为 8920</li>
+</ol>
+</blockquote>
+<p>容器运行成功后，访问 <a class="link"   href="http://localhost:8096/" >http://localhost:8096<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 打开 Jellyfin 控制面板</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img2.webp"
+                      alt="Jellyfin 控制面板"
+                ></p>
+<p>创建一个媒体库</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img3.webp"
+                      alt="创建媒体库"
+                ></p>
+<p>创建完成后，向相应的主机文件夹中添加电影</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img4.webp"
+                      alt="添加电影"
+                ></p>
+<p>在 Jellyfin 控制台进行媒体库扫描</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img5.webp"
+                      alt="媒体库扫描"
+                ></p>
+<p>扫描完成后，媒体库里便会展示出所有添加的媒体</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img6.webp"
+                      alt="扫描结果"
+                ></p>
+<p>其他管理容器的命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker start jellyfin   <span class="comment"># 启动名为 jellyfin 的容器</span></span><br><span class="line">docker stop jellyfin    <span class="comment"># 停止名为 jellyfin 的容器</span></span><br><span class="line">docker <span class="built_in">rm</span> jellyfin      <span class="comment"># 删除名为 jellyfin 的容器</span></span><br><span class="line">docker ps               <span class="comment"># 查看当前正在运行的容器</span></span><br><span class="line">docker ps -a            <span class="comment"># 查看所有容器，包括已停止的</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、在其他平台访问媒体库"><a href="#三、在其他平台访问媒体库" class="headerlink" title="三、在其他平台访问媒体库"></a>三、在其他平台访问媒体库</h2><p>在终端查看本机 IP 地址：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></div>
+
+<p>如果其他平台和主机处于同一局域网下，输入 <code>http://x.x.x.x:8096</code> （<code>x.x.x.x</code> 替换为主机 IPv4 地址）即可访问；</p>
+<p>如果其他平台和主机不处于同一局域网下但都支持 IPv6，输入 <code>http://[x:x:x:x:x:x:x:x]:8096</code> （<code>[x:x:x:x:x:x:x:x]</code> 替换为主机 IPv6 地址）即可访问；</p>
+<p>如果其他平台和主机不处于同一局域网下且都不支持 IPv6，只能通过公网 IPv4 和端口转发实现访问。</p>
+<p>其他平台访问效果：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img7.webp"
+                      alt="其他平台访问结果"
+                ></p>
+]]></content>
+      <categories>
+        <category>Media</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Jellyfin</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A Description of the Elder Scrolls&#39; Worldview</title>
     <url>//archives/a-description-of-the-elder-scrolls-worldview/</url>
     <content><![CDATA[<h2 id="泰姆瑞尔编年史"><a href="#泰姆瑞尔编年史" class="headerlink" title="泰姆瑞尔编年史"></a>泰姆瑞尔编年史</h2><h3 id="创世与黎明纪元"><a href="#创世与黎明纪元" class="headerlink" title="创世与黎明纪元"></a>创世与黎明纪元</h3><p>在遥远的太初时代，混沌与秩序的交锋孕育了整个宇宙。代表“是”的原初力量阿努与代表“非”的原初力量帕多梅交织碰撞，在激烈的冲突中诞生了时间之龙阿卡托什。随着时间的流转，众神逐渐显化，在原初混沌的 Aurbis 之中活动，开启了世界的构建。</p>
@@ -643,180 +817,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Build an Image Hosting Service on GitHub</title>
-    <url>//archives/build-an-image-hosting-service-on-github/</url>
-    <content><![CDATA[<h2 id="一、创建-GitHub-仓库"><a href="#一、创建-GitHub-仓库" class="headerlink" title="一、创建 GitHub 仓库"></a>一、创建 GitHub 仓库</h2><p>在 GitHub 创建一个仓库，公开性设置为 Public。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img0.webp"
-                      alt="创建 GitHub 仓库"
-                ></p>
-<p>最后点击 Create repository 即可完成创建。</p>
-<h2 id="二、生成-Token"><a href="#二、生成-Token" class="headerlink" title="二、生成 Token"></a>二、生成 Token</h2><p>在 <code>Settings—Developer Settings—Personal access tokens—Tokens (Classic)</code> 中生成一个 Token。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img1.webp"
-                      alt="GitHub Token"
-                ></p>
-<p>生成 Token 时，需要填写 Note，选择 Token 过期时间并勾选 repo 选项。</p>
-<blockquote>
-<p>Token 最好设置为临时性的。设置的 Token 只能查看一次，应注意保存。</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img2.webp"
-                      alt="生成 Token"
-                ></p>
-<h2 id="三、使用-PicGo-实现图片上传"><a href="#三、使用-PicGo-实现图片上传" class="headerlink" title="三、使用 PicGo 实现图片上传"></a>三、使用 PicGo 实现图片上传</h2><p>下载PicGo。</p>
-<p><a class="link"   href="https://github.com/Molunerfinn/PicGo" >https://github.com/Molunerfinn/PicGo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>下载安装完成后，打开设置进行配置。</p>
-<p>GitHub 图床设置中，设定仓库名<strong>格式</strong>为 <code>username/repository</code> ，分支名为 main（当然也可以自己在仓库中创建分支），设定 Token 为 GitHub 中创建的 Token，设定存储路径为 image&#x2F;（上传的图片会自动存储到 image 文件夹下），设定自定义域名<strong>格式</strong>为<a href="https://cdn.jsdelivr.net/gh/username/repository/branch"><code>https://cdn.jsdelivr.net/gh/username/repository/branch</code></a> 。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img3.webp"
-                      alt="PicGo 图床设置"
-                ></p>
-<p>设置完成后点击确定，也可以设置为默认图床。</p>
-<p>之后对 PicGo 进行如图所示设置。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img4.webp"
-                      alt="PicGo 设置-1"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img5.webp"
-                      alt="PicGo 设置-2"
-                ></p>
-<h2 id="四、设置-Typora-实现自动上传"><a href="#四、设置-Typora-实现自动上传" class="headerlink" title="四、设置 Typora 实现自动上传"></a>四、设置 Typora 实现自动上传</h2><p>打开 Typora，点击文件—偏好设置—图像。</p>
-<p>根据图片内容进行设置。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img6.webp"
-                      alt="Typora 图像设置"
-                ></p>
-<p>设置完成后点击“验证图片上传选项”。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img7.webp"
-                      alt="验证 Typora 图像自动上传"
-                ></p>
-<p>如果出现 <code>“success”:true</code> 则证明设置成功，如果出现 <code>“success”:false</code> 则证明设置不成功，可以打开 PicGo 日志进行查看，找出失败原因。</p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Image Hosting</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Building Jellyfin Media Library with Docker</title>
-    <url>//archives/building-jellyfin-media-library-with-docker/</url>
-    <content><![CDATA[<h2 id="一、配置-Docker"><a href="#一、配置-Docker" class="headerlink" title="一、配置 Docker"></a>一、配置 Docker</h2><p>进入 Docker 官网，下载 Docker Desktop 并进行安装</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img0.webp"
-                      alt="Docker 官网"
-                ></p>
-<blockquote>
-<p>安装期间，可能会在控制台要求更新或下载 WSL，直接按任意键安装即可</p>
-</blockquote>
-<p>安装完成后就可以进入并查看 Docker Desktop 的控制面板</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img1.webp"
-                      alt="Docker Desktop 控制面板"
-                ></p>
-<p><em>可选：Docker Desktop 汉化</em></p>
-<p>打开如下链接，下载版本对应的 <code>app.asar</code> 文件，并替换 <code>C:\Program Files\Docker\Docker\frontend\resources</code> 路径下的同名文件</p>
-<p><a class="link"   href="https://github.com/asxez/DockerDesktop-CN" >https://github.com/asxez/DockerDesktop-CN<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="二、配置-Jellyfin"><a href="#二、配置-Jellyfin" class="headerlink" title="二、配置 Jellyfin"></a>二、配置 Jellyfin</h2><p>打开控制台，输入以下指令拉取 Jellyfin 镜像到本地：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
-
-<p>在控制台执行以下指令，运行一个 Jellyfin 容器：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d ^</span><br><span class="line">	--name=jellyfin ^</span><br><span class="line">	-p 8096:8096 ^</span><br><span class="line">	-p 8920:8920 ^</span><br><span class="line">	-v D:\Jellyfin\config:/config ^</span><br><span class="line">	-v D:\Jellyfin\cache:/cache ^</span><br><span class="line">	-v D:\Jellyfin\media:/media ^</span><br><span class="line">	--restart unless-stopped ^</span><br><span class="line">	jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p><strong>注意事项</strong>：</p>
-<ol>
-<li>每一行命令后边都必须加续行符号 <code>^</code> ；</li>
-<li><code>/config</code> , <code>/cache</code> , <code>/media</code> 的路径需替换为主机的实际路径</li>
-<li>Jellyfin 的默认 HTTP 端口为 8096，默认 HTTPS 端口为 8920</li>
-</ol>
-</blockquote>
-<p>容器运行成功后，访问 <a class="link"   href="http://localhost:8096/" >http://localhost:8096<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 打开 Jellyfin 控制面板</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img2.webp"
-                      alt="Jellyfin 控制面板"
-                ></p>
-<p>创建一个媒体库</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img3.webp"
-                      alt="创建媒体库"
-                ></p>
-<p>创建完成后，向相应的主机文件夹中添加电影</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img4.webp"
-                      alt="添加电影"
-                ></p>
-<p>在 Jellyfin 控制台进行媒体库扫描</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img5.webp"
-                      alt="媒体库扫描"
-                ></p>
-<p>扫描完成后，媒体库里便会展示出所有添加的媒体</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img6.webp"
-                      alt="扫描结果"
-                ></p>
-<p>其他管理容器的命令：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker start jellyfin   <span class="comment"># 启动名为 jellyfin 的容器</span></span><br><span class="line">docker stop jellyfin    <span class="comment"># 停止名为 jellyfin 的容器</span></span><br><span class="line">docker <span class="built_in">rm</span> jellyfin      <span class="comment"># 删除名为 jellyfin 的容器</span></span><br><span class="line">docker ps               <span class="comment"># 查看当前正在运行的容器</span></span><br><span class="line">docker ps -a            <span class="comment"># 查看所有容器，包括已停止的</span></span><br></pre></td></tr></table></figure></div>
-
-<h2 id="三、在其他平台访问媒体库"><a href="#三、在其他平台访问媒体库" class="headerlink" title="三、在其他平台访问媒体库"></a>三、在其他平台访问媒体库</h2><p>在终端查看本机 IP 地址：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></div>
-
-<p>如果其他平台和主机处于同一局域网下，输入 <code>http://x.x.x.x:8096</code> （<code>x.x.x.x</code> 替换为主机 IPv4 地址）即可访问；</p>
-<p>如果其他平台和主机不处于同一局域网下但都支持 IPv6，输入 <code>http://[x:x:x:x:x:x:x:x]:8096</code> （<code>[x:x:x:x:x:x:x:x]</code> 替换为主机 IPv6 地址）即可访问；</p>
-<p>如果其他平台和主机不处于同一局域网下且都不支持 IPv6，只能通过公网 IPv4 和端口转发实现访问。</p>
-<p>其他平台访问效果：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img7.webp"
-                      alt="其他平台访问结果"
-                ></p>
-]]></content>
-      <categories>
-        <category>Media</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Jellyfin</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>DC Films</title>
     <url>//archives/dc-films/</url>
     <content><![CDATA[<table>
@@ -1091,99 +1091,155 @@
       </tags>
   </entry>
   <entry>
-    <title>Cloudflare Warp Zero Trust User Guide</title>
-    <url>//archives/cloudflare-warp-zero-trust-user-guide/</url>
-    <content><![CDATA[<h2 id="一、创建-Cloudflare-账户和-Zero-Trust-团队"><a href="#一、创建-Cloudflare-账户和-Zero-Trust-团队" class="headerlink" title="一、创建 Cloudflare 账户和 Zero Trust 团队"></a>一、创建 Cloudflare 账户和 Zero Trust 团队</h2><p>注册一个 Cloudflare 账户，点击左侧的 Zero Trust</p>
+    <title>Customizing Folder &amp; Disk Icons in Windows</title>
+    <url>//archives/customizing-folder-and-disk-icons-in-windows/</url>
+    <content><![CDATA[<p>Windows 本身自带许多图标文件，供我们对文件或文件夹图标进行自定义。但是有时候，系统自带的图标不能满足我们的需求，于是我们可以自定义一些图标并进行更换。</p>
+<h2 id="一、Windows-默认图标"><a href="#一、Windows-默认图标" class="headerlink" title="一、Windows 默认图标"></a>一、Windows 默认图标</h2><p>我们在新建文件夹时能看到 Windows 自带的默认图标。Windows 中一共有如下几个默认图标文件：</p>
+<p><code>shell32.dll</code>：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img0.webp"
-                      alt="Cloudflare 控制台"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img0.webp"
+                      alt="shell32.dll"
                 ></p>
-<p>创建一个团队并填写名称</p>
+<p><code>imageres.dll</code>：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img1.webp"
-                      alt="创建 Cloudflare 团队"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img1.webp"
+                      alt="imageres.dll"
                 ></p>
-<p>选择免费套餐</p>
+<p><code>pifmgr.dll</code>：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img2.webp"
-                      alt="选择免费套餐"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img2.webp"
+                      alt="pifmgr.dll"
                 ></p>
-<h2 id="二、添加团队筛选策略"><a href="#二、添加团队筛选策略" class="headerlink" title="二、添加团队筛选策略"></a>二、添加团队筛选策略</h2><p>回到 Zero Trust 页面，选择 Settings 中的 WARP Client 选项</p>
+<p><code>moricons.dll</code>：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img3.webp"
-                      alt="Zero Trust 设置"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img3.webp"
+                      alt="moricons.dll"
                 ></p>
-<p>点击 Device enrollment permissions 中的 Manage，添加策略</p>
+<p>这些图标被存储在一个 <code>.dll</code> 文件中，方便我们进行图标选择。</p>
+<h2 id="二、自定义磁盘图标"><a href="#二、自定义磁盘图标" class="headerlink" title="二、自定义磁盘图标"></a>二、自定义磁盘图标</h2><p>电脑里的不同磁盘，一般有着不同的作用，例如分别用来存储软件、图片等。因此，我们可能会想要更换磁盘的图标，让图标符合磁盘的功能。</p>
+<p><a class="link"   href="https://github.com/sameerasw/folder-icons" >Folder Icons<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 是一个提供 Windows 11 风格图标的 GitHub 仓库。它不仅提供了文件夹图标，也提供了很多磁盘图标供用户更换使用。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img4.webp"
-                      alt="WARP Client 设置"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img4.webp"
+                      alt="Folder Icons"
                 ></p>
+<p>想要更换磁盘图标，首先需要新建一个 <code>.txt</code> 文件并另存为 <code>autorun.inf</code>，然后在文件里添加如下内容：</p>
+<div class="code-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[autorun]</span></span><br><span class="line"><span class="attr">icon</span>=<span class="string">&quot;favicon.ico&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>将 <code>autorun.inf</code> 文件和 <code>favicon.ico</code> 图标文件放在想要更改图标的磁盘的根目录。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img5.webp"
-                      alt="添加策略"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img5.webp"
+                      alt="autorun"
                 ></p>
-<p>规则名称任意，动作填 Allow，筛选器选择 Emails ending in，Value 填写能通过团队筛选的邮箱后缀</p>
+<blockquote>
+<p>为防止误删，可以将这两个文件隐藏。</p>
+</blockquote>
+<p>重启电脑后，就能看到更改后的磁盘图标了。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img6.webp"
-                      alt="策略详细内容"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img6.webp"
+                      alt="更换磁盘盘符图标"
                 ></p>
-<h2 id="三、添加团队用户"><a href="#三、添加团队用户" class="headerlink" title="三、添加团队用户"></a>三、添加团队用户</h2><p>在 Cloudflare Warp客户端中选择账户，点击使用 Cloudflare Zero Trust 登录</p>
+<h2 id="三、自定义文件夹图标"><a href="#三、自定义文件夹图标" class="headerlink" title="三、自定义文件夹图标"></a>三、自定义文件夹图标</h2><p>如果只有一个 <code>.ico</code> 图标文件，可以直接选择来更改文件夹图标。但如果有多个图标供选择，就可以像 Windows 系统一样，将所有图标文件存储到一个 <code>.dll</code> 文件里，便于管理。</p>
+<p>如果图标数量较少，可以使用 Resource Hacker 手动导入：点击 <code>Action - Add an Image or Other Binary Resource ...</code> 逐个导入图标文件。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img7.webp"
-                      alt="登录到 Cloudflare Zero Trust 团队"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img7.webp"
+                      alt="手动导入图标"
                 ></p>
-<p>使用 Cloudflare Zero Trust 登录之前的界面如图</p>
+<p>但是，如果图标数量过多，逐个导入图标文件就显得太麻烦，这时我们可以使用 Visual Studio 2022 来将 <code>.ico</code> 文件批量打包为 <code>.dll</code> 文件。</p>
+<p>打开 Visual Studio 2022，选择“创建新项目”：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img8.webp"
-                      alt="登录团队前连接图示"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img8.webp"
+                      alt="创建新项目"
                 ></p>
-<p>根据要求填写团队名称并完成认证</p>
+<p>项目模板选择“动态链接库(DLL)”：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img9.webp"
-                      alt="填写团队名称并认证"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img9.webp"
+                      alt="动态链接库(DLL)"
                 ></p>
-<p>使用 Cloudflare Zero Trust 登录之后的界面如图，可以发现已经变成了 Zero Trust，现在就可以使用 Zero Trust 访问外网了</p>
+<p>在“视图 - 其他窗口”中选择“资源视图”（或者直接使用快捷键 <code>Ctrl + Shift + E</code>）：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img10.webp"
-                      alt="登录团队后连接图示"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img10.webp"
+                      alt="资源视图"
                 ></p>
-<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>由于各种原因，自 2024 年 6 月 6 日起，使用此方法访问外网已部分失效。</p>
-<p>如果连接失败且错误代码如图表示已无法正常连接。</p>
+<p>在右侧的资源视图中，右键项目文件夹，添加资源：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img11.webp"
-                      alt="错误代码"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img11.webp"
+                      alt="添加资源"
                 ></p>
-<p>部分地区和设备仍可通过手机流量或手机共享热点到电脑使用此方法。</p>
+<p>导入 Bitmap 类型：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img12.webp"
+                      alt="导入 Bitmap"
+                ></p>
+<p>在弹出的窗口中选择 <code>.ico</code> 文件即可。</p>
+<blockquote>
+<p>如果图标文件太多，注意不要一次性导入，否则 Visual Studio 容易崩溃。</p>
+</blockquote>
+<p>下图为 Visual Studio 生成的 <code>.rc</code> 文件：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img13.webp"
+                      alt="资源脚本文件"
+                ></p>
+<blockquote>
+<p>这个资源脚本不能在 Resource Hacker里编译。Resource Hacker 不支持批量导入资源，如果手动创建资源脚本并粘贴所有 <code>.ico</code> 文件路径，编译后仍会出错，会出现识别出图标文件不同分辨率信息但无法正确导入不同分辨率图像的情况。</p>
+</blockquote>
+<p>最后，使用 <code>Ctrl + Shift + B</code> 生成。</p>
+<p>生成成功后，在 <code>项目名称\x64\Debug</code> 文件下就能找到编译后的 <code>项目名称.dll</code>文件。</p>
+<p>将这个 <code>.dll</code> 文件导入 Resource Hacker 里查看，发现结构正确无误。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img14.webp"
+                      alt="查看 DLL 文件图标分组结构"
+                ></p>
+<p>新建文件夹并在选择这个 <code>.dll</code> 文件：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img15.webp"
+                      alt="从生成的 DLL 文件中选择图标"
+                ></p>
+<p>更换成功！</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img16.webp"
+                      alt="图标更换效果"
+                ></p>
 ]]></content>
       <categories>
-        <category>Network</category>
+        <category>System</category>
       </categories>
       <tags>
-        <tag>Cloudflare</tag>
+        <tag>Windows Customization</tag>
+        <tag>Icon</tag>
       </tags>
   </entry>
   <entry>
@@ -1289,6 +1345,187 @@
       <tags>
         <tag>PPPoE</tag>
         <tag>Campus Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cloudflare Warp Zero Trust User Guide</title>
+    <url>//archives/cloudflare-warp-zero-trust-user-guide/</url>
+    <content><![CDATA[<h2 id="一、创建-Cloudflare-账户和-Zero-Trust-团队"><a href="#一、创建-Cloudflare-账户和-Zero-Trust-团队" class="headerlink" title="一、创建 Cloudflare 账户和 Zero Trust 团队"></a>一、创建 Cloudflare 账户和 Zero Trust 团队</h2><p>注册一个 Cloudflare 账户，点击左侧的 Zero Trust</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img0.webp"
+                      alt="Cloudflare 控制台"
+                ></p>
+<p>创建一个团队并填写名称</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img1.webp"
+                      alt="创建 Cloudflare 团队"
+                ></p>
+<p>选择免费套餐</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img2.webp"
+                      alt="选择免费套餐"
+                ></p>
+<h2 id="二、添加团队筛选策略"><a href="#二、添加团队筛选策略" class="headerlink" title="二、添加团队筛选策略"></a>二、添加团队筛选策略</h2><p>回到 Zero Trust 页面，选择 Settings 中的 WARP Client 选项</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img3.webp"
+                      alt="Zero Trust 设置"
+                ></p>
+<p>点击 Device enrollment permissions 中的 Manage，添加策略</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img4.webp"
+                      alt="WARP Client 设置"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img5.webp"
+                      alt="添加策略"
+                ></p>
+<p>规则名称任意，动作填 Allow，筛选器选择 Emails ending in，Value 填写能通过团队筛选的邮箱后缀</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img6.webp"
+                      alt="策略详细内容"
+                ></p>
+<h2 id="三、添加团队用户"><a href="#三、添加团队用户" class="headerlink" title="三、添加团队用户"></a>三、添加团队用户</h2><p>在 Cloudflare Warp客户端中选择账户，点击使用 Cloudflare Zero Trust 登录</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img7.webp"
+                      alt="登录到 Cloudflare Zero Trust 团队"
+                ></p>
+<p>使用 Cloudflare Zero Trust 登录之前的界面如图</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img8.webp"
+                      alt="登录团队前连接图示"
+                ></p>
+<p>根据要求填写团队名称并完成认证</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img9.webp"
+                      alt="填写团队名称并认证"
+                ></p>
+<p>使用 Cloudflare Zero Trust 登录之后的界面如图，可以发现已经变成了 Zero Trust，现在就可以使用 Zero Trust 访问外网了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img10.webp"
+                      alt="登录团队后连接图示"
+                ></p>
+<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>由于各种原因，自 2024 年 6 月 6 日起，使用此方法访问外网已部分失效。</p>
+<p>如果连接失败且错误代码如图表示已无法正常连接。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img11.webp"
+                      alt="错误代码"
+                ></p>
+<p>部分地区和设备仍可通过手机流量或手机共享热点到电脑使用此方法。</p>
+]]></content>
+      <categories>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Cloudflare</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Fixing Issue of Content Sync Display of Personal Website in Search Engine</title>
+    <url>//archives/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/</url>
+    <content><![CDATA[<p>有时候通过搜索引擎搜索自己的网站时，可能会发现展示的内容（如网站名称、Logo、标题等）不同步或没有及时更新。这通常是因为搜索引擎缓存了旧的页面数据。为了确保搜索引擎显示最新的内容，可以通过 Google Search Console 或 Bing Webmaster Tools 来解决这个问题。</p>
+<h2 id="一、域名所有权验证"><a href="#一、域名所有权验证" class="headerlink" title="一、域名所有权验证"></a>一、域名所有权验证</h2><p>以 Google Search Console 为例，打开 <a class="link"   href="https://search.google.com/search-console/" >Google Search Console<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，添加站点，出现如下界面：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img0.webp"
+                      alt="通过 DNS 解析记录验证域名所有权"
+                ></p>
+<p>打开域名提供商的网站（如腾讯云），打开域名的 DNS 解析记录并添加：</p>
+<blockquote>
+<p> 主机记录选择 <code>@</code>，记录类型选择 <code>TXT</code>，记录值粘贴 Google 提供的值，其他保持默认。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img1.webp"
+                      alt="腾讯云 DNS 解析记录"
+                ></p>
+<p>完成后返回 Google Search Console，可以看到验证已经完成：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img2.webp"
+                      alt="验证完成"
+                ></p>
+<blockquote>
+<p>建议使用 Google Search Console，因为 Bing Webmaster Tools 可以通过 Google 导入站点信息，无需二次配置。</p>
+<p>Bing Webmaster Tools 网址：<a class="link"   href="https://www.bing.com/webmasters/" >Bing Webmaster Tools<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+</blockquote>
+<h2 id="二、请求重新索引"><a href="#二、请求重新索引" class="headerlink" title="二、请求重新索引"></a>二、请求重新索引</h2><p>完成验证后，即可进入 Google Search Console 的控制台页面。</p>
+<p>在 URL Inspection 下点击 <code>REQUEST INDEXING</code> 即可请求重新索引，让 Google 更新站点信息。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img3.webp"
+                      alt="请求重新索引"
+                ></p>
+<p>大概经过一到两天时间就能看到自己域名下的网站更新后的信息。</p>
+<h2 id="三、提高索引速度"><a href="#三、提高索引速度" class="headerlink" title="三、提高索引速度"></a>三、提高索引速度</h2><p>为了加速搜索引擎的抓取和索引，可以为网站添加 Sitemap。</p>
+<p>执行以下命令安装 Sitemap 生成插件：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure></div>
+
+<p>在根目录的 <code>_config.yml</code> 文件中添加以下配置：</p>
+<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure></div>
+
+<p>执行以下命令来生成 <code>sitemap.xml</code> 文件：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>此命令会在 <code>public</code> 目录下生成 <code>sitemap.xml</code> 文件。</p>
+<p>在 <code>source</code> 文件夹下添加 <code>robots.txt</code> 文件，指引搜索引擎访问 Sitemap 文件。</p>
+<p><code>robots.txt</code> 文件内容如下：</p>
+<div class="code-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Disallow: </span><br><span class="line">Sitemap: https://1lya.com/sitemap.xml</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><code>robots.txt</code> 是一个文本文件，存放在网站根目录中。它告诉搜索引擎哪些页面或资源可以抓取，哪些应该被忽略。通常用于避免抓取无关或重复的内容。</p>
+</blockquote>
+<p>执行以下命令将生成的 Sitemap 部署到网站：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>部署完成后，可以在 <code>https://example.com/sitemap.xml</code> 访问并查看网站的 Sitemap。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img4.webp"
+                      alt="网站 Sitemap"
+                ></p>
+<p>将生成的 Sitemap URL 添加到 Google Search Console 或者 Bing Webmaster Tools：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img5.webp"
+                      alt="提交 Sitemap"
+                ></p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Personal Website</tag>
+        <tag>Sitemap</tag>
       </tags>
   </entry>
   <entry>
@@ -1515,91 +1752,6 @@
       <tags>
         <tag>DC</tag>
         <tag>TV Series</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Fixing Issue of Content Sync Display of Personal Website in Search Engine</title>
-    <url>//archives/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/</url>
-    <content><![CDATA[<p>有时候通过搜索引擎搜索自己的网站时，可能会发现展示的内容（如网站名称、Logo、标题等）不同步或没有及时更新。这通常是因为搜索引擎缓存了旧的页面数据。为了确保搜索引擎显示最新的内容，可以通过 Google Search Console 或 Bing Webmaster Tools 来解决这个问题。</p>
-<h2 id="一、域名所有权验证"><a href="#一、域名所有权验证" class="headerlink" title="一、域名所有权验证"></a>一、域名所有权验证</h2><p>以 Google Search Console 为例，打开 <a class="link"   href="https://search.google.com/search-console/" >Google Search Console<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，添加站点，出现如下界面：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img0.webp"
-                      alt="通过 DNS 解析记录验证域名所有权"
-                ></p>
-<p>打开域名提供商的网站（如腾讯云），打开域名的 DNS 解析记录并添加：</p>
-<blockquote>
-<p> 主机记录选择 <code>@</code>，记录类型选择 <code>TXT</code>，记录值粘贴 Google 提供的值，其他保持默认。</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img1.webp"
-                      alt="腾讯云 DNS 解析记录"
-                ></p>
-<p>完成后返回 Google Search Console，可以看到验证已经完成：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img2.webp"
-                      alt="验证完成"
-                ></p>
-<blockquote>
-<p>建议使用 Google Search Console，因为 Bing Webmaster Tools 可以通过 Google 导入站点信息，无需二次配置。</p>
-<p>Bing Webmaster Tools 网址：<a class="link"   href="https://www.bing.com/webmasters/" >Bing Webmaster Tools<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-</blockquote>
-<h2 id="二、请求重新索引"><a href="#二、请求重新索引" class="headerlink" title="二、请求重新索引"></a>二、请求重新索引</h2><p>完成验证后，即可进入 Google Search Console 的控制台页面。</p>
-<p>在 URL Inspection 下点击 <code>REQUEST INDEXING</code> 即可请求重新索引，让 Google 更新站点信息。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img3.webp"
-                      alt="请求重新索引"
-                ></p>
-<p>大概经过一到两天时间就能看到自己域名下的网站更新后的信息。</p>
-<h2 id="三、提高索引速度"><a href="#三、提高索引速度" class="headerlink" title="三、提高索引速度"></a>三、提高索引速度</h2><p>为了加速搜索引擎的抓取和索引，可以为网站添加 Sitemap。</p>
-<p>执行以下命令安装 Sitemap 生成插件：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure></div>
-
-<p>在根目录的 <code>_config.yml</code> 文件中添加以下配置：</p>
-<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure></div>
-
-<p>执行以下命令来生成 <code>sitemap.xml</code> 文件：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>此命令会在 <code>public</code> 目录下生成 <code>sitemap.xml</code> 文件。</p>
-<p>在 <code>source</code> 文件夹下添加 <code>robots.txt</code> 文件，指引搜索引擎访问 Sitemap 文件。</p>
-<p><code>robots.txt</code> 文件内容如下：</p>
-<div class="code-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Disallow: </span><br><span class="line">Sitemap: https://1lya.com/sitemap.xml</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p><code>robots.txt</code> 是一个文本文件，存放在网站根目录中。它告诉搜索引擎哪些页面或资源可以抓取，哪些应该被忽略。通常用于避免抓取无关或重复的内容。</p>
-</blockquote>
-<p>执行以下命令将生成的 Sitemap 部署到网站：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>部署完成后，可以在 <code>https://example.com/sitemap.xml</code> 访问并查看网站的 Sitemap。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img4.webp"
-                      alt="网站 Sitemap"
-                ></p>
-<p>将生成的 Sitemap URL 添加到 Google Search Console 或者 Bing Webmaster Tools：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img5.webp"
-                      alt="提交 Sitemap"
-                ></p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Personal Website</tag>
-        <tag>Sitemap</tag>
       </tags>
   </entry>
   <entry>
@@ -2184,158 +2336,6 @@
       <tags>
         <tag>Windows</tag>
         <tag>Issues</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Customizing Folder &amp; Disk Icons in Windows</title>
-    <url>//archives/customizing-folder-and-disk-icons-in-windows/</url>
-    <content><![CDATA[<p>Windows 本身自带许多图标文件，供我们对文件或文件夹图标进行自定义。但是有时候，系统自带的图标不能满足我们的需求，于是我们可以自定义一些图标并进行更换。</p>
-<h2 id="一、Windows-默认图标"><a href="#一、Windows-默认图标" class="headerlink" title="一、Windows 默认图标"></a>一、Windows 默认图标</h2><p>我们在新建文件夹时能看到 Windows 自带的默认图标。Windows 中一共有如下几个默认图标文件：</p>
-<p><code>shell32.dll</code>：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img0.webp"
-                      alt="shell32.dll"
-                ></p>
-<p><code>imageres.dll</code>：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img1.webp"
-                      alt="imageres.dll"
-                ></p>
-<p><code>pifmgr.dll</code>：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img2.webp"
-                      alt="pifmgr.dll"
-                ></p>
-<p><code>moricons.dll</code>：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img3.webp"
-                      alt="moricons.dll"
-                ></p>
-<p>这些图标被存储在一个 <code>.dll</code> 文件中，方便我们进行图标选择。</p>
-<h2 id="二、自定义磁盘图标"><a href="#二、自定义磁盘图标" class="headerlink" title="二、自定义磁盘图标"></a>二、自定义磁盘图标</h2><p>电脑里的不同磁盘，一般有着不同的作用，例如分别用来存储软件、图片等。因此，我们可能会想要更换磁盘的图标，让图标符合磁盘的功能。</p>
-<p><a class="link"   href="https://github.com/sameerasw/folder-icons" >Folder Icons<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 是一个提供 Windows 11 风格图标的 GitHub 仓库。它不仅提供了文件夹图标，也提供了很多磁盘图标供用户更换使用。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img4.webp"
-                      alt="Folder Icons"
-                ></p>
-<p>想要更换磁盘图标，首先需要新建一个 <code>.txt</code> 文件并另存为 <code>autorun.inf</code>，然后在文件里添加如下内容：</p>
-<div class="code-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[autorun]</span></span><br><span class="line"><span class="attr">icon</span>=<span class="string">&quot;favicon.ico&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>将 <code>autorun.inf</code> 文件和 <code>favicon.ico</code> 图标文件放在想要更改图标的磁盘的根目录。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img5.webp"
-                      alt="autorun"
-                ></p>
-<blockquote>
-<p>为防止误删，可以将这两个文件隐藏。</p>
-</blockquote>
-<p>重启电脑后，就能看到更改后的磁盘图标了。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img6.webp"
-                      alt="更换磁盘盘符图标"
-                ></p>
-<h2 id="三、自定义文件夹图标"><a href="#三、自定义文件夹图标" class="headerlink" title="三、自定义文件夹图标"></a>三、自定义文件夹图标</h2><p>如果只有一个 <code>.ico</code> 图标文件，可以直接选择来更改文件夹图标。但如果有多个图标供选择，就可以像 Windows 系统一样，将所有图标文件存储到一个 <code>.dll</code> 文件里，便于管理。</p>
-<p>如果图标数量较少，可以使用 Resource Hacker 手动导入：点击 <code>Action - Add an Image or Other Binary Resource ...</code> 逐个导入图标文件。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img7.webp"
-                      alt="手动导入图标"
-                ></p>
-<p>但是，如果图标数量过多，逐个导入图标文件就显得太麻烦，这时我们可以使用 Visual Studio 2022 来将 <code>.ico</code> 文件批量打包为 <code>.dll</code> 文件。</p>
-<p>打开 Visual Studio 2022，选择“创建新项目”：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img8.webp"
-                      alt="创建新项目"
-                ></p>
-<p>项目模板选择“动态链接库(DLL)”：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img9.webp"
-                      alt="动态链接库(DLL)"
-                ></p>
-<p>在“视图 - 其他窗口”中选择“资源视图”（或者直接使用快捷键 <code>Ctrl + Shift + E</code>）：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img10.webp"
-                      alt="资源视图"
-                ></p>
-<p>在右侧的资源视图中，右键项目文件夹，添加资源：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img11.webp"
-                      alt="添加资源"
-                ></p>
-<p>导入 Bitmap 类型：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img12.webp"
-                      alt="导入 Bitmap"
-                ></p>
-<p>在弹出的窗口中选择 <code>.ico</code> 文件即可。</p>
-<blockquote>
-<p>如果图标文件太多，注意不要一次性导入，否则 Visual Studio 容易崩溃。</p>
-</blockquote>
-<p>下图为 Visual Studio 生成的 <code>.rc</code> 文件：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img13.webp"
-                      alt="资源脚本文件"
-                ></p>
-<blockquote>
-<p>这个资源脚本不能在 Resource Hacker里编译。Resource Hacker 不支持批量导入资源，如果手动创建资源脚本并粘贴所有 <code>.ico</code> 文件路径，编译后仍会出错，会出现识别出图标文件不同分辨率信息但无法正确导入不同分辨率图像的情况。</p>
-</blockquote>
-<p>最后，使用 <code>Ctrl + Shift + B</code> 生成。</p>
-<p>生成成功后，在 <code>项目名称\x64\Debug</code> 文件下就能找到编译后的 <code>项目名称.dll</code>文件。</p>
-<p>将这个 <code>.dll</code> 文件导入 Resource Hacker 里查看，发现结构正确无误。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img14.webp"
-                      alt="查看 DLL 文件图标分组结构"
-                ></p>
-<p>新建文件夹并在选择这个 <code>.dll</code> 文件：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img15.webp"
-                      alt="从生成的 DLL 文件中选择图标"
-                ></p>
-<p>更换成功！</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/customizing-folder-and-disk-icons-in-windows/img16.webp"
-                      alt="图标更换效果"
-                ></p>
-]]></content>
-      <categories>
-        <category>System</category>
-      </categories>
-      <tags>
-        <tag>Windows Customization</tag>
-        <tag>Icon</tag>
       </tags>
   </entry>
   <entry>
@@ -3300,8 +3300,8 @@
 <td><a class="link"   href="https://book.douban.com/subject/30276769/" >https://book.douban.com/subject/30276769/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td>11字谜案</td>
-<td><a class="link"   href="https://book.douban.com/subject/36511003/" >https://book.douban.com/subject/36511003/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+<td>孤岛凶案</td>
+<td><a class="link"   href="https://book.douban.com/subject/37348683/" >https://book.douban.com/subject/37348683/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
 <td>魔球</td>
@@ -3512,8 +3512,8 @@
 <td><a class="link"   href="https://book.douban.com/subject/34449302/" >https://book.douban.com/subject/34449302/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td>梦回都灵</td>
-<td><a class="link"   href="https://book.douban.com/subject/27181608/" >https://book.douban.com/subject/27181608/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+<td>怪奇之梦</td>
+<td><a class="link"   href="https://book.douban.com/subject/37264994/" >https://book.douban.com/subject/37264994/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
 <td>红手指</td>
@@ -3532,8 +3532,8 @@
 <td><a class="link"   href="https://book.douban.com/subject/27178063/" >https://book.douban.com/subject/27178063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td>濒死之眼</td>
-<td><a class="link"   href="https://book.douban.com/subject/34662077/" >https://book.douban.com/subject/34662077/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+<td>人偶游戏</td>
+<td><a class="link"   href="https://book.douban.com/subject/37417968/" >https://book.douban.com/subject/37417968/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
 <td>流星之绊</td>
@@ -3640,8 +3640,8 @@
 <td><a class="link"   href="https://book.douban.com/subject/35413489/" >https://book.douban.com/subject/35413489/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td>第十年的情人节</td>
-<td><a class="link"   href="https://book.douban.com/subject/27125950/" >https://book.douban.com/subject/27125950/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+<td>情人节终章</td>
+<td><a class="link"   href="https://book.douban.com/subject/37358966/" >https://book.douban.com/subject/37358966/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
 <td>假面之夜</td>
@@ -3703,6 +3703,214 @@
       </categories>
       <tags>
         <tag>Higashino Keigo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Marvel TV Series</title>
+    <url>//archives/marvel-tv-series/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>原名</th>
+<th>译名</th>
+<th>季数</th>
+<th>豆瓣链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Spidey Super Stories</td>
+<td>蜘蛛侠超能故事</td>
+<td>3</td>
+<td>无</td>
+</tr>
+<tr>
+<td>The Amazing Spider-Man</td>
+<td>神奇的蜘蛛侠</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/4882797/" >https://movie.douban.com/subject/4882797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Incredible Hulk</td>
+<td>无敌浩克</td>
+<td>5</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3066754/" >https://movie.douban.com/subject/3066754/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Spider-Man</td>
+<td>蜘蛛侠</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3766061/" >https://movie.douban.com/subject/3766061/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Blade: The Series</td>
+<td>刀锋战士</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1874289/" >https://movie.douban.com/subject/1874289/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Agents of S.H.I.E.L.D.</td>
+<td>神盾局特工</td>
+<td>7</td>
+<td><a class="link"   href="https://movie.douban.com/subject/19938222/" >https://movie.douban.com/subject/19938222/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Agent Carter</td>
+<td>特工卡特</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25867544/" >https://movie.douban.com/subject/25867544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Daredevil</td>
+<td>夜魔侠</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769160/" >https://movie.douban.com/subject/25769160/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Jessica Jones</td>
+<td>杰西卡·琼斯</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769161/" >https://movie.douban.com/subject/25769161/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Luke Cage</td>
+<td>卢克·凯奇</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769158/" >https://movie.douban.com/subject/25769158/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Legion</td>
+<td>大群</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26641716/" >https://movie.douban.com/subject/26641716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Iron Fist</td>
+<td>铁拳</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769159/" >https://movie.douban.com/subject/25769159/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Defenders</td>
+<td>捍卫者联盟</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26293633/" >https://movie.douban.com/subject/26293633/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Inhumans</td>
+<td>异人族</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25958810/" >https://movie.douban.com/subject/25958810/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Gifted</td>
+<td>天赋异禀</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26908002/" >https://movie.douban.com/subject/26908002/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Punisher</td>
+<td>惩罚者</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26710394/" >https://movie.douban.com/subject/26710394/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Runaways</td>
+<td>离家童盟</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3080561/" >https://movie.douban.com/subject/3080561/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Cloak &amp; Dagger</td>
+<td>斗篷与匕首</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26767521/" >https://movie.douban.com/subject/26767521/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Helstrom</td>
+<td>地狱风暴</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/33434931/" >https://movie.douban.com/subject/33434931/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>WandaVision</td>
+<td>旺达幻视</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30331433/" >https://movie.douban.com/subject/30331433/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Falcon and the Winter Soldier</td>
+<td>猎鹰与冬兵</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30367642/" >https://movie.douban.com/subject/30367642/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Loki</td>
+<td>洛基</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30331432/" >https://movie.douban.com/subject/30331432/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Hawkeye</td>
+<td>鹰眼</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/33406089/" >https://movie.douban.com/subject/33406089/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Moon Knight</td>
+<td>月光骑士</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26358318/" >https://movie.douban.com/subject/26358318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Ms. Marvel</td>
+<td>惊奇少女</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26358321/" >https://movie.douban.com/subject/26358321/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>She-Hulk: Attorney at Law</td>
+<td>女浩克</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/34803800/" >https://movie.douban.com/subject/34803800/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Secret Invasion</td>
+<td>秘密入侵</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35284245/" >https://movie.douban.com/subject/35284245/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Echo</td>
+<td>回声</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35412375/" >https://movie.douban.com/subject/35412375/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Agatha All Along</td>
+<td>女巫阿加莎</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35636428/" >https://movie.douban.com/subject/35636428/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Daredevil: Born Again</td>
+<td>夜魔侠：重生</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35908203/" >https://movie.douban.com/subject/35908203/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Ironheart</td>
+<td>钢铁之心</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35284247/" >https://movie.douban.com/subject/35284247/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Media</category>
+      </categories>
+      <tags>
+        <tag>TV Series</tag>
+        <tag>Marvel</tag>
       </tags>
   </entry>
   <entry>
@@ -4174,214 +4382,6 @@
       </categories>
       <tags>
         <tag>Films</tag>
-        <tag>Marvel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Marvel TV Series</title>
-    <url>//archives/marvel-tv-series/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>原名</th>
-<th>译名</th>
-<th>季数</th>
-<th>豆瓣链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Spidey Super Stories</td>
-<td>蜘蛛侠超能故事</td>
-<td>3</td>
-<td>无</td>
-</tr>
-<tr>
-<td>The Amazing Spider-Man</td>
-<td>神奇的蜘蛛侠</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/4882797/" >https://movie.douban.com/subject/4882797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Incredible Hulk</td>
-<td>无敌浩克</td>
-<td>5</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3066754/" >https://movie.douban.com/subject/3066754/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Spider-Man</td>
-<td>蜘蛛侠</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3766061/" >https://movie.douban.com/subject/3766061/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Blade: The Series</td>
-<td>刀锋战士</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1874289/" >https://movie.douban.com/subject/1874289/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Agents of S.H.I.E.L.D.</td>
-<td>神盾局特工</td>
-<td>7</td>
-<td><a class="link"   href="https://movie.douban.com/subject/19938222/" >https://movie.douban.com/subject/19938222/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Agent Carter</td>
-<td>特工卡特</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25867544/" >https://movie.douban.com/subject/25867544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Daredevil</td>
-<td>夜魔侠</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769160/" >https://movie.douban.com/subject/25769160/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Jessica Jones</td>
-<td>杰西卡·琼斯</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769161/" >https://movie.douban.com/subject/25769161/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Luke Cage</td>
-<td>卢克·凯奇</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769158/" >https://movie.douban.com/subject/25769158/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Legion</td>
-<td>大群</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26641716/" >https://movie.douban.com/subject/26641716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Iron Fist</td>
-<td>铁拳</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769159/" >https://movie.douban.com/subject/25769159/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Defenders</td>
-<td>捍卫者联盟</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26293633/" >https://movie.douban.com/subject/26293633/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Inhumans</td>
-<td>异人族</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25958810/" >https://movie.douban.com/subject/25958810/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Gifted</td>
-<td>天赋异禀</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26908002/" >https://movie.douban.com/subject/26908002/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Punisher</td>
-<td>惩罚者</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26710394/" >https://movie.douban.com/subject/26710394/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Runaways</td>
-<td>离家童盟</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3080561/" >https://movie.douban.com/subject/3080561/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Cloak &amp; Dagger</td>
-<td>斗篷与匕首</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26767521/" >https://movie.douban.com/subject/26767521/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Helstrom</td>
-<td>地狱风暴</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/33434931/" >https://movie.douban.com/subject/33434931/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>WandaVision</td>
-<td>旺达幻视</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30331433/" >https://movie.douban.com/subject/30331433/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Falcon and the Winter Soldier</td>
-<td>猎鹰与冬兵</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30367642/" >https://movie.douban.com/subject/30367642/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Loki</td>
-<td>洛基</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30331432/" >https://movie.douban.com/subject/30331432/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Hawkeye</td>
-<td>鹰眼</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/33406089/" >https://movie.douban.com/subject/33406089/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Moon Knight</td>
-<td>月光骑士</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26358318/" >https://movie.douban.com/subject/26358318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Ms. Marvel</td>
-<td>惊奇少女</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26358321/" >https://movie.douban.com/subject/26358321/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>She-Hulk: Attorney at Law</td>
-<td>女浩克</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/34803800/" >https://movie.douban.com/subject/34803800/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Secret Invasion</td>
-<td>秘密入侵</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35284245/" >https://movie.douban.com/subject/35284245/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Echo</td>
-<td>回声</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35412375/" >https://movie.douban.com/subject/35412375/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Agatha All Along</td>
-<td>女巫阿加莎</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35636428/" >https://movie.douban.com/subject/35636428/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Daredevil: Born Again</td>
-<td>夜魔侠：重生</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35908203/" >https://movie.douban.com/subject/35908203/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Ironheart</td>
-<td>钢铁之心</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35284247/" >https://movie.douban.com/subject/35284247/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Media</category>
-      </categories>
-      <tags>
-        <tag>TV Series</tag>
         <tag>Marvel</tag>
       </tags>
   </entry>
