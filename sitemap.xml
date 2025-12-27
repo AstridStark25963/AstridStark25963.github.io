@@ -299,28 +299,14 @@
 
   
   <url>
-    <loc>https://1lya.com/tags/The-Elder-Scrolls/</loc>
+    <loc>https://1lya.com/tags/Image-Hosting/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://1lya.com/tags/Tamriel/</loc>
-    <lastmod>2025-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Docker/</loc>
-    <lastmod>2025-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Jellyfin/</loc>
+    <loc>https://1lya.com/tags/GitHub/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -334,14 +320,14 @@
   </url>
   
   <url>
-    <loc>https://1lya.com/tags/Image-Hosting/</loc>
+    <loc>https://1lya.com/tags/The-Elder-Scrolls/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://1lya.com/tags/GitHub/</loc>
+    <loc>https://1lya.com/tags/Tamriel/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -397,6 +383,20 @@
   </url>
   
   <url>
+    <loc>https://1lya.com/tags/Docker/</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Jellyfin/</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://1lya.com/tags/Windows-Customization/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -432,6 +432,13 @@
   </url>
   
   <url>
+    <loc>https://1lya.com/tags/Maven/</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://1lya.com/tags/Personal-Website/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -440,13 +447,6 @@
   
   <url>
     <loc>https://1lya.com/tags/Sitemap/</loc>
-    <lastmod>2025-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Maven/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -481,6 +481,13 @@
   </url>
   
   <url>
+    <loc>https://1lya.com/tags/Marvel/</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://1lya.com/tags/Skyrim/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -495,28 +502,7 @@
   </url>
   
   <url>
-    <loc>https://1lya.com/tags/Marvel/</loc>
-    <lastmod>2025-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://1lya.com/tags/Higashino-Keigo/</loc>
-    <lastmod>2025-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Office/</loc>
-    <lastmod>2025-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/License/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -537,6 +523,20 @@
   </url>
   
   <url>
+    <loc>https://1lya.com/tags/Office/</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/License/</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://1lya.com/tags/Hexo/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -546,14 +546,7 @@
 
   
   <url>
-    <loc>https://1lya.com/categories/Game/</loc>
-    <lastmod>2025-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/categories/Media/</loc>
+    <loc>https://1lya.com/categories/Programming/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -567,7 +560,7 @@
   </url>
   
   <url>
-    <loc>https://1lya.com/categories/Programming/</loc>
+    <loc>https://1lya.com/categories/Game/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -575,6 +568,13 @@
   
   <url>
     <loc>https://1lya.com/categories/Network/</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/categories/Media/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
