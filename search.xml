@@ -720,6 +720,102 @@
       </tags>
   </entry>
   <entry>
+    <title>Cloudflare Warp Zero Trust User Guide</title>
+    <url>//archives/cloudflare-warp-zero-trust-user-guide/</url>
+    <content><![CDATA[<h2 id="一、创建-Cloudflare-账户和-Zero-Trust-团队"><a href="#一、创建-Cloudflare-账户和-Zero-Trust-团队" class="headerlink" title="一、创建 Cloudflare 账户和 Zero Trust 团队"></a>一、创建 Cloudflare 账户和 Zero Trust 团队</h2><p>注册一个 Cloudflare 账户，点击左侧的 Zero Trust</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img0.webp"
+                      alt="Cloudflare 控制台"
+                ></p>
+<p>创建一个团队并填写名称</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img1.webp"
+                      alt="创建 Cloudflare 团队"
+                ></p>
+<p>选择免费套餐</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img2.webp"
+                      alt="选择免费套餐"
+                ></p>
+<h2 id="二、添加团队筛选策略"><a href="#二、添加团队筛选策略" class="headerlink" title="二、添加团队筛选策略"></a>二、添加团队筛选策略</h2><p>回到 Zero Trust 页面，选择 Settings 中的 WARP Client 选项</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img3.webp"
+                      alt="Zero Trust 设置"
+                ></p>
+<p>点击 Device enrollment permissions 中的 Manage，添加策略</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img4.webp"
+                      alt="WARP Client 设置"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img5.webp"
+                      alt="添加策略"
+                ></p>
+<p>规则名称任意，动作填 Allow，筛选器选择 Emails ending in，Value 填写能通过团队筛选的邮箱后缀</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img6.webp"
+                      alt="策略详细内容"
+                ></p>
+<h2 id="三、添加团队用户"><a href="#三、添加团队用户" class="headerlink" title="三、添加团队用户"></a>三、添加团队用户</h2><p>在 Cloudflare Warp客户端中选择账户，点击使用 Cloudflare Zero Trust 登录</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img7.webp"
+                      alt="登录到 Cloudflare Zero Trust 团队"
+                ></p>
+<p>使用 Cloudflare Zero Trust 登录之前的界面如图</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img8.webp"
+                      alt="登录团队前连接图示"
+                ></p>
+<p>根据要求填写团队名称并完成认证</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img9.webp"
+                      alt="填写团队名称并认证"
+                ></p>
+<p>使用 Cloudflare Zero Trust 登录之后的界面如图，可以发现已经变成了 Zero Trust，现在就可以使用 Zero Trust 访问外网了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img10.webp"
+                      alt="登录团队后连接图示"
+                ></p>
+<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>由于各种原因，自 2024 年 6 月 6 日起，使用此方法访问外网已部分失效。</p>
+<p>如果连接失败且错误代码如图表示已无法正常连接。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img11.webp"
+                      alt="错误代码"
+                ></p>
+<p>部分地区和设备仍可通过手机流量或手机共享热点到电脑使用此方法。</p>
+]]></content>
+      <categories>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Cloudflare</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Chinese Mojibake Encyclopedia</title>
     <url>//archives/chinese-mojibake-encyclopedia/</url>
     <content><![CDATA[<p>中文乱码是计算机系统在以错误编码方式解析字符数据时产生的一种现象，通常表现为不可理解的符号或替换字符。本百科的内容针对与简体中文相关的常见编码类型，总结了常见的乱码现象、产生原因及解决策略。</p>
@@ -863,99 +959,100 @@
       </tags>
   </entry>
   <entry>
-    <title>Cloudflare Warp Zero Trust User Guide</title>
-    <url>//archives/cloudflare-warp-zero-trust-user-guide/</url>
-    <content><![CDATA[<h2 id="一、创建-Cloudflare-账户和-Zero-Trust-团队"><a href="#一、创建-Cloudflare-账户和-Zero-Trust-团队" class="headerlink" title="一、创建 Cloudflare 账户和 Zero Trust 团队"></a>一、创建 Cloudflare 账户和 Zero Trust 团队</h2><p>注册一个 Cloudflare 账户，点击左侧的 Zero Trust</p>
+    <title>Building Jellyfin Media Library with Docker</title>
+    <url>//archives/building-jellyfin-media-library-with-docker/</url>
+    <content><![CDATA[<h2 id="一、配置-Docker"><a href="#一、配置-Docker" class="headerlink" title="一、配置 Docker"></a>一、配置 Docker</h2><p>进入 Docker 官网，下载 Docker Desktop 并进行安装</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img0.webp"
-                      alt="Cloudflare 控制台"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img0.webp"
+                      alt="Docker 官网"
                 ></p>
-<p>创建一个团队并填写名称</p>
+<blockquote>
+<p>安装期间，可能会在控制台要求更新或下载 WSL，直接按任意键安装即可</p>
+</blockquote>
+<p>安装完成后就可以进入并查看 Docker Desktop 的控制面板</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img1.webp"
-                      alt="创建 Cloudflare 团队"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img1.webp"
+                      alt="Docker Desktop 控制面板"
                 ></p>
-<p>选择免费套餐</p>
+<p><em>可选：Docker Desktop 汉化</em></p>
+<p>打开如下链接，下载版本对应的 <code>app.asar</code> 文件，并替换 <code>C:\Program Files\Docker\Docker\frontend\resources</code> 路径下的同名文件</p>
+<p><a class="link"   href="https://github.com/asxez/DockerDesktop-CN" >https://github.com/asxez/DockerDesktop-CN<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="二、配置-Jellyfin"><a href="#二、配置-Jellyfin" class="headerlink" title="二、配置 Jellyfin"></a>二、配置 Jellyfin</h2><p>打开控制台，输入以下指令拉取 Jellyfin 镜像到本地：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
+
+<p>在控制台执行以下指令，运行一个 Jellyfin 容器：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d ^</span><br><span class="line">	--name=jellyfin ^</span><br><span class="line">	-p 8096:8096 ^</span><br><span class="line">	-p 8920:8920 ^</span><br><span class="line">	-v D:\Jellyfin\config:/config ^</span><br><span class="line">	-v D:\Jellyfin\cache:/cache ^</span><br><span class="line">	-v D:\Jellyfin\media:/media ^</span><br><span class="line">	--restart unless-stopped ^</span><br><span class="line">	jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><strong>注意事项</strong>：</p>
+<ol>
+<li>每一行命令后边都必须加续行符号 <code>^</code> ；</li>
+<li><code>/config</code> , <code>/cache</code> , <code>/media</code> 的路径需替换为主机的实际路径</li>
+<li>Jellyfin 的默认 HTTP 端口为 8096，默认 HTTPS 端口为 8920</li>
+</ol>
+</blockquote>
+<p>容器运行成功后，访问 <a class="link"   href="http://localhost:8096/" >http://localhost:8096<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 打开 Jellyfin 控制面板</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img2.webp"
-                      alt="选择免费套餐"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img2.webp"
+                      alt="Jellyfin 控制面板"
                 ></p>
-<h2 id="二、添加团队筛选策略"><a href="#二、添加团队筛选策略" class="headerlink" title="二、添加团队筛选策略"></a>二、添加团队筛选策略</h2><p>回到 Zero Trust 页面，选择 Settings 中的 WARP Client 选项</p>
+<p>创建一个媒体库</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img3.webp"
-                      alt="Zero Trust 设置"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img3.webp"
+                      alt="创建媒体库"
                 ></p>
-<p>点击 Device enrollment permissions 中的 Manage，添加策略</p>
+<p>创建完成后，向相应的主机文件夹中添加电影</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img4.webp"
-                      alt="WARP Client 设置"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img4.webp"
+                      alt="添加电影"
                 ></p>
+<p>在 Jellyfin 控制台进行媒体库扫描</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img5.webp"
-                      alt="添加策略"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img5.webp"
+                      alt="媒体库扫描"
                 ></p>
-<p>规则名称任意，动作填 Allow，筛选器选择 Emails ending in，Value 填写能通过团队筛选的邮箱后缀</p>
+<p>扫描完成后，媒体库里便会展示出所有添加的媒体</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img6.webp"
-                      alt="策略详细内容"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img6.webp"
+                      alt="扫描结果"
                 ></p>
-<h2 id="三、添加团队用户"><a href="#三、添加团队用户" class="headerlink" title="三、添加团队用户"></a>三、添加团队用户</h2><p>在 Cloudflare Warp客户端中选择账户，点击使用 Cloudflare Zero Trust 登录</p>
+<p>其他管理容器的命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker start jellyfin   <span class="comment"># 启动名为 jellyfin 的容器</span></span><br><span class="line">docker stop jellyfin    <span class="comment"># 停止名为 jellyfin 的容器</span></span><br><span class="line">docker <span class="built_in">rm</span> jellyfin      <span class="comment"># 删除名为 jellyfin 的容器</span></span><br><span class="line">docker ps               <span class="comment"># 查看当前正在运行的容器</span></span><br><span class="line">docker ps -a            <span class="comment"># 查看所有容器，包括已停止的</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、在其他平台访问媒体库"><a href="#三、在其他平台访问媒体库" class="headerlink" title="三、在其他平台访问媒体库"></a>三、在其他平台访问媒体库</h2><p>在终端查看本机 IP 地址：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></div>
+
+<p>如果其他平台和主机处于同一局域网下，输入 <code>http://x.x.x.x:8096</code> （<code>x.x.x.x</code> 替换为主机 IPv4 地址）即可访问；</p>
+<p>如果其他平台和主机不处于同一局域网下但都支持 IPv6，输入 <code>http://[x:x:x:x:x:x:x:x]:8096</code> （<code>[x:x:x:x:x:x:x:x]</code> 替换为主机 IPv6 地址）即可访问；</p>
+<p>如果其他平台和主机不处于同一局域网下且都不支持 IPv6，只能通过公网 IPv4 和端口转发实现访问。</p>
+<p>其他平台访问效果：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img7.webp"
-                      alt="登录到 Cloudflare Zero Trust 团队"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img7.webp"
+                      alt="其他平台访问结果"
                 ></p>
-<p>使用 Cloudflare Zero Trust 登录之前的界面如图</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img8.webp"
-                      alt="登录团队前连接图示"
-                ></p>
-<p>根据要求填写团队名称并完成认证</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img9.webp"
-                      alt="填写团队名称并认证"
-                ></p>
-<p>使用 Cloudflare Zero Trust 登录之后的界面如图，可以发现已经变成了 Zero Trust，现在就可以使用 Zero Trust 访问外网了</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img10.webp"
-                      alt="登录团队后连接图示"
-                ></p>
-<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>由于各种原因，自 2024 年 6 月 6 日起，使用此方法访问外网已部分失效。</p>
-<p>如果连接失败且错误代码如图表示已无法正常连接。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img11.webp"
-                      alt="错误代码"
-                ></p>
-<p>部分地区和设备仍可通过手机流量或手机共享热点到电脑使用此方法。</p>
 ]]></content>
       <categories>
-        <category>Network</category>
+        <category>Media</category>
       </categories>
       <tags>
-        <tag>Cloudflare</tag>
+        <tag>Docker</tag>
+        <tag>Jellyfin</tag>
       </tags>
   </entry>
   <entry>
@@ -1230,103 +1327,6 @@
       <tags>
         <tag>DC</tag>
         <tag>Films</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Building Jellyfin Media Library with Docker</title>
-    <url>//archives/building-jellyfin-media-library-with-docker/</url>
-    <content><![CDATA[<h2 id="一、配置-Docker"><a href="#一、配置-Docker" class="headerlink" title="一、配置 Docker"></a>一、配置 Docker</h2><p>进入 Docker 官网，下载 Docker Desktop 并进行安装</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img0.webp"
-                      alt="Docker 官网"
-                ></p>
-<blockquote>
-<p>安装期间，可能会在控制台要求更新或下载 WSL，直接按任意键安装即可</p>
-</blockquote>
-<p>安装完成后就可以进入并查看 Docker Desktop 的控制面板</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img1.webp"
-                      alt="Docker Desktop 控制面板"
-                ></p>
-<p><em>可选：Docker Desktop 汉化</em></p>
-<p>打开如下链接，下载版本对应的 <code>app.asar</code> 文件，并替换 <code>C:\Program Files\Docker\Docker\frontend\resources</code> 路径下的同名文件</p>
-<p><a class="link"   href="https://github.com/asxez/DockerDesktop-CN" >https://github.com/asxez/DockerDesktop-CN<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="二、配置-Jellyfin"><a href="#二、配置-Jellyfin" class="headerlink" title="二、配置 Jellyfin"></a>二、配置 Jellyfin</h2><p>打开控制台，输入以下指令拉取 Jellyfin 镜像到本地：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
-
-<p>在控制台执行以下指令，运行一个 Jellyfin 容器：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d ^</span><br><span class="line">	--name=jellyfin ^</span><br><span class="line">	-p 8096:8096 ^</span><br><span class="line">	-p 8920:8920 ^</span><br><span class="line">	-v D:\Jellyfin\config:/config ^</span><br><span class="line">	-v D:\Jellyfin\cache:/cache ^</span><br><span class="line">	-v D:\Jellyfin\media:/media ^</span><br><span class="line">	--restart unless-stopped ^</span><br><span class="line">	jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p><strong>注意事项</strong>：</p>
-<ol>
-<li>每一行命令后边都必须加续行符号 <code>^</code> ；</li>
-<li><code>/config</code> , <code>/cache</code> , <code>/media</code> 的路径需替换为主机的实际路径</li>
-<li>Jellyfin 的默认 HTTP 端口为 8096，默认 HTTPS 端口为 8920</li>
-</ol>
-</blockquote>
-<p>容器运行成功后，访问 <a class="link"   href="http://localhost:8096/" >http://localhost:8096<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 打开 Jellyfin 控制面板</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img2.webp"
-                      alt="Jellyfin 控制面板"
-                ></p>
-<p>创建一个媒体库</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img3.webp"
-                      alt="创建媒体库"
-                ></p>
-<p>创建完成后，向相应的主机文件夹中添加电影</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img4.webp"
-                      alt="添加电影"
-                ></p>
-<p>在 Jellyfin 控制台进行媒体库扫描</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img5.webp"
-                      alt="媒体库扫描"
-                ></p>
-<p>扫描完成后，媒体库里便会展示出所有添加的媒体</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img6.webp"
-                      alt="扫描结果"
-                ></p>
-<p>其他管理容器的命令：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker start jellyfin   <span class="comment"># 启动名为 jellyfin 的容器</span></span><br><span class="line">docker stop jellyfin    <span class="comment"># 停止名为 jellyfin 的容器</span></span><br><span class="line">docker <span class="built_in">rm</span> jellyfin      <span class="comment"># 删除名为 jellyfin 的容器</span></span><br><span class="line">docker ps               <span class="comment"># 查看当前正在运行的容器</span></span><br><span class="line">docker ps -a            <span class="comment"># 查看所有容器，包括已停止的</span></span><br></pre></td></tr></table></figure></div>
-
-<h2 id="三、在其他平台访问媒体库"><a href="#三、在其他平台访问媒体库" class="headerlink" title="三、在其他平台访问媒体库"></a>三、在其他平台访问媒体库</h2><p>在终端查看本机 IP 地址：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></div>
-
-<p>如果其他平台和主机处于同一局域网下，输入 <code>http://x.x.x.x:8096</code> （<code>x.x.x.x</code> 替换为主机 IPv4 地址）即可访问；</p>
-<p>如果其他平台和主机不处于同一局域网下但都支持 IPv6，输入 <code>http://[x:x:x:x:x:x:x:x]:8096</code> （<code>[x:x:x:x:x:x:x:x]</code> 替换为主机 IPv6 地址）即可访问；</p>
-<p>如果其他平台和主机不处于同一局域网下且都不支持 IPv6，只能通过公网 IPv4 和端口转发实现访问。</p>
-<p>其他平台访问效果：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img7.webp"
-                      alt="其他平台访问结果"
-                ></p>
-]]></content>
-      <categories>
-        <category>Media</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Jellyfin</tag>
       </tags>
   </entry>
   <entry>
@@ -1813,6 +1813,91 @@
       </tags>
   </entry>
   <entry>
+    <title>Fixing Issue of Content Sync Display of Personal Website in Search Engine</title>
+    <url>//archives/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/</url>
+    <content><![CDATA[<p>有时候通过搜索引擎搜索自己的网站时，可能会发现展示的内容（如网站名称、Logo、标题等）不同步或没有及时更新。这通常是因为搜索引擎缓存了旧的页面数据。为了确保搜索引擎显示最新的内容，可以通过 Google Search Console 或 Bing Webmaster Tools 来解决这个问题。</p>
+<h2 id="一、域名所有权验证"><a href="#一、域名所有权验证" class="headerlink" title="一、域名所有权验证"></a>一、域名所有权验证</h2><p>以 Google Search Console 为例，打开 <a class="link"   href="https://search.google.com/search-console/" >Google Search Console<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，添加站点，出现如下界面：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img0.webp"
+                      alt="通过 DNS 解析记录验证域名所有权"
+                ></p>
+<p>打开域名提供商的网站（如腾讯云），打开域名的 DNS 解析记录并添加：</p>
+<blockquote>
+<p> 主机记录选择 <code>@</code>，记录类型选择 <code>TXT</code>，记录值粘贴 Google 提供的值，其他保持默认。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img1.webp"
+                      alt="腾讯云 DNS 解析记录"
+                ></p>
+<p>完成后返回 Google Search Console，可以看到验证已经完成：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img2.webp"
+                      alt="验证完成"
+                ></p>
+<blockquote>
+<p>建议使用 Google Search Console，因为 Bing Webmaster Tools 可以通过 Google 导入站点信息，无需二次配置。</p>
+<p>Bing Webmaster Tools 网址：<a class="link"   href="https://www.bing.com/webmasters/" >Bing Webmaster Tools<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+</blockquote>
+<h2 id="二、请求重新索引"><a href="#二、请求重新索引" class="headerlink" title="二、请求重新索引"></a>二、请求重新索引</h2><p>完成验证后，即可进入 Google Search Console 的控制台页面。</p>
+<p>在 URL Inspection 下点击 <code>REQUEST INDEXING</code> 即可请求重新索引，让 Google 更新站点信息。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img3.webp"
+                      alt="请求重新索引"
+                ></p>
+<p>大概经过一到两天时间就能看到自己域名下的网站更新后的信息。</p>
+<h2 id="三、提高索引速度"><a href="#三、提高索引速度" class="headerlink" title="三、提高索引速度"></a>三、提高索引速度</h2><p>为了加速搜索引擎的抓取和索引，可以为网站添加 Sitemap。</p>
+<p>执行以下命令安装 Sitemap 生成插件：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure></div>
+
+<p>在根目录的 <code>_config.yml</code> 文件中添加以下配置：</p>
+<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure></div>
+
+<p>执行以下命令来生成 <code>sitemap.xml</code> 文件：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>此命令会在 <code>public</code> 目录下生成 <code>sitemap.xml</code> 文件。</p>
+<p>在 <code>source</code> 文件夹下添加 <code>robots.txt</code> 文件，指引搜索引擎访问 Sitemap 文件。</p>
+<p><code>robots.txt</code> 文件内容如下：</p>
+<div class="code-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Disallow: </span><br><span class="line">Sitemap: https://1lya.com/sitemap.xml</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><code>robots.txt</code> 是一个文本文件，存放在网站根目录中。它告诉搜索引擎哪些页面或资源可以抓取，哪些应该被忽略。通常用于避免抓取无关或重复的内容。</p>
+</blockquote>
+<p>执行以下命令将生成的 Sitemap 部署到网站：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>部署完成后，可以在 <code>https://example.com/sitemap.xml</code> 访问并查看网站的 Sitemap。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img4.webp"
+                      alt="网站 Sitemap"
+                ></p>
+<p>将生成的 Sitemap URL 添加到 Google Search Console 或者 Bing Webmaster Tools：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img5.webp"
+                      alt="提交 Sitemap"
+                ></p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Personal Website</tag>
+        <tag>Sitemap</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Guide for Maven Installation &amp; Build</title>
     <url>//archives/guide-for-maven-installation-and-build/</url>
     <content><![CDATA[<h2 id="一、Maven-的下载与安装"><a href="#一、Maven-的下载与安装" class="headerlink" title="一、Maven 的下载与安装"></a>一、Maven 的下载与安装</h2><p><a class="link"   href="https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip" >Maven 3.9.8 Windows版本下载链接<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
@@ -1902,88 +1987,247 @@
       </tags>
   </entry>
   <entry>
-    <title>Fixing Issue of Content Sync Display of Personal Website in Search Engine</title>
-    <url>//archives/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/</url>
-    <content><![CDATA[<p>有时候通过搜索引擎搜索自己的网站时，可能会发现展示的内容（如网站名称、Logo、标题等）不同步或没有及时更新。这通常是因为搜索引擎缓存了旧的页面数据。为了确保搜索引擎显示最新的内容，可以通过 Google Search Console 或 Bing Webmaster Tools 来解决这个问题。</p>
-<h2 id="一、域名所有权验证"><a href="#一、域名所有权验证" class="headerlink" title="一、域名所有权验证"></a>一、域名所有权验证</h2><p>以 Google Search Console 为例，打开 <a class="link"   href="https://search.google.com/search-console/" >Google Search Console<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，添加站点，出现如下界面：</p>
+    <title>How to Bypass VPN Detection</title>
+    <url>//archives/how-to-bypass-vpn-detection/</url>
+    <content><![CDATA[<h2 id="一、代理配置"><a href="#一、代理配置" class="headerlink" title="一、代理配置"></a>一、代理配置</h2><p>打开 Clash Verge，选择一个节点，并将路由设置为全局。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img0.webp"
-                      alt="通过 DNS 解析记录验证域名所有权"
+                     data-src="/images/how-to-bypass-vpn-detection/img0.webp"
+                      alt="设置全局路由"
                 ></p>
-<p>打开域名提供商的网站（如腾讯云），打开域名的 DNS 解析记录并添加：</p>
+<p>打开设置，将 DNS 覆写、IPv6、统一延迟三个开关打开。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img1.webp"
+                      alt="Clash 设置"
+                ></p>
+<p>打开端口设置，打开 HTTP(S) 代理端口的开关。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img2.webp"
+                      alt="端口配置"
+                ></p>
+<p>最后打开系统设置，将 Clash Verge 的运行模式调整为虚拟网卡模式，也可以右键任务栏图标打开 TUN 模式。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img3.webp"
+                      alt="虚拟网卡模式"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img4.webp"
+                      alt="TUN 模式"
+                ></p>
+<h2 id="二、指纹浏览器配置"><a href="#二、指纹浏览器配置" class="headerlink" title="二、指纹浏览器配置"></a>二、指纹浏览器配置</h2><p>下载并安装 AdsPower 指纹浏览器，打开后点击“新建浏览器”。</p>
+<p>修改环境名称和使用的浏览器内核。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img5.webp"
+                      alt="基础设置"
+                ></p>
+<p>修改代理信息，代理类型选择 HTTP，主机 IP 填写 <code>127.0.0.1</code>，端口号填写 Clash Verge 中的 HTTP 代理端口。填写完成后检查代理是否与 Clash Verge 中连接的节点信息一致。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img6.webp"
+                      alt="代理信息"
+                ></p>
+<p>完成后保存，即可创建指纹浏览器环境。</p>
+<h2 id="三、检测-IP-地址"><a href="#三、检测-IP-地址" class="headerlink" title="三、检测 IP 地址"></a>三、检测 IP 地址</h2><p>打开指纹浏览器，可以看到目前的 IP 信息。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img7.webp"
+                      alt="IP 信息"
+                ></p>
+<p>访问 <code>https://ip111.cn</code>，查看 IP 信息，保证三方测试 IP 地址相同。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img8.webp"
+                      alt="三方测试 IP 地址"
+                ></p>
+<p>接下来访问 <code>https://scamalytics.com/ip</code>，输入经过测试的 IP 地址，检测 IP 纯净度。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img9.webp"
+                      alt="检测 IP 纯净度"
+                ></p>
+<p>如果 IP 纯净度很低或为 0，证明纯净 IP 隐私浏览环境已创建好，能够绕过 VPN 检测。</p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>IP</tag>
+        <tag>VPN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Host Static Web Pages on Personal Domain via GitHub</title>
+    <url>//archives/host-static-web-pages-on-personal-domain-via-github/</url>
+    <content><![CDATA[<h2 id="一、将-Git-连接到-GitHub"><a href="#一、将-Git-连接到-GitHub" class="headerlink" title="一、将 Git 连接到 GitHub"></a>一、将 Git 连接到 GitHub</h2><p>使用 SSH 方式将 Git 连接到 GitHub</p>
+<p>首先将个人用户名和密码添加到 <code>git config</code></p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global [user.name](http://user.name/) <span class="string">&quot;AstridStark25963&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;astridstark25963@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>可以通过以下命令检查配置是否正确：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure></div>
+
+<p>查看是否已有SSH密钥：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -al ~/.ssh</span><br></pre></td></tr></table></figure></div>
+
+<p>如果看到 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 文件，表示已经存在SSH密钥，可以选择使用现有的密钥或者生成新的密钥。</p>
+<p>生成SSH密钥：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;astridstark@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
+
 <blockquote>
-<p> 主机记录选择 <code>@</code>，记录类型选择 <code>TXT</code>，记录值粘贴 Google 提供的值，其他保持默认。</p>
+<p>命令后添加 <code>-C &quot;astridstark25963@gmail.com&quot;</code> 是将邮箱作为密钥的标识符号。</p>
+<p>当提示 <strong>Enter file in which to save the key</strong> 时，按 <code>Enter</code> 使用默认位置（<code>/c/Users/lenovo/.ssh/id_rsa</code>）。<br>当提示 <strong>Enter passphrase</strong> 时，可以选择设置一个密码短语（增加安全性），或者直接按 <code>Enter</code> 跳过。</p>
 </blockquote>
+<p>在 Git Bash 中输入以下命令，启动 SSH 代理并添加密钥：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></div>
+
+<p>然后将 SSH 密钥添加到 GitHub</p>
+<p>在 Git Bash 中输入以下命令，复制公钥内容：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></div>
+
+<p>复制输出的内容（从 <code>ssh-rsa</code> 开始到邮箱结束）。</p>
+<p>在 <code>GitHub 账户 -&gt; Settings -&gt; SSH and GPG keys</code> 中添加新的 SSH 密钥，在 <strong>Key</strong> 字段中粘贴刚刚复制的公钥内容即可。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img1.webp"
-                      alt="腾讯云 DNS 解析记录"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img0.webp"
+                      alt="Add SSH key to GitHub"
                 ></p>
-<p>完成后返回 Google Search Console，可以看到验证已经完成：</p>
+<p>通过输入以下命令测试与 GitHub 的连接：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div>
+
+<p>如果一切正常，会看到如下信息：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img2.webp"
-                      alt="验证完成"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img1.webp"
+                      alt="SSH connection test"
                 ></p>
+<h2 id="二、创建仓库并克隆到本地"><a href="#二、创建仓库并克隆到本地" class="headerlink" title="二、创建仓库并克隆到本地"></a>二、创建仓库并克隆到本地</h2><p>由于目的是将静态页面关联到个人域名，所以直接在 GitHub 创建用户名同名仓库 <code>AstridStark25963.github.io</code> </p>
 <blockquote>
-<p>建议使用 Google Search Console，因为 Bing Webmaster Tools 可以通过 Google 导入站点信息，无需二次配置。</p>
-<p>Bing Webmaster Tools 网址：<a class="link"   href="https://www.bing.com/webmasters/" >Bing Webmaster Tools<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>直接创建用户名同名仓库，GitHub 会自动将此仓库使用 GitHub Pages 托管</p>
 </blockquote>
-<h2 id="二、请求重新索引"><a href="#二、请求重新索引" class="headerlink" title="二、请求重新索引"></a>二、请求重新索引</h2><p>完成验证后，即可进入 Google Search Console 的控制台页面。</p>
-<p>在 URL Inspection 下点击 <code>REQUEST INDEXING</code> 即可请求重新索引，让 Google 更新站点信息。</p>
+<p>在仓库页面选择 Code - SSH，获得克隆仓库所需的命令</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img3.webp"
-                      alt="请求重新索引"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img2.webp"
+                      alt="Git clone"
                 ></p>
-<p>大概经过一到两天时间就能看到自己域名下的网站更新后的信息。</p>
-<h2 id="三、提高索引速度"><a href="#三、提高索引速度" class="headerlink" title="三、提高索引速度"></a>三、提高索引速度</h2><p>为了加速搜索引擎的抓取和索引，可以为网站添加 Sitemap。</p>
-<p>执行以下命令安装 Sitemap 生成插件：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure></div>
+<p>在 Git Bash 输入以下命令进行仓库克隆：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:AstridStark25963/AstridStark25963.github.io.git</span><br></pre></td></tr></table></figure></div>
 
-<p>在根目录的 <code>_config.yml</code> 文件中添加以下配置：</p>
-<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure></div>
-
-<p>执行以下命令来生成 <code>sitemap.xml</code> 文件：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>此命令会在 <code>public</code> 目录下生成 <code>sitemap.xml</code> 文件。</p>
-<p>在 <code>source</code> 文件夹下添加 <code>robots.txt</code> 文件，指引搜索引擎访问 Sitemap 文件。</p>
-<p><code>robots.txt</code> 文件内容如下：</p>
-<div class="code-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Disallow: </span><br><span class="line">Sitemap: https://1lya.com/sitemap.xml</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p><code>robots.txt</code> 是一个文本文件，存放在网站根目录中。它告诉搜索引擎哪些页面或资源可以抓取，哪些应该被忽略。通常用于避免抓取无关或重复的内容。</p>
-</blockquote>
-<p>执行以下命令将生成的 Sitemap 部署到网站：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>部署完成后，可以在 <code>https://example.com/sitemap.xml</code> 访问并查看网站的 Sitemap。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img4.webp"
-                      alt="网站 Sitemap"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img3.webp"
+                      alt="Clone success"
                 ></p>
-<p>将生成的 Sitemap URL 添加到 Google Search Console 或者 Bing Webmaster Tools：</p>
+<h2 id="三、由本地向仓库提交更改"><a href="#三、由本地向仓库提交更改" class="headerlink" title="三、由本地向仓库提交更改"></a>三、由本地向仓库提交更改</h2><p>修改本地文件，在仓库所在文件夹添加测试文件：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img5.webp"
-                      alt="提交 Sitemap"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img4.webp"
+                      alt="Add a test file"
+                ></p>
+<p>在 Git Bash 定位到仓库所在文件夹：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">cd</span> AstridStark25963.github.io</span><br></pre></td></tr></table></figure></div>
+
+<p>查看当前仓库状态：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img5.webp"
+                      alt="Check repository status"
+                ></p>
+<p>将更改添加到暂存区，提交更改并推送到远程仓库：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;add test.txt&quot;</span></span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img6.webp"
+                      alt="Add, commit and push"
+                ></p>
+<p>查看修改历史：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img7.webp"
+                      alt="Git log"
+                ></p>
+<h2 id="四、将-GitHub-仓库添加到域名解析记录"><a href="#四、将-GitHub-仓库添加到域名解析记录" class="headerlink" title="四、将 GitHub 仓库添加到域名解析记录"></a>四、将 GitHub 仓库添加到域名解析记录</h2><p>打开腾讯云，向域名添加解析记录：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img8.webp"
+                      alt="Add DNS record"
+                ></p>
+<p>第一条记录，主机记录填写 <code>www</code> ，记录类型填写 <code>CNAME</code> ，记录值填写 <code>astridstark25963.github.io</code>  </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img9.webp"
+                      alt="Host record"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img10.webp"
+                      alt="Record type"
+                ></p>
+<p>第二条记录，主机记录填写 <code>@</code> ，记录类型填写 <code>A</code> ，记录值填写第一条记录中记录值的 IP 地址，可以通过在终端执行 <code>ping</code> 命令得到。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img11.webp"
+                      alt="Ping astridstark25963.github.io"
+                ></p>
+<p>在本地添加 <code>CNAME</code> 文件并推送到远程仓库，内容为域名。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img12.webp"
+                      alt="CNAME"
+                ></p>
+<p>成功推送后，在仓库的 <code>Settings -&gt; Pages -&gt; Custom domain</code> 中可以看到解析后的域名信息。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img13.webp"
+                      alt="Custom domain"
+                ></p>
+<p>最后直接在浏览器访问域名，即可看到网页内容。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img14.webp"
+                      alt="Success!"
                 ></p>
 ]]></content>
       <categories>
         <category>Programming</category>
       </categories>
       <tags>
+        <tag>GitHub</tag>
         <tag>Personal Website</tag>
-        <tag>Sitemap</tag>
       </tags>
   </entry>
   <entry>
@@ -2482,247 +2726,435 @@
       </tags>
   </entry>
   <entry>
-    <title>Host Static Web Pages on Personal Domain via GitHub</title>
-    <url>//archives/host-static-web-pages-on-personal-domain-via-github/</url>
-    <content><![CDATA[<h2 id="一、将-Git-连接到-GitHub"><a href="#一、将-Git-连接到-GitHub" class="headerlink" title="一、将 Git 连接到 GitHub"></a>一、将 Git 连接到 GitHub</h2><p>使用 SSH 方式将 Git 连接到 GitHub</p>
-<p>首先将个人用户名和密码添加到 <code>git config</code></p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global [user.name](http://user.name/) <span class="string">&quot;AstridStark25963&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;astridstark25963@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>可以通过以下命令检查配置是否正确：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure></div>
-
-<p>查看是否已有SSH密钥：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -al ~/.ssh</span><br></pre></td></tr></table></figure></div>
-
-<p>如果看到 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 文件，表示已经存在SSH密钥，可以选择使用现有的密钥或者生成新的密钥。</p>
-<p>生成SSH密钥：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;astridstark@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>命令后添加 <code>-C &quot;astridstark25963@gmail.com&quot;</code> 是将邮箱作为密钥的标识符号。</p>
-<p>当提示 <strong>Enter file in which to save the key</strong> 时，按 <code>Enter</code> 使用默认位置（<code>/c/Users/lenovo/.ssh/id_rsa</code>）。<br>当提示 <strong>Enter passphrase</strong> 时，可以选择设置一个密码短语（增加安全性），或者直接按 <code>Enter</code> 跳过。</p>
-</blockquote>
-<p>在 Git Bash 中输入以下命令，启动 SSH 代理并添加密钥：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></div>
-
-<p>然后将 SSH 密钥添加到 GitHub</p>
-<p>在 Git Bash 中输入以下命令，复制公钥内容：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></div>
-
-<p>复制输出的内容（从 <code>ssh-rsa</code> 开始到邮箱结束）。</p>
-<p>在 <code>GitHub 账户 -&gt; Settings -&gt; SSH and GPG keys</code> 中添加新的 SSH 密钥，在 <strong>Key</strong> 字段中粘贴刚刚复制的公钥内容即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img0.webp"
-                      alt="Add SSH key to GitHub"
-                ></p>
-<p>通过输入以下命令测试与 GitHub 的连接：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div>
-
-<p>如果一切正常，会看到如下信息：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img1.webp"
-                      alt="SSH connection test"
-                ></p>
-<h2 id="二、创建仓库并克隆到本地"><a href="#二、创建仓库并克隆到本地" class="headerlink" title="二、创建仓库并克隆到本地"></a>二、创建仓库并克隆到本地</h2><p>由于目的是将静态页面关联到个人域名，所以直接在 GitHub 创建用户名同名仓库 <code>AstridStark25963.github.io</code> </p>
-<blockquote>
-<p>直接创建用户名同名仓库，GitHub 会自动将此仓库使用 GitHub Pages 托管</p>
-</blockquote>
-<p>在仓库页面选择 Code - SSH，获得克隆仓库所需的命令</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img2.webp"
-                      alt="Git clone"
-                ></p>
-<p>在 Git Bash 输入以下命令进行仓库克隆：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:AstridStark25963/AstridStark25963.github.io.git</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img3.webp"
-                      alt="Clone success"
-                ></p>
-<h2 id="三、由本地向仓库提交更改"><a href="#三、由本地向仓库提交更改" class="headerlink" title="三、由本地向仓库提交更改"></a>三、由本地向仓库提交更改</h2><p>修改本地文件，在仓库所在文件夹添加测试文件：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img4.webp"
-                      alt="Add a test file"
-                ></p>
-<p>在 Git Bash 定位到仓库所在文件夹：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">cd</span> AstridStark25963.github.io</span><br></pre></td></tr></table></figure></div>
-
-<p>查看当前仓库状态：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img5.webp"
-                      alt="Check repository status"
-                ></p>
-<p>将更改添加到暂存区，提交更改并推送到远程仓库：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;add test.txt&quot;</span></span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img6.webp"
-                      alt="Add, commit and push"
-                ></p>
-<p>查看修改历史：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img7.webp"
-                      alt="Git log"
-                ></p>
-<h2 id="四、将-GitHub-仓库添加到域名解析记录"><a href="#四、将-GitHub-仓库添加到域名解析记录" class="headerlink" title="四、将 GitHub 仓库添加到域名解析记录"></a>四、将 GitHub 仓库添加到域名解析记录</h2><p>打开腾讯云，向域名添加解析记录：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img8.webp"
-                      alt="Add DNS record"
-                ></p>
-<p>第一条记录，主机记录填写 <code>www</code> ，记录类型填写 <code>CNAME</code> ，记录值填写 <code>astridstark25963.github.io</code>  </p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img9.webp"
-                      alt="Host record"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img10.webp"
-                      alt="Record type"
-                ></p>
-<p>第二条记录，主机记录填写 <code>@</code> ，记录类型填写 <code>A</code> ，记录值填写第一条记录中记录值的 IP 地址，可以通过在终端执行 <code>ping</code> 命令得到。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img11.webp"
-                      alt="Ping astridstark25963.github.io"
-                ></p>
-<p>在本地添加 <code>CNAME</code> 文件并推送到远程仓库，内容为域名。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img12.webp"
-                      alt="CNAME"
-                ></p>
-<p>成功推送后，在仓库的 <code>Settings -&gt; Pages -&gt; Custom domain</code> 中可以看到解析后的域名信息。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img13.webp"
-                      alt="Custom domain"
-                ></p>
-<p>最后直接在浏览器访问域名，即可看到网页内容。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img14.webp"
-                      alt="Success!"
-                ></p>
+    <title>List of Books by Higashino Keigo</title>
+    <url>//archives/list-of-books-by-higashino-keigo/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>书名</th>
+<th>豆瓣链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>放学后</td>
+<td><a class="link"   href="https://book.douban.com/subject/27102207/" >https://book.douban.com/subject/27102207/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>毕业</td>
+<td><a class="link"   href="https://book.douban.com/subject/30317422/" >https://book.douban.com/subject/30317422/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>白马山庄谜案</td>
+<td><a class="link"   href="https://book.douban.com/subject/37092930/" >https://book.douban.com/subject/37092930/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>学生街的日子</td>
+<td><a class="link"   href="https://book.douban.com/subject/30276769/" >https://book.douban.com/subject/30276769/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>孤岛凶案</td>
+<td><a class="link"   href="https://book.douban.com/subject/37348683/" >https://book.douban.com/subject/37348683/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>魔球</td>
+<td><a class="link"   href="https://book.douban.com/subject/34778575/" >https://book.douban.com/subject/34778575/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>以眨眼干杯</td>
+<td><a class="link"   href="https://book.douban.com/subject/36185283/" >https://book.douban.com/subject/36185283/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>浪花少年侦探团</td>
+<td><a class="link"   href="https://book.douban.com/subject/26935572/" >https://book.douban.com/subject/26935572/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>悲剧人偶</td>
+<td><a class="link"   href="https://book.douban.com/subject/30210694/" >https://book.douban.com/subject/30210694/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>沉睡的森林</td>
+<td><a class="link"   href="https://book.douban.com/subject/30330292/" >https://book.douban.com/subject/30330292/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>鸟人计划</td>
+<td><a class="link"   href="https://book.douban.com/subject/26276287/" >https://book.douban.com/subject/26276287/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>空中杀人现场</td>
+<td><a class="link"   href="https://book.douban.com/subject/30487091/" >https://book.douban.com/subject/30487091/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>布鲁特斯的心脏</td>
+<td><a class="link"   href="https://book.douban.com/subject/26103854/" >https://book.douban.com/subject/26103854/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>侦探俱乐部</td>
+<td><a class="link"   href="https://book.douban.com/subject/26298560/" >https://book.douban.com/subject/26298560/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>宿命</td>
+<td><a class="link"   href="https://book.douban.com/subject/36866224/" >https://book.douban.com/subject/36866224/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>无凶之夜</td>
+<td><a class="link"   href="https://book.douban.com/subject/37054138/" >https://book.douban.com/subject/37054138/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面山庄</td>
+<td><a class="link"   href="https://book.douban.com/subject/27200261/" >https://book.douban.com/subject/27200261/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>变身</td>
+<td><a class="link"   href="https://book.douban.com/subject/36936599/" >https://book.douban.com/subject/36936599/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>长长的回廊</td>
+<td><a class="link"   href="https://book.douban.com/subject/35039915/" >https://book.douban.com/subject/35039915/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>天使之耳</td>
+<td><a class="link"   href="https://book.douban.com/subject/30488942/" >https://book.douban.com/subject/30488942/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>大雪中的山庄</td>
+<td><a class="link"   href="https://book.douban.com/subject/27037148/" >https://book.douban.com/subject/27037148/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>美丽的凶器</td>
+<td><a class="link"   href="https://book.douban.com/subject/26103819/" >https://book.douban.com/subject/26103819/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>同级生</td>
+<td><a class="link"   href="https://book.douban.com/subject/34778577/" >https://book.douban.com/subject/34778577/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>分身</td>
+<td><a class="link"   href="https://book.douban.com/subject/36866451/" >https://book.douban.com/subject/36866451/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>再见了，忍老师</td>
+<td><a class="link"   href="https://book.douban.com/subject/30464974/" >https://book.douban.com/subject/30464974/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>沉睡美人</td>
+<td><a class="link"   href="https://book.douban.com/subject/37129003/" >https://book.douban.com/subject/37129003/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>从前我死去的家</td>
+<td><a class="link"   href="https://book.douban.com/subject/30245830/" >https://book.douban.com/subject/30245830/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>造彩虹的人</td>
+<td><a class="link"   href="https://book.douban.com/subject/27037149/" >https://book.douban.com/subject/27037149/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>平行世界·爱情故事</td>
+<td><a class="link"   href="https://book.douban.com/subject/34786082/" >https://book.douban.com/subject/34786082/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>我的晃荡的青春</td>
+<td><a class="link"   href="https://book.douban.com/subject/36866459/" >https://book.douban.com/subject/36866459/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>怪笑小说</td>
+<td><a class="link"   href="https://book.douban.com/subject/30296025/" >https://book.douban.com/subject/30296025/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>天空之蜂</td>
+<td><a class="link"   href="https://book.douban.com/subject/26264953/" >https://book.douban.com/subject/26264953/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>名侦探的守则</td>
+<td><a class="link"   href="https://book.douban.com/subject/26926528/" >https://book.douban.com/subject/26926528/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>谁杀了她</td>
+<td><a class="link"   href="https://book.douban.com/subject/30210250/" >https://book.douban.com/subject/30210250/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>毒笑小说</td>
+<td><a class="link"   href="https://book.douban.com/subject/30242333/" >https://book.douban.com/subject/30242333/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>恶意</td>
+<td><a class="link"   href="https://book.douban.com/subject/35628298/" >https://book.douban.com/subject/35628298/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>名侦探的咒缚</td>
+<td><a class="link"   href="https://book.douban.com/subject/30358478/" >https://book.douban.com/subject/30358478/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>侦探伽利略</td>
+<td><a class="link"   href="https://book.douban.com/subject/30448044/" >https://book.douban.com/subject/30448044/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>秘密</td>
+<td><a class="link"   href="https://book.douban.com/subject/27115970/" >https://book.douban.com/subject/27115970/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>我杀了他</td>
+<td><a class="link"   href="https://book.douban.com/subject/30317423/" >https://book.douban.com/subject/30317423/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>白夜行</td>
+<td><a class="link"   href="https://book.douban.com/subject/27112607/" >https://book.douban.com/subject/27112607/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>只差一个谎言</td>
+<td><a class="link"   href="https://book.douban.com/subject/30358486/" >https://book.douban.com/subject/30358486/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>预知梦</td>
+<td><a class="link"   href="https://book.douban.com/subject/30433571/" >https://book.douban.com/subject/30433571/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>单恋</td>
+<td><a class="link"   href="https://book.douban.com/subject/26888804/" >https://book.douban.com/subject/26888804/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>超杀人事件</td>
+<td><a class="link"   href="https://book.douban.com/subject/30376544/" >https://book.douban.com/subject/30376544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>湖畔</td>
+<td><a class="link"   href="https://book.douban.com/subject/37031166/" >https://book.douban.com/subject/37031166/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>时生</td>
+<td><a class="link"   href="https://book.douban.com/subject/35519632/" >https://book.douban.com/subject/35519632/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>绑架游戏</td>
+<td><a class="link"   href="https://book.douban.com/subject/34662076/" >https://book.douban.com/subject/34662076/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>信</td>
+<td><a class="link"   href="https://book.douban.com/subject/36782358/" >https://book.douban.com/subject/36782358/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>我的老师是侦探</td>
+<td><a class="link"   href="https://book.douban.com/subject/33442266/" >https://book.douban.com/subject/33442266/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>杀人之门</td>
+<td><a class="link"   href="https://book.douban.com/subject/26273542/" >https://book.douban.com/subject/26273542/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>幻夜</td>
+<td><a class="link"   href="https://book.douban.com/subject/27666929/" >https://book.douban.com/subject/27666929/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>挑战</td>
+<td><a class="link"   href="https://book.douban.com/subject/33437510/" >https://book.douban.com/subject/33437510/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>彷徨之刃</td>
+<td><a class="link"   href="https://book.douban.com/subject/35440306/" >https://book.douban.com/subject/35440306/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>黑笑小说</td>
+<td><a class="link"   href="https://book.douban.com/subject/30242334/" >https://book.douban.com/subject/30242334/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>嫌疑人X的献身</td>
+<td><a class="link"   href="https://book.douban.com/subject/35718847/" >https://book.douban.com/subject/35718847/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>科学？</td>
+<td><a class="link"   href="https://book.douban.com/subject/34449302/" >https://book.douban.com/subject/34449302/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>怪奇之梦</td>
+<td><a class="link"   href="https://book.douban.com/subject/37264994/" >https://book.douban.com/subject/37264994/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>红手指</td>
+<td><a class="link"   href="https://book.douban.com/subject/34778576/" >https://book.douban.com/subject/34778576/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>使命与魂的尽头</td>
+<td><a class="link"   href="https://book.douban.com/subject/26320595/" >https://book.douban.com/subject/26320595/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>东野圭吾的最后致意</td>
+<td><a class="link"   href="https://book.douban.com/subject/26390453/" >https://book.douban.com/subject/26390453/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>黎明之街</td>
+<td><a class="link"   href="https://book.douban.com/subject/27178063/" >https://book.douban.com/subject/27178063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>人偶游戏</td>
+<td><a class="link"   href="https://book.douban.com/subject/37417968/" >https://book.douban.com/subject/37417968/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>流星之绊</td>
+<td><a class="link"   href="https://book.douban.com/subject/36727352/" >https://book.douban.com/subject/36727352/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>伽利略的苦恼</td>
+<td><a class="link"   href="https://book.douban.com/subject/27041318/" >https://book.douban.com/subject/27041318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>圣女的救济</td>
+<td><a class="link"   href="https://book.douban.com/subject/26906797/" >https://book.douban.com/subject/26906797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>悖论13</td>
+<td><a class="link"   href="https://book.douban.com/subject/35503454/" >https://book.douban.com/subject/35503454/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>新参者</td>
+<td><a class="link"   href="https://book.douban.com/subject/26639966/" >https://book.douban.com/subject/26639966/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>布谷鸟的蛋</td>
+<td><a class="link"   href="https://book.douban.com/subject/34786087/" >https://book.douban.com/subject/34786087/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>白金数据</td>
+<td><a class="link"   href="https://book.douban.com/subject/37092928/" >https://book.douban.com/subject/37092928/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>雪国之劫</td>
+<td><a class="link"   href="https://book.douban.com/subject/34807344/" >https://book.douban.com/subject/34807344/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>那时的某人</td>
+<td><a class="link"   href="https://book.douban.com/subject/35713688/" >https://book.douban.com/subject/35713688/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>麒麟之翼</td>
+<td><a class="link"   href="https://book.douban.com/subject/35460816/" >https://book.douban.com/subject/35460816/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>盛夏方程式</td>
+<td><a class="link"   href="https://book.douban.com/subject/30317420/" >https://book.douban.com/subject/30317420/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面饭店</td>
+<td><a class="link"   href="https://book.douban.com/subject/36826872/" >https://book.douban.com/subject/36826872/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>歪笑小说</td>
+<td><a class="link"   href="https://book.douban.com/subject/30285335/" >https://book.douban.com/subject/30285335/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>解忧杂货店</td>
+<td><a class="link"   href="https://book.douban.com/subject/35000716/" >https://book.douban.com/subject/35000716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>梦幻花</td>
+<td><a class="link"   href="https://book.douban.com/subject/36980343/" >https://book.douban.com/subject/36980343/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>祈祷落幕时</td>
+<td><a class="link"   href="https://book.douban.com/subject/26118072/" >https://book.douban.com/subject/26118072/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>疾风回旋曲</td>
+<td><a class="link"   href="https://book.douban.com/subject/35374278/" >https://book.douban.com/subject/35374278/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>虚无的十字架</td>
+<td><a class="link"   href="https://book.douban.com/subject/35657906/" >https://book.douban.com/subject/35657906/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面前夜</td>
+<td><a class="link"   href="https://book.douban.com/subject/36865956/" >https://book.douban.com/subject/36865956/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>拉普拉斯的魔女</td>
+<td><a class="link"   href="https://book.douban.com/subject/35280274/" >https://book.douban.com/subject/35280274/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>禁断的魔术</td>
+<td><a class="link"   href="https://book.douban.com/subject/30317421/" >https://book.douban.com/subject/30317421/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>虚像的丑角</td>
+<td><a class="link"   href="https://book.douban.com/subject/35388953/" >https://book.douban.com/subject/35388953/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>沉睡的人鱼之家</td>
+<td><a class="link"   href="https://book.douban.com/subject/36328335/" >https://book.douban.com/subject/36328335/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>危险的维纳斯</td>
+<td><a class="link"   href="https://book.douban.com/subject/30380271/" >https://book.douban.com/subject/30380271/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>恋爱的贡多拉</td>
+<td><a class="link"   href="https://book.douban.com/subject/35413490/" >https://book.douban.com/subject/35413490/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>风雪追击</td>
+<td><a class="link"   href="https://book.douban.com/subject/35413489/" >https://book.douban.com/subject/35413489/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>情人节终章</td>
+<td><a class="link"   href="https://book.douban.com/subject/37358966/" >https://book.douban.com/subject/37358966/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面之夜</td>
+<td><a class="link"   href="https://book.douban.com/subject/36865955/" >https://book.douban.com/subject/36865955/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>魔力的胎动</td>
+<td><a class="link"   href="https://book.douban.com/subject/33455230/" >https://book.douban.com/subject/33455230/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>沉默的巡游</td>
+<td><a class="link"   href="https://book.douban.com/subject/34786086/" >https://book.douban.com/subject/34786086/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>希望之线</td>
+<td><a class="link"   href="https://book.douban.com/subject/35355556/" >https://book.douban.com/subject/35355556/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>祈念守护人</td>
+<td><a class="link"   href="https://book.douban.com/subject/35017604/" >https://book.douban.com/subject/35017604/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>无名之町</td>
+<td><a class="link"   href="https://book.douban.com/subject/35479856/" >https://book.douban.com/subject/35479856/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>白鸟与蝙蝠</td>
+<td><a class="link"   href="https://book.douban.com/subject/36074757/" >https://book.douban.com/subject/36074757/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>透明的螺旋</td>
+<td><a class="link"   href="https://book.douban.com/subject/35791376/" >https://book.douban.com/subject/35791376/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>假面游戏</td>
+<td><a class="link"   href="https://book.douban.com/subject/36561834/" >https://book.douban.com/subject/36561834/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>和魔女共度的七天 *</td>
+<td><a class="link"   href="https://book.douban.com/subject/36766063/" >https://book.douban.com/subject/36766063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>你杀了谁</td>
+<td><a class="link"   href="https://book.douban.com/subject/36987849/" >https://book.douban.com/subject/36987849/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>觉醒者们</td>
+<td><a class="link"   href="https://book.douban.com/subject/37268346/" >https://book.douban.com/subject/37268346/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>架空犯</td>
+<td><a class="link"   href="https://book.douban.com/subject/37348704/" >https://book.douban.com/subject/37348704/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+</tbody></table>
+<p>*: 未在中国大陆出版</p>
 ]]></content>
       <categories>
-        <category>Programming</category>
+        <category>Books</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
-        <tag>Personal Website</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>How to Bypass VPN Detection</title>
-    <url>//archives/how-to-bypass-vpn-detection/</url>
-    <content><![CDATA[<h2 id="一、代理配置"><a href="#一、代理配置" class="headerlink" title="一、代理配置"></a>一、代理配置</h2><p>打开 Clash Verge，选择一个节点，并将路由设置为全局。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img0.webp"
-                      alt="设置全局路由"
-                ></p>
-<p>打开设置，将 DNS 覆写、IPv6、统一延迟三个开关打开。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img1.webp"
-                      alt="Clash 设置"
-                ></p>
-<p>打开端口设置，打开 HTTP(S) 代理端口的开关。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img2.webp"
-                      alt="端口配置"
-                ></p>
-<p>最后打开系统设置，将 Clash Verge 的运行模式调整为虚拟网卡模式，也可以右键任务栏图标打开 TUN 模式。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img3.webp"
-                      alt="虚拟网卡模式"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img4.webp"
-                      alt="TUN 模式"
-                ></p>
-<h2 id="二、指纹浏览器配置"><a href="#二、指纹浏览器配置" class="headerlink" title="二、指纹浏览器配置"></a>二、指纹浏览器配置</h2><p>下载并安装 AdsPower 指纹浏览器，打开后点击“新建浏览器”。</p>
-<p>修改环境名称和使用的浏览器内核。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img5.webp"
-                      alt="基础设置"
-                ></p>
-<p>修改代理信息，代理类型选择 HTTP，主机 IP 填写 <code>127.0.0.1</code>，端口号填写 Clash Verge 中的 HTTP 代理端口。填写完成后检查代理是否与 Clash Verge 中连接的节点信息一致。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img6.webp"
-                      alt="代理信息"
-                ></p>
-<p>完成后保存，即可创建指纹浏览器环境。</p>
-<h2 id="三、检测-IP-地址"><a href="#三、检测-IP-地址" class="headerlink" title="三、检测 IP 地址"></a>三、检测 IP 地址</h2><p>打开指纹浏览器，可以看到目前的 IP 信息。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img7.webp"
-                      alt="IP 信息"
-                ></p>
-<p>访问 <code>https://ip111.cn</code>，查看 IP 信息，保证三方测试 IP 地址相同。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img8.webp"
-                      alt="三方测试 IP 地址"
-                ></p>
-<p>接下来访问 <code>https://scamalytics.com/ip</code>，输入经过测试的 IP 地址，检测 IP 纯净度。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img9.webp"
-                      alt="检测 IP 纯净度"
-                ></p>
-<p>如果 IP 纯净度很低或为 0，证明纯净 IP 隐私浏览环境已创建好，能够绕过 VPN 检测。</p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>IP</tag>
-        <tag>VPN</tag>
+        <tag>Higashino Keigo</tag>
       </tags>
   </entry>
   <entry>
@@ -3194,6 +3626,214 @@
       </categories>
       <tags>
         <tag>Films</tag>
+        <tag>Marvel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Marvel TV Series</title>
+    <url>//archives/marvel-tv-series/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>原名</th>
+<th>译名</th>
+<th>季数</th>
+<th>豆瓣链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Spidey Super Stories</td>
+<td>蜘蛛侠超能故事</td>
+<td>3</td>
+<td>无</td>
+</tr>
+<tr>
+<td>The Amazing Spider-Man</td>
+<td>神奇的蜘蛛侠</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/4882797/" >https://movie.douban.com/subject/4882797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Incredible Hulk</td>
+<td>无敌浩克</td>
+<td>5</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3066754/" >https://movie.douban.com/subject/3066754/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Spider-Man</td>
+<td>蜘蛛侠</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3766061/" >https://movie.douban.com/subject/3766061/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Blade: The Series</td>
+<td>刀锋战士</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1874289/" >https://movie.douban.com/subject/1874289/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Agents of S.H.I.E.L.D.</td>
+<td>神盾局特工</td>
+<td>7</td>
+<td><a class="link"   href="https://movie.douban.com/subject/19938222/" >https://movie.douban.com/subject/19938222/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Agent Carter</td>
+<td>特工卡特</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25867544/" >https://movie.douban.com/subject/25867544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Daredevil</td>
+<td>夜魔侠</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769160/" >https://movie.douban.com/subject/25769160/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Jessica Jones</td>
+<td>杰西卡·琼斯</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769161/" >https://movie.douban.com/subject/25769161/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Luke Cage</td>
+<td>卢克·凯奇</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769158/" >https://movie.douban.com/subject/25769158/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Legion</td>
+<td>大群</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26641716/" >https://movie.douban.com/subject/26641716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Iron Fist</td>
+<td>铁拳</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25769159/" >https://movie.douban.com/subject/25769159/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Defenders</td>
+<td>捍卫者联盟</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26293633/" >https://movie.douban.com/subject/26293633/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Inhumans</td>
+<td>异人族</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25958810/" >https://movie.douban.com/subject/25958810/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Gifted</td>
+<td>天赋异禀</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26908002/" >https://movie.douban.com/subject/26908002/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Punisher</td>
+<td>惩罚者</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26710394/" >https://movie.douban.com/subject/26710394/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Runaways</td>
+<td>离家童盟</td>
+<td>3</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3080561/" >https://movie.douban.com/subject/3080561/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Cloak &amp; Dagger</td>
+<td>斗篷与匕首</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26767521/" >https://movie.douban.com/subject/26767521/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Helstrom</td>
+<td>地狱风暴</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/33434931/" >https://movie.douban.com/subject/33434931/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>WandaVision</td>
+<td>旺达幻视</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30331433/" >https://movie.douban.com/subject/30331433/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Falcon and the Winter Soldier</td>
+<td>猎鹰与冬兵</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30367642/" >https://movie.douban.com/subject/30367642/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Loki</td>
+<td>洛基</td>
+<td>2</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30331432/" >https://movie.douban.com/subject/30331432/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Hawkeye</td>
+<td>鹰眼</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/33406089/" >https://movie.douban.com/subject/33406089/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Moon Knight</td>
+<td>月光骑士</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26358318/" >https://movie.douban.com/subject/26358318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Ms. Marvel</td>
+<td>惊奇少女</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26358321/" >https://movie.douban.com/subject/26358321/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>She-Hulk: Attorney at Law</td>
+<td>女浩克</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/34803800/" >https://movie.douban.com/subject/34803800/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Secret Invasion</td>
+<td>秘密入侵</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35284245/" >https://movie.douban.com/subject/35284245/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Echo</td>
+<td>回声</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35412375/" >https://movie.douban.com/subject/35412375/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Agatha All Along</td>
+<td>女巫阿加莎</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35636428/" >https://movie.douban.com/subject/35636428/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Daredevil: Born Again</td>
+<td>夜魔侠：重生</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35908203/" >https://movie.douban.com/subject/35908203/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Ironheart</td>
+<td>钢铁之心</td>
+<td>1</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35284247/" >https://movie.douban.com/subject/35284247/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Media</category>
+      </categories>
+      <tags>
+        <tag>TV Series</tag>
         <tag>Marvel</tag>
       </tags>
   </entry>
@@ -3889,886 +4529,6 @@
       </tags>
   </entry>
   <entry>
-    <title>List of Books by Higashino Keigo</title>
-    <url>//archives/list-of-books-by-higashino-keigo/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>书名</th>
-<th>豆瓣链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>放学后</td>
-<td><a class="link"   href="https://book.douban.com/subject/27102207/" >https://book.douban.com/subject/27102207/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>毕业</td>
-<td><a class="link"   href="https://book.douban.com/subject/30317422/" >https://book.douban.com/subject/30317422/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>白马山庄谜案</td>
-<td><a class="link"   href="https://book.douban.com/subject/37092930/" >https://book.douban.com/subject/37092930/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>学生街的日子</td>
-<td><a class="link"   href="https://book.douban.com/subject/30276769/" >https://book.douban.com/subject/30276769/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>孤岛凶案</td>
-<td><a class="link"   href="https://book.douban.com/subject/37348683/" >https://book.douban.com/subject/37348683/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>魔球</td>
-<td><a class="link"   href="https://book.douban.com/subject/34778575/" >https://book.douban.com/subject/34778575/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>以眨眼干杯</td>
-<td><a class="link"   href="https://book.douban.com/subject/36185283/" >https://book.douban.com/subject/36185283/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>浪花少年侦探团</td>
-<td><a class="link"   href="https://book.douban.com/subject/26935572/" >https://book.douban.com/subject/26935572/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>悲剧人偶</td>
-<td><a class="link"   href="https://book.douban.com/subject/30210694/" >https://book.douban.com/subject/30210694/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>沉睡的森林</td>
-<td><a class="link"   href="https://book.douban.com/subject/30330292/" >https://book.douban.com/subject/30330292/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>鸟人计划</td>
-<td><a class="link"   href="https://book.douban.com/subject/26276287/" >https://book.douban.com/subject/26276287/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>空中杀人现场</td>
-<td><a class="link"   href="https://book.douban.com/subject/30487091/" >https://book.douban.com/subject/30487091/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>布鲁特斯的心脏</td>
-<td><a class="link"   href="https://book.douban.com/subject/26103854/" >https://book.douban.com/subject/26103854/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>侦探俱乐部</td>
-<td><a class="link"   href="https://book.douban.com/subject/26298560/" >https://book.douban.com/subject/26298560/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>宿命</td>
-<td><a class="link"   href="https://book.douban.com/subject/36866224/" >https://book.douban.com/subject/36866224/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>无凶之夜</td>
-<td><a class="link"   href="https://book.douban.com/subject/37054138/" >https://book.douban.com/subject/37054138/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面山庄</td>
-<td><a class="link"   href="https://book.douban.com/subject/27200261/" >https://book.douban.com/subject/27200261/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>变身</td>
-<td><a class="link"   href="https://book.douban.com/subject/36936599/" >https://book.douban.com/subject/36936599/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>长长的回廊</td>
-<td><a class="link"   href="https://book.douban.com/subject/35039915/" >https://book.douban.com/subject/35039915/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>天使之耳</td>
-<td><a class="link"   href="https://book.douban.com/subject/30488942/" >https://book.douban.com/subject/30488942/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>大雪中的山庄</td>
-<td><a class="link"   href="https://book.douban.com/subject/27037148/" >https://book.douban.com/subject/27037148/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>美丽的凶器</td>
-<td><a class="link"   href="https://book.douban.com/subject/26103819/" >https://book.douban.com/subject/26103819/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>同级生</td>
-<td><a class="link"   href="https://book.douban.com/subject/34778577/" >https://book.douban.com/subject/34778577/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>分身</td>
-<td><a class="link"   href="https://book.douban.com/subject/36866451/" >https://book.douban.com/subject/36866451/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>再见了，忍老师</td>
-<td><a class="link"   href="https://book.douban.com/subject/30464974/" >https://book.douban.com/subject/30464974/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>沉睡美人</td>
-<td><a class="link"   href="https://book.douban.com/subject/37129003/" >https://book.douban.com/subject/37129003/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>从前我死去的家</td>
-<td><a class="link"   href="https://book.douban.com/subject/30245830/" >https://book.douban.com/subject/30245830/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>造彩虹的人</td>
-<td><a class="link"   href="https://book.douban.com/subject/27037149/" >https://book.douban.com/subject/27037149/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>平行世界·爱情故事</td>
-<td><a class="link"   href="https://book.douban.com/subject/34786082/" >https://book.douban.com/subject/34786082/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>我的晃荡的青春</td>
-<td><a class="link"   href="https://book.douban.com/subject/36866459/" >https://book.douban.com/subject/36866459/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>怪笑小说</td>
-<td><a class="link"   href="https://book.douban.com/subject/30296025/" >https://book.douban.com/subject/30296025/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>天空之蜂</td>
-<td><a class="link"   href="https://book.douban.com/subject/26264953/" >https://book.douban.com/subject/26264953/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>名侦探的守则</td>
-<td><a class="link"   href="https://book.douban.com/subject/26926528/" >https://book.douban.com/subject/26926528/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>谁杀了她</td>
-<td><a class="link"   href="https://book.douban.com/subject/30210250/" >https://book.douban.com/subject/30210250/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>毒笑小说</td>
-<td><a class="link"   href="https://book.douban.com/subject/30242333/" >https://book.douban.com/subject/30242333/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>恶意</td>
-<td><a class="link"   href="https://book.douban.com/subject/35628298/" >https://book.douban.com/subject/35628298/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>名侦探的咒缚</td>
-<td><a class="link"   href="https://book.douban.com/subject/30358478/" >https://book.douban.com/subject/30358478/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>侦探伽利略</td>
-<td><a class="link"   href="https://book.douban.com/subject/30448044/" >https://book.douban.com/subject/30448044/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>秘密</td>
-<td><a class="link"   href="https://book.douban.com/subject/27115970/" >https://book.douban.com/subject/27115970/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>我杀了他</td>
-<td><a class="link"   href="https://book.douban.com/subject/30317423/" >https://book.douban.com/subject/30317423/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>白夜行</td>
-<td><a class="link"   href="https://book.douban.com/subject/27112607/" >https://book.douban.com/subject/27112607/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>只差一个谎言</td>
-<td><a class="link"   href="https://book.douban.com/subject/30358486/" >https://book.douban.com/subject/30358486/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>预知梦</td>
-<td><a class="link"   href="https://book.douban.com/subject/30433571/" >https://book.douban.com/subject/30433571/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>单恋</td>
-<td><a class="link"   href="https://book.douban.com/subject/26888804/" >https://book.douban.com/subject/26888804/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>超杀人事件</td>
-<td><a class="link"   href="https://book.douban.com/subject/30376544/" >https://book.douban.com/subject/30376544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>湖畔</td>
-<td><a class="link"   href="https://book.douban.com/subject/37031166/" >https://book.douban.com/subject/37031166/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>时生</td>
-<td><a class="link"   href="https://book.douban.com/subject/35519632/" >https://book.douban.com/subject/35519632/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>绑架游戏</td>
-<td><a class="link"   href="https://book.douban.com/subject/34662076/" >https://book.douban.com/subject/34662076/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>信</td>
-<td><a class="link"   href="https://book.douban.com/subject/36782358/" >https://book.douban.com/subject/36782358/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>我的老师是侦探</td>
-<td><a class="link"   href="https://book.douban.com/subject/33442266/" >https://book.douban.com/subject/33442266/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>杀人之门</td>
-<td><a class="link"   href="https://book.douban.com/subject/26273542/" >https://book.douban.com/subject/26273542/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>幻夜</td>
-<td><a class="link"   href="https://book.douban.com/subject/27666929/" >https://book.douban.com/subject/27666929/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>挑战</td>
-<td><a class="link"   href="https://book.douban.com/subject/33437510/" >https://book.douban.com/subject/33437510/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>彷徨之刃</td>
-<td><a class="link"   href="https://book.douban.com/subject/35440306/" >https://book.douban.com/subject/35440306/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>黑笑小说</td>
-<td><a class="link"   href="https://book.douban.com/subject/30242334/" >https://book.douban.com/subject/30242334/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>嫌疑人X的献身</td>
-<td><a class="link"   href="https://book.douban.com/subject/35718847/" >https://book.douban.com/subject/35718847/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>科学？</td>
-<td><a class="link"   href="https://book.douban.com/subject/34449302/" >https://book.douban.com/subject/34449302/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>怪奇之梦</td>
-<td><a class="link"   href="https://book.douban.com/subject/37264994/" >https://book.douban.com/subject/37264994/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>红手指</td>
-<td><a class="link"   href="https://book.douban.com/subject/34778576/" >https://book.douban.com/subject/34778576/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>使命与魂的尽头</td>
-<td><a class="link"   href="https://book.douban.com/subject/26320595/" >https://book.douban.com/subject/26320595/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>东野圭吾的最后致意</td>
-<td><a class="link"   href="https://book.douban.com/subject/26390453/" >https://book.douban.com/subject/26390453/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>黎明之街</td>
-<td><a class="link"   href="https://book.douban.com/subject/27178063/" >https://book.douban.com/subject/27178063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>人偶游戏</td>
-<td><a class="link"   href="https://book.douban.com/subject/37417968/" >https://book.douban.com/subject/37417968/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>流星之绊</td>
-<td><a class="link"   href="https://book.douban.com/subject/36727352/" >https://book.douban.com/subject/36727352/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>伽利略的苦恼</td>
-<td><a class="link"   href="https://book.douban.com/subject/27041318/" >https://book.douban.com/subject/27041318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>圣女的救济</td>
-<td><a class="link"   href="https://book.douban.com/subject/26906797/" >https://book.douban.com/subject/26906797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>悖论13</td>
-<td><a class="link"   href="https://book.douban.com/subject/35503454/" >https://book.douban.com/subject/35503454/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>新参者</td>
-<td><a class="link"   href="https://book.douban.com/subject/26639966/" >https://book.douban.com/subject/26639966/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>布谷鸟的蛋</td>
-<td><a class="link"   href="https://book.douban.com/subject/34786087/" >https://book.douban.com/subject/34786087/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>白金数据</td>
-<td><a class="link"   href="https://book.douban.com/subject/37092928/" >https://book.douban.com/subject/37092928/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>雪国之劫</td>
-<td><a class="link"   href="https://book.douban.com/subject/34807344/" >https://book.douban.com/subject/34807344/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>那时的某人</td>
-<td><a class="link"   href="https://book.douban.com/subject/35713688/" >https://book.douban.com/subject/35713688/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>麒麟之翼</td>
-<td><a class="link"   href="https://book.douban.com/subject/35460816/" >https://book.douban.com/subject/35460816/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>盛夏方程式</td>
-<td><a class="link"   href="https://book.douban.com/subject/30317420/" >https://book.douban.com/subject/30317420/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面饭店</td>
-<td><a class="link"   href="https://book.douban.com/subject/36826872/" >https://book.douban.com/subject/36826872/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>歪笑小说</td>
-<td><a class="link"   href="https://book.douban.com/subject/30285335/" >https://book.douban.com/subject/30285335/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>解忧杂货店</td>
-<td><a class="link"   href="https://book.douban.com/subject/35000716/" >https://book.douban.com/subject/35000716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>梦幻花</td>
-<td><a class="link"   href="https://book.douban.com/subject/36980343/" >https://book.douban.com/subject/36980343/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>祈祷落幕时</td>
-<td><a class="link"   href="https://book.douban.com/subject/26118072/" >https://book.douban.com/subject/26118072/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>疾风回旋曲</td>
-<td><a class="link"   href="https://book.douban.com/subject/35374278/" >https://book.douban.com/subject/35374278/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>虚无的十字架</td>
-<td><a class="link"   href="https://book.douban.com/subject/35657906/" >https://book.douban.com/subject/35657906/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面前夜</td>
-<td><a class="link"   href="https://book.douban.com/subject/36865956/" >https://book.douban.com/subject/36865956/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>拉普拉斯的魔女</td>
-<td><a class="link"   href="https://book.douban.com/subject/35280274/" >https://book.douban.com/subject/35280274/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>禁断的魔术</td>
-<td><a class="link"   href="https://book.douban.com/subject/30317421/" >https://book.douban.com/subject/30317421/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>虚像的丑角</td>
-<td><a class="link"   href="https://book.douban.com/subject/35388953/" >https://book.douban.com/subject/35388953/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>沉睡的人鱼之家</td>
-<td><a class="link"   href="https://book.douban.com/subject/36328335/" >https://book.douban.com/subject/36328335/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>危险的维纳斯</td>
-<td><a class="link"   href="https://book.douban.com/subject/30380271/" >https://book.douban.com/subject/30380271/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>恋爱的贡多拉</td>
-<td><a class="link"   href="https://book.douban.com/subject/35413490/" >https://book.douban.com/subject/35413490/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>风雪追击</td>
-<td><a class="link"   href="https://book.douban.com/subject/35413489/" >https://book.douban.com/subject/35413489/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>情人节终章</td>
-<td><a class="link"   href="https://book.douban.com/subject/37358966/" >https://book.douban.com/subject/37358966/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面之夜</td>
-<td><a class="link"   href="https://book.douban.com/subject/36865955/" >https://book.douban.com/subject/36865955/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>魔力的胎动</td>
-<td><a class="link"   href="https://book.douban.com/subject/33455230/" >https://book.douban.com/subject/33455230/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>沉默的巡游</td>
-<td><a class="link"   href="https://book.douban.com/subject/34786086/" >https://book.douban.com/subject/34786086/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>希望之线</td>
-<td><a class="link"   href="https://book.douban.com/subject/35355556/" >https://book.douban.com/subject/35355556/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>祈念守护人</td>
-<td><a class="link"   href="https://book.douban.com/subject/35017604/" >https://book.douban.com/subject/35017604/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>无名之町</td>
-<td><a class="link"   href="https://book.douban.com/subject/35479856/" >https://book.douban.com/subject/35479856/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>白鸟与蝙蝠</td>
-<td><a class="link"   href="https://book.douban.com/subject/36074757/" >https://book.douban.com/subject/36074757/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>透明的螺旋</td>
-<td><a class="link"   href="https://book.douban.com/subject/35791376/" >https://book.douban.com/subject/35791376/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>假面游戏</td>
-<td><a class="link"   href="https://book.douban.com/subject/36561834/" >https://book.douban.com/subject/36561834/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>和魔女共度的七天 *</td>
-<td><a class="link"   href="https://book.douban.com/subject/36766063/" >https://book.douban.com/subject/36766063/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>你杀了谁</td>
-<td><a class="link"   href="https://book.douban.com/subject/36987849/" >https://book.douban.com/subject/36987849/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>觉醒者们</td>
-<td><a class="link"   href="https://book.douban.com/subject/37268346/" >https://book.douban.com/subject/37268346/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>架空犯</td>
-<td><a class="link"   href="https://book.douban.com/subject/37348704/" >https://book.douban.com/subject/37348704/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<p>*: 未在中国大陆出版</p>
-]]></content>
-      <categories>
-        <category>Books</category>
-      </categories>
-      <tags>
-        <tag>Higashino Keigo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Marvel TV Series</title>
-    <url>//archives/marvel-tv-series/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>原名</th>
-<th>译名</th>
-<th>季数</th>
-<th>豆瓣链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Spidey Super Stories</td>
-<td>蜘蛛侠超能故事</td>
-<td>3</td>
-<td>无</td>
-</tr>
-<tr>
-<td>The Amazing Spider-Man</td>
-<td>神奇的蜘蛛侠</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/4882797/" >https://movie.douban.com/subject/4882797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Incredible Hulk</td>
-<td>无敌浩克</td>
-<td>5</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3066754/" >https://movie.douban.com/subject/3066754/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Spider-Man</td>
-<td>蜘蛛侠</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3766061/" >https://movie.douban.com/subject/3766061/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Blade: The Series</td>
-<td>刀锋战士</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1874289/" >https://movie.douban.com/subject/1874289/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Agents of S.H.I.E.L.D.</td>
-<td>神盾局特工</td>
-<td>7</td>
-<td><a class="link"   href="https://movie.douban.com/subject/19938222/" >https://movie.douban.com/subject/19938222/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Agent Carter</td>
-<td>特工卡特</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25867544/" >https://movie.douban.com/subject/25867544/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Daredevil</td>
-<td>夜魔侠</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769160/" >https://movie.douban.com/subject/25769160/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Jessica Jones</td>
-<td>杰西卡·琼斯</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769161/" >https://movie.douban.com/subject/25769161/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Luke Cage</td>
-<td>卢克·凯奇</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769158/" >https://movie.douban.com/subject/25769158/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Legion</td>
-<td>大群</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26641716/" >https://movie.douban.com/subject/26641716/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Iron Fist</td>
-<td>铁拳</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25769159/" >https://movie.douban.com/subject/25769159/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Defenders</td>
-<td>捍卫者联盟</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26293633/" >https://movie.douban.com/subject/26293633/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Inhumans</td>
-<td>异人族</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25958810/" >https://movie.douban.com/subject/25958810/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Gifted</td>
-<td>天赋异禀</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26908002/" >https://movie.douban.com/subject/26908002/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Punisher</td>
-<td>惩罚者</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26710394/" >https://movie.douban.com/subject/26710394/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Runaways</td>
-<td>离家童盟</td>
-<td>3</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3080561/" >https://movie.douban.com/subject/3080561/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Cloak &amp; Dagger</td>
-<td>斗篷与匕首</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26767521/" >https://movie.douban.com/subject/26767521/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Helstrom</td>
-<td>地狱风暴</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/33434931/" >https://movie.douban.com/subject/33434931/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>WandaVision</td>
-<td>旺达幻视</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30331433/" >https://movie.douban.com/subject/30331433/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Falcon and the Winter Soldier</td>
-<td>猎鹰与冬兵</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30367642/" >https://movie.douban.com/subject/30367642/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Loki</td>
-<td>洛基</td>
-<td>2</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30331432/" >https://movie.douban.com/subject/30331432/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Hawkeye</td>
-<td>鹰眼</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/33406089/" >https://movie.douban.com/subject/33406089/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Moon Knight</td>
-<td>月光骑士</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26358318/" >https://movie.douban.com/subject/26358318/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Ms. Marvel</td>
-<td>惊奇少女</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26358321/" >https://movie.douban.com/subject/26358321/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>She-Hulk: Attorney at Law</td>
-<td>女浩克</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/34803800/" >https://movie.douban.com/subject/34803800/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Secret Invasion</td>
-<td>秘密入侵</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35284245/" >https://movie.douban.com/subject/35284245/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Echo</td>
-<td>回声</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35412375/" >https://movie.douban.com/subject/35412375/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Agatha All Along</td>
-<td>女巫阿加莎</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35636428/" >https://movie.douban.com/subject/35636428/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Daredevil: Born Again</td>
-<td>夜魔侠：重生</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35908203/" >https://movie.douban.com/subject/35908203/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Ironheart</td>
-<td>钢铁之心</td>
-<td>1</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35284247/" >https://movie.douban.com/subject/35284247/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Media</category>
-      </categories>
-      <tags>
-        <tag>TV Series</tag>
-        <tag>Marvel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Preliminary Exploration of Software Reverse Engineering</title>
-    <url>//archives/preliminary-exploration-of-software-reverse-engineering/</url>
-    <content><![CDATA[<p>对于 crackme 示例程序，我们选择 Bjanes Crackme V2.0a 序列号检测程序进行逆向。</p>
-<h2 id="一、项目结构分析"><a href="#一、项目结构分析" class="headerlink" title="一、项目结构分析"></a>一、项目结构分析</h2><p>首先对程序界面进行初步了解：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/preliminary-exploration-of-software-reverse-engineering/img0.webp"
-                      alt="Program Interface"
-                ></p>
-<p>由于此程序由 Visual Basic 语言编写，我们使用 VB Decompiler Lite 对此程序进行反编译，项目结构如图所示。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/preliminary-exploration-of-software-reverse-engineering/img1.webp"
-                      alt="Project Structure"
-                ></p>
-<p>结合程序界面、反编译得到的项目结构及各部分代码，可以推测出：</p>
-<p><code>Project/Forms/CrackmeV20a</code> 对应主窗体</p>
-<p><code>Project/Forms/Form1</code> 对应 About 界面</p>
-<p>因此，</p>
-<p><code>Project/Code/CrackmeV20a</code> 对应主窗体逻辑</p>
-<p><code>Project/Code/Form1</code> 对应 <code>About</code> 界面逻辑</p>
-<p>接着分析主窗体的按钮，一共有Check it, Exit 和 About 三个，无输入直接点击 Check it 按钮弹出错误提示。因此，推测：</p>
-<p><code>About_Click_403530</code> 为 About 按钮逻辑函数</p>
-<p><code>Command_1_Click_403620</code> 和 <code>Command_2_Click_403BC0</code> 为 Check it 和 Exit 按钮逻辑函数</p>
-<p>对这两个按钮的逻辑代码进行查看，在 <code>Command_1_Click_403620</code> 函数中发现：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/preliminary-exploration-of-software-reverse-engineering/img2.webp"
-                      alt="False Message"
-                ></p>
-<p>如图，有进行 MsgBox 调用来输出错误信息的部分，因此 <code>Command_1_Click_403620</code> 为 Check it 按钮的逻辑函数，也是进行序列号判断的核心函数。</p>
-<h2 id="二、核心函数分析"><a href="#二、核心函数分析" class="headerlink" title="二、核心函数分析"></a>二、核心函数分析</h2><p>对 <code>Command_1_Click_403620</code> 函数进行分析可以发现，函数结构可以被大体分为以下几个部分：</p>
-<h3 id="函数初始化和栈设置-loc-00403620-loc-0040366A"><a href="#函数初始化和栈设置-loc-00403620-loc-0040366A" class="headerlink" title="函数初始化和栈设置 (loc_00403620 - loc_0040366A)"></a>函数初始化和栈设置 (loc_00403620 - loc_0040366A)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403620: push ebp                ; 保存调用者的栈基址指针</span><br><span class="line">loc_00403621: mov ebp, esp            ; 设置新的栈基址指针</span><br><span class="line">loc_00403623: sub esp, 0000000Ch      ; 在栈上分配 12 字节空间</span><br><span class="line">loc_00403626: push 00401116h          ; 异常处理程序的地址</span><br><span class="line">loc_0040362B: mov eax, fs:[00h]       ; 获取当前 SEH 链</span><br><span class="line">loc_00403631: push eax                ; 保存当前 SEH 链</span><br><span class="line">loc_00403632: mov fs:[00000000h], esp ; 设置新的 SEH 处理程序</span><br></pre></td></tr></table></figure></div>
-
-<p>这是标准的函数序言部分，设置了栈帧和结构化异常处理(SEH)。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403639: sub esp, 000000E4h      ; 为局部变量分配 228 字节空间</span><br><span class="line">loc_0040363F: push ebx                ; 保存寄存器值</span><br><span class="line">loc_00403640: push esi</span><br><span class="line">loc_00403641: push edi</span><br><span class="line">loc_00403642: mov var_C, esp          ; 保存栈指针</span><br><span class="line">loc_00403645: mov var_8, 004010E0h    ; 设置 SEH 信息</span><br><span class="line">loc_0040364C: mov edi, Me             ; 获取当前窗体对象</span><br></pre></td></tr></table></figure></div>
-
-<p>这部分为局部变量分配空间并保存重要寄存器。<code>Me</code> 是当前窗体对象的引用。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_0040364F: mov eax, edi</span><br><span class="line">loc_00403651: and eax, 00000001h      ; 检查对象引用的最低位</span><br><span class="line">loc_00403654: mov var_4, eax</span><br><span class="line">loc_00403657: and edi, FFFFFFFEh      ; 清除最低位 (VB 对象引用格式)</span><br><span class="line">loc_0040365A: push edi</span><br><span class="line">loc_0040365B: mov Me, edi</span><br><span class="line">loc_0040365E: mov ecx, [edi]          ; 获取 vtable 指针</span><br><span class="line">loc_00403660: call [ecx+04h]          ; 调用 AddRef 方法</span><br></pre></td></tr></table></figure></div>
-
-<p>这部分代码处理 VB 对象引用格式并调用 AddRef 方法增加引用计数。</p>
-<h3 id="变量初始化-loc-00403663-loc-004036AC"><a href="#变量初始化-loc-00403663-loc-004036AC" class="headerlink" title="变量初始化 (loc_00403663 - loc_004036AC)"></a>变量初始化 (loc_00403663 - loc_004036AC)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403663: mov edx, [edi]</span><br><span class="line">loc_00403665: xor ebx, ebx            ; 将 ebx 设为 0</span><br><span class="line">loc_00403667: push edi</span><br><span class="line">loc_00403668: mov var_1C, ebx         ; 初始化多个变量为 0</span><br><span class="line">...</span><br><span class="line">loc_0040369B: mov var_D0, ebx</span><br></pre></td></tr></table></figure></div>
-
-<p>这段代码将多个局部变量初始化为 0。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_004036A1: call [edx+00000308h]    ; 调用窗体的控件访问方法</span><br><span class="line">loc_004036A7: push eax</span><br><span class="line">loc_004036A8: lea eax, var_2C</span><br><span class="line">loc_004036AB: push eax</span><br><span class="line">loc_004036AC: call [0040102Ch]        ; Set 对象引用</span><br></pre></td></tr></table></figure></div>
-
-<p>这段代码访问窗体上的控件（很可能是 Text1 文本框），准备获取用户输入的序列号。</p>
-<h3 id="获取序列号文本-loc-004036B2-loc-004036D9"><a href="#获取序列号文本-loc-004036B2-loc-004036D9" class="headerlink" title="获取序列号文本 (loc_004036B2 - loc_004036D9)"></a>获取序列号文本 (loc_004036B2 - loc_004036D9)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_004036B2: mov esi, eax            ; 保存对象引用</span><br><span class="line">loc_004036B4: lea edx, var_1C</span><br><span class="line">loc_004036B7: push edx</span><br><span class="line">loc_004036B8: push esi</span><br><span class="line">loc_004036B9: mov ecx, [esi]</span><br><span class="line">loc_004036BB: call [ecx+000000A0h]    ; 调用对象的 Text 属性 getter</span><br><span class="line">loc_004036C1: cmp eax, ebx            ; 检查返回值是否为 0</span><br><span class="line">loc_004036C3: fclex                   ; 清除浮点异常标志</span><br><span class="line">loc_004036C5: jnl 4036D9h             ; 如果没有错误，跳转</span><br></pre></td></tr></table></figure></div>
-
-<p>这段代码获取文本框中的文本（用户输入的序列号），存入 <code>var_1C</code>。如果发生错误则处理它。</p>
-<h3 id="序列号长度检查-loc-004036D9-loc-00403704"><a href="#序列号长度检查-loc-004036D9-loc-00403704" class="headerlink" title="序列号长度检查 (loc_004036D9 - loc_00403704)"></a>序列号长度检查 (loc_004036D9 - loc_00403704)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_004036D9: mov eax, var_1C         ; 获取序列号字符串</span><br><span class="line">loc_004036DC: push eax</span><br><span class="line">loc_004036DD: call [00401008h]        ; 调用 Len 函数</span><br><span class="line">loc_004036E3: xor ecx, ecx            ; 将 ecx 置为 0</span><br><span class="line">loc_004036E5: cmp eax, 00000009h      ; 比较长度与 9</span><br><span class="line">loc_004036E8: setnz cl                ; 如果不等于 9，设置 cl 为 1</span><br><span class="line">loc_004036EB: neg ecx                 ; 对 ecx 求补 (如果 cl = 1, 结果为 -1, 否则为 0)</span><br><span class="line">loc_004036ED: mov esi, ecx            ; 保存结果到 esi</span><br></pre></td></tr></table></figure></div>
-
-<p>这段核心代码检查序列号长度是否为 9。<code>setnz cl</code> 指令在长度不等于 9 时设置 cl 为 1。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_004036EF: lea ecx, var_1C</span><br><span class="line">loc_004036F2: call [004010C0h]        ; 释放字符串</span><br><span class="line">loc_004036F8: lea ecx, var_2C</span><br><span class="line">loc_004036FB: call [004010C4h]        ; 释放对象</span><br><span class="line">loc_00403701: cmp si, bx              ; 比较si与bx(0)</span><br><span class="line">loc_00403704: jnz 00403A24h           ; 如果不等于0，跳转到失败处理</span><br></pre></td></tr></table></figure></div>
-
-<p>这段检查长度验证结果，如果长度不是 9，则跳转到地址 <code>00403A24</code>（错误处理）。</p>
-<h3 id="再次获取序列号并准备循环-loc-0040370A-loc-00403787"><a href="#再次获取序列号并准备循环-loc-0040370A-loc-00403787" class="headerlink" title="再次获取序列号并准备循环 (loc_0040370A - loc_00403787)"></a>再次获取序列号并准备循环 (loc_0040370A - loc_00403787)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_0040370A: mov edx, [edi]</span><br><span class="line">loc_0040370C: push edi</span><br><span class="line">loc_0040370D: call [edx+00000308h]    ; 再次获取文本框控件</span><br><span class="line">...</span><br><span class="line">loc_00403745: mov eax, var_1C</span><br><span class="line">loc_00403748: push eax</span><br><span class="line">loc_00403749: call [00401008h]        ; 再次调用 Len 函数</span><br><span class="line">loc_0040374F: mov ecx, eax</span><br><span class="line">loc_00403751: call [00401050h]        ; 将长度转换为整数</span><br><span class="line">loc_00403757: lea ecx, var_1C</span><br><span class="line">loc_0040375A: mov var_EC, eax         ; 存储序列号长度</span><br><span class="line">loc_00403760: mov var_18, 00000001h   ; 初始化循环计数器为 1</span><br></pre></td></tr></table></figure></div>
-
-<p>这段代码再次获取序列号，并将其长度保存在 <code>var_EC</code> 中。设置 <code>var_18</code> 为 1，这将作为循环计数器。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_0040377C: mov cx, var_EC          ; 获取序列号长度</span><br><span class="line">loc_00403783: cmp var_18, cx          ; 比较循环计数器与长度</span><br><span class="line">loc_00403787: jnle 00403AA4h          ; 如果循环计数器 &gt; 长度，跳转到成功处理</span><br></pre></td></tr></table></figure></div>
-
-<p>这段代码是循环的入口点，比较循环计数器与序列号长度。如果已完成所有字符的验证，跳转到成功处理代码。</p>
-<h3 id="循环验证每个字符-loc-0040378D-loc-00403A1D"><a href="#循环验证每个字符-loc-0040378D-loc-00403A1D" class="headerlink" title="循环验证每个字符 (loc_0040378D - loc_00403A1D)"></a>循环验证每个字符 (loc_0040378D - loc_00403A1D)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_0040378D: mov edx, [edi]</span><br><span class="line">...</span><br><span class="line">loc_004037A1: mov ebx, eax            ; 获取文本框对象</span><br><span class="line">loc_004037A3: lea edx, var_1C</span><br><span class="line">loc_004037A6: push edx</span><br><span class="line">loc_004037A7: push ebx</span><br><span class="line">loc_004037A8: mov ecx, [ebx]</span><br><span class="line">loc_004037AA: call [ecx+000000A0h]    ; 获取文本框内容</span><br></pre></td></tr></table></figure></div>
-
-<p>这段代码再次获取序列号文本。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403803: movsx edi, word ptr var_18  ; 将循环计数器扩展为 32 位</span><br><span class="line">loc_00403807: mov edx, var_24</span><br><span class="line">...</span><br><span class="line">loc_00403826: call [00401044h]        ; 调用 Mid$ 函数</span><br><span class="line">...</span><br><span class="line">loc_00403834: call [0040101Ch]        ; 调用 Asc 函数</span><br><span class="line">...</span><br><span class="line">loc_0040383A: mov ecx, var_1C</span><br><span class="line">...</span><br><span class="line">loc_0040384E: call [00401044h]        ; 调用 Mid$ 函数</span><br><span class="line">...</span><br><span class="line">loc_0040385C: call [0040101Ch]        ; 调用 Asc 函数</span><br></pre></td></tr></table></figure></div>
-
-<p>这段代码使用 Mid$ 和 Asc 函数获取序列号中特定位置字符的 ASCII 码，并进行一些检查。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403862: xor edx, edx</span><br><span class="line">loc_00403864: cmp ax, 0030h           ; 比较 ASCII 码与 &#x27;0&#x27; (48)</span><br><span class="line">loc_00403868: setl dl                 ; 如果小于&#x27;0&#x27;，设置 dl 为 1</span><br><span class="line">loc_0040386B: neg edx                 ; 对 edx 求补</span><br><span class="line">loc_0040386D: lea eax, var_28</span><br><span class="line">loc_00403870: and ebx, edx            ; 与前面的结果进行 AND 运算</span><br><span class="line">...</span><br><span class="line">loc_004038AA: test bx, bx             ; 测试结果</span><br><span class="line">loc_004038AD: jnz 00403A22h           ; 如果不为 0，跳转到失败处理</span><br></pre></td></tr></table></figure></div>
-
-<p>这部分代码检查序列号中的字符是否全部为数字。如果发现非数字字符，跳转到失败处理。</p>
-<h3 id="核心验证算法-loc-004038B3-loc-00403A04"><a href="#核心验证算法-loc-004038B3-loc-00403A04" class="headerlink" title="核心验证算法 (loc_004038B3 - loc_00403A04)"></a>核心验证算法 (loc_004038B3 - loc_00403A04)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_004038F1: mov ax, var_18          ; 获取循环计数器</span><br><span class="line">loc_004038F5: mov ebx, [00401074h]    ; Chr 函数地址</span><br><span class="line">loc_004038FB: xor ax, 0002h           ; 与 2 进行 XOR 操作</span><br><span class="line">loc_004038FF: lea ecx, var_60</span><br><span class="line">...</span><br><span class="line">loc_00403914: call ebx                ; 调用 Chr 函数</span><br></pre></td></tr></table></figure></div>
-
-<p>这是验证算法的核心部分。它获取当前位置索引（循环计数器），与数字 2 进行 XOR 操作，然后使用 Chr 函数将结果转换为字符。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_0040391D: mov eax, var_1C         ; 获取序列号</span><br><span class="line">...</span><br><span class="line">loc_00403934: call [00401044h]        ; 调用 Mid$ 获取当前位置的字符</span><br><span class="line">loc_0040393A: mov edx, eax</span><br><span class="line">loc_0040393C: lea ecx, var_20</span><br><span class="line">loc_0040393F: call __vbaStrMove</span><br><span class="line">loc_00403941: push eax</span><br><span class="line">loc_00403942: call [0040101Ch]        ; 调用 Asc 获取 ASCII 码</span><br></pre></td></tr></table></figure></div>
-
-<p>这部分获取序列号中当前位置的字符的 ASCII 码。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403967: fsub real8 ptr [004010D8h] ; 减去 48</span><br></pre></td></tr></table></figure></div>
-
-<p>从字符的 ASCII 码中减去 48，表示获取数字的实际值。例如，字符 ‘5’ 的 ASCII 码是 53，减去 48 得到数值 5。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_0040399D: call [004010B0h]        ; 调用 Right 函数获取上面 XOR 结果的最右一位</span><br><span class="line">loc_004039AB: lea ecx, var_D0</span><br><span class="line">loc_004039B1: lea edx, var_80</span><br><span class="line">loc_004039B4: push ecx</span><br><span class="line">loc_004039B5: push edx</span><br><span class="line">loc_004039B6: call [004010A0h]        ; 比较两个值</span><br><span class="line">loc_004039BC: mov edi, eax            ; 结果存入 edi</span><br></pre></td></tr></table></figure></div>
-
-<p>这段代码获取 XOR 结果字符串的最右边一个字符，然后与序列号中对应位置的数字值进行比较。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403A01: test di, di             ; 测试比较结果</span><br><span class="line">loc_00403A04: jnz 403A22h             ; 如果不相等，跳转到失败处理</span><br></pre></td></tr></table></figure></div>
-
-<p>如果比较结果不相等，表示验证失败，跳转到失败处理代码。</p>
-<h3 id="循环计数器递增-loc-00403A06-loc-00403A1D"><a href="#循环计数器递增-loc-00403A06-loc-00403A1D" class="headerlink" title="循环计数器递增 (loc_00403A06 - loc_00403A1D)"></a>循环计数器递增 (loc_00403A06 - loc_00403A1D)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403A06: mov edi, Me</span><br><span class="line">loc_00403A09: mov eax, 00000001h      ; eax = 1</span><br><span class="line">loc_00403A0E: add ax, var_18          ; 循环计数器加 1</span><br><span class="line">loc_00403A12: jo 00403BACh            ; 如果溢出，跳转到异常处理</span><br><span class="line">loc_00403A18: mov var_18, eax         ; 保存新的循环计数器</span><br><span class="line">loc_00403A1B: xor ebx, ebx            ; ebx = 0</span><br><span class="line">loc_00403A1D: jmp 0040377Ch           ; 跳回循环开始处</span><br></pre></td></tr></table></figure></div>
-
-<p>这段代码将循环计数器递增 1，然后跳回循环的开始处，继续验证下一个字符。</p>
-<h3 id="失败处理-loc-00403A24-loc-00403AA2"><a href="#失败处理-loc-00403A24-loc-00403AA2" class="headerlink" title="失败处理 (loc_00403A24 - loc_00403AA2)"></a>失败处理 (loc_00403A24 - loc_00403AA2)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403A24: mov esi, [004010A4h]    ; __vbaVarDup 函数地址</span><br><span class="line">...</span><br><span class="line">loc_00403A4E: mov var_A8, 004022F0h   ; &quot;Wrong serial!&quot;</span><br><span class="line">...</span><br><span class="line">loc_00403A69: mov var_98, 004022C8h   ; &quot;Sorry, try again!&quot;</span><br><span class="line">...</span><br><span class="line">loc_00403A8C: call [00401030h]        ; 调用 MsgBox 显示错误消息</span><br></pre></td></tr></table></figure></div>
-
-<p>这段代码在验证失败时显示错误消息框：”Wrong serial! Sorry, try again!”</p>
-<h3 id="成功处理-loc-00403AA4-loc-00403B24"><a href="#成功处理-loc-00403AA4-loc-00403B24" class="headerlink" title="成功处理 (loc_00403AA4 - loc_00403B24)"></a>成功处理 (loc_00403AA4 - loc_00403B24)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403AA4: mov esi, [004010A4h]    ; __vbaVarDup 函数地址</span><br><span class="line">...</span><br><span class="line">loc_00403ACE: mov var_A8, 004022A4h   ; &quot;Correct serial!&quot;</span><br><span class="line">...</span><br><span class="line">loc_00403AE9: mov var_98, 00402258h   ; &quot;Good job, tell me how you do that!&quot;</span><br><span class="line">...</span><br><span class="line">loc_00403B0C: call [00401030h]        ; 调用 MsgBox 显示成功消息</span><br></pre></td></tr></table></figure></div>
-
-<p>这段代码在验证成功时显示成功消息框：”Correct serial! Good job, tell me how you do that!”</p>
-<h3 id="函数清理和返回-loc-00403B12-loc-00403BA4"><a href="#函数清理和返回-loc-00403B12-loc-00403BA4" class="headerlink" title="函数清理和返回 (loc_00403B12 - loc_00403BA4)"></a>函数清理和返回 (loc_00403B12 - loc_00403BA4)</h3><p>这部分代码释放所有使用的资源，恢复保存的寄存器值，并返回。</p>
-<h2 id="三、寄存器变化分析"><a href="#三、寄存器变化分析" class="headerlink" title="三、寄存器变化分析"></a>三、寄存器变化分析</h2><p>下面是函数在进行各个部分处理时寄存器的变化。</p>
-<h3 id="序列号获取和长度检查"><a href="#序列号获取和长度检查" class="headerlink" title="序列号获取和长度检查"></a>序列号获取和长度检查</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 获取序列号文本</span><br><span class="line">loc_004036B2: mov esi, eax            ; ESI = 文本框对象引用</span><br><span class="line">loc_004036BB: call [ecx+000000A0h]    ; 调用 Text 属性 getter</span><br><span class="line">; 此时var_1C = 用户输入的序列号字符串</span><br><span class="line"></span><br><span class="line">; 检查长度是否为 9</span><br><span class="line">loc_004036D9: mov eax, var_1C         ; EAX = 序列号字符串</span><br><span class="line">loc_004036DD: call [00401008h]        ; 调用 Len 函数</span><br><span class="line">; 此时 EAX = 用户输入的序列号长度</span><br><span class="line"></span><br><span class="line">loc_004036E5: cmp eax, 00000009h      ; 比较长度是否为 9</span><br><span class="line">loc_004036E8: setnz cl                ; 如果不是 9, CL = 1, 否则 CL = 0</span><br><span class="line">loc_004036EB: neg ecx                 ; 如果 CL = 0, ECX = 0; 如果 CL = 1, ECX = -1</span><br><span class="line">loc_004036ED: mov esi, ecx            ; 保存结果到 ESI</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="循环准备"><a href="#循环准备" class="headerlink" title="循环准备"></a>循环准备</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 获取序列号长度</span><br><span class="line">loc_00403745: mov eax, var_1C         ; EAX = 序列号字符串</span><br><span class="line">loc_00403749: call [00401008h]        ; 调用 Len 函数</span><br><span class="line">; 此时 EAX = 序列号长度 = 9</span><br><span class="line"></span><br><span class="line">loc_00403751: call [00401050h]        ; 转换为整数</span><br><span class="line">loc_0040375A: mov var_EC, eax         ; var_EC = 序列号长度 = 9</span><br><span class="line">loc_00403760: mov var_18, 00000001h   ; var_18 = 循环计数器 = 1</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="循环开始-验证每个位置"><a href="#循环开始-验证每个位置" class="headerlink" title="循环开始 - 验证每个位置"></a>循环开始 - 验证每个位置</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 循环条件检查</span><br><span class="line">loc_0040377C: mov cx, var_EC          ; CX = 序列号长度 = 9</span><br><span class="line">loc_00403783: cmp var_18, cx          ; 比较循环计数器与长度</span><br><span class="line">; 第一次迭代: var_18 = 1, CX = 9, 所以继续循环</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="获取序列号字符"><a href="#获取序列号字符" class="headerlink" title="获取序列号字符"></a>获取序列号字符</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 获取序列号</span><br><span class="line">loc_004037A1: mov ebx, eax            ; EBX = 文本框对象引用</span><br><span class="line">loc_004037AA: call [ecx+000000A0h]    ; 获取文本内容</span><br><span class="line">; 此时 var_1C = 序列号字符串 = &quot;301674501&quot;</span><br><span class="line"></span><br><span class="line">; 获取当前位置的字符</span><br><span class="line">loc_00403803: movsx edi, word ptr var_18  ; EDI = 当前循环计数器 = 1</span><br><span class="line">loc_00403826: call [00401044h]        ; 调用 Mid$ 函数</span><br><span class="line">; 对于第一个位置, var_28 = &quot;3&quot;</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="检查字符是否为数字"><a href="#检查字符是否为数字" class="headerlink" title="检查字符是否为数字"></a>检查字符是否为数字</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403834: call [0040101Ch]        ; 调用 Asc 函数</span><br><span class="line">; 此时 AX = 第一个字符的 ASCII 码 = 51</span><br><span class="line"></span><br><span class="line">loc_0040383F: cmp ax, 0039h           ; 比较与 &#x27;9&#x27; 的 ASCII 码</span><br><span class="line">loc_00403848: setnle bl               ; 如果 &gt; 57, BL = 1, 否则 BL = 0</span><br><span class="line">; 字符 &#x27;3&#x27; 不大于 &#x27;9&#x27;, 所以 BL = 0</span><br><span class="line"></span><br><span class="line">loc_00403864: cmp ax, 0030h           ; 比较与 &#x27;0&#x27; 的 ASCII 码</span><br><span class="line">loc_00403868: setl dl                 ; 如果 &lt; &#x27;0&#x27;, DL = 1, 否则 DL = 0</span><br><span class="line">; 字符 &#x27;3&#x27; 不小于 &#x27;0&#x27;, 所以 DL = 0</span><br><span class="line"></span><br><span class="line">loc_00403870: and ebx, edx            ; EBX = BL &amp; DL = 0</span><br><span class="line">; 这里检查字符是否在 &#x27;0&#x27; 到 &#x27;9&#x27; 之间, 如果是数字, EBX = 0</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="核心-XOR-验证算法"><a href="#核心-XOR-验证算法" class="headerlink" title="核心 XOR 验证算法"></a>核心 XOR 验证算法</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 执行 XOR 操作</span><br><span class="line">loc_004038F1: mov ax, var_18          ; AX = 循环计数器 = 1</span><br><span class="line">loc_004038FB: xor ax, 0002h           ; AX = 1 XOR 2 = 3</span><br><span class="line">; 此时 AX = 3</span><br><span class="line"></span><br><span class="line">; 转换为字符并保存</span><br><span class="line">loc_00403914: call ebx                ; 调用 Chr 函数, 转换 XOR 结果</span><br><span class="line">; 此时 var_28 = &quot;3&quot;, XOR 结果转换为字符</span><br><span class="line"></span><br><span class="line">; 获取当前位置的序列号字符的值</span><br><span class="line">loc_00403942: call [0040101Ch]        ; 调用 Asc 函数获取 ASCII 码</span><br><span class="line">; 对于第一位 &quot;3&quot;, AX = 51</span><br><span class="line">loc_0040394B: mov var_48, ax          ; var_48 = 51</span><br><span class="line"></span><br><span class="line">; 减去 &#x27;0&#x27; 的 ASCII 码</span><br><span class="line">loc_00403967: fsub real8 ptr [004010D8h]  ; ST(0) = 51-48 = 3</span><br><span class="line">; 将字符转换为数值，此时 ST(0) = 3</span><br><span class="line"></span><br><span class="line">; 获取 XOR 结果的最后一位字符</span><br><span class="line">loc_004039A5: call [004010B0h]        ; 调用 Right 函数</span><br><span class="line">; 此时 var_80 包含 XOR 结果的最后一位</span><br><span class="line"></span><br><span class="line">; 比较序列号字符值与 XOR 结果</span><br><span class="line">loc_004039B6: call [004010A0h]        ; 比较两个值</span><br><span class="line">; 转换为数值后相等，所以 EDI = 0</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="检查比较结果和循环控制"><a href="#检查比较结果和循环控制" class="headerlink" title="检查比较结果和循环控制"></a>检查比较结果和循环控制</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403A01: test di, di             ; 测试 EDI 是否为 0</span><br><span class="line">; 如果相等, 继续执行下面的代码</span><br><span class="line"></span><br><span class="line">; 增加循环计数器</span><br><span class="line">loc_00403A09: mov eax, 00000001h      ; EAX = 1</span><br><span class="line">loc_00403A0E: add ax, var_18          ; AX = 1 + 1 = 2</span><br><span class="line">loc_00403A18: mov var_18, eax         ; var_18 = 2</span><br><span class="line">; 循环计数器增加到 2</span><br><span class="line"></span><br><span class="line">; 循环返回</span><br><span class="line">loc_00403A1D: jmp 0040377Ch           ; 跳回循环开始处</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="四、结果推理与验证"><a href="#四、结果推理与验证" class="headerlink" title="四、结果推理与验证"></a>四、结果推理与验证</h2><p>通过对<code>Command_1_Click_403620</code> 函数的分析，我们可以确定序列号验证算法为：</p>
-<ol>
-<li>序列号必须是 9 位长度</li>
-<li>所有字符必须是数字</li>
-<li>对于每个位置 i（从 1 到 9）：<ul>
-<li>将位置索引 i 与 2 进行 XOR 运算：<code>i XOR 2</code></li>
-<li>将结果转换为字符串</li>
-<li>取字符串的最右边一位字符，记为 C</li>
-<li>将序列号第i位字符的值（即 ASCII 码减去 48），记为 B</li>
-<li>比较 B 与 C，必须相等</li>
-</ul>
-</li>
-</ol>
-<p>按照这个算法，唯一有效的序列号是：301674501。</p>
-<p>每个位置的验证过程如下：</p>
-<table>
-<thead>
-<tr>
-<th><strong>位置 (var_18)</strong></th>
-<th><strong>XOR 结果 (AX)</strong></th>
-<th><strong>转换为字符</strong></th>
-<th><strong>序列号对应字符</strong></th>
-<th><strong>序列号 ASCII</strong></th>
-<th><strong>字符值</strong></th>
-<th><strong>比较结果 (EDI)</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>1 ^ 2 &#x3D; 3</td>
-<td>‘3’</td>
-<td>‘3’</td>
-<td>51</td>
-<td>3</td>
-<td>0 (相等)</td>
-</tr>
-<tr>
-<td>2</td>
-<td>2 ^ 2 &#x3D; 0</td>
-<td>‘0’</td>
-<td>‘0’</td>
-<td>48</td>
-<td>0</td>
-<td>0 (相等)</td>
-</tr>
-<tr>
-<td>3</td>
-<td>3 ^ 2 &#x3D; 1</td>
-<td>‘1’</td>
-<td>‘1’</td>
-<td>49</td>
-<td>1</td>
-<td>0 (相等)</td>
-</tr>
-<tr>
-<td>4</td>
-<td>4 ^ 2 &#x3D; 6</td>
-<td>‘6’</td>
-<td>‘6’</td>
-<td>54</td>
-<td>6</td>
-<td>0 (相等)</td>
-</tr>
-<tr>
-<td>5</td>
-<td>5 ^ 2 &#x3D; 7</td>
-<td>‘7’</td>
-<td>‘7’</td>
-<td>55</td>
-<td>7</td>
-<td>0 (相等)</td>
-</tr>
-<tr>
-<td>6</td>
-<td>6 ^ 2 &#x3D; 4</td>
-<td>‘4’</td>
-<td>‘4’</td>
-<td>52</td>
-<td>4</td>
-<td>0 (相等)</td>
-</tr>
-<tr>
-<td>7</td>
-<td>7 ^ 2 &#x3D; 5</td>
-<td>‘5’</td>
-<td>‘5’</td>
-<td>53</td>
-<td>5</td>
-<td>0 (相等)</td>
-</tr>
-<tr>
-<td>8</td>
-<td>8 ^ 2 &#x3D; 10</td>
-<td>‘10’</td>
-<td>‘0’</td>
-<td>48</td>
-<td>0</td>
-<td>0 (相等)</td>
-</tr>
-<tr>
-<td>9</td>
-<td>9 ^ 2 &#x3D; 11</td>
-<td>‘11’</td>
-<td>‘1’</td>
-<td>49</td>
-<td>1</td>
-<td>0 (相等)</td>
-</tr>
-</tbody></table>
-<p>输入有效序列号，结果如图所示，逆向成功。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/preliminary-exploration-of-software-reverse-engineering/img3.webp"
-                      alt="Correct Serial!"
-                ></p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Software Reverse Engineering</tag>
-        <tag>Decompile</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Office 2021 Installation &amp; Activation</title>
     <url>//archives/office-2021-installation-and-activation/</url>
     <content><![CDATA[<h2 id="一、下载和安装-Office-Tool-Plus"><a href="#一、下载和安装-Office-Tool-Plus" class="headerlink" title="一、下载和安装 Office Tool Plus"></a>一、下载和安装 Office Tool Plus</h2><p><a class="link"   href="https://otp.landian.vip/zh-cn/" >Office Tool Plus 官方网站 - 一键部署 Office<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
@@ -5182,6 +4942,246 @@
       <tags>
         <tag>Personal Website</tag>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Preliminary Exploration of Software Reverse Engineering</title>
+    <url>//archives/preliminary-exploration-of-software-reverse-engineering/</url>
+    <content><![CDATA[<p>对于 crackme 示例程序，我们选择 Bjanes Crackme V2.0a 序列号检测程序进行逆向。</p>
+<h2 id="一、项目结构分析"><a href="#一、项目结构分析" class="headerlink" title="一、项目结构分析"></a>一、项目结构分析</h2><p>首先对程序界面进行初步了解：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/preliminary-exploration-of-software-reverse-engineering/img0.webp"
+                      alt="Program Interface"
+                ></p>
+<p>由于此程序由 Visual Basic 语言编写，我们使用 VB Decompiler Lite 对此程序进行反编译，项目结构如图所示。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/preliminary-exploration-of-software-reverse-engineering/img1.webp"
+                      alt="Project Structure"
+                ></p>
+<p>结合程序界面、反编译得到的项目结构及各部分代码，可以推测出：</p>
+<p><code>Project/Forms/CrackmeV20a</code> 对应主窗体</p>
+<p><code>Project/Forms/Form1</code> 对应 About 界面</p>
+<p>因此，</p>
+<p><code>Project/Code/CrackmeV20a</code> 对应主窗体逻辑</p>
+<p><code>Project/Code/Form1</code> 对应 <code>About</code> 界面逻辑</p>
+<p>接着分析主窗体的按钮，一共有Check it, Exit 和 About 三个，无输入直接点击 Check it 按钮弹出错误提示。因此，推测：</p>
+<p><code>About_Click_403530</code> 为 About 按钮逻辑函数</p>
+<p><code>Command_1_Click_403620</code> 和 <code>Command_2_Click_403BC0</code> 为 Check it 和 Exit 按钮逻辑函数</p>
+<p>对这两个按钮的逻辑代码进行查看，在 <code>Command_1_Click_403620</code> 函数中发现：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/preliminary-exploration-of-software-reverse-engineering/img2.webp"
+                      alt="False Message"
+                ></p>
+<p>如图，有进行 MsgBox 调用来输出错误信息的部分，因此 <code>Command_1_Click_403620</code> 为 Check it 按钮的逻辑函数，也是进行序列号判断的核心函数。</p>
+<h2 id="二、核心函数分析"><a href="#二、核心函数分析" class="headerlink" title="二、核心函数分析"></a>二、核心函数分析</h2><p>对 <code>Command_1_Click_403620</code> 函数进行分析可以发现，函数结构可以被大体分为以下几个部分：</p>
+<h3 id="函数初始化和栈设置-loc-00403620-loc-0040366A"><a href="#函数初始化和栈设置-loc-00403620-loc-0040366A" class="headerlink" title="函数初始化和栈设置 (loc_00403620 - loc_0040366A)"></a>函数初始化和栈设置 (loc_00403620 - loc_0040366A)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403620: push ebp                ; 保存调用者的栈基址指针</span><br><span class="line">loc_00403621: mov ebp, esp            ; 设置新的栈基址指针</span><br><span class="line">loc_00403623: sub esp, 0000000Ch      ; 在栈上分配 12 字节空间</span><br><span class="line">loc_00403626: push 00401116h          ; 异常处理程序的地址</span><br><span class="line">loc_0040362B: mov eax, fs:[00h]       ; 获取当前 SEH 链</span><br><span class="line">loc_00403631: push eax                ; 保存当前 SEH 链</span><br><span class="line">loc_00403632: mov fs:[00000000h], esp ; 设置新的 SEH 处理程序</span><br></pre></td></tr></table></figure></div>
+
+<p>这是标准的函数序言部分，设置了栈帧和结构化异常处理(SEH)。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403639: sub esp, 000000E4h      ; 为局部变量分配 228 字节空间</span><br><span class="line">loc_0040363F: push ebx                ; 保存寄存器值</span><br><span class="line">loc_00403640: push esi</span><br><span class="line">loc_00403641: push edi</span><br><span class="line">loc_00403642: mov var_C, esp          ; 保存栈指针</span><br><span class="line">loc_00403645: mov var_8, 004010E0h    ; 设置 SEH 信息</span><br><span class="line">loc_0040364C: mov edi, Me             ; 获取当前窗体对象</span><br></pre></td></tr></table></figure></div>
+
+<p>这部分为局部变量分配空间并保存重要寄存器。<code>Me</code> 是当前窗体对象的引用。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_0040364F: mov eax, edi</span><br><span class="line">loc_00403651: and eax, 00000001h      ; 检查对象引用的最低位</span><br><span class="line">loc_00403654: mov var_4, eax</span><br><span class="line">loc_00403657: and edi, FFFFFFFEh      ; 清除最低位 (VB 对象引用格式)</span><br><span class="line">loc_0040365A: push edi</span><br><span class="line">loc_0040365B: mov Me, edi</span><br><span class="line">loc_0040365E: mov ecx, [edi]          ; 获取 vtable 指针</span><br><span class="line">loc_00403660: call [ecx+04h]          ; 调用 AddRef 方法</span><br></pre></td></tr></table></figure></div>
+
+<p>这部分代码处理 VB 对象引用格式并调用 AddRef 方法增加引用计数。</p>
+<h3 id="变量初始化-loc-00403663-loc-004036AC"><a href="#变量初始化-loc-00403663-loc-004036AC" class="headerlink" title="变量初始化 (loc_00403663 - loc_004036AC)"></a>变量初始化 (loc_00403663 - loc_004036AC)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403663: mov edx, [edi]</span><br><span class="line">loc_00403665: xor ebx, ebx            ; 将 ebx 设为 0</span><br><span class="line">loc_00403667: push edi</span><br><span class="line">loc_00403668: mov var_1C, ebx         ; 初始化多个变量为 0</span><br><span class="line">...</span><br><span class="line">loc_0040369B: mov var_D0, ebx</span><br></pre></td></tr></table></figure></div>
+
+<p>这段代码将多个局部变量初始化为 0。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_004036A1: call [edx+00000308h]    ; 调用窗体的控件访问方法</span><br><span class="line">loc_004036A7: push eax</span><br><span class="line">loc_004036A8: lea eax, var_2C</span><br><span class="line">loc_004036AB: push eax</span><br><span class="line">loc_004036AC: call [0040102Ch]        ; Set 对象引用</span><br></pre></td></tr></table></figure></div>
+
+<p>这段代码访问窗体上的控件（很可能是 Text1 文本框），准备获取用户输入的序列号。</p>
+<h3 id="获取序列号文本-loc-004036B2-loc-004036D9"><a href="#获取序列号文本-loc-004036B2-loc-004036D9" class="headerlink" title="获取序列号文本 (loc_004036B2 - loc_004036D9)"></a>获取序列号文本 (loc_004036B2 - loc_004036D9)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_004036B2: mov esi, eax            ; 保存对象引用</span><br><span class="line">loc_004036B4: lea edx, var_1C</span><br><span class="line">loc_004036B7: push edx</span><br><span class="line">loc_004036B8: push esi</span><br><span class="line">loc_004036B9: mov ecx, [esi]</span><br><span class="line">loc_004036BB: call [ecx+000000A0h]    ; 调用对象的 Text 属性 getter</span><br><span class="line">loc_004036C1: cmp eax, ebx            ; 检查返回值是否为 0</span><br><span class="line">loc_004036C3: fclex                   ; 清除浮点异常标志</span><br><span class="line">loc_004036C5: jnl 4036D9h             ; 如果没有错误，跳转</span><br></pre></td></tr></table></figure></div>
+
+<p>这段代码获取文本框中的文本（用户输入的序列号），存入 <code>var_1C</code>。如果发生错误则处理它。</p>
+<h3 id="序列号长度检查-loc-004036D9-loc-00403704"><a href="#序列号长度检查-loc-004036D9-loc-00403704" class="headerlink" title="序列号长度检查 (loc_004036D9 - loc_00403704)"></a>序列号长度检查 (loc_004036D9 - loc_00403704)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_004036D9: mov eax, var_1C         ; 获取序列号字符串</span><br><span class="line">loc_004036DC: push eax</span><br><span class="line">loc_004036DD: call [00401008h]        ; 调用 Len 函数</span><br><span class="line">loc_004036E3: xor ecx, ecx            ; 将 ecx 置为 0</span><br><span class="line">loc_004036E5: cmp eax, 00000009h      ; 比较长度与 9</span><br><span class="line">loc_004036E8: setnz cl                ; 如果不等于 9，设置 cl 为 1</span><br><span class="line">loc_004036EB: neg ecx                 ; 对 ecx 求补 (如果 cl = 1, 结果为 -1, 否则为 0)</span><br><span class="line">loc_004036ED: mov esi, ecx            ; 保存结果到 esi</span><br></pre></td></tr></table></figure></div>
+
+<p>这段核心代码检查序列号长度是否为 9。<code>setnz cl</code> 指令在长度不等于 9 时设置 cl 为 1。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_004036EF: lea ecx, var_1C</span><br><span class="line">loc_004036F2: call [004010C0h]        ; 释放字符串</span><br><span class="line">loc_004036F8: lea ecx, var_2C</span><br><span class="line">loc_004036FB: call [004010C4h]        ; 释放对象</span><br><span class="line">loc_00403701: cmp si, bx              ; 比较si与bx(0)</span><br><span class="line">loc_00403704: jnz 00403A24h           ; 如果不等于0，跳转到失败处理</span><br></pre></td></tr></table></figure></div>
+
+<p>这段检查长度验证结果，如果长度不是 9，则跳转到地址 <code>00403A24</code>（错误处理）。</p>
+<h3 id="再次获取序列号并准备循环-loc-0040370A-loc-00403787"><a href="#再次获取序列号并准备循环-loc-0040370A-loc-00403787" class="headerlink" title="再次获取序列号并准备循环 (loc_0040370A - loc_00403787)"></a>再次获取序列号并准备循环 (loc_0040370A - loc_00403787)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_0040370A: mov edx, [edi]</span><br><span class="line">loc_0040370C: push edi</span><br><span class="line">loc_0040370D: call [edx+00000308h]    ; 再次获取文本框控件</span><br><span class="line">...</span><br><span class="line">loc_00403745: mov eax, var_1C</span><br><span class="line">loc_00403748: push eax</span><br><span class="line">loc_00403749: call [00401008h]        ; 再次调用 Len 函数</span><br><span class="line">loc_0040374F: mov ecx, eax</span><br><span class="line">loc_00403751: call [00401050h]        ; 将长度转换为整数</span><br><span class="line">loc_00403757: lea ecx, var_1C</span><br><span class="line">loc_0040375A: mov var_EC, eax         ; 存储序列号长度</span><br><span class="line">loc_00403760: mov var_18, 00000001h   ; 初始化循环计数器为 1</span><br></pre></td></tr></table></figure></div>
+
+<p>这段代码再次获取序列号，并将其长度保存在 <code>var_EC</code> 中。设置 <code>var_18</code> 为 1，这将作为循环计数器。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_0040377C: mov cx, var_EC          ; 获取序列号长度</span><br><span class="line">loc_00403783: cmp var_18, cx          ; 比较循环计数器与长度</span><br><span class="line">loc_00403787: jnle 00403AA4h          ; 如果循环计数器 &gt; 长度，跳转到成功处理</span><br></pre></td></tr></table></figure></div>
+
+<p>这段代码是循环的入口点，比较循环计数器与序列号长度。如果已完成所有字符的验证，跳转到成功处理代码。</p>
+<h3 id="循环验证每个字符-loc-0040378D-loc-00403A1D"><a href="#循环验证每个字符-loc-0040378D-loc-00403A1D" class="headerlink" title="循环验证每个字符 (loc_0040378D - loc_00403A1D)"></a>循环验证每个字符 (loc_0040378D - loc_00403A1D)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_0040378D: mov edx, [edi]</span><br><span class="line">...</span><br><span class="line">loc_004037A1: mov ebx, eax            ; 获取文本框对象</span><br><span class="line">loc_004037A3: lea edx, var_1C</span><br><span class="line">loc_004037A6: push edx</span><br><span class="line">loc_004037A7: push ebx</span><br><span class="line">loc_004037A8: mov ecx, [ebx]</span><br><span class="line">loc_004037AA: call [ecx+000000A0h]    ; 获取文本框内容</span><br></pre></td></tr></table></figure></div>
+
+<p>这段代码再次获取序列号文本。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403803: movsx edi, word ptr var_18  ; 将循环计数器扩展为 32 位</span><br><span class="line">loc_00403807: mov edx, var_24</span><br><span class="line">...</span><br><span class="line">loc_00403826: call [00401044h]        ; 调用 Mid$ 函数</span><br><span class="line">...</span><br><span class="line">loc_00403834: call [0040101Ch]        ; 调用 Asc 函数</span><br><span class="line">...</span><br><span class="line">loc_0040383A: mov ecx, var_1C</span><br><span class="line">...</span><br><span class="line">loc_0040384E: call [00401044h]        ; 调用 Mid$ 函数</span><br><span class="line">...</span><br><span class="line">loc_0040385C: call [0040101Ch]        ; 调用 Asc 函数</span><br></pre></td></tr></table></figure></div>
+
+<p>这段代码使用 Mid$ 和 Asc 函数获取序列号中特定位置字符的 ASCII 码，并进行一些检查。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403862: xor edx, edx</span><br><span class="line">loc_00403864: cmp ax, 0030h           ; 比较 ASCII 码与 &#x27;0&#x27; (48)</span><br><span class="line">loc_00403868: setl dl                 ; 如果小于&#x27;0&#x27;，设置 dl 为 1</span><br><span class="line">loc_0040386B: neg edx                 ; 对 edx 求补</span><br><span class="line">loc_0040386D: lea eax, var_28</span><br><span class="line">loc_00403870: and ebx, edx            ; 与前面的结果进行 AND 运算</span><br><span class="line">...</span><br><span class="line">loc_004038AA: test bx, bx             ; 测试结果</span><br><span class="line">loc_004038AD: jnz 00403A22h           ; 如果不为 0，跳转到失败处理</span><br></pre></td></tr></table></figure></div>
+
+<p>这部分代码检查序列号中的字符是否全部为数字。如果发现非数字字符，跳转到失败处理。</p>
+<h3 id="核心验证算法-loc-004038B3-loc-00403A04"><a href="#核心验证算法-loc-004038B3-loc-00403A04" class="headerlink" title="核心验证算法 (loc_004038B3 - loc_00403A04)"></a>核心验证算法 (loc_004038B3 - loc_00403A04)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_004038F1: mov ax, var_18          ; 获取循环计数器</span><br><span class="line">loc_004038F5: mov ebx, [00401074h]    ; Chr 函数地址</span><br><span class="line">loc_004038FB: xor ax, 0002h           ; 与 2 进行 XOR 操作</span><br><span class="line">loc_004038FF: lea ecx, var_60</span><br><span class="line">...</span><br><span class="line">loc_00403914: call ebx                ; 调用 Chr 函数</span><br></pre></td></tr></table></figure></div>
+
+<p>这是验证算法的核心部分。它获取当前位置索引（循环计数器），与数字 2 进行 XOR 操作，然后使用 Chr 函数将结果转换为字符。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_0040391D: mov eax, var_1C         ; 获取序列号</span><br><span class="line">...</span><br><span class="line">loc_00403934: call [00401044h]        ; 调用 Mid$ 获取当前位置的字符</span><br><span class="line">loc_0040393A: mov edx, eax</span><br><span class="line">loc_0040393C: lea ecx, var_20</span><br><span class="line">loc_0040393F: call __vbaStrMove</span><br><span class="line">loc_00403941: push eax</span><br><span class="line">loc_00403942: call [0040101Ch]        ; 调用 Asc 获取 ASCII 码</span><br></pre></td></tr></table></figure></div>
+
+<p>这部分获取序列号中当前位置的字符的 ASCII 码。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403967: fsub real8 ptr [004010D8h] ; 减去 48</span><br></pre></td></tr></table></figure></div>
+
+<p>从字符的 ASCII 码中减去 48，表示获取数字的实际值。例如，字符 ‘5’ 的 ASCII 码是 53，减去 48 得到数值 5。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_0040399D: call [004010B0h]        ; 调用 Right 函数获取上面 XOR 结果的最右一位</span><br><span class="line">loc_004039AB: lea ecx, var_D0</span><br><span class="line">loc_004039B1: lea edx, var_80</span><br><span class="line">loc_004039B4: push ecx</span><br><span class="line">loc_004039B5: push edx</span><br><span class="line">loc_004039B6: call [004010A0h]        ; 比较两个值</span><br><span class="line">loc_004039BC: mov edi, eax            ; 结果存入 edi</span><br></pre></td></tr></table></figure></div>
+
+<p>这段代码获取 XOR 结果字符串的最右边一个字符，然后与序列号中对应位置的数字值进行比较。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403A01: test di, di             ; 测试比较结果</span><br><span class="line">loc_00403A04: jnz 403A22h             ; 如果不相等，跳转到失败处理</span><br></pre></td></tr></table></figure></div>
+
+<p>如果比较结果不相等，表示验证失败，跳转到失败处理代码。</p>
+<h3 id="循环计数器递增-loc-00403A06-loc-00403A1D"><a href="#循环计数器递增-loc-00403A06-loc-00403A1D" class="headerlink" title="循环计数器递增 (loc_00403A06 - loc_00403A1D)"></a>循环计数器递增 (loc_00403A06 - loc_00403A1D)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403A06: mov edi, Me</span><br><span class="line">loc_00403A09: mov eax, 00000001h      ; eax = 1</span><br><span class="line">loc_00403A0E: add ax, var_18          ; 循环计数器加 1</span><br><span class="line">loc_00403A12: jo 00403BACh            ; 如果溢出，跳转到异常处理</span><br><span class="line">loc_00403A18: mov var_18, eax         ; 保存新的循环计数器</span><br><span class="line">loc_00403A1B: xor ebx, ebx            ; ebx = 0</span><br><span class="line">loc_00403A1D: jmp 0040377Ch           ; 跳回循环开始处</span><br></pre></td></tr></table></figure></div>
+
+<p>这段代码将循环计数器递增 1，然后跳回循环的开始处，继续验证下一个字符。</p>
+<h3 id="失败处理-loc-00403A24-loc-00403AA2"><a href="#失败处理-loc-00403A24-loc-00403AA2" class="headerlink" title="失败处理 (loc_00403A24 - loc_00403AA2)"></a>失败处理 (loc_00403A24 - loc_00403AA2)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403A24: mov esi, [004010A4h]    ; __vbaVarDup 函数地址</span><br><span class="line">...</span><br><span class="line">loc_00403A4E: mov var_A8, 004022F0h   ; &quot;Wrong serial!&quot;</span><br><span class="line">...</span><br><span class="line">loc_00403A69: mov var_98, 004022C8h   ; &quot;Sorry, try again!&quot;</span><br><span class="line">...</span><br><span class="line">loc_00403A8C: call [00401030h]        ; 调用 MsgBox 显示错误消息</span><br></pre></td></tr></table></figure></div>
+
+<p>这段代码在验证失败时显示错误消息框：”Wrong serial! Sorry, try again!”</p>
+<h3 id="成功处理-loc-00403AA4-loc-00403B24"><a href="#成功处理-loc-00403AA4-loc-00403B24" class="headerlink" title="成功处理 (loc_00403AA4 - loc_00403B24)"></a>成功处理 (loc_00403AA4 - loc_00403B24)</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403AA4: mov esi, [004010A4h]    ; __vbaVarDup 函数地址</span><br><span class="line">...</span><br><span class="line">loc_00403ACE: mov var_A8, 004022A4h   ; &quot;Correct serial!&quot;</span><br><span class="line">...</span><br><span class="line">loc_00403AE9: mov var_98, 00402258h   ; &quot;Good job, tell me how you do that!&quot;</span><br><span class="line">...</span><br><span class="line">loc_00403B0C: call [00401030h]        ; 调用 MsgBox 显示成功消息</span><br></pre></td></tr></table></figure></div>
+
+<p>这段代码在验证成功时显示成功消息框：”Correct serial! Good job, tell me how you do that!”</p>
+<h3 id="函数清理和返回-loc-00403B12-loc-00403BA4"><a href="#函数清理和返回-loc-00403B12-loc-00403BA4" class="headerlink" title="函数清理和返回 (loc_00403B12 - loc_00403BA4)"></a>函数清理和返回 (loc_00403B12 - loc_00403BA4)</h3><p>这部分代码释放所有使用的资源，恢复保存的寄存器值，并返回。</p>
+<h2 id="三、寄存器变化分析"><a href="#三、寄存器变化分析" class="headerlink" title="三、寄存器变化分析"></a>三、寄存器变化分析</h2><p>下面是函数在进行各个部分处理时寄存器的变化。</p>
+<h3 id="序列号获取和长度检查"><a href="#序列号获取和长度检查" class="headerlink" title="序列号获取和长度检查"></a>序列号获取和长度检查</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 获取序列号文本</span><br><span class="line">loc_004036B2: mov esi, eax            ; ESI = 文本框对象引用</span><br><span class="line">loc_004036BB: call [ecx+000000A0h]    ; 调用 Text 属性 getter</span><br><span class="line">; 此时var_1C = 用户输入的序列号字符串</span><br><span class="line"></span><br><span class="line">; 检查长度是否为 9</span><br><span class="line">loc_004036D9: mov eax, var_1C         ; EAX = 序列号字符串</span><br><span class="line">loc_004036DD: call [00401008h]        ; 调用 Len 函数</span><br><span class="line">; 此时 EAX = 用户输入的序列号长度</span><br><span class="line"></span><br><span class="line">loc_004036E5: cmp eax, 00000009h      ; 比较长度是否为 9</span><br><span class="line">loc_004036E8: setnz cl                ; 如果不是 9, CL = 1, 否则 CL = 0</span><br><span class="line">loc_004036EB: neg ecx                 ; 如果 CL = 0, ECX = 0; 如果 CL = 1, ECX = -1</span><br><span class="line">loc_004036ED: mov esi, ecx            ; 保存结果到 ESI</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="循环准备"><a href="#循环准备" class="headerlink" title="循环准备"></a>循环准备</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 获取序列号长度</span><br><span class="line">loc_00403745: mov eax, var_1C         ; EAX = 序列号字符串</span><br><span class="line">loc_00403749: call [00401008h]        ; 调用 Len 函数</span><br><span class="line">; 此时 EAX = 序列号长度 = 9</span><br><span class="line"></span><br><span class="line">loc_00403751: call [00401050h]        ; 转换为整数</span><br><span class="line">loc_0040375A: mov var_EC, eax         ; var_EC = 序列号长度 = 9</span><br><span class="line">loc_00403760: mov var_18, 00000001h   ; var_18 = 循环计数器 = 1</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="循环开始-验证每个位置"><a href="#循环开始-验证每个位置" class="headerlink" title="循环开始 - 验证每个位置"></a>循环开始 - 验证每个位置</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 循环条件检查</span><br><span class="line">loc_0040377C: mov cx, var_EC          ; CX = 序列号长度 = 9</span><br><span class="line">loc_00403783: cmp var_18, cx          ; 比较循环计数器与长度</span><br><span class="line">; 第一次迭代: var_18 = 1, CX = 9, 所以继续循环</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="获取序列号字符"><a href="#获取序列号字符" class="headerlink" title="获取序列号字符"></a>获取序列号字符</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 获取序列号</span><br><span class="line">loc_004037A1: mov ebx, eax            ; EBX = 文本框对象引用</span><br><span class="line">loc_004037AA: call [ecx+000000A0h]    ; 获取文本内容</span><br><span class="line">; 此时 var_1C = 序列号字符串 = &quot;301674501&quot;</span><br><span class="line"></span><br><span class="line">; 获取当前位置的字符</span><br><span class="line">loc_00403803: movsx edi, word ptr var_18  ; EDI = 当前循环计数器 = 1</span><br><span class="line">loc_00403826: call [00401044h]        ; 调用 Mid$ 函数</span><br><span class="line">; 对于第一个位置, var_28 = &quot;3&quot;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="检查字符是否为数字"><a href="#检查字符是否为数字" class="headerlink" title="检查字符是否为数字"></a>检查字符是否为数字</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403834: call [0040101Ch]        ; 调用 Asc 函数</span><br><span class="line">; 此时 AX = 第一个字符的 ASCII 码 = 51</span><br><span class="line"></span><br><span class="line">loc_0040383F: cmp ax, 0039h           ; 比较与 &#x27;9&#x27; 的 ASCII 码</span><br><span class="line">loc_00403848: setnle bl               ; 如果 &gt; 57, BL = 1, 否则 BL = 0</span><br><span class="line">; 字符 &#x27;3&#x27; 不大于 &#x27;9&#x27;, 所以 BL = 0</span><br><span class="line"></span><br><span class="line">loc_00403864: cmp ax, 0030h           ; 比较与 &#x27;0&#x27; 的 ASCII 码</span><br><span class="line">loc_00403868: setl dl                 ; 如果 &lt; &#x27;0&#x27;, DL = 1, 否则 DL = 0</span><br><span class="line">; 字符 &#x27;3&#x27; 不小于 &#x27;0&#x27;, 所以 DL = 0</span><br><span class="line"></span><br><span class="line">loc_00403870: and ebx, edx            ; EBX = BL &amp; DL = 0</span><br><span class="line">; 这里检查字符是否在 &#x27;0&#x27; 到 &#x27;9&#x27; 之间, 如果是数字, EBX = 0</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="核心-XOR-验证算法"><a href="#核心-XOR-验证算法" class="headerlink" title="核心 XOR 验证算法"></a>核心 XOR 验证算法</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 执行 XOR 操作</span><br><span class="line">loc_004038F1: mov ax, var_18          ; AX = 循环计数器 = 1</span><br><span class="line">loc_004038FB: xor ax, 0002h           ; AX = 1 XOR 2 = 3</span><br><span class="line">; 此时 AX = 3</span><br><span class="line"></span><br><span class="line">; 转换为字符并保存</span><br><span class="line">loc_00403914: call ebx                ; 调用 Chr 函数, 转换 XOR 结果</span><br><span class="line">; 此时 var_28 = &quot;3&quot;, XOR 结果转换为字符</span><br><span class="line"></span><br><span class="line">; 获取当前位置的序列号字符的值</span><br><span class="line">loc_00403942: call [0040101Ch]        ; 调用 Asc 函数获取 ASCII 码</span><br><span class="line">; 对于第一位 &quot;3&quot;, AX = 51</span><br><span class="line">loc_0040394B: mov var_48, ax          ; var_48 = 51</span><br><span class="line"></span><br><span class="line">; 减去 &#x27;0&#x27; 的 ASCII 码</span><br><span class="line">loc_00403967: fsub real8 ptr [004010D8h]  ; ST(0) = 51-48 = 3</span><br><span class="line">; 将字符转换为数值，此时 ST(0) = 3</span><br><span class="line"></span><br><span class="line">; 获取 XOR 结果的最后一位字符</span><br><span class="line">loc_004039A5: call [004010B0h]        ; 调用 Right 函数</span><br><span class="line">; 此时 var_80 包含 XOR 结果的最后一位</span><br><span class="line"></span><br><span class="line">; 比较序列号字符值与 XOR 结果</span><br><span class="line">loc_004039B6: call [004010A0h]        ; 比较两个值</span><br><span class="line">; 转换为数值后相等，所以 EDI = 0</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="检查比较结果和循环控制"><a href="#检查比较结果和循环控制" class="headerlink" title="检查比较结果和循环控制"></a>检查比较结果和循环控制</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">loc_00403A01: test di, di             ; 测试 EDI 是否为 0</span><br><span class="line">; 如果相等, 继续执行下面的代码</span><br><span class="line"></span><br><span class="line">; 增加循环计数器</span><br><span class="line">loc_00403A09: mov eax, 00000001h      ; EAX = 1</span><br><span class="line">loc_00403A0E: add ax, var_18          ; AX = 1 + 1 = 2</span><br><span class="line">loc_00403A18: mov var_18, eax         ; var_18 = 2</span><br><span class="line">; 循环计数器增加到 2</span><br><span class="line"></span><br><span class="line">; 循环返回</span><br><span class="line">loc_00403A1D: jmp 0040377Ch           ; 跳回循环开始处</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="四、结果推理与验证"><a href="#四、结果推理与验证" class="headerlink" title="四、结果推理与验证"></a>四、结果推理与验证</h2><p>通过对<code>Command_1_Click_403620</code> 函数的分析，我们可以确定序列号验证算法为：</p>
+<ol>
+<li>序列号必须是 9 位长度</li>
+<li>所有字符必须是数字</li>
+<li>对于每个位置 i（从 1 到 9）：<ul>
+<li>将位置索引 i 与 2 进行 XOR 运算：<code>i XOR 2</code></li>
+<li>将结果转换为字符串</li>
+<li>取字符串的最右边一位字符，记为 C</li>
+<li>将序列号第i位字符的值（即 ASCII 码减去 48），记为 B</li>
+<li>比较 B 与 C，必须相等</li>
+</ul>
+</li>
+</ol>
+<p>按照这个算法，唯一有效的序列号是：301674501。</p>
+<p>每个位置的验证过程如下：</p>
+<table>
+<thead>
+<tr>
+<th><strong>位置 (var_18)</strong></th>
+<th><strong>XOR 结果 (AX)</strong></th>
+<th><strong>转换为字符</strong></th>
+<th><strong>序列号对应字符</strong></th>
+<th><strong>序列号 ASCII</strong></th>
+<th><strong>字符值</strong></th>
+<th><strong>比较结果 (EDI)</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>1 ^ 2 &#x3D; 3</td>
+<td>‘3’</td>
+<td>‘3’</td>
+<td>51</td>
+<td>3</td>
+<td>0 (相等)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2 ^ 2 &#x3D; 0</td>
+<td>‘0’</td>
+<td>‘0’</td>
+<td>48</td>
+<td>0</td>
+<td>0 (相等)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3 ^ 2 &#x3D; 1</td>
+<td>‘1’</td>
+<td>‘1’</td>
+<td>49</td>
+<td>1</td>
+<td>0 (相等)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4 ^ 2 &#x3D; 6</td>
+<td>‘6’</td>
+<td>‘6’</td>
+<td>54</td>
+<td>6</td>
+<td>0 (相等)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5 ^ 2 &#x3D; 7</td>
+<td>‘7’</td>
+<td>‘7’</td>
+<td>55</td>
+<td>7</td>
+<td>0 (相等)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>6 ^ 2 &#x3D; 4</td>
+<td>‘4’</td>
+<td>‘4’</td>
+<td>52</td>
+<td>4</td>
+<td>0 (相等)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>7 ^ 2 &#x3D; 5</td>
+<td>‘5’</td>
+<td>‘5’</td>
+<td>53</td>
+<td>5</td>
+<td>0 (相等)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>8 ^ 2 &#x3D; 10</td>
+<td>‘10’</td>
+<td>‘0’</td>
+<td>48</td>
+<td>0</td>
+<td>0 (相等)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>9 ^ 2 &#x3D; 11</td>
+<td>‘11’</td>
+<td>‘1’</td>
+<td>49</td>
+<td>1</td>
+<td>0 (相等)</td>
+</tr>
+</tbody></table>
+<p>输入有效序列号，结果如图所示，逆向成功。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/preliminary-exploration-of-software-reverse-engineering/img3.webp"
+                      alt="Correct Serial!"
+                ></p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Software Reverse Engineering</tag>
+        <tag>Decompile</tag>
       </tags>
   </entry>
 </search>
