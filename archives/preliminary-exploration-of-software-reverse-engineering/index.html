@@ -146,7 +146,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://1lya.com/images/og.webp">
 <meta property="article:published_time" content="2025-12-27T01:50:26.110Z">
-<meta property="article:modified_time" content="2025-12-27T03:31:16.380Z">
+<meta property="article:modified_time" content="2025-12-28T02:58:55.502Z">
 <meta property="article:author" content="Astrid Stark">
 <meta property="article:tag" content="Software Reverse Engineering">
 <meta property="article:tag" content="Decompile">
@@ -581,8 +581,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-12-27 11:31:16</span>
-            <span class="mobile">2025-12-27 11:31:16</span>
+            <span class="desktop">2025-12-28 10:58:55</span>
+            <span class="mobile">2025-12-28 10:58:55</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -661,7 +661,7 @@
 <p>因此，</p>
 <p><code>Project/Code/CrackmeV20a</code> 对应主窗体逻辑</p>
 <p><code>Project/Code/Form1</code> 对应 <code>About</code> 界面逻辑</p>
-<p>接着分析主窗体的按钮，一共有Check it, Exit 和 About 三个，无输入直接点击 Check it 按钮弹出错误提示。因此，推测：</p>
+<p>接着分析主窗体的按钮，一共有 Check it, Exit 和 About 三个，无输入直接点击 Check it 按钮弹出错误提示。因此，推测：</p>
 <p><code>About_Click_403530</code> 为 About 按钮逻辑函数</p>
 <p><code>Command_1_Click_403620</code> 和 <code>Command_2_Click_403BC0</code> 为 Check it 和 Exit 按钮逻辑函数</p>
 <p>对这两个按钮的逻辑代码进行查看，在 <code>Command_1_Click_403620</code> 函数中发现：</p>
@@ -752,7 +752,7 @@
 
 <h3 id="检查比较结果和循环控制"><a href="#检查比较结果和循环控制" class="headerlink" title="检查比较结果和循环控制"></a>检查比较结果和循环控制</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">loc_00403A01: test di, di             ; 测试 EDI 是否为 0</span><br><span class="line">; 如果相等, 继续执行下面的代码</span><br><span class="line"></span><br><span class="line">; 增加循环计数器</span><br><span class="line">loc_00403A09: mov eax, 00000001h      ; EAX = 1</span><br><span class="line">loc_00403A0E: add ax, var_18          ; AX = 1 + 1 = 2</span><br><span class="line">loc_00403A18: mov var_18, eax         ; var_18 = 2</span><br><span class="line">; 循环计数器增加到 2</span><br><span class="line"></span><br><span class="line">; 循环返回</span><br><span class="line">loc_00403A1D: jmp 0040377Ch           ; 跳回循环开始处</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="四、结果推理与验证"><a href="#四、结果推理与验证" class="headerlink" title="四、结果推理与验证"></a>四、结果推理与验证</h2><p>通过对<code>Command_1_Click_403620</code> 函数的分析，我们可以确定序列号验证算法为：</p>
+<h2 id="四、结果推理与验证"><a href="#四、结果推理与验证" class="headerlink" title="四、结果推理与验证"></a>四、结果推理与验证</h2><p>通过对 <code>Command_1_Click_403620</code> 函数的分析，我们可以确定序列号验证算法为：</p>
 <ol>
 <li>序列号必须是 9 位长度</li>
 <li>所有字符必须是数字</li>
