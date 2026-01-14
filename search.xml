@@ -643,83 +643,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Build an Image Hosting Service on GitHub</title>
-    <url>//archives/build-an-image-hosting-service-on-github/</url>
-    <content><![CDATA[<h2 id="一、创建-GitHub-仓库"><a href="#一、创建-GitHub-仓库" class="headerlink" title="一、创建 GitHub 仓库"></a>一、创建 GitHub 仓库</h2><p>在 GitHub 创建一个仓库，公开性设置为 Public。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img0.webp"
-                      alt="创建 GitHub 仓库"
-                ></p>
-<p>最后点击 Create repository 即可完成创建。</p>
-<h2 id="二、生成-Token"><a href="#二、生成-Token" class="headerlink" title="二、生成 Token"></a>二、生成 Token</h2><p>在 <code>Settings—Developer Settings—Personal access tokens—Tokens (Classic)</code> 中生成一个 Token。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img1.webp"
-                      alt="GitHub Token"
-                ></p>
-<p>生成 Token 时，需要填写 Note，选择 Token 过期时间并勾选 repo 选项。</p>
-<blockquote>
-<p>Token 最好设置为临时性的。设置的 Token 只能查看一次，应注意保存。</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img2.webp"
-                      alt="生成 Token"
-                ></p>
-<h2 id="三、使用-PicGo-实现图片上传"><a href="#三、使用-PicGo-实现图片上传" class="headerlink" title="三、使用 PicGo 实现图片上传"></a>三、使用 PicGo 实现图片上传</h2><p>下载PicGo。</p>
-<p><a class="link"   href="https://github.com/Molunerfinn/PicGo" >https://github.com/Molunerfinn/PicGo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>下载安装完成后，打开设置进行配置。</p>
-<p>GitHub 图床设置中，设定仓库名<strong>格式</strong>为 <code>username/repository</code> ，分支名为 main（当然也可以自己在仓库中创建分支），设定 Token 为 GitHub 中创建的 Token，设定存储路径为 image&#x2F;（上传的图片会自动存储到 image 文件夹下），设定自定义域名<strong>格式</strong>为<a href="https://cdn.jsdelivr.net/gh/username/repository/branch"><code>https://cdn.jsdelivr.net/gh/username/repository/branch</code></a> 。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img3.webp"
-                      alt="PicGo 图床设置"
-                ></p>
-<p>设置完成后点击确定，也可以设置为默认图床。</p>
-<p>之后对 PicGo 进行如图所示设置。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img4.webp"
-                      alt="PicGo 设置-1"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img5.webp"
-                      alt="PicGo 设置-2"
-                ></p>
-<h2 id="四、设置-Typora-实现自动上传"><a href="#四、设置-Typora-实现自动上传" class="headerlink" title="四、设置 Typora 实现自动上传"></a>四、设置 Typora 实现自动上传</h2><p>打开 Typora，点击文件—偏好设置—图像。</p>
-<p>根据图片内容进行设置。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img6.webp"
-                      alt="Typora 图像设置"
-                ></p>
-<p>设置完成后点击“验证图片上传选项”。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img7.webp"
-                      alt="验证 Typora 图像自动上传"
-                ></p>
-<p>如果出现 <code>“success”:true</code> 则证明设置成功，如果出现 <code>“success”:false</code> 则证明设置不成功，可以打开 PicGo 日志进行查看，找出失败原因。</p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Image Hosting</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Building Jellyfin Media Library with Docker</title>
     <url>//archives/building-jellyfin-media-library-with-docker/</url>
     <content><![CDATA[<h2 id="一、配置-Docker"><a href="#一、配置-Docker" class="headerlink" title="一、配置 Docker"></a>一、配置 Docker</h2><p>进入 Docker 官网，下载 Docker Desktop 并进行安装</p>
@@ -814,6 +737,83 @@
       <tags>
         <tag>Docker</tag>
         <tag>Jellyfin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Build an Image Hosting Service on GitHub</title>
+    <url>//archives/build-an-image-hosting-service-on-github/</url>
+    <content><![CDATA[<h2 id="一、创建-GitHub-仓库"><a href="#一、创建-GitHub-仓库" class="headerlink" title="一、创建 GitHub 仓库"></a>一、创建 GitHub 仓库</h2><p>在 GitHub 创建一个仓库，公开性设置为 Public。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img0.webp"
+                      alt="创建 GitHub 仓库"
+                ></p>
+<p>最后点击 Create repository 即可完成创建。</p>
+<h2 id="二、生成-Token"><a href="#二、生成-Token" class="headerlink" title="二、生成 Token"></a>二、生成 Token</h2><p>在 <code>Settings—Developer Settings—Personal access tokens—Tokens (Classic)</code> 中生成一个 Token。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img1.webp"
+                      alt="GitHub Token"
+                ></p>
+<p>生成 Token 时，需要填写 Note，选择 Token 过期时间并勾选 repo 选项。</p>
+<blockquote>
+<p>Token 最好设置为临时性的。设置的 Token 只能查看一次，应注意保存。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img2.webp"
+                      alt="生成 Token"
+                ></p>
+<h2 id="三、使用-PicGo-实现图片上传"><a href="#三、使用-PicGo-实现图片上传" class="headerlink" title="三、使用 PicGo 实现图片上传"></a>三、使用 PicGo 实现图片上传</h2><p>下载PicGo。</p>
+<p><a class="link"   href="https://github.com/Molunerfinn/PicGo" >https://github.com/Molunerfinn/PicGo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>下载安装完成后，打开设置进行配置。</p>
+<p>GitHub 图床设置中，设定仓库名<strong>格式</strong>为 <code>username/repository</code> ，分支名为 main（当然也可以自己在仓库中创建分支），设定 Token 为 GitHub 中创建的 Token，设定存储路径为 image&#x2F;（上传的图片会自动存储到 image 文件夹下），设定自定义域名<strong>格式</strong>为<a href="https://cdn.jsdelivr.net/gh/username/repository/branch"><code>https://cdn.jsdelivr.net/gh/username/repository/branch</code></a> 。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img3.webp"
+                      alt="PicGo 图床设置"
+                ></p>
+<p>设置完成后点击确定，也可以设置为默认图床。</p>
+<p>之后对 PicGo 进行如图所示设置。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img4.webp"
+                      alt="PicGo 设置-1"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img5.webp"
+                      alt="PicGo 设置-2"
+                ></p>
+<h2 id="四、设置-Typora-实现自动上传"><a href="#四、设置-Typora-实现自动上传" class="headerlink" title="四、设置 Typora 实现自动上传"></a>四、设置 Typora 实现自动上传</h2><p>打开 Typora，点击文件—偏好设置—图像。</p>
+<p>根据图片内容进行设置。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img6.webp"
+                      alt="Typora 图像设置"
+                ></p>
+<p>设置完成后点击“验证图片上传选项”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img7.webp"
+                      alt="验证 Typora 图像自动上传"
+                ></p>
+<p>如果出现 <code>“success”:true</code> 则证明设置成功，如果出现 <code>“success”:false</code> 则证明设置不成功，可以打开 PicGo 日志进行查看，找出失败原因。</p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Image Hosting</tag>
+        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -1819,91 +1819,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Fixing Issue of Content Sync Display of Personal Website in Search Engine</title>
-    <url>//archives/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/</url>
-    <content><![CDATA[<p>有时候通过搜索引擎搜索自己的网站时，可能会发现展示的内容（如网站名称、Logo、标题等）不同步或没有及时更新。这通常是因为搜索引擎缓存了旧的页面数据。为了确保搜索引擎显示最新的内容，可以通过 Google Search Console 或 Bing Webmaster Tools 来解决这个问题。</p>
-<h2 id="一、域名所有权验证"><a href="#一、域名所有权验证" class="headerlink" title="一、域名所有权验证"></a>一、域名所有权验证</h2><p>以 Google Search Console 为例，打开 <a class="link"   href="https://search.google.com/search-console/" >Google Search Console<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，添加站点，出现如下界面：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img0.webp"
-                      alt="通过 DNS 解析记录验证域名所有权"
-                ></p>
-<p>打开域名提供商的网站（如腾讯云），打开域名的 DNS 解析记录并添加：</p>
-<blockquote>
-<p> 主机记录选择 <code>@</code>，记录类型选择 <code>TXT</code>，记录值粘贴 Google 提供的值，其他保持默认。</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img1.webp"
-                      alt="腾讯云 DNS 解析记录"
-                ></p>
-<p>完成后返回 Google Search Console，可以看到验证已经完成：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img2.webp"
-                      alt="验证完成"
-                ></p>
-<blockquote>
-<p>建议使用 Google Search Console，因为 Bing Webmaster Tools 可以通过 Google 导入站点信息，无需二次配置。</p>
-<p>Bing Webmaster Tools 网址：<a class="link"   href="https://www.bing.com/webmasters/" >Bing Webmaster Tools<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-</blockquote>
-<h2 id="二、请求重新索引"><a href="#二、请求重新索引" class="headerlink" title="二、请求重新索引"></a>二、请求重新索引</h2><p>完成验证后，即可进入 Google Search Console 的控制台页面。</p>
-<p>在 URL Inspection 下点击 <code>REQUEST INDEXING</code> 即可请求重新索引，让 Google 更新站点信息。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img3.webp"
-                      alt="请求重新索引"
-                ></p>
-<p>大概经过一到两天时间就能看到自己域名下的网站更新后的信息。</p>
-<h2 id="三、提高索引速度"><a href="#三、提高索引速度" class="headerlink" title="三、提高索引速度"></a>三、提高索引速度</h2><p>为了加速搜索引擎的抓取和索引，可以为网站添加 Sitemap。</p>
-<p>执行以下命令安装 Sitemap 生成插件：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure></div>
-
-<p>在根目录的 <code>_config.yml</code> 文件中添加以下配置：</p>
-<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure></div>
-
-<p>执行以下命令来生成 <code>sitemap.xml</code> 文件：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>此命令会在 <code>public</code> 目录下生成 <code>sitemap.xml</code> 文件。</p>
-<p>在 <code>source</code> 文件夹下添加 <code>robots.txt</code> 文件，指引搜索引擎访问 Sitemap 文件。</p>
-<p><code>robots.txt</code> 文件内容如下：</p>
-<div class="code-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Disallow: </span><br><span class="line">Sitemap: https://1lya.com/sitemap.xml</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p><code>robots.txt</code> 是一个文本文件，存放在网站根目录中。它告诉搜索引擎哪些页面或资源可以抓取，哪些应该被忽略。通常用于避免抓取无关或重复的内容。</p>
-</blockquote>
-<p>执行以下命令将生成的 Sitemap 部署到网站：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>部署完成后，可以在 <code>https://example.com/sitemap.xml</code> 访问并查看网站的 Sitemap。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img4.webp"
-                      alt="网站 Sitemap"
-                ></p>
-<p>将生成的 Sitemap URL 添加到 Google Search Console 或者 Bing Webmaster Tools：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img5.webp"
-                      alt="提交 Sitemap"
-                ></p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Personal Website</tag>
-        <tag>Sitemap</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Game Text Localization Process Based on Poedit</title>
     <url>//archives/game-text-localization-process-based-on-poedit/</url>
     <content><![CDATA[<h2 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h2><p>首先，安装 Poedit 软件以及相关 Python 库：</p>
@@ -1998,433 +1913,88 @@
       </tags>
   </entry>
   <entry>
-    <title>Guide for Maven Installation &amp; Build</title>
-    <url>//archives/guide-for-maven-installation-and-build/</url>
-    <content><![CDATA[<h2 id="一、Maven-的下载与安装"><a href="#一、Maven-的下载与安装" class="headerlink" title="一、Maven 的下载与安装"></a>一、Maven 的下载与安装</h2><p><a class="link"   href="https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip" >Maven 3.9.8 Windows版本下载链接<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+    <title>Fixing Issue of Content Sync Display of Personal Website in Search Engine</title>
+    <url>//archives/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/</url>
+    <content><![CDATA[<p>有时候通过搜索引擎搜索自己的网站时，可能会发现展示的内容（如网站名称、Logo、标题等）不同步或没有及时更新。这通常是因为搜索引擎缓存了旧的页面数据。为了确保搜索引擎显示最新的内容，可以通过 Google Search Console 或 Bing Webmaster Tools 来解决这个问题。</p>
+<h2 id="一、域名所有权验证"><a href="#一、域名所有权验证" class="headerlink" title="一、域名所有权验证"></a>一、域名所有权验证</h2><p>以 Google Search Console 为例，打开 <a class="link"   href="https://search.google.com/search-console/" >Google Search Console<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，添加站点，出现如下界面：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img0.webp"
-                      alt="Maven 官方下载"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img0.webp"
+                      alt="通过 DNS 解析记录验证域名所有权"
                 ></p>
-<p>下载好后，解压到特定文件夹（路径不能有中文、空格和其他特殊字符）。</p>
+<p>打开域名提供商的网站（如腾讯云），打开域名的 DNS 解析记录并添加：</p>
+<blockquote>
+<p> 主机记录选择 <code>@</code>，记录类型选择 <code>TXT</code>，记录值粘贴 Google 提供的值，其他保持默认。</p>
+</blockquote>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img1.webp"
-                      alt="Maven 安装文件夹"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img1.webp"
+                      alt="腾讯云 DNS 解析记录"
                 ></p>
-<h2 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a>二、配置环境变量</h2><p>打开系统环境变量。</p>
+<p>完成后返回 Google Search Console，可以看到验证已经完成：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img2.webp"
-                      alt="编辑系统环境变量"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img2.webp"
+                      alt="验证完成"
                 ></p>
+<blockquote>
+<p>建议使用 Google Search Console，因为 Bing Webmaster Tools 可以通过 Google 导入站点信息，无需二次配置。</p>
+<p>Bing Webmaster Tools 网址：<a class="link"   href="https://www.bing.com/webmasters/" >Bing Webmaster Tools<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+</blockquote>
+<h2 id="二、请求重新索引"><a href="#二、请求重新索引" class="headerlink" title="二、请求重新索引"></a>二、请求重新索引</h2><p>完成验证后，即可进入 Google Search Console 的控制台页面。</p>
+<p>在 URL Inspection 下点击 <code>REQUEST INDEXING</code> 即可请求重新索引，让 Google 更新站点信息。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img3.webp"
-                      alt="系统属性 - 环境变量"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img3.webp"
+                      alt="请求重新索引"
                 ></p>
-<p>修改 Path 内容，添加 Maven 安装路径。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img4.webp"
-                      alt="系统变量 - Path - 编辑"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img5.webp"
-                      alt="添加 Maven 路径"
-                ></p>
-<p>环境变量配置好后，在终端中输入 <code>mvn -v</code> 查看 Maven 版本，验证是否安装成功。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img6.webp"
-                      alt="查看 Maven 版本"
-                ></p>
-<h2 id="三、配置-settings-和-toolchains-文件"><a href="#三、配置-settings-和-toolchains-文件" class="headerlink" title="三、配置 settings 和 toolchains 文件"></a>三、配置 settings 和 toolchains 文件</h2><p>打开Maven安装路径下 <code>/conf/settings.xml</code> 和 <code>/conf/toolchains.xml</code> 文件。</p>
-<p>为了在 IDEA 中提高 Maven 的构建速度，需要修改 Maven 的下载源，所以先在 Maven 安装目录下新建本地仓库文件夹 <code>maven_repository</code> 。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img7.webp"
-                      alt="新建本地仓库文件夹"
-                ></p>
-<p><code>settings.xml</code> 文件修改如下：</p>
-<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;localRepository&gt;标签放Maven仓库路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>D:/Apache Maven/apache-maven-3.9.8/maven_repository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">proxies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">proxies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">servers</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servers</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;mirrors&gt;标签中放Maven的下载源 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>aliyunmaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>Aliyun Public Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://maven.aliyun.com/repository/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;profiles&gt;标签中放jdk的版本 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>jdk-22<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>22<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p>大概经过一到两天时间就能看到自己域名下的网站更新后的信息。</p>
+<h2 id="三、提高索引速度"><a href="#三、提高索引速度" class="headerlink" title="三、提高索引速度"></a>三、提高索引速度</h2><p>为了加速搜索引擎的抓取和索引，可以为网站添加 Sitemap。</p>
+<p>执行以下命令安装 Sitemap 生成插件：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure></div>
 
-<p>除阿里云外其他国内仓库地址：</p>
-<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- NetEase --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-163<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus 163<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.163.com/maven/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tecent Cloud --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-tencentyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus tencentyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br></pre></td></tr></table></figure></div>
+<p>在根目录的 <code>_config.yml</code> 文件中添加以下配置：</p>
+<div class="code-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure></div>
 
-<p><code>toolchains.xml</code> 文件修改如下：</p>
-<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">toolchains</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;toolchain&gt;的&lt;provides&gt;标签中放jdk版本，&lt;configuration&gt;标签中放jdk安装路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toolchain</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>jdk<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">provides</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>22<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">vendor</span>&gt;</span>oracle<span class="tag">&lt;/<span class="name">vendor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">provides</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">jdkHome</span>&gt;</span>C:/Program Files/Java/jdk-22<span class="tag">&lt;/<span class="name">jdkHome</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">toolchain</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">toolchains</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p>执行以下命令来生成 <code>sitemap.xml</code> 文件：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo generate</span><br></pre></td></tr></table></figure></div>
 
-<p>修改好后，在终端输入 <code>mvn help:system</code> 测试，Maven 会自动下载缺省的或者更新的各种配置文件和依赖到本地仓库中。如果出现 Build Success，说明 Maven 已经配置成功了。</p>
+<p>此命令会在 <code>public</code> 目录下生成 <code>sitemap.xml</code> 文件。</p>
+<p>在 <code>source</code> 文件夹下添加 <code>robots.txt</code> 文件，指引搜索引擎访问 Sitemap 文件。</p>
+<p><code>robots.txt</code> 文件内容如下：</p>
+<div class="code-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Disallow: </span><br><span class="line">Sitemap: https://1lya.com/sitemap.xml</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><code>robots.txt</code> 是一个文本文件，存放在网站根目录中。它告诉搜索引擎哪些页面或资源可以抓取，哪些应该被忽略。通常用于避免抓取无关或重复的内容。</p>
+</blockquote>
+<p>执行以下命令将生成的 Sitemap 部署到网站：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>部署完成后，可以在 <code>https://example.com/sitemap.xml</code> 访问并查看网站的 Sitemap。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img8.webp"
-                      alt="测试 Maven 配置"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img4.webp"
+                      alt="网站 Sitemap"
                 ></p>
-<h2 id="四、InetlliJ-IDEA-配置"><a href="#四、InetlliJ-IDEA-配置" class="headerlink" title="四、InetlliJ IDEA 配置"></a>四、InetlliJ IDEA 配置</h2><p>在 Maven 设置里，修改 Maven 主路径、用户设置文件和本地仓库的内容即可。</p>
+<p>将生成的 Sitemap URL 添加到 Google Search Console 或者 Bing Webmaster Tools：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img9.webp"
-                      alt="IntelliJ IDEA 配置"
+                     data-src="/images/fixing-issue-of-content-sync-display-of-personal-website-in-search-engine/img5.webp"
+                      alt="提交 Sitemap"
                 ></p>
 ]]></content>
       <categories>
         <category>Programming</category>
       </categories>
       <tags>
-        <tag>Maven</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Host Static Web Pages on Personal Domain via GitHub</title>
-    <url>//archives/host-static-web-pages-on-personal-domain-via-github/</url>
-    <content><![CDATA[<h2 id="一、将-Git-连接到-GitHub"><a href="#一、将-Git-连接到-GitHub" class="headerlink" title="一、将 Git 连接到 GitHub"></a>一、将 Git 连接到 GitHub</h2><p>使用 SSH 方式将 Git 连接到 GitHub</p>
-<p>首先将个人用户名和密码添加到 <code>git config</code></p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global [user.name](http://user.name/) <span class="string">&quot;AstridStark25963&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;astridstark25963@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>可以通过以下命令检查配置是否正确：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure></div>
-
-<p>查看是否已有SSH密钥：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -al ~/.ssh</span><br></pre></td></tr></table></figure></div>
-
-<p>如果看到 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 文件，表示已经存在SSH密钥，可以选择使用现有的密钥或者生成新的密钥。</p>
-<p>生成SSH密钥：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;astridstark@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>命令后添加 <code>-C &quot;astridstark25963@gmail.com&quot;</code> 是将邮箱作为密钥的标识符号。</p>
-<p>当提示 <strong>Enter file in which to save the key</strong> 时，按 <code>Enter</code> 使用默认位置（<code>/c/Users/lenovo/.ssh/id_rsa</code>）。<br>当提示 <strong>Enter passphrase</strong> 时，可以选择设置一个密码短语（增加安全性），或者直接按 <code>Enter</code> 跳过。</p>
-</blockquote>
-<p>在 Git Bash 中输入以下命令，启动 SSH 代理并添加密钥：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></div>
-
-<p>然后将 SSH 密钥添加到 GitHub</p>
-<p>在 Git Bash 中输入以下命令，复制公钥内容：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></div>
-
-<p>复制输出的内容（从 <code>ssh-rsa</code> 开始到邮箱结束）。</p>
-<p>在 <code>GitHub 账户 -&gt; Settings -&gt; SSH and GPG keys</code> 中添加新的 SSH 密钥，在 <strong>Key</strong> 字段中粘贴刚刚复制的公钥内容即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img0.webp"
-                      alt="Add SSH key to GitHub"
-                ></p>
-<p>通过输入以下命令测试与 GitHub 的连接：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div>
-
-<p>如果一切正常，会看到如下信息：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img1.webp"
-                      alt="SSH connection test"
-                ></p>
-<h2 id="二、创建仓库并克隆到本地"><a href="#二、创建仓库并克隆到本地" class="headerlink" title="二、创建仓库并克隆到本地"></a>二、创建仓库并克隆到本地</h2><p>由于目的是将静态页面关联到个人域名，所以直接在 GitHub 创建用户名同名仓库 <code>AstridStark25963.github.io</code> </p>
-<blockquote>
-<p>直接创建用户名同名仓库，GitHub 会自动将此仓库使用 GitHub Pages 托管</p>
-</blockquote>
-<p>在仓库页面选择 Code - SSH，获得克隆仓库所需的命令</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img2.webp"
-                      alt="Git clone"
-                ></p>
-<p>在 Git Bash 输入以下命令进行仓库克隆：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:AstridStark25963/AstridStark25963.github.io.git</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img3.webp"
-                      alt="Clone success"
-                ></p>
-<h2 id="三、由本地向仓库提交更改"><a href="#三、由本地向仓库提交更改" class="headerlink" title="三、由本地向仓库提交更改"></a>三、由本地向仓库提交更改</h2><p>修改本地文件，在仓库所在文件夹添加测试文件：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img4.webp"
-                      alt="Add a test file"
-                ></p>
-<p>在 Git Bash 定位到仓库所在文件夹：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">cd</span> AstridStark25963.github.io</span><br></pre></td></tr></table></figure></div>
-
-<p>查看当前仓库状态：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img5.webp"
-                      alt="Check repository status"
-                ></p>
-<p>将更改添加到暂存区，提交更改并推送到远程仓库：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;add test.txt&quot;</span></span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img6.webp"
-                      alt="Add, commit and push"
-                ></p>
-<p>查看修改历史：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img7.webp"
-                      alt="Git log"
-                ></p>
-<h2 id="四、将-GitHub-仓库添加到域名解析记录"><a href="#四、将-GitHub-仓库添加到域名解析记录" class="headerlink" title="四、将 GitHub 仓库添加到域名解析记录"></a>四、将 GitHub 仓库添加到域名解析记录</h2><p>打开腾讯云，向域名添加解析记录：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img8.webp"
-                      alt="Add DNS record"
-                ></p>
-<p>第一条记录，主机记录填写 <code>www</code> ，记录类型填写 <code>CNAME</code> ，记录值填写 <code>astridstark25963.github.io</code>  </p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img9.webp"
-                      alt="Host record"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img10.webp"
-                      alt="Record type"
-                ></p>
-<p>第二条记录，主机记录填写 <code>@</code> ，记录类型填写 <code>A</code> ，记录值填写第一条记录中记录值的 IP 地址，可以通过在终端执行 <code>ping</code> 命令得到。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img11.webp"
-                      alt="Ping astridstark25963.github.io"
-                ></p>
-<p>在本地添加 <code>CNAME</code> 文件并推送到远程仓库，内容为域名。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img12.webp"
-                      alt="CNAME"
-                ></p>
-<p>成功推送后，在仓库的 <code>Settings -&gt; Pages -&gt; Custom domain</code> 中可以看到解析后的域名信息。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img13.webp"
-                      alt="Custom domain"
-                ></p>
-<p>最后直接在浏览器访问域名，即可看到网页内容。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img14.webp"
-                      alt="Success!"
-                ></p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
         <tag>Personal Website</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>How to Bypass VPN Detection</title>
-    <url>//archives/how-to-bypass-vpn-detection/</url>
-    <content><![CDATA[<h2 id="一、代理配置"><a href="#一、代理配置" class="headerlink" title="一、代理配置"></a>一、代理配置</h2><p>打开 Clash Verge，选择一个节点，并将路由设置为全局。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img0.webp"
-                      alt="设置全局路由"
-                ></p>
-<p>打开设置，将 DNS 覆写、IPv6、统一延迟三个开关打开。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img1.webp"
-                      alt="Clash 设置"
-                ></p>
-<p>打开端口设置，打开 HTTP(S) 代理端口的开关。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img2.webp"
-                      alt="端口配置"
-                ></p>
-<p>最后打开系统设置，将 Clash Verge 的运行模式调整为虚拟网卡模式，也可以右键任务栏图标打开 TUN 模式。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img3.webp"
-                      alt="虚拟网卡模式"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img4.webp"
-                      alt="TUN 模式"
-                ></p>
-<h2 id="二、指纹浏览器配置"><a href="#二、指纹浏览器配置" class="headerlink" title="二、指纹浏览器配置"></a>二、指纹浏览器配置</h2><p>下载并安装 AdsPower 指纹浏览器，打开后点击“新建浏览器”。</p>
-<p>修改环境名称和使用的浏览器内核。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img5.webp"
-                      alt="基础设置"
-                ></p>
-<p>修改代理信息，代理类型选择 HTTP，主机 IP 填写 <code>127.0.0.1</code>，端口号填写 Clash Verge 中的 HTTP 代理端口。填写完成后检查代理是否与 Clash Verge 中连接的节点信息一致。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img6.webp"
-                      alt="代理信息"
-                ></p>
-<p>完成后保存，即可创建指纹浏览器环境。</p>
-<h2 id="三、检测-IP-地址"><a href="#三、检测-IP-地址" class="headerlink" title="三、检测 IP 地址"></a>三、检测 IP 地址</h2><p>打开指纹浏览器，可以看到目前的 IP 信息。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img7.webp"
-                      alt="IP 信息"
-                ></p>
-<p>访问 <code>https://ip111.cn</code>，查看 IP 信息，保证三方测试 IP 地址相同。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img8.webp"
-                      alt="三方测试 IP 地址"
-                ></p>
-<p>接下来访问 <code>https://scamalytics.com/ip</code>，输入经过测试的 IP 地址，检测 IP 纯净度。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img9.webp"
-                      alt="检测 IP 纯净度"
-                ></p>
-<p>如果 IP 纯净度很低或为 0，证明纯净 IP 隐私浏览环境已创建好，能够绕过 VPN 检测。</p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>IP</tag>
-        <tag>VPN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>How to Display Account Data on GitHub Profile</title>
-    <url>//archives/how-to-display-account-data-on-github-profile/</url>
-    <content><![CDATA[<p>GitHub 为每个账号预留了一个账户同名库，在这个库中填写 <code>README.md</code> 可以直接将这个文件的内容渲染到自己的 GitHub 主页。其中，我们可以用下面几种方式来展示自己的 GitHub 账号数据，丰富主页内容。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-display-account-data-on-github-profile/img0.webp"
-                      alt="GitHub Account Data"
-                ></p>
-<h2 id="一、直接使用公共服务"><a href="#一、直接使用公共服务" class="headerlink" title="一、直接使用公共服务"></a>一、直接使用公共服务</h2><p>直接使用公共服务不需要进行任何配置，但由于公共 API 容易遇到 GitHub API 限流、服务不稳定等问题，可能会出现 “Error Fetching Resource” 等报错。</p>
-<blockquote>
-<p>常见公开服务：</p>
-<ul>
-<li><p>GitHub Profile Trophy: <a class="link"   href="https://github.com/ryo-ma/github-profile-trophy" >https://github.com/ryo-ma/github-profile-trophy<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-</li>
-<li><p>GitHub Readme Stats: <a class="link"   href="https://github.com/anuraghazra/github-readme-stats" >https://github.com/anuraghazra/github-readme-stats<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-</li>
-</ul>
-</blockquote>
-<p>配置 GitHub Profile Trophy: </p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- GitHub Trophies --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://github-profile-trophy.vercel.app/?username=用户名&amp;theme=transparent&amp;column=4&amp;row=2&amp;margin-w=15&amp;margin-h=15&amp;no-frame=false&amp;no-bg=true&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;GitHub Trophies&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>配置 GitHub Readme Stats: </p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- GitHub Stats --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://github-readme-stats.vercel.app/api?username=用户名&amp;show_icons=true&amp;count_private=true&amp;theme=transparent&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;GitHub Stats&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://github-readme-stats.vercel.app/api/top-langs/?username=用户名&amp;layout=compact&amp;theme=transparent&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Top Languages&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>链接填写处的参数配置参考源代码库的 <code>README.md</code> 文件。</p>
-</blockquote>
-<h2 id="二、Fork-源仓库后自托管到-Vercel"><a href="#二、Fork-源仓库后自托管到-Vercel" class="headerlink" title="二、Fork 源仓库后自托管到 Vercel"></a>二、Fork 源仓库后自托管到 Vercel</h2><p>当遇到 GitHub API 限流、服务不稳定等问题时，可以采用这种方法进行自托管。</p>
-<p>以 <code>github-readme-stats</code> 为例。首先，点击右上角的 Fork 按钮，将源代码库 fork 到自己的账号。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-display-account-data-on-github-profile/img1.webp"
-                      alt="Fork Repository"
-                ></p>
-<p>在 Vercel 创建新项目并导入 fork 后的仓库。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-display-account-data-on-github-profile/img2.webp"
-                      alt="New Vercel Project"
-                ></p>
-<p>访问 <a class="link"   href="https://github.com/settings/tokens" >GitHub Tokens<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 页面并创建一个 Token。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-display-account-data-on-github-profile/img3.webp"
-                      alt="Create GitHub Token"
-                ></p>
-<p>创建 token 时，选中 <code>repo</code> 和 <code>read:user</code> 两个选项，点击创建，并将 token 填写到 Vercel 项目的环境变量中，然后点击部署。</p>
-<p>等待构建成功，效果如下图所示：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-display-account-data-on-github-profile/img4.webp"
-                      alt="Deploy Success"
-                ></p>
-<p>此时使用域名（以如图域名为例，实际以部署后的域名为准）：</p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://github-readme-stats-six-gray-26.vercel.app/api?username=用户名&amp;show_icons=true&amp;count_private=true&amp;theme=transparent&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<h2 id="三、自建库-自定义卡片-计数器"><a href="#三、自建库-自定义卡片-计数器" class="headerlink" title="三、自建库 + 自定义卡片&#x2F;计数器"></a>三、自建库 + 自定义卡片&#x2F;计数器</h2><p>如果想做访客计数、自定义样式或组合多种信息，可以采用这种方式。</p>
-<p>以自建一个访客计数器 (Vercel Edge Function + Upstash Redis) 为例：</p>
-<p>首先新建一个小仓库（例如 <code>visit-counter</code>），在根目录创建 <code>api/visit.js</code>：</p>
-<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Edge Function 计数器</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> config = &#123; <span class="attr">runtime</span>: <span class="string">&#x27;edge&#x27;</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">svg</span> = (<span class="params">count</span>) =&gt; <span class="string">`</span></span><br><span class="line"><span class="string">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;150&quot; height=&quot;28&quot; role=&quot;img&quot; aria-label=&quot;Visitor Count: <span class="subst">$&#123;count&#125;</span>&quot;&gt;</span></span><br><span class="line"><span class="string">  &lt;linearGradient id=&quot;smooth&quot; x2=&quot;0&quot; y2=&quot;100%&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;stop offset=&quot;0&quot; stop-color=&quot;#bbb&quot; stop-opacity=&quot;.1&quot;/&gt;</span></span><br><span class="line"><span class="string">    &lt;stop offset=&quot;1&quot; stop-opacity=&quot;.1&quot;/&gt;</span></span><br><span class="line"><span class="string">  &lt;/linearGradient&gt;</span></span><br><span class="line"><span class="string">  &lt;rect rx=&quot;4&quot; width=&quot;150&quot; height=&quot;28&quot; fill=&quot;#555&quot;/&gt;</span></span><br><span class="line"><span class="string">  &lt;rect rx=&quot;4&quot; x=&quot;70&quot; width=&quot;80&quot; height=&quot;28&quot; fill=&quot;#4c1&quot;/&gt;</span></span><br><span class="line"><span class="string">  &lt;rect rx=&quot;4&quot; width=&quot;150&quot; height=&quot;28&quot; fill=&quot;url(#smooth)&quot;/&gt;</span></span><br><span class="line"><span class="string">  &lt;g fill=&quot;#fff&quot; text-anchor=&quot;middle&quot; font-family=&quot;DejaVu Sans,Verdana,Geneva,sans-serif&quot; font-size=&quot;12&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;text x=&quot;35&quot; y=&quot;18&quot;&gt;Visitor&lt;/text&gt;</span></span><br><span class="line"><span class="string">    &lt;text x=&quot;110&quot; y=&quot;18&quot;&gt;<span class="subst">$&#123;count&#125;</span>&lt;/text&gt;</span></span><br><span class="line"><span class="string">  &lt;/g&gt;</span></span><br><span class="line"><span class="string">&lt;/svg&gt;`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">handler</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; <span class="variable constant_">UPSTASH_REDIS_REST_URL</span>, <span class="variable constant_">UPSTASH_REDIS_REST_TOKEN</span> &#125; = process.<span class="property">env</span>;</span><br><span class="line">  <span class="keyword">const</span> key = <span class="string">&#x27;visits:用户名&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> resp = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">`<span class="subst">$&#123;UPSTASH_REDIS_REST_URL&#125;</span>/incr/<span class="subst">$&#123;key&#125;</span>`</span>, &#123;</span><br><span class="line">    <span class="attr">headers</span>: &#123; <span class="title class_">Authorization</span>: <span class="string">`Bearer <span class="subst">$&#123;UPSTASH_REDIS_REST_TOKEN&#125;</span>`</span> &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> resp.<span class="title function_">json</span>();</span><br><span class="line">  <span class="keyword">const</span> count = <span class="keyword">typeof</span> data.<span class="property">result</span> === <span class="string">&#x27;number&#x27;</span> ? data.<span class="property">result</span> : data.<span class="property">result</span> || data;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Response</span>(<span class="title function_">svg</span>(count), &#123;</span><br><span class="line">    <span class="attr">status</span>: <span class="number">200</span>,</span><br><span class="line">    <span class="attr">headers</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;image/svg+xml&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;Cache-Control&#x27;</span>: <span class="string">&#x27;no-store, no-cache, must-revalidate, max-age=0&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;Pragma&#x27;</span>: <span class="string">&#x27;no-cache&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;Expires&#x27;</span>: <span class="string">&#x27;0&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>在 <code>Cache-Control</code> 部分添加 <code>no-store, no-cache, must-revalidate, max-age=0</code> 等多个参数，是为了尽量避免 GitHub &#x2F; Camo 长时间缓存导致就算刷新页面也无法增加计数器计数的情况。</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-display-account-data-on-github-profile/img5.webp"
-                      alt="New Visitor Counter Repository"
-                ></p>
-<p>然后在 Vercel 创建项目导入该仓库。</p>
-<p>在 Upstash 创建一个免费 Redis 实例，并将如图所示两个参数的名称和值添加到 Vercel 实例的环境变量中。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-display-account-data-on-github-profile/img6.webp"
-                      alt="New Upstash Redis Example"
-                ></p>
-<blockquote>
-<p>不要选中 <code>Read-Only Token</code> 选项，因为如果开启此选项，Upstash 会提供一个只能读的 token，无法执行写操作（如 <code>INCR/SET</code>）。访客计数的计数器要自增，必须能写。</p>
-</blockquote>
-<p>部署完成后在 README 引用：</p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://计数器域名.vercel.app/api/visit&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Visitor Count&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure></div>]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Vercel</tag>
+        <tag>Sitemap</tag>
       </tags>
   </entry>
   <entry>
@@ -2920,6 +2490,436 @@
       <tags>
         <tag>Windows</tag>
         <tag>Issues</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Host Static Web Pages on Personal Domain via GitHub</title>
+    <url>//archives/host-static-web-pages-on-personal-domain-via-github/</url>
+    <content><![CDATA[<h2 id="一、将-Git-连接到-GitHub"><a href="#一、将-Git-连接到-GitHub" class="headerlink" title="一、将 Git 连接到 GitHub"></a>一、将 Git 连接到 GitHub</h2><p>使用 SSH 方式将 Git 连接到 GitHub</p>
+<p>首先将个人用户名和密码添加到 <code>git config</code></p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global [user.name](http://user.name/) <span class="string">&quot;AstridStark25963&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;astridstark25963@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>可以通过以下命令检查配置是否正确：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure></div>
+
+<p>查看是否已有SSH密钥：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -al ~/.ssh</span><br></pre></td></tr></table></figure></div>
+
+<p>如果看到 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 文件，表示已经存在SSH密钥，可以选择使用现有的密钥或者生成新的密钥。</p>
+<p>生成SSH密钥：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;astridstark@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>命令后添加 <code>-C &quot;astridstark25963@gmail.com&quot;</code> 是将邮箱作为密钥的标识符号。</p>
+<p>当提示 <strong>Enter file in which to save the key</strong> 时，按 <code>Enter</code> 使用默认位置（<code>/c/Users/lenovo/.ssh/id_rsa</code>）。<br>当提示 <strong>Enter passphrase</strong> 时，可以选择设置一个密码短语（增加安全性），或者直接按 <code>Enter</code> 跳过。</p>
+</blockquote>
+<p>在 Git Bash 中输入以下命令，启动 SSH 代理并添加密钥：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></div>
+
+<p>然后将 SSH 密钥添加到 GitHub</p>
+<p>在 Git Bash 中输入以下命令，复制公钥内容：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></div>
+
+<p>复制输出的内容（从 <code>ssh-rsa</code> 开始到邮箱结束）。</p>
+<p>在 <code>GitHub 账户 -&gt; Settings -&gt; SSH and GPG keys</code> 中添加新的 SSH 密钥，在 <strong>Key</strong> 字段中粘贴刚刚复制的公钥内容即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img0.webp"
+                      alt="Add SSH key to GitHub"
+                ></p>
+<p>通过输入以下命令测试与 GitHub 的连接：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div>
+
+<p>如果一切正常，会看到如下信息：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img1.webp"
+                      alt="SSH connection test"
+                ></p>
+<h2 id="二、创建仓库并克隆到本地"><a href="#二、创建仓库并克隆到本地" class="headerlink" title="二、创建仓库并克隆到本地"></a>二、创建仓库并克隆到本地</h2><p>由于目的是将静态页面关联到个人域名，所以直接在 GitHub 创建用户名同名仓库 <code>AstridStark25963.github.io</code> </p>
+<blockquote>
+<p>直接创建用户名同名仓库，GitHub 会自动将此仓库使用 GitHub Pages 托管</p>
+</blockquote>
+<p>在仓库页面选择 Code - SSH，获得克隆仓库所需的命令</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img2.webp"
+                      alt="Git clone"
+                ></p>
+<p>在 Git Bash 输入以下命令进行仓库克隆：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:AstridStark25963/AstridStark25963.github.io.git</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img3.webp"
+                      alt="Clone success"
+                ></p>
+<h2 id="三、由本地向仓库提交更改"><a href="#三、由本地向仓库提交更改" class="headerlink" title="三、由本地向仓库提交更改"></a>三、由本地向仓库提交更改</h2><p>修改本地文件，在仓库所在文件夹添加测试文件：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img4.webp"
+                      alt="Add a test file"
+                ></p>
+<p>在 Git Bash 定位到仓库所在文件夹：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="built_in">cd</span> AstridStark25963.github.io</span><br></pre></td></tr></table></figure></div>
+
+<p>查看当前仓库状态：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img5.webp"
+                      alt="Check repository status"
+                ></p>
+<p>将更改添加到暂存区，提交更改并推送到远程仓库：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;add test.txt&quot;</span></span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img6.webp"
+                      alt="Add, commit and push"
+                ></p>
+<p>查看修改历史：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img7.webp"
+                      alt="Git log"
+                ></p>
+<h2 id="四、将-GitHub-仓库添加到域名解析记录"><a href="#四、将-GitHub-仓库添加到域名解析记录" class="headerlink" title="四、将 GitHub 仓库添加到域名解析记录"></a>四、将 GitHub 仓库添加到域名解析记录</h2><p>打开腾讯云，向域名添加解析记录：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img8.webp"
+                      alt="Add DNS record"
+                ></p>
+<p>第一条记录，主机记录填写 <code>www</code> ，记录类型填写 <code>CNAME</code> ，记录值填写 <code>astridstark25963.github.io</code>  </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img9.webp"
+                      alt="Host record"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img10.webp"
+                      alt="Record type"
+                ></p>
+<p>第二条记录，主机记录填写 <code>@</code> ，记录类型填写 <code>A</code> ，记录值填写第一条记录中记录值的 IP 地址，可以通过在终端执行 <code>ping</code> 命令得到。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img11.webp"
+                      alt="Ping astridstark25963.github.io"
+                ></p>
+<p>在本地添加 <code>CNAME</code> 文件并推送到远程仓库，内容为域名。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img12.webp"
+                      alt="CNAME"
+                ></p>
+<p>成功推送后，在仓库的 <code>Settings -&gt; Pages -&gt; Custom domain</code> 中可以看到解析后的域名信息。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img13.webp"
+                      alt="Custom domain"
+                ></p>
+<p>最后直接在浏览器访问域名，即可看到网页内容。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/host-static-web-pages-on-personal-domain-via-github/img14.webp"
+                      alt="Success!"
+                ></p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Personal Website</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>How to Display Account Data on GitHub Profile</title>
+    <url>//archives/how-to-display-account-data-on-github-profile/</url>
+    <content><![CDATA[<p>GitHub 为每个账号预留了一个账户同名库，在这个库中填写 <code>README.md</code> 可以直接将这个文件的内容渲染到自己的 GitHub 主页。其中，我们可以用下面几种方式来展示自己的 GitHub 账号数据，丰富主页内容。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-display-account-data-on-github-profile/img0.webp"
+                      alt="GitHub Account Data"
+                ></p>
+<h2 id="一、直接使用公共服务"><a href="#一、直接使用公共服务" class="headerlink" title="一、直接使用公共服务"></a>一、直接使用公共服务</h2><p>直接使用公共服务不需要进行任何配置，但由于公共 API 容易遇到 GitHub API 限流、服务不稳定等问题，可能会出现 “Error Fetching Resource” 等报错。</p>
+<blockquote>
+<p>常见公开服务：</p>
+<ul>
+<li><p>GitHub Profile Trophy: <a class="link"   href="https://github.com/ryo-ma/github-profile-trophy" >https://github.com/ryo-ma/github-profile-trophy<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+</li>
+<li><p>GitHub Readme Stats: <a class="link"   href="https://github.com/anuraghazra/github-readme-stats" >https://github.com/anuraghazra/github-readme-stats<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+</li>
+</ul>
+</blockquote>
+<p>配置 GitHub Profile Trophy: </p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- GitHub Trophies --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://github-profile-trophy.vercel.app/?username=用户名&amp;theme=transparent&amp;column=4&amp;row=2&amp;margin-w=15&amp;margin-h=15&amp;no-frame=false&amp;no-bg=true&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;GitHub Trophies&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>配置 GitHub Readme Stats: </p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- GitHub Stats --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://github-readme-stats.vercel.app/api?username=用户名&amp;show_icons=true&amp;count_private=true&amp;theme=transparent&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;GitHub Stats&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://github-readme-stats.vercel.app/api/top-langs/?username=用户名&amp;layout=compact&amp;theme=transparent&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Top Languages&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>链接填写处的参数配置参考源代码库的 <code>README.md</code> 文件。</p>
+</blockquote>
+<h2 id="二、Fork-源仓库后自托管到-Vercel"><a href="#二、Fork-源仓库后自托管到-Vercel" class="headerlink" title="二、Fork 源仓库后自托管到 Vercel"></a>二、Fork 源仓库后自托管到 Vercel</h2><p>当遇到 GitHub API 限流、服务不稳定等问题时，可以采用这种方法进行自托管。</p>
+<p>以 <code>github-readme-stats</code> 为例。首先，点击右上角的 Fork 按钮，将源代码库 fork 到自己的账号。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-display-account-data-on-github-profile/img1.webp"
+                      alt="Fork Repository"
+                ></p>
+<p>在 Vercel 创建新项目并导入 fork 后的仓库。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-display-account-data-on-github-profile/img2.webp"
+                      alt="New Vercel Project"
+                ></p>
+<p>访问 <a class="link"   href="https://github.com/settings/tokens" >GitHub Tokens<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 页面并创建一个 Token。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-display-account-data-on-github-profile/img3.webp"
+                      alt="Create GitHub Token"
+                ></p>
+<p>创建 token 时，选中 <code>repo</code> 和 <code>read:user</code> 两个选项，点击创建，并将 token 填写到 Vercel 项目的环境变量中，然后点击部署。</p>
+<p>等待构建成功，效果如下图所示：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-display-account-data-on-github-profile/img4.webp"
+                      alt="Deploy Success"
+                ></p>
+<p>此时使用域名（以如图域名为例，实际以部署后的域名为准）：</p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://github-readme-stats-six-gray-26.vercel.app/api?username=用户名&amp;show_icons=true&amp;count_private=true&amp;theme=transparent&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、自建库-自定义卡片-计数器"><a href="#三、自建库-自定义卡片-计数器" class="headerlink" title="三、自建库 + 自定义卡片&#x2F;计数器"></a>三、自建库 + 自定义卡片&#x2F;计数器</h2><p>如果想做访客计数、自定义样式或组合多种信息，可以采用这种方式。</p>
+<p>以自建一个访客计数器 (Vercel Edge Function + Upstash Redis) 为例：</p>
+<p>首先新建一个小仓库（例如 <code>visit-counter</code>），在根目录创建 <code>api/visit.js</code>：</p>
+<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Edge Function 计数器</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> config = &#123; <span class="attr">runtime</span>: <span class="string">&#x27;edge&#x27;</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">svg</span> = (<span class="params">count</span>) =&gt; <span class="string">`</span></span><br><span class="line"><span class="string">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;150&quot; height=&quot;28&quot; role=&quot;img&quot; aria-label=&quot;Visitor Count: <span class="subst">$&#123;count&#125;</span>&quot;&gt;</span></span><br><span class="line"><span class="string">  &lt;linearGradient id=&quot;smooth&quot; x2=&quot;0&quot; y2=&quot;100%&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;stop offset=&quot;0&quot; stop-color=&quot;#bbb&quot; stop-opacity=&quot;.1&quot;/&gt;</span></span><br><span class="line"><span class="string">    &lt;stop offset=&quot;1&quot; stop-opacity=&quot;.1&quot;/&gt;</span></span><br><span class="line"><span class="string">  &lt;/linearGradient&gt;</span></span><br><span class="line"><span class="string">  &lt;rect rx=&quot;4&quot; width=&quot;150&quot; height=&quot;28&quot; fill=&quot;#555&quot;/&gt;</span></span><br><span class="line"><span class="string">  &lt;rect rx=&quot;4&quot; x=&quot;70&quot; width=&quot;80&quot; height=&quot;28&quot; fill=&quot;#4c1&quot;/&gt;</span></span><br><span class="line"><span class="string">  &lt;rect rx=&quot;4&quot; width=&quot;150&quot; height=&quot;28&quot; fill=&quot;url(#smooth)&quot;/&gt;</span></span><br><span class="line"><span class="string">  &lt;g fill=&quot;#fff&quot; text-anchor=&quot;middle&quot; font-family=&quot;DejaVu Sans,Verdana,Geneva,sans-serif&quot; font-size=&quot;12&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;text x=&quot;35&quot; y=&quot;18&quot;&gt;Visitor&lt;/text&gt;</span></span><br><span class="line"><span class="string">    &lt;text x=&quot;110&quot; y=&quot;18&quot;&gt;<span class="subst">$&#123;count&#125;</span>&lt;/text&gt;</span></span><br><span class="line"><span class="string">  &lt;/g&gt;</span></span><br><span class="line"><span class="string">&lt;/svg&gt;`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">handler</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; <span class="variable constant_">UPSTASH_REDIS_REST_URL</span>, <span class="variable constant_">UPSTASH_REDIS_REST_TOKEN</span> &#125; = process.<span class="property">env</span>;</span><br><span class="line">  <span class="keyword">const</span> key = <span class="string">&#x27;visits:用户名&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> resp = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">`<span class="subst">$&#123;UPSTASH_REDIS_REST_URL&#125;</span>/incr/<span class="subst">$&#123;key&#125;</span>`</span>, &#123;</span><br><span class="line">    <span class="attr">headers</span>: &#123; <span class="title class_">Authorization</span>: <span class="string">`Bearer <span class="subst">$&#123;UPSTASH_REDIS_REST_TOKEN&#125;</span>`</span> &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> resp.<span class="title function_">json</span>();</span><br><span class="line">  <span class="keyword">const</span> count = <span class="keyword">typeof</span> data.<span class="property">result</span> === <span class="string">&#x27;number&#x27;</span> ? data.<span class="property">result</span> : data.<span class="property">result</span> || data;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Response</span>(<span class="title function_">svg</span>(count), &#123;</span><br><span class="line">    <span class="attr">status</span>: <span class="number">200</span>,</span><br><span class="line">    <span class="attr">headers</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;image/svg+xml&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;Cache-Control&#x27;</span>: <span class="string">&#x27;no-store, no-cache, must-revalidate, max-age=0&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;Pragma&#x27;</span>: <span class="string">&#x27;no-cache&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;Expires&#x27;</span>: <span class="string">&#x27;0&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>在 <code>Cache-Control</code> 部分添加 <code>no-store, no-cache, must-revalidate, max-age=0</code> 等多个参数，是为了尽量避免 GitHub &#x2F; Camo 长时间缓存导致就算刷新页面也无法增加计数器计数的情况。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-display-account-data-on-github-profile/img5.webp"
+                      alt="New Visitor Counter Repository"
+                ></p>
+<p>然后在 Vercel 创建项目导入该仓库。</p>
+<p>在 Upstash 创建一个免费 Redis 实例，并将如图所示两个参数的名称和值添加到 Vercel 实例的环境变量中。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-display-account-data-on-github-profile/img6.webp"
+                      alt="New Upstash Redis Example"
+                ></p>
+<blockquote>
+<p>不要选中 <code>Read-Only Token</code> 选项，因为如果开启此选项，Upstash 会提供一个只能读的 token，无法执行写操作（如 <code>INCR/SET</code>）。访客计数的计数器要自增，必须能写。</p>
+</blockquote>
+<p>部署完成后在 README 引用：</p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://计数器域名.vercel.app/api/visit&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Visitor Count&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure></div>]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Vercel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Guide for Maven Installation &amp; Build</title>
+    <url>//archives/guide-for-maven-installation-and-build/</url>
+    <content><![CDATA[<h2 id="一、Maven-的下载与安装"><a href="#一、Maven-的下载与安装" class="headerlink" title="一、Maven 的下载与安装"></a>一、Maven 的下载与安装</h2><p><a class="link"   href="https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip" >Maven 3.9.8 Windows版本下载链接<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img0.webp"
+                      alt="Maven 官方下载"
+                ></p>
+<p>下载好后，解压到特定文件夹（路径不能有中文、空格和其他特殊字符）。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img1.webp"
+                      alt="Maven 安装文件夹"
+                ></p>
+<h2 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a>二、配置环境变量</h2><p>打开系统环境变量。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img2.webp"
+                      alt="编辑系统环境变量"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img3.webp"
+                      alt="系统属性 - 环境变量"
+                ></p>
+<p>修改 Path 内容，添加 Maven 安装路径。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img4.webp"
+                      alt="系统变量 - Path - 编辑"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img5.webp"
+                      alt="添加 Maven 路径"
+                ></p>
+<p>环境变量配置好后，在终端中输入 <code>mvn -v</code> 查看 Maven 版本，验证是否安装成功。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img6.webp"
+                      alt="查看 Maven 版本"
+                ></p>
+<h2 id="三、配置-settings-和-toolchains-文件"><a href="#三、配置-settings-和-toolchains-文件" class="headerlink" title="三、配置 settings 和 toolchains 文件"></a>三、配置 settings 和 toolchains 文件</h2><p>打开Maven安装路径下 <code>/conf/settings.xml</code> 和 <code>/conf/toolchains.xml</code> 文件。</p>
+<p>为了在 IDEA 中提高 Maven 的构建速度，需要修改 Maven 的下载源，所以先在 Maven 安装目录下新建本地仓库文件夹 <code>maven_repository</code> 。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img7.webp"
+                      alt="新建本地仓库文件夹"
+                ></p>
+<p><code>settings.xml</code> 文件修改如下：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;localRepository&gt;标签放Maven仓库路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>D:/Apache Maven/apache-maven-3.9.8/maven_repository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">proxies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">proxies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">servers</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servers</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;mirrors&gt;标签中放Maven的下载源 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>aliyunmaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>Aliyun Public Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://maven.aliyun.com/repository/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;profiles&gt;标签中放jdk的版本 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>jdk-22<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>22<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>除阿里云外其他国内仓库地址：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- NetEase --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-163<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus 163<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.163.com/maven/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tecent Cloud --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-tencentyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus tencentyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br></pre></td></tr></table></figure></div>
+
+<p><code>toolchains.xml</code> 文件修改如下：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">toolchains</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;toolchain&gt;的&lt;provides&gt;标签中放jdk版本，&lt;configuration&gt;标签中放jdk安装路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toolchain</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>jdk<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">provides</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>22<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">vendor</span>&gt;</span>oracle<span class="tag">&lt;/<span class="name">vendor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">provides</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">jdkHome</span>&gt;</span>C:/Program Files/Java/jdk-22<span class="tag">&lt;/<span class="name">jdkHome</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">toolchain</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">toolchains</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>修改好后，在终端输入 <code>mvn help:system</code> 测试，Maven 会自动下载缺省的或者更新的各种配置文件和依赖到本地仓库中。如果出现 Build Success，说明 Maven 已经配置成功了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img8.webp"
+                      alt="测试 Maven 配置"
+                ></p>
+<h2 id="四、InetlliJ-IDEA-配置"><a href="#四、InetlliJ-IDEA-配置" class="headerlink" title="四、InetlliJ IDEA 配置"></a>四、InetlliJ IDEA 配置</h2><p>在 Maven 设置里，修改 Maven 主路径、用户设置文件和本地仓库的内容即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img9.webp"
+                      alt="IntelliJ IDEA 配置"
+                ></p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>How to Bypass VPN Detection</title>
+    <url>//archives/how-to-bypass-vpn-detection/</url>
+    <content><![CDATA[<h2 id="一、代理配置"><a href="#一、代理配置" class="headerlink" title="一、代理配置"></a>一、代理配置</h2><p>打开 Clash Verge，选择一个节点，并将路由设置为全局。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img0.webp"
+                      alt="设置全局路由"
+                ></p>
+<p>打开设置，将 DNS 覆写、IPv6、统一延迟三个开关打开。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img1.webp"
+                      alt="Clash 设置"
+                ></p>
+<p>打开端口设置，打开 HTTP(S) 代理端口的开关。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img2.webp"
+                      alt="端口配置"
+                ></p>
+<p>最后打开系统设置，将 Clash Verge 的运行模式调整为虚拟网卡模式，也可以右键任务栏图标打开 TUN 模式。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img3.webp"
+                      alt="虚拟网卡模式"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img4.webp"
+                      alt="TUN 模式"
+                ></p>
+<h2 id="二、指纹浏览器配置"><a href="#二、指纹浏览器配置" class="headerlink" title="二、指纹浏览器配置"></a>二、指纹浏览器配置</h2><p>下载并安装 AdsPower 指纹浏览器，打开后点击“新建浏览器”。</p>
+<p>修改环境名称和使用的浏览器内核。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img5.webp"
+                      alt="基础设置"
+                ></p>
+<p>修改代理信息，代理类型选择 HTTP，主机 IP 填写 <code>127.0.0.1</code>，端口号填写 Clash Verge 中的 HTTP 代理端口。填写完成后检查代理是否与 Clash Verge 中连接的节点信息一致。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img6.webp"
+                      alt="代理信息"
+                ></p>
+<p>完成后保存，即可创建指纹浏览器环境。</p>
+<h2 id="三、检测-IP-地址"><a href="#三、检测-IP-地址" class="headerlink" title="三、检测 IP 地址"></a>三、检测 IP 地址</h2><p>打开指纹浏览器，可以看到目前的 IP 信息。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img7.webp"
+                      alt="IP 信息"
+                ></p>
+<p>访问 <code>https://ip111.cn</code>，查看 IP 信息，保证三方测试 IP 地址相同。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img8.webp"
+                      alt="三方测试 IP 地址"
+                ></p>
+<p>接下来访问 <code>https://scamalytics.com/ip</code>，输入经过测试的 IP 地址，检测 IP 纯净度。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img9.webp"
+                      alt="检测 IP 纯净度"
+                ></p>
+<p>如果 IP 纯净度很低或为 0，证明纯净 IP 隐私浏览环境已创建好，能够绕过 VPN 检测。</p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>IP</tag>
+        <tag>VPN</tag>
       </tags>
   </entry>
   <entry>
@@ -4518,6 +4518,120 @@
       </tags>
   </entry>
   <entry>
+    <title>Office 2021 Installation &amp; Activation</title>
+    <url>//archives/office-2021-installation-and-activation/</url>
+    <content><![CDATA[<h2 id="一、下载和安装-Office-Tool-Plus"><a href="#一、下载和安装-Office-Tool-Plus" class="headerlink" title="一、下载和安装 Office Tool Plus"></a>一、下载和安装 Office Tool Plus</h2><p><a class="link"   href="https://otp.landian.vip/zh-cn/" >Office Tool Plus 官方网站 - 一键部署 Office<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>安装完成后，打开 Office Tool Plus.exe 运行即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img0.webp"
+                      alt="Office Tool Plus"
+                ></p>
+<h2 id="二、部署-Office-产品"><a href="#二、部署-Office-产品" class="headerlink" title="二、部署 Office 产品"></a>二、部署 Office 产品</h2><p>运行 Office Tool Plus，点击“部署”标签页，选择想要安装的 Office 版本。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img1.webp"
+                      alt="部署 Office"
+                ></p>
+<p>选择想要安装的产品和语言包支持。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img2.webp"
+                      alt="产品和语言"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img3.webp"
+                      alt="产品选择"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img4.webp"
+                      alt="语言选择（可选多个语言及校对工具）"
+                ></p>
+<p>选择完成后开始部署即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img5.webp"
+                      alt="开始部署"
+                ></p>
+<h2 id="三、激活-Office-产品"><a href="#三、激活-Office-产品" class="headerlink" title="三、激活 Office 产品"></a>三、激活 Office 产品</h2><p>点击“激活”标签页，在“许可证管理”中安装相应许可证。</p>
+<blockquote>
+<p>安装的许可证版本应与部署的 Office 版本相同！</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img6.webp"
+                      alt="安装许可证"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img7.webp"
+                      alt="许可证选择"
+                ></p>
+<p>点击“工具箱”标签页，测试 KMS 主机可用性。</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 可用的KMS主机域名</span></span><br><span class="line">kms.03k.org</span><br><span class="line">kms.loli.beer</span><br><span class="line">kms.luochenzhimu.com</span><br><span class="line">kms9.msguides.com</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>测试KMS主机可用性的时候切勿开启网络代理！</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img8.webp"
+                      alt="测试KMS主机"
+                ></p>
+<p>测试成功后返回“激活”标签页，设置 KMS 主机并激活 Office。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img9.webp"
+                      alt="激活 Office"
+                ></p>
+<p>激活后查看 Office 许可证是否被激活。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img10.webp"
+                      alt="已激活的许可证"
+                ></p>
+<p>最后重置 Office 设置为默认设置，防止虽然激活成功但仍显示需要激活的情况。</p>
+<blockquote>
+<p>仅在账户拥有其他 Office 许可证时设置，保证此许可证的最高优先级。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img11.webp"
+                      alt="重置 Office 设置为默认设置"
+                ></p>
+<p>最后激活成功。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/office-2021-installation-and-activation/img12.webp"
+                      alt="激活成功"
+                ></p>
+<blockquote>
+<p>KMS 激活期限为 180 天，到期自动续期。若未自动续期，按照流程再操作一次即可。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Office</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Marvel TV Series</title>
     <url>//archives/marvel-tv-series/</url>
     <content><![CDATA[<table>
@@ -4726,120 +4840,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Office 2021 Installation &amp; Activation</title>
-    <url>//archives/office-2021-installation-and-activation/</url>
-    <content><![CDATA[<h2 id="一、下载和安装-Office-Tool-Plus"><a href="#一、下载和安装-Office-Tool-Plus" class="headerlink" title="一、下载和安装 Office Tool Plus"></a>一、下载和安装 Office Tool Plus</h2><p><a class="link"   href="https://otp.landian.vip/zh-cn/" >Office Tool Plus 官方网站 - 一键部署 Office<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>安装完成后，打开 Office Tool Plus.exe 运行即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img0.webp"
-                      alt="Office Tool Plus"
-                ></p>
-<h2 id="二、部署-Office-产品"><a href="#二、部署-Office-产品" class="headerlink" title="二、部署 Office 产品"></a>二、部署 Office 产品</h2><p>运行 Office Tool Plus，点击“部署”标签页，选择想要安装的 Office 版本。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img1.webp"
-                      alt="部署 Office"
-                ></p>
-<p>选择想要安装的产品和语言包支持。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img2.webp"
-                      alt="产品和语言"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img3.webp"
-                      alt="产品选择"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img4.webp"
-                      alt="语言选择（可选多个语言及校对工具）"
-                ></p>
-<p>选择完成后开始部署即可。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img5.webp"
-                      alt="开始部署"
-                ></p>
-<h2 id="三、激活-Office-产品"><a href="#三、激活-Office-产品" class="headerlink" title="三、激活 Office 产品"></a>三、激活 Office 产品</h2><p>点击“激活”标签页，在“许可证管理”中安装相应许可证。</p>
-<blockquote>
-<p>安装的许可证版本应与部署的 Office 版本相同！</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img6.webp"
-                      alt="安装许可证"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img7.webp"
-                      alt="许可证选择"
-                ></p>
-<p>点击“工具箱”标签页，测试 KMS 主机可用性。</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 可用的KMS主机域名</span></span><br><span class="line">kms.03k.org</span><br><span class="line">kms.loli.beer</span><br><span class="line">kms.luochenzhimu.com</span><br><span class="line">kms9.msguides.com</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>测试KMS主机可用性的时候切勿开启网络代理！</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img8.webp"
-                      alt="测试KMS主机"
-                ></p>
-<p>测试成功后返回“激活”标签页，设置 KMS 主机并激活 Office。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img9.webp"
-                      alt="激活 Office"
-                ></p>
-<p>激活后查看 Office 许可证是否被激活。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img10.webp"
-                      alt="已激活的许可证"
-                ></p>
-<p>最后重置 Office 设置为默认设置，防止虽然激活成功但仍显示需要激活的情况。</p>
-<blockquote>
-<p>仅在账户拥有其他 Office 许可证时设置，保证此许可证的最高优先级。</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img11.webp"
-                      alt="重置 Office 设置为默认设置"
-                ></p>
-<p>最后激活成功。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/office-2021-installation-and-activation/img12.webp"
-                      alt="激活成功"
-                ></p>
-<blockquote>
-<p>KMS 激活期限为 180 天，到期自动续期。若未自动续期，按照流程再操作一次即可。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>Office</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Use Hexo to Build a Personal Blog Website</title>
     <url>//archives/use-hexo-to-build-a-personal-blog-website/</url>
     <content><![CDATA[<h2 id="一、安装-Hexo-并初始化博客"><a href="#一、安装-Hexo-并初始化博客" class="headerlink" title="一、安装 Hexo 并初始化博客"></a>一、安装 Hexo 并初始化博客</h2><p>找到博客文件夹，在根目录输入以下命令安装 Hexo 库依赖：</p>
@@ -4934,211 +4934,6 @@
       <tags>
         <tag>Personal Website</tag>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Software License Overview</title>
-    <url>//archives/software-license-overview/</url>
-    <content><![CDATA[<p>软件许可证是软件开发者或版权所有者授予用户使用、修改或分发软件的法律协议。根据许可证的不同，用户对软件的权限和义务也有所区别。软件许可证可以大致分为以下几类：</p>
-<h2 id="专有软件许可证"><a href="#专有软件许可证" class="headerlink" title="专有软件许可证"></a>专有软件许可证</h2><p>这些许可证通常由商业软件公司提供，用户需要遵循严格的使用限制。</p>
-<h3 id="商业软件许可证"><a href="#商业软件许可证" class="headerlink" title="商业软件许可证"></a>商业软件许可证</h3><ul>
-<li><strong>代表</strong>：Microsoft Windows、Adobe Photoshop</li>
-<li><strong>许可模式</strong>：通常要求购买许可证后才能使用</li>
-<li><strong>限制</strong>：不能修改或分发软件，通常只有执行权</li>
-</ul>
-<h3 id="订阅模式许可证"><a href="#订阅模式许可证" class="headerlink" title="订阅模式许可证"></a>订阅模式许可证</h3><ul>
-<li><strong>代表</strong>：Adobe Creative Cloud、Microsoft 365</li>
-<li><strong>许可模式</strong>：按月&#x2F;年付费订阅</li>
-<li><strong>限制</strong>：软件只能在订阅有效期内使用</li>
-</ul>
-<h3 id="终端用户许可协议（EULA）"><a href="#终端用户许可协议（EULA）" class="headerlink" title="终端用户许可协议（EULA）"></a>终端用户许可协议（EULA）</h3><ul>
-<li><strong>代表</strong>：几乎所有商业软件都会附带</li>
-<li><strong>许可模式</strong>：用户必须同意 EULA 条款才能安装或使用软件</li>
-<li><strong>限制</strong>：通常禁止逆向工程、修改或再分发</li>
-</ul>
-<h2 id="开源软件许可证"><a href="#开源软件许可证" class="headerlink" title="开源软件许可证"></a>开源软件许可证</h2><p>开源许可证允许用户查看、修改和分发源代码，但不同许可证对这些权利的限制有所不同。</p>
-<h3 id="宽松开源许可证"><a href="#宽松开源许可证" class="headerlink" title="宽松开源许可证"></a>宽松开源许可证</h3><p>这些许可证允许用户修改并闭源分发代码，无需开源衍生作品。</p>
-<h4 id="MIT-许可证（MIT-License）"><a href="#MIT-许可证（MIT-License）" class="headerlink" title="MIT 许可证（MIT License）"></a>MIT 许可证（MIT License）</h4><ul>
-<li><p><strong>代表项目</strong>：React.js、Node.js</p>
-</li>
-<li><p><strong>许可模式</strong>：允许自由使用、修改和分发</p>
-</li>
-<li><p><strong>主要特点</strong>：</p>
-<ul>
-<li>代码可用于闭源软件</li>
-<li>只需保留原始许可声明</li>
-<li>免责条款：不对代码的质量和安全性负责</li>
-</ul>
-</li>
-<li><p><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/MIT.txt" >MIT License<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-</li>
-</ul>
-<h4 id="Apache-许可证-2-0（Apache-License-2-0）"><a href="#Apache-许可证-2-0（Apache-License-2-0）" class="headerlink" title="Apache 许可证 2.0（Apache License 2.0）"></a>Apache 许可证 2.0（Apache License 2.0）</h4><ul>
-<li><strong>代表项目</strong>：Android、TensorFlow</li>
-<li><strong>许可模式</strong>：比 MIT 更严格，要求贡献代码的人授予专利授权</li>
-<li><strong>主要特点</strong>：<ul>
-<li>允许闭源</li>
-<li>需声明修改内容</li>
-<li>提供专利授权</li>
-</ul>
-</li>
-<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/Apache-2.0.txt" >Apache-2.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<h4 id="BSD-许可证（Berkeley-Software-Distribution-License）"><a href="#BSD-许可证（Berkeley-Software-Distribution-License）" class="headerlink" title="BSD 许可证（Berkeley Software Distribution License）"></a>BSD 许可证（Berkeley Software Distribution License）</h4><ul>
-<li><strong>代表项目</strong>：FreeBSD、PostgreSQL</li>
-<li><strong>许可模式</strong>：类似 MIT 但有不同变体</li>
-<li><strong>主要特点</strong>：<ul>
-<li>BSD-2-Clause：要求保留原作者声明</li>
-<li>BSD-3-Clause：额外禁止使用原作者的名字做推广</li>
-</ul>
-</li>
-<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/BSD-3.txt" >BSD-3<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<h3 id="传染性许可证"><a href="#传染性许可证" class="headerlink" title="传染性许可证"></a>传染性许可证</h3><p>要求所有基于该软件的派生作品也必须使用相同的许可证，确保代码持续开源。</p>
-<h4 id="GNU-通用公共许可证（GPL，General-Public-License）"><a href="#GNU-通用公共许可证（GPL，General-Public-License）" class="headerlink" title="GNU 通用公共许可证（GPL，General Public License）"></a>GNU 通用公共许可证（GPL，General Public License）</h4><ul>
-<li><strong>代表项目</strong>：Linux Kernel、GCC</li>
-<li><strong>许可模式</strong>：所有衍生软件必须开源（强 Copyleft）</li>
-<li><strong>主要特点</strong>：<ul>
-<li><strong>GPLv2</strong>：较严格，要求所有衍生作品必须完全开源</li>
-<li><strong>GPLv3</strong>：新增专利保护和 Tivoization（防止锁定硬件）</li>
-</ul>
-</li>
-<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/GPL-3.0.txt" >GPL-3.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<h4 id="LGPL（Lesser-General-Public-License）"><a href="#LGPL（Lesser-General-Public-License）" class="headerlink" title="LGPL（Lesser General Public License）"></a>LGPL（Lesser General Public License）</h4><ul>
-<li><strong>代表项目</strong>：FFmpeg、Qt</li>
-<li><strong>许可模式</strong>：允许闭源软件动态链接 LGPL 代码</li>
-<li><strong>主要特点</strong>：<ul>
-<li>适用于库，允许与闭源软件动态链接</li>
-<li>但如果修改库本身，必须开源</li>
-</ul>
-</li>
-<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/LGPL-3.0.txt" >LGPL-3.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<h4 id="AGPL（Affero-General-Public-License）"><a href="#AGPL（Affero-General-Public-License）" class="headerlink" title="AGPL（Affero General Public License）"></a>AGPL（Affero General Public License）</h4><ul>
-<li><strong>代表项目</strong>：MongoDB</li>
-<li><strong>许可模式</strong>：适用于网络服务端软件，要求分发服务端代码</li>
-<li><strong>主要特点</strong>：<ul>
-<li>与 GPL 类似，但进一步要求通过网络交互的修改内容也必须开源</li>
-<li>确保所有用户都能访问服务端的源代码</li>
-</ul>
-</li>
-<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/AGPL-3.0.txt" >AGPL-3.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<h4 id="FDL（Free-Documentation-License）"><a href="#FDL（Free-Documentation-License）" class="headerlink" title="FDL（Free Documentation License）"></a>FDL（Free Documentation License）</h4><ul>
-<li><strong>代表项目</strong>：GNU 文档</li>
-<li><strong>许可模式</strong>：主要用于文档和书籍，要求衍生品也必须开源</li>
-<li><strong>主要特点</strong>：<ul>
-<li>确保文档的内容可以自由修改和分发</li>
-<li>适用于技术文档或操作手册</li>
-</ul>
-</li>
-<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/FDL-1.3.txt" >FDL-1.3<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<h2 id="创意共享许可证"><a href="#创意共享许可证" class="headerlink" title="创意共享许可证"></a>创意共享许可证</h2><p>适用于文本、图片、音乐等非软件内容。</p>
-<ul>
-<li><strong>CC-BY</strong>（署名）：需注明作者</li>
-<li><strong>CC-BY-NC</strong>（署名-非商业）：只能用于非商业目的</li>
-<li><strong>CC-BY-NC-ND</strong>（署名-非商业-禁止改编）：不能商用且禁止修改</li>
-<li><strong>CC-BY-NC-SA</strong>（署名-非商业-相同方式共享）：非商业用途且衍生作品需用相同协议</li>
-<li><strong>CC-BY-ND</strong>（署名-禁止改编）：允许商用但禁止修改</li>
-<li><strong>CC-BY-SA</strong>（署名-相同方式共享）：类似 GPL，要求衍生品使用相同协议</li>
-</ul>
-<p><strong>许可证模板</strong>：<a class="link"   href="https://creativecommons.org/licenses/" >Creative Commons Licenses<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="许可证选择指南"><a href="#许可证选择指南" class="headerlink" title="许可证选择指南"></a>许可证选择指南</h2><table>
-<thead>
-<tr>
-<th>许可证</th>
-<th>是否允许闭源</th>
-<th>是否要求开源衍生品</th>
-<th>适用场景</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>MIT</strong></td>
-<td>✅ 允许</td>
-<td>❌ 不要求</td>
-<td>个人、商业项目</td>
-</tr>
-<tr>
-<td><strong>Apache 2.0</strong></td>
-<td>✅ 允许</td>
-<td>❌ 不要求</td>
-<td>需要专利保护的项目</td>
-</tr>
-<tr>
-<td><strong>BSD</strong></td>
-<td>✅ 允许</td>
-<td>❌ 不要求</td>
-<td>高自由度的开源软件</td>
-</tr>
-<tr>
-<td><strong>GPL</strong></td>
-<td>❌ 禁止</td>
-<td>✅ 强制开源</td>
-<td>Linux、自由软件</td>
-</tr>
-<tr>
-<td><strong>LGPL</strong></td>
-<td>✅ 允许</td>
-<td>✅ 仅库需开源</td>
-<td>开源库</td>
-</tr>
-<tr>
-<td><strong>AGPL</strong></td>
-<td>❌ 禁止</td>
-<td>✅ 强制开源</td>
-<td>网络服务端</td>
-</tr>
-<tr>
-<td><strong>FDL</strong></td>
-<td>❌ 禁止</td>
-<td>✅ 强制开源</td>
-<td>文档、书籍</td>
-</tr>
-<tr>
-<td><strong>CC-BY</strong></td>
-<td>✅ 允许</td>
-<td>❌ 不要求</td>
-<td>文档、图片</td>
-</tr>
-<tr>
-<td><strong>CC-BY-NC</strong></td>
-<td>❌ 禁止</td>
-<td>❌ 不要求</td>
-<td>非商业内容</td>
-</tr>
-<tr>
-<td><strong>CC-BY-NC-ND</strong></td>
-<td>❌ 禁止</td>
-<td>❌ 不要求</td>
-<td>非商业且禁止改编</td>
-</tr>
-<tr>
-<td><strong>CC-BY-NC-SA</strong></td>
-<td>❌ 禁止</td>
-<td>✅ 强制开源</td>
-<td>非商业开源文化内容</td>
-</tr>
-<tr>
-<td><strong>CC-BY-ND</strong></td>
-<td>✅ 允许</td>
-<td>❌ 不要求</td>
-<td>商用但禁止改编</td>
-</tr>
-<tr>
-<td><strong>CC-BY-SA</strong></td>
-<td>✅ 允许</td>
-<td>✅ 强制开源</td>
-<td>开源文化内容</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>License</tag>
       </tags>
   </entry>
   <entry>
@@ -5379,6 +5174,211 @@
       <tags>
         <tag>Software Reverse Engineering</tag>
         <tag>Decompile</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Software License Overview</title>
+    <url>//archives/software-license-overview/</url>
+    <content><![CDATA[<p>软件许可证是软件开发者或版权所有者授予用户使用、修改或分发软件的法律协议。根据许可证的不同，用户对软件的权限和义务也有所区别。软件许可证可以大致分为以下几类：</p>
+<h2 id="专有软件许可证"><a href="#专有软件许可证" class="headerlink" title="专有软件许可证"></a>专有软件许可证</h2><p>这些许可证通常由商业软件公司提供，用户需要遵循严格的使用限制。</p>
+<h3 id="商业软件许可证"><a href="#商业软件许可证" class="headerlink" title="商业软件许可证"></a>商业软件许可证</h3><ul>
+<li><strong>代表</strong>：Microsoft Windows、Adobe Photoshop</li>
+<li><strong>许可模式</strong>：通常要求购买许可证后才能使用</li>
+<li><strong>限制</strong>：不能修改或分发软件，通常只有执行权</li>
+</ul>
+<h3 id="订阅模式许可证"><a href="#订阅模式许可证" class="headerlink" title="订阅模式许可证"></a>订阅模式许可证</h3><ul>
+<li><strong>代表</strong>：Adobe Creative Cloud、Microsoft 365</li>
+<li><strong>许可模式</strong>：按月&#x2F;年付费订阅</li>
+<li><strong>限制</strong>：软件只能在订阅有效期内使用</li>
+</ul>
+<h3 id="终端用户许可协议（EULA）"><a href="#终端用户许可协议（EULA）" class="headerlink" title="终端用户许可协议（EULA）"></a>终端用户许可协议（EULA）</h3><ul>
+<li><strong>代表</strong>：几乎所有商业软件都会附带</li>
+<li><strong>许可模式</strong>：用户必须同意 EULA 条款才能安装或使用软件</li>
+<li><strong>限制</strong>：通常禁止逆向工程、修改或再分发</li>
+</ul>
+<h2 id="开源软件许可证"><a href="#开源软件许可证" class="headerlink" title="开源软件许可证"></a>开源软件许可证</h2><p>开源许可证允许用户查看、修改和分发源代码，但不同许可证对这些权利的限制有所不同。</p>
+<h3 id="宽松开源许可证"><a href="#宽松开源许可证" class="headerlink" title="宽松开源许可证"></a>宽松开源许可证</h3><p>这些许可证允许用户修改并闭源分发代码，无需开源衍生作品。</p>
+<h4 id="MIT-许可证（MIT-License）"><a href="#MIT-许可证（MIT-License）" class="headerlink" title="MIT 许可证（MIT License）"></a>MIT 许可证（MIT License）</h4><ul>
+<li><p><strong>代表项目</strong>：React.js、Node.js</p>
+</li>
+<li><p><strong>许可模式</strong>：允许自由使用、修改和分发</p>
+</li>
+<li><p><strong>主要特点</strong>：</p>
+<ul>
+<li>代码可用于闭源软件</li>
+<li>只需保留原始许可声明</li>
+<li>免责条款：不对代码的质量和安全性负责</li>
+</ul>
+</li>
+<li><p><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/MIT.txt" >MIT License<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+</li>
+</ul>
+<h4 id="Apache-许可证-2-0（Apache-License-2-0）"><a href="#Apache-许可证-2-0（Apache-License-2-0）" class="headerlink" title="Apache 许可证 2.0（Apache License 2.0）"></a>Apache 许可证 2.0（Apache License 2.0）</h4><ul>
+<li><strong>代表项目</strong>：Android、TensorFlow</li>
+<li><strong>许可模式</strong>：比 MIT 更严格，要求贡献代码的人授予专利授权</li>
+<li><strong>主要特点</strong>：<ul>
+<li>允许闭源</li>
+<li>需声明修改内容</li>
+<li>提供专利授权</li>
+</ul>
+</li>
+<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/Apache-2.0.txt" >Apache-2.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h4 id="BSD-许可证（Berkeley-Software-Distribution-License）"><a href="#BSD-许可证（Berkeley-Software-Distribution-License）" class="headerlink" title="BSD 许可证（Berkeley Software Distribution License）"></a>BSD 许可证（Berkeley Software Distribution License）</h4><ul>
+<li><strong>代表项目</strong>：FreeBSD、PostgreSQL</li>
+<li><strong>许可模式</strong>：类似 MIT 但有不同变体</li>
+<li><strong>主要特点</strong>：<ul>
+<li>BSD-2-Clause：要求保留原作者声明</li>
+<li>BSD-3-Clause：额外禁止使用原作者的名字做推广</li>
+</ul>
+</li>
+<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/BSD-3.txt" >BSD-3<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h3 id="传染性许可证"><a href="#传染性许可证" class="headerlink" title="传染性许可证"></a>传染性许可证</h3><p>要求所有基于该软件的派生作品也必须使用相同的许可证，确保代码持续开源。</p>
+<h4 id="GNU-通用公共许可证（GPL，General-Public-License）"><a href="#GNU-通用公共许可证（GPL，General-Public-License）" class="headerlink" title="GNU 通用公共许可证（GPL，General Public License）"></a>GNU 通用公共许可证（GPL，General Public License）</h4><ul>
+<li><strong>代表项目</strong>：Linux Kernel、GCC</li>
+<li><strong>许可模式</strong>：所有衍生软件必须开源（强 Copyleft）</li>
+<li><strong>主要特点</strong>：<ul>
+<li><strong>GPLv2</strong>：较严格，要求所有衍生作品必须完全开源</li>
+<li><strong>GPLv3</strong>：新增专利保护和 Tivoization（防止锁定硬件）</li>
+</ul>
+</li>
+<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/GPL-3.0.txt" >GPL-3.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h4 id="LGPL（Lesser-General-Public-License）"><a href="#LGPL（Lesser-General-Public-License）" class="headerlink" title="LGPL（Lesser General Public License）"></a>LGPL（Lesser General Public License）</h4><ul>
+<li><strong>代表项目</strong>：FFmpeg、Qt</li>
+<li><strong>许可模式</strong>：允许闭源软件动态链接 LGPL 代码</li>
+<li><strong>主要特点</strong>：<ul>
+<li>适用于库，允许与闭源软件动态链接</li>
+<li>但如果修改库本身，必须开源</li>
+</ul>
+</li>
+<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/LGPL-3.0.txt" >LGPL-3.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h4 id="AGPL（Affero-General-Public-License）"><a href="#AGPL（Affero-General-Public-License）" class="headerlink" title="AGPL（Affero General Public License）"></a>AGPL（Affero General Public License）</h4><ul>
+<li><strong>代表项目</strong>：MongoDB</li>
+<li><strong>许可模式</strong>：适用于网络服务端软件，要求分发服务端代码</li>
+<li><strong>主要特点</strong>：<ul>
+<li>与 GPL 类似，但进一步要求通过网络交互的修改内容也必须开源</li>
+<li>确保所有用户都能访问服务端的源代码</li>
+</ul>
+</li>
+<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/AGPL-3.0.txt" >AGPL-3.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h4 id="FDL（Free-Documentation-License）"><a href="#FDL（Free-Documentation-License）" class="headerlink" title="FDL（Free Documentation License）"></a>FDL（Free Documentation License）</h4><ul>
+<li><strong>代表项目</strong>：GNU 文档</li>
+<li><strong>许可模式</strong>：主要用于文档和书籍，要求衍生品也必须开源</li>
+<li><strong>主要特点</strong>：<ul>
+<li>确保文档的内容可以自由修改和分发</li>
+<li>适用于技术文档或操作手册</li>
+</ul>
+</li>
+<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/FDL-1.3.txt" >FDL-1.3<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h2 id="创意共享许可证"><a href="#创意共享许可证" class="headerlink" title="创意共享许可证"></a>创意共享许可证</h2><p>适用于文本、图片、音乐等非软件内容。</p>
+<ul>
+<li><strong>CC-BY</strong>（署名）：需注明作者</li>
+<li><strong>CC-BY-NC</strong>（署名-非商业）：只能用于非商业目的</li>
+<li><strong>CC-BY-NC-ND</strong>（署名-非商业-禁止改编）：不能商用且禁止修改</li>
+<li><strong>CC-BY-NC-SA</strong>（署名-非商业-相同方式共享）：非商业用途且衍生作品需用相同协议</li>
+<li><strong>CC-BY-ND</strong>（署名-禁止改编）：允许商用但禁止修改</li>
+<li><strong>CC-BY-SA</strong>（署名-相同方式共享）：类似 GPL，要求衍生品使用相同协议</li>
+</ul>
+<p><strong>许可证模板</strong>：<a class="link"   href="https://creativecommons.org/licenses/" >Creative Commons Licenses<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="许可证选择指南"><a href="#许可证选择指南" class="headerlink" title="许可证选择指南"></a>许可证选择指南</h2><table>
+<thead>
+<tr>
+<th>许可证</th>
+<th>是否允许闭源</th>
+<th>是否要求开源衍生品</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>MIT</strong></td>
+<td>✅ 允许</td>
+<td>❌ 不要求</td>
+<td>个人、商业项目</td>
+</tr>
+<tr>
+<td><strong>Apache 2.0</strong></td>
+<td>✅ 允许</td>
+<td>❌ 不要求</td>
+<td>需要专利保护的项目</td>
+</tr>
+<tr>
+<td><strong>BSD</strong></td>
+<td>✅ 允许</td>
+<td>❌ 不要求</td>
+<td>高自由度的开源软件</td>
+</tr>
+<tr>
+<td><strong>GPL</strong></td>
+<td>❌ 禁止</td>
+<td>✅ 强制开源</td>
+<td>Linux、自由软件</td>
+</tr>
+<tr>
+<td><strong>LGPL</strong></td>
+<td>✅ 允许</td>
+<td>✅ 仅库需开源</td>
+<td>开源库</td>
+</tr>
+<tr>
+<td><strong>AGPL</strong></td>
+<td>❌ 禁止</td>
+<td>✅ 强制开源</td>
+<td>网络服务端</td>
+</tr>
+<tr>
+<td><strong>FDL</strong></td>
+<td>❌ 禁止</td>
+<td>✅ 强制开源</td>
+<td>文档、书籍</td>
+</tr>
+<tr>
+<td><strong>CC-BY</strong></td>
+<td>✅ 允许</td>
+<td>❌ 不要求</td>
+<td>文档、图片</td>
+</tr>
+<tr>
+<td><strong>CC-BY-NC</strong></td>
+<td>❌ 禁止</td>
+<td>❌ 不要求</td>
+<td>非商业内容</td>
+</tr>
+<tr>
+<td><strong>CC-BY-NC-ND</strong></td>
+<td>❌ 禁止</td>
+<td>❌ 不要求</td>
+<td>非商业且禁止改编</td>
+</tr>
+<tr>
+<td><strong>CC-BY-NC-SA</strong></td>
+<td>❌ 禁止</td>
+<td>✅ 强制开源</td>
+<td>非商业开源文化内容</td>
+</tr>
+<tr>
+<td><strong>CC-BY-ND</strong></td>
+<td>✅ 允许</td>
+<td>❌ 不要求</td>
+<td>商用但禁止改编</td>
+</tr>
+<tr>
+<td><strong>CC-BY-SA</strong></td>
+<td>✅ 允许</td>
+<td>✅ 强制开源</td>
+<td>开源文化内容</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>License</tag>
       </tags>
   </entry>
 </search>
