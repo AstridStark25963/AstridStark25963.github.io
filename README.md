@@ -2,8 +2,6 @@
 
 Welcome to **Astrid's Fantasy World**, a blog and personal website where creativity meets technology. This is a place where I share my thoughts, stories, and inspirations, blending fantasy, art, and tech into a unique digital experience.
 
----
-
 ## 🌟 About the Website
 
 **Astrid's Fantasy World** is designed as a platform to:
@@ -18,8 +16,6 @@ The website features:
 
 Visit the site: [https://1lya.com](https://1lya.com)
 
----
-
 ## 💻 Built With
 
 This website is powered by modern web technologies and tools, ensuring a fast and immersive experience:
@@ -27,8 +23,6 @@ This website is powered by modern web technologies and tools, ensuring a fast an
 - **[Redefine Theme](https://github.com/EvanNotFound/hexo-theme-redefine):** A sleek, responsive, and highly customizable theme.
 - **GitHub Pages:** Reliable hosting for static websites.
 - **Markdown:** For effortless content creation.
-
----
 
 ## 🛠️ Features
 
@@ -38,16 +32,12 @@ This website is powered by modern web technologies and tools, ensuring a fast an
 - **Modern UI/UX:** A clean, distraction-free reading experience.
 - **Search Functionality:** Quickly find articles or stories.
 
----
-
 ## ✨ Inspirations and Themes
 
 At the heart of **Astrid's Fantasy World** lies a passion for:
 - **Fantasy:** Imaginative worlds, characters, and adventures.
 - **Storytelling:** Writing that inspires and connects.
 - **Technology:** Exploring creative ways to enhance digital experiences.
-
----
 
 ## 📬 Get in Touch
 
@@ -57,16 +47,12 @@ I'd love to hear from you! Whether it's feedback, collaboration ideas, or just a
 - **🌐 GitHub:** [AstridStark25963](https://github.com/AstridStark25963)
 - **🐦 Twitter (X):** [@IAmAstridStark](https://x.com/IAmAstridStark)
 
----
-
 ## 🌐 Explore the Website
 
 Take a look at the latest updates and stories on **Astrid's Fantasy World**:
 - **Home:** [https://1lya.com](https://1lya.com)
 - **Archives:** Browse past posts and stories.
 - **About:** Learn more about the creator and the site.
-
----
 
 ## 🛡️ License
 
