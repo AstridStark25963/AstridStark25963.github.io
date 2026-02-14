@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://1lya.com/archives/a-comprehensive-guide-to-video-release-naming-conventions-and-technical-specifications/</loc>
+    <loc>https://1lya.com/archives/a-guide-to-video-release-naming-conventions-and-technical-specifications/</loc>
     
     <lastmod>2026-02-14</lastmod>
     
@@ -391,13 +391,6 @@
   </url>
   
   <url>
-    <loc>https://1lya.com/tags/Ubuntu/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://1lya.com/tags/Image-Hosting/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -412,6 +405,13 @@
   </url>
   
   <url>
+    <loc>https://1lya.com/tags/Ubuntu/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://1lya.com/tags/Docker/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -420,6 +420,27 @@
   
   <url>
     <loc>https://1lya.com/tags/Jellyfin/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Windows-Customization/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Icon/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Cloudflare/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -454,27 +475,6 @@
   </url>
   
   <url>
-    <loc>https://1lya.com/tags/Windows-Customization/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Icon/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Cloudflare/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://1lya.com/tags/DC/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -482,28 +482,7 @@
   </url>
   
   <url>
-    <loc>https://1lya.com/tags/Films/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://1lya.com/tags/TV-Series/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Personal-Website/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Sitemap/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -518,6 +497,13 @@
   
   <url>
     <loc>https://1lya.com/tags/Campus-Network/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Films/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -545,6 +531,20 @@
   </url>
   
   <url>
+    <loc>https://1lya.com/tags/Personal-Website/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Sitemap/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://1lya.com/tags/IP/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -553,13 +553,6 @@
   
   <url>
     <loc>https://1lya.com/tags/VPN/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Vercel/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -580,6 +573,13 @@
   </url>
   
   <url>
+    <loc>https://1lya.com/tags/Vercel/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://1lya.com/tags/Skyrim/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -594,13 +594,6 @@
   </url>
   
   <url>
-    <loc>https://1lya.com/tags/Marvel/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://1lya.com/tags/Higashino-Keigo/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -608,21 +601,14 @@
   </url>
   
   <url>
-    <loc>https://1lya.com/tags/Software-Reverse-Engineering/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1lya.com/tags/Decompile/</loc>
-    <lastmod>2026-02-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://1lya.com/tags/Office/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Marvel/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -637,6 +623,20 @@
   
   <url>
     <loc>https://1lya.com/tags/Hexo/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Software-Reverse-Engineering/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1lya.com/tags/Decompile/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -659,14 +659,14 @@
   </url>
   
   <url>
-    <loc>https://1lya.com/categories/System/</loc>
+    <loc>https://1lya.com/categories/Programming/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://1lya.com/categories/Programming/</loc>
+    <loc>https://1lya.com/categories/System/</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
