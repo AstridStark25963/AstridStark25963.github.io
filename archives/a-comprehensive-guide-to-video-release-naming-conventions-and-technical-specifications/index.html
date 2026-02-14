@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Astrid Stark">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set data attribute for CSS variables
+                root.setAttribute("data-theme", theme);
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes once DOM is ready
+            if (document.readyState !== "loading") {
+                document.body.classList.add(theme + "-mode");
+            } else {
+                document.addEventListener("DOMContentLoaded", () => {
+                    document.body.classList.add(theme + "-mode");
+                    document.body.classList.remove((theme === DARK ? LIGHT : DARK) + "-mode");
+                });
+            }
+        })();
+    </script>
+    
+    <!-- Critical CSS to prevent flash -->
+    <style>
+        :root[data-theme="dark"] {
+            --background-color: #202124;
+            --background-color-transparent: rgba(32, 33, 36, 0.6);
+            --second-background-color: #2d2e32;
+            --third-background-color: #34353a;
+            --third-background-color-transparent: rgba(32, 33, 36, 0.6);
+            --primary-color: #0066CC;
+            --first-text-color: #ffffff;
+            --second-text-color: #eeeeee;
+            --third-text-color: #bebec6;
+            --fourth-text-color: #999999;
+            --default-text-color: #bebec6;
+            --invert-text-color: #373D3F;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --selection-color: #0066CC;
+            --shadow-color-1: rgba(255, 255, 255, 0.08);
+            --shadow-color-2: rgba(255, 255, 255, 0.05);
+        }
+        
+        :root[data-theme="light"] {
+            --background-color: #fff;
+            --background-color-transparent: rgba(255, 255, 255, 0.6);
+            --second-background-color: #f8f8f8;
+            --third-background-color: #f2f2f2;
+            --third-background-color-transparent: rgba(241, 241, 241, 0.6);
+            --primary-color: #0066CC;
+            --first-text-color: #16171a;
+            --second-text-color: #2f3037;
+            --third-text-color: #5e5e5e;
+            --fourth-text-color: #eeeeee;
+            --default-text-color: #373D3F;
+            --invert-text-color: #bebec6;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --selection-color: #0066CC;
+            --shadow-color-1: rgba(0, 0, 0, 0.08);
+            --shadow-color-2: rgba(0, 0, 0, 0.05);
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--default-text-color);
+        }
+        
+        /* Apply body classes as soon as DOM is ready */
+        :root[data-theme="dark"] body {
+            background-color: var(--background-color);
+            color: var(--default-text-color);
+        }
+    </style>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://1lya.com/archives/a-comprehensive-guide-to-video-release-naming-conventions-and-technical-specifications/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Astrid&#39;s Fantasy World - Dive, into the unknown.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Comprehensive Guide to Video Release Naming Conventions and Technical Specifications">
+<meta property="og:url" content="https://1lya.com/archives/a-comprehensive-guide-to-video-release-naming-conventions-and-technical-specifications/">
+<meta property="og:site_name" content="Astrid&#39;s Fantasy World">
+<meta property="og:description" content="Astrid&#39;s Fantasy World - Dive, into the unknown.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://1lya.com/images/og.webp">
+<meta property="article:published_time" content="2026-02-14T12:52:53.524Z">
+<meta property="article:modified_time" content="2026-02-14T12:59:03.041Z">
+<meta property="article:author" content="Astrid Stark">
+<meta property="article:tag" content="Video">
+<meta property="article:tag" content="Codec">
+<meta property="article:tag" content="Naming Conventions">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://1lya.com/images/og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            A Comprehensive Guide to Video Release Naming Conventions and Technical Specifications | Astrid&#39;s Fantasy World
+        
+    </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/css/build/tailwind.css">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"1lya.com","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":false,"count":false,"min2read":false},"author_label":{"enable":true,"auto":false,"list":["Lv. ∞"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"/images/og.webp","description":"Astrid's Fantasy World - Dive, into the unknown."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/minecraft-light.webp","dark":"/images/minecraft-dark.webp"},"title":"Astrid's Fantasy World","subtitle":{"text":["do not go gentle into that good night"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":75,"backing_speed":60,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#FFFFFF","dark":"#FFFFFF"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/AstridStark25963","instagram":null,"zhihu":null,"twitter":"https://x.com/IAmAstridStark","email":"astridstark25963@gmail.com","steam":"https://steamcommunity.com/id/st_astrid/"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Меланхолия","artist":"MIKAYA,BOMBAY","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.lrc"},{"name":"Animal","artist":"Rauf & Faik","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.lrc"},{"name":"Bones","artist":"Low Roar,Jófriður","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.lrc"},{"name":"Let Me Down Slowly","artist":"Alec Benjamin,Alessia Cara","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.lrc"},{"name":"III","artist":"Athletics","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.lrc"},{"name":"lovely","artist":"Billie Eilish,Khalid","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.lrc"},{"name":"Talking to the Moon","artist":"Bruno Mars","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.lrc"},{"name":"My Heart Will Go On","artist":"Céline Dion,James Horner","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.lrc"},{"name":"Mockingbird","artist":"Eminem","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.lrc"},{"name":"Stan","artist":"Eminem,Dido","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.lrc"},{"name":"Trava u doma (Geoffrey Day Remix)","artist":"Geoffplaysguitar,Земляне,Atomic Heart","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).lrc"},{"name":"You're Beautiful","artist":"James Blunt","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.lrc"},{"name":"It's not fair","artist":"Kenya Grace","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.lrc"},{"name":"STAR WALKIN'","artist":"Lil Nas X","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.lrc"},{"name":"The Emptiness Machine","artist":"Linkin Park","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.lrc"},{"name":"Dynasty","artist":"Miia","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.lrc"},{"name":"GODS","artist":"NewJeans,英雄联盟","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.lrc"},{"name":"The Godfather (Love Theme)","artist":"Nino Rota","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).lrc"},{"name":"Da Capo","artist":"Starbreeze Entertainment,Gustavo Coutinho","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.lrc"},{"name":"The Death of Peace of Mind (Sullivan King Remix)","artist":"Sullivan King","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.lrc"},{"name":"Don't Lean on Me","artist":"The Amity Affliction","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.lrc"},{"name":"God Mode","artist":"The Verkkars,Aleksib","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).lrc"},{"name":"戒网","artist":"村西,馨悦(WhiteRainbow)","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.lrc"},{"name":"空心","artist":"光泽","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.lrc"},{"name":"转身即心痛","artist":"吉星出租","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.lrc"},{"name":"Dawn (黎明将至)","artist":"三角洲行动,Lithium Done","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).lrc"},{"name":"Aria Math","artist":"bxkq,Hardx,C418","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.lrc"}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.5","navbar":{"auto_hide":true,"color":{"left":"#DF45DA","right":"#367DF7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Gallery":{"path":"/gallery","icon":"fa-regular fa-image"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Friends":"/friends","Thanks":"/thanks"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"Dive, into the unknown.","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Linkbox":{"path":"/linkbox","icon":"fa-regular fa-bookmark"},"Gallery":{"path":"/gallery","icon":"fa-regular fa-image"},"Moments":{"path":"/moments","icon":"fa-regular fa-thought-bubble"},"Games":{"path":"/games","icon":"fa-regular fa-gamepad"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/12/23 11:03:42"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Astrid&#39;s Fantasy World
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="active"
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/gallery"
+                                        >
+                                    <i class="fa-regular fa-image fa-fw"></i>
+                                    GALLERY
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/friends">
+                                                    FRIENDS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/thanks">
+                                                    THANKS
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/gallery"
+                        >
+                            <span>
+                                GALLERY
+                            </span>
+                            
+                                <i class="fa-regular fa-image fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/friends">FRIENDS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/thanks">THANKS</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/linkbox"
+                        >
+                            <span>Linkbox</span>
+                            <i class="fa-regular fa-bookmark fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/moments"
+                        >
+                            <span>Moments</span>
+                            <i class="fa-regular fa-thought-bubble fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/games"
+                        >
+                            <span>Games</span>
+                            <i class="fa-regular fa-gamepad fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">44</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">27</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="/images/a-comprehensive-guide-to-video-release-naming-conventions-and-technical-specifications.webp" alt="A Comprehensive Guide to Video Release Naming Conventions and Technical Specifications" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">A Comprehensive Guide to Video Release Naming Conventions and Technical Specifications</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/my-avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Astrid Stark</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv. ∞</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2026-02-14 20:52:53</span>
+        <span class="mobile">2026-02-14 20:52:53</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2026-02-14 20:59:03</span>
+            <span class="mobile">2026-02-14 20:59:03</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Media/">Media</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Video/">Video</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Codec/">Codec</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Naming-Conventions/">Naming Conventions</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<p>影视资源的发布遵循一套严格的工业标准与命名规范。文件名不仅是资源的唯一标识符，更是包含了分辨率、片源版本、编码格式、色彩位深及音频规格等关键元数据的集合。</p>
+<h2 id="一、命名规范：分隔符的使用"><a href="#一、命名规范：分隔符的使用" class="headerlink" title="一、命名规范：分隔符的使用"></a>一、命名规范：分隔符的使用</h2><p>在标准的 Scene 命名风格中（如 <code>Avatar.2009.2160p.BluRay.REMUX.HEVC.DV.MKV</code>），参数之间严格使用点（<code>.</code>）而非空格进行分隔。这主要基于以下技术考量：</p>
+<ol>
+<li>命令行交互友好： 在 Linux &#x2F; Unix Shell 环境下，空格被视为参数分隔符。文件名包含空格会导致 <code>rm</code>, <code>cp</code>, <code>mv</code> 等命令执行时需进行转义或引用，增加操作成本。</li>
+<li>URI 编码兼容： 在 Web 或 FTP 传输场景中，空格属于保留字符，会被转义为 <code>%20</code>，导致 URL 可读性降低及部分旧式脚本解析错误。</li>
+<li>自动化元数据抓取： 统一的分隔符便于媒体管理服务（如 Plex, Emby, Sonarr）的刮削器利用正则表达式进行准确分词与元数据匹配。</li>
+</ol>
+<h2 id="二、文件名参数分类解析"><a href="#二、文件名参数分类解析" class="headerlink" title="二、文件名参数分类解析"></a>二、文件名参数分类解析</h2><p>视频文件元数据主要涵盖五大维度：分辨率、片源版本、视频编码、色彩&#x2F;位深及音频格式。此外，封装容器决定了多流的承载能力。</p>
+<h3 id="分辨率-Resolution"><a href="#分辨率-Resolution" class="headerlink" title="分辨率 (Resolution)"></a>分辨率 (Resolution)</h3><p>衡量图像清晰度的基础指标，指视频成像的有效像素矩阵。</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">规范名称</th>
+<th align="left">技术特性与应用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">2160P &#x2F; 4K</td>
+<td align="left">Ultra HD  (3840x2160)</td>
+<td align="left">当前主流的高保真标准，适合大尺寸显示终端（&gt;55英寸）。</td>
+</tr>
+<tr>
+<td align="left">1080P</td>
+<td align="left">Full HD (1920x1080)</td>
+<td align="left">广播电视与网络流媒体的标准规格，平衡了清晰度与带宽&#x2F;存储。</td>
+</tr>
+<tr>
+<td align="left">720P</td>
+<td align="left">HD (1080x720)</td>
+<td align="left">早期高清标准，现多用于移动端流媒体或老旧片源重制。</td>
+</tr>
+<tr>
+<td align="left">480P &#x2F; 360P</td>
+<td align="left">SD (Standard Def)</td>
+<td align="left">标清分辨率。除即时通讯传输或档案级老片外，已逐步退出主流视野。</td>
+</tr>
+</tbody></table>
+<h3 id="片源版本-Source"><a href="#片源版本-Source" class="headerlink" title="片源版本 (Source)"></a>片源版本 (Source)</h3><p>片源版本标示视频文件的原始来源，直接决定了画质的上限和压缩前的原始质量。</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">全称</th>
+<th align="left">技术特性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">BluRay &#x2F; BD</td>
+<td align="left">Blu-ray Disc</td>
+<td align="left">蓝光原盘。未经过二次重编码的源文件，提供消费级市场最高的视听质量。</td>
+</tr>
+<tr>
+<td align="left">REMUX</td>
+<td align="left">(无损提取)</td>
+<td align="left">无损封装。将原盘中的视频&#x2F;音频流无损提取并封装为单文件（如 MKV），移除菜单与花絮。</td>
+</tr>
+<tr>
+<td align="left">BDRip</td>
+<td align="left">Blu-ray Rip</td>
+<td align="left">重编码。基于蓝光源进行的高参数有损压缩，旨在保持高画质的同时优化存储体积。</td>
+</tr>
+<tr>
+<td align="left">WEB-DL</td>
+<td align="left">Web Download</td>
+<td align="left">流媒体源。直接从 Netflix&#x2F;iTunes 等源抓取的无损数字文件，无台标水印，质量优于录制版。</td>
+</tr>
+<tr>
+<td align="left">WEBRip</td>
+<td align="left">Web Rip</td>
+<td align="left">流媒体录制。通过采集卡或软件内录方式获取，存在二次编码损耗。</td>
+</tr>
+<tr>
+<td align="left">HDTV</td>
+<td align="left">High Def TV</td>
+<td align="left">电视录制。截取自高清电视信号，通常包含台标（Watermark）或内嵌广告。</td>
+</tr>
+</tbody></table>
+<h3 id="视频编码-Video-Codec"><a href="#视频编码-Video-Codec" class="headerlink" title="视频编码 (Video Codec)"></a>视频编码 (Video Codec)</h3><p>不同的视频编码标准通常使用不同的数据压缩算法，决定了压缩效率及解码设备的硬件兼容性。</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">标准名称</th>
+<th align="left">特性与兼容性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">H.264</td>
+<td align="left">AVC</td>
+<td align="left">高兼容性。编码效率一般，但硬件解码支持最广泛（覆盖绝大多数旧设备）。</td>
+</tr>
+<tr>
+<td align="left">H.265</td>
+<td align="left">HEVC</td>
+<td align="left">高效率。同画质下体积约为 H.264 的 50%，是 4K&#x2F;HDR 内容的标准编码，对硬解有要求。</td>
+</tr>
+<tr>
+<td align="left">VP9</td>
+<td align="left">VP9</td>
+<td align="left">Google 标准。YouTube 主流编码，开源且无版税，效率接近 HEVC。</td>
+</tr>
+<tr>
+<td align="left">AV1</td>
+<td align="left">AOMedia Video 1</td>
+<td align="left">下一代开源标准。压缩效率优于 HEVC，正逐渐被 Netflix&#x2F;YouTube 采纳，旧硬件可能需软解。</td>
+</tr>
+<tr>
+<td align="left">H.266</td>
+<td align="left">VVC</td>
+<td align="left">面向 8K 时代的编码，目前极少见到。</td>
+</tr>
+</tbody></table>
+<h3 id="色彩与位深-Color-Depth"><a href="#色彩与位深-Color-Depth" class="headerlink" title="色彩与位深 (Color &amp; Depth)"></a>色彩与位深 (Color &amp; Depth)</h3><p>涉及动态范围与色彩深度，决定光影层次与色彩过渡。</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">全称</th>
+<th align="left">技术特性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">SDR</td>
+<td align="left">Standard Dynamic Range</td>
+<td align="left">标准动态范围。使用 Rec.709 色域，亮度范围有限。</td>
+</tr>
+<tr>
+<td align="left">HDR</td>
+<td align="left">High Dynamic Range</td>
+<td align="left">高动态范围。支持更宽的亮度范围与 Rec.2020 色域。</td>
+</tr>
+<tr>
+<td align="left">DV</td>
+<td align="left">Dolby Vision</td>
+<td align="left">杜比视界。基于动态元数据逐帧优化亮度与色彩映射。</td>
+</tr>
+<tr>
+<td align="left">8bit</td>
+<td align="left">8-bit Color Depth</td>
+<td align="left">包含 1670 万色。普通视频标准，在大面积渐变场景（如天空）容易出现色彩断层（波纹）。</td>
+</tr>
+<tr>
+<td align="left">10bit</td>
+<td align="left">10-bit Color Depth</td>
+<td align="left">包含 10 亿色。相比 8bit ，能有效消除大面积渐变场景的色彩断层，色彩过渡极其丝滑，是 4K HDR 电影的标配参数。</td>
+</tr>
+</tbody></table>
+<h3 id="音频格式-Audio"><a href="#音频格式-Audio" class="headerlink" title="音频格式 (Audio)"></a>音频格式 (Audio)</h3><p>音频流通常独立于视频流封装，分为有损压缩、无损压缩及对象音频三类。</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">类型</th>
+<th align="left">特性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">AAC</td>
+<td align="left">有损压缩</td>
+<td align="left">广泛用于移动端与流媒体，兼容性极佳。</td>
+</tr>
+<tr>
+<td align="left">DTS-HD MA</td>
+<td align="left">无损压缩</td>
+<td align="left">能够逐比特还原录音室母带音质，数据吞吐量大。</td>
+</tr>
+<tr>
+<td align="left">TrueHD</td>
+<td align="left">无损压缩</td>
+<td align="left">Dolby 实验室的无损音频编解码技术。</td>
+</tr>
+<tr>
+<td align="left">Atmos</td>
+<td align="left">对象音频</td>
+<td align="left">杜比全景声。引入高度通道，实现三维声场定位。</td>
+</tr>
+</tbody></table>
+<h3 id="封装格式-Container"><a href="#封装格式-Container" class="headerlink" title="封装格式 (Container)"></a>封装格式 (Container)</h3><p>封装格式（容器）负责将视频流、音频流及字幕流打包。不同容器对编码和多音轨的支持度不同。</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">全称</th>
+<th align="left">特性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">MKV</td>
+<td align="left">Matroska</td>
+<td align="left">开源多媒体容器，支持封装几乎所有编码流及多音轨&#x2F;多软字幕，适合本地存储。</td>
+</tr>
+<tr>
+<td align="left">MP4</td>
+<td align="left">MPEG-4 Part 14</td>
+<td align="left">工业标准容器，移动端与 Web 兼容性最强，但在多音轨与字幕支持上不及 MKV。</td>
+</tr>
+<tr>
+<td align="left">ISO</td>
+<td align="left">ISO Image</td>
+<td align="left">蓝光光盘的完整镜像文件。包含完整菜单导航，通常需要专用播放器。</td>
+</tr>
+</tbody></table>
+<h2 id="三、内部质量指标"><a href="#三、内部质量指标" class="headerlink" title="三、内部质量指标"></a>三、内部质量指标</h2><p>除文件名显式标注的参数外，视频文件的实际回放质量还受码率、帧率及色度抽样等内部属性控制。这些参数决定了视频的细节表现与色彩还原能力，通常不直接体现在文件名中，需通过 MediaInfo 等专业工具查看。</p>
+<h3 id="码率-Bitrate"><a href="#码率-Bitrate" class="headerlink" title="码率 (Bitrate)"></a>码率 (Bitrate)</h3><p>码率指单位时间内传输的数据量，是衡量有损压缩质量的核心变量。在编码格式与分辨率相同的前提下，码率与画质呈正相关。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>全称</th>
+<th>技术特性与应用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>视频码率</td>
+<td>Video Bitrate</td>
+<td>核心画质指标。通常以 Mbps 计量。高码率 1080P 的视觉质量往往优于低码率（流媒体级）的 4K。</td>
+</tr>
+<tr>
+<td>音频码率</td>
+<td>Audio Bitrate</td>
+<td>核心音质指标。128kbps 为基础有损；320kbps 为高品质有损；&gt;1000kbps 通常为无损音频（Lossless）。</td>
+</tr>
+<tr>
+<td>CBR</td>
+<td>Constant Bitrate</td>
+<td>固定码率。数据流极其稳定，利于广播传输，但在简单场景下浪费带宽，复杂场景下可能造成画质下降。</td>
+</tr>
+<tr>
+<td>VBR</td>
+<td>Variable Bitrate</td>
+<td>可变码率。根据画面复杂度动态分配数据量（静止画面低码率，运动画面高码率），存储效率最高。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>估算公式：文件体积 ≈ (视频码率 + 音频码率) × 时长</p>
+</blockquote>
+<h3 id="帧率-Frame-Rate"><a href="#帧率-Frame-Rate" class="headerlink" title="帧率 (Frame Rate)"></a>帧率 (Frame Rate)</h3><p>帧率定义了单位时间内视频显示的帧数，直接影响画面的流畅度与动态模糊感。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>常见数值</th>
+<th>技术特性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>24 fps</td>
+<td>23.976 fps</td>
+<td>电影工业标准。保留了特定的动态模糊，呈现传统的“电影感”。</td>
+</tr>
+<tr>
+<td>30 fps</td>
+<td>29.97 fps</td>
+<td>广播电视标准。新闻、电视剧及综艺节目的常用帧率，流畅度略高于电影。</td>
+</tr>
+<tr>
+<td>60 fps</td>
+<td>59.94 fps</td>
+<td>高帧率 (HFR)。常见于体育直播、游戏录制及部分高规格电影。动作边缘清晰，无拖影。</td>
+</tr>
+<tr>
+<td>120 fps+</td>
+<td>120 &#x2F; 144 fps</td>
+<td>电竞&#x2F;发烧级。超越人眼常规感知，需配合高刷新率显示器，实现极致的输入响应与流畅度。</td>
+</tr>
+</tbody></table>
+<h3 id="色度抽样与色域-Chroma-Subsampling"><a href="#色度抽样与色域-Chroma-Subsampling" class="headerlink" title="色度抽样与色域 (Chroma Subsampling)"></a>色度抽样与色域 (Chroma Subsampling)</h3><p>基于人眼对亮度敏感度远高于色度的生理特性，视频压缩常对色度信号进行降采样以节省带宽。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>采样格式</th>
+<th>技术特性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4:2:0</td>
+<td>YUV 4:2:0</td>
+<td>消费级标准。蓝光、流媒体及电视信号的主流规格。色度分辨率为亮度的一半，视觉差异极小。</td>
+</tr>
+<tr>
+<td>4:2:2</td>
+<td>YUV 4:2:2</td>
+<td>广电级&#x2F;采集标准。保留了比 4:2:0 更多的色度信息，主要用于专业摄像机录制，便于后期抠像与调色。</td>
+</tr>
+<tr>
+<td>4:4:4</td>
+<td>YUV 4:4:4</td>
+<td>全色度采样。无色度压缩。常用于 PC 桌面显示或母带处理。若 PC 接电视出现字体边缘发虚，通常因未开启此模式所致。</td>
+</tr>
+</tbody></table>
+<h3 id="色域-Color-Gamut"><a href="#色域-Color-Gamut" class="headerlink" title="色域 (Color Gamut)"></a>色域 (Color Gamut)</h3><p>色域定义了视频信号所能显示的色彩范围。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>标准名</th>
+<th>技术特性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Rec.709</td>
+<td>BT.709</td>
+<td>SDR 标准。传统高清视频（HDTV&#x2F;BluRay）的色域。覆盖约 35.9% 的 CIE 1931 色彩空间。</td>
+</tr>
+<tr>
+<td>DCI-P3</td>
+<td>P3</td>
+<td>数字影院标准。比 Rec.709 色域更广（覆盖约 45.5%），当前主流的 Apple 设备与高阶显示器均以此为校准基准。</td>
+</tr>
+<tr>
+<td>Rec.2020</td>
+<td>BT.2020</td>
+<td>HDR 目标标准。超广色域（覆盖约 75.8%），是 4K UHD 系统的最终愿景，目前尚无消费级显示器能完全覆盖。</td>
+</tr>
+</tbody></table>
+<h3 id="画面比例-Aspect-Ratio"><a href="#画面比例-Aspect-Ratio" class="headerlink" title="画面比例 (Aspect Ratio)"></a>画面比例 (Aspect Ratio)</h3><p>画面比例决定了成像区域的形状，需与显示设备匹配以获得最佳观感。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>比例值</th>
+<th>技术特性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>16:9</td>
+<td>1.78:1</td>
+<td>宽屏标准。现代电视、显示器及流媒体的主流比例。内容能够完美填充屏幕，无黑边。</td>
+</tr>
+<tr>
+<td>21:9</td>
+<td>2.39:1</td>
+<td>超宽银幕。好莱坞电影的常用比例。在 16:9 屏幕上播放时，上下会出现遮幅（Letterbox &#x2F; 黑边）。</td>
+</tr>
+<tr>
+<td>4:3</td>
+<td>1.33:1</td>
+<td>传统比例。用于老式 CRT 电视内容或 IMAX 原生画幅（如《扎克·施奈德版正义联盟》）。在宽屏设备播放时，左右会出现黑边。</td>
+</tr>
+</tbody></table>
+<h2 id="四、选型建议"><a href="#四、选型建议" class="headerlink" title="四、选型建议"></a>四、选型建议</h2><p>在实际应用中，技术选型应始终服务于回放环境，需综合考量终端的解码能力、显示设备规格以及带宽与存储的限制。</p>
+<p>对于Web 发布或移动端播放场景，推荐采用 H.264 编码配合 AAC 音频，并封装于 MP4 容器中。这一组合拥有目前最广泛的生态支持，能够确保在绝大多数浏览器及旧款设备上实现无需服务器转码的直接播放，最大程度降低播放门槛与服务端负载。</p>
+<p>而在构建 NAS 媒体库或家庭影院 (HTPC) 时，为了追求极致视听体验，则应优先选择 H.265 (HEVC) 10bit 编码配合 TrueHD &#x2F; DTS-HD MA 无损音轨，并封装于 MKV 容器。该方案能在保证画质无限接近蓝光原盘的前提下，有效优化存储空间，并完美支持 HDR、Dolby Vision 等高阶影像特性，是目前高保真存储的最佳实践。</p>
+
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Video/">#Video</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Codec/">#Codec</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Naming-Conventions/">#Naming Conventions</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/archives/alist-multi-drive-mounting-and-startup-script-writing/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">Alist Multi-Drive Mounting and Startup Script Writing</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">A Comprehensive Guide to Video Release Naming Conventions and Technical Specifications</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83%EF%BC%9A%E5%88%86%E9%9A%94%E7%AC%A6%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-text">一、命名规范：分隔符的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%96%87%E4%BB%B6%E5%90%8D%E5%8F%82%E6%95%B0%E5%88%86%E7%B1%BB%E8%A7%A3%E6%9E%90"><span class="nav-text">二、文件名参数分类解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E8%BE%A8%E7%8E%87-Resolution"><span class="nav-text">分辨率 (Resolution)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%87%E6%BA%90%E7%89%88%E6%9C%AC-Source"><span class="nav-text">片源版本 (Source)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81-Video-Codec"><span class="nav-text">视频编码 (Video Codec)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%89%B2%E5%BD%A9%E4%B8%8E%E4%BD%8D%E6%B7%B1-Color-Depth"><span class="nav-text">色彩与位深 (Color &amp; Depth)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9F%B3%E9%A2%91%E6%A0%BC%E5%BC%8F-Audio"><span class="nav-text">音频格式 (Audio)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85%E6%A0%BC%E5%BC%8F-Container"><span class="nav-text">封装格式 (Container)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%86%85%E9%83%A8%E8%B4%A8%E9%87%8F%E6%8C%87%E6%A0%87"><span class="nav-text">三、内部质量指标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A0%81%E7%8E%87-Bitrate"><span class="nav-text">码率 (Bitrate)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%A7%E7%8E%87-Frame-Rate"><span class="nav-text">帧率 (Frame Rate)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%89%B2%E5%BA%A6%E6%8A%BD%E6%A0%B7%E4%B8%8E%E8%89%B2%E5%9F%9F-Chroma-Subsampling"><span class="nav-text">色度抽样与色域 (Chroma Subsampling)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%89%B2%E5%9F%9F-Color-Gamut"><span class="nav-text">色域 (Color Gamut)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%BB%E9%9D%A2%E6%AF%94%E4%BE%8B-Aspect-Ratio"><span class="nav-text">画面比例 (Aspect Ratio)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E9%80%89%E5%9E%8B%E5%BB%BA%E8%AE%AE"><span class="nav-text">四、选型建议</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #F54545"></i>&nbsp;&nbsp;<a href="/">Astrid Stark</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        27 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.5</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/Swup.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	<script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/imageViewer.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/utils.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/main.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/navbarShrink.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/scrollTopBottom.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/lightDarkSwitch.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/categoryList.js" ></script>
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/localSearch.js" ></script>
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/codeBlock.js" ></script>
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/lazyload.js" ></script>
+
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/runtime.js" ></script>
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/Typed.min.js" ></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/plugins/typed.js" ></script>
+
+
+
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/minimasonry.min.js" ></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/plugins/masonry.js" ></script>
+
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/anime.min.js" ></script>
+
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/tocToggle.js" data-swup-reload-script></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/toc.js" data-swup-reload-script></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/plugins/tabs.js" data-swup-reload-script></script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/essays.js" data-swup-reload-script></script>
+
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/bookmarkNav.js" ></script>
+
+	
+	<div id="aplayer"></div>
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/APlayer.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/plugins/aplayer.js" ></script>
+
+	
+</body>
+
+</html>
