@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Astrid Stark">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set data attribute for CSS variables
+                root.setAttribute("data-theme", theme);
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes once DOM is ready
+            if (document.readyState !== "loading") {
+                document.body.classList.add(theme + "-mode");
+            } else {
+                document.addEventListener("DOMContentLoaded", () => {
+                    document.body.classList.add(theme + "-mode");
+                    document.body.classList.remove((theme === DARK ? LIGHT : DARK) + "-mode");
+                });
+            }
+        })();
+    </script>
+    
+    <!-- Critical CSS to prevent flash -->
+    <style>
+        :root[data-theme="dark"] {
+            --background-color: #202124;
+            --background-color-transparent: rgba(32, 33, 36, 0.6);
+            --second-background-color: #2d2e32;
+            --third-background-color: #34353a;
+            --third-background-color-transparent: rgba(32, 33, 36, 0.6);
+            --primary-color: #0066CC;
+            --first-text-color: #ffffff;
+            --second-text-color: #eeeeee;
+            --third-text-color: #bebec6;
+            --fourth-text-color: #999999;
+            --default-text-color: #bebec6;
+            --invert-text-color: #373D3F;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --selection-color: #0066CC;
+            --shadow-color-1: rgba(255, 255, 255, 0.08);
+            --shadow-color-2: rgba(255, 255, 255, 0.05);
+        }
+        
+        :root[data-theme="light"] {
+            --background-color: #fff;
+            --background-color-transparent: rgba(255, 255, 255, 0.6);
+            --second-background-color: #f8f8f8;
+            --third-background-color: #f2f2f2;
+            --third-background-color-transparent: rgba(241, 241, 241, 0.6);
+            --primary-color: #0066CC;
+            --first-text-color: #16171a;
+            --second-text-color: #2f3037;
+            --third-text-color: #5e5e5e;
+            --fourth-text-color: #eeeeee;
+            --default-text-color: #373D3F;
+            --invert-text-color: #bebec6;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --selection-color: #0066CC;
+            --shadow-color-1: rgba(0, 0, 0, 0.08);
+            --shadow-color-2: rgba(0, 0, 0, 0.05);
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--default-text-color);
+        }
+        
+        /* Apply body classes as soon as DOM is ready */
+        :root[data-theme="dark"] body {
+            background-color: var(--background-color);
+            color: var(--default-text-color);
+        }
+    </style>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://1lya.com/archives/python-desktop-application-packaging-guide/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Astrid&#39;s Fantasy World - Dive, into the unknown.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Desktop Application Packaging Guide">
+<meta property="og:url" content="https://1lya.com/archives/python-desktop-application-packaging-guide/">
+<meta property="og:site_name" content="Astrid&#39;s Fantasy World">
+<meta property="og:description" content="Astrid&#39;s Fantasy World - Dive, into the unknown.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://1lya.com/images/og.webp">
+<meta property="article:published_time" content="2026-02-19T23:31:40.257Z">
+<meta property="article:modified_time" content="2026-02-19T23:30:52.054Z">
+<meta property="article:author" content="Astrid Stark">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Packaging">
+<meta property="article:tag" content="PyInstaller">
+<meta property="article:tag" content="Nuitka">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://1lya.com/images/og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Python Desktop Application Packaging Guide | Astrid&#39;s Fantasy World
+        
+    </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/css/build/tailwind.css">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"1lya.com","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":false,"count":false,"min2read":false},"author_label":{"enable":true,"auto":false,"list":["Lv. ∞"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"/images/og.webp","description":"Astrid's Fantasy World - Dive, into the unknown."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/minecraft-light.webp","dark":"/images/minecraft-dark.webp"},"title":"Astrid's Fantasy World","subtitle":{"text":["do not go gentle into that good night"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":75,"backing_speed":60,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#FFFFFF","dark":"#FFFFFF"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/AstridStark25963","instagram":null,"zhihu":null,"twitter":"https://x.com/IAmAstridStark","email":"astridstark25963@gmail.com","steam":"https://steamcommunity.com/id/st_astrid/","telegram":"https://t.me/plscallmeastrid"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Меланхолия","artist":"MIKAYA,BOMBAY","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.lrc"},{"name":"Animal","artist":"Rauf & Faik","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.lrc"},{"name":"Bones","artist":"Low Roar,Jófriður","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.lrc"},{"name":"Let Me Down Slowly","artist":"Alec Benjamin,Alessia Cara","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.lrc"},{"name":"III","artist":"Athletics","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.lrc"},{"name":"lovely","artist":"Billie Eilish,Khalid","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.lrc"},{"name":"Talking to the Moon","artist":"Bruno Mars","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.lrc"},{"name":"My Heart Will Go On","artist":"Céline Dion,James Horner","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.lrc"},{"name":"Mockingbird","artist":"Eminem","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.lrc"},{"name":"Stan","artist":"Eminem,Dido","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.lrc"},{"name":"Trava u doma (Geoffrey Day Remix)","artist":"Geoffplaysguitar,Земляне,Atomic Heart","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).lrc"},{"name":"You're Beautiful","artist":"James Blunt","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.lrc"},{"name":"It's not fair","artist":"Kenya Grace","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.lrc"},{"name":"STAR WALKIN'","artist":"Lil Nas X","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.lrc"},{"name":"The Emptiness Machine","artist":"Linkin Park","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.lrc"},{"name":"Dynasty","artist":"Miia","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.lrc"},{"name":"GODS","artist":"NewJeans,英雄联盟","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.lrc"},{"name":"The Godfather (Love Theme)","artist":"Nino Rota","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).lrc"},{"name":"Da Capo","artist":"Starbreeze Entertainment,Gustavo Coutinho","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.lrc"},{"name":"The Death of Peace of Mind (Sullivan King Remix)","artist":"Sullivan King","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.lrc"},{"name":"Don't Lean on Me","artist":"The Amity Affliction","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.lrc"},{"name":"God Mode","artist":"The Verkkars,Aleksib","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).lrc"},{"name":"戒网","artist":"村西,馨悦(WhiteRainbow)","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.lrc"},{"name":"空心","artist":"光泽","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.lrc"},{"name":"转身即心痛","artist":"吉星出租","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.lrc"},{"name":"Dawn (黎明将至)","artist":"三角洲行动,Lithium Done","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).lrc"},{"name":"Aria Math","artist":"bxkq,Hardx,C418","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.lrc"}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.5","navbar":{"auto_hide":true,"color":{"left":"#DF45DA","right":"#367DF7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Gallery":{"path":"/gallery","icon":"fa-regular fa-image"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Friends":"/friends","Thanks":"/thanks"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"Dive, into the unknown.","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Linkbox":{"path":"/linkbox","icon":"fa-regular fa-bookmark"},"Gallery":{"path":"/gallery","icon":"fa-regular fa-image"},"Moments":{"path":"/moments","icon":"fa-regular fa-thought-bubble"},"Games":{"path":"/games","icon":"fa-regular fa-gamepad"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/12/23 11:03:42"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Astrid&#39;s Fantasy World
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="active"
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/gallery"
+                                        >
+                                    <i class="fa-regular fa-image fa-fw"></i>
+                                    GALLERY
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/friends">
+                                                    FRIENDS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/thanks">
+                                                    THANKS
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/gallery"
+                        >
+                            <span>
+                                GALLERY
+                            </span>
+                            
+                                <i class="fa-regular fa-image fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/friends">FRIENDS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/thanks">THANKS</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/linkbox"
+                        >
+                            <span>Linkbox</span>
+                            <i class="fa-regular fa-bookmark fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/moments"
+                        >
+                            <span>Moments</span>
+                            <i class="fa-regular fa-thought-bubble fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/games"
+                        >
+                            <span>Games</span>
+                            <i class="fa-regular fa-gamepad fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">51</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="/images/python-desktop-application-packaging-guide.webp" alt="Python Desktop Application Packaging Guide" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">Python Desktop Application Packaging Guide</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/my-avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Astrid Stark</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv. ∞</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2026-02-20 07:31:40</span>
+        <span class="mobile">2026-02-20 07:31:40</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2026-02-20 07:30:52</span>
+            <span class="mobile">2026-02-20 07:30:52</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Programming/">Programming</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Python/">Python</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Packaging/">Packaging</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/PyInstaller/">PyInstaller</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Nuitka/">Nuitka</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<p>写完 Python 脚本，还想要脚本的功能在无 Python 环境下运行，就需要通过将 Python 解释器、第三方库依赖和源代码封装进一个独立的可执行环境（也就是打包）来实现。</p>
+<h2 id="一、创建虚拟环境并确定依赖"><a href="#一、创建虚拟环境并确定依赖" class="headerlink" title="一、创建虚拟环境并确定依赖"></a>一、创建虚拟环境并确定依赖</h2><p>如果想要打包出来的文件尽可能的小，就需要精准地确定脚本所依赖的第三方库。如果在全局环境下直接打包，就会导致“幽灵依赖”现象：脚本没有用到，但开发其他项目用到的、安装在全局的 Python 库也被打包进了应用。</p>
+<p>首先，在项目文件夹下创建并激活一个虚拟环境：</p>
+<div class="code-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python -m venv .venv # 创建虚拟环境</span><br><span class="line">.venv\Scripts\activate # 激活虚拟环境</span><br><span class="line">deactivate # 推出虚拟环境</span><br></pre></td></tr></table></figure></div>
+
+<p>激活虚拟环境后，如果清楚自己写代码时依赖了哪些库，可以直接在项目文件夹下运行 <code>pip install</code> 指令将第三方库下载到虚拟环境中。如果不清楚，则可以使用 <code>pipreqs</code> 库来确定依赖。</p>
+<p>安装 <code>pipreqs</code> 库：</p>
+<div class="code-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pipreqs</span><br></pre></td></tr></table></figure></div>
+
+<p>在全局环境下切到项目目录，然后使用 <code>pipreqs</code> 将项目依赖输出为 <code>requirements.txt</code>：</p>
+<div class="code-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pipreqs ./ --encoding=utf8 --force</span><br></pre></td></tr></table></figure></div>
+
+<p>然后再返回虚拟环境，执行：</p>
+<div class="code-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li>不推荐直接用 <code>pip freeze &gt; requirements.txt</code> 来导出依赖，因为有可能会连带装入很多非直接依赖。</li>
+<li><code>pipreqs</code> 不能被安装到创建的虚拟环境中，必须安装在全局环境中，因为如果将 <code>pipreqs</code> 按照在虚拟环境中，后续也会将其打包进去。</li>
+</ul>
+</blockquote>
+<h2 id="二、几种常见打包工具介绍"><a href="#二、几种常见打包工具介绍" class="headerlink" title="二、几种常见打包工具介绍"></a>二、几种常见打包工具介绍</h2><p>常见的打包工具包括 PyInstaller，Nuitka，Auto-py-to-exe 和 cx_Freeze。以下是它们的具体特点介绍：</p>
+<table>
+<thead>
+<tr>
+<th>打包工具</th>
+<th>核心原理</th>
+<th>优势</th>
+<th>劣势</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PyInstaller</td>
+<td>自解压打包 （将Python解释器、源码字节码和DLL 压成一个包）</td>
+<td>生态最好，几乎所有报错都能在 Stack Overflow 搜到</td>
+<td>启动慢（运行时需要临时解压）；极易被反编译（用 <code>pyinstxtractor</code> 即可反编译源码）</td>
+</tr>
+<tr>
+<td>Nuitka</td>
+<td>把 Python 翻译成 C&#x2F;C++，再调用 gcc&#x2F;msvc 编译成机器码</td>
+<td>启动速度极快；安全性好（纯机器码，几乎无法反编译）；运行效率有一定提升</td>
+<td>需要 C 语言编译环境（但在打包过程中会自动智能提示并下载 MinGW64）；打包耗时长</td>
+</tr>
+<tr>
+<td>Auto-py-to-exe</td>
+<td>底层基于 PyInstaller，外层套 Web UI 壳</td>
+<td>提供友好的 Web 交互界面</td>
+<td>继承了 PyInstaller 的优缺点</td>
+</tr>
+<tr>
+<td>cx_Freeze</td>
+<td>结构分离打包</td>
+<td>在处理 <code>PyQt</code>&#x2F;<code>PySide</code> 等大型跨平台 GUI 框架时，有时表现更稳定，若使用其他工具持续报错可作为备选方案</td>
+<td>相对小众，生态不如其他工具</td>
+</tr>
+</tbody></table>
+<p>打包时一般会选择 PyInstaller 或 Nuitka 作为打包工具。以下是这两种工具的常用指令参数：</p>
+<p><strong>PyInstaller 指令参数：</strong></p>
+<table>
+<thead>
+<tr>
+<th>指令参数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-F</code> (或 <code>--onefile</code>)<br /><code>-D</code> (或 <code>--onedir</code>)</td>
+<td><strong>打包形态：</strong><br /><code>-F</code>：单文件模式。将所有内容打包成一个独立的 <code>.exe</code>。优点是便于分发；缺点是启动慢（运行时需在后台临时解压整个环境）。<br /><code>-D</code>：单目录模式（默认）。打包成一个包含 <code>.exe</code> 和所有依赖库的文件夹。启动极快，推荐桌面软件使用。</td>
+</tr>
+<tr>
+<td><code>-w</code> (或 <code>--windowed</code>)<br /><code>-c</code> (或 <code>--console</code>)</td>
+<td><strong>控制台显示：</strong><br /><code>-w</code>：隐藏黑色命令行窗口。开发 Tkinter&#x2F;PyQt 等 GUI 桌面应用时必备，否则用户会看到一个黑框一直在后面。<br /><code>-c</code>：显示命令行窗口（默认）。适合纯后端代码或需要查看 <code>print</code> 报错信息的调试阶段。</td>
+</tr>
+<tr>
+<td><code>-i icon.ico</code></td>
+<td><strong>设置图标：</strong>为生成的软件设置自定义的 <code>.ico</code> 图标。</td>
+</tr>
+<tr>
+<td><code>--hidden-import MODULENAME</code></td>
+<td><strong>隐式依赖打包：</strong>强制打包某些代码里没有直接 <code>import</code>，但底层动态调用的库。解决打包后报“找不到某某模块”的核心参数。</td>
+</tr>
+<tr>
+<td><code>--add-data &quot;src;dest&quot;</code></td>
+<td><strong>添加静态资源：</strong>将外部文件（如图片、配置文件）打包进去。注意：Windows 路径分隔符用分号 <code>;</code>，Mac&#x2F;Linux 用冒号 <code>:</code>。</td>
+</tr>
+<tr>
+<td><code>--add-binary &quot;src;dest&quot;</code></td>
+<td><strong>添加动态库：</strong>强行打包第三方缺失的 <code>.dll</code> 或 <code>.so</code> 动态链接库文件。</td>
+</tr>
+<tr>
+<td><code>--exclude-module NAME</code></td>
+<td><strong>排除无用模块：</strong>主动排除掉不需要的库，降低打包体积。</td>
+</tr>
+<tr>
+<td><code>-n NAME</code></td>
+<td><strong>自定义名称：</strong>自定义生成的 <code>.exe</code> 和 <code>.dist</code> 产物文件夹的名称。如果不填，默认使用脚本的文件名。</td>
+</tr>
+<tr>
+<td><code>--clean</code></td>
+<td><strong>清理缓存：</strong>运行前清理 PyInstaller 上一次打包留下的临时缓存文件。</td>
+</tr>
+</tbody></table>
+<p>  <strong>Nuitka 指令参数：</strong></p>
+<table>
+<thead>
+<tr>
+<th>指令参数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--standalone</code><br /><code>--onefile</code></td>
+<td><strong>打包形态：</strong><br /><code>--standalone</code>：独立文件夹模式。生成包含所有运行环境（解释器、DLLs）的文件夹。GUI 桌面软件的首选，能够发挥 Nuitka 的秒开优势。<br /><code>--onefile</code>：单文件模式。将独立文件夹用算法压成单文件 <code>.exe</code>。致命代价是双击时会在后台临时解压几十 MB 的 DLL，导致肉眼可见的启动延迟，损失了 Nuitka 的核心性能优势。</td>
+</tr>
+<tr>
+<td><code>--windows-disable-console</code></td>
+<td><strong>隐藏控制台：</strong>在 Windows 系统下隐藏黑色命令行控制台（作用等同于 PyInstaller 的 <code>-w</code>）。</td>
+</tr>
+<tr>
+<td><code>--windows-icon-from-ico=X</code></td>
+<td><strong>设置图标：</strong>为生成的软件设置自定义的 <code>.ico</code> 图标。</td>
+</tr>
+<tr>
+<td><code>--output-dir=DIR_NAME</code></td>
+<td><strong>指定输出目录：</strong>指定打包产物（<code>.build</code> 和 <code>.dist</code> 文件夹）的存放路径，保持项目根目录整洁。</td>
+</tr>
+<tr>
+<td><code>--enable-plugin=tk-inter</code></td>
+<td><strong>Tkinter 专项：</strong>自动抓取并打包 Tkinter &#x2F; CustomTkinter 底层必需的 Tcl&#x2F;Tk 动态库。</td>
+</tr>
+<tr>
+<td><code>--enable-plugin=pyside6</code></td>
+<td><strong>PySide6 专项：</strong>完美处理 PySide6 依赖。其死代码消除能力能够自动剔除未被使用的 Qt 模块，大大降低打包体积。</td>
+</tr>
+<tr>
+<td><code>--enable-plugin=numpy</code></td>
+<td><strong>科学计算专项：</strong>自动处理 NumPy &#x2F; Scipy 等科学计算库底层的 C&#x2F;Fortran 复杂依赖。</td>
+</tr>
+<tr>
+<td><code>--enable-plugin=anti-bloat</code></td>
+<td><strong>依赖优化：</strong>自动拦截并剔除很多库（如 requests, pandas）中为了跨平台兼容性而引入的无用庞大依赖。</td>
+</tr>
+<tr>
+<td><code>--include-package-data=X</code></td>
+<td><strong>强行打包包内数据：</strong>将某个 Python 包内自带的数据文件（如 json, txt）强行打包进去。处理 CustomTkinter 报错“找不到 theme.json”时必用。</td>
+</tr>
+<tr>
+<td><code>--include-data-dir=A=B</code></td>
+<td><strong>引入整个文件夹：</strong>将项目中的整个文件夹 <code>A</code> 复制到打包结果的 <code>B</code> 路径下。</td>
+</tr>
+<tr>
+<td><code>--show-progress</code></td>
+<td><strong>显示编译进度：</strong>在控制台显示详细的 C 语言代码转换和 GCC&#x2F;MSVC 编译进度条。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>如果选择使用 Nuitka 进行打包，且进行了多次打包（如调试 Nuitka 打包参数），不需要删除第一次打包时生成的 <code>x.build</code> 文件夹。这里存放的是翻译出的 C 源码和编译好的中间目标文件（<code>.o</code> &#x2F; <code>.obj</code>）。如果不删除这个文件夹，再次运行编译会触发 Nuitka 的增量编译机制，复用之前编译时的 Cache，从而极大加快打包速度。</p>
+</blockquote>
+<h2 id="三、基于-GUI-框架考虑的打包工具选择"><a href="#三、基于-GUI-框架考虑的打包工具选择" class="headerlink" title="三、基于 GUI 框架考虑的打包工具选择"></a>三、基于 GUI 框架考虑的打包工具选择</h2><p>Python 本身不具备画窗口的能力。所有的 GUI 框架，本质上都是在“套壳”调用底层的 C&#x2F;C++ 动态链接库。打包工具无法确定该把哪些 <code>.dll</code> 打包进去，因此可能会导致生成的可执行文件在其他环境下因缺少依赖库无法运行，或者为了保险起见，强行塞入大量无关的库，导致应用体积过大。</p>
+<p>以下是基于三种主流 GUI 框架的打包问题及解决办法：</p>
+<table>
+<thead>
+<tr>
+<th>GUI 框架</th>
+<th>框架特点</th>
+<th>问题</th>
+<th>PyInstaller 解决办法</th>
+<th>Nuitka 解决办法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tkinter &#x2F; CustomTkinter</td>
+<td>轻量级库，底层依赖 Tcl&#x2F;Tk，打包后的整体体积控制得较好，适合中小型工具。</td>
+<td>打包工具容易遗漏框架自带的静态资源，必须强制声明包含。</td>
+<td>必须在命令中加复杂的 <code>--add-data</code> 参数手动指明皮肤文件路径。</td>
+<td>加 <code>--enable-plugin=tk-inter</code> 抓取底层 DLL，加 <code>--include-package-data=customtkinter</code> 强行把 JSON 皮肤文件包进去。</td>
+</tr>
+<tr>
+<td>PyQt5 &#x2F; PySide6</td>
+<td>功能极强，生态完善，但由于包含大量底层 C++ 库，非常笨重。</td>
+<td>会把整个 Qt 框架全部打包，打包后应用体积巨大。</td>
+<td>必须手动写大量 <code>--exclude-module</code> 排除无用依赖。</td>
+<td>使用 <code>--enable-plugin=pyside6</code>。其死代码消除能力能够自动剔除未使用的模块，极大提高启动速度并减小体积。</td>
+</tr>
+<tr>
+<td>PyWebview &#x2F; Eel &#x2F; NiceGUI</td>
+<td>前端（HTML &#x2F; CSS &#x2F; JS）写界面，Python 写后端逻辑。</td>
+<td>打包成 <code>.exe</code> 后，运行时的解压路径变化，如果在代码里使用绝对路径或相对路径，运行必定报错。</td>
+<td>必须利用 <code>sys._MEIPASS</code> 等内置变量动态切换、定位静态资源的绝对路径。</td>
+<td>需要处理 Nuitka 的临时路径寻址问题，或使用 <code>--include-data-dir</code> 强行打包整个前端文件夹。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>前端隔离机制： 在用前端技术构建桌面 UI 时，为了避免界面样式冲突，强烈建议利用 Shadow DOM 技术来封装 UI 组件，这样能有效防止桌面应用内外样式的相互污染，保证界面的独立和稳定。</p>
+</blockquote>
+<h2 id="四、常见问题排解与修复"><a href="#四、常见问题排解与修复" class="headerlink" title="四、常见问题排解与修复"></a>四、常见问题排解与修复</h2><h3 id="打包选项：单文件-or-文件夹？"><a href="#打包选项：单文件-or-文件夹？" class="headerlink" title="打包选项：单文件 or 文件夹？"></a>打包选项：单文件 or 文件夹？</h3><p>如果是小工具或者是轻量脚本，可以选择单文件模式。此时，单文件便携性较好，且运行性能与文件夹无太大差异。</p>
+<p>但如果是带 GUI 界面、需要快速启动的桌面软件，则应该选择文件夹模式。</p>
+<p>以 Nuitka 为例，如果使用 <code>--onefile</code> 参数重新打包，Nuitka 会用 Zstandard 算法将 dist 文件夹压缩，运行应用时会在 <code>~AppData/Local/Temp</code> 下建立临时文件夹并解压其包装的 DLL 文件，这将导致极高的运行时延迟。</p>
+<h3 id="路径问题：单文件模式下资源定位失效"><a href="#路径问题：单文件模式下资源定位失效" class="headerlink" title="路径问题：单文件模式下资源定位失效"></a>路径问题：单文件模式下资源定位失效</h3><p>在单文件模式下，程序运行时会被解压到系统的临时目录中执行。此时，如果在代码中使用相对路径或通过 <code>os.getcwd()</code> 获取当前工作目录，获取到的实际上是用户双击程序所在的外部目录（例如桌面），而不是程序实际运行的临时解压目录。</p>
+<p>这种路径错位会导致程序无法找到内置的静态资源（如 UI 图标、配置文件、HTML 模板等），从而引发运行时报错。</p>
+<p><strong>修复方案：使用动态路径定位</strong></p>
+<p>为了确保无论在开发环境还是打包后的单文件环境中都能正确加载资源，必须使用脚本运行时的绝对路径。</p>
+<ul>
+<li><p><strong>常规与 Nuitka 方案：</strong> 可以通过 Python 内置变量 <code>__file__</code> 获取当前执行文件的真实绝对路径，从而精准定位临时目录。</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> customtkinter <span class="keyword">as</span> ctk</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">_load_icon</span>(<span class="params">self, filename</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;安全加载图标的辅助函数，兼容单文件模式的绝对路径查找&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 获取当前运行代码文件所在的真实绝对路径</span></span><br><span class="line">    base_path = os.path.dirname(os.path.abspath(__file__))</span><br><span class="line">    icon_path = os.path.join(base_path, <span class="string">&quot;icons&quot;</span>, filename)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> os.path.exists(icon_path):</span><br><span class="line">        <span class="keyword">return</span> ctk.CTkImage(light_image=Image.<span class="built_in">open</span>(icon_path), </span><br><span class="line">                            dark_image=Image.<span class="built_in">open</span>(icon_path), </span><br><span class="line">                            size=(<span class="number">22</span>, <span class="number">22</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>PyInstaller 方案：</strong> PyInstaller 会将临时目录的路径挂载到 <code>sys._MEIPASS</code> 变量中，可以使用以下通用代码段进行动态切换：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_resource_path</span>(<span class="params">relative_path</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">hasattr</span>(sys, <span class="string">&#x27;_MEIPASS&#x27;</span>):</span><br><span class="line">        <span class="comment"># PyInstaller 运行时的临时目录</span></span><br><span class="line">        <span class="keyword">return</span> os.path.join(sys._MEIPASS, relative_path)</span><br><span class="line">    <span class="comment"># 本地开发时的目录</span></span><br><span class="line">    <span class="keyword">return</span> os.path.join(os.path.abspath(<span class="string">&quot;.&quot;</span>), relative_path)</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<blockquote>
+<p>在使用 Nuitka 打包时，除了修改代码路径，也应该确保打包命令中已加入 <code>--include-data-dir=icons=icons</code> 参数，显式将静态文件夹打包进程序。</p>
+</blockquote>
+<h3 id="杀毒软件误报问题"><a href="#杀毒软件误报问题" class="headerlink" title="杀毒软件误报问题"></a>杀毒软件误报问题</h3><p>由于打包工具的单文件模式行为（在后台静默释放文件到临时目录并执行）与许多恶意软件的特征高度相似，生成的 <code>.exe</code> 文件极易被 Windows Defender 或 360 等杀毒软件拦截或直接删除。</p>
+<p>在这一点上，Nuitka 编译生成的原生机器码具有明显优势，其运行逻辑与常规 C&#x2F;C++ 程序一致，被误报的概率显著低于 PyInstaller。如果应用受众是普通用户，强烈推荐使用 Nuitka 的文件夹模式进行分发。</p>
+<h3 id="高分辨率屏幕-GUI-模糊问题"><a href="#高分辨率屏幕-GUI-模糊问题" class="headerlink" title="高分辨率屏幕 GUI 模糊问题"></a>高分辨率屏幕 GUI 模糊问题</h3><p>在 Windows 系统中，如果用户的显示器开启了缩放（如 125%、150%），使用 Tkinter 等部分框架打包后的 GUI 界面可能会出现严重的字体发虚和图像模糊。这是因为系统默认对未声明 DPI 感知的程序进行了强制拉伸。</p>
+<p><strong>修复方案：</strong> 可以在 Python 主程序的入口处加入以下调用 Windows API 的代码，强制声明程序感知系统的 DPI 缩放，即可恢复界面的原生高清显示：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ctypes</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 设定进程的 DPI 感知级别 (2 = Per Monitor DPI Aware)</span></span><br><span class="line">    ctypes.windll.shcore.SetProcessDpiAwareness(<span class="number">2</span>)</span><br><span class="line"><span class="keyword">except</span> Exception:</span><br><span class="line">    <span class="keyword">pass</span>  <span class="comment"># 忽略低版本 Windows 系统的调用异常</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="五、打包工具选择总结"><a href="#五、打包工具选择总结" class="headerlink" title="五、打包工具选择总结"></a>五、打包工具选择总结</h2><table>
+<thead>
+<tr>
+<th>开发框架</th>
+<th>首选打包工具</th>
+<th>注意事项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>原生 Tkinter</td>
+<td>PyInstaller (单文件)</td>
+<td>无</td>
+</tr>
+<tr>
+<td>CustomTkinter</td>
+<td>Nuitka (文件夹模式)</td>
+<td>必须显式声明包含其自带的 theme 主题资源文件</td>
+</tr>
+<tr>
+<td>PyQt &#x2F; PySide</td>
+<td>Nuitka &#x2F; cx_Freeze</td>
+<td>体积较大；容易少打包底层的 C++ 动态库</td>
+</tr>
+<tr>
+<td>Flet &#x2F; PyWebview</td>
+<td>PyInstaller</td>
+<td>HTML &#x2F; 静态资源在打包后的绝对路径寻址问题</td>
+</tr>
+</tbody></table>
+
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Python/">#Python</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Packaging/">#Packaging</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/PyInstaller/">#PyInstaller</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Nuitka/">#Nuitka</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/archives/userscript-development-and-deployment-workflow-guide/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">Userscript Development and Deployment Workflow Guide</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">Python Desktop Application Packaging Guide</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E5%B9%B6%E7%A1%AE%E5%AE%9A%E4%BE%9D%E8%B5%96"><span class="nav-text">一、创建虚拟环境并确定依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="nav-text">二、几种常见打包工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%9F%BA%E4%BA%8E-GUI-%E6%A1%86%E6%9E%B6%E8%80%83%E8%99%91%E7%9A%84%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7%E9%80%89%E6%8B%A9"><span class="nav-text">三、基于 GUI 框架考虑的打包工具选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%8E%92%E8%A7%A3%E4%B8%8E%E4%BF%AE%E5%A4%8D"><span class="nav-text">四、常见问题排解与修复</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8C%85%E9%80%89%E9%A1%B9%EF%BC%9A%E5%8D%95%E6%96%87%E4%BB%B6-or-%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%9F"><span class="nav-text">打包选项：单文件 or 文件夹？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98%EF%BC%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%A8%A1%E5%BC%8F%E4%B8%8B%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E5%A4%B1%E6%95%88"><span class="nav-text">路径问题：单文件模式下资源定位失效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%80%E6%AF%92%E8%BD%AF%E4%BB%B6%E8%AF%AF%E6%8A%A5%E9%97%AE%E9%A2%98"><span class="nav-text">杀毒软件误报问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E5%88%86%E8%BE%A8%E7%8E%87%E5%B1%8F%E5%B9%95-GUI-%E6%A8%A1%E7%B3%8A%E9%97%AE%E9%A2%98"><span class="nav-text">高分辨率屏幕 GUI 模糊问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7%E9%80%89%E6%8B%A9%E6%80%BB%E7%BB%93"><span class="nav-text">五、打包工具选择总结</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #F54545"></i>&nbsp;&nbsp;<a href="/">Astrid Stark</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        29 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.5</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/Swup.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	<script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/imageViewer.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/utils.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/main.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/navbarShrink.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/scrollTopBottom.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/lightDarkSwitch.js" ></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/categoryList.js" ></script>
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/localSearch.js" ></script>
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/codeBlock.js" ></script>
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/lazyload.js" ></script>
+
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/runtime.js" ></script>
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/Typed.min.js" ></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/plugins/typed.js" ></script>
+
+
+
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/minimasonry.min.js" ></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/plugins/masonry.js" ></script>
+
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/anime.min.js" ></script>
+
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/tools/tocToggle.js" data-swup-reload-script></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/toc.js" data-swup-reload-script></script><script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/plugins/tabs.js" data-swup-reload-script></script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/essays.js" data-swup-reload-script></script>
+
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/layouts/bookmarkNav.js" ></script>
+
+	
+	<div id="aplayer"></div>
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/libs/APlayer.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.8.5/source/js/build/plugins/aplayer.js" ></script>
+
+	
+</body>
+
+</html>

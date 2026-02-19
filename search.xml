@@ -1,83 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Build an Image Hosting Service on GitHub</title>
-    <url>//archives/build-an-image-hosting-service-on-github/</url>
-    <content><![CDATA[<h2 id="一、创建-GitHub-仓库"><a href="#一、创建-GitHub-仓库" class="headerlink" title="一、创建 GitHub 仓库"></a>一、创建 GitHub 仓库</h2><p>在 GitHub 创建一个仓库，公开性设置为 Public。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img0.webp"
-                      alt="创建 GitHub 仓库"
-                ></p>
-<p>最后点击 Create repository 即可完成创建。</p>
-<h2 id="二、生成-Token"><a href="#二、生成-Token" class="headerlink" title="二、生成 Token"></a>二、生成 Token</h2><p>在 <code>Settings—Developer Settings—Personal access tokens—Tokens (Classic)</code> 中生成一个 Token。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img1.webp"
-                      alt="GitHub Token"
-                ></p>
-<p>生成 Token 时，需要填写 Note，选择 Token 过期时间并勾选 repo 选项。</p>
-<blockquote>
-<p>Token 最好设置为临时性的。设置的 Token 只能查看一次，应注意保存。</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img2.webp"
-                      alt="生成 Token"
-                ></p>
-<h2 id="三、使用-PicGo-实现图片上传"><a href="#三、使用-PicGo-实现图片上传" class="headerlink" title="三、使用 PicGo 实现图片上传"></a>三、使用 PicGo 实现图片上传</h2><p>下载PicGo。</p>
-<p><a class="link"   href="https://github.com/Molunerfinn/PicGo" >https://github.com/Molunerfinn/PicGo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>下载安装完成后，打开设置进行配置。</p>
-<p>GitHub 图床设置中，设定仓库名<strong>格式</strong>为 <code>username/repository</code> ，分支名为 main（当然也可以自己在仓库中创建分支），设定 Token 为 GitHub 中创建的 Token，设定存储路径为 image&#x2F;（上传的图片会自动存储到 image 文件夹下），设定自定义域名<strong>格式</strong>为<a href="https://cdn.jsdelivr.net/gh/username/repository/branch"><code>https://cdn.jsdelivr.net/gh/username/repository/branch</code></a> 。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img3.webp"
-                      alt="PicGo 图床设置"
-                ></p>
-<p>设置完成后点击确定，也可以设置为默认图床。</p>
-<p>之后对 PicGo 进行如图所示设置。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img4.webp"
-                      alt="PicGo 设置-1"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img5.webp"
-                      alt="PicGo 设置-2"
-                ></p>
-<h2 id="四、设置-Typora-实现自动上传"><a href="#四、设置-Typora-实现自动上传" class="headerlink" title="四、设置 Typora 实现自动上传"></a>四、设置 Typora 实现自动上传</h2><p>打开 Typora，点击文件—偏好设置—图像。</p>
-<p>根据图片内容进行设置。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img6.webp"
-                      alt="Typora 图像设置"
-                ></p>
-<p>设置完成后点击“验证图片上传选项”。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/build-an-image-hosting-service-on-github/img7.webp"
-                      alt="验证 Typora 图像自动上传"
-                ></p>
-<p>如果出现 <code>“success”:true</code> 则证明设置成功，如果出现 <code>“success”:false</code> 则证明设置不成功，可以打开 PicGo 日志进行查看，找出失败原因。</p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Image Hosting</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>A Description of the Elder Scrolls&#39; Worldview</title>
     <url>//archives/a-description-of-the-elder-scrolls-worldview/</url>
     <content><![CDATA[<h2 id="泰姆瑞尔编年史"><a href="#泰姆瑞尔编年史" class="headerlink" title="泰姆瑞尔编年史"></a>泰姆瑞尔编年史</h2><h3 id="创世与黎明纪元"><a href="#创世与黎明纪元" class="headerlink" title="创世与黎明纪元"></a>创世与黎明纪元</h3><p>在遥远的太初时代，混沌与秩序的交锋孕育了整个宇宙。代表“是”的原初力量阿努与代表“非”的原初力量帕多梅交织碰撞，在激烈的冲突中诞生了时间之龙阿卡托什。随着时间的流转，众神逐渐显化，在原初混沌的 Aurbis 之中活动，开启了世界的构建。</p>
@@ -415,6 +338,182 @@
       </tags>
   </entry>
   <entry>
+    <title>Alist Multi-Drive Mounting and Startup Script Writing</title>
+    <url>//archives/alist-multi-drive-mounting-and-startup-script-writing/</url>
+    <content><![CDATA[<p>如果我们使用多网盘且每个网盘上都有很多数据不方便迁移，或者想使用一个无广告、干净的界面观看电影，那么就可以选择 Alist 进行多网盘挂载。下面的过程以百度网盘为例。</p>
+<h2 id="一、下载并启动-Alist-Server"><a href="#一、下载并启动-Alist-Server" class="headerlink" title="一、下载并启动 Alist Server"></a>一、下载并启动 Alist Server</h2><p>首先访问 Alist 的 GitHub 页面并下载对应版本。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img0.webp"
+                      alt="Alist GitHub Repo Page"
+                ></p>
+<p>下载完成后，在 alist.exe 所在的文件夹下打开终端，并输入以下命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">alist server</span><br></pre></td></tr></table></figure></div>
+
+<p>然后就能看到 Alist 在 <code>127.0.0.1:5244</code> 下成功启动了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img1.webp"
+                      alt="Start Alist Server"
+                ></p>
+<p>访问 <code>127.0.0.1:5244</code> 并填入账号密码（默认账号名称为 <code>admin</code>，默认密码在终端输出中提供）。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img2.webp"
+                      alt="Alist Login Page"
+                ></p>
+<h2 id="二、挂载百度网盘"><a href="#二、挂载百度网盘" class="headerlink" title="二、挂载百度网盘"></a>二、挂载百度网盘</h2><p>进入 Alist 主页面，点击“管理 - 存储”，即可添加百度网盘。</p>
+<p>访问 <a class="link"   href="https://alistgo.com/zh/guide/drivers/baidu.html" >百度网盘 | Alist 官方文档<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 获取刷新令牌：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img3.webp"
+                      alt="Baidu Refresh Token Callback"
+                ></p>
+<p>“根文件夹路径”填写想要挂载网盘的指定文件夹，格式如 <code>Folder_01/Subfolder_01</code> 所示。</p>
+<p>完成这两项配置后，点击“添加”，就能看到 Alist 的主页已经成功挂载百度网盘了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img4.webp"
+                      alt="Alist Main Page"
+                ></p>
+<h2 id="三、修改-User-Agent-信息"><a href="#三、修改-User-Agent-信息" class="headerlink" title="三、修改 User-Agent 信息"></a>三、修改 User-Agent 信息</h2><p>&#x3D;&#x3D;<em><strong>注意：如果使用的不是百度网盘，则不需要进行这一步骤。</strong></em>&#x3D;&#x3D;</p>
+<blockquote>
+<p>UA（User-Agent）是 HTTP 请求头的一部分，用来表明客户端的“身份信息”，例如浏览器类型、系统平台、应用名称、版本号等。服务器会根据 UA 判断请求是否来自官方客户端、浏览器、移动端，或是否符合其播放&#x2F;下载策略。</p>
+<p>百度网盘对在线播放（直链&#x2F;视频流）有访问控制：  </p>
+<ul>
+<li>是否为超级会员（决定是否能拿到可播放的直链&#x2F;高码率流）；  </li>
+<li>UA 是否符合官方预期（如 pan.baidu.com 的官方 Web&#x2F;APP UA）。</li>
+</ul>
+<p>如果 UA 不对，即便你有会员，服务器也可能认为请求不是来自受信客户端，从而不给播放直链或返回受限链接。因此，需要通过修改 UA 的方式伪装成官方请求，让视频能够正常播放（否则就会持续进行 reconnect，视频无法播放）。</p>
+</blockquote>
+<p>首先，添加 <a class="link"   href="https://chromewebstore.google.com/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg" >User-Agent Switcher for Chrome<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 插件到浏览器。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img5.webp"
+                      alt="User-Agent Switcher for Chrome Extension"
+                ></p>
+<p>在 Chrome 的插件管理页面点击此插件，并打开插件设置页面。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img6.webp"
+                      alt="Extension Options"
+                ></p>
+<p>新建一个 UA 信息，在 <code>New-User-Agent String</code> 字段填写 <code>pan.baidu.com</code>，其他随便填写，然后点击Add。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img7.webp"
+                      alt="New User-Agent"
+                ></p>
+<p>返回视频页面，点击插件图标选择刚才添加的 UA 信息即可。</p>
+<blockquote>
+<p>如果使用的不是百度网盘，还可以将挂载的网盘内容添加到第三方播放器如 PotPlayer 中，具体配置如下：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img8.webp"
+                      alt="PotPlayer Settings"
+                ></p>
+</blockquote>
+<h2 id="四、启动脚本编写"><a href="#四、启动脚本编写" class="headerlink" title="四、启动脚本编写"></a>四、启动脚本编写</h2><p>如果想一键启动 Alist 并打开对应页面，可以创建一个 <code>.bat</code> 文件：</p>
+<div class="code-container" data-rel="Bat"><figure class="iseeu highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">setlocal</span></span><br><span class="line">:: 切到脚本所在目录（假设 alist.exe 与本 bat 同目录）</span><br><span class="line"><span class="built_in">cd</span> /d &quot;%~dp0&quot;</span><br><span class="line"></span><br><span class="line">:: 启动 Alist（新窗口运行，窗口保留方便查看日志）</span><br><span class="line"><span class="built_in">start</span> &quot;Alist&quot; <span class="built_in">cmd</span> /k &quot;alist.exe server&quot;</span><br><span class="line"></span><br><span class="line">:: 等待 <span class="number">1</span>-<span class="number">2</span> 秒让 Alist 起好</span><br><span class="line">timeout /t <span class="number">2</span> &gt;<span class="built_in">nul</span></span><br><span class="line"></span><br><span class="line">:: 打开浏览器访问 Alist</span><br><span class="line">:: 若已在 <span class="built_in">PATH</span> 中有 chrome，则直接用；否则把 chrome.exe 的绝对路径填到下面</span><br><span class="line">:: <span class="built_in">start</span> &quot;&quot; chrome &quot;http://<span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">5244</span>&quot;</span><br><span class="line"><span class="built_in">start</span> &quot;&quot; &quot;C:\Program Files\Google\Chrome\Application\chrome.exe&quot; &quot;http://<span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">5244</span>&quot;</span><br><span class="line"></span><br><span class="line">:: 如果没有安装 Chrome，下面这一行可改成 edge 或其他浏览器，比如：</span><br><span class="line">:: <span class="built_in">start</span> &quot;&quot; msedge &quot;http://<span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">5244</span>&quot;</span><br><span class="line"></span><br><span class="line"><span class="built_in">endlocal</span></span><br></pre></td></tr></table></figure></div>
+
+<p>如果想让 Alist 开机自启动，只需要将这个脚本的快捷方式加入 <code>shell:startup</code> 文件夹即可。</p>
+]]></content>
+      <categories>
+        <category>Media</category>
+      </categories>
+      <tags>
+        <tag>Alist</tag>
+        <tag>Cloud Drive</tag>
+        <tag>Netdisk</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Build an Image Hosting Service on GitHub</title>
+    <url>//archives/build-an-image-hosting-service-on-github/</url>
+    <content><![CDATA[<h2 id="一、创建-GitHub-仓库"><a href="#一、创建-GitHub-仓库" class="headerlink" title="一、创建 GitHub 仓库"></a>一、创建 GitHub 仓库</h2><p>在 GitHub 创建一个仓库，公开性设置为 Public。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img0.webp"
+                      alt="创建 GitHub 仓库"
+                ></p>
+<p>最后点击 Create repository 即可完成创建。</p>
+<h2 id="二、生成-Token"><a href="#二、生成-Token" class="headerlink" title="二、生成 Token"></a>二、生成 Token</h2><p>在 <code>Settings—Developer Settings—Personal access tokens—Tokens (Classic)</code> 中生成一个 Token。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img1.webp"
+                      alt="GitHub Token"
+                ></p>
+<p>生成 Token 时，需要填写 Note，选择 Token 过期时间并勾选 repo 选项。</p>
+<blockquote>
+<p>Token 最好设置为临时性的。设置的 Token 只能查看一次，应注意保存。</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img2.webp"
+                      alt="生成 Token"
+                ></p>
+<h2 id="三、使用-PicGo-实现图片上传"><a href="#三、使用-PicGo-实现图片上传" class="headerlink" title="三、使用 PicGo 实现图片上传"></a>三、使用 PicGo 实现图片上传</h2><p>下载PicGo。</p>
+<p><a class="link"   href="https://github.com/Molunerfinn/PicGo" >https://github.com/Molunerfinn/PicGo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>下载安装完成后，打开设置进行配置。</p>
+<p>GitHub 图床设置中，设定仓库名<strong>格式</strong>为 <code>username/repository</code> ，分支名为 main（当然也可以自己在仓库中创建分支），设定 Token 为 GitHub 中创建的 Token，设定存储路径为 image&#x2F;（上传的图片会自动存储到 image 文件夹下），设定自定义域名<strong>格式</strong>为<a href="https://cdn.jsdelivr.net/gh/username/repository/branch"><code>https://cdn.jsdelivr.net/gh/username/repository/branch</code></a> 。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img3.webp"
+                      alt="PicGo 图床设置"
+                ></p>
+<p>设置完成后点击确定，也可以设置为默认图床。</p>
+<p>之后对 PicGo 进行如图所示设置。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img4.webp"
+                      alt="PicGo 设置-1"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img5.webp"
+                      alt="PicGo 设置-2"
+                ></p>
+<h2 id="四、设置-Typora-实现自动上传"><a href="#四、设置-Typora-实现自动上传" class="headerlink" title="四、设置 Typora 实现自动上传"></a>四、设置 Typora 实现自动上传</h2><p>打开 Typora，点击文件—偏好设置—图像。</p>
+<p>根据图片内容进行设置。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img6.webp"
+                      alt="Typora 图像设置"
+                ></p>
+<p>设置完成后点击“验证图片上传选项”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/build-an-image-hosting-service-on-github/img7.webp"
+                      alt="验证 Typora 图像自动上传"
+                ></p>
+<p>如果出现 <code>“success”:true</code> 则证明设置成功，如果出现 <code>“success”:false</code> 则证明设置不成功，可以打开 PicGo 日志进行查看，找出失败原因。</p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Image Hosting</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Beginner&#39;s Guide for Ubuntu</title>
     <url>//archives/beginners-guide-for-ubuntu/</url>
     <content><![CDATA[<h2 id="一、安装-Ubuntu-系统"><a href="#一、安装-Ubuntu-系统" class="headerlink" title="一、安装 Ubuntu 系统"></a>一、安装 Ubuntu 系统</h2><p>访问 VMware Workshop Pro 官网，下载软件。</p>
@@ -720,102 +819,345 @@
       </tags>
   </entry>
   <entry>
-    <title>Alist Multi-Drive Mounting and Startup Script Writing</title>
-    <url>//archives/alist-multi-drive-mounting-and-startup-script-writing/</url>
-    <content><![CDATA[<p>如果我们使用多网盘且每个网盘上都有很多数据不方便迁移，或者想使用一个无广告、干净的界面观看电影，那么就可以选择 Alist 进行多网盘挂载。下面的过程以百度网盘为例。</p>
-<h2 id="一、下载并启动-Alist-Server"><a href="#一、下载并启动-Alist-Server" class="headerlink" title="一、下载并启动 Alist Server"></a>一、下载并启动 Alist Server</h2><p>首先访问 Alist 的 GitHub 页面并下载对应版本。</p>
+    <title>Building Jellyfin Media Library with Docker</title>
+    <url>//archives/building-jellyfin-media-library-with-docker/</url>
+    <content><![CDATA[<h2 id="一、配置-Docker"><a href="#一、配置-Docker" class="headerlink" title="一、配置 Docker"></a>一、配置 Docker</h2><p>进入 Docker 官网，下载 Docker Desktop 并进行安装</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img0.webp"
-                      alt="Alist GitHub Repo Page"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img0.webp"
+                      alt="Docker 官网"
                 ></p>
-<p>下载完成后，在 alist.exe 所在的文件夹下打开终端，并输入以下命令：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">alist server</span><br></pre></td></tr></table></figure></div>
-
-<p>然后就能看到 Alist 在 <code>127.0.0.1:5244</code> 下成功启动了。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img1.webp"
-                      alt="Start Alist Server"
-                ></p>
-<p>访问 <code>127.0.0.1:5244</code> 并填入账号密码（默认账号名称为 <code>admin</code>，默认密码在终端输出中提供）。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img2.webp"
-                      alt="Alist Login Page"
-                ></p>
-<h2 id="二、挂载百度网盘"><a href="#二、挂载百度网盘" class="headerlink" title="二、挂载百度网盘"></a>二、挂载百度网盘</h2><p>进入 Alist 主页面，点击“管理 - 存储”，即可添加百度网盘。</p>
-<p>访问 <a class="link"   href="https://alistgo.com/zh/guide/drivers/baidu.html" >百度网盘 | Alist 官方文档<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 获取刷新令牌：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img3.webp"
-                      alt="Baidu Refresh Token Callback"
-                ></p>
-<p>“根文件夹路径”填写想要挂载网盘的指定文件夹，格式如 <code>Folder_01/Subfolder_01</code> 所示。</p>
-<p>完成这两项配置后，点击“添加”，就能看到 Alist 的主页已经成功挂载百度网盘了。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img4.webp"
-                      alt="Alist Main Page"
-                ></p>
-<h2 id="三、修改-User-Agent-信息"><a href="#三、修改-User-Agent-信息" class="headerlink" title="三、修改 User-Agent 信息"></a>三、修改 User-Agent 信息</h2><p>&#x3D;&#x3D;<em><strong>注意：如果使用的不是百度网盘，则不需要进行这一步骤。</strong></em>&#x3D;&#x3D;</p>
 <blockquote>
-<p>UA（User-Agent）是 HTTP 请求头的一部分，用来表明客户端的“身份信息”，例如浏览器类型、系统平台、应用名称、版本号等。服务器会根据 UA 判断请求是否来自官方客户端、浏览器、移动端，或是否符合其播放&#x2F;下载策略。</p>
-<p>百度网盘对在线播放（直链&#x2F;视频流）有访问控制：  </p>
-<ul>
-<li>是否为超级会员（决定是否能拿到可播放的直链&#x2F;高码率流）；  </li>
-<li>UA 是否符合官方预期（如 pan.baidu.com 的官方 Web&#x2F;APP UA）。</li>
-</ul>
-<p>如果 UA 不对，即便你有会员，服务器也可能认为请求不是来自受信客户端，从而不给播放直链或返回受限链接。因此，需要通过修改 UA 的方式伪装成官方请求，让视频能够正常播放（否则就会持续进行 reconnect，视频无法播放）。</p>
+<p>安装期间，可能会在控制台要求更新或下载 WSL，直接按任意键安装即可</p>
 </blockquote>
-<p>首先，添加 <a class="link"   href="https://chromewebstore.google.com/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg" >User-Agent Switcher for Chrome<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 插件到浏览器。</p>
+<p>安装完成后就可以进入并查看 Docker Desktop 的控制面板</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img5.webp"
-                      alt="User-Agent Switcher for Chrome Extension"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img1.webp"
+                      alt="Docker Desktop 控制面板"
                 ></p>
-<p>在 Chrome 的插件管理页面点击此插件，并打开插件设置页面。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img6.webp"
-                      alt="Extension Options"
-                ></p>
-<p>新建一个 UA 信息，在 <code>New-User-Agent String</code> 字段填写 <code>pan.baidu.com</code>，其他随便填写，然后点击Add。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img7.webp"
-                      alt="New User-Agent"
-                ></p>
-<p>返回视频页面，点击插件图标选择刚才添加的 UA 信息即可。</p>
-<blockquote>
-<p>如果使用的不是百度网盘，还可以将挂载的网盘内容添加到第三方播放器如 PotPlayer 中，具体配置如下：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/alist-multi-drive-mounting-and-startup-script-writing/img8.webp"
-                      alt="PotPlayer Settings"
-                ></p>
-</blockquote>
-<h2 id="四、启动脚本编写"><a href="#四、启动脚本编写" class="headerlink" title="四、启动脚本编写"></a>四、启动脚本编写</h2><p>如果想一键启动 Alist 并打开对应页面，可以创建一个 <code>.bat</code> 文件：</p>
-<div class="code-container" data-rel="Bat"><figure class="iseeu highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">setlocal</span></span><br><span class="line">:: 切到脚本所在目录（假设 alist.exe 与本 bat 同目录）</span><br><span class="line"><span class="built_in">cd</span> /d &quot;%~dp0&quot;</span><br><span class="line"></span><br><span class="line">:: 启动 Alist（新窗口运行，窗口保留方便查看日志）</span><br><span class="line"><span class="built_in">start</span> &quot;Alist&quot; <span class="built_in">cmd</span> /k &quot;alist.exe server&quot;</span><br><span class="line"></span><br><span class="line">:: 等待 <span class="number">1</span>-<span class="number">2</span> 秒让 Alist 起好</span><br><span class="line">timeout /t <span class="number">2</span> &gt;<span class="built_in">nul</span></span><br><span class="line"></span><br><span class="line">:: 打开浏览器访问 Alist</span><br><span class="line">:: 若已在 <span class="built_in">PATH</span> 中有 chrome，则直接用；否则把 chrome.exe 的绝对路径填到下面</span><br><span class="line">:: <span class="built_in">start</span> &quot;&quot; chrome &quot;http://<span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">5244</span>&quot;</span><br><span class="line"><span class="built_in">start</span> &quot;&quot; &quot;C:\Program Files\Google\Chrome\Application\chrome.exe&quot; &quot;http://<span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">5244</span>&quot;</span><br><span class="line"></span><br><span class="line">:: 如果没有安装 Chrome，下面这一行可改成 edge 或其他浏览器，比如：</span><br><span class="line">:: <span class="built_in">start</span> &quot;&quot; msedge &quot;http://<span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">5244</span>&quot;</span><br><span class="line"></span><br><span class="line"><span class="built_in">endlocal</span></span><br></pre></td></tr></table></figure></div>
+<p><em>可选：Docker Desktop 汉化</em></p>
+<p>打开如下链接，下载版本对应的 <code>app.asar</code> 文件，并替换 <code>C:\Program Files\Docker\Docker\frontend\resources</code> 路径下的同名文件</p>
+<p><a class="link"   href="https://github.com/asxez/DockerDesktop-CN" >https://github.com/asxez/DockerDesktop-CN<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="二、配置-Jellyfin"><a href="#二、配置-Jellyfin" class="headerlink" title="二、配置 Jellyfin"></a>二、配置 Jellyfin</h2><p>打开控制台，输入以下指令拉取 Jellyfin 镜像到本地：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
 
-<p>如果想让 Alist 开机自启动，只需要将这个脚本的快捷方式加入 <code>shell:startup</code> 文件夹即可。</p>
+<p>在控制台执行以下指令，运行一个 Jellyfin 容器：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d ^</span><br><span class="line">	--name=jellyfin ^</span><br><span class="line">	-p 8096:8096 ^</span><br><span class="line">	-p 8920:8920 ^</span><br><span class="line">	-v D:\Jellyfin\config:/config ^</span><br><span class="line">	-v D:\Jellyfin\cache:/cache ^</span><br><span class="line">	-v D:\Jellyfin\media:/media ^</span><br><span class="line">	--restart unless-stopped ^</span><br><span class="line">	jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><strong>注意事项</strong>：</p>
+<ol>
+<li>每一行命令后边都必须加续行符号 <code>^</code> ；</li>
+<li><code>/config</code> , <code>/cache</code> , <code>/media</code> 的路径需替换为主机的实际路径</li>
+<li>Jellyfin 的默认 HTTP 端口为 8096，默认 HTTPS 端口为 8920</li>
+</ol>
+</blockquote>
+<p>容器运行成功后，访问 <a class="link"   href="http://localhost:8096/" >http://localhost:8096<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 打开 Jellyfin 控制面板</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img2.webp"
+                      alt="Jellyfin 控制面板"
+                ></p>
+<p>创建一个媒体库</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img3.webp"
+                      alt="创建媒体库"
+                ></p>
+<p>创建完成后，向相应的主机文件夹中添加电影</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img4.webp"
+                      alt="添加电影"
+                ></p>
+<p>在 Jellyfin 控制台进行媒体库扫描</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img5.webp"
+                      alt="媒体库扫描"
+                ></p>
+<p>扫描完成后，媒体库里便会展示出所有添加的媒体</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img6.webp"
+                      alt="扫描结果"
+                ></p>
+<p>其他管理容器的命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker start jellyfin   <span class="comment"># 启动名为 jellyfin 的容器</span></span><br><span class="line">docker stop jellyfin    <span class="comment"># 停止名为 jellyfin 的容器</span></span><br><span class="line">docker <span class="built_in">rm</span> jellyfin      <span class="comment"># 删除名为 jellyfin 的容器</span></span><br><span class="line">docker ps               <span class="comment"># 查看当前正在运行的容器</span></span><br><span class="line">docker ps -a            <span class="comment"># 查看所有容器，包括已停止的</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、在其他平台访问媒体库"><a href="#三、在其他平台访问媒体库" class="headerlink" title="三、在其他平台访问媒体库"></a>三、在其他平台访问媒体库</h2><p>在终端查看本机 IP 地址：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></div>
+
+<p>如果其他平台和主机处于同一局域网下，输入 <code>http://x.x.x.x:8096</code> （<code>x.x.x.x</code> 替换为主机 IPv4 地址）即可访问；</p>
+<p>如果其他平台和主机不处于同一局域网下但都支持 IPv6，输入 <code>http://[x:x:x:x:x:x:x:x]:8096</code> （<code>[x:x:x:x:x:x:x:x]</code> 替换为主机 IPv6 地址）即可访问；</p>
+<p>如果其他平台和主机不处于同一局域网下且都不支持 IPv6，只能通过公网 IPv4 和端口转发实现访问。</p>
+<p>其他平台访问效果：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/building-jellyfin-media-library-with-docker/img7.webp"
+                      alt="其他平台访问结果"
+                ></p>
 ]]></content>
       <categories>
         <category>Media</category>
       </categories>
       <tags>
-        <tag>Alist</tag>
-        <tag>Cloud Drive</tag>
-        <tag>Netdisk</tag>
+        <tag>Docker</tag>
+        <tag>Jellyfin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Chinese Mojibake Encyclopedia</title>
+    <url>//archives/chinese-mojibake-encyclopedia/</url>
+    <content><![CDATA[<p>中文乱码是计算机系统在以错误编码方式解析字符数据时产生的一种现象，通常表现为不可理解的符号或替换字符。本百科的内容针对与简体中文相关的常见编码类型，总结了常见的乱码现象、产生原因及解决策略。</p>
+<h2 id="单次编码乱码"><a href="#单次编码乱码" class="headerlink" title="单次编码乱码"></a>单次编码乱码</h2><p>单次编码乱码指数据被错误地读取或解析一次编码后产生的现象。</p>
+<h3 id="古文码"><a href="#古文码" class="headerlink" title="古文码"></a>古文码</h3><ul>
+<li><p><strong>示例：</strong> <code>瑕佸ソ濂藉︿範澶╁ぉ鍚戜笂</code></p>
+</li>
+<li><p><strong>特点：</strong> 显示为难以理解的生僻汉字或日韩文字符。</p>
+</li>
+<li><p><strong>产生原因：</strong> 使用 <code>GBK</code> 读取 <code>UTF-8</code> 编码的文本。</p>
+</li>
+<li><p><strong>技术解释：</strong></p>
+<ul>
+<li><code>UTF-8</code> 是变长编码，中文字符通常占 3 个字节，但中文 <code>GBK</code> 习惯以双字节编码。</li>
+<li>使用 <code>GBK</code> 误解 <code>UTF-8</code> 的字节流会将 3 个字节拆分为多个双字节组合，从而产生乱码。</li>
+</ul>
+</li>
+<li><p><strong>解决策略：</strong></p>
+<ul>
+<li>强制用 <code>UTF-8</code> 解码文本，恢复原始字符。</li>
+<li>使用编码检测工具（如 <code>chardet</code>）来识别文件的实际编码。</li>
+</ul>
+</li>
+</ul>
+<h3 id="问号码"><a href="#问号码" class="headerlink" title="问号码"></a>问号码</h3><ul>
+<li><p><strong>示例：</strong> <code>Ҫ�ú�ѧϰ��������</code></p>
+</li>
+<li><p><strong>特点：</strong> 大部分内容显示为替换字符 <code>�</code> 或问号 <code>?</code>。</p>
+</li>
+<li><p><strong>产生原因：</strong> 使用 <code>UTF-8</code> 读取 <code>GBK</code> 编码的文本。</p>
+</li>
+<li><p><strong>技术解释：</strong></p>
+<ul>
+<li><code>GBK</code> 的双字节字符中许多字节组合在 <code>UTF-8</code> 编码规则下无效。</li>
+<li><code>UTF-8</code> 解码错误时插入替代符号 <code>�</code>（U+FFFD），以占位显示。</li>
+</ul>
+</li>
+<li><p><strong>解决策略：</strong></p>
+<ul>
+<li>强制用 <code>GBK</code> 解码数据。</li>
+<li>确认文件的实际编码与读取环境保持一致。</li>
+</ul>
+</li>
+</ul>
+<h3 id="符号码"><a href="#符号码" class="headerlink" title="符号码"></a>符号码</h3><ul>
+<li><p><strong>示例：</strong> <code>è¦å¥½å¥½å­¦ä¹ å¤©å¤©åä¸</code></p>
+</li>
+<li><p><strong>特点：</strong> 大部分字符显示为各种符号或方块 <code></code>。</p>
+</li>
+<li><p><strong>产生原因：</strong> 使用 <code>Latin1</code> 读取 <code>UTF-8</code> 编码的文本。</p>
+</li>
+<li><p><strong>技术解释：</strong></p>
+<ul>
+<li><code>UTF-8</code> 使用多字节编码，其中每个字节的值直接映射到 <code>Latin1</code> 的字符集。</li>
+<li>造成部分中文字符被错误解码为拼音或带音调符号。</li>
+</ul>
+</li>
+<li><p><strong>解决策略：</strong></p>
+<ul>
+<li>强制用 <code>UTF-8</code> 读取文本，避免错误解码。</li>
+<li>避免在默认设置为 <code>Latin1</code> 的环境中打开中文内容。</li>
+</ul>
+</li>
+</ul>
+<h3 id="拼音码"><a href="#拼音码" class="headerlink" title="拼音码"></a>拼音码</h3><ul>
+<li><p><strong>示例：</strong> <code>ÒªºÃºÃÑ§Ï°ÌìÌìÏòÉÏ</code></p>
+</li>
+<li><p><strong>特点：</strong> 显示为类似拼音声调符号的西文字符。</p>
+</li>
+<li><p><strong>产生原因：</strong> 使用 <code>Latin1</code> 读取 <code>GBK</code> 编码的文本。</p>
+</li>
+<li><p><strong>技术解释：</strong></p>
+<ul>
+<li><code>GBK</code> 的双字节内容被错误解析为单字节字符，其中映射到了 <code>Latin1</code> 的符号区域，导致形成拼音或特殊符号。</li>
+</ul>
+</li>
+<li><p><strong>解决策略：</strong></p>
+<ul>
+<li>强制用 <code>GBK</code> 解码内容。</li>
+<li>避免在默认设置为 <code>Latin1</code> 的环境中存放中文文件。</li>
+</ul>
+</li>
+</ul>
+<h2 id="双重编码乱码"><a href="#双重编码乱码" class="headerlink" title="双重编码乱码"></a>双重编码乱码</h2><p>双重编码乱码指数据在存储或读取过程中连续发生两次编码错误后产生的更复杂乱码现象。</p>
+<h3 id="锟斤拷码"><a href="#锟斤拷码" class="headerlink" title="锟斤拷码"></a>锟斤拷码</h3><ul>
+<li><p><strong>示例：</strong> <code>要锟矫猴拷学习锟斤拷锟斤拷锟斤拷锟斤拷</code></p>
+</li>
+<li><p><strong>特点：</strong> 所有内容均显示为 <code>锟斤拷</code>。</p>
+</li>
+<li><p><strong>产生原因：</strong> 使用 <code>GBK</code> 编码的文本经过两次错误解码：</p>
+<ol>
+<li>数据用 <code>UTF-8</code> 读取，导致部分字符变为替代符号 <code>�</code>；</li>
+<li>含有 <code>�</code> 的文本再用 <code>GBK</code> 解码，其中 <code>�</code> 的字节流（<code>EF BF BD</code>）在 <code>GBK</code> 下映射为固定字符 <code>锟斤拷</code>。</li>
+</ol>
+</li>
+<li><p><strong>技术解释：</strong></p>
+<ul>
+<li>锟斤拷码是完全不可读的乱码，原始信息永久丢失。</li>
+</ul>
+</li>
+<li><p><strong>解决策略：</strong></p>
+<ul>
+<li>确认文档的真实编码格式，避免多次转换过程。</li>
+<li>使用编码检测工具解析编码路径，避免误读。</li>
+</ul>
+</li>
+</ul>
+<h3 id="污损码"><a href="#污损码" class="headerlink" title="污损码"></a>污损码</h3><ul>
+<li><p><strong>示例：</strong> <code>要好好?习天天向上</code></p>
+</li>
+<li><p><strong>特点：</strong> 原句内容大致保留，仅部分字符变为乱码（例如 <code>?</code> 或替换符号 <code>�</code>）。</p>
+</li>
+<li><p><strong>产生原因：</strong> 使用 <code>UTF-8</code> 编码的文本经过两次错误解码：</p>
+<ol>
+<li>第一次用 <code>GBK</code> 解码，错误解析部分 UTF-8 字节，产生错误的汉字；</li>
+<li>第二次用 <code>UTF-8</code> 解码上述结果，剩余无效字节被转换为乱码。</li>
+</ol>
+</li>
+<li><p><strong>技术解释：</strong></p>
+<ul>
+<li>污损码是一种部分可读的乱码类型，保留了原句的大部分有效信息，但因字节边界不对齐等问题导致部分字符变为乱码。</li>
+<li>偶数长度的原文更可能恢复，因为编码过程中的字节对齐问题更少。</li>
+</ul>
+</li>
+<li><p><strong>解决策略：</strong></p>
+<ul>
+<li>确认数据实际编码并统一读写环境，避免连续错误解码。</li>
+<li>从可读内容中推测原句并手动修复少量位置的乱码。</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>UTF-8</tag>
+        <tag>GBK</tag>
+        <tag>Mojibake</tag>
+        <tag>Character Encoding</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cloudflare Warp Zero Trust User Guide</title>
+    <url>//archives/cloudflare-warp-zero-trust-user-guide/</url>
+    <content><![CDATA[<h2 id="一、创建-Cloudflare-账户和-Zero-Trust-团队"><a href="#一、创建-Cloudflare-账户和-Zero-Trust-团队" class="headerlink" title="一、创建 Cloudflare 账户和 Zero Trust 团队"></a>一、创建 Cloudflare 账户和 Zero Trust 团队</h2><p>注册一个 Cloudflare 账户，点击左侧的 Zero Trust</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img0.webp"
+                      alt="Cloudflare 控制台"
+                ></p>
+<p>创建一个团队并填写名称</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img1.webp"
+                      alt="创建 Cloudflare 团队"
+                ></p>
+<p>选择免费套餐</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img2.webp"
+                      alt="选择免费套餐"
+                ></p>
+<h2 id="二、添加团队筛选策略"><a href="#二、添加团队筛选策略" class="headerlink" title="二、添加团队筛选策略"></a>二、添加团队筛选策略</h2><p>回到 Zero Trust 页面，选择 Settings 中的 WARP Client 选项</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img3.webp"
+                      alt="Zero Trust 设置"
+                ></p>
+<p>点击 Device enrollment permissions 中的 Manage，添加策略</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img4.webp"
+                      alt="WARP Client 设置"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img5.webp"
+                      alt="添加策略"
+                ></p>
+<p>规则名称任意，动作填 Allow，筛选器选择 Emails ending in，Value 填写能通过团队筛选的邮箱后缀</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img6.webp"
+                      alt="策略详细内容"
+                ></p>
+<h2 id="三、添加团队用户"><a href="#三、添加团队用户" class="headerlink" title="三、添加团队用户"></a>三、添加团队用户</h2><p>在 Cloudflare Warp客户端中选择账户，点击使用 Cloudflare Zero Trust 登录</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img7.webp"
+                      alt="登录到 Cloudflare Zero Trust 团队"
+                ></p>
+<p>使用 Cloudflare Zero Trust 登录之前的界面如图</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img8.webp"
+                      alt="登录团队前连接图示"
+                ></p>
+<p>根据要求填写团队名称并完成认证</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img9.webp"
+                      alt="填写团队名称并认证"
+                ></p>
+<p>使用 Cloudflare Zero Trust 登录之后的界面如图，可以发现已经变成了 Zero Trust，现在就可以使用 Zero Trust 访问外网了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img10.webp"
+                      alt="登录团队后连接图示"
+                ></p>
+<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>由于各种原因，自 2024 年 6 月 6 日起，使用此方法进行流量加密已部分失效。</p>
+<p>如果连接失败且错误代码如图表示已无法正常连接。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img11.webp"
+                      alt="错误代码"
+                ></p>
+<p>部分地区和设备仍可通过手机流量或手机共享热点到电脑使用此方法。</p>
+<blockquote>
+<p>更新：Cloudflare WARP 更新了协议，已支持后量子加密，是通过 MASQUE 隧道（基于 QUIC 的安全通道）来传输请求和 DNS 查询。想要使用只需在控制台输入：</p>
+<div class="code-container" data-rel="Bat"><figure class="iseeu highlight bat"><table><tr><td class="code"><pre><span class="line">warp-cli tunnel protocol <span class="built_in">set</span> MASQUE</span><br></pre></td></tr></table></figure></div>
+
+<p>即可使用 MASQUE 隧道进行流量加密。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Cloudflare</tag>
       </tags>
   </entry>
   <entry>
@@ -1174,348 +1516,6 @@
         <tag>Video</tag>
         <tag>Codec</tag>
         <tag>Naming Conventions</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Building Jellyfin Media Library with Docker</title>
-    <url>//archives/building-jellyfin-media-library-with-docker/</url>
-    <content><![CDATA[<h2 id="一、配置-Docker"><a href="#一、配置-Docker" class="headerlink" title="一、配置 Docker"></a>一、配置 Docker</h2><p>进入 Docker 官网，下载 Docker Desktop 并进行安装</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img0.webp"
-                      alt="Docker 官网"
-                ></p>
-<blockquote>
-<p>安装期间，可能会在控制台要求更新或下载 WSL，直接按任意键安装即可</p>
-</blockquote>
-<p>安装完成后就可以进入并查看 Docker Desktop 的控制面板</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img1.webp"
-                      alt="Docker Desktop 控制面板"
-                ></p>
-<p><em>可选：Docker Desktop 汉化</em></p>
-<p>打开如下链接，下载版本对应的 <code>app.asar</code> 文件，并替换 <code>C:\Program Files\Docker\Docker\frontend\resources</code> 路径下的同名文件</p>
-<p><a class="link"   href="https://github.com/asxez/DockerDesktop-CN" >https://github.com/asxez/DockerDesktop-CN<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="二、配置-Jellyfin"><a href="#二、配置-Jellyfin" class="headerlink" title="二、配置 Jellyfin"></a>二、配置 Jellyfin</h2><p>打开控制台，输入以下指令拉取 Jellyfin 镜像到本地：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
-
-<p>在控制台执行以下指令，运行一个 Jellyfin 容器：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d ^</span><br><span class="line">	--name=jellyfin ^</span><br><span class="line">	-p 8096:8096 ^</span><br><span class="line">	-p 8920:8920 ^</span><br><span class="line">	-v D:\Jellyfin\config:/config ^</span><br><span class="line">	-v D:\Jellyfin\cache:/cache ^</span><br><span class="line">	-v D:\Jellyfin\media:/media ^</span><br><span class="line">	--restart unless-stopped ^</span><br><span class="line">	jellyfin/jellyfin</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p><strong>注意事项</strong>：</p>
-<ol>
-<li>每一行命令后边都必须加续行符号 <code>^</code> ；</li>
-<li><code>/config</code> , <code>/cache</code> , <code>/media</code> 的路径需替换为主机的实际路径</li>
-<li>Jellyfin 的默认 HTTP 端口为 8096，默认 HTTPS 端口为 8920</li>
-</ol>
-</blockquote>
-<p>容器运行成功后，访问 <a class="link"   href="http://localhost:8096/" >http://localhost:8096<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 打开 Jellyfin 控制面板</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img2.webp"
-                      alt="Jellyfin 控制面板"
-                ></p>
-<p>创建一个媒体库</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img3.webp"
-                      alt="创建媒体库"
-                ></p>
-<p>创建完成后，向相应的主机文件夹中添加电影</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img4.webp"
-                      alt="添加电影"
-                ></p>
-<p>在 Jellyfin 控制台进行媒体库扫描</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img5.webp"
-                      alt="媒体库扫描"
-                ></p>
-<p>扫描完成后，媒体库里便会展示出所有添加的媒体</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img6.webp"
-                      alt="扫描结果"
-                ></p>
-<p>其他管理容器的命令：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker start jellyfin   <span class="comment"># 启动名为 jellyfin 的容器</span></span><br><span class="line">docker stop jellyfin    <span class="comment"># 停止名为 jellyfin 的容器</span></span><br><span class="line">docker <span class="built_in">rm</span> jellyfin      <span class="comment"># 删除名为 jellyfin 的容器</span></span><br><span class="line">docker ps               <span class="comment"># 查看当前正在运行的容器</span></span><br><span class="line">docker ps -a            <span class="comment"># 查看所有容器，包括已停止的</span></span><br></pre></td></tr></table></figure></div>
-
-<h2 id="三、在其他平台访问媒体库"><a href="#三、在其他平台访问媒体库" class="headerlink" title="三、在其他平台访问媒体库"></a>三、在其他平台访问媒体库</h2><p>在终端查看本机 IP 地址：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></div>
-
-<p>如果其他平台和主机处于同一局域网下，输入 <code>http://x.x.x.x:8096</code> （<code>x.x.x.x</code> 替换为主机 IPv4 地址）即可访问；</p>
-<p>如果其他平台和主机不处于同一局域网下但都支持 IPv6，输入 <code>http://[x:x:x:x:x:x:x:x]:8096</code> （<code>[x:x:x:x:x:x:x:x]</code> 替换为主机 IPv6 地址）即可访问；</p>
-<p>如果其他平台和主机不处于同一局域网下且都不支持 IPv6，只能通过公网 IPv4 和端口转发实现访问。</p>
-<p>其他平台访问效果：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/building-jellyfin-media-library-with-docker/img7.webp"
-                      alt="其他平台访问结果"
-                ></p>
-]]></content>
-      <categories>
-        <category>Media</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Jellyfin</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Chinese Mojibake Encyclopedia</title>
-    <url>//archives/chinese-mojibake-encyclopedia/</url>
-    <content><![CDATA[<p>中文乱码是计算机系统在以错误编码方式解析字符数据时产生的一种现象，通常表现为不可理解的符号或替换字符。本百科的内容针对与简体中文相关的常见编码类型，总结了常见的乱码现象、产生原因及解决策略。</p>
-<h2 id="单次编码乱码"><a href="#单次编码乱码" class="headerlink" title="单次编码乱码"></a>单次编码乱码</h2><p>单次编码乱码指数据被错误地读取或解析一次编码后产生的现象。</p>
-<h3 id="古文码"><a href="#古文码" class="headerlink" title="古文码"></a>古文码</h3><ul>
-<li><p><strong>示例：</strong> <code>瑕佸ソ濂藉︿範澶╁ぉ鍚戜笂</code></p>
-</li>
-<li><p><strong>特点：</strong> 显示为难以理解的生僻汉字或日韩文字符。</p>
-</li>
-<li><p><strong>产生原因：</strong> 使用 <code>GBK</code> 读取 <code>UTF-8</code> 编码的文本。</p>
-</li>
-<li><p><strong>技术解释：</strong></p>
-<ul>
-<li><code>UTF-8</code> 是变长编码，中文字符通常占 3 个字节，但中文 <code>GBK</code> 习惯以双字节编码。</li>
-<li>使用 <code>GBK</code> 误解 <code>UTF-8</code> 的字节流会将 3 个字节拆分为多个双字节组合，从而产生乱码。</li>
-</ul>
-</li>
-<li><p><strong>解决策略：</strong></p>
-<ul>
-<li>强制用 <code>UTF-8</code> 解码文本，恢复原始字符。</li>
-<li>使用编码检测工具（如 <code>chardet</code>）来识别文件的实际编码。</li>
-</ul>
-</li>
-</ul>
-<h3 id="问号码"><a href="#问号码" class="headerlink" title="问号码"></a>问号码</h3><ul>
-<li><p><strong>示例：</strong> <code>Ҫ�ú�ѧϰ��������</code></p>
-</li>
-<li><p><strong>特点：</strong> 大部分内容显示为替换字符 <code>�</code> 或问号 <code>?</code>。</p>
-</li>
-<li><p><strong>产生原因：</strong> 使用 <code>UTF-8</code> 读取 <code>GBK</code> 编码的文本。</p>
-</li>
-<li><p><strong>技术解释：</strong></p>
-<ul>
-<li><code>GBK</code> 的双字节字符中许多字节组合在 <code>UTF-8</code> 编码规则下无效。</li>
-<li><code>UTF-8</code> 解码错误时插入替代符号 <code>�</code>（U+FFFD），以占位显示。</li>
-</ul>
-</li>
-<li><p><strong>解决策略：</strong></p>
-<ul>
-<li>强制用 <code>GBK</code> 解码数据。</li>
-<li>确认文件的实际编码与读取环境保持一致。</li>
-</ul>
-</li>
-</ul>
-<h3 id="符号码"><a href="#符号码" class="headerlink" title="符号码"></a>符号码</h3><ul>
-<li><p><strong>示例：</strong> <code>è¦å¥½å¥½å­¦ä¹ å¤©å¤©åä¸</code></p>
-</li>
-<li><p><strong>特点：</strong> 大部分字符显示为各种符号或方块 <code></code>。</p>
-</li>
-<li><p><strong>产生原因：</strong> 使用 <code>Latin1</code> 读取 <code>UTF-8</code> 编码的文本。</p>
-</li>
-<li><p><strong>技术解释：</strong></p>
-<ul>
-<li><code>UTF-8</code> 使用多字节编码，其中每个字节的值直接映射到 <code>Latin1</code> 的字符集。</li>
-<li>造成部分中文字符被错误解码为拼音或带音调符号。</li>
-</ul>
-</li>
-<li><p><strong>解决策略：</strong></p>
-<ul>
-<li>强制用 <code>UTF-8</code> 读取文本，避免错误解码。</li>
-<li>避免在默认设置为 <code>Latin1</code> 的环境中打开中文内容。</li>
-</ul>
-</li>
-</ul>
-<h3 id="拼音码"><a href="#拼音码" class="headerlink" title="拼音码"></a>拼音码</h3><ul>
-<li><p><strong>示例：</strong> <code>ÒªºÃºÃÑ§Ï°ÌìÌìÏòÉÏ</code></p>
-</li>
-<li><p><strong>特点：</strong> 显示为类似拼音声调符号的西文字符。</p>
-</li>
-<li><p><strong>产生原因：</strong> 使用 <code>Latin1</code> 读取 <code>GBK</code> 编码的文本。</p>
-</li>
-<li><p><strong>技术解释：</strong></p>
-<ul>
-<li><code>GBK</code> 的双字节内容被错误解析为单字节字符，其中映射到了 <code>Latin1</code> 的符号区域，导致形成拼音或特殊符号。</li>
-</ul>
-</li>
-<li><p><strong>解决策略：</strong></p>
-<ul>
-<li>强制用 <code>GBK</code> 解码内容。</li>
-<li>避免在默认设置为 <code>Latin1</code> 的环境中存放中文文件。</li>
-</ul>
-</li>
-</ul>
-<h2 id="双重编码乱码"><a href="#双重编码乱码" class="headerlink" title="双重编码乱码"></a>双重编码乱码</h2><p>双重编码乱码指数据在存储或读取过程中连续发生两次编码错误后产生的更复杂乱码现象。</p>
-<h3 id="锟斤拷码"><a href="#锟斤拷码" class="headerlink" title="锟斤拷码"></a>锟斤拷码</h3><ul>
-<li><p><strong>示例：</strong> <code>要锟矫猴拷学习锟斤拷锟斤拷锟斤拷锟斤拷</code></p>
-</li>
-<li><p><strong>特点：</strong> 所有内容均显示为 <code>锟斤拷</code>。</p>
-</li>
-<li><p><strong>产生原因：</strong> 使用 <code>GBK</code> 编码的文本经过两次错误解码：</p>
-<ol>
-<li>数据用 <code>UTF-8</code> 读取，导致部分字符变为替代符号 <code>�</code>；</li>
-<li>含有 <code>�</code> 的文本再用 <code>GBK</code> 解码，其中 <code>�</code> 的字节流（<code>EF BF BD</code>）在 <code>GBK</code> 下映射为固定字符 <code>锟斤拷</code>。</li>
-</ol>
-</li>
-<li><p><strong>技术解释：</strong></p>
-<ul>
-<li>锟斤拷码是完全不可读的乱码，原始信息永久丢失。</li>
-</ul>
-</li>
-<li><p><strong>解决策略：</strong></p>
-<ul>
-<li>确认文档的真实编码格式，避免多次转换过程。</li>
-<li>使用编码检测工具解析编码路径，避免误读。</li>
-</ul>
-</li>
-</ul>
-<h3 id="污损码"><a href="#污损码" class="headerlink" title="污损码"></a>污损码</h3><ul>
-<li><p><strong>示例：</strong> <code>要好好?习天天向上</code></p>
-</li>
-<li><p><strong>特点：</strong> 原句内容大致保留，仅部分字符变为乱码（例如 <code>?</code> 或替换符号 <code>�</code>）。</p>
-</li>
-<li><p><strong>产生原因：</strong> 使用 <code>UTF-8</code> 编码的文本经过两次错误解码：</p>
-<ol>
-<li>第一次用 <code>GBK</code> 解码，错误解析部分 UTF-8 字节，产生错误的汉字；</li>
-<li>第二次用 <code>UTF-8</code> 解码上述结果，剩余无效字节被转换为乱码。</li>
-</ol>
-</li>
-<li><p><strong>技术解释：</strong></p>
-<ul>
-<li>污损码是一种部分可读的乱码类型，保留了原句的大部分有效信息，但因字节边界不对齐等问题导致部分字符变为乱码。</li>
-<li>偶数长度的原文更可能恢复，因为编码过程中的字节对齐问题更少。</li>
-</ul>
-</li>
-<li><p><strong>解决策略：</strong></p>
-<ul>
-<li>确认数据实际编码并统一读写环境，避免连续错误解码。</li>
-<li>从可读内容中推测原句并手动修复少量位置的乱码。</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>UTF-8</tag>
-        <tag>GBK</tag>
-        <tag>Mojibake</tag>
-        <tag>Character Encoding</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cloudflare Warp Zero Trust User Guide</title>
-    <url>//archives/cloudflare-warp-zero-trust-user-guide/</url>
-    <content><![CDATA[<h2 id="一、创建-Cloudflare-账户和-Zero-Trust-团队"><a href="#一、创建-Cloudflare-账户和-Zero-Trust-团队" class="headerlink" title="一、创建 Cloudflare 账户和 Zero Trust 团队"></a>一、创建 Cloudflare 账户和 Zero Trust 团队</h2><p>注册一个 Cloudflare 账户，点击左侧的 Zero Trust</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img0.webp"
-                      alt="Cloudflare 控制台"
-                ></p>
-<p>创建一个团队并填写名称</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img1.webp"
-                      alt="创建 Cloudflare 团队"
-                ></p>
-<p>选择免费套餐</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img2.webp"
-                      alt="选择免费套餐"
-                ></p>
-<h2 id="二、添加团队筛选策略"><a href="#二、添加团队筛选策略" class="headerlink" title="二、添加团队筛选策略"></a>二、添加团队筛选策略</h2><p>回到 Zero Trust 页面，选择 Settings 中的 WARP Client 选项</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img3.webp"
-                      alt="Zero Trust 设置"
-                ></p>
-<p>点击 Device enrollment permissions 中的 Manage，添加策略</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img4.webp"
-                      alt="WARP Client 设置"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img5.webp"
-                      alt="添加策略"
-                ></p>
-<p>规则名称任意，动作填 Allow，筛选器选择 Emails ending in，Value 填写能通过团队筛选的邮箱后缀</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img6.webp"
-                      alt="策略详细内容"
-                ></p>
-<h2 id="三、添加团队用户"><a href="#三、添加团队用户" class="headerlink" title="三、添加团队用户"></a>三、添加团队用户</h2><p>在 Cloudflare Warp客户端中选择账户，点击使用 Cloudflare Zero Trust 登录</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img7.webp"
-                      alt="登录到 Cloudflare Zero Trust 团队"
-                ></p>
-<p>使用 Cloudflare Zero Trust 登录之前的界面如图</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img8.webp"
-                      alt="登录团队前连接图示"
-                ></p>
-<p>根据要求填写团队名称并完成认证</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img9.webp"
-                      alt="填写团队名称并认证"
-                ></p>
-<p>使用 Cloudflare Zero Trust 登录之后的界面如图，可以发现已经变成了 Zero Trust，现在就可以使用 Zero Trust 访问外网了</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img10.webp"
-                      alt="登录团队后连接图示"
-                ></p>
-<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>由于各种原因，自 2024 年 6 月 6 日起，使用此方法进行流量加密已部分失效。</p>
-<p>如果连接失败且错误代码如图表示已无法正常连接。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/cloudflare-warp-zero-trust-user-guide/img11.webp"
-                      alt="错误代码"
-                ></p>
-<p>部分地区和设备仍可通过手机流量或手机共享热点到电脑使用此方法。</p>
-<blockquote>
-<p>更新：Cloudflare WARP 更新了协议，已支持后量子加密，是通过 MASQUE 隧道（基于 QUIC 的安全通道）来传输请求和 DNS 查询。想要使用只需在控制台输入：</p>
-<div class="code-container" data-rel="Bat"><figure class="iseeu highlight bat"><table><tr><td class="code"><pre><span class="line">warp-cli tunnel protocol <span class="built_in">set</span> MASQUE</span><br></pre></td></tr></table></figure></div>
-
-<p>即可使用 MASQUE 隧道进行流量加密。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Network</category>
-      </categories>
-      <tags>
-        <tag>Cloudflare</tag>
       </tags>
   </entry>
   <entry>
@@ -2361,6 +2361,95 @@
       </tags>
   </entry>
   <entry>
+    <title>Guide for Maven Installation &amp; Build</title>
+    <url>//archives/guide-for-maven-installation-and-build/</url>
+    <content><![CDATA[<h2 id="一、Maven-的下载与安装"><a href="#一、Maven-的下载与安装" class="headerlink" title="一、Maven 的下载与安装"></a>一、Maven 的下载与安装</h2><p><a class="link"   href="https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip" >Maven 3.9.8 Windows版本下载链接<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img0.webp"
+                      alt="Maven 官方下载"
+                ></p>
+<p>下载好后，解压到特定文件夹（路径不能有中文、空格和其他特殊字符）。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img1.webp"
+                      alt="Maven 安装文件夹"
+                ></p>
+<h2 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a>二、配置环境变量</h2><p>打开系统环境变量。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img2.webp"
+                      alt="编辑系统环境变量"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img3.webp"
+                      alt="系统属性 - 环境变量"
+                ></p>
+<p>修改 Path 内容，添加 Maven 安装路径。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img4.webp"
+                      alt="系统变量 - Path - 编辑"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img5.webp"
+                      alt="添加 Maven 路径"
+                ></p>
+<p>环境变量配置好后，在终端中输入 <code>mvn -v</code> 查看 Maven 版本，验证是否安装成功。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img6.webp"
+                      alt="查看 Maven 版本"
+                ></p>
+<h2 id="三、配置-settings-和-toolchains-文件"><a href="#三、配置-settings-和-toolchains-文件" class="headerlink" title="三、配置 settings 和 toolchains 文件"></a>三、配置 settings 和 toolchains 文件</h2><p>打开Maven安装路径下 <code>/conf/settings.xml</code> 和 <code>/conf/toolchains.xml</code> 文件。</p>
+<p>为了在 IDEA 中提高 Maven 的构建速度，需要修改 Maven 的下载源，所以先在 Maven 安装目录下新建本地仓库文件夹 <code>maven_repository</code> 。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img7.webp"
+                      alt="新建本地仓库文件夹"
+                ></p>
+<p><code>settings.xml</code> 文件修改如下：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;localRepository&gt;标签放Maven仓库路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>D:/Apache Maven/apache-maven-3.9.8/maven_repository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">proxies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">proxies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">servers</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servers</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;mirrors&gt;标签中放Maven的下载源 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>aliyunmaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>Aliyun Public Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://maven.aliyun.com/repository/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;profiles&gt;标签中放jdk的版本 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>jdk-22<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>22<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>除阿里云外其他国内仓库地址：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- NetEase --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-163<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus 163<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.163.com/maven/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tecent Cloud --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-tencentyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus tencentyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br></pre></td></tr></table></figure></div>
+
+<p><code>toolchains.xml</code> 文件修改如下：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">toolchains</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;toolchain&gt;的&lt;provides&gt;标签中放jdk版本，&lt;configuration&gt;标签中放jdk安装路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toolchain</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>jdk<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">provides</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>22<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">vendor</span>&gt;</span>oracle<span class="tag">&lt;/<span class="name">vendor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">provides</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">jdkHome</span>&gt;</span>C:/Program Files/Java/jdk-22<span class="tag">&lt;/<span class="name">jdkHome</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">toolchain</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">toolchains</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>修改好后，在终端输入 <code>mvn help:system</code> 测试，Maven 会自动下载缺省的或者更新的各种配置文件和依赖到本地仓库中。如果出现 Build Success，说明 Maven 已经配置成功了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img8.webp"
+                      alt="测试 Maven 配置"
+                ></p>
+<h2 id="四、InetlliJ-IDEA-配置"><a href="#四、InetlliJ-IDEA-配置" class="headerlink" title="四、InetlliJ IDEA 配置"></a>四、InetlliJ IDEA 配置</h2><p>在 Maven 设置里，修改 Maven 主路径、用户设置文件和本地仓库的内容即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/guide-for-maven-installation-and-build/img9.webp"
+                      alt="IntelliJ IDEA 配置"
+                ></p>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Game Text Localization Process Based on Poedit</title>
     <url>//archives/game-text-localization-process-based-on-poedit/</url>
     <content><![CDATA[<h2 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h2><p>首先，安装 Poedit 软件以及相关 Python 库：</p>
@@ -2455,92 +2544,87 @@
       </tags>
   </entry>
   <entry>
-    <title>Guide for Maven Installation &amp; Build</title>
-    <url>//archives/guide-for-maven-installation-and-build/</url>
-    <content><![CDATA[<h2 id="一、Maven-的下载与安装"><a href="#一、Maven-的下载与安装" class="headerlink" title="一、Maven 的下载与安装"></a>一、Maven 的下载与安装</h2><p><a class="link"   href="https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.zip" >Maven 3.9.8 Windows版本下载链接<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+    <title>How to Bypass VPN Detection</title>
+    <url>//archives/how-to-bypass-vpn-detection/</url>
+    <content><![CDATA[<h2 id="一、代理配置"><a href="#一、代理配置" class="headerlink" title="一、代理配置"></a>一、代理配置</h2><p>打开 Clash Verge，选择一个节点，并将路由设置为全局。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img0.webp"
-                      alt="Maven 官方下载"
+                     data-src="/images/how-to-bypass-vpn-detection/img0.webp"
+                      alt="设置全局路由"
                 ></p>
-<p>下载好后，解压到特定文件夹（路径不能有中文、空格和其他特殊字符）。</p>
+<p>打开设置，将 DNS 覆写、IPv6、统一延迟三个开关打开。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img1.webp"
-                      alt="Maven 安装文件夹"
+                     data-src="/images/how-to-bypass-vpn-detection/img1.webp"
+                      alt="Clash 设置"
                 ></p>
-<h2 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a>二、配置环境变量</h2><p>打开系统环境变量。</p>
+<p>打开端口设置，打开 HTTP(S) 代理端口的开关。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img2.webp"
-                      alt="编辑系统环境变量"
+                     data-src="/images/how-to-bypass-vpn-detection/img2.webp"
+                      alt="端口配置"
                 ></p>
+<p>最后打开系统设置，将 Clash Verge 的运行模式调整为虚拟网卡模式，也可以右键任务栏图标打开 TUN 模式。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img3.webp"
-                      alt="系统属性 - 环境变量"
-                ></p>
-<p>修改 Path 内容，添加 Maven 安装路径。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img4.webp"
-                      alt="系统变量 - Path - 编辑"
+                     data-src="/images/how-to-bypass-vpn-detection/img3.webp"
+                      alt="虚拟网卡模式"
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img5.webp"
-                      alt="添加 Maven 路径"
+                     data-src="/images/how-to-bypass-vpn-detection/img4.webp"
+                      alt="TUN 模式"
                 ></p>
-<p>环境变量配置好后，在终端中输入 <code>mvn -v</code> 查看 Maven 版本，验证是否安装成功。</p>
+<h2 id="二、指纹浏览器配置"><a href="#二、指纹浏览器配置" class="headerlink" title="二、指纹浏览器配置"></a>二、指纹浏览器配置</h2><p>下载并安装 AdsPower 指纹浏览器，打开后点击“新建浏览器”。</p>
+<p>修改环境名称和使用的浏览器内核。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img6.webp"
-                      alt="查看 Maven 版本"
+                     data-src="/images/how-to-bypass-vpn-detection/img5.webp"
+                      alt="基础设置"
                 ></p>
-<h2 id="三、配置-settings-和-toolchains-文件"><a href="#三、配置-settings-和-toolchains-文件" class="headerlink" title="三、配置 settings 和 toolchains 文件"></a>三、配置 settings 和 toolchains 文件</h2><p>打开Maven安装路径下 <code>/conf/settings.xml</code> 和 <code>/conf/toolchains.xml</code> 文件。</p>
-<p>为了在 IDEA 中提高 Maven 的构建速度，需要修改 Maven 的下载源，所以先在 Maven 安装目录下新建本地仓库文件夹 <code>maven_repository</code> 。</p>
+<p>修改代理信息，代理类型选择 HTTP，主机 IP 填写 <code>127.0.0.1</code>，端口号填写 Clash Verge 中的 HTTP 代理端口。填写完成后检查代理是否与 Clash Verge 中连接的节点信息一致。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img7.webp"
-                      alt="新建本地仓库文件夹"
+                     data-src="/images/how-to-bypass-vpn-detection/img6.webp"
+                      alt="代理信息"
                 ></p>
-<p><code>settings.xml</code> 文件修改如下：</p>
-<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;localRepository&gt;标签放Maven仓库路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>D:/Apache Maven/apache-maven-3.9.8/maven_repository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">proxies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">proxies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">servers</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servers</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;mirrors&gt;标签中放Maven的下载源 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>aliyunmaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>Aliyun Public Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://maven.aliyun.com/repository/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;profiles&gt;标签中放jdk的版本 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>jdk-22<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>22<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>22<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>除阿里云外其他国内仓库地址：</p>
-<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- NetEase --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-163<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus 163<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.163.com/maven/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tecent Cloud --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-tencentyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus tencentyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br></pre></td></tr></table></figure></div>
-
-<p><code>toolchains.xml</code> 文件修改如下：</p>
-<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">toolchains</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;toolchain&gt;的&lt;provides&gt;标签中放jdk版本，&lt;configuration&gt;标签中放jdk安装路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toolchain</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>jdk<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">provides</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>22<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">vendor</span>&gt;</span>oracle<span class="tag">&lt;/<span class="name">vendor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">provides</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">jdkHome</span>&gt;</span>C:/Program Files/Java/jdk-22<span class="tag">&lt;/<span class="name">jdkHome</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">toolchain</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">toolchains</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>修改好后，在终端输入 <code>mvn help:system</code> 测试，Maven 会自动下载缺省的或者更新的各种配置文件和依赖到本地仓库中。如果出现 Build Success，说明 Maven 已经配置成功了。</p>
+<p>完成后保存，即可创建指纹浏览器环境。</p>
+<h2 id="三、检测-IP-地址"><a href="#三、检测-IP-地址" class="headerlink" title="三、检测 IP 地址"></a>三、检测 IP 地址</h2><p>打开指纹浏览器，可以看到目前的 IP 信息。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img8.webp"
-                      alt="测试 Maven 配置"
+                     data-src="/images/how-to-bypass-vpn-detection/img7.webp"
+                      alt="IP 信息"
                 ></p>
-<h2 id="四、InetlliJ-IDEA-配置"><a href="#四、InetlliJ-IDEA-配置" class="headerlink" title="四、InetlliJ IDEA 配置"></a>四、InetlliJ IDEA 配置</h2><p>在 Maven 设置里，修改 Maven 主路径、用户设置文件和本地仓库的内容即可。</p>
+<p>访问 <code>https://ip111.cn</code>，查看 IP 信息，保证三方测试 IP 地址相同。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/guide-for-maven-installation-and-build/img9.webp"
-                      alt="IntelliJ IDEA 配置"
+                     data-src="/images/how-to-bypass-vpn-detection/img8.webp"
+                      alt="三方测试 IP 地址"
                 ></p>
+<p>接下来访问 <code>https://scamalytics.com/ip</code>，输入经过测试的 IP 地址，检测 IP 纯净度。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/how-to-bypass-vpn-detection/img9.webp"
+                      alt="检测 IP 纯净度"
+                ></p>
+<p>如果 IP 纯净度很低或为 0，证明纯净 IP 隐私浏览环境已创建好，能够绕过 VPN 检测。</p>
 ]]></content>
       <categories>
         <category>Programming</category>
       </categories>
       <tags>
-        <tag>Maven</tag>
+        <tag>IP</tag>
+        <tag>VPN</tag>
       </tags>
   </entry>
   <entry>
@@ -3311,90 +3395,6 @@
       </tags>
   </entry>
   <entry>
-    <title>How to Bypass VPN Detection</title>
-    <url>//archives/how-to-bypass-vpn-detection/</url>
-    <content><![CDATA[<h2 id="一、代理配置"><a href="#一、代理配置" class="headerlink" title="一、代理配置"></a>一、代理配置</h2><p>打开 Clash Verge，选择一个节点，并将路由设置为全局。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img0.webp"
-                      alt="设置全局路由"
-                ></p>
-<p>打开设置，将 DNS 覆写、IPv6、统一延迟三个开关打开。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img1.webp"
-                      alt="Clash 设置"
-                ></p>
-<p>打开端口设置，打开 HTTP(S) 代理端口的开关。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img2.webp"
-                      alt="端口配置"
-                ></p>
-<p>最后打开系统设置，将 Clash Verge 的运行模式调整为虚拟网卡模式，也可以右键任务栏图标打开 TUN 模式。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img3.webp"
-                      alt="虚拟网卡模式"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img4.webp"
-                      alt="TUN 模式"
-                ></p>
-<h2 id="二、指纹浏览器配置"><a href="#二、指纹浏览器配置" class="headerlink" title="二、指纹浏览器配置"></a>二、指纹浏览器配置</h2><p>下载并安装 AdsPower 指纹浏览器，打开后点击“新建浏览器”。</p>
-<p>修改环境名称和使用的浏览器内核。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img5.webp"
-                      alt="基础设置"
-                ></p>
-<p>修改代理信息，代理类型选择 HTTP，主机 IP 填写 <code>127.0.0.1</code>，端口号填写 Clash Verge 中的 HTTP 代理端口。填写完成后检查代理是否与 Clash Verge 中连接的节点信息一致。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img6.webp"
-                      alt="代理信息"
-                ></p>
-<p>完成后保存，即可创建指纹浏览器环境。</p>
-<h2 id="三、检测-IP-地址"><a href="#三、检测-IP-地址" class="headerlink" title="三、检测 IP 地址"></a>三、检测 IP 地址</h2><p>打开指纹浏览器，可以看到目前的 IP 信息。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img7.webp"
-                      alt="IP 信息"
-                ></p>
-<p>访问 <code>https://ip111.cn</code>，查看 IP 信息，保证三方测试 IP 地址相同。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img8.webp"
-                      alt="三方测试 IP 地址"
-                ></p>
-<p>接下来访问 <code>https://scamalytics.com/ip</code>，输入经过测试的 IP 地址，检测 IP 纯净度。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/how-to-bypass-vpn-detection/img9.webp"
-                      alt="检测 IP 纯净度"
-                ></p>
-<p>如果 IP 纯净度很低或为 0，证明纯净 IP 隐私浏览环境已创建好，能够绕过 VPN 检测。</p>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>IP</tag>
-        <tag>VPN</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>How to Display Account Data on GitHub Profile</title>
     <url>//archives/how-to-display-account-data-on-github-profile/</url>
     <content><![CDATA[<p>GitHub 为每个账号预留了一个账户同名库，在这个库中填写 <code>README.md</code> 可以直接将这个文件的内容渲染到自己的 GitHub 主页。其中，我们可以用下面几种方式来展示自己的 GitHub 账号数据，丰富主页内容。</p>
@@ -4134,478 +4134,6 @@
       </categories>
       <tags>
         <tag>TV Series</tag>
-        <tag>Marvel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Marvel Films</title>
-    <url>//archives/marvel-films/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>原名</th>
-<th>译名</th>
-<th>年份</th>
-<th>豆瓣链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Howard the Duck</td>
-<td>天降神兵</td>
-<td>1986</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1295641/" >https://movie.douban.com/subject/1295641/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Blade</td>
-<td>刀锋战士</td>
-<td>1998</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1298120/" >https://movie.douban.com/subject/1298120/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>X-Men</td>
-<td>X战警</td>
-<td>2000</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1295250/" >https://movie.douban.com/subject/1295250/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Blade II</td>
-<td>刀锋战士2</td>
-<td>2002</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1306894/" >https://movie.douban.com/subject/1306894/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Spider-Man</td>
-<td>蜘蛛侠</td>
-<td>2002</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1306612/" >https://movie.douban.com/subject/1306612/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Daredevil</td>
-<td>超胆侠</td>
-<td>2003</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1307311/" >https://movie.douban.com/subject/1307311/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>X2</td>
-<td>X战警2</td>
-<td>2003</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1305724/" >https://movie.douban.com/subject/1305724/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Hulk</td>
-<td>绿巨人浩克</td>
-<td>2003</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1307354/" >https://movie.douban.com/subject/1307354/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Punisher</td>
-<td>惩罚者</td>
-<td>2004</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1305686/" >https://movie.douban.com/subject/1305686/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Spider-Man 2</td>
-<td>蜘蛛侠2</td>
-<td>2004</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1308570/" >https://movie.douban.com/subject/1308570/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Blade: Trinity</td>
-<td>刀锋战士3</td>
-<td>2004</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1308978/" >https://movie.douban.com/subject/1308978/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Elektra</td>
-<td>艾丽卡</td>
-<td>2005</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1308998/" >https://movie.douban.com/subject/1308998/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Fantastic Four</td>
-<td>神奇四侠</td>
-<td>2005</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1309103/" >https://movie.douban.com/subject/1309103/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>X-Men: The Last Stand</td>
-<td>X战警3：背水一战</td>
-<td>2006</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1401524/" >https://movie.douban.com/subject/1401524/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Ghost Rider</td>
-<td>恶灵骑士</td>
-<td>2007</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1482077/" >https://movie.douban.com/subject/1482077/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Spider-Man 3</td>
-<td>蜘蛛侠3</td>
-<td>2007</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1418189/" >https://movie.douban.com/subject/1418189/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Fantastic Four: Rise of the Silver Surfer</td>
-<td>神奇四侠2</td>
-<td>2007</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1584750/" >https://movie.douban.com/subject/1584750/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Iron Man</td>
-<td>钢铁侠</td>
-<td>2008</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1432146/" >https://movie.douban.com/subject/1432146/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Incredible Hulk</td>
-<td>无敌浩克</td>
-<td>2008</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1866475/" >https://movie.douban.com/subject/1866475/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Punisher: War Zone</td>
-<td>惩罚者2：战争特区</td>
-<td>2008</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1871800/" >https://movie.douban.com/subject/1871800/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>X-Men Origins: Wolverine</td>
-<td>金刚狼</td>
-<td>2009</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1792928/" >https://movie.douban.com/subject/1792928/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Iron Man 2</td>
-<td>钢铁侠2</td>
-<td>2010</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3066739/" >https://movie.douban.com/subject/3066739/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Thor</td>
-<td>雷神</td>
-<td>2011</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1866471/" >https://movie.douban.com/subject/1866471/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>X-Men: First Class</td>
-<td>X战警：第一战</td>
-<td>2011</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3168089/" >https://movie.douban.com/subject/3168089/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Captian America: The First Avenger</td>
-<td>美国队长</td>
-<td>2011</td>
-<td><a class="link"   href="https://movie.douban.com/subject/2138838/" >https://movie.douban.com/subject/2138838/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Ghost Rider: Spirit of  Vegeance</td>
-<td>恶灵骑士2：复仇时刻</td>
-<td>2011</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3077408/" >https://movie.douban.com/subject/3077408/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Avengers</td>
-<td>复仇者联盟</td>
-<td>2012</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1866479/" >https://movie.douban.com/subject/1866479/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Amazing Spider-Man</td>
-<td>超凡蜘蛛侠</td>
-<td>2012</td>
-<td><a class="link"   href="https://movie.douban.com/subject/2129132/" >https://movie.douban.com/subject/2129132/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Iron Man 3</td>
-<td>钢铁侠3</td>
-<td>2013</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3231742/" >https://movie.douban.com/subject/3231742/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Wolverine</td>
-<td>金刚狼2</td>
-<td>2013</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3718424/" >https://movie.douban.com/subject/3718424/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Thor: The Dark World</td>
-<td>雷神2：黑暗世界</td>
-<td>2013</td>
-<td><a class="link"   href="https://movie.douban.com/subject/6560058/" >https://movie.douban.com/subject/6560058/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Captain America: The Winter Soldier</td>
-<td>美国队长2</td>
-<td>2014</td>
-<td><a class="link"   href="https://movie.douban.com/subject/6390823/" >https://movie.douban.com/subject/6390823/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Amazing Spider-Man 2</td>
-<td>超凡蜘蛛侠2</td>
-<td>2014</td>
-<td><a class="link"   href="https://movie.douban.com/subject/6082518/" >https://movie.douban.com/subject/6082518/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>X-Men: Days of Future Past</td>
-<td>X战警：逆转未来</td>
-<td>2014</td>
-<td><a class="link"   href="https://movie.douban.com/subject/10485647/" >https://movie.douban.com/subject/10485647/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Guardians of the Galaxy</td>
-<td>银河护卫队</td>
-<td>2014</td>
-<td><a class="link"   href="https://movie.douban.com/subject/7065154/" >https://movie.douban.com/subject/7065154/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Avengers: Age of Ultron</td>
-<td>复仇者联盟2：奥创纪元</td>
-<td>2015</td>
-<td><a class="link"   href="https://movie.douban.com/subject/10741834/" >https://movie.douban.com/subject/10741834/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Ant-Man</td>
-<td>蚁人</td>
-<td>2015</td>
-<td><a class="link"   href="https://movie.douban.com/subject/1866473/" >https://movie.douban.com/subject/1866473/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Fantastic Four</td>
-<td>神奇四侠2015</td>
-<td>2015</td>
-<td><a class="link"   href="https://movie.douban.com/subject/4014396/" >https://movie.douban.com/subject/4014396/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Deadpool</td>
-<td>死侍</td>
-<td>2016</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3718279/" >https://movie.douban.com/subject/3718279/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Captain America: Civil War</td>
-<td>美国队长3</td>
-<td>2016</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25820460/" >https://movie.douban.com/subject/25820460/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>X-Men: Apocalypse</td>
-<td>X战警：天启</td>
-<td>2016</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25786060/" >https://movie.douban.com/subject/25786060/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Doctor Strange</td>
-<td>奇异博士</td>
-<td>2016</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3025375/" >https://movie.douban.com/subject/3025375/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Logan</td>
-<td>金刚狼3：殊死一战</td>
-<td>2017</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25765735/" >https://movie.douban.com/subject/25765735/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Guardians of the Galaxy Vol. 2</td>
-<td>银河护卫队2</td>
-<td>2017</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25937854/" >https://movie.douban.com/subject/25937854/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Spider-Man: Homecoming</td>
-<td>蜘蛛侠：英雄归来</td>
-<td>2017</td>
-<td><a class="link"   href="https://movie.douban.com/subject/24753477/" >https://movie.douban.com/subject/24753477/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Thor: Ragnarok</td>
-<td>雷神3：诸神黄昏</td>
-<td>2017</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25821634/" >https://movie.douban.com/subject/25821634/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Black Panther</td>
-<td>黑豹</td>
-<td>2018</td>
-<td><a class="link"   href="https://movie.douban.com/subject/6390825/" >https://movie.douban.com/subject/6390825/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Avengers: Infinity War</td>
-<td>复仇者联盟3：无限战争</td>
-<td>2018</td>
-<td><a class="link"   href="https://movie.douban.com/subject/24773958/" >https://movie.douban.com/subject/24773958/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Deadpool 2</td>
-<td>死侍2：我爱我家</td>
-<td>2018</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26588308/" >https://movie.douban.com/subject/26588308/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Ant-Man and the Wasp</td>
-<td>蚁人2：黄蜂女现身</td>
-<td>2018</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26636712/" >https://movie.douban.com/subject/26636712/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Venom</td>
-<td>毒液：致命守护者</td>
-<td>2018</td>
-<td><a class="link"   href="https://movie.douban.com/subject/3168101/" >https://movie.douban.com/subject/3168101/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Captain Marvel</td>
-<td>惊奇队长</td>
-<td>2019</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26213252/" >https://movie.douban.com/subject/26213252/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Avengers: Endgame</td>
-<td>复仇者联盟4：终局之战</td>
-<td>2019</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26100958/" >https://movie.douban.com/subject/26100958/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Dark Phoenix</td>
-<td>X战警：黑凤凰</td>
-<td>2019</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26667010/" >https://movie.douban.com/subject/26667010/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Spider-Man: Far From Home</td>
-<td>蜘蛛侠：英雄远征</td>
-<td>2019</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26931786/" >https://movie.douban.com/subject/26931786/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The New Mutants</td>
-<td>新变种人</td>
-<td>2020</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26389321/" >https://movie.douban.com/subject/26389321/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Black Widow</td>
-<td>黑寡妇</td>
-<td>2021</td>
-<td><a class="link"   href="https://movie.douban.com/subject/25828589/" >https://movie.douban.com/subject/25828589/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Shang-Chi and the Legend of the Ten Rings</td>
-<td>尚气与十环传奇</td>
-<td>2021</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30394797/" >https://movie.douban.com/subject/30394797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Venom: Let There Be Carnage</td>
-<td>毒液2</td>
-<td>2021</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30382416/" >https://movie.douban.com/subject/30382416/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Eternals</td>
-<td>永恒族</td>
-<td>2021</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30223888/" >https://movie.douban.com/subject/30223888/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Spider-Man: No Way Home</td>
-<td>蜘蛛侠：英雄无归</td>
-<td>2021</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26933210/" >https://movie.douban.com/subject/26933210/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Morbius</td>
-<td>暗夜博士：莫比亚斯</td>
-<td>2022</td>
-<td><a class="link"   href="https://movie.douban.com/subject/27199850/" >https://movie.douban.com/subject/27199850/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Doctor Strange in the Multiverse of Madness</td>
-<td>奇异博士2：疯狂多元宇宙</td>
-<td>2022</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30304994/" >https://movie.douban.com/subject/30304994/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Thor: Love and Thunder</td>
-<td>雷神4：爱与雷霆</td>
-<td>2022</td>
-<td><a class="link"   href="https://movie.douban.com/subject/34477861/" >https://movie.douban.com/subject/34477861/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Black Panther: Wakanda Forever</td>
-<td>黑豹2</td>
-<td>2022</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30167997/" >https://movie.douban.com/subject/30167997/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Ant-Man and the Wasp: Quantumania</td>
-<td>蚁人与黄蜂女：量子狂潮</td>
-<td>2023</td>
-<td><a class="link"   href="https://movie.douban.com/subject/34610636/" >https://movie.douban.com/subject/34610636/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Guardians of the Galaxy Vol. 3</td>
-<td>银河护卫队3</td>
-<td>2023</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26258779/" >https://movie.douban.com/subject/26258779/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Marvels</td>
-<td>惊奇队长2</td>
-<td>2023</td>
-<td><a class="link"   href="https://movie.douban.com/subject/34678231/" >https://movie.douban.com/subject/34678231/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Madame Web</td>
-<td>蜘蛛夫人：超感觉醒</td>
-<td>2024</td>
-<td><a class="link"   href="https://movie.douban.com/subject/34846514/" >https://movie.douban.com/subject/34846514/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Deadpool &amp; Woverine</td>
-<td>死侍与金刚狼</td>
-<td>2024</td>
-<td><a class="link"   href="https://movie.douban.com/subject/26957900/" >https://movie.douban.com/subject/26957900/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Venom: The Last Dance</td>
-<td>毒液：最后一舞</td>
-<td>2024</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35087675/" >https://movie.douban.com/subject/35087675/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Kraven the Hunter</td>
-<td>猎人克莱文</td>
-<td>2024</td>
-<td><a class="link"   href="https://movie.douban.com/subject/30290058/" >https://movie.douban.com/subject/30290058/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Captain America: Brave New World</td>
-<td>美国队长4：美丽新世界</td>
-<td>2025</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35443158/" >https://movie.douban.com/subject/35443158/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Thunderbolts*</td>
-<td>雷霆特攻队*</td>
-<td>2025</td>
-<td><a class="link"   href="https://movie.douban.com/subject/35927475/" >https://movie.douban.com/subject/35927475/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Fantastic Four: First Steps</td>
-<td>神奇四侠：初露锋芒</td>
-<td>2025</td>
-<td><a class="link"   href="https://movie.douban.com/subject/34825559/" >https://movie.douban.com/subject/34825559/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Media</category>
-      </categories>
-      <tags>
-        <tag>Films</tag>
         <tag>Marvel</tag>
       </tags>
   </entry>
@@ -5415,208 +4943,475 @@
       </tags>
   </entry>
   <entry>
-    <title>Software License Overview</title>
-    <url>//archives/software-license-overview/</url>
-    <content><![CDATA[<p>软件许可证是软件开发者或版权所有者授予用户使用、修改或分发软件的法律协议。根据许可证的不同，用户对软件的权限和义务也有所区别。软件许可证可以大致分为以下几类：</p>
-<h2 id="专有软件许可证"><a href="#专有软件许可证" class="headerlink" title="专有软件许可证"></a>专有软件许可证</h2><p>这些许可证通常由商业软件公司提供，用户需要遵循严格的使用限制。</p>
-<h3 id="商业软件许可证"><a href="#商业软件许可证" class="headerlink" title="商业软件许可证"></a>商业软件许可证</h3><ul>
-<li><strong>代表</strong>：Microsoft Windows、Adobe Photoshop</li>
-<li><strong>许可模式</strong>：通常要求购买许可证后才能使用</li>
-<li><strong>限制</strong>：不能修改或分发软件，通常只有执行权</li>
-</ul>
-<h3 id="订阅模式许可证"><a href="#订阅模式许可证" class="headerlink" title="订阅模式许可证"></a>订阅模式许可证</h3><ul>
-<li><strong>代表</strong>：Adobe Creative Cloud、Microsoft 365</li>
-<li><strong>许可模式</strong>：按月&#x2F;年付费订阅</li>
-<li><strong>限制</strong>：软件只能在订阅有效期内使用</li>
-</ul>
-<h3 id="终端用户许可协议（EULA）"><a href="#终端用户许可协议（EULA）" class="headerlink" title="终端用户许可协议（EULA）"></a>终端用户许可协议（EULA）</h3><ul>
-<li><strong>代表</strong>：几乎所有商业软件都会附带</li>
-<li><strong>许可模式</strong>：用户必须同意 EULA 条款才能安装或使用软件</li>
-<li><strong>限制</strong>：通常禁止逆向工程、修改或再分发</li>
-</ul>
-<h2 id="开源软件许可证"><a href="#开源软件许可证" class="headerlink" title="开源软件许可证"></a>开源软件许可证</h2><p>开源许可证允许用户查看、修改和分发源代码，但不同许可证对这些权利的限制有所不同。</p>
-<h3 id="宽松开源许可证"><a href="#宽松开源许可证" class="headerlink" title="宽松开源许可证"></a>宽松开源许可证</h3><p>这些许可证允许用户修改并闭源分发代码，无需开源衍生作品。</p>
-<h4 id="MIT-许可证（MIT-License）"><a href="#MIT-许可证（MIT-License）" class="headerlink" title="MIT 许可证（MIT License）"></a>MIT 许可证（MIT License）</h4><ul>
-<li><p><strong>代表项目</strong>：React.js、Node.js</p>
-</li>
-<li><p><strong>许可模式</strong>：允许自由使用、修改和分发</p>
-</li>
-<li><p><strong>主要特点</strong>：</p>
-<ul>
-<li>代码可用于闭源软件</li>
-<li>只需保留原始许可声明</li>
-<li>免责条款：不对代码的质量和安全性负责</li>
-</ul>
-</li>
-<li><p><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/MIT.txt" >MIT License<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-</li>
-</ul>
-<h4 id="Apache-许可证-2-0（Apache-License-2-0）"><a href="#Apache-许可证-2-0（Apache-License-2-0）" class="headerlink" title="Apache 许可证 2.0（Apache License 2.0）"></a>Apache 许可证 2.0（Apache License 2.0）</h4><ul>
-<li><strong>代表项目</strong>：Android、TensorFlow</li>
-<li><strong>许可模式</strong>：比 MIT 更严格，要求贡献代码的人授予专利授权</li>
-<li><strong>主要特点</strong>：<ul>
-<li>允许闭源</li>
-<li>需声明修改内容</li>
-<li>提供专利授权</li>
-</ul>
-</li>
-<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/Apache-2.0.txt" >Apache-2.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<h4 id="BSD-许可证（Berkeley-Software-Distribution-License）"><a href="#BSD-许可证（Berkeley-Software-Distribution-License）" class="headerlink" title="BSD 许可证（Berkeley Software Distribution License）"></a>BSD 许可证（Berkeley Software Distribution License）</h4><ul>
-<li><strong>代表项目</strong>：FreeBSD、PostgreSQL</li>
-<li><strong>许可模式</strong>：类似 MIT 但有不同变体</li>
-<li><strong>主要特点</strong>：<ul>
-<li>BSD-2-Clause：要求保留原作者声明</li>
-<li>BSD-3-Clause：额外禁止使用原作者的名字做推广</li>
-</ul>
-</li>
-<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/BSD-3.txt" >BSD-3<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<h3 id="传染性许可证"><a href="#传染性许可证" class="headerlink" title="传染性许可证"></a>传染性许可证</h3><p>要求所有基于该软件的派生作品也必须使用相同的许可证，确保代码持续开源。</p>
-<h4 id="GNU-通用公共许可证（GPL，General-Public-License）"><a href="#GNU-通用公共许可证（GPL，General-Public-License）" class="headerlink" title="GNU 通用公共许可证（GPL，General Public License）"></a>GNU 通用公共许可证（GPL，General Public License）</h4><ul>
-<li><strong>代表项目</strong>：Linux Kernel、GCC</li>
-<li><strong>许可模式</strong>：所有衍生软件必须开源（强 Copyleft）</li>
-<li><strong>主要特点</strong>：<ul>
-<li><strong>GPLv2</strong>：较严格，要求所有衍生作品必须完全开源</li>
-<li><strong>GPLv3</strong>：新增专利保护和 Tivoization（防止锁定硬件）</li>
-</ul>
-</li>
-<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/GPL-3.0.txt" >GPL-3.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<h4 id="LGPL（Lesser-General-Public-License）"><a href="#LGPL（Lesser-General-Public-License）" class="headerlink" title="LGPL（Lesser General Public License）"></a>LGPL（Lesser General Public License）</h4><ul>
-<li><strong>代表项目</strong>：FFmpeg、Qt</li>
-<li><strong>许可模式</strong>：允许闭源软件动态链接 LGPL 代码</li>
-<li><strong>主要特点</strong>：<ul>
-<li>适用于库，允许与闭源软件动态链接</li>
-<li>但如果修改库本身，必须开源</li>
-</ul>
-</li>
-<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/LGPL-3.0.txt" >LGPL-3.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<h4 id="AGPL（Affero-General-Public-License）"><a href="#AGPL（Affero-General-Public-License）" class="headerlink" title="AGPL（Affero General Public License）"></a>AGPL（Affero General Public License）</h4><ul>
-<li><strong>代表项目</strong>：MongoDB</li>
-<li><strong>许可模式</strong>：适用于网络服务端软件，要求分发服务端代码</li>
-<li><strong>主要特点</strong>：<ul>
-<li>与 GPL 类似，但进一步要求通过网络交互的修改内容也必须开源</li>
-<li>确保所有用户都能访问服务端的源代码</li>
-</ul>
-</li>
-<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/AGPL-3.0.txt" >AGPL-3.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<h4 id="FDL（Free-Documentation-License）"><a href="#FDL（Free-Documentation-License）" class="headerlink" title="FDL（Free Documentation License）"></a>FDL（Free Documentation License）</h4><ul>
-<li><strong>代表项目</strong>：GNU 文档</li>
-<li><strong>许可模式</strong>：主要用于文档和书籍，要求衍生品也必须开源</li>
-<li><strong>主要特点</strong>：<ul>
-<li>确保文档的内容可以自由修改和分发</li>
-<li>适用于技术文档或操作手册</li>
-</ul>
-</li>
-<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/FDL-1.3.txt" >FDL-1.3<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<h2 id="创意共享许可证"><a href="#创意共享许可证" class="headerlink" title="创意共享许可证"></a>创意共享许可证</h2><p>适用于文本、图片、音乐等非软件内容。</p>
-<ul>
-<li><strong>CC-BY</strong>（署名）：需注明作者</li>
-<li><strong>CC-BY-NC</strong>（署名-非商业）：只能用于非商业目的</li>
-<li><strong>CC-BY-NC-ND</strong>（署名-非商业-禁止改编）：不能商用且禁止修改</li>
-<li><strong>CC-BY-NC-SA</strong>（署名-非商业-相同方式共享）：非商业用途且衍生作品需用相同协议</li>
-<li><strong>CC-BY-ND</strong>（署名-禁止改编）：允许商用但禁止修改</li>
-<li><strong>CC-BY-SA</strong>（署名-相同方式共享）：类似 GPL，要求衍生品使用相同协议</li>
-</ul>
-<p><strong>许可证模板</strong>：<a class="link"   href="https://creativecommons.org/licenses/" >Creative Commons Licenses<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h2 id="许可证选择指南"><a href="#许可证选择指南" class="headerlink" title="许可证选择指南"></a>许可证选择指南</h2><table>
+    <title>Marvel Films</title>
+    <url>//archives/marvel-films/</url>
+    <content><![CDATA[<table>
 <thead>
 <tr>
-<th>许可证</th>
-<th>是否允许闭源</th>
-<th>是否要求开源衍生品</th>
-<th>适用场景</th>
+<th>原名</th>
+<th>译名</th>
+<th>年份</th>
+<th>豆瓣链接</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><strong>MIT</strong></td>
-<td>✅ 允许</td>
-<td>❌ 不要求</td>
-<td>个人、商业项目</td>
+<td>Howard the Duck</td>
+<td>天降神兵</td>
+<td>1986</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1295641/" >https://movie.douban.com/subject/1295641/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td><strong>Apache 2.0</strong></td>
-<td>✅ 允许</td>
-<td>❌ 不要求</td>
-<td>需要专利保护的项目</td>
+<td>Blade</td>
+<td>刀锋战士</td>
+<td>1998</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1298120/" >https://movie.douban.com/subject/1298120/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td><strong>BSD</strong></td>
-<td>✅ 允许</td>
-<td>❌ 不要求</td>
-<td>高自由度的开源软件</td>
+<td>X-Men</td>
+<td>X战警</td>
+<td>2000</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1295250/" >https://movie.douban.com/subject/1295250/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td><strong>GPL</strong></td>
-<td>❌ 禁止</td>
-<td>✅ 强制开源</td>
-<td>Linux、自由软件</td>
+<td>Blade II</td>
+<td>刀锋战士2</td>
+<td>2002</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1306894/" >https://movie.douban.com/subject/1306894/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td><strong>LGPL</strong></td>
-<td>✅ 允许</td>
-<td>✅ 仅库需开源</td>
-<td>开源库</td>
+<td>Spider-Man</td>
+<td>蜘蛛侠</td>
+<td>2002</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1306612/" >https://movie.douban.com/subject/1306612/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td><strong>AGPL</strong></td>
-<td>❌ 禁止</td>
-<td>✅ 强制开源</td>
-<td>网络服务端</td>
+<td>Daredevil</td>
+<td>超胆侠</td>
+<td>2003</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1307311/" >https://movie.douban.com/subject/1307311/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td><strong>FDL</strong></td>
-<td>❌ 禁止</td>
-<td>✅ 强制开源</td>
-<td>文档、书籍</td>
+<td>X2</td>
+<td>X战警2</td>
+<td>2003</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1305724/" >https://movie.douban.com/subject/1305724/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td><strong>CC-BY</strong></td>
-<td>✅ 允许</td>
-<td>❌ 不要求</td>
-<td>文档、图片</td>
+<td>Hulk</td>
+<td>绿巨人浩克</td>
+<td>2003</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1307354/" >https://movie.douban.com/subject/1307354/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td><strong>CC-BY-NC</strong></td>
-<td>❌ 禁止</td>
-<td>❌ 不要求</td>
-<td>非商业内容</td>
+<td>The Punisher</td>
+<td>惩罚者</td>
+<td>2004</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1305686/" >https://movie.douban.com/subject/1305686/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td><strong>CC-BY-NC-ND</strong></td>
-<td>❌ 禁止</td>
-<td>❌ 不要求</td>
-<td>非商业且禁止改编</td>
+<td>Spider-Man 2</td>
+<td>蜘蛛侠2</td>
+<td>2004</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1308570/" >https://movie.douban.com/subject/1308570/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td><strong>CC-BY-NC-SA</strong></td>
-<td>❌ 禁止</td>
-<td>✅ 强制开源</td>
-<td>非商业开源文化内容</td>
+<td>Blade: Trinity</td>
+<td>刀锋战士3</td>
+<td>2004</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1308978/" >https://movie.douban.com/subject/1308978/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td><strong>CC-BY-ND</strong></td>
-<td>✅ 允许</td>
-<td>❌ 不要求</td>
-<td>商用但禁止改编</td>
+<td>Elektra</td>
+<td>艾丽卡</td>
+<td>2005</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1308998/" >https://movie.douban.com/subject/1308998/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 <tr>
-<td><strong>CC-BY-SA</strong></td>
-<td>✅ 允许</td>
-<td>✅ 强制开源</td>
-<td>开源文化内容</td>
+<td>Fantastic Four</td>
+<td>神奇四侠</td>
+<td>2005</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1309103/" >https://movie.douban.com/subject/1309103/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>X-Men: The Last Stand</td>
+<td>X战警3：背水一战</td>
+<td>2006</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1401524/" >https://movie.douban.com/subject/1401524/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Ghost Rider</td>
+<td>恶灵骑士</td>
+<td>2007</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1482077/" >https://movie.douban.com/subject/1482077/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Spider-Man 3</td>
+<td>蜘蛛侠3</td>
+<td>2007</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1418189/" >https://movie.douban.com/subject/1418189/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Fantastic Four: Rise of the Silver Surfer</td>
+<td>神奇四侠2</td>
+<td>2007</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1584750/" >https://movie.douban.com/subject/1584750/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Iron Man</td>
+<td>钢铁侠</td>
+<td>2008</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1432146/" >https://movie.douban.com/subject/1432146/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Incredible Hulk</td>
+<td>无敌浩克</td>
+<td>2008</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1866475/" >https://movie.douban.com/subject/1866475/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Punisher: War Zone</td>
+<td>惩罚者2：战争特区</td>
+<td>2008</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1871800/" >https://movie.douban.com/subject/1871800/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>X-Men Origins: Wolverine</td>
+<td>金刚狼</td>
+<td>2009</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1792928/" >https://movie.douban.com/subject/1792928/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Iron Man 2</td>
+<td>钢铁侠2</td>
+<td>2010</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3066739/" >https://movie.douban.com/subject/3066739/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Thor</td>
+<td>雷神</td>
+<td>2011</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1866471/" >https://movie.douban.com/subject/1866471/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>X-Men: First Class</td>
+<td>X战警：第一战</td>
+<td>2011</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3168089/" >https://movie.douban.com/subject/3168089/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Captian America: The First Avenger</td>
+<td>美国队长</td>
+<td>2011</td>
+<td><a class="link"   href="https://movie.douban.com/subject/2138838/" >https://movie.douban.com/subject/2138838/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Ghost Rider: Spirit of  Vegeance</td>
+<td>恶灵骑士2：复仇时刻</td>
+<td>2011</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3077408/" >https://movie.douban.com/subject/3077408/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Avengers</td>
+<td>复仇者联盟</td>
+<td>2012</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1866479/" >https://movie.douban.com/subject/1866479/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Amazing Spider-Man</td>
+<td>超凡蜘蛛侠</td>
+<td>2012</td>
+<td><a class="link"   href="https://movie.douban.com/subject/2129132/" >https://movie.douban.com/subject/2129132/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Iron Man 3</td>
+<td>钢铁侠3</td>
+<td>2013</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3231742/" >https://movie.douban.com/subject/3231742/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Wolverine</td>
+<td>金刚狼2</td>
+<td>2013</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3718424/" >https://movie.douban.com/subject/3718424/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Thor: The Dark World</td>
+<td>雷神2：黑暗世界</td>
+<td>2013</td>
+<td><a class="link"   href="https://movie.douban.com/subject/6560058/" >https://movie.douban.com/subject/6560058/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Captain America: The Winter Soldier</td>
+<td>美国队长2</td>
+<td>2014</td>
+<td><a class="link"   href="https://movie.douban.com/subject/6390823/" >https://movie.douban.com/subject/6390823/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Amazing Spider-Man 2</td>
+<td>超凡蜘蛛侠2</td>
+<td>2014</td>
+<td><a class="link"   href="https://movie.douban.com/subject/6082518/" >https://movie.douban.com/subject/6082518/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>X-Men: Days of Future Past</td>
+<td>X战警：逆转未来</td>
+<td>2014</td>
+<td><a class="link"   href="https://movie.douban.com/subject/10485647/" >https://movie.douban.com/subject/10485647/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Guardians of the Galaxy</td>
+<td>银河护卫队</td>
+<td>2014</td>
+<td><a class="link"   href="https://movie.douban.com/subject/7065154/" >https://movie.douban.com/subject/7065154/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Avengers: Age of Ultron</td>
+<td>复仇者联盟2：奥创纪元</td>
+<td>2015</td>
+<td><a class="link"   href="https://movie.douban.com/subject/10741834/" >https://movie.douban.com/subject/10741834/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Ant-Man</td>
+<td>蚁人</td>
+<td>2015</td>
+<td><a class="link"   href="https://movie.douban.com/subject/1866473/" >https://movie.douban.com/subject/1866473/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Fantastic Four</td>
+<td>神奇四侠2015</td>
+<td>2015</td>
+<td><a class="link"   href="https://movie.douban.com/subject/4014396/" >https://movie.douban.com/subject/4014396/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Deadpool</td>
+<td>死侍</td>
+<td>2016</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3718279/" >https://movie.douban.com/subject/3718279/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Captain America: Civil War</td>
+<td>美国队长3</td>
+<td>2016</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25820460/" >https://movie.douban.com/subject/25820460/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>X-Men: Apocalypse</td>
+<td>X战警：天启</td>
+<td>2016</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25786060/" >https://movie.douban.com/subject/25786060/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Doctor Strange</td>
+<td>奇异博士</td>
+<td>2016</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3025375/" >https://movie.douban.com/subject/3025375/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Logan</td>
+<td>金刚狼3：殊死一战</td>
+<td>2017</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25765735/" >https://movie.douban.com/subject/25765735/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Guardians of the Galaxy Vol. 2</td>
+<td>银河护卫队2</td>
+<td>2017</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25937854/" >https://movie.douban.com/subject/25937854/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Spider-Man: Homecoming</td>
+<td>蜘蛛侠：英雄归来</td>
+<td>2017</td>
+<td><a class="link"   href="https://movie.douban.com/subject/24753477/" >https://movie.douban.com/subject/24753477/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Thor: Ragnarok</td>
+<td>雷神3：诸神黄昏</td>
+<td>2017</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25821634/" >https://movie.douban.com/subject/25821634/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Black Panther</td>
+<td>黑豹</td>
+<td>2018</td>
+<td><a class="link"   href="https://movie.douban.com/subject/6390825/" >https://movie.douban.com/subject/6390825/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Avengers: Infinity War</td>
+<td>复仇者联盟3：无限战争</td>
+<td>2018</td>
+<td><a class="link"   href="https://movie.douban.com/subject/24773958/" >https://movie.douban.com/subject/24773958/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Deadpool 2</td>
+<td>死侍2：我爱我家</td>
+<td>2018</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26588308/" >https://movie.douban.com/subject/26588308/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Ant-Man and the Wasp</td>
+<td>蚁人2：黄蜂女现身</td>
+<td>2018</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26636712/" >https://movie.douban.com/subject/26636712/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Venom</td>
+<td>毒液：致命守护者</td>
+<td>2018</td>
+<td><a class="link"   href="https://movie.douban.com/subject/3168101/" >https://movie.douban.com/subject/3168101/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Captain Marvel</td>
+<td>惊奇队长</td>
+<td>2019</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26213252/" >https://movie.douban.com/subject/26213252/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Avengers: Endgame</td>
+<td>复仇者联盟4：终局之战</td>
+<td>2019</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26100958/" >https://movie.douban.com/subject/26100958/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Dark Phoenix</td>
+<td>X战警：黑凤凰</td>
+<td>2019</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26667010/" >https://movie.douban.com/subject/26667010/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Spider-Man: Far From Home</td>
+<td>蜘蛛侠：英雄远征</td>
+<td>2019</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26931786/" >https://movie.douban.com/subject/26931786/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The New Mutants</td>
+<td>新变种人</td>
+<td>2020</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26389321/" >https://movie.douban.com/subject/26389321/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Black Widow</td>
+<td>黑寡妇</td>
+<td>2021</td>
+<td><a class="link"   href="https://movie.douban.com/subject/25828589/" >https://movie.douban.com/subject/25828589/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Shang-Chi and the Legend of the Ten Rings</td>
+<td>尚气与十环传奇</td>
+<td>2021</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30394797/" >https://movie.douban.com/subject/30394797/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Venom: Let There Be Carnage</td>
+<td>毒液2</td>
+<td>2021</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30382416/" >https://movie.douban.com/subject/30382416/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Eternals</td>
+<td>永恒族</td>
+<td>2021</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30223888/" >https://movie.douban.com/subject/30223888/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Spider-Man: No Way Home</td>
+<td>蜘蛛侠：英雄无归</td>
+<td>2021</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26933210/" >https://movie.douban.com/subject/26933210/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Morbius</td>
+<td>暗夜博士：莫比亚斯</td>
+<td>2022</td>
+<td><a class="link"   href="https://movie.douban.com/subject/27199850/" >https://movie.douban.com/subject/27199850/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Doctor Strange in the Multiverse of Madness</td>
+<td>奇异博士2：疯狂多元宇宙</td>
+<td>2022</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30304994/" >https://movie.douban.com/subject/30304994/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Thor: Love and Thunder</td>
+<td>雷神4：爱与雷霆</td>
+<td>2022</td>
+<td><a class="link"   href="https://movie.douban.com/subject/34477861/" >https://movie.douban.com/subject/34477861/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Black Panther: Wakanda Forever</td>
+<td>黑豹2</td>
+<td>2022</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30167997/" >https://movie.douban.com/subject/30167997/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Ant-Man and the Wasp: Quantumania</td>
+<td>蚁人与黄蜂女：量子狂潮</td>
+<td>2023</td>
+<td><a class="link"   href="https://movie.douban.com/subject/34610636/" >https://movie.douban.com/subject/34610636/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Guardians of the Galaxy Vol. 3</td>
+<td>银河护卫队3</td>
+<td>2023</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26258779/" >https://movie.douban.com/subject/26258779/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Marvels</td>
+<td>惊奇队长2</td>
+<td>2023</td>
+<td><a class="link"   href="https://movie.douban.com/subject/34678231/" >https://movie.douban.com/subject/34678231/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Madame Web</td>
+<td>蜘蛛夫人：超感觉醒</td>
+<td>2024</td>
+<td><a class="link"   href="https://movie.douban.com/subject/34846514/" >https://movie.douban.com/subject/34846514/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Deadpool &amp; Woverine</td>
+<td>死侍与金刚狼</td>
+<td>2024</td>
+<td><a class="link"   href="https://movie.douban.com/subject/26957900/" >https://movie.douban.com/subject/26957900/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Venom: The Last Dance</td>
+<td>毒液：最后一舞</td>
+<td>2024</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35087675/" >https://movie.douban.com/subject/35087675/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Kraven the Hunter</td>
+<td>猎人克莱文</td>
+<td>2024</td>
+<td><a class="link"   href="https://movie.douban.com/subject/30290058/" >https://movie.douban.com/subject/30290058/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Captain America: Brave New World</td>
+<td>美国队长4：美丽新世界</td>
+<td>2025</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35443158/" >https://movie.douban.com/subject/35443158/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>Thunderbolts*</td>
+<td>雷霆特攻队*</td>
+<td>2025</td>
+<td><a class="link"   href="https://movie.douban.com/subject/35927475/" >https://movie.douban.com/subject/35927475/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
+</tr>
+<tr>
+<td>The Fantastic Four: First Steps</td>
+<td>神奇四侠：初露锋芒</td>
+<td>2025</td>
+<td><a class="link"   href="https://movie.douban.com/subject/34825559/" >https://movie.douban.com/subject/34825559/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
 </tr>
 </tbody></table>
 ]]></content>
       <categories>
-        <category>Programming</category>
+        <category>Media</category>
       </categories>
       <tags>
-        <tag>License</tag>
+        <tag>Films</tag>
+        <tag>Marvel</tag>
       </tags>
   </entry>
   <entry>
@@ -5857,6 +5652,473 @@
       <tags>
         <tag>Software Reverse Engineering</tag>
         <tag>Decompile</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python Desktop Application Packaging Guide</title>
+    <url>//archives/python-desktop-application-packaging-guide/</url>
+    <content><![CDATA[<p>写完 Python 脚本，还想要脚本的功能在无 Python 环境下运行，就需要通过将 Python 解释器、第三方库依赖和源代码封装进一个独立的可执行环境（也就是打包）来实现。</p>
+<h2 id="一、创建虚拟环境并确定依赖"><a href="#一、创建虚拟环境并确定依赖" class="headerlink" title="一、创建虚拟环境并确定依赖"></a>一、创建虚拟环境并确定依赖</h2><p>如果想要打包出来的文件尽可能的小，就需要精准地确定脚本所依赖的第三方库。如果在全局环境下直接打包，就会导致“幽灵依赖”现象：脚本没有用到，但开发其他项目用到的、安装在全局的 Python 库也被打包进了应用。</p>
+<p>首先，在项目文件夹下创建并激活一个虚拟环境：</p>
+<div class="code-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">python -m venv .venv # 创建虚拟环境</span><br><span class="line">.venv\Scripts\activate # 激活虚拟环境</span><br><span class="line">deactivate # 推出虚拟环境</span><br></pre></td></tr></table></figure></div>
+
+<p>激活虚拟环境后，如果清楚自己写代码时依赖了哪些库，可以直接在项目文件夹下运行 <code>pip install</code> 指令将第三方库下载到虚拟环境中。如果不清楚，则可以使用 <code>pipreqs</code> 库来确定依赖。</p>
+<p>安装 <code>pipreqs</code> 库：</p>
+<div class="code-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">pip install pipreqs</span><br></pre></td></tr></table></figure></div>
+
+<p>在全局环境下切到项目目录，然后使用 <code>pipreqs</code> 将项目依赖输出为 <code>requirements.txt</code>：</p>
+<div class="code-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">pipreqs ./ --encoding=utf8 --force</span><br></pre></td></tr></table></figure></div>
+
+<p>然后再返回虚拟环境，执行：</p>
+<div class="code-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li>不推荐直接用 <code>pip freeze &gt; requirements.txt</code> 来导出依赖，因为有可能会连带装入很多非直接依赖。</li>
+<li><code>pipreqs</code> 不能被安装到创建的虚拟环境中，必须安装在全局环境中，因为如果将 <code>pipreqs</code> 按照在虚拟环境中，后续也会将其打包进去。</li>
+</ul>
+</blockquote>
+<h2 id="二、几种常见打包工具介绍"><a href="#二、几种常见打包工具介绍" class="headerlink" title="二、几种常见打包工具介绍"></a>二、几种常见打包工具介绍</h2><p>常见的打包工具包括 PyInstaller，Nuitka，Auto-py-to-exe 和 cx_Freeze。以下是它们的具体特点介绍：</p>
+<table>
+<thead>
+<tr>
+<th>打包工具</th>
+<th>核心原理</th>
+<th>优势</th>
+<th>劣势</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PyInstaller</td>
+<td>自解压打包 （将Python解释器、源码字节码和DLL 压成一个包）</td>
+<td>生态最好，几乎所有报错都能在 Stack Overflow 搜到</td>
+<td>启动慢（运行时需要临时解压）；极易被反编译（用 <code>pyinstxtractor</code> 即可反编译源码）</td>
+</tr>
+<tr>
+<td>Nuitka</td>
+<td>把 Python 翻译成 C&#x2F;C++，再调用 gcc&#x2F;msvc 编译成机器码</td>
+<td>启动速度极快；安全性好（纯机器码，几乎无法反编译）；运行效率有一定提升</td>
+<td>需要 C 语言编译环境（但在打包过程中会自动智能提示并下载 MinGW64）；打包耗时长</td>
+</tr>
+<tr>
+<td>Auto-py-to-exe</td>
+<td>底层基于 PyInstaller，外层套 Web UI 壳</td>
+<td>提供友好的 Web 交互界面</td>
+<td>继承了 PyInstaller 的优缺点</td>
+</tr>
+<tr>
+<td>cx_Freeze</td>
+<td>结构分离打包</td>
+<td>在处理 <code>PyQt</code>&#x2F;<code>PySide</code> 等大型跨平台 GUI 框架时，有时表现更稳定，若使用其他工具持续报错可作为备选方案</td>
+<td>相对小众，生态不如其他工具</td>
+</tr>
+</tbody></table>
+<p>打包时一般会选择 PyInstaller 或 Nuitka 作为打包工具。以下是这两种工具的常用指令参数：</p>
+<p><strong>PyInstaller 指令参数：</strong></p>
+<table>
+<thead>
+<tr>
+<th>指令参数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-F</code> (或 <code>--onefile</code>)<br /><code>-D</code> (或 <code>--onedir</code>)</td>
+<td><strong>打包形态：</strong><br /><code>-F</code>：单文件模式。将所有内容打包成一个独立的 <code>.exe</code>。优点是便于分发；缺点是启动慢（运行时需在后台临时解压整个环境）。<br /><code>-D</code>：单目录模式（默认）。打包成一个包含 <code>.exe</code> 和所有依赖库的文件夹。启动极快，推荐桌面软件使用。</td>
+</tr>
+<tr>
+<td><code>-w</code> (或 <code>--windowed</code>)<br /><code>-c</code> (或 <code>--console</code>)</td>
+<td><strong>控制台显示：</strong><br /><code>-w</code>：隐藏黑色命令行窗口。开发 Tkinter&#x2F;PyQt 等 GUI 桌面应用时必备，否则用户会看到一个黑框一直在后面。<br /><code>-c</code>：显示命令行窗口（默认）。适合纯后端代码或需要查看 <code>print</code> 报错信息的调试阶段。</td>
+</tr>
+<tr>
+<td><code>-i icon.ico</code></td>
+<td><strong>设置图标：</strong>为生成的软件设置自定义的 <code>.ico</code> 图标。</td>
+</tr>
+<tr>
+<td><code>--hidden-import MODULENAME</code></td>
+<td><strong>隐式依赖打包：</strong>强制打包某些代码里没有直接 <code>import</code>，但底层动态调用的库。解决打包后报“找不到某某模块”的核心参数。</td>
+</tr>
+<tr>
+<td><code>--add-data &quot;src;dest&quot;</code></td>
+<td><strong>添加静态资源：</strong>将外部文件（如图片、配置文件）打包进去。注意：Windows 路径分隔符用分号 <code>;</code>，Mac&#x2F;Linux 用冒号 <code>:</code>。</td>
+</tr>
+<tr>
+<td><code>--add-binary &quot;src;dest&quot;</code></td>
+<td><strong>添加动态库：</strong>强行打包第三方缺失的 <code>.dll</code> 或 <code>.so</code> 动态链接库文件。</td>
+</tr>
+<tr>
+<td><code>--exclude-module NAME</code></td>
+<td><strong>排除无用模块：</strong>主动排除掉不需要的库，降低打包体积。</td>
+</tr>
+<tr>
+<td><code>-n NAME</code></td>
+<td><strong>自定义名称：</strong>自定义生成的 <code>.exe</code> 和 <code>.dist</code> 产物文件夹的名称。如果不填，默认使用脚本的文件名。</td>
+</tr>
+<tr>
+<td><code>--clean</code></td>
+<td><strong>清理缓存：</strong>运行前清理 PyInstaller 上一次打包留下的临时缓存文件。</td>
+</tr>
+</tbody></table>
+<p>  <strong>Nuitka 指令参数：</strong></p>
+<table>
+<thead>
+<tr>
+<th>指令参数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--standalone</code><br /><code>--onefile</code></td>
+<td><strong>打包形态：</strong><br /><code>--standalone</code>：独立文件夹模式。生成包含所有运行环境（解释器、DLLs）的文件夹。GUI 桌面软件的首选，能够发挥 Nuitka 的秒开优势。<br /><code>--onefile</code>：单文件模式。将独立文件夹用算法压成单文件 <code>.exe</code>。致命代价是双击时会在后台临时解压几十 MB 的 DLL，导致肉眼可见的启动延迟，损失了 Nuitka 的核心性能优势。</td>
+</tr>
+<tr>
+<td><code>--windows-disable-console</code></td>
+<td><strong>隐藏控制台：</strong>在 Windows 系统下隐藏黑色命令行控制台（作用等同于 PyInstaller 的 <code>-w</code>）。</td>
+</tr>
+<tr>
+<td><code>--windows-icon-from-ico=X</code></td>
+<td><strong>设置图标：</strong>为生成的软件设置自定义的 <code>.ico</code> 图标。</td>
+</tr>
+<tr>
+<td><code>--output-dir=DIR_NAME</code></td>
+<td><strong>指定输出目录：</strong>指定打包产物（<code>.build</code> 和 <code>.dist</code> 文件夹）的存放路径，保持项目根目录整洁。</td>
+</tr>
+<tr>
+<td><code>--enable-plugin=tk-inter</code></td>
+<td><strong>Tkinter 专项：</strong>自动抓取并打包 Tkinter &#x2F; CustomTkinter 底层必需的 Tcl&#x2F;Tk 动态库。</td>
+</tr>
+<tr>
+<td><code>--enable-plugin=pyside6</code></td>
+<td><strong>PySide6 专项：</strong>完美处理 PySide6 依赖。其死代码消除能力能够自动剔除未被使用的 Qt 模块，大大降低打包体积。</td>
+</tr>
+<tr>
+<td><code>--enable-plugin=numpy</code></td>
+<td><strong>科学计算专项：</strong>自动处理 NumPy &#x2F; Scipy 等科学计算库底层的 C&#x2F;Fortran 复杂依赖。</td>
+</tr>
+<tr>
+<td><code>--enable-plugin=anti-bloat</code></td>
+<td><strong>依赖优化：</strong>自动拦截并剔除很多库（如 requests, pandas）中为了跨平台兼容性而引入的无用庞大依赖。</td>
+</tr>
+<tr>
+<td><code>--include-package-data=X</code></td>
+<td><strong>强行打包包内数据：</strong>将某个 Python 包内自带的数据文件（如 json, txt）强行打包进去。处理 CustomTkinter 报错“找不到 theme.json”时必用。</td>
+</tr>
+<tr>
+<td><code>--include-data-dir=A=B</code></td>
+<td><strong>引入整个文件夹：</strong>将项目中的整个文件夹 <code>A</code> 复制到打包结果的 <code>B</code> 路径下。</td>
+</tr>
+<tr>
+<td><code>--show-progress</code></td>
+<td><strong>显示编译进度：</strong>在控制台显示详细的 C 语言代码转换和 GCC&#x2F;MSVC 编译进度条。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>如果选择使用 Nuitka 进行打包，且进行了多次打包（如调试 Nuitka 打包参数），不需要删除第一次打包时生成的 <code>x.build</code> 文件夹。这里存放的是翻译出的 C 源码和编译好的中间目标文件（<code>.o</code> &#x2F; <code>.obj</code>）。如果不删除这个文件夹，再次运行编译会触发 Nuitka 的增量编译机制，复用之前编译时的 Cache，从而极大加快打包速度。</p>
+</blockquote>
+<h2 id="三、基于-GUI-框架考虑的打包工具选择"><a href="#三、基于-GUI-框架考虑的打包工具选择" class="headerlink" title="三、基于 GUI 框架考虑的打包工具选择"></a>三、基于 GUI 框架考虑的打包工具选择</h2><p>Python 本身不具备画窗口的能力。所有的 GUI 框架，本质上都是在“套壳”调用底层的 C&#x2F;C++ 动态链接库。打包工具无法确定该把哪些 <code>.dll</code> 打包进去，因此可能会导致生成的可执行文件在其他环境下因缺少依赖库无法运行，或者为了保险起见，强行塞入大量无关的库，导致应用体积过大。</p>
+<p>以下是基于三种主流 GUI 框架的打包问题及解决办法：</p>
+<table>
+<thead>
+<tr>
+<th>GUI 框架</th>
+<th>框架特点</th>
+<th>问题</th>
+<th>PyInstaller 解决办法</th>
+<th>Nuitka 解决办法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tkinter &#x2F; CustomTkinter</td>
+<td>轻量级库，底层依赖 Tcl&#x2F;Tk，打包后的整体体积控制得较好，适合中小型工具。</td>
+<td>打包工具容易遗漏框架自带的静态资源，必须强制声明包含。</td>
+<td>必须在命令中加复杂的 <code>--add-data</code> 参数手动指明皮肤文件路径。</td>
+<td>加 <code>--enable-plugin=tk-inter</code> 抓取底层 DLL，加 <code>--include-package-data=customtkinter</code> 强行把 JSON 皮肤文件包进去。</td>
+</tr>
+<tr>
+<td>PyQt5 &#x2F; PySide6</td>
+<td>功能极强，生态完善，但由于包含大量底层 C++ 库，非常笨重。</td>
+<td>会把整个 Qt 框架全部打包，打包后应用体积巨大。</td>
+<td>必须手动写大量 <code>--exclude-module</code> 排除无用依赖。</td>
+<td>使用 <code>--enable-plugin=pyside6</code>。其死代码消除能力能够自动剔除未使用的模块，极大提高启动速度并减小体积。</td>
+</tr>
+<tr>
+<td>PyWebview &#x2F; Eel &#x2F; NiceGUI</td>
+<td>前端（HTML &#x2F; CSS &#x2F; JS）写界面，Python 写后端逻辑。</td>
+<td>打包成 <code>.exe</code> 后，运行时的解压路径变化，如果在代码里使用绝对路径或相对路径，运行必定报错。</td>
+<td>必须利用 <code>sys._MEIPASS</code> 等内置变量动态切换、定位静态资源的绝对路径。</td>
+<td>需要处理 Nuitka 的临时路径寻址问题，或使用 <code>--include-data-dir</code> 强行打包整个前端文件夹。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>前端隔离机制： 在用前端技术构建桌面 UI 时，为了避免界面样式冲突，强烈建议利用 Shadow DOM 技术来封装 UI 组件，这样能有效防止桌面应用内外样式的相互污染，保证界面的独立和稳定。</p>
+</blockquote>
+<h2 id="四、常见问题排解与修复"><a href="#四、常见问题排解与修复" class="headerlink" title="四、常见问题排解与修复"></a>四、常见问题排解与修复</h2><h3 id="打包选项：单文件-or-文件夹？"><a href="#打包选项：单文件-or-文件夹？" class="headerlink" title="打包选项：单文件 or 文件夹？"></a>打包选项：单文件 or 文件夹？</h3><p>如果是小工具或者是轻量脚本，可以选择单文件模式。此时，单文件便携性较好，且运行性能与文件夹无太大差异。</p>
+<p>但如果是带 GUI 界面、需要快速启动的桌面软件，则应该选择文件夹模式。</p>
+<p>以 Nuitka 为例，如果使用 <code>--onefile</code> 参数重新打包，Nuitka 会用 Zstandard 算法将 dist 文件夹压缩，运行应用时会在 <code>~AppData/Local/Temp</code> 下建立临时文件夹并解压其包装的 DLL 文件，这将导致极高的运行时延迟。</p>
+<h3 id="路径问题：单文件模式下资源定位失效"><a href="#路径问题：单文件模式下资源定位失效" class="headerlink" title="路径问题：单文件模式下资源定位失效"></a>路径问题：单文件模式下资源定位失效</h3><p>在单文件模式下，程序运行时会被解压到系统的临时目录中执行。此时，如果在代码中使用相对路径或通过 <code>os.getcwd()</code> 获取当前工作目录，获取到的实际上是用户双击程序所在的外部目录（例如桌面），而不是程序实际运行的临时解压目录。</p>
+<p>这种路径错位会导致程序无法找到内置的静态资源（如 UI 图标、配置文件、HTML 模板等），从而引发运行时报错。</p>
+<p><strong>修复方案：使用动态路径定位</strong></p>
+<p>为了确保无论在开发环境还是打包后的单文件环境中都能正确加载资源，必须使用脚本运行时的绝对路径。</p>
+<ul>
+<li><p><strong>常规与 Nuitka 方案：</strong> 可以通过 Python 内置变量 <code>__file__</code> 获取当前执行文件的真实绝对路径，从而精准定位临时目录。</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> customtkinter <span class="keyword">as</span> ctk</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">_load_icon</span>(<span class="params">self, filename</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;安全加载图标的辅助函数，兼容单文件模式的绝对路径查找&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 获取当前运行代码文件所在的真实绝对路径</span></span><br><span class="line">    base_path = os.path.dirname(os.path.abspath(__file__))</span><br><span class="line">    icon_path = os.path.join(base_path, <span class="string">&quot;icons&quot;</span>, filename)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> os.path.exists(icon_path):</span><br><span class="line">        <span class="keyword">return</span> ctk.CTkImage(light_image=Image.<span class="built_in">open</span>(icon_path), </span><br><span class="line">                            dark_image=Image.<span class="built_in">open</span>(icon_path), </span><br><span class="line">                            size=(<span class="number">22</span>, <span class="number">22</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>PyInstaller 方案：</strong> PyInstaller 会将临时目录的路径挂载到 <code>sys._MEIPASS</code> 变量中，可以使用以下通用代码段进行动态切换：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_resource_path</span>(<span class="params">relative_path</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">hasattr</span>(sys, <span class="string">&#x27;_MEIPASS&#x27;</span>):</span><br><span class="line">        <span class="comment"># PyInstaller 运行时的临时目录</span></span><br><span class="line">        <span class="keyword">return</span> os.path.join(sys._MEIPASS, relative_path)</span><br><span class="line">    <span class="comment"># 本地开发时的目录</span></span><br><span class="line">    <span class="keyword">return</span> os.path.join(os.path.abspath(<span class="string">&quot;.&quot;</span>), relative_path)</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<blockquote>
+<p>在使用 Nuitka 打包时，除了修改代码路径，也应该确保打包命令中已加入 <code>--include-data-dir=icons=icons</code> 参数，显式将静态文件夹打包进程序。</p>
+</blockquote>
+<h3 id="杀毒软件误报问题"><a href="#杀毒软件误报问题" class="headerlink" title="杀毒软件误报问题"></a>杀毒软件误报问题</h3><p>由于打包工具的单文件模式行为（在后台静默释放文件到临时目录并执行）与许多恶意软件的特征高度相似，生成的 <code>.exe</code> 文件极易被 Windows Defender 或 360 等杀毒软件拦截或直接删除。</p>
+<p>在这一点上，Nuitka 编译生成的原生机器码具有明显优势，其运行逻辑与常规 C&#x2F;C++ 程序一致，被误报的概率显著低于 PyInstaller。如果应用受众是普通用户，强烈推荐使用 Nuitka 的文件夹模式进行分发。</p>
+<h3 id="高分辨率屏幕-GUI-模糊问题"><a href="#高分辨率屏幕-GUI-模糊问题" class="headerlink" title="高分辨率屏幕 GUI 模糊问题"></a>高分辨率屏幕 GUI 模糊问题</h3><p>在 Windows 系统中，如果用户的显示器开启了缩放（如 125%、150%），使用 Tkinter 等部分框架打包后的 GUI 界面可能会出现严重的字体发虚和图像模糊。这是因为系统默认对未声明 DPI 感知的程序进行了强制拉伸。</p>
+<p><strong>修复方案：</strong> 可以在 Python 主程序的入口处加入以下调用 Windows API 的代码，强制声明程序感知系统的 DPI 缩放，即可恢复界面的原生高清显示：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> ctypes</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 设定进程的 DPI 感知级别 (2 = Per Monitor DPI Aware)</span></span><br><span class="line">    ctypes.windll.shcore.SetProcessDpiAwareness(<span class="number">2</span>)</span><br><span class="line"><span class="keyword">except</span> Exception:</span><br><span class="line">    <span class="keyword">pass</span>  <span class="comment"># 忽略低版本 Windows 系统的调用异常</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="五、打包工具选择总结"><a href="#五、打包工具选择总结" class="headerlink" title="五、打包工具选择总结"></a>五、打包工具选择总结</h2><table>
+<thead>
+<tr>
+<th>开发框架</th>
+<th>首选打包工具</th>
+<th>注意事项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>原生 Tkinter</td>
+<td>PyInstaller (单文件)</td>
+<td>无</td>
+</tr>
+<tr>
+<td>CustomTkinter</td>
+<td>Nuitka (文件夹模式)</td>
+<td>必须显式声明包含其自带的 theme 主题资源文件</td>
+</tr>
+<tr>
+<td>PyQt &#x2F; PySide</td>
+<td>Nuitka &#x2F; cx_Freeze</td>
+<td>体积较大；容易少打包底层的 C++ 动态库</td>
+</tr>
+<tr>
+<td>Flet &#x2F; PyWebview</td>
+<td>PyInstaller</td>
+<td>HTML &#x2F; 静态资源在打包后的绝对路径寻址问题</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Packaging</tag>
+        <tag>PyInstaller</tag>
+        <tag>Nuitka</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Software License Overview</title>
+    <url>//archives/software-license-overview/</url>
+    <content><![CDATA[<p>软件许可证是软件开发者或版权所有者授予用户使用、修改或分发软件的法律协议。根据许可证的不同，用户对软件的权限和义务也有所区别。软件许可证可以大致分为以下几类：</p>
+<h2 id="专有软件许可证"><a href="#专有软件许可证" class="headerlink" title="专有软件许可证"></a>专有软件许可证</h2><p>这些许可证通常由商业软件公司提供，用户需要遵循严格的使用限制。</p>
+<h3 id="商业软件许可证"><a href="#商业软件许可证" class="headerlink" title="商业软件许可证"></a>商业软件许可证</h3><ul>
+<li><strong>代表</strong>：Microsoft Windows、Adobe Photoshop</li>
+<li><strong>许可模式</strong>：通常要求购买许可证后才能使用</li>
+<li><strong>限制</strong>：不能修改或分发软件，通常只有执行权</li>
+</ul>
+<h3 id="订阅模式许可证"><a href="#订阅模式许可证" class="headerlink" title="订阅模式许可证"></a>订阅模式许可证</h3><ul>
+<li><strong>代表</strong>：Adobe Creative Cloud、Microsoft 365</li>
+<li><strong>许可模式</strong>：按月&#x2F;年付费订阅</li>
+<li><strong>限制</strong>：软件只能在订阅有效期内使用</li>
+</ul>
+<h3 id="终端用户许可协议（EULA）"><a href="#终端用户许可协议（EULA）" class="headerlink" title="终端用户许可协议（EULA）"></a>终端用户许可协议（EULA）</h3><ul>
+<li><strong>代表</strong>：几乎所有商业软件都会附带</li>
+<li><strong>许可模式</strong>：用户必须同意 EULA 条款才能安装或使用软件</li>
+<li><strong>限制</strong>：通常禁止逆向工程、修改或再分发</li>
+</ul>
+<h2 id="开源软件许可证"><a href="#开源软件许可证" class="headerlink" title="开源软件许可证"></a>开源软件许可证</h2><p>开源许可证允许用户查看、修改和分发源代码，但不同许可证对这些权利的限制有所不同。</p>
+<h3 id="宽松开源许可证"><a href="#宽松开源许可证" class="headerlink" title="宽松开源许可证"></a>宽松开源许可证</h3><p>这些许可证允许用户修改并闭源分发代码，无需开源衍生作品。</p>
+<h4 id="MIT-许可证（MIT-License）"><a href="#MIT-许可证（MIT-License）" class="headerlink" title="MIT 许可证（MIT License）"></a>MIT 许可证（MIT License）</h4><ul>
+<li><p><strong>代表项目</strong>：React.js、Node.js</p>
+</li>
+<li><p><strong>许可模式</strong>：允许自由使用、修改和分发</p>
+</li>
+<li><p><strong>主要特点</strong>：</p>
+<ul>
+<li>代码可用于闭源软件</li>
+<li>只需保留原始许可声明</li>
+<li>免责条款：不对代码的质量和安全性负责</li>
+</ul>
+</li>
+<li><p><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/MIT.txt" >MIT License<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+</li>
+</ul>
+<h4 id="Apache-许可证-2-0（Apache-License-2-0）"><a href="#Apache-许可证-2-0（Apache-License-2-0）" class="headerlink" title="Apache 许可证 2.0（Apache License 2.0）"></a>Apache 许可证 2.0（Apache License 2.0）</h4><ul>
+<li><strong>代表项目</strong>：Android、TensorFlow</li>
+<li><strong>许可模式</strong>：比 MIT 更严格，要求贡献代码的人授予专利授权</li>
+<li><strong>主要特点</strong>：<ul>
+<li>允许闭源</li>
+<li>需声明修改内容</li>
+<li>提供专利授权</li>
+</ul>
+</li>
+<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/Apache-2.0.txt" >Apache-2.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h4 id="BSD-许可证（Berkeley-Software-Distribution-License）"><a href="#BSD-许可证（Berkeley-Software-Distribution-License）" class="headerlink" title="BSD 许可证（Berkeley Software Distribution License）"></a>BSD 许可证（Berkeley Software Distribution License）</h4><ul>
+<li><strong>代表项目</strong>：FreeBSD、PostgreSQL</li>
+<li><strong>许可模式</strong>：类似 MIT 但有不同变体</li>
+<li><strong>主要特点</strong>：<ul>
+<li>BSD-2-Clause：要求保留原作者声明</li>
+<li>BSD-3-Clause：额外禁止使用原作者的名字做推广</li>
+</ul>
+</li>
+<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/BSD-3.txt" >BSD-3<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h3 id="传染性许可证"><a href="#传染性许可证" class="headerlink" title="传染性许可证"></a>传染性许可证</h3><p>要求所有基于该软件的派生作品也必须使用相同的许可证，确保代码持续开源。</p>
+<h4 id="GNU-通用公共许可证（GPL，General-Public-License）"><a href="#GNU-通用公共许可证（GPL，General-Public-License）" class="headerlink" title="GNU 通用公共许可证（GPL，General Public License）"></a>GNU 通用公共许可证（GPL，General Public License）</h4><ul>
+<li><strong>代表项目</strong>：Linux Kernel、GCC</li>
+<li><strong>许可模式</strong>：所有衍生软件必须开源（强 Copyleft）</li>
+<li><strong>主要特点</strong>：<ul>
+<li><strong>GPLv2</strong>：较严格，要求所有衍生作品必须完全开源</li>
+<li><strong>GPLv3</strong>：新增专利保护和 Tivoization（防止锁定硬件）</li>
+</ul>
+</li>
+<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/GPL-3.0.txt" >GPL-3.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h4 id="LGPL（Lesser-General-Public-License）"><a href="#LGPL（Lesser-General-Public-License）" class="headerlink" title="LGPL（Lesser General Public License）"></a>LGPL（Lesser General Public License）</h4><ul>
+<li><strong>代表项目</strong>：FFmpeg、Qt</li>
+<li><strong>许可模式</strong>：允许闭源软件动态链接 LGPL 代码</li>
+<li><strong>主要特点</strong>：<ul>
+<li>适用于库，允许与闭源软件动态链接</li>
+<li>但如果修改库本身，必须开源</li>
+</ul>
+</li>
+<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/LGPL-3.0.txt" >LGPL-3.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h4 id="AGPL（Affero-General-Public-License）"><a href="#AGPL（Affero-General-Public-License）" class="headerlink" title="AGPL（Affero General Public License）"></a>AGPL（Affero General Public License）</h4><ul>
+<li><strong>代表项目</strong>：MongoDB</li>
+<li><strong>许可模式</strong>：适用于网络服务端软件，要求分发服务端代码</li>
+<li><strong>主要特点</strong>：<ul>
+<li>与 GPL 类似，但进一步要求通过网络交互的修改内容也必须开源</li>
+<li>确保所有用户都能访问服务端的源代码</li>
+</ul>
+</li>
+<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/AGPL-3.0.txt" >AGPL-3.0<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h4 id="FDL（Free-Documentation-License）"><a href="#FDL（Free-Documentation-License）" class="headerlink" title="FDL（Free Documentation License）"></a>FDL（Free Documentation License）</h4><ul>
+<li><strong>代表项目</strong>：GNU 文档</li>
+<li><strong>许可模式</strong>：主要用于文档和书籍，要求衍生品也必须开源</li>
+<li><strong>主要特点</strong>：<ul>
+<li>确保文档的内容可以自由修改和分发</li>
+<li>适用于技术文档或操作手册</li>
+</ul>
+</li>
+<li><strong>许可证模板</strong>：<a class="link"   href="https://pub-ddce90f81a2649c4a988a8ba244a3af0.r2.dev/FDL-1.3.txt" >FDL-1.3<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<h2 id="创意共享许可证"><a href="#创意共享许可证" class="headerlink" title="创意共享许可证"></a>创意共享许可证</h2><p>适用于文本、图片、音乐等非软件内容。</p>
+<ul>
+<li><strong>CC-BY</strong>（署名）：需注明作者</li>
+<li><strong>CC-BY-NC</strong>（署名-非商业）：只能用于非商业目的</li>
+<li><strong>CC-BY-NC-ND</strong>（署名-非商业-禁止改编）：不能商用且禁止修改</li>
+<li><strong>CC-BY-NC-SA</strong>（署名-非商业-相同方式共享）：非商业用途且衍生作品需用相同协议</li>
+<li><strong>CC-BY-ND</strong>（署名-禁止改编）：允许商用但禁止修改</li>
+<li><strong>CC-BY-SA</strong>（署名-相同方式共享）：类似 GPL，要求衍生品使用相同协议</li>
+</ul>
+<p><strong>许可证模板</strong>：<a class="link"   href="https://creativecommons.org/licenses/" >Creative Commons Licenses<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="许可证选择指南"><a href="#许可证选择指南" class="headerlink" title="许可证选择指南"></a>许可证选择指南</h2><table>
+<thead>
+<tr>
+<th>许可证</th>
+<th>是否允许闭源</th>
+<th>是否要求开源衍生品</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>MIT</strong></td>
+<td>✅ 允许</td>
+<td>❌ 不要求</td>
+<td>个人、商业项目</td>
+</tr>
+<tr>
+<td><strong>Apache 2.0</strong></td>
+<td>✅ 允许</td>
+<td>❌ 不要求</td>
+<td>需要专利保护的项目</td>
+</tr>
+<tr>
+<td><strong>BSD</strong></td>
+<td>✅ 允许</td>
+<td>❌ 不要求</td>
+<td>高自由度的开源软件</td>
+</tr>
+<tr>
+<td><strong>GPL</strong></td>
+<td>❌ 禁止</td>
+<td>✅ 强制开源</td>
+<td>Linux、自由软件</td>
+</tr>
+<tr>
+<td><strong>LGPL</strong></td>
+<td>✅ 允许</td>
+<td>✅ 仅库需开源</td>
+<td>开源库</td>
+</tr>
+<tr>
+<td><strong>AGPL</strong></td>
+<td>❌ 禁止</td>
+<td>✅ 强制开源</td>
+<td>网络服务端</td>
+</tr>
+<tr>
+<td><strong>FDL</strong></td>
+<td>❌ 禁止</td>
+<td>✅ 强制开源</td>
+<td>文档、书籍</td>
+</tr>
+<tr>
+<td><strong>CC-BY</strong></td>
+<td>✅ 允许</td>
+<td>❌ 不要求</td>
+<td>文档、图片</td>
+</tr>
+<tr>
+<td><strong>CC-BY-NC</strong></td>
+<td>❌ 禁止</td>
+<td>❌ 不要求</td>
+<td>非商业内容</td>
+</tr>
+<tr>
+<td><strong>CC-BY-NC-ND</strong></td>
+<td>❌ 禁止</td>
+<td>❌ 不要求</td>
+<td>非商业且禁止改编</td>
+</tr>
+<tr>
+<td><strong>CC-BY-NC-SA</strong></td>
+<td>❌ 禁止</td>
+<td>✅ 强制开源</td>
+<td>非商业开源文化内容</td>
+</tr>
+<tr>
+<td><strong>CC-BY-ND</strong></td>
+<td>✅ 允许</td>
+<td>❌ 不要求</td>
+<td>商用但禁止改编</td>
+</tr>
+<tr>
+<td><strong>CC-BY-SA</strong></td>
+<td>✅ 允许</td>
+<td>✅ 强制开源</td>
+<td>开源文化内容</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>License</tag>
       </tags>
   </entry>
   <entry>
