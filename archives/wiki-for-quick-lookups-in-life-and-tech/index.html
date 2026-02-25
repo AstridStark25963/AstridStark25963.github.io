@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    
+    <meta name="author" content="Astrid Stark">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes ASAP (before DOMContentLoaded)
+            (function() {
+                const addBodyClass = () => {
+                    const b = document.body;
+                    if (!b) return false;
+                    b.classList.add(theme + "-mode");
+                    return true;
+                };
+
+                // Try immediately
+                if (addBodyClass()) return;
+
+                // Observe until body exists
+                const mo = new MutationObserver(() => {
+                    if (addBodyClass()) mo.disconnect();
+                });
+                mo.observe(document.documentElement, { childList: true, subtree: true });
+            })();
+        })();
+    </script>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://1lya.com/archives/wiki-for-quick-lookups-in-life-and-tech/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+        
+        <meta name="description" content="Astrid&#39;s Fantasy World - Dive, into the unknown.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wiki for Quick Lookups in Life and Tech">
+<meta property="og:url" content="https://1lya.com/archives/wiki-for-quick-lookups-in-life-and-tech/">
+<meta property="og:site_name" content="Astrid&#39;s Fantasy World">
+<meta property="og:description" content="Astrid&#39;s Fantasy World - Dive, into the unknown.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://1lya.com/images/og.webp">
+<meta property="article:published_time" content="2026-02-24T23:42:26.255Z">
+<meta property="article:modified_time" content="2026-02-25T00:03:43.199Z">
+<meta property="article:author" content="Astrid Stark">
+<meta property="article:tag" content="wiki">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://1lya.com/images/og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Wiki for Quick Lookups in Life and Tech | Astrid&#39;s Fantasy World
+        
+    </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/css/build/tailwind.css">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"1lya.com","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":false,"count":false,"min2read":false},"author_label":{"enable":true,"auto":false,"list":["Lv. ∞"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"/images/og.webp","description":"Astrid's Fantasy World - Dive, into the unknown."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/minecraft-light.webp","dark":"/images/minecraft-dark.webp"},"title":"Astrid's Fantasy World","subtitle":{"text":["do not go gentle into that good night"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":75,"backing_speed":60,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#FFFFFF","dark":"#FFFFFF"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":[{"icon":"fa-brands fa-github","url":"https://github.com/AstridStark25963"},{"icon":"fa-brands fa-twitter","url":"https://x.com/IAmAstridStark"},{"icon":"fa-brands fa-steam","url":"https://steamcommunity.com/id/st_astrid/"},{"icon":"fa-brands fa-telegram","url":"https://t.me/plscallmeastrid"},{"icon":"fa-solid fa-at","url":"mailto:astridstark25963@gmail.com"}],"qrs":[]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Меланхолия","artist":"MIKAYA,BOMBAY","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.lrc"},{"name":"Animal","artist":"Rauf & Faik","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.lrc"},{"name":"Bones","artist":"Low Roar,Jófriður","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.lrc"},{"name":"Let Me Down Slowly","artist":"Alec Benjamin,Alessia Cara","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.lrc"},{"name":"III","artist":"Athletics","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.lrc"},{"name":"lovely","artist":"Billie Eilish,Khalid","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.lrc"},{"name":"Talking to the Moon","artist":"Bruno Mars","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.lrc"},{"name":"My Heart Will Go On","artist":"Céline Dion,James Horner","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.lrc"},{"name":"Mockingbird","artist":"Eminem","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.lrc"},{"name":"Stan","artist":"Eminem,Dido","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.lrc"},{"name":"Trava u doma (Geoffrey Day Remix)","artist":"Geoffplaysguitar,Земляне,Atomic Heart","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).lrc"},{"name":"You're Beautiful","artist":"James Blunt","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.lrc"},{"name":"It's not fair","artist":"Kenya Grace","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.lrc"},{"name":"STAR WALKIN'","artist":"Lil Nas X","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.lrc"},{"name":"The Emptiness Machine","artist":"Linkin Park","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.lrc"},{"name":"Dynasty","artist":"Miia","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.lrc"},{"name":"GODS","artist":"NewJeans,英雄联盟","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.lrc"},{"name":"The Godfather (Love Theme)","artist":"Nino Rota","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).lrc"},{"name":"Da Capo","artist":"Starbreeze Entertainment,Gustavo Coutinho","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.lrc"},{"name":"The Death of Peace of Mind (Sullivan King Remix)","artist":"Sullivan King","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.lrc"},{"name":"Don't Lean on Me","artist":"The Amity Affliction","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.lrc"},{"name":"God Mode","artist":"The Verkkars,Aleksib","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).lrc"},{"name":"戒网","artist":"村西,馨悦(WhiteRainbow)","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.lrc"},{"name":"空心","artist":"光泽","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.lrc"},{"name":"转身即心痛","artist":"吉星出租","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.lrc"},{"name":"Dawn (黎明将至)","artist":"三角洲行动,Lithium Done","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).lrc"},{"name":"Aria Math","artist":"bxkq,Hardx,C418","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.lrc"}]},"mermaid":{"enable":false,"version":"11.4.1","theme":{"light":"default","dark":"dark"}}},"version":"2.9.0","navbar":{"auto_hide":true,"color":{"left":"#DF45DA","right":"#367DF7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Gallery":{"path":"/gallery","icon":"fa-regular fa-image"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Friends":"/friends","Thanks":"/thanks"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur","masonry":{"batch_size":12,"initial_batch_size":24}},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"Dive, into the unknown.","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Linkbox":{"path":"/linkbox","icon":"fa-regular fa-bookmark"},"Gallery":{"path":"/gallery","icon":"fa-regular fa-image"},"Moments":{"path":"/moments","icon":"fa-regular fa-thought-bubble"},"Games":{"path":"/games","icon":"fa-regular fa-gamepad"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footer":{"runtime":true,"icon":"<i class=\"fa-solid fa-heart fa-beat\" style=\"--fa-animation-duration: 0.5s; color: #F54545\"></i>","start":"2024/12/23 11:03:42","statistics":true,"customize":null,"icp":{"enable":false,"number":null,"url":null}},"footerStart":"2024/12/23 11:03:42","mermaid":{"style":{"light":"default","dark":"dark"}}};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.i18n = {"search":"Search...","toc":"On this page","prev":"Prev","next":"Next","prev_posts":"Prev posts","next_posts":"Next posts","page":"Page %d","recent_posts":"Recent Posts","share":"Share","powered_by":"POWERED BY %s","theme":"THEME","rss_feed":"RSS Feed","category":"Category","categories":"Categories","tag":"Tag","tags":"Tags","post":"Post","posts":"Posts","tagcloud":"Tag Cloud","comment":"Comment","comments":"Comments","home":"Home","archive":"Archive","archives":"Archives","top":"TOP","sticky":"Sticky","go-back-home":"Go Back Home","masonry_loading":"Loading photos...","image_viewer":"Image viewer","close":"Close","exif":{"title":"EXIF","cards":{"camera":"Camera","lens":"Lens","exposure":"Exposure","other":"Other"},"fields":{"make":"Brand","model":"Model","date_taken":"Date taken","lens_model":"Lens","focal_length":"Focal length","focus_mode":"Focus mode","shutter":"Shutter","aperture":"Aperture","iso":"ISO","exposure_program":"Exposure program","exposure_compensation":"Exposure compensation","metering_mode":"Metering mode","flash":"Flash","white_balance":"White balance","latitude":"Latitude","longitude":"Longitude","altitude":"Altitude"},"status":{"loading":"Loading...","no_exif":"No EXIF available","library_missing":"EXIF library not loaded","image_source_missing":"Image source unavailable","unavailable":"EXIF unavailable (blocked by CORS or missing metadata)","flag_unavailable":"EXIF unavailable"}},"about":"About","changelog":"Changelog","links":"Links","link":"Link","friends":"Friends","friend":"Friend","timeline":"Timeline","shuoshuo":"Shuoshuo","bookmarks":"Bookmarks","site_uv":"VISITOR COUNT","site_pv":"TOTAL PAGE VIEWS","read_more":"Read more","wordcount":"Words","min2read":"Mins","status":"Status","runtime":"Blog up for","days":"days","hours":"hrs","minutes":"Min","seconds":"Sec","optimized_by":"and Optimized by Evan","rights":"All Rights Reserved","site_posts":"%s posts in total","site_wordcount":"%s words in total","copyright":{"author":"Author","title":"Title","link":"Link","create_time":"Created at","update_time":"Updated at","license_title":"License","license_content":"This work is licensed under %s.","all_rights_reserved":"All Rights Reserved &#169; %s","public_domain":"This work is in the public domain."},"ago":{"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"},"create_time":"Created","update_time":"Updated","expired":"This post is written %s days ago, and the content may not be up to date."};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Astrid&#39;s Fantasy World
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="active"
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/gallery"
+                                        >
+                                    <i class="fa-regular fa-image fa-fw"></i>
+                                    GALLERY
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/friends">
+                                                    FRIENDS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/thanks">
+                                                    THANKS
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/gallery"
+                        >
+                            <span>
+                                GALLERY
+                            </span>
+                            
+                                <i class="fa-regular fa-image fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/friends">FRIENDS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/thanks">THANKS</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/linkbox"
+                        >
+                            <span>Linkbox</span>
+                            <i class="fa-regular fa-bookmark fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/moments"
+                        >
+                            <span>Moments</span>
+                            <i class="fa-regular fa-thought-bubble fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/games"
+                        >
+                            <span>Games</span>
+                            <i class="fa-regular fa-gamepad fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">53</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">31</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="/images/wiki-for-quick-lookups-in-life-and-tech.webp" alt="Wiki for Quick Lookups in Life and Tech" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">Wiki for Quick Lookups in Life and Tech</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] shrink-0 rounded-medium border border-border-color p-px">
+				<img src="/images/my-avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Astrid Stark</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv. ∞</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2026-02-25 07:42:26</span>
+        <span class="mobile">2026-02-25 07:42:26</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2026-02-25 08:03:43</span>
+            <span class="mobile">2026-02-25 08:03:43</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Memo/">Memo</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/wiki/">wiki</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<p>在日常生活和编程开发中，我们总会遇到一些偶尔需要用到、但极易遗忘的零碎知识点。这篇文章作为个人维基的速查字典，将持续收录和整理这些跨越生活常识与代码语法的碎片信息，方便随时检索和查阅。</p>
+<h2 id="视力标准换算"><a href="#视力标准换算" class="headerlink" title="视力标准换算"></a>视力标准换算</h2><p>在体检或查阅病历时，常会遇到两种不同的视力记录方式：<code>0.x</code> 的小数记录法和 <code>5.x</code> 的五分记录法（对数记录法）。</p>
+<p>换算公式为：</p>
+<p>$$\text{五分记录法} &#x3D; 5 + \log_{10}(\text{小数记录法})$$</p>
+<p>常见换算对照表如下：</p>
+<table>
+<thead>
+<tr>
+<th>小数记录法</th>
+<th>五分记录法（对数）</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.5</td>
+<td>5.2</td>
+<td></td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>5.1</td>
+<td></td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>5.0</td>
+<td>正常标准视力</td>
+</tr>
+<tr>
+<td>0.8</td>
+<td>4.9</td>
+<td></td>
+</tr>
+<tr>
+<td>0.6</td>
+<td>4.8</td>
+<td></td>
+</tr>
+<tr>
+<td>0.5</td>
+<td>4.7</td>
+<td></td>
+</tr>
+<tr>
+<td>0.4</td>
+<td>4.6</td>
+<td></td>
+</tr>
+<tr>
+<td>0.3</td>
+<td>4.5</td>
+<td></td>
+</tr>
+<tr>
+<td>0.2</td>
+<td>4.3</td>
+<td></td>
+</tr>
+<tr>
+<td>0.1</td>
+<td>4.0</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="主流-IDE-代码格式化快捷键"><a href="#主流-IDE-代码格式化快捷键" class="headerlink" title="主流 IDE 代码格式化快捷键"></a>主流 IDE 代码格式化快捷键</h2><p>不同开发环境下的默认代码格式化快捷键往往不同，在切换编辑器时经常容易混淆。</p>
+<p><strong>VS Code:</strong></p>
+<ul>
+<li>Windows &#x2F; Linux：<code>Shift + Alt + F</code></li>
+<li>Mac：<code>Shift + Option + F</code></li>
+</ul>
+<p><strong>JetBrains 系 (IntelliJ, PyCharm, WebStorm 等):</strong></p>
+<ul>
+<li>Windows &#x2F; Linux：<code>Ctrl + Alt + L</code></li>
+<li>Mac：<code>Option + Command + L</code></li>
+</ul>
+<h2 id="常见编程语言中的引号语法差异"><a href="#常见编程语言中的引号语法差异" class="headerlink" title="常见编程语言中的引号语法差异"></a>常见编程语言中的引号语法差异</h2><p>不同编程语言对于单引号（<code>&#39;</code>）和双引号（<code>&quot;</code>）的解析规则存在显著差异。</p>
+<p><strong>C 与 Java:</strong></p>
+<ul>
+<li>**单引号 (<code>&#39;&#39;</code>)**：用于表示单个字符（<code>char</code> 类型），例如 <code>&#39;a&#39;</code>。</li>
+<li>**双引号 (<code>&quot;&quot;</code>)**：用于表示字符串（字符序列）。在 C 语言中，字符串末尾会自动包含一个隐藏的结束符 <code>\0</code>，例如 <code>&quot;hello&quot;</code>。</li>
+</ul>
+<p><strong>Python 与 JavaScript:</strong></p>
+<ul>
+<li>单双引号没有功能上的本质区别，都可以用来表示字符串。</li>
+<li>主要优势在于方便嵌套：如果字符串本身包含单引号，外部就可以直接用双引号包裹（例如 <code>&quot;It&#39;s fine&quot;</code>），反之亦然，从而避免频繁使用转义字符。</li>
+</ul>
+<h2 id="GitHub-仓库信息查看"><a href="#GitHub-仓库信息查看" class="headerlink" title="GitHub 仓库信息查看"></a>GitHub 仓库信息查看</h2><p>使用 GitHub 的 API 服务，在浏览器地址栏输入：<code>https://api.github.com/repos/username/reponame</code> 就可以获得指定作者指定仓库的详细信息。</p>
+<p>比如，输入 <code>https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io</code> 就可以得到我的仓库的 JSON 格式的信息：</p>
+<div class="code-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">907337136</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;node_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;R_kgDONhTdsA&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;full_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AstridStark25963/AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;private&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;owner&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;login&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AstridStark25963&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">116073056</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;node_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;U_kgDOBusiYA&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;avatar_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://avatars.githubusercontent.com/u/116073056?v=4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;gravatar_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;html_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/AstridStark25963&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;followers_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/followers&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;following_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/following&#123;/other_user&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;gists_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/gists&#123;/gist_id&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;starred_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/starred&#123;/owner&#125;&#123;/repo&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;subscriptions_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/subscriptions&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;organizations_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/orgs&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;repos_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/repos&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;events_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/events&#123;/privacy&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;received_events_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/users/AstridStark25963/received_events&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;User&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;user_view_type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;public&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;site_admin&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;html_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/AstridStark25963/AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;A personal website powered by Hexo with the Redefine theme. Explore articles, tutorials, and projects about programming, technology, and more.&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;fork&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;forks_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/forks&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;keys_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/keys&#123;/key_id&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;collaborators_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/collaborators&#123;/collaborator&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;teams_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/teams&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;hooks_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/hooks&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;issue_events_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/issues/events&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;events_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/events&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;assignees_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/assignees&#123;/user&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;branches_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/branches&#123;/branch&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;tags_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/tags&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;blobs_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/blobs&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;git_tags_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/tags&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;git_refs_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/refs&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;trees_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/trees&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;statuses_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/statuses/&#123;sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;languages_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/languages&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;stargazers_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/stargazers&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;contributors_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/contributors&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;subscribers_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/subscribers&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;subscription_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/subscription&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;commits_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/commits&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;git_commits_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/git/commits&#123;/sha&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;comments_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/comments&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;issue_comment_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/issues/comments&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;contents_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/contents/&#123;+path&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;compare_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/compare/&#123;base&#125;...&#123;head&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;merges_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/merges&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;archive_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/&#123;archive_format&#125;&#123;/ref&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;downloads_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/downloads&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;issues_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/issues&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pulls_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/pulls&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;milestones_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/milestones&#123;/number&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;notifications_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/notifications&#123;?since,all,participating&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;labels_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/labels&#123;/name&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;releases_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/releases&#123;/id&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;deployments_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.github.com/repos/AstridStark25963/AstridStark25963.github.io/deployments&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2024-12-23T11:03:42Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;updated_at&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2025-01-31T03:44:50Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pushed_at&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2025-01-31T03:44:46Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;git_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git://github.com/AstridStark25963/AstridStark25963.github.io.git&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;ssh_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git@github.com:AstridStark25963/AstridStark25963.github.io.git&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;clone_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/AstridStark25963/AstridStark25963.github.io.git&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;svn_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://github.com/AstridStark25963/AstridStark25963.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;homepage&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://1lya.com/&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;size&quot;</span><span class="punctuation">:</span> <span class="number">80797</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;stargazers_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;watchers_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;language&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HTML&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_issues&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_projects&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_downloads&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_wiki&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_pages&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;has_discussions&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;forks_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;mirror_url&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;archived&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;disabled&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;open_issues_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;allow_forking&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;is_template&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;web_commit_signoff_required&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;topics&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;hexo&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;hexo-theme-redefine&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;personal-website&quot;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;visibility&quot;</span><span class="punctuation">:</span> <span class="string">&quot;public&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;forks&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;open_issues&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;watchers&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;default_branch&quot;</span><span class="punctuation">:</span> <span class="string">&quot;main&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;temp_clone_token&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;network_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;subscribers_count&quot;</span><span class="punctuation">:</span> <span class="number">1</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="SVG-基础语法与路径指令"><a href="#SVG-基础语法与路径指令" class="headerlink" title="SVG 基础语法与路径指令"></a>SVG 基础语法与路径指令</h2><p>SVG (Scalable Vector Graphics，可缩放矢量图形) 的本质并非二进制图像，而是基于 XML 的纯文本。这意味着它可以被无损无限放大，且能够被任何编程语言动态读取、修改和生成，也可以直接内嵌到 HTML 或 Hexo 的模板文件中，无需加载外部图片资源。</p>
+<p><strong>核心容器与坐标系</strong></p>
+<ul>
+<li><code>&lt;svg&gt;</code>：最外层的“画布”容器。<ul>
+<li><code>width</code> &#x2F; <code>height</code>：图形在屏幕上渲染的实际物理尺寸（如 <code>24px</code>）。</li>
+<li><code>viewBox=&quot;0 0 width height&quot;</code>：定义内部的“视口比例”与虚拟网格。无论外部 <code>width</code> 放大到多少，内部的图案都会严格按照这个网格的比例进行无损缩放。</li>
+</ul>
+</li>
+</ul>
+<p><strong>基础几何图形</strong></p>
+<p>对于简单的形状，SVG 提供了直观的现成标签：</p>
+<ul>
+<li>圆 <code>&lt;circle&gt;</code>：<code>cx</code> (圆心 X 坐标), <code>cy</code> (圆心 Y 坐标), <code>r</code> (半径)。</li>
+<li>矩形 <code>&lt;rect&gt;</code>：<code>x</code>, <code>y</code> (左上角起点), <code>width</code>, <code>height</code>, <code>rx</code> (圆角半径)。</li>
+<li>直线 <code>&lt;line&gt;</code>：<code>x1</code>, <code>y1</code> (起点), <code>x2</code>, <code>y2</code> (终点)。</li>
+</ul>
+<p><strong>万能画笔 <code>&lt;path&gt;</code> 指令速查表</strong></p>
+<p><code>&lt;path d=&quot;...&quot;&gt;</code> 中的 <code>d</code> 代表数据，是一系列向浏览器的“虚拟机械臂”下达的移动和绘制指令。</p>
+<table>
+<thead>
+<tr>
+<th align="center">指令缩写</th>
+<th align="left">含义</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">M &#x2F; m</td>
+<td align="left">Move to (移动)</td>
+<td align="left">抬起画笔移动到指定坐标，准备开始画。例如 <code>M10 10</code>。</td>
+</tr>
+<tr>
+<td align="center">L &#x2F; l</td>
+<td align="left">Line to (画线)</td>
+<td align="left">笔尖贴纸，从当前位置画一条直线到指定坐标。</td>
+</tr>
+<tr>
+<td align="center">H &#x2F; h</td>
+<td align="left">Horizontal (水平线)</td>
+<td align="left">沿水平方向画直线。</td>
+</tr>
+<tr>
+<td align="center">V &#x2F; v</td>
+<td align="left">Vertical (垂直线)</td>
+<td align="left">沿垂直方向画直线。例如 <code>v4</code> 表示向下画 4 个单位。</td>
+</tr>
+<tr>
+<td align="center">A &#x2F; a</td>
+<td align="left">Arc (圆弧)</td>
+<td align="left">绘制一段弧线。例如 <code>a2 2</code> 是画一个半径为 2 的圆角弧线。</td>
+</tr>
+<tr>
+<td align="center">C &#x2F; c</td>
+<td align="left">Curve (贝塞尔曲线)</td>
+<td align="left">绘制三次贝塞尔曲线，用于绘制平滑、复杂的花纹。</td>
+</tr>
+<tr>
+<td align="center">Q &#x2F; q</td>
+<td align="left">Quadratic (二次曲线)</td>
+<td align="left">绘制二次贝塞尔曲线。</td>
+</tr>
+<tr>
+<td align="center">Z &#x2F; z</td>
+<td align="left">Close Path (闭合路径)</td>
+<td align="left">笔尖直接画一条直线，连回当前子路径的起点 (即上一个 M 所在的位置)。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>大写字母表示绝对坐标，小写字母表示相对当前位置的相对坐标。</p>
+</blockquote>
+<p><strong>通用样式属性 (Styling)</strong></p>
+<p>无论是基础图形还是 <code>&lt;path&gt;</code>，都可以通过以下属性控制外观：</p>
+<ul>
+<li><code>fill</code>：填充颜色（例如 <code>&quot;red&quot;</code>, <code>&quot;#1a73e8&quot;</code>, <code>&quot;none&quot;</code>）。</li>
+<li><code>stroke</code>：描边（边框）颜色。若只需保留线条轮廓，通常设置 <code>fill=&quot;none&quot;</code> 且配合 <code>stroke=&quot;currentColor&quot;</code> 使用。</li>
+<li><code>stroke-width</code>：线条的粗细。</li>
+</ul>
+<p><strong>跨语言生成 SVG 示例 (HTML)</strong></p>
+<p>利用其纯文本特性，可以直接在数据分析或后端脚本中通过代码生成矢量图并保存：</p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 画布定义 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 24 24&quot;</span> <span class="attr">width</span>=<span class="string">&quot;64&quot;</span> <span class="attr">height</span>=<span class="string">&quot;64&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;#1a73e8&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span> <span class="attr">stroke-linejoin</span>=<span class="string">&quot;round&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 文档外轮廓 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 折角 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">polyline</span> <span class="attr">points</span>=<span class="string">&quot;14 2 14 8 20 8&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">polyline</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 箭头主干 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;12&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;12&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;12&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;18&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">line</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 箭头头部 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">polyline</span> <span class="attr">points</span>=<span class="string">&quot;9 15 12 18 15 15&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">polyline</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>效果如下：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/wiki-for-quick-lookups-in-life-and-tech/img0.webp"
+                      alt="SVG 效果"
+                ></p>
+
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/wiki/">#wiki</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/archives/guide-for-hexo-blog-backup-and-recovery/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">Guide for Hexo Blog Backup and Recovery</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">Wiki for Quick Lookups in Life and Tech</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E5%8A%9B%E6%A0%87%E5%87%86%E6%8D%A2%E7%AE%97"><span class="nav-text">视力标准换算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E6%B5%81-IDE-%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-text">主流 IDE 代码格式化快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%BC%95%E5%8F%B7%E8%AF%AD%E6%B3%95%E5%B7%AE%E5%BC%82"><span class="nav-text">常见编程语言中的引号语法差异</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-%E4%BB%93%E5%BA%93%E4%BF%A1%E6%81%AF%E6%9F%A5%E7%9C%8B"><span class="nav-text">GitHub 仓库信息查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SVG-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B8%8E%E8%B7%AF%E5%BE%84%E6%8C%87%E4%BB%A4"><span class="nav-text">SVG 基础语法与路径指令</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #F54545"></i>&nbsp;&nbsp;<a href="/">Astrid Stark</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        31 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.9.0</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container" role="dialog" aria-modal="true" aria-label="Image viewer">
+	<button class="image-viewer-close" type="button" aria-label="Close">
+		<i class="fa-solid fa-xmark"></i>
+	</button>
+	<button class="image-viewer-prev" type="button" aria-label="Prev">
+		<i class="fa-solid fa-chevron-left"></i>
+	</button>
+	<div class="image-viewer-frame">
+		<img src="" alt="">
+	</div>
+	<div class="image-viewer-exif-panel hidden absolute left-1/2 bottom-20 -translate-x-1/2 w-[min(92vw,420px)] max-h-[60vh] overflow-hidden rounded-2xl bg-background-color-transparent-80 p-4 text-left shadow-redefine-flat backdrop-blur-md" role="dialog" aria-label="EXIF" aria-hidden="true">
+		<div class="flex items-center justify-between mb-3">
+			<span class="text-sm font-semibold text-first-text-color">EXIF</span>
+			<button class="image-viewer-exif-close flex h-8 w-8 items-center justify-center rounded-full bg-background-color-transparent-80 text-first-text-color transition hover:bg-background-color-transparent-40" type="button" aria-label="Close">
+				<i class="fa-solid fa-xmark text-[0.65rem]"></i>
+			</button>
+		</div>
+		<div class="image-viewer-exif-cards grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto pr-1 scrollbar-hide"></div>
+		<template class="image-viewer-exif-card-template">
+			<div class="rounded-lg bg-background-color-transparent-40 px-3 py-2">
+				<div class="image-viewer-exif-card-header flex items-center gap-2 mb-1">
+					<i class="image-viewer-exif-card-icon fa-solid fa-circle-info text-xs text-third-text-color"></i>
+					<div class="image-viewer-exif-card-title text-xs font-semibold text-first-text-color"></div>
+				</div>
+				<div class="image-viewer-exif-card-items flex flex-col gap-1"></div>
+			</div>
+		</template>
+	</div>
+	<button class="image-viewer-exif-toggle flex items-center gap-2 hidden absolute left-1/2 bottom-6 -translate-x-1/2 rounded-full border border-border-color bg-background-color-transparent-80 px-4 py-2 text-first-text-color backdrop-blur-md transition hover:bg-background-color-transparent-40" type="button" aria-label="EXIF" aria-expanded="false">
+		<i class="fa-solid fa-circle-info text-xs"></i>
+		<span class="text-xs font-semibold uppercase tracking-wider">EXIF</span>
+	</button>
+	<button class="image-viewer-next" type="button" aria-label="Next">
+		<i class="fa-solid fa-chevron-right"></i>
+	</button>
+</div>
+
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/Swup.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    window.swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+
+    window.dispatchEvent(
+        new CustomEvent("redefine:swup:ready", {
+            detail: {
+                swup: window.swup,
+            },
+        }),
+    );
+</script>
+
+
+
+
+	<script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/main.js" ></script>
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/assets/odometer-theme-minimal.css">
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/Typed.min.js" ></script>
+
+
+
+
+
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/minimasonry.min.js" data-swup-reload-script></script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+
+
+	
+	<div id="aplayer"></div>
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/APlayer.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/plugins/aplayer.js" ></script>
+
+	
+</body>
+
+</html>
