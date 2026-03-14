@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    
+    <meta name="author" content="Astrid Stark">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes ASAP (before DOMContentLoaded)
+            (function() {
+                const addBodyClass = () => {
+                    const b = document.body;
+                    if (!b) return false;
+                    b.classList.add(theme + "-mode");
+                    return true;
+                };
+
+                // Try immediately
+                if (addBodyClass()) return;
+
+                // Observe until body exists
+                const mo = new MutationObserver(() => {
+                    if (addBodyClass()) mo.disconnect();
+                });
+                mo.observe(document.documentElement, { childList: true, subtree: true });
+            })();
+        })();
+    </script>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://1lya.com/archives/advanced-guide-to-llm-prompts-and-core-performance-optimization/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+        
+        <meta name="description" content="Astrid&#39;s Fantasy World - Dive, into the unknown.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Advanced Guide to LLM Prompts and Core Performance Optimization">
+<meta property="og:url" content="https://1lya.com/archives/advanced-guide-to-llm-prompts-and-core-performance-optimization/">
+<meta property="og:site_name" content="Astrid&#39;s Fantasy World">
+<meta property="og:description" content="Astrid&#39;s Fantasy World - Dive, into the unknown.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://1lya.com/images/og.webp">
+<meta property="article:published_time" content="2026-03-14T04:18:57.963Z">
+<meta property="article:modified_time" content="2026-03-14T04:21:02.639Z">
+<meta property="article:author" content="Astrid Stark">
+<meta property="article:tag" content="Prompt Engineering">
+<meta property="article:tag" content="LLM">
+<meta property="article:tag" content="AI Productivity">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://1lya.com/images/og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Advanced Guide to LLM Prompts and Core Performance Optimization | Astrid&#39;s Fantasy World
+        
+    </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/css/build/tailwind.css">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"1lya.com","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":false,"count":false,"min2read":false},"author_label":{"enable":true,"auto":false,"list":["Lv. ∞"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"/images/og.webp","description":"Astrid's Fantasy World - Dive, into the unknown."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/minecraft-light.webp","dark":"/images/minecraft-dark.webp"},"title":"Astrid's Fantasy World","subtitle":{"text":["do not go gentle into that good night"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":75,"backing_speed":60,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#FFFFFF","dark":"#FFFFFF"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":[{"icon":"fa-brands fa-github","url":"https://github.com/AstridStark25963"},{"icon":"fa-brands fa-twitter","url":"https://x.com/IAmAstridStark"},{"icon":"fa-brands fa-steam","url":"https://steamcommunity.com/id/st_astrid/"},{"icon":"fa-brands fa-telegram","url":"https://t.me/plscallmeastrid"},{"icon":"fa-solid fa-at","url":"mailto:astridstark25963@gmail.com"}],"qrs":[]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Меланхолия","artist":"MIKAYA,BOMBAY","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/MIKAYA%2CBOMBAY%20-%20%D0%9C%D0%B5%D0%BB%D0%B0%D0%BD%D1%85%D0%BE%D0%BB%D0%B8%D1%8F.lrc"},{"name":"Animal","artist":"Rauf & Faik","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Rauf%20%26%20Faik%20-%20Animal.lrc"},{"name":"Bones","artist":"Low Roar,Jófriður","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Low%20Roar%2CJ%C3%B3fri%C3%B0ur%20-%20Bones.lrc"},{"name":"Let Me Down Slowly","artist":"Alec Benjamin,Alessia Cara","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Alec%20Benjamin%2CAlessia%20Cara%20-%20Let%20Me%20Down%20Slowly.lrc"},{"name":"III","artist":"Athletics","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Athletics%20-%20III.lrc"},{"name":"lovely","artist":"Billie Eilish,Khalid","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Billie%20Eilish%2CKhalid%20-%20lovely.lrc"},{"name":"Talking to the Moon","artist":"Bruno Mars","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Bruno%20Mars%20-%20Talking%20to%20the%20Moon.lrc"},{"name":"My Heart Will Go On","artist":"Céline Dion,James Horner","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/C%C3%A9line%20Dion%2CJames%20Horner%20-%20My%20Heart%20Will%20Go%20On.lrc"},{"name":"Mockingbird","artist":"Eminem","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%20-%20Mockingbird.lrc"},{"name":"Stan","artist":"Eminem,Dido","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Eminem%2CDido%20-%20Stan.lrc"},{"name":"Trava u doma (Geoffrey Day Remix)","artist":"Geoffplaysguitar,Земляне,Atomic Heart","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Geoffplaysguitar%2C%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%D0%BD%D0%B5%2CAtomic%20Heart%20-%20Trava%20u%20Doma%20(Geoffrey%20Day%20Remix).lrc"},{"name":"You're Beautiful","artist":"James Blunt","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/James%20Blunt%20-%20Youre%20Beautiful.lrc"},{"name":"It's not fair","artist":"Kenya Grace","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Kenya%20Grace%20-%20Its%20not%20fair.lrc"},{"name":"STAR WALKIN'","artist":"Lil Nas X","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Lil%20Nas%20X%20-%20STAR%20WALKIN.lrc"},{"name":"The Emptiness Machine","artist":"Linkin Park","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Linkin%20Park%20-%20The%20Emptiness%20Machine.lrc"},{"name":"Dynasty","artist":"Miia","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Miia%20-%20Dynasty.lrc"},{"name":"GODS","artist":"NewJeans,英雄联盟","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/NewJeans%2C%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%20-%20GODS.lrc"},{"name":"The Godfather (Love Theme)","artist":"Nino Rota","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Nino%20Rota%20-%20The%20Godfather%20(Love%20Theme).lrc"},{"name":"Da Capo","artist":"Starbreeze Entertainment,Gustavo Coutinho","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Starbreeze%20Entertainment%2CGustavo%20Coutinho%20-%20Da%20Capo.lrc"},{"name":"The Death of Peace of Mind (Sullivan King Remix)","artist":"Sullivan King","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/Sullivan%20King%20-%20The%20Death%20of%20Peace%20of%20Mind%EF%BC%88Sullivan%20King%20Remix%EF%BC%89.lrc"},{"name":"Don't Lean on Me","artist":"The Amity Affliction","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Amity%20Affliction%20-%20Dont%20Lean%20on%20Me.lrc"},{"name":"God Mode","artist":"The Verkkars,Aleksib","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/The%20Verkkars%2CAleksib%20-%20God%20Mode%20(feat.%20Aleksib).lrc"},{"name":"戒网","artist":"村西,馨悦(WhiteRainbow)","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E6%9D%91%E8%A5%BF%2C%E9%A6%A8%E6%82%A6(WhiteRainbow)%20-%20%E6%88%92%E7%BD%91.lrc"},{"name":"空心","artist":"光泽","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%85%89%E6%B3%BD%20-%20%E7%A9%BA%E5%BF%83.lrc"},{"name":"转身即心痛","artist":"吉星出租","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E5%90%89%E6%98%9F%E5%87%BA%E7%A7%9F%20-%20%E8%BD%AC%E8%BA%AB%E5%8D%B3%E5%BF%83%E7%97%9B.lrc"},{"name":"Dawn (黎明将至)","artist":"三角洲行动,Lithium Done","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8%2CLithium%20Done%20-%20Dawn%20(%E9%BB%8E%E6%98%8E%E5%B0%86%E8%87%B3).lrc"},{"name":"Aria Math","artist":"bxkq,Hardx,C418","url":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.mp3","cover":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.webp","lrc":"https://pub-a10e7f6c22c04955812d3f44aef6820c.r2.dev/bxkq%2CHardx%2CC418%20-%20Aria%20Math.lrc"}]},"mermaid":{"enable":false,"version":"11.4.1","theme":{"light":"default","dark":"dark"}}},"version":"2.9.0","navbar":{"auto_hide":true,"color":{"left":"#DF45DA","right":"#367DF7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Gallery":{"path":"/gallery","icon":"fa-regular fa-image"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Friends":"/friends","Thanks":"/thanks"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur","masonry":{"batch_size":12,"initial_batch_size":24}},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"Dive, into the unknown.","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Linkbox":{"path":"/linkbox","icon":"fa-regular fa-bookmark"},"Gallery":{"path":"/gallery","icon":"fa-regular fa-image"},"Moments":{"path":"/moments","icon":"fa-regular fa-thought-bubble"},"Games":{"path":"/games","icon":"fa-regular fa-gamepad"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footer":{"runtime":true,"icon":"<i class=\"fa-solid fa-heart fa-beat\" style=\"--fa-animation-duration: 0.5s; color: #F54545\"></i>","start":"2024/12/23 11:03:42","statistics":true,"customize":null,"icp":{"enable":false,"number":null,"url":null}},"footerStart":"2024/12/23 11:03:42","mermaid":{"style":{"light":"default","dark":"dark"}}};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.i18n = {"search":"Search...","toc":"On this page","prev":"Prev","next":"Next","prev_posts":"Prev posts","next_posts":"Next posts","page":"Page %d","recent_posts":"Recent Posts","share":"Share","powered_by":"POWERED BY %s","theme":"THEME","rss_feed":"RSS Feed","category":"Category","categories":"Categories","tag":"Tag","tags":"Tags","post":"Post","posts":"Posts","tagcloud":"Tag Cloud","comment":"Comment","comments":"Comments","home":"Home","archive":"Archive","archives":"Archives","top":"TOP","sticky":"Sticky","go-back-home":"Go Back Home","masonry_loading":"Loading photos...","image_viewer":"Image viewer","close":"Close","exif":{"title":"EXIF","cards":{"camera":"Camera","lens":"Lens","exposure":"Exposure","other":"Other"},"fields":{"make":"Brand","model":"Model","date_taken":"Date taken","lens_model":"Lens","focal_length":"Focal length","focus_mode":"Focus mode","shutter":"Shutter","aperture":"Aperture","iso":"ISO","exposure_program":"Exposure program","exposure_compensation":"Exposure compensation","metering_mode":"Metering mode","flash":"Flash","white_balance":"White balance","latitude":"Latitude","longitude":"Longitude","altitude":"Altitude"},"status":{"loading":"Loading...","no_exif":"No EXIF available","library_missing":"EXIF library not loaded","image_source_missing":"Image source unavailable","unavailable":"EXIF unavailable (blocked by CORS or missing metadata)","flag_unavailable":"EXIF unavailable"}},"about":"About","changelog":"Changelog","links":"Links","link":"Link","friends":"Friends","friend":"Friend","timeline":"Timeline","shuoshuo":"Shuoshuo","bookmarks":"Bookmarks","site_uv":"VISITOR COUNT","site_pv":"TOTAL PAGE VIEWS","read_more":"Read more","wordcount":"Words","min2read":"Mins","status":"Status","runtime":"Blog up for","days":"days","hours":"hrs","minutes":"Min","seconds":"Sec","optimized_by":"and Optimized by Evan","rights":"All Rights Reserved","site_posts":"%s posts in total","site_wordcount":"%s words in total","copyright":{"author":"Author","title":"Title","link":"Link","create_time":"Created at","update_time":"Updated at","license_title":"License","license_content":"This work is licensed under %s.","all_rights_reserved":"All Rights Reserved &#169; %s","public_domain":"This work is in the public domain."},"ago":{"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"},"create_time":"Created","update_time":"Updated","expired":"This post is written %s days ago, and the content may not be up to date."};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Astrid&#39;s Fantasy World
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="active"
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/gallery"
+                                        >
+                                    <i class="fa-regular fa-image fa-fw"></i>
+                                    GALLERY
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/friends">
+                                                    FRIENDS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/thanks">
+                                                    THANKS
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/gallery"
+                        >
+                            <span>
+                                GALLERY
+                            </span>
+                            
+                                <i class="fa-regular fa-image fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/friends">FRIENDS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/thanks">THANKS</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/linkbox"
+                        >
+                            <span>Linkbox</span>
+                            <i class="fa-regular fa-bookmark fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/moments"
+                        >
+                            <span>Moments</span>
+                            <i class="fa-regular fa-thought-bubble fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/games"
+                        >
+                            <span>Games</span>
+                            <i class="fa-regular fa-gamepad fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">62</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">34</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="/images/advanced-guide-to-llm-prompts-and-core-performance-optimization.webp" alt="Advanced Guide to LLM Prompts and Core Performance Optimization" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">Advanced Guide to LLM Prompts and Core Performance Optimization</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] shrink-0 rounded-medium border border-border-color p-px">
+				<img src="/images/my-avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Astrid Stark</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv. ∞</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2026-03-14 12:18:57</span>
+        <span class="mobile">2026-03-14 12:18:57</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2026-03-14 12:21:02</span>
+            <span class="mobile">2026-03-14 12:21:02</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/AI/">AI</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Prompt-Engineering/">Prompt Engineering</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/LLM/">LLM</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/AI-Productivity/">AI Productivity</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h2 id="一、全局设置"><a href="#一、全局设置" class="headerlink" title="一、全局设置"></a>一、全局设置</h2><p>此提示词专用于设定 AI 的核心性格与交互底线。它能有效剥离大模型默认的“讨好型人格”，强制对话直击核心，彻底摒弃情绪价值，将其转变为高标准的逻辑审查工具。</p>
+<p><strong>中文版：</strong></p>
+<blockquote>
+<p>你是我最坦诚的顾问。</p>
+<p>主动挑战我的假设，质疑我的推理，有问题就直说。</p>
+<p>我说的任何结论，你都要帮我检查逻辑、漏洞、自我安慰、找借口、侥幸心理、我低估的风险。</p>
+<p>不要跟我客套，不要顺着我，也不要给我模棱两可的废话。</p>
+<p>给我的建议必须基于事实，有推理、有依据、有策略，有明确可执行的步骤。</p>
+<p>优先让我“成长”，而不是让我当下舒服。</p>
+<p>听懂我没说出口的部分，而不是只看字面。</p>
+<p>如果你有更合理的判断，要坚持你的结论，对我实话实说、毫无保留。</p>
+</blockquote>
+<p><strong>English version:</strong></p>
+<blockquote>
+<p>Act as my most brutally honest advisor.</p>
+<p>Proactively challenge my assumptions, interrogate my reasoning, and call out flaws immediately.</p>
+<p>For any conclusion I present, scrutinize it for logical gaps, loopholes, self-deception, excuses, wishful thinking, and underestimated risks.</p>
+<p>Cut the pleasantries, never pander to me, and spare me the ambiguous fluff.</p>
+<p>Anchor your advice strictly in facts, supported by rigorous logic, evidence, strategic foresight, and highly actionable steps.</p>
+<p>Prioritize my rigorous growth over my temporary comfort.</p>
+<p>Read between the lines to grasp the unspoken context rather than just taking my words at face value.</p>
+<p>If you hold a more rational judgment, stand your ground. Give it to me straight, with zero reservations.</p>
+</blockquote>
+<h2 id="二、数据迁移"><a href="#二、数据迁移" class="headerlink" title="二、数据迁移"></a>二、数据迁移</h2><p>在跨平台迁移大模型数据或进行个人上下文全量备份时，此提示词可用于强制提取模型的长期记忆，实现无缺漏的记忆输出。</p>
+<p><strong>中文版：</strong></p>
+<blockquote>
+<p>我即将迁移至其他服务，需要全量导出我的数据。请列出你存储的关于我的所有记忆，以及从过往对话中学习到的关于我的所有上下文信息。请将所有内容输出在一个代码块中，以便我一键复制。</p>
+<p>请将每条记录严格格式化为：[保存日期，如果存在] - 记忆内容。</p>
+<p>请确保涵盖以下所有维度，并尽可能逐字保留我的原话：</p>
+<ul>
+<li>我下达过的关于回复方式的指令（语调、格式、风格、“总是做X”、“绝不做Y”）。</li>
+<li>个人详细信息：姓名、位置、职业、家庭、兴趣。</li>
+<li>项目、目标和反复探讨的话题。</li>
+<li>我使用的工具、编程语言和框架。</li>
+<li>我设定的偏好，以及我对你行为的纠正记录。</li>
+<li>任何未包含在上述分类中的其他已存储上下文。</li>
+</ul>
+<p>绝对不要对任何条目进行总结、分组、概括或遗漏。在代码块输出完毕后，请明确确认这是否是全部数据集，或者是否还有任何隐藏&#x2F;残留的记忆。</p>
+</blockquote>
+<p><strong>English version:</strong></p>
+<blockquote>
+<p>I’m moving to another service and need to export my data. List every memory you have stored about me, as well as any context you’ve learned about me from past conversations. Output everything in a single code block so I can easily copy it.</p>
+<p>Format each entry as: [date saved, if available] - memory content.</p>
+<p>Make sure to cover all of the following — preserve my words verbatim where possible:</p>
+<ul>
+<li>Instructions I’ve given you about how to respond (tone, format, style, ‘always do X’, ‘never do Y’).</li>
+<li>Personal details: name, location, job, family, interests.</li>
+<li>Projects, goals, and recurring topics.</li>
+<li>Tools, languages, and frameworks I use.</li>
+<li>Preferences and corrections I’ve made to your behavior.</li>
+<li>Any other stored context not covered above.</li>
+</ul>
+<p>Do not summarize, group, or omit any entries. After the code block, confirm whether that is the complete set or if any remain.</p>
+</blockquote>
+<h2 id="三、思维探索"><a href="#三、思维探索" class="headerlink" title="三、思维探索"></a>三、思维探索</h2><p>这是一个用于深度自我剖析的循环提示词。它的核心价值在于帮助使用者挖掘自身所“不了解”的潜意识、思维盲区或底层逻辑。大模型在此仅作为提供无止境“苏格拉底式追问”的工具，不断逼迫使用者向内审视，直到使用者自行判断已经触及了知识边界或思维底线，再主动叫停并要求复盘。</p>
+<p><strong>中文版：</strong></p>
+<blockquote>
+<p>我们来做一个深度自我挖掘的实验。你可以随意问我任何一个问题，我会尽可能真实且完整地回答。基于我的回答，你必须进行深度追问，提出下一个问题。 规则如下：</p>
+<ol>
+<li>每次只允许向我提出一个问题，必须层层递进，剥丝抽茧。</li>
+<li>你的提问必须犀利。如果发现我的回答存在逻辑漏洞、自我安慰或表面自洽，立刻指出来并继续逼问。</li>
+<li>我们会一直保持这个“你问我答”的循环，持续挖掘我内心的真实构思、谬误、局限、潜能或潜意识盲区。</li>
+<li>只有当我明确下达停止指令（例如说“停止提问”或“复盘”）时，你才能结束这个循环，并根据我们之前所有的对话记录，为我输出一份结构化的“认知与思维模式诊断报告”。 明白的话，请直接抛出你的第一个问题。</li>
+</ol>
+</blockquote>
+<p><strong>English Version:</strong></p>
+<blockquote>
+<p>Let’s conduct an experiment in deep self-excavation. You can ask me any single question, and I will answer it as truthfully and comprehensively as possible. Based on my response, you must probe deeper and ask the next question. The rules are as follows:</p>
+<ol>
+<li>Ask only one question at a time. Ensure each question strictly builds on the last, peeling back the layers.</li>
+<li>Be incisive. If you detect logical flaws, self-soothing, or superficial consistency in my answers, call them out directly and press harder.</li>
+<li>We will maintain this “Q&amp;A loop” indefinitely to unearth my true underlying thoughts, fallacies, limitations, potential, or subconscious blind spots.</li>
+<li>You must not stop the loop until I explicitly command you to do so (e.g., by saying “Stop asking” or “Review”). Only then will you conclude the questioning and generate a structured “Cognitive and Mental Paradigm Diagnostic Report” based on our entire conversation log. If you understand, cast your first question directly.</li>
+</ol>
+</blockquote>
+<h2 id="四、优化表达"><a href="#四、优化表达" class="headerlink" title="四、优化表达"></a>四、优化表达</h2><p>本部分提供了一系列针对特定文本处理、学术研究与结构生成的模块化提示词。这些模板通过设定严格的输出约束，能有效控制大模型的语言风格并保障逻辑严谨度。</p>
+<h3 id="1-降低AI率"><a href="#1-降低AI率" class="headerlink" title="1. 降低AI率"></a>1. 降低AI率</h3><p><strong>中文版：</strong></p>
+<blockquote>
+<p>避免使用“首先、其次、然后”这类机械的连接词，转而采用更自然、更具语义连贯性的方式过渡。</p>
+<p>通过混合使用简单句、复合句和插入语等多样化句式，来增加表达的层次感和复杂性，同时避免连续使用短句或结构过于单一的句子。</p>
+<p>在叙述数据或结论时，补充相关的背景信息或个人研究观察，使内容更具体、更贴近真实的研究场景。</p>
+<p>使用提问或段落小结的方式，来实现段落间的平滑过渡，避免生硬切换，从而提升文章整体的流畅度和逻辑性。</p>
+</blockquote>
+<p><strong>English version:</strong></p>
+<blockquote>
+<p>Avoid using mechanical connectors such as “first, next, then”. Instead, adopt more cohesive and natural transitions.</p>
+<p>Employ diverse sentence structures by mixing simple, compound, and embedded sentences to add depth and complexity to the expression while avoiding consecutive short or overly uniform sentences.</p>
+<p>When discussing data or conclusions, provide background information or personal research observations to make the content more specific and closely related to actual research scenarios.</p>
+<p>Use questions or summaries to create smooth transitions between paragraphs, avoiding abrupt shifts, thereby enhancing the overall flow and logical coherence of the text.</p>
+</blockquote>
+<h3 id="2-防止捏造"><a href="#2-防止捏造" class="headerlink" title="2. 防止捏造"></a>2. 防止捏造</h3><p><strong>中文版：</strong></p>
+<blockquote>
+<p>请牢记，所有回答必须基于事实，不得编造。若不知道答案，请直接说明。</p>
+<p>除非直接引用（需遵循MLA格式），否则不得照搬原文，必须用自己的语言重新描述。</p>
+<p>写作风格应介于学术书面语和口语之间。确保每个句子都有明确的主语，尽量避免复杂的超长句，多用短句表达。</p>
+<p>使用日常词汇替代专业术语，并将所有过渡词和连接词替换为最基础、最常用的词语（如“但是”、“因此”）。</p>
+<p>采用简单、直接的表达，避免复杂或生僻的词汇，并确保句子之间的逻辑关系清晰明了。</p>
+</blockquote>
+<p><strong>English version:</strong></p>
+<blockquote>
+<p>Remember, all your responses must be based on facts and cannot be fabricated. If you don’t know the answer, say so.</p>
+<p>You must not plagiarize; instead you need to describe it again in your own words. (Exceptions are quotations, which should follow the MLA format.)</p>
+<p>The writing style should be academic yet accessible. Ensure that all sentences have a clear subject, avoid complex long sentences and try to express ideas in short sentences.</p>
+<p>Replace jargon with everyday vocabulary. Replace sentence transitions and connectors with the most basic and commonly used words.</p>
+<p>Use simple, direct expressions and avoid complex or obscure vocabulary. Ensure that the logical relationships between sentences are clear.</p>
+</blockquote>
+<h3 id="3-框架搭建"><a href="#3-框架搭建" class="headerlink" title="3. 框架搭建"></a>3. 框架搭建</h3><p><strong>中文版：</strong></p>
+<blockquote>
+<p>请根据我提供的研究主题，通过多步骤的链式推理，生成一篇学术论文的完整框架。</p>
+<p>要求：将论文自动拆解为标准模块（例如：研究背景、问题定义、理论基础、研究方法、实验设计、结果、讨论、局限性与未来方向）。</p>
+<p>在每个模块下，提供至少2-3个逻辑要点，并简要说明这些要点在学术写作中的作用。</p>
+<p>针对该研究主题，指出其潜在的核心假设、可检验的变量以及可能出现的推理漏洞。</p>
+<p>请展示清晰的思考路径，确保逻辑链条可见（允许简化表述）。</p>
+<p>研究主题：【请在此处输入您的具体研究主题】</p>
+</blockquote>
+<p><strong>English version:</strong></p>
+<blockquote>
+<p>Based on the research topic provided, conduct multi-step chain reasoning to generate a complete framework for an academic paper.</p>
+<p>Requirements: Automatically decompose the paper into standard modules (e.g., background, problem definition, theoretical foundation, methods, experimental design, results, discussion, limitations, future directions); provide at least 2-3 logical points under each module and explain their roles in academic writing; identify the core assumptions, testable variables, and potential reasoning gaps of this research topic, ensure the logical chain is clearly visible and demonstrate your thought process (simplification is allowed).</p>
+<p>Research topic: [Input topic]</p>
+</blockquote>
+<h3 id="4-文献阅读"><a href="#4-文献阅读" class="headerlink" title="4. 文献阅读"></a>4. 文献阅读</h3><p><strong>中文版：</strong></p>
+<blockquote>
+<p>假设您是一位跨学科领域的资深学者。我将提供一篇长篇学术文献，请您按以下步骤进行交互式阅读：</p>
+<ol>
+<li>快速结构定位：给出该文献的标题、研究主题、核心研究问题以及整体结构框架。</li>
+<li>关键信息提炼：用3-5句话概括论文的研究方法、核心机制和关键发现。</li>
+<li>亮点总结：指出作者最重要的贡献、创新点，以及实验中最关键的逻辑环节。</li>
+<li>可视化摘要：将上述信息整合，生成一个“研究问题 → 研究方法 → 数据&#x2F;实验 → 结论”的动态思维导图式结构化摘要。</li>
+</ol>
+<p>【请在此处上传或粘贴文献内容】</p>
+</blockquote>
+<p><strong>English version:</strong></p>
+<blockquote>
+<p>As a seasoned scholar in an interdisciplinary field, I will provide you with a lengthy academic paper. Follow these interactive steps for reading:</p>
+<ol>
+<li>Quick Structure Navigation: Identify the paper’s title, research theme, core research question (RQ), and overall framework.</li>
+<li>Key Information Extraction: Summarize the research methods, core mechanisms, and key findings in 3-5 sentences.</li>
+<li>Highlight summary: Identify the author’s most significant contributions, innovations, and critical experimental logic.</li>
+<li>Visualization Panel: Create a dynamic mind map-style structured abstract organizing the information into “Research Question -&gt; Methodology -&gt; Data -&gt; Conclusion”.</li>
+</ol>
+<p>[Upload Paper]</p>
+</blockquote>
+<h3 id="5-词语替换"><a href="#5-词语替换" class="headerlink" title="5. 词语替换"></a>5. 词语替换</h3><p><strong>中文版：</strong></p>
+<blockquote>
+<p>请对给定文本进行以下润色操作：</p>
+<p>将文中所有的过渡词和连接词，替换为最基础、最常用的那一类。</p>
+<p>采用简单、直接的表达方式，避免使用复杂或生僻的词汇。</p>
+<p>确保句子之间的逻辑关系清晰。</p>
+<p>删除文本末尾的总结性部分。</p>
+<p>【请在此处粘贴需要处理的文本】</p>
+</blockquote>
+<p><strong>English version:</strong></p>
+<blockquote>
+<p>Please perform the following edits on the given text:</p>
+<p>Replace all transition words and conjunctions in the sentences with the most basic and commonly used ones.</p>
+<p>Use simple expressions, and avoid complex vocabulary.</p>
+<p>Ensure the logical connections between sentences are clear.</p>
+<p>Delete the conclusion part at the end of the text.</p>
+<p>[Input Text]</p>
+</blockquote>
+<h2 id="五、提升性能"><a href="#五、提升性能" class="headerlink" title="五、提升性能"></a>五、提升性能</h2><p>在精雕细琢提示词框架之外，近期由 Google Research 团队发布的一项研究（<a class="link"   target="_blank" rel="noopener" href="https://arxiv.org/pdf/2512.14982" >arXiv:2512.14982<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）揭示了一个反直觉但极其有效的底层优化策略：<strong>Prompt Repetition（提示词重复）</strong>。</p>
+<p>当你不需要 AI 进行复杂的“思维链（Chain of Thought）”或深度推理时，只需将提示词在输入框中复制并粘贴两遍，就能在绝大多数非推理型任务中获得显著的准确率提升。</p>
+<h3 id="1-核心操作与效果对比"><a href="#1-核心操作与效果对比" class="headerlink" title="1. 核心操作与效果对比"></a>1. 核心操作与效果对比</h3><p>操作逻辑极其简单，不需要任何复杂的框架或 API 调整：</p>
+<ul>
+<li>传统做法： <code>&lt;系统提示词&gt; + &lt;你的问题或文档&gt;</code></li>
+<li>复读机做法： <code>&lt;系统提示词&gt; + &lt;你的问题或文档&gt; + &lt;你的问题或文档&gt;</code></li>
+</ul>
+<p>在论文涵盖 Gemini、GPT-4o、Claude 3.7 以及 DeepSeek 等主流大模型的 70 项严格基准测试中，该策略取得了 47 胜 0 负 的战绩。在某些特定的信息提取任务（如 NameIndex）中，甚至能将轻量级模型的准确率从 21.3% 暴力拉升至 97.3%。</p>
+<h3 id="2-为什么“无脑复制”会有效？"><a href="#2-为什么“无脑复制”会有效？" class="headerlink" title="2. 为什么“无脑复制”会有效？"></a>2. 为什么“无脑复制”会有效？</h3><p>大语言模型本质上是因果语言模型，这意味着在处理输入时，前面的词汇（Token）无法预知后面的词汇。</p>
+<p>假设提示词是 <code>&lt;一篇长文章&gt; + &lt;关于文章末尾细节的问题&gt;</code>。当模型在阅读文章开头时，它还不知道用户要问什么，因此它在生成 Key&#x2F;Value 向量时，无法对关键信息分配足够的注意力。</p>
+<p>当使用 <code>&lt;文章&gt;+&lt;问题&gt; + &lt;文章&gt;+&lt;问题&gt;</code> 的重复结构时，模型在处理第二遍输入过程中，已经“看过”了后面的问题。这使得第二遍的每个 Token 都能与问题产生全局的注意力交互，彻底修复了输入顺序造成的上下文理解缺失。</p>
+<p>近期以强化学习训练的推理模型（如 o1 模型）在思考过程中，经常会自发地重复用户的问题。这表明“复读机”策略实际上是大模型为了克服自身架构瓶颈而演化出的一种底层能力。</p>
+<h3 id="3-为什么被称为“免费午餐”？"><a href="#3-为什么被称为“免费午餐”？" class="headerlink" title="3. 为什么被称为“免费午餐”？"></a>3. 为什么被称为“免费午餐”？</h3><p>这项技术最吸引开发者的不仅是性能提升，而是其极低的附加成本。</p>
+<ol>
+<li>零延迟增加：大模型在处理输入（Prefill 阶段）是高度并行化的。输入长度翻倍并不会导致明显的端到端延迟增加。</li>
+<li>输出长度不变：与强制要求模型一步步思考的 CoT 策略不同，“复读机”策略不会导致模型生成冗长、啰嗦的解释。它只提升回答的准确率，完全不改变输出的格式和字数，非常适合作为现有工作流的直接平替。</li>
+</ol>
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a>4. 注意事项</h3><p>虽然效果拔群，但在实际使用中需注意以下几点：</p>
+<ul>
+<li>适用边界：该策略在信息提取、文本总结、翻译等非推理任务中效果最好。如果强制开启了模型的深度思考模式（如 DeepSeek R1），该策略的效果会变成中性或轻微正面，性价比降低。</li>
+<li>只需重复 User Prompt：通常情况下只需要重复具体的任务指令或文本。用于设定 AI 角色和性格的全局提示词不需要重复。</li>
+<li>Token 成本考量：虽然生成速度不受影响，但由于输入长度翻倍，Input Token 开销也会翻倍。不过，考虑到目前各大厂商的 Input Token 价格通常远低于 Output Token，用极低的输入成本换取大幅度的准确率提升，在大多数商业和学术场景中都是一笔划算的交易。对于超长文档，请务必留意是否会触发模型的最大上下文窗口限制。</li>
+</ul>
+
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Prompt-Engineering/">#Prompt Engineering</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/LLM/">#LLM</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/AI-Productivity/">#AI Productivity</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/archives/a-guide-to-desktop-app-development-based-on-tauri-and-python-sidecar/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">A Guide to Desktop App Development Based on Tauri and Python Sidecar</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">Advanced Guide to LLM Prompts and Core Performance Optimization</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%85%A8%E5%B1%80%E8%AE%BE%E7%BD%AE"><span class="nav-text">一、全局设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB"><span class="nav-text">二、数据迁移</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%80%9D%E7%BB%B4%E6%8E%A2%E7%B4%A2"><span class="nav-text">三、思维探索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E4%BC%98%E5%8C%96%E8%A1%A8%E8%BE%BE"><span class="nav-text">四、优化表达</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%99%8D%E4%BD%8EAI%E7%8E%87"><span class="nav-text">1. 降低AI率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%98%B2%E6%AD%A2%E6%8D%8F%E9%80%A0"><span class="nav-text">2. 防止捏造</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA"><span class="nav-text">3. 框架搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB"><span class="nav-text">4. 文献阅读</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E8%AF%8D%E8%AF%AD%E6%9B%BF%E6%8D%A2"><span class="nav-text">5. 词语替换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%8F%90%E5%8D%87%E6%80%A7%E8%83%BD"><span class="nav-text">五、提升性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%A0%B8%E5%BF%83%E6%93%8D%E4%BD%9C%E4%B8%8E%E6%95%88%E6%9E%9C%E5%AF%B9%E6%AF%94"><span class="nav-text">1. 核心操作与效果对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%B8%BA%E4%BB%80%E4%B9%88%E2%80%9C%E6%97%A0%E8%84%91%E5%A4%8D%E5%88%B6%E2%80%9D%E4%BC%9A%E6%9C%89%E6%95%88%EF%BC%9F"><span class="nav-text">2. 为什么“无脑复制”会有效？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A2%AB%E7%A7%B0%E4%B8%BA%E2%80%9C%E5%85%8D%E8%B4%B9%E5%8D%88%E9%A4%90%E2%80%9D%EF%BC%9F"><span class="nav-text">3. 为什么被称为“免费午餐”？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">4. 注意事项</span></a></li></ol></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #F54545"></i>&nbsp;&nbsp;<a href="/">Astrid Stark</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        34 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.9.0</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container" role="dialog" aria-modal="true" aria-label="Image viewer">
+	<button class="image-viewer-close" type="button" aria-label="Close">
+		<i class="fa-solid fa-xmark"></i>
+	</button>
+	<button class="image-viewer-prev" type="button" aria-label="Prev">
+		<i class="fa-solid fa-chevron-left"></i>
+	</button>
+	<div class="image-viewer-frame">
+		<img src="" alt="">
+	</div>
+	<div class="image-viewer-exif-panel hidden absolute left-1/2 bottom-20 -translate-x-1/2 w-[min(92vw,420px)] max-h-[60vh] overflow-hidden rounded-2xl bg-background-color-transparent-80 p-4 text-left shadow-redefine-flat backdrop-blur-md" role="dialog" aria-label="EXIF" aria-hidden="true">
+		<div class="flex items-center justify-between mb-3">
+			<span class="text-sm font-semibold text-first-text-color">EXIF</span>
+			<button class="image-viewer-exif-close flex h-8 w-8 items-center justify-center rounded-full bg-background-color-transparent-80 text-first-text-color transition hover:bg-background-color-transparent-40" type="button" aria-label="Close">
+				<i class="fa-solid fa-xmark text-[0.65rem]"></i>
+			</button>
+		</div>
+		<div class="image-viewer-exif-cards grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto pr-1 scrollbar-hide"></div>
+		<template class="image-viewer-exif-card-template">
+			<div class="rounded-lg bg-background-color-transparent-40 px-3 py-2">
+				<div class="image-viewer-exif-card-header flex items-center gap-2 mb-1">
+					<i class="image-viewer-exif-card-icon fa-solid fa-circle-info text-xs text-third-text-color"></i>
+					<div class="image-viewer-exif-card-title text-xs font-semibold text-first-text-color"></div>
+				</div>
+				<div class="image-viewer-exif-card-items flex flex-col gap-1"></div>
+			</div>
+		</template>
+	</div>
+	<button class="image-viewer-exif-toggle flex items-center gap-2 hidden absolute left-1/2 bottom-6 -translate-x-1/2 rounded-full border border-border-color bg-background-color-transparent-80 px-4 py-2 text-first-text-color backdrop-blur-md transition hover:bg-background-color-transparent-40" type="button" aria-label="EXIF" aria-expanded="false">
+		<i class="fa-solid fa-circle-info text-xs"></i>
+		<span class="text-xs font-semibold uppercase tracking-wider">EXIF</span>
+	</button>
+	<button class="image-viewer-next" type="button" aria-label="Next">
+		<i class="fa-solid fa-chevron-right"></i>
+	</button>
+</div>
+
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/Swup.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    window.swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+
+    window.dispatchEvent(
+        new CustomEvent("redefine:swup:ready", {
+            detail: {
+                swup: window.swup,
+            },
+        }),
+    );
+</script>
+
+
+
+
+	<script type="module" src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/main.js" ></script>
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/assets/odometer-theme-minimal.css">
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/Typed.min.js" ></script>
+
+
+
+
+
+
+
+    <script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/minimasonry.min.js" data-swup-reload-script></script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+
+
+	
+	<div id="aplayer"></div>
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/libs/APlayer.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/hexo-theme-redefine@2.9.0/source/js/build/plugins/aplayer.js" ></script>
+
+	
+</body>
+
+</html>
